@@ -1,0 +1,236 @@
+export interface NavContent {
+  links: { label: string; href: string }[];
+  cta: string;
+  whatsapp: string;
+}
+
+export interface HeroContent {
+  eyebrow: string;
+  headlineLines: string[];
+  subline: string;
+  ctaPrimary: string;
+  ctaSecondary: string;
+  scrollHint: string;
+  locationTag: string;
+}
+
+export interface ProblemContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  frictions: { label: string; detail: string }[];
+  pivot: string;
+}
+
+export interface SystemPillar {
+  code: string;
+  title: string;
+  description: string;
+}
+
+export interface SystemContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  pillars: SystemPillar[];
+}
+
+export interface BeforeAfterField {
+  label: string;
+  before: string;
+  after: string;
+}
+
+export interface BeforeAfterContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  beforeLabel: string;
+  afterLabel: string;
+  fields: BeforeAfterField[];
+}
+
+export interface PerformanceMetric {
+  value: string;
+  label: string;
+}
+
+export interface PerformanceContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  disclaimer: string;
+  metrics: PerformanceMetric[];
+  chartLabel: string;
+  channelLabel: string;
+}
+
+export interface ServiceItem {
+  title: string;
+  price: string;
+  priceNote: string;
+  description: string;
+  features: string[];
+}
+
+export interface ServicesContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  shortTerm: ServiceItem;
+  longTerm: ServiceItem;
+  termsNote: string;
+  ctaLabel: string;
+}
+
+export interface DashboardContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  footnote: string;
+  labels: {
+    revenue: string;
+    occupancy: string;
+    upcoming: string;
+    cleaning: string;
+    maintenance: string;
+    payout: string;
+    guest: string;
+    status: string;
+  };
+}
+
+export interface OperationsStep {
+  title: string;
+  detail: string;
+}
+
+export interface OperationsContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  steps: OperationsStep[];
+}
+
+export interface CompareColumn {
+  title: string;
+  tagline: string;
+  points: string[];
+}
+
+export interface CompareContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  shortTerm: CompareColumn;
+  longTerm: CompareColumn;
+  cta: string;
+}
+
+export interface AreaItem {
+  name: string;
+  description: string;
+}
+
+export interface AreasContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  areas: AreaItem[];
+}
+
+export interface AboutContent {
+  eyebrow: string;
+  heading: string;
+  paragraphs: string[];
+  founderName: string;
+  founderRole: string;
+  founderQuote: string;
+}
+
+export interface TeamMember {
+  name: string;
+  role: string;
+  note: string;
+}
+
+export interface TeamContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  placeholderNotice: string;
+  members: TeamMember[];
+}
+
+export interface Testimonial {
+  quote: string;
+  name: string;
+  location: string;
+}
+
+export interface TestimonialsContent {
+  eyebrow: string;
+  heading: string;
+  placeholderNotice: string;
+  items: Testimonial[];
+}
+
+export interface ContactFormContent {
+  fields: {
+    name: string;
+    email: string;
+    phone: string;
+    location: string;
+    propertyType: string;
+    bedrooms: string;
+    currentlyRented: string;
+    yes: string;
+    no: string;
+    strategy: string;
+    strategyOptions: { short: string; long: string; unsure: string };
+    message: string;
+  };
+  submit: string;
+  successTitle: string;
+  successBody: string;
+}
+
+export interface FinalCtaContent {
+  eyebrow: string;
+  heading: string;
+  subline: string;
+  ctaPrimary: string;
+  ctaSecondary: string;
+  form: ContactFormContent;
+}
+
+export interface FooterContent {
+  tagline: string;
+  linksHeading: string;
+  contactHeading: string;
+  languageHeading: string;
+  rights: string;
+}
+
+export interface SiteContent {
+  meta: {
+    title: string;
+    description: string;
+  };
+  nav: NavContent;
+  hero: HeroContent;
+  problem: ProblemContent;
+  system: SystemContent;
+  beforeAfter: BeforeAfterContent;
+  performance: PerformanceContent;
+  services: ServicesContent;
+  dashboard: DashboardContent;
+  operations: OperationsContent;
+  compare: CompareContent;
+  areas: AreasContent;
+  about: AboutContent;
+  team: TeamContent;
+  testimonials: TestimonialsContent;
+  finalCta: FinalCtaContent;
+  footer: FooterContent;
+}

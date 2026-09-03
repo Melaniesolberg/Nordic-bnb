@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   NORDIC BNB — DESIGN TOKENS
+   A restrained, editorial palette: warm ivory, near-black charcoal,
+   and a single disciplined coral accent inherited from the existing mark.
+   ========================================================================== */
+
+:root {
+  --color-ivory: #f6f1e8;
+  --color-ivory-soft: #fbf8f2;
+  --color-ivory-deep: #ece4d5;
+
+  --color-charcoal: #14110d;
+  --color-charcoal-soft: #211c16;
+  --color-charcoal-mute: #302a22;
+
+  --color-coral: #e0532e;
+  --color-coral-deep: #b93f21;
+  --color-coral-soft: #f2a98a;
+  --color-coral-mist: #f6ded2;
+
+  --color-sand: #d9cdb7;
+  --color-stone: #8a8072;
+  --color-mist: #cabfa9;
+
+  --color-line: rgba(20, 17, 13, 0.1);
+  --color-line-inverse: rgba(246, 241, 232, 0.16);
+
+  --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --background: var(--color-ivory);
+  --foreground: var(--color-charcoal);
+}
+
+@theme inline {
+  --color-ivory: var(--color-ivory);
+  --color-ivory-soft: var(--color-ivory-soft);
+  --color-ivory-deep: var(--color-ivory-deep);
+  --color-charcoal: var(--color-charcoal);
+  --color-charcoal-soft: var(--color-charcoal-soft);
+  --color-charcoal-mute: var(--color-charcoal-mute);
+  --color-coral: var(--color-coral);
+  --color-coral-deep: var(--color-coral-deep);
+  --color-coral-soft: var(--color-coral-soft);
+  --color-coral-mist: var(--color-coral-mist);
+  --color-sand: var(--color-sand);
+  --color-stone: var(--color-stone);
+  --color-mist: var(--color-mist);
+  --color-line: var(--color-line);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+
+  --breakpoint-xs: 30rem;
+}
+
+html {
+  background: var(--color-charcoal);
+  scroll-behavior: auto;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-coral);
+  color: var(--color-ivory-soft);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-line);
+  }
+}
+
+.font-serif-display {
+  font-family: var(--font-fraunces);
+  font-optical-sizing: auto;
+}
+
+/* Editorial eyebrow label */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Fine hairline rule used across sections */
+.hairline {
+  height: 1px;
+  background: currentColor;
+  opacity: 0.14;
+}
+
+/* Fluid type helpers for cinematic headlines */
+.text-display {
+  font-size: clamp(2.4rem, 1.7rem + 4.6vw, 8.2rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
+
+.text-display-md {
+  font-size: clamp(2.25rem, 1.8rem + 2.6vw, 5.25rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* Magnetic / premium button base */
+.btn-magnetic {
+  position: relative;
+  isolation: isolate;
+  will-change: transform;
+}
+
+/* Grain overlay for cinematic imagery */
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-size: 180px 180px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar, restrained */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-sand);
+  border-radius: 8px;
+}
