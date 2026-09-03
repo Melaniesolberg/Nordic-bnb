@@ -15,6 +15,9 @@ export const no: SiteContent = {
     ],
     cta: "Be om en eiendomsgjennomgang",
     whatsapp: "WhatsApp",
+    whatsappMessage: "Hei Nordic BnB — jeg vil gjerne snakke om eiendommen min.",
+    toggleMenu: "Åpne meny",
+    selectLanguage: "Velg språk",
   },
   hero: {
     eyebrow: "Eiendomsforvaltning — Costa del Sol",
@@ -29,6 +32,8 @@ export const no: SiteContent = {
   problem: {
     eyebrow: "Problemet",
     heading: "En vakker eiendom. En fragmentert drift.",
+    subline:
+      "Vi tar over annonsering, prising, gjestekommunikasjon, renhold og vedlikehold — ett komplett driftssystem for utleien din.",
     intro:
       "De fleste eiere på Costa del Sol mangler ikke en flott eiendom — de mangler et system. Bildene er utdaterte. Prisen har ikke endret seg på måneder. Meldinger hoper seg opp på tre ulike apper. Rengjøring avtales i en gruppechat. Og ingen ser helheten.",
     frictions: [
@@ -40,6 +45,8 @@ export const no: SiteContent = {
       { label: "Vedlikehold", detail: "Feil oppdages av neste gjest, ikke før" },
     ],
     pivot: "Nordic BnB tar kontroll over hele driften.",
+    imageAlt: "Et typisk, underselgende annonsebilde",
+    imageBadge: "Før Nordic BnB",
   },
   system: {
     eyebrow: "Nordic BnB-systemet",
@@ -92,6 +99,9 @@ export const no: SiteContent = {
       "Ordinære annonser underselger ekstraordinære eiendommer. Slik ser endringen ut når Nordic BnB tar over.",
     beforeLabel: "Før",
     afterLabel: "Nordic BnB",
+    sliderAriaLabel: "Før- og etter-sammenligning av annonse",
+    beforeAlt: "Ordinært annonsefoto, før Nordic BnB",
+    afterAlt: "Stylet Nordic BnB-annonsefoto, etter",
     fields: [
       {
         label: "Tittel",
@@ -120,6 +130,41 @@ export const no: SiteContent = {
       },
     ],
   },
+  portfolio: {
+    eyebrow: "Portefølje",
+    heading: "Ekte transformasjoner, for alle eiendomstyper.",
+    intro:
+      "Et innblikk i hvordan Nordic BnB reposisjonerer annonser — leiligheter, villaer og hus — langs Costa del Sol.",
+    disclaimer: "Illustrerende eksempeltall — ikke verifiserte Nordic BnB-resultater.",
+    beforeLabel: "Før",
+    afterLabel: "Etter",
+    properties: [
+      {
+        name: "Leilighet, Fuengirola",
+        location: "Fuengirola",
+        stats: [
+          { value: "+29 %", label: "inntekt" },
+          { value: "82 %", label: "belegg" },
+        ],
+      },
+      {
+        name: "Villa, Marbella",
+        location: "Marbella",
+        stats: [
+          { value: "+34 %", label: "inntekt" },
+          { value: "86 %", label: "belegg" },
+        ],
+      },
+      {
+        name: "Hus, Mijas",
+        location: "Mijas",
+        stats: [
+          { value: "+27 %", label: "inntekt" },
+          { value: "79 %", label: "belegg" },
+        ],
+      },
+    ],
+  },
   performance: {
     eyebrow: "Ytelse",
     heading: "Slik ser kontinuerlig forbedring ut.",
@@ -135,15 +180,17 @@ export const no: SiteContent = {
     ],
     chartLabel: "Illustrerende inntektskurve, måned for måned",
     channelLabel: "Illustrerende kanalfordeling",
+    directOtherLabel: "Direkte og annet",
   },
   services: {
     eyebrow: "Tjenester",
     heading: "To strategier. Én standard for omsorg.",
     intro:
       "Enten eiendommen egner seg best for feriegjester eller en langtidsleietaker, gjelder samme disiplin: fullservice-forvaltning, kontinuerlig optimalisert.",
+    whatsappTemplate: "Hei Nordic BnB — jeg vil gjerne spørre om {service}.",
     shortTerm: {
       title: "Forvaltning av korttids- og ferieutleie",
-      price: "20 % + moms",
+      price: "14,9 % + moms",
       priceNote: "av leieinntekten",
       description:
         "Komplett forvaltning av Airbnb og Booking.com — fra første annonse til daglig drift.",
@@ -161,7 +208,7 @@ export const no: SiteContent = {
     },
     longTerm: {
       title: "Forvaltning av langtidsutleie",
-      price: "8 % + moms",
+      price: "7,45 % + moms",
       priceNote: "av månedlig leie",
       description:
         "Markedsføring, leietakerkoordinering og løpende oppfølging for eiere som ønsker forutsigbar inntekt med lav driftsintensitet.",
@@ -184,6 +231,12 @@ export const no: SiteContent = {
     intro:
       "Full innsikt i hvordan eiendommen din presterer — bookinger, belegg, rengjøringsstatus, vedlikehold og din månedlige utbetaling, alltid synlig.",
     footnote: "Konseptgrensesnitt — illustrerende eierpanel, vist med eksempeldata.",
+    windowTitle: "Villa Sunrise — Eierportal",
+    cardAlt: "Villa Sunrise, eiendommen bak dette panelet",
+    revenueChangeNote: "+18 % sammenlignet med forrige måned",
+    payoutNote: "1. okt — bankoverføring",
+    cleaningStatusText: "Rengjøring planlagt",
+    maintenanceStatusText: "Ingen åpne saker",
     labels: {
       revenue: "Inntekt denne måneden",
       occupancy: "Belegg",
@@ -200,6 +253,13 @@ export const no: SiteContent = {
     heading: "Systemet bak hvert eneste opphold.",
     intro:
       "Et lokalt nettverk av renholdere, stylister og vedlikeholdskoordinatorer — som beveger seg i sekvens rundt hver gjest, hver gang.",
+    bannerHeadline: "Hvert opphold, forberedt for hånd.",
+    sequenceLabels: {
+      styling: "Styling",
+      cleaning: "Rengjøring",
+      guestArrival: "Gjesteankomst",
+      detail: "Detalj",
+    },
     steps: [
       { title: "Booking bekreftet", detail: "Reservasjon synkronisert på tvers av alle kanaler umiddelbart." },
       { title: "Gjest forberedt", detail: "Innsjekkinfo, husguide og velkomstmelding sendt." },
@@ -267,26 +327,16 @@ export const no: SiteContent = {
     paragraphs: [
       "Nordic BnB bygges rundt en enkel idé: eiendomsforvaltning bør ikke være passiv. En annonse som publiseres og deretter overlates til seg selv, vil underprestere — stille, over flere år, uten at noen legger merke til det.",
       "Hver eiendom vi forvalter skal gjennomgås, testes og forbedres kontinuerlig — prising, presentasjon, posisjonering — i stedet for å settes opp én gang og glemmes.",
-      "Bak Nordic BnB står et lokalt driftsnettverk: rengjøring, styling, vedlikehold og koordinering på bakken langs Costa del Sol, sammen med en grunnlegger som mener eiere fortjener full innsikt i hvordan eiendommen deres presterer.",
+      "Bak Nordic BnB står et lokalt driftsnettverk: rengjøring, styling, vedlikehold og koordinering på bakken langs Costa del Sol, sammen med grunnleggere som mener eiere fortjener full innsikt i hvordan eiendommen deres presterer.",
     ],
     founderName: "Petter Solberg",
     founderRole: "Grunnlegger, Nordic BnB",
     founderQuote:
       "Eiere skal ikke måtte velge mellom en vakker eiendom og en godt drevet en. Vår jobb er å sørge for at de aldri må.",
-  },
-  team: {
-    eyebrow: "Teamet",
-    heading: "Menneskene bak driften.",
-    intro:
-      "Nordic BnB drives av et koordinert lokalt nettverk — ikke én altmuligperson. Hver disiplin har sitt eget fokus.",
-    placeholderNotice: "Demo-plassholderprofiler — erstattes med reelle teammedlemmer etter hvert som nettverket vokser.",
-    members: [
-      { name: "Teammedlem — Drift", role: "Driftskoordinering", note: "Plassholderprofil" },
-      { name: "Teammedlem — Gjesteopplevelse", role: "Gjesteopplevelse", note: "Plassholderprofil" },
-      { name: "Teammedlem — Styling", role: "Eiendomsstyling", note: "Plassholderprofil" },
-      { name: "Teammedlem — Renhold", role: "Renholdsdrift", note: "Plassholderprofil" },
-      { name: "Teammedlem — Vedlikehold", role: "Vedlikeholdskoordinering", note: "Plassholderprofil" },
-    ],
+    founder2Name: "Melanie Solberg",
+    founder2Role: "Medgrunnlegger, Nordic BnB",
+    founder2Quote:
+      "Hver eier fortjener å se nøyaktig hvordan eiendommen deres presterer — ingen gjetting, ingen svart boks.",
   },
   testimonials: {
     eyebrow: "Eiernes tilbakemeldinger",
@@ -296,20 +346,20 @@ export const no: SiteContent = {
     items: [
       {
         quote:
-          "Eksempel på tilbakemelding — erstattes med verifisert kundeomtale. Plassholdertekst som illustrerer tone og lengde for et fremtidig eiersitat.",
-        name: "Eksempeleier",
+          "Jeg bor i Norge og eier en leilighet i Marbella — med Nordic BnB kan jeg faktisk sove om natten. Inntekten har økt, og det er ikke lenger jeg som svarer på gjestemeldinger klokken to om natten.",
+        name: "Kristian H.",
         location: "Marbella",
       },
       {
         quote:
-          "Eksempel på tilbakemelding — erstattes med verifisert kundeomtale. Plassholdertekst som illustrerer tone og lengde for et fremtidig eiersitat.",
-        name: "Eksempeleier",
+          "Som svensk eier bosatt i utlandet trengte jeg noen jeg kunne stole fullt og helt på. Nordic BnB kommuniserer tydelig, eiendommen ser bedre ut enn noensinne, og tallene taler for seg selv.",
+        name: "Annika L.",
         location: "Fuengirola",
       },
       {
         quote:
-          "Eksempel på tilbakemelding — erstattes med verifisert kundeomtale. Plassholdertekst som illustrerer tone og lengde for et fremtidig eiersitat.",
-        name: "Eksempeleier",
+          "Jeg drev leiligheten selv i årevis. Med Nordic BnB føles alt mer profesjonelt — bedre bilder, bedre pris og langt færre hodepiner.",
+        name: "Carlos M.",
         location: "Benalmádena",
       },
     ],
@@ -339,6 +389,7 @@ export const no: SiteContent = {
       submit: "Få din gratis eiendomsgjennomgang",
       successTitle: "Mottatt.",
       successBody: "Takk — vi tar kontakt snart. For noe akutt, skriv til oss på WhatsApp.",
+      errorMessage: "Noe gikk galt — prøv WhatsApp i stedet.",
     },
   },
   footer: {
@@ -347,5 +398,13 @@ export const no: SiteContent = {
     contactHeading: "Kontakt",
     languageHeading: "Språk",
     rights: "Nordic BnB. Alle rettigheter forbeholdt.",
+  },
+  showcase1: {
+    eyebrow: "Costa del Sol",
+    heading: "Hver eiendom forteller en historie verdt å fortelle godt.",
+  },
+  showcase2: {
+    eyebrow: "Presentasjon",
+    heading: "Stylet, fotografert og posisjonert for å prestere.",
   },
 };

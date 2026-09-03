@@ -12,11 +12,13 @@ function ServiceCard({
   dark,
   ctaLabel,
   imageSrc,
+  whatsappTemplate,
 }: {
   item: ServiceItem;
   dark?: boolean;
   ctaLabel: string;
   imageSrc?: string;
+  whatsappTemplate: string;
 }) {
   return (
     <div
@@ -68,7 +70,7 @@ function ServiceCard({
       <div className="mt-10">
         <Magnetic>
           <a
-            href={WHATSAPP_LINK(`Hi Nordic BnB — I'd like to ask about ${item.title.toLowerCase()}.`)}
+            href={WHATSAPP_LINK(whatsappTemplate.replace("{service}", item.title.toLowerCase()))}
             target="_blank"
             rel="noopener noreferrer"
             className={`inline-flex rounded-full px-6 py-3.5 text-sm font-medium tracking-wide transition-colors ${
@@ -108,10 +110,20 @@ export default function Services({
 
         <div className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <Reveal delay={0.05}>
-            <ServiceCard item={services.shortTerm} dark ctaLabel={services.ctaLabel} imageSrc={imageSrc} />
+            <ServiceCard
+              item={services.shortTerm}
+              dark
+              ctaLabel={services.ctaLabel}
+              imageSrc={imageSrc}
+              whatsappTemplate={services.whatsappTemplate}
+            />
           </Reveal>
           <Reveal delay={0.1}>
-            <ServiceCard item={services.longTerm} ctaLabel={services.ctaLabel} />
+            <ServiceCard
+              item={services.longTerm}
+              ctaLabel={services.ctaLabel}
+              whatsappTemplate={services.whatsappTemplate}
+            />
           </Reveal>
         </div>
 

@@ -6,6 +6,7 @@ import Problem from "@/components/sections/problem";
 import PropertyShowcase from "@/components/sections/property-showcase";
 import System from "@/components/sections/system";
 import BeforeAfter from "@/components/sections/before-after";
+import Portfolio from "@/components/sections/portfolio";
 import Performance from "@/components/sections/performance";
 import Services from "@/components/sections/services";
 import Dashboard from "@/components/sections/dashboard";
@@ -13,7 +14,6 @@ import Operations from "@/components/sections/operations";
 import Compare from "@/components/sections/compare";
 import Areas from "@/components/sections/areas";
 import About from "@/components/sections/about";
-import Team from "@/components/sections/team";
 import Testimonials from "@/components/sections/testimonials";
 import FinalCta from "@/components/sections/final-cta";
 import SectionDivider from "@/components/ui/section-divider";
@@ -33,21 +33,40 @@ export default function HomePage({ locale }: { locale: Locale }) {
         <Problem problem={content.problem} imageSrc={media.listingBefore} />
         <PropertyShowcase
           imageSrc={media.seaView}
-          eyebrow="Costa del Sol"
-          headline="Every property tells a story worth telling well."
+          eyebrow={content.showcase1.eyebrow}
+          headline={content.showcase1.heading}
         />
-        <System system={content.system} bgImageSrc={media.nightVilla} />
+        <System
+          system={content.system}
+          bgImageSrc={media.nightVilla}
+          transformationImages={[
+            media.listingBefore,
+            media.interiorLiving,
+            media.poolDay,
+            media.heroVilla,
+            media.stylingDetail,
+            media.listingAfter,
+          ]}
+        />
         <SectionDivider tone="light" />
         <BeforeAfter
           beforeAfter={content.beforeAfter}
           beforeSrc={media.listingBefore}
           afterSrc={media.listingAfter}
         />
+        <Portfolio
+          portfolio={content.portfolio}
+          images={[
+            { before: media.listingBefore, after: media.listingAfter },
+            { before: media.villaBefore, after: media.villaAfter },
+            { before: media.houseBefore, after: media.houseAfter },
+          ]}
+        />
         <Performance performance={content.performance} />
         <PropertyShowcase
           imageSrc={media.interiorLiving}
-          eyebrow="Presentation"
-          headline="Styled, photographed and positioned to perform."
+          eyebrow={content.showcase2.eyebrow}
+          headline={content.showcase2.heading}
           align="right"
         />
         <Services services={content.services} imageSrc={media.poolDay} />
@@ -59,7 +78,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
         <Operations
           operations={content.operations}
           imageSrc={media.heroVilla}
-          sequenceImages={[media.stylingDetail, media.cleaningMoment, media.guestArrival, media.detailShot]}
+          sequenceImages={[media.stylingDetail, media.cleaningTeam, media.guestArrival, media.detailShot]}
         />
         <Compare
           compare={content.compare}
@@ -73,13 +92,21 @@ export default function HomePage({ locale }: { locale: Locale }) {
           detailImages={[media.marbellaLifestyle, media.mijasScene, media.fuengirolaScene, media.benalmadenaScene]}
         />
         <About about={content.about} bgImageSrc={media.sunsetSea} />
-        <Team team={content.team} />
         <Testimonials testimonials={content.testimonials} />
         <SectionDivider tone="light" />
-        <FinalCta finalCta={content.finalCta} imageSrc={media.nightVilla} />
+        <FinalCta
+          finalCta={content.finalCta}
+          imageSrc={media.nightVilla}
+          whatsappMessage={content.nav.whatsappMessage}
+        />
       </main>
-      <Footer locale={locale} footer={content.footer} nav={content.nav} />
-      <WhatsappFab label={content.nav.whatsapp} />
+      <Footer
+        locale={locale}
+        footer={content.footer}
+        nav={content.nav}
+        locationTag={content.hero.locationTag}
+      />
+      <WhatsappFab label={content.nav.whatsapp} message={content.nav.whatsappMessage} />
     </>
   );
 }

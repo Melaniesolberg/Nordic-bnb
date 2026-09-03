@@ -8,10 +8,12 @@ export default function Footer({
   locale,
   footer,
   nav,
+  locationTag,
 }: {
   locale: Locale;
   footer: FooterContent;
   nav: NavContent;
+  locationTag: string;
 }) {
   return (
     <footer className="bg-charcoal text-ivory">
@@ -86,7 +88,7 @@ export default function Footer({
           <p>
             © {new Date().getFullYear()} {footer.rights}
           </p>
-          <p>Costa del Sol, Spain</p>
+          <p>{locationTag}</p>
         </div>
       </div>
     </footer>

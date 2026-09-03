@@ -10,11 +10,12 @@
  */
 export const media = {
   // Real Nordic BnB brand assets, uploaded by the user via the Higgsfield
-  // media widget. These are the exact original files — do not regenerate.
+  // media widget. brandLogo/brandIcon are background-removed (transparent
+  // PNG) versions of the original uploads — do not regenerate.
   brandLogo:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/bef9492b-de81-4667-856c-c1432fec1c60.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155119_a3142800-c62d-4feb-a38c-5769e028866d.png",
   brandIcon:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/3ae2acbc-bddb-4922-bfa9-d1e09c88d7d5.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155250_8e06505d-88fc-4a67-a2b6-0ebefa090888.png",
   brandMerch:
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/0b6e253a-5c3d-4549-8b13-bc988759332b.png",
 
@@ -61,4 +62,16 @@ export const media = {
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142518_695df57d-bd33-4802-add5-d8f74ce54828.png",
   aerialCoast:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142518_e12d2911-c97a-4929-a1b8-1ea84be93f9b.png",
+
+  // Third generation batch — team + expanded before/after portfolio.
+  cleaningTeam:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155215_22cc0b87-e5fd-41b5-a277-878265765037.png",
+  villaBefore:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155215_44bfeb9a-3fe5-4007-a2f5-cca43bd832b3.png",
+  villaAfter:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155215_0f75446e-fe33-4291-a4ac-ed7da9bc72c0.png",
+  houseBefore:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155215_a757e9a7-f8d9-4fe1-a790-788c4029c9d2.png",
+  houseAfter:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155215_f2f3cdd6-db6c-433a-aa97-a6289337a244.png",
 } as const;

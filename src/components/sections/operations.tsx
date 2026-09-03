@@ -5,8 +5,6 @@ import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import type { OperationsContent } from "@/content/types";
 
-const SEQUENCE_LABELS = ["Styling", "Cleaning", "Guest arrival", "Detail"];
-
 export default function Operations({
   operations,
   imageSrc,
@@ -24,7 +22,7 @@ export default function Operations({
         <div className="absolute inset-x-0 bottom-0 px-5 pb-8 sm:px-8 lg:px-12">
           <div className="mx-auto max-w-[1600px]">
             <p className="font-serif-display text-3xl italic text-ivory sm:text-4xl">
-              Every stay, prepared by hand.
+              {operations.bannerHeadline}
             </p>
           </div>
         </div>
@@ -76,23 +74,31 @@ export default function Operations({
         </div>
 
         <div className="mt-20 grid grid-cols-2 gap-3 sm:mt-24 sm:grid-cols-4 sm:gap-4">
-          {sequenceImages.map((src, i) => (
-            <Reveal key={SEQUENCE_LABELS[i]} delay={0.05 * i}>
-              <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
-                <Image
-                  src={src}
-                  alt=""
-                  fill
-                  sizes="(min-width: 640px) 22vw, 46vw"
-                  className="object-cover transition-transform duration-700 hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
-                <span className="absolute bottom-3 left-3 text-xs tracking-wide text-ivory">
-                  {SEQUENCE_LABELS[i]}
-                </span>
-              </div>
-            </Reveal>
-          ))}
+          {sequenceImages.map((src, i) => {
+            const sequenceLabels = [
+              operations.sequenceLabels.styling,
+              operations.sequenceLabels.cleaning,
+              operations.sequenceLabels.guestArrival,
+              operations.sequenceLabels.detail,
+            ];
+            return (
+              <Reveal key={sequenceLabels[i]} delay={0.05 * i}>
+                <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
+                  <Image
+                    src={src}
+                    alt=""
+                    fill
+                    sizes="(min-width: 640px) 22vw, 46vw"
+                    className="object-cover transition-transform duration-700 hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
+                  <span className="absolute bottom-3 left-3 text-xs tracking-wide text-ivory">
+                    {sequenceLabels[i]}
+                  </span>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

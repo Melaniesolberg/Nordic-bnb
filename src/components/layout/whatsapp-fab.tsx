@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 import { WHATSAPP_LINK } from "@/lib/utils";
 
-export default function WhatsappFab({ label }: { label: string }) {
+export default function WhatsappFab({ label, message }: { label: string; message: string }) {
   return (
     <motion.a
-      href={WHATSAPP_LINK("Hi Nordic BnB — I'd like to talk about my property.")}
+      href={WHATSAPP_LINK(message)}
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}

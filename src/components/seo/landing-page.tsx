@@ -77,10 +77,19 @@ export default function SeoLandingPage({ page }: { page: SeoPageConfig }) {
         </section>
 
         <Services services={content.services} imageSrc={media.listingAfter} />
-        <FinalCta finalCta={content.finalCta} imageSrc={media.poolNight} />
+        <FinalCta
+          finalCta={content.finalCta}
+          imageSrc={media.poolNight}
+          whatsappMessage={content.nav.whatsappMessage}
+        />
       </main>
-      <Footer locale="en" footer={content.footer} nav={content.nav} />
-      <WhatsappFab label={content.nav.whatsapp} />
+      <Footer
+        locale="en"
+        footer={content.footer}
+        nav={content.nav}
+        locationTag={content.hero.locationTag}
+      />
+      <WhatsappFab label={content.nav.whatsapp} message={content.nav.whatsappMessage} />
     </>
   );
 }

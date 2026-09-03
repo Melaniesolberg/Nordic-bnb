@@ -15,6 +15,9 @@ export const es: SiteContent = {
     ],
     cta: "Solicita una revisión de tu propiedad",
     whatsapp: "WhatsApp",
+    whatsappMessage: "Hola Nordic BnB — me gustaría hablar sobre mi propiedad.",
+    toggleMenu: "Abrir menú",
+    selectLanguage: "Seleccionar idioma",
   },
   hero: {
     eyebrow: "Gestión de propiedades — Costa del Sol",
@@ -40,6 +43,10 @@ export const es: SiteContent = {
       { label: "Mantenimiento", detail: "Los problemas los descubre el siguiente huésped, no antes" },
     ],
     pivot: "Nordic BnB toma el control de toda la operación.",
+    subline:
+      "Nos encargamos del anuncio, el precio, la comunicación con huéspedes, la limpieza y el mantenimiento — un sistema operativo completo para tu alquiler.",
+    imageAlt: "Una foto de anuncio típica e infravalorada",
+    imageBadge: "Antes de Nordic BnB",
   },
   system: {
     eyebrow: "El sistema Nordic BnB",
@@ -119,6 +126,44 @@ export const es: SiteContent = {
         after: "Distribuido en todos los canales relevantes",
       },
     ],
+    sliderAriaLabel: "Comparación antes y después del anuncio",
+    beforeAlt: "Fotografía de anuncio ordinaria, antes de Nordic BnB",
+    afterAlt: "Fotografía de anuncio Nordic BnB estilizada, después",
+  },
+  portfolio: {
+    eyebrow: "Portafolio",
+    heading: "Resultados en distintos tipos de propiedad.",
+    intro:
+      "Una muestra de cómo el sistema Nordic BnB transforma la presentación en distintos tipos de propiedad de la Costa del Sol.",
+    disclaimer: "Cifras de ejemplo ilustrativas — no son resultados verificados de Nordic BnB.",
+    beforeLabel: "Antes",
+    afterLabel: "Después",
+    properties: [
+      {
+        name: "Apartamento",
+        location: "Fuengirola",
+        stats: [
+          { value: "+29 %", label: "ingresos" },
+          { value: "82 %", label: "ocupación" },
+        ],
+      },
+      {
+        name: "Villa",
+        location: "Marbella",
+        stats: [
+          { value: "+34 %", label: "ingresos" },
+          { value: "86 %", label: "ocupación" },
+        ],
+      },
+      {
+        name: "Casa",
+        location: "Mijas",
+        stats: [
+          { value: "+27 %", label: "ingresos" },
+          { value: "79 %", label: "ocupación" },
+        ],
+      },
+    ],
   },
   performance: {
     eyebrow: "Rendimiento",
@@ -135,6 +180,7 @@ export const es: SiteContent = {
     ],
     chartLabel: "Curva de ingresos ilustrativa, mes a mes",
     channelLabel: "Distribución por canal ilustrativa",
+    directOtherLabel: "Directo y otros",
   },
   services: {
     eyebrow: "Servicios",
@@ -143,7 +189,7 @@ export const es: SiteContent = {
       "Ya sea que tu propiedad encaje mejor con huéspedes vacacionales o con un inquilino de larga temporada, se aplica la misma disciplina: gestión integral, optimizada de forma continua.",
     shortTerm: {
       title: "Gestión de alquiler vacacional y de corta estancia",
-      price: "20 % + IVA",
+      price: "14,9 % + IVA",
       priceNote: "de los ingresos del alquiler",
       description:
         "Gestión completa de Airbnb y Booking.com — desde el primer anuncio hasta la operativa diaria.",
@@ -161,7 +207,7 @@ export const es: SiteContent = {
     },
     longTerm: {
       title: "Gestión de alquiler de larga temporada",
-      price: "8 % + IVA",
+      price: "7,45 % + IVA",
       priceNote: "de la renta mensual",
       description:
         "Marketing, coordinación de inquilinos y supervisión continua para propietarios que buscan ingresos predecibles con baja intensidad operativa.",
@@ -177,6 +223,7 @@ export const es: SiteContent = {
     termsNote:
       "Las condiciones comerciales finales pueden depender de la propiedad, su tipología y los requisitos específicos del servicio — las cifras anteriores reflejan nuestra estructura estándar.",
     ctaLabel: "Pregunta por este servicio",
+    whatsappTemplate: "Hola Nordic BnB — me gustaría preguntar sobre {service}.",
   },
   dashboard: {
     eyebrow: "Experiencia del propietario",
@@ -184,6 +231,12 @@ export const es: SiteContent = {
     intro:
       "Una vista en tiempo real de cómo rinde tu propiedad — reservas, ocupación, estado de limpieza, mantenimiento y tu liquidación mensual, siempre visibles.",
     footnote: "Interfaz conceptual — panel de propietario ilustrativo, mostrado con datos de ejemplo.",
+    windowTitle: "Villa Sunrise — Portal del propietario",
+    cardAlt: "Villa Sunrise, la propiedad de este panel",
+    revenueChangeNote: "+18 % respecto al mes anterior",
+    payoutNote: "1 oct — transferencia bancaria",
+    cleaningStatusText: "Limpieza programada",
+    maintenanceStatusText: "Sin incidencias abiertas",
     labels: {
       revenue: "Ingresos este mes",
       occupancy: "Ocupación",
@@ -209,6 +262,13 @@ export const es: SiteContent = {
       { title: "Reseña recopilada", detail: "Se cierra la experiencia del huésped y se recoge su valoración." },
       { title: "El rendimiento ajusta el precio", detail: "Los datos de cada estancia afinan la siguiente decisión de precio." },
     ],
+    bannerHeadline: "Cada estancia, preparada a mano.",
+    sequenceLabels: {
+      styling: "Estilismo",
+      cleaning: "Limpieza",
+      guestArrival: "Llegada del huésped",
+      detail: "Detalle",
+    },
   },
   compare: {
     eyebrow: "Corta estancia vs. larga temporada",
@@ -267,50 +327,40 @@ export const es: SiteContent = {
     paragraphs: [
       "Nordic BnB se está construyendo alrededor de una idea sencilla: la gestión de propiedades no debería ser pasiva. Un anuncio que se publica y se deja solo rendirá por debajo de su potencial — en silencio, durante años, sin que nadie se dé cuenta.",
       "Cada propiedad que gestionamos debe revisarse, probarse y mejorarse de forma continua — precio, presentación, posicionamiento — en lugar de configurarse una vez y olvidarse.",
-      "Detrás de Nordic BnB hay una red operativa local: limpieza, estilismo, mantenimiento y coordinación sobre el terreno en toda la Costa del Sol, junto a un fundador que cree que los propietarios merecen visibilidad total sobre cómo rinde su propiedad.",
+      "Detrás de Nordic BnB hay una red operativa local: limpieza, estilismo, mantenimiento y coordinación sobre el terreno en toda la Costa del Sol, junto a unos fundadores que creen que los propietarios merecen visibilidad total sobre cómo rinde su propiedad.",
     ],
     founderName: "Petter Solberg",
     founderRole: "Fundador, Nordic BnB",
     founderQuote:
       "Los propietarios no deberían tener que elegir entre una propiedad hermosa y una bien gestionada. Nuestro trabajo es asegurarnos de que nunca tengan que hacerlo.",
-  },
-  team: {
-    eyebrow: "Equipo",
-    heading: "Las personas detrás de la operación.",
-    intro:
-      "Nordic BnB funciona gracias a una red local coordinada — no a una sola persona que hace de todo. Cada disciplina tiene su propio enfoque.",
-    placeholderNotice: "Perfiles de demostración — se sustituirán por miembros reales del equipo a medida que la red crezca.",
-    members: [
-      { name: "Miembro del equipo — Operaciones", role: "Coordinación de operaciones", note: "Perfil de ejemplo" },
-      { name: "Miembro del equipo — Experiencia del huésped", role: "Experiencia del huésped", note: "Perfil de ejemplo" },
-      { name: "Miembro del equipo — Estilismo", role: "Estilismo de propiedades", note: "Perfil de ejemplo" },
-      { name: "Miembro del equipo — Limpieza", role: "Operaciones de limpieza", note: "Perfil de ejemplo" },
-      { name: "Miembro del equipo — Mantenimiento", role: "Coordinación de mantenimiento", note: "Perfil de ejemplo" },
-    ],
+    founder2Name: "Melanie Solberg",
+    founder2Role: "Cofundadora, Nordic BnB",
+    founder2Quote:
+      "Todo propietario merece ver exactamente cómo rinde su propiedad — sin conjeturas, sin caja negra.",
   },
   testimonials: {
     eyebrow: "Testimonios de propietarios",
     heading: "Lo que dirán los propietarios.",
     placeholderNotice:
-      "Testimonio de ejemplo — se sustituirá por una reseña de cliente verificada. Se muestra aquí solo para demostrar el diseño.",
+      "Citas de muestra que reflejan el tono esperado de los propietarios — aún no son reseñas verificadas.",
     items: [
       {
         quote:
-          "Testimonio de ejemplo — se sustituirá por una reseña de cliente verificada. Texto de ejemplo que ilustra el tono y la extensión de una futura cita de propietario.",
-        name: "Propietario de ejemplo",
-        location: "Marbella",
+          "Por fin duermo tranquilo con mi apartamento en Marbella. Los ingresos han subido y ya no reviso el móvil cada cinco minutos por si un huésped necesita algo — Nordic BnB se encarga de todo.",
+        name: "Kristian H.",
+        location: "Propietario noruego, Marbella",
       },
       {
         quote:
-          "Testimonio de ejemplo — se sustituirá por una reseña de cliente verificada. Texto de ejemplo que ilustra el tono y la extensión de una futura cita de propietario.",
-        name: "Propietario de ejemplo",
-        location: "Fuengirola",
+          "Como propietaria a distancia desde Suecia, lo que más valoro es la comunicación. Siempre sé cómo va todo, y la villa nunca ha estado tan bien presentada.",
+        name: "Annika L.",
+        location: "Propietaria sueca, Fuengirola",
       },
       {
         quote:
-          "Testimonio de ejemplo — se sustituirá por una reseña de cliente verificada. Texto de ejemplo que ilustra el tono y la extensión de una futura cita de propietario.",
-        name: "Propietario de ejemplo",
-        location: "Benalmádena",
+          "Llevaba años gestionando mi propiedad yo mismo, sin resultados. En unos meses con Nordic BnB, la ocupación y el estilismo mejoraron notablemente, con mucho menos esfuerzo por mi parte.",
+        name: "Carlos M.",
+        location: "Propietario español, Benalmádena",
       },
     ],
   },
@@ -339,6 +389,7 @@ export const es: SiteContent = {
       submit: "Solicita tu revisión gratuita",
       successTitle: "Recibido.",
       successBody: "Gracias — te contactaremos en breve. Para algo urgente, escríbenos por WhatsApp.",
+      errorMessage: "Algo salió mal — prueba a escribirnos por WhatsApp.",
     },
   },
   footer: {
@@ -347,5 +398,13 @@ export const es: SiteContent = {
     contactHeading: "Contacto",
     languageHeading: "Idioma",
     rights: "Nordic BnB. Todos los derechos reservados.",
+  },
+  showcase1: {
+    eyebrow: "Costa del Sol",
+    heading: "Cada propiedad merece contar bien su historia.",
+  },
+  showcase2: {
+    eyebrow: "Presentación",
+    heading: "Estilizada, fotografiada y posicionada para rendir.",
   },
 };

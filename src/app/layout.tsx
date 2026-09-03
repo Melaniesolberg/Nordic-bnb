@@ -26,6 +26,11 @@ export const metadata: Metadata = {
     languages: {
       en: "/",
       no: "/no",
+      sv: "/sv",
+      da: "/da",
+      fi: "/fi",
+      de: "/de",
+      fr: "/fr",
       es: "/es",
     },
   },

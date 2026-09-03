@@ -32,6 +32,40 @@ function StaticGem() {
   );
 }
 
+/**
+ * Crossfades through a sequence of property photos, one per pillar step, so
+ * scrolling through the 6-step model visually "moves through" the property
+ * from unstyled to fully styled.
+ */
+function PropertyCrossfade({ images, active }: { images: string[]; active: number }) {
+  return (
+    <div className="relative h-full w-full overflow-hidden">
+      {images.map((src, i) => (
+        <motion.div
+          key={src}
+          className="absolute inset-0"
+          initial={false}
+          animate={{ opacity: i === active ? 1 : 0, scale: i === active ? 1.07 : 1 }}
+          transition={{
+            opacity: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
+            scale: { duration: 2.4, ease: "easeOut" },
+          }}
+        >
+          <Image
+            src={src}
+            alt=""
+            fill
+            sizes="(min-width: 1024px) 32vw, 90vw"
+            className="object-cover"
+            priority={i === 0}
+          />
+        </motion.div>
+      ))}
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/75 via-transparent to-transparent" />
+    </div>
+  );
+}
+
 function PillarList({ system }: { system: SystemContent }) {
   return (
     <div className="grid grid-cols-1 gap-px overflow-hidden rounded-[2px] bg-ivory/10 sm:grid-cols-2">
@@ -51,9 +85,11 @@ function PillarList({ system }: { system: SystemContent }) {
 export default function System({
   system,
   bgImageSrc,
+  transformationImages,
 }: {
   system: SystemContent;
   bgImageSrc?: string;
+  transformationImages?: string[];
 }) {
   const prefersReduced = useReducedMotion();
   const webglSupported = useWebglSupported();
@@ -156,6 +192,14 @@ export default function System({
                   <StaticGem />
                 ) : (
                   <SystemScene progressRef={progressRef} />
+                )}
+                {transformationImages && transformationImages.length === system.pillars.length && (
+                  <div className="pointer-events-none absolute inset-x-6 bottom-6 aspect-[4/3] w-[68%] max-w-sm overflow-hidden rounded-sm border border-ivory/15 shadow-[0_30px_70px_rgba(0,0,0,0.55)] sm:right-0 sm:left-auto sm:bottom-8">
+                    <PropertyCrossfade images={transformationImages} active={active} />
+                    <span className="absolute bottom-3 left-3 rounded-full bg-charcoal/70 px-3 py-1 text-[10px] tracking-wide text-ivory backdrop-blur-sm">
+                      {pillar.title}
+                    </span>
+                  </div>
                 )}
               </div>
             </div>

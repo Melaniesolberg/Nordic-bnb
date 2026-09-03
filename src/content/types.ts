@@ -2,6 +2,14 @@ export interface NavContent {
   links: { label: string; href: string }[];
   cta: string;
   whatsapp: string;
+  whatsappMessage: string;
+  toggleMenu: string;
+  selectLanguage: string;
+}
+
+export interface ShowcaseContent {
+  eyebrow: string;
+  heading: string;
 }
 
 export interface HeroContent {
@@ -17,9 +25,12 @@ export interface HeroContent {
 export interface ProblemContent {
   eyebrow: string;
   heading: string;
+  subline: string;
   intro: string;
   frictions: { label: string; detail: string }[];
   pivot: string;
+  imageAlt: string;
+  imageBadge: string;
 }
 
 export interface SystemPillar {
@@ -48,6 +59,25 @@ export interface BeforeAfterContent {
   beforeLabel: string;
   afterLabel: string;
   fields: BeforeAfterField[];
+  sliderAriaLabel: string;
+  beforeAlt: string;
+  afterAlt: string;
+}
+
+export interface PortfolioProperty {
+  name: string;
+  location: string;
+  stats: { value: string; label: string }[];
+}
+
+export interface PortfolioContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  disclaimer: string;
+  beforeLabel: string;
+  afterLabel: string;
+  properties: PortfolioProperty[];
 }
 
 export interface PerformanceMetric {
@@ -63,6 +93,7 @@ export interface PerformanceContent {
   metrics: PerformanceMetric[];
   chartLabel: string;
   channelLabel: string;
+  directOtherLabel: string;
 }
 
 export interface ServiceItem {
@@ -81,6 +112,7 @@ export interface ServicesContent {
   longTerm: ServiceItem;
   termsNote: string;
   ctaLabel: string;
+  whatsappTemplate: string;
 }
 
 export interface DashboardContent {
@@ -88,6 +120,12 @@ export interface DashboardContent {
   heading: string;
   intro: string;
   footnote: string;
+  windowTitle: string;
+  cardAlt: string;
+  revenueChangeNote: string;
+  payoutNote: string;
+  cleaningStatusText: string;
+  maintenanceStatusText: string;
   labels: {
     revenue: string;
     occupancy: string;
@@ -110,6 +148,13 @@ export interface OperationsContent {
   heading: string;
   intro: string;
   steps: OperationsStep[];
+  bannerHeadline: string;
+  sequenceLabels: {
+    styling: string;
+    cleaning: string;
+    guestArrival: string;
+    detail: string;
+  };
 }
 
 export interface CompareColumn {
@@ -146,20 +191,9 @@ export interface AboutContent {
   founderName: string;
   founderRole: string;
   founderQuote: string;
-}
-
-export interface TeamMember {
-  name: string;
-  role: string;
-  note: string;
-}
-
-export interface TeamContent {
-  eyebrow: string;
-  heading: string;
-  intro: string;
-  placeholderNotice: string;
-  members: TeamMember[];
+  founder2Name: string;
+  founder2Role: string;
+  founder2Quote: string;
 }
 
 export interface Testimonial {
@@ -193,6 +227,7 @@ export interface ContactFormContent {
   submit: string;
   successTitle: string;
   successBody: string;
+  errorMessage: string;
 }
 
 export interface FinalCtaContent {
@@ -229,8 +264,10 @@ export interface SiteContent {
   compare: CompareContent;
   areas: AreasContent;
   about: AboutContent;
-  team: TeamContent;
   testimonials: TestimonialsContent;
   finalCta: FinalCtaContent;
   footer: FooterContent;
+  showcase1: ShowcaseContent;
+  showcase2: ShowcaseContent;
+  portfolio: PortfolioContent;
 }

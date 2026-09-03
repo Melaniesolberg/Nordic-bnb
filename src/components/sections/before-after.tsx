@@ -15,7 +15,7 @@ export default function BeforeAfter({
   beforeSrc: string;
   afterSrc: string;
 }) {
-  const [pos, setPos] = useState(50);
+  const [pos, setPos] = useState(62);
   const containerRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
 
@@ -45,7 +45,7 @@ export default function BeforeAfter({
             ref={containerRef}
             role="slider"
             tabIndex={0}
-            aria-label="Before and after listing comparison"
+            aria-label={beforeAfter.sliderAriaLabel}
             aria-valuenow={Math.round(pos)}
             aria-valuemin={0}
             aria-valuemax={100}
@@ -66,7 +66,7 @@ export default function BeforeAfter({
           >
             <Image
               src={beforeSrc}
-              alt="Ordinary listing photography, before Nordic BnB"
+              alt={beforeAfter.beforeAlt}
               fill
               sizes="(min-width: 1024px) 1400px, 100vw"
               className="pointer-events-none object-cover"
@@ -78,7 +78,7 @@ export default function BeforeAfter({
             >
               <Image
                 src={afterSrc}
-                alt="Styled Nordic BnB listing photography, after"
+                alt={beforeAfter.afterAlt}
                 fill
                 sizes="(min-width: 1024px) 1400px, 100vw"
                 className="object-cover"
@@ -86,15 +86,17 @@ export default function BeforeAfter({
               />
             </div>
 
-            {/* Labels */}
-            <div className="pointer-events-none absolute left-5 top-5 rounded-full bg-charcoal/70 px-4 py-1.5 text-xs font-medium tracking-wide text-ivory backdrop-blur-sm">
-              {beforeAfter.beforeLabel}
-            </div>
+            {/* Labels — the styled "after" image is clipped to the left portion of the
+                container (0–pos%), and the base "before" image shows through on the
+                right, so the labels are pinned opposite to their usual sides. */}
             <div
-              className="pointer-events-none absolute right-5 top-5 rounded-full bg-coral/90 px-4 py-1.5 text-xs font-medium tracking-wide text-ivory backdrop-blur-sm"
+              className="pointer-events-none absolute left-5 top-5 rounded-full bg-coral/90 px-4 py-1.5 text-xs font-medium tracking-wide text-ivory backdrop-blur-sm"
               style={{ opacity: pos > 12 ? 1 : 0, transition: "opacity 0.3s" }}
             >
               {beforeAfter.afterLabel}
+            </div>
+            <div className="pointer-events-none absolute right-5 top-5 rounded-full bg-charcoal/70 px-4 py-1.5 text-xs font-medium tracking-wide text-ivory backdrop-blur-sm">
+              {beforeAfter.beforeLabel}
             </div>
 
             {/* Handle */}

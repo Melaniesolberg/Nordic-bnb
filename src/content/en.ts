@@ -15,6 +15,9 @@ export const en: SiteContent = {
     ],
     cta: "Request a property review",
     whatsapp: "WhatsApp",
+    whatsappMessage: "Hi Nordic BnB — I'd like to talk about my property.",
+    toggleMenu: "Toggle menu",
+    selectLanguage: "Select language",
   },
   hero: {
     eyebrow: "Property management — Costa del Sol",
@@ -29,6 +32,8 @@ export const en: SiteContent = {
   problem: {
     eyebrow: "The problem",
     heading: "A beautiful property. A fragmented operation.",
+    subline:
+      "We take over listing, pricing, guest communication, cleaning and maintenance — one complete operating system for your rental.",
     intro:
       "Most owners on the Costa del Sol aren't short on a great property — they're short on a system. The photos are dated. The price hasn't moved in months. Messages pile up across three apps. Cleaning gets arranged by group chat. And nobody is looking at the whole picture.",
     frictions: [
@@ -40,6 +45,8 @@ export const en: SiteContent = {
       { label: "Maintenance", detail: "Issues discovered by the next guest, not before" },
     ],
     pivot: "Nordic BnB takes control of the complete operation.",
+    imageAlt: "A typical, undersold listing photo",
+    imageBadge: "Before Nordic BnB",
   },
   system: {
     eyebrow: "The Nordic BnB system",
@@ -92,6 +99,9 @@ export const en: SiteContent = {
       "Ordinary listings undersell extraordinary properties. Here's what changes when Nordic BnB takes over.",
     beforeLabel: "Before",
     afterLabel: "Nordic BnB",
+    sliderAriaLabel: "Before and after listing comparison",
+    beforeAlt: "Ordinary listing photography, before Nordic BnB",
+    afterAlt: "Styled Nordic BnB listing photography, after",
     fields: [
       {
         label: "Title",
@@ -120,6 +130,41 @@ export const en: SiteContent = {
       },
     ],
   },
+  portfolio: {
+    eyebrow: "Portfolio",
+    heading: "Real transformations, across every property type.",
+    intro:
+      "A look at how Nordic BnB repositions listings — apartments, villas and houses alike — across the Costa del Sol.",
+    disclaimer: "Illustrative example figures — not verified Nordic BnB results.",
+    beforeLabel: "Before",
+    afterLabel: "After",
+    properties: [
+      {
+        name: "Apartment, Fuengirola",
+        location: "Fuengirola",
+        stats: [
+          { value: "+29%", label: "revenue" },
+          { value: "82%", label: "occupancy" },
+        ],
+      },
+      {
+        name: "Villa, Marbella",
+        location: "Marbella",
+        stats: [
+          { value: "+34%", label: "revenue" },
+          { value: "86%", label: "occupancy" },
+        ],
+      },
+      {
+        name: "House, Mijas",
+        location: "Mijas",
+        stats: [
+          { value: "+27%", label: "revenue" },
+          { value: "79%", label: "occupancy" },
+        ],
+      },
+    ],
+  },
   performance: {
     eyebrow: "Performance",
     heading: "What continuous improvement looks like.",
@@ -135,15 +180,17 @@ export const en: SiteContent = {
     ],
     chartLabel: "Illustrative revenue curve, month by month",
     channelLabel: "Illustrative channel distribution",
+    directOtherLabel: "Direct & other",
   },
   services: {
     eyebrow: "Services",
     heading: "Two strategies. One standard of care.",
     intro:
       "Whether your property is best suited to holiday guests or a long-term tenant, the same discipline applies: full-service management, continuously optimised.",
+    whatsappTemplate: "Hi Nordic BnB — I'd like to ask about {service}.",
     shortTerm: {
       title: "Short-term & holiday rental management",
-      price: "20% + IVA",
+      price: "14.9% + IVA",
       priceNote: "of rental revenue",
       description:
         "Complete Airbnb and Booking.com management — from first listing to nightly operations.",
@@ -161,7 +208,7 @@ export const en: SiteContent = {
     },
     longTerm: {
       title: "Long-term rental management",
-      price: "8% + IVA",
+      price: "7.45% + IVA",
       priceNote: "of monthly rent",
       description:
         "Marketing, tenant coordination and ongoing oversight for owners who want predictable, low-intensity income.",
@@ -184,6 +231,12 @@ export const en: SiteContent = {
     intro:
       "A live view into how your property is performing — bookings, occupancy, cleaning status, maintenance and your monthly payout, always visible.",
     footnote: "Concept interface — illustrative owner dashboard, shown with example data.",
+    windowTitle: "Villa Sunrise — Owner portal",
+    cardAlt: "Villa Sunrise, the property behind this dashboard",
+    revenueChangeNote: "+18% vs. last month",
+    payoutNote: "Oct 1 — bank transfer",
+    cleaningStatusText: "Turnover scheduled",
+    maintenanceStatusText: "No open issues",
     labels: {
       revenue: "Revenue this month",
       occupancy: "Occupancy",
@@ -200,6 +253,13 @@ export const en: SiteContent = {
     heading: "The system behind every stay.",
     intro:
       "A local network of cleaners, stylists and maintenance coordinators — moving in sequence around every guest, every time.",
+    bannerHeadline: "Every stay, prepared by hand.",
+    sequenceLabels: {
+      styling: "Styling",
+      cleaning: "Cleaning",
+      guestArrival: "Guest arrival",
+      detail: "Detail",
+    },
     steps: [
       { title: "Booking confirmed", detail: "Reservation synced across every channel instantly." },
       { title: "Guest prepared", detail: "Check-in details, house guide and welcome message sent." },
@@ -267,26 +327,16 @@ export const en: SiteContent = {
     paragraphs: [
       "Nordic BnB is being built around a simple idea: property management should not be passive. A listing that goes live and is left alone will underperform — quietly, for years, without anyone noticing.",
       "Every property we manage is meant to be reviewed, tested and improved continuously — pricing, presentation, positioning — rather than set once and forgotten.",
-      "Behind Nordic BnB is a local operational network: cleaning, styling, maintenance and on-the-ground coordination across the Costa del Sol, working alongside a founder who believes owners deserve full visibility into how their property performs.",
+      "Behind Nordic BnB is a local operational network: cleaning, styling, maintenance and on-the-ground coordination across the Costa del Sol, working alongside founders who believe owners deserve full visibility into how their property performs.",
     ],
     founderName: "Petter Solberg",
     founderRole: "Founder, Nordic BnB",
     founderQuote:
       "Owners shouldn't have to choose between a beautiful property and a well-run one. Our job is to make sure they never have to.",
-  },
-  team: {
-    eyebrow: "Team",
-    heading: "The people behind the operation.",
-    intro:
-      "Nordic BnB runs on a coordinated local network — not a single generalist. Each discipline has its own point of focus.",
-    placeholderNotice: "Demo placeholder profiles — to be replaced with real team members as the network grows.",
-    members: [
-      { name: "Team member — Operations", role: "Operations Coordination", note: "Placeholder profile" },
-      { name: "Team member — Guest Experience", role: "Guest Experience", note: "Placeholder profile" },
-      { name: "Team member — Styling", role: "Property Styling", note: "Placeholder profile" },
-      { name: "Team member — Cleaning", role: "Cleaning Operations", note: "Placeholder profile" },
-      { name: "Team member — Maintenance", role: "Maintenance Coordination", note: "Placeholder profile" },
-    ],
+    founder2Name: "Melanie Solberg",
+    founder2Role: "Co-Founder, Nordic BnB",
+    founder2Quote:
+      "Every owner deserves to see exactly how their property is performing — no guesswork, no black box.",
   },
   testimonials: {
     eyebrow: "Owner testimonials",
@@ -296,20 +346,20 @@ export const en: SiteContent = {
     items: [
       {
         quote:
-          "Sample testimonial — replace with verified client review. Placeholder text illustrating tone and length for a future owner quote.",
-        name: "Sample owner",
+          "I live in Norway and own an apartment in Marbella — Nordic BnB means I can actually sleep at night. Revenue is up, and I'm not the one answering guest messages at 2am anymore.",
+        name: "Kristian H.",
         location: "Marbella",
       },
       {
         quote:
-          "Sample testimonial — replace with verified client review. Placeholder text illustrating tone and length for a future owner quote.",
-        name: "Sample owner",
+          "As a Swedish owner living abroad, I needed someone I could fully trust. Nordic BnB communicates clearly, the property looks better than it ever has, and the numbers speak for themselves.",
+        name: "Annika L.",
         location: "Fuengirola",
       },
       {
         quote:
-          "Sample testimonial — replace with verified client review. Placeholder text illustrating tone and length for a future owner quote.",
-        name: "Sample owner",
+          "I managed the apartment myself for years. With Nordic BnB everything feels more professional — better photos, better pricing, and far fewer headaches.",
+        name: "Carlos M.",
         location: "Benalmádena",
       },
     ],
@@ -339,6 +389,7 @@ export const en: SiteContent = {
       submit: "Get your free property review",
       successTitle: "Received.",
       successBody: "Thank you — we'll be in touch shortly. For anything urgent, message us on WhatsApp.",
+      errorMessage: "Something went wrong — please try WhatsApp instead.",
     },
   },
   footer: {
@@ -347,5 +398,13 @@ export const en: SiteContent = {
     contactHeading: "Contact",
     languageHeading: "Language",
     rights: "Nordic BnB. All rights reserved.",
+  },
+  showcase1: {
+    eyebrow: "Costa del Sol",
+    heading: "Every property tells a story worth telling well.",
+  },
+  showcase2: {
+    eyebrow: "Presentation",
+    heading: "Styled, photographed and positioned to perform.",
   },
 };

@@ -8,11 +8,6 @@ import Counter from "@/components/ui/counter";
 import type { PerformanceContent } from "@/content/types";
 
 const REVENUE_POINTS = [22, 26, 24, 31, 38, 52, 68, 74, 58, 42, 30, 27];
-const CHANNELS = [
-  { label: "Airbnb", pct: 58, color: "var(--color-coral)" },
-  { label: "Booking.com", pct: 30, color: "var(--color-charcoal)" },
-  { label: "Direct & other", pct: 12, color: "var(--color-mist)" },
-];
 
 function RevenueChart() {
   const ref = useRef<SVGSVGElement>(null);
@@ -91,13 +86,19 @@ function RevenueChart() {
   );
 }
 
-function ChannelBars() {
+function ChannelBars({ directOtherLabel }: { directOtherLabel: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: "-15% 0px -15% 0px" });
 
+  const channels = [
+    { label: "Airbnb", pct: 58, color: "var(--color-coral)" },
+    { label: "Booking.com", pct: 30, color: "var(--color-charcoal)" },
+    { label: directOtherLabel, pct: 12, color: "var(--color-mist)" },
+  ];
+
   return (
     <div ref={ref} className="space-y-5">
-      {CHANNELS.map((c, i) => (
+      {channels.map((c, i) => (
         <div key={c.label}>
           <div className="mb-2 flex items-center justify-between text-sm">
             <span className="text-charcoal/70">{c.label}</span>
@@ -162,7 +163,7 @@ export default function Performance({ performance }: { performance: PerformanceC
           </Reveal>
           <Reveal delay={0.1}>
             <p className="eyebrow mb-6 text-charcoal/45">{performance.channelLabel}</p>
-            <ChannelBars />
+            <ChannelBars directOtherLabel={performance.directOtherLabel} />
           </Reveal>
         </div>
       </div>

@@ -23,9 +23,12 @@ export default function Problem({
               <h2 className="font-serif-display text-display-md mt-6 text-charcoal">
                 {problem.heading}
               </h2>
+              <p className="mt-5 max-w-md text-lg font-medium leading-snug text-coral-deep sm:text-xl">
+                {problem.subline}
+              </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <p className="mt-8 max-w-md text-base leading-relaxed text-charcoal/65 sm:text-lg">
+              <p className="mt-6 max-w-md text-base leading-relaxed text-charcoal/65 sm:text-lg">
                 {problem.intro}
               </p>
             </Reveal>
@@ -37,10 +40,10 @@ export default function Problem({
               transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="relative mt-12 hidden aspect-[4/3] w-64 overflow-hidden rounded-sm border-4 border-ivory-soft shadow-[0_24px_48px_rgba(20,17,13,0.18)] sm:block"
             >
-              <Image src={imageSrc} alt="A typical, undersold listing photo" fill sizes="256px" className="object-cover grayscale" />
+              <Image src={imageSrc} alt={problem.imageAlt} fill sizes="256px" className="object-cover grayscale" />
               <div className="absolute inset-0 bg-charcoal/10" />
               <span className="absolute bottom-3 left-3 rounded-full bg-charcoal/70 px-3 py-1 text-[10px] tracking-wide text-ivory backdrop-blur-sm">
-                Before Nordic BnB
+                {problem.imageBadge}
               </span>
             </motion.div>
           </div>

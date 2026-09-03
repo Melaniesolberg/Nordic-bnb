@@ -17,9 +17,11 @@ const labelClasses = "eyebrow mb-2 block text-ivory/45";
 export default function FinalCta({
   finalCta,
   imageSrc,
+  whatsappMessage,
 }: {
   finalCta: FinalCtaContent;
   imageSrc: string;
+  whatsappMessage: string;
 }) {
   const [status, setStatus] = useState<Status>("idle");
   const f = finalCta.form.fields;
@@ -83,7 +85,7 @@ export default function FinalCta({
                 </Magnetic>
                 <Magnetic>
                   <a
-                    href={WHATSAPP_LINK("Hi Nordic BnB — I'd like to talk about my property.")}
+                    href={WHATSAPP_LINK(whatsappMessage)}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center rounded-full border border-ivory/25 px-7 py-4 text-sm font-medium tracking-wide text-ivory transition-colors hover:border-ivory/60"
@@ -170,7 +172,7 @@ export default function FinalCta({
                       </Magnetic>
                       {status === "error" && (
                         <p className="mt-4 text-sm text-coral-soft">
-                          Something went wrong — please try WhatsApp instead.
+                          {finalCta.form.errorMessage}
                         </p>
                       )}
                     </div>

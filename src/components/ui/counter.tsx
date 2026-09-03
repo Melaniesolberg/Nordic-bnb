@@ -32,11 +32,10 @@ export default function Counter({ value, className }: { value: string; className
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shouldAnimate, value]);
 
-  const display = !inView
-    ? formatWith(value, 0)
-    : shouldAnimate
-      ? (animated ?? formatWith(value, 0))
-      : value;
+  // Default to the final value so the number is always correct even if the
+  // in-view observer never fires (SSR, reduced motion, edge-case layouts).
+  // The count-up animation is a progressive enhancement layered on top.
+  const display = shouldAnimate ? (animated ?? value) : value;
 
   return (
     <span ref={ref} className={className}>

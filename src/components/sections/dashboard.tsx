@@ -51,7 +51,7 @@ export default function Dashboard({
               transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
               className="relative mt-10 hidden aspect-[3/4] w-full max-w-[220px] overflow-hidden rounded-sm shadow-[0_30px_70px_rgba(0,0,0,0.5)] lg:block"
             >
-              <Image src={cardImageSrc} alt="Villa Sunrise, the property behind this dashboard" fill sizes="220px" className="object-cover" />
+              <Image src={cardImageSrc} alt={dashboard.cardAlt} fill sizes="220px" className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
               <span className="absolute bottom-3 left-3 text-xs tracking-wide text-ivory/85">Villa Sunrise, Marbella</span>
             </motion.div>
@@ -65,14 +65,14 @@ export default function Dashboard({
                   <span className="h-2.5 w-2.5 rounded-full bg-ivory/15" />
                   <span className="h-2.5 w-2.5 rounded-full bg-ivory/15" />
                   <span className="h-2.5 w-2.5 rounded-full bg-ivory/15" />
-                  <span className="eyebrow ml-3 text-ivory/35">Villa Sunrise — Owner portal</span>
+                  <span className="eyebrow ml-3 text-ivory/35">{dashboard.windowTitle}</span>
                 </div>
 
                 <div className="grid grid-cols-1 gap-px bg-ivory/10 sm:grid-cols-3">
                   <div className="bg-charcoal-soft p-6">
                     <p className="eyebrow text-ivory/40">{dashboard.labels.revenue}</p>
                     <p className="font-serif-display mt-3 text-3xl text-coral-soft">€4,280</p>
-                    <p className="mt-1 text-xs text-ivory/40">+18% vs. last month</p>
+                    <p className="mt-1 text-xs text-ivory/40">{dashboard.revenueChangeNote}</p>
                   </div>
                   <div className="bg-charcoal-soft p-6">
                     <p className="eyebrow text-ivory/40">{dashboard.labels.occupancy}</p>
@@ -84,7 +84,7 @@ export default function Dashboard({
                   <div className="bg-charcoal-soft p-6">
                     <p className="eyebrow text-ivory/40">{dashboard.labels.payout}</p>
                     <p className="font-serif-display mt-3 text-3xl text-ivory">€3,624</p>
-                    <p className="mt-1 text-xs text-ivory/40">Oct 1 — bank transfer</p>
+                    <p className="mt-1 text-xs text-ivory/40">{dashboard.payoutNote}</p>
                   </div>
                 </div>
 
@@ -115,14 +115,14 @@ export default function Dashboard({
                     <div className="flex flex-1 items-center justify-between bg-charcoal-soft p-6">
                       <div>
                         <p className="eyebrow text-ivory/40">{dashboard.labels.cleaning}</p>
-                        <p className="mt-2 text-sm text-ivory">Turnover scheduled</p>
+                        <p className="mt-2 text-sm text-ivory">{dashboard.cleaningStatusText}</p>
                       </div>
                       <span className="h-2.5 w-2.5 rounded-full bg-coral" />
                     </div>
                     <div className="flex flex-1 items-center justify-between bg-charcoal-soft p-6">
                       <div>
                         <p className="eyebrow text-ivory/40">{dashboard.labels.maintenance}</p>
-                        <p className="mt-2 text-sm text-ivory">No open issues</p>
+                        <p className="mt-2 text-sm text-ivory">{dashboard.maintenanceStatusText}</p>
                       </div>
                       <span className="h-2.5 w-2.5 rounded-full bg-ivory/25" />
                     </div>

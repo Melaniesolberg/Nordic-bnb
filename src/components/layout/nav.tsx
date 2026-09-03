@@ -5,8 +5,9 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "@/components/ui/logo";
 import Magnetic from "@/components/ui/magnetic-button";
+import LanguageSwitcher from "@/components/ui/language-switcher";
 import { WHATSAPP_LINK } from "@/lib/utils";
-import { locales, localeHref, localeLabels, type Locale } from "@/i18n/config";
+import { locales, localeHref, localeFlags, type Locale } from "@/i18n/config";
 import type { NavContent } from "@/content/types";
 
 export default function Nav({ locale, nav }: { locale: Locale; nav: NavContent }) {
@@ -51,22 +52,7 @@ export default function Nav({ locale, nav }: { locale: Locale; nav: NavContent }
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
-          <div className={`flex items-center gap-1 eyebrow ${dark ? "text-charcoal/50" : "text-ivory/55"}`}>
-            {locales.map((l, i) => (
-              <span key={l} className="flex items-center">
-                <Link
-                  href={localeHref(l, "/")}
-                  className={`px-1.5 transition-colors hover:text-coral ${
-                    l === locale ? "text-coral" : ""
-                  }`}
-                  aria-label={localeLabels[l]}
-                >
-                  {l.toUpperCase()}
-                </Link>
-                {i < locales.length - 1 && <span className="opacity-30">/</span>}
-              </span>
-            ))}
-          </div>
+          <LanguageSwitcher locale={locale} dark={dark} label={nav.selectLanguage} />
           <Magnetic>
             <a
               href={WHATSAPP_LINK()}
@@ -83,7 +69,7 @@ export default function Nav({ locale, nav }: { locale: Locale; nav: NavContent }
 
         <button
           className="z-10 flex flex-col gap-1.5 lg:hidden"
-          aria-label="Toggle menu"
+          aria-label={nav.toggleMenu}
           onClick={() => setOpen((v) => !v)}
         >
           <span
@@ -119,16 +105,18 @@ export default function Nav({ locale, nav }: { locale: Locale; nav: NavContent }
                   {link.label}
                 </a>
               ))}
-              <div className="flex items-center gap-3 pt-2">
+              <div className="flex flex-wrap items-center gap-2 pt-2">
                 {locales.map((l) => (
                   <Link
                     key={l}
                     href={localeHref(l, "/")}
-                    className={`eyebrow rounded-full border border-charcoal/15 px-3 py-1.5 ${
+                    onClick={() => setOpen(false)}
+                    className={`eyebrow flex items-center gap-1.5 rounded-full border border-charcoal/15 px-3 py-1.5 ${
                       l === locale ? "border-coral text-coral" : "text-charcoal/60"
                     }`}
                   >
-                    {l.toUpperCase()}
+                    <span aria-hidden>{localeFlags[l]}</span>
+                    <span>{l.toUpperCase()}</span>
                   </Link>
                 ))}
               </div>
