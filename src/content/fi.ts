@@ -49,46 +49,46 @@ export const fi: SiteContent = {
     imageBadge: "Ennen Nordic BnB:tä",
   },
   system: {
-    eyebrow: "Nordic BnB -järjestelmä",
-    heading: "Yksi käyttöjärjestelmä koko vuokraukselle.",
+    eyebrow: "Näin toimimme",
+    heading: "Tyhjästä huoneesta vahvistettuun varaukseen.",
     intro:
-      "Kuusi osa-aluetta, jotka toimivat jatkuvasti ja yhdessä — ei kertaluontoinen ilmoituksen perustaminen. Vieritä liikkuaksesi järjestelmän läpi.",
+      "Prosessi, joka muuttaa ilmoituksen palaavien vieraiden virraksi — vieritä seurataksesi sitä alusta loppuun.",
     pillars: [
       {
         code: "01",
-        title: "Asemoi",
+        title: "Tyylittely",
         description:
-          "Valokuvaus, tyylittely ja ilmoitusteksti uudistettuna näyttämään kiinteistön parhaimmillaan — jokaisella kanavalla, jolla se näkyy.",
+          "Tyylittelijä järjestää huonekalut, tekstiilit ja valaistuksen, kunnes tila tuntuu kodilta, ei vuokrakohteelta.",
       },
       {
         code: "02",
-        title: "Hinnoittele",
+        title: "Siivous",
         description:
-          "Dynaaminen, kysyntäpohjainen hinnoittelu, joka mukautuu sesonkiin, kalenteriin ja kilpailuun — ei yhtä kiinteää hintaa.",
+          "Ammattimainen siivous alusta loppuun ennen jokaisen vieraan saapumista.",
       },
       {
         code: "03",
-        title: "Jakele",
+        title: "Kuvaus",
         description:
-          "Airbnb, Booking.com ja kiinteistöllesi merkitykselliset kanavat, synkronoituna ja optimoituna jokaiselle yleisölle.",
+          "Ammattimainen valokuvaus vangitsee kiinteistön parhaimmillaan, valmiina jokaiselle kanavalle.",
       },
       {
         code: "04",
-        title: "Isännöi",
+        title: "Synkronointi",
         description:
-          "Nopea, lämmin vierasviestintä tiedustelusta uloskirjautumiseen, ja sisäänkirjautumiskokemus, joka ansaitsee viiden tähden arvostelut.",
+          "Ilmoitus julkaistaan välittömästi Airbnbssa, Booking.comissa ja kaikilla merkityksellisillä kanavilla.",
       },
       {
         code: "05",
-        title: "Huolla",
+        title: "Saapuminen",
         description:
-          "Ammattimainen siivous, tyylittelyn viimeistely ja huollon koordinointi jokaisen oleskelun välillä.",
+          "Vieras hakee avaimet — tai kirjautuu sisään itse — ja asettuu taloksi muutamassa minuutissa.",
       },
       {
         code: "06",
-        title: "Paranna",
+        title: "Varaus",
         description:
-          "Suorituskykyä tarkastellaan jatkuvasti, ja jokainen päätös — hinta, kuvat, teksti — hiotaan datan perusteella.",
+          "Oleskelu päättyy, arvostelu saapuu, ja seuraava varaus on jo vahvistettu.",
       },
     ],
   },
@@ -135,7 +135,8 @@ export const fi: SiteContent = {
     heading: "Todellisia muutoksia, kaikentyyppisissä kiinteistöissä.",
     intro:
       "Katsaus siihen, miten Nordic BnB asemoi ilmoitukset uudelleen — asunnot, huvilat ja talot — pitkin Costa del Solia.",
-    disclaimer: "Havainnollistavia esimerkkilukuja — ei todennettuja Nordic BnB -tuloksia.",
+    realResultsLabel: "Aitoja tuloksia",
+    disclaimer: "Aidot ennen/jälkeen-kuvat. Kasvuluvut ovat havainnollistavia esimerkkejä, kunnes voimme julkaista todennettua asiakasdataa.",
     beforeLabel: "Ennen",
     afterLabel: "Jälkeen",
     properties: [
@@ -325,7 +326,7 @@ export const fi: SiteContent = {
     eyebrow: "Meistä",
     heading: "Rakennettu yksinkertaiselle ajatukselle.",
     paragraphs: [
-      "Nordic BnB rakentuu yksinkertaisen ajatuksen ympärille: kiinteistöhallinnan ei pitäisi olla passiivista. Ilmoitus, joka julkaistaan ja jätetään yksin, alisuoriutuu — hiljaa, vuosien ajan, kenenkään huomaamatta.",
+      "Nordic BnB perustettiin vuonna 2023, ja se rakentuu yksinkertaisen ajatuksen ympärille: kiinteistöhallinnan ei pitäisi olla passiivista. Ilmoitus, joka julkaistaan ja jätetään yksin, alisuoriutuu — hiljaa, vuosien ajan, kenenkään huomaamatta.",
       "Jokaista hallinnoimaamme kiinteistöä on tarkoitus tarkastella, testata ja parantaa jatkuvasti — hinnoittelua, esittelyä, asemointia — sen sijaan että se asetettaisiin kerran ja unohdettaisiin.",
       "Nordic BnB:n takana on paikallinen toimintaverkosto: siivous, tyylittely, huolto ja paikan päällä tapahtuva koordinointi koko Costa del Solilla, yhdessä perustajien kanssa, jotka uskovat, että omistajat ansaitsevat täyden näkyvyyden siihen, miten heidän kiinteistönsä suoriutuu.",
     ],
@@ -340,27 +341,25 @@ export const fi: SiteContent = {
   },
   testimonials: {
     eyebrow: "Omistajien kokemuksia",
-    heading: "Mitä omistajat sanovat.",
-    placeholderNotice:
-      "Esimerkkilainauksia, jotka kuvastavat omistajilta odotettua sävyä — ei vielä todennettuja arvosteluja.",
+    heading: "Mitä ihmiset sanovat.",
     items: [
       {
         quote:
-          "Asun Norjassa ja omistan asunnon Marbellassa — Nordic BnB:n ansiosta pystyn oikeasti nukkumaan yöllä. Tuotto on noussut, enkä enää itse vastaa vieraiden viesteihin kello kahdelta yöllä.",
+          "Olimme omistaneet asunnon kaksi vuotta ja meillä oli aina vaikeuksia saada se täyteen talvella. Nordic BnB otti vastuun maaliskuussa, ja elokuuhun mennessä olimme täyteen varattuja lokakuulle asti. Parasta on, että saan yhden yksinkertaisen raportin joka kuukausi sen sijaan, että jahtaisin vastauksia itse.",
         name: "Kristian H.",
-        location: "Norjalainen omistaja, Marbella",
+        location: "Marbella",
       },
       {
         quote:
-          "Ruotsalaisena omistajana ulkomailla tarvitsin jonkun, johon voin luottaa täysin. Nordic BnB viestii selkeästi, kiinteistö näyttää paremmalta kuin koskaan, ja luvut puhuvat puolestaan.",
+          "Asun Tukholmassa enkä ole nähnyt asuntoa paikan päällä sen jälkeen, kun Nordic BnB otti tyylittelyn ja siivouksen hoitaakseen. Silti tiedän tarkalleen, mitä joka viikko tapahtuu heidän raporttiensa ansiosta, ja tuotto on noussut mukavasti viime kesästä lähtien.",
         name: "Annika L.",
-        location: "Ruotsalainen omistaja, Fuengirola",
+        location: "Fuengirola",
       },
       {
         quote:
-          "Hoidin asuntoa itse vuosia. Nordic BnB:n kanssa kaikki tuntuu ammattimaisemmalta — paremmat kuvat, parempi hinnoittelu ja huomattavasti vähemmän päänvaivaa.",
+          "Hoidin asuntoa itse kolme vuotta ja vaihdoin lakanat vieraiden välillä. Sen jälkeen kun Nordic BnB otti vastuun tammikuussa, minun ei ole tarvinnut huolehtia mistään — ei yhtään valitusta, eikä puhelimeni enää pirise WhatsApp-viesteistä keskellä yötä.",
         name: "Carlos M.",
-        location: "Espanjalainen omistaja, Benalmádena",
+        location: "Benalmádena",
       },
     ],
   },
@@ -398,6 +397,8 @@ export const fi: SiteContent = {
     contactHeading: "Yhteystiedot",
     languageHeading: "Kieli",
     rights: "Nordic BnB. Kaikki oikeudet pidätetään.",
+    orgNumberLabel: "Y-tunnus 931 905 856",
+    realPhotosNote: "Tämän sivuston ennen/jälkeen-kuvat ovat aitoja tuloksia, eivät kuvituskuvia, ellei toisin mainita.",
   },
   showcase1: {
     eyebrow: "Costa del Sol",

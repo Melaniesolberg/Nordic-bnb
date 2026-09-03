@@ -31,6 +31,11 @@ export default function HomePage({ locale }: { locale: Locale }) {
       <main>
         <Hero hero={content.hero} formHref={formHref} imageSrc={media.villaAerial} />
         <Problem problem={content.problem} imageSrc={media.listingBefore} />
+        <BeforeAfter
+          beforeAfter={content.beforeAfter}
+          beforeSrc={media.listingBefore}
+          afterSrc={media.listingAfter}
+        />
         <PropertyShowcase
           imageSrc={media.seaView}
           eyebrow={content.showcase1.eyebrow}
@@ -40,20 +45,20 @@ export default function HomePage({ locale }: { locale: Locale }) {
           system={content.system}
           bgImageSrc={media.nightVilla}
           transformationImages={[
-            media.listingBefore,
-            media.interiorLiving,
-            media.poolDay,
-            media.heroVilla,
             media.stylingDetail,
+            media.cleaningTeam,
             media.listingAfter,
+            media.interiorLiving,
+            media.guestArrival,
+            media.heroVilla,
           ]}
         />
-        <SectionDivider tone="light" />
-        <BeforeAfter
-          beforeAfter={content.beforeAfter}
-          beforeSrc={media.listingBefore}
-          afterSrc={media.listingAfter}
+        <Operations
+          operations={content.operations}
+          imageSrc={media.heroVilla}
+          sequenceImages={[media.stylingDetail, media.cleaningTeam, media.guestArrival, media.detailShot]}
         />
+        <SectionDivider tone="light" />
         <Portfolio
           portfolio={content.portfolio}
           images={[
@@ -74,11 +79,6 @@ export default function HomePage({ locale }: { locale: Locale }) {
           dashboard={content.dashboard}
           bgImageSrc={media.aerialCoast}
           cardImageSrc={media.heroVilla}
-        />
-        <Operations
-          operations={content.operations}
-          imageSrc={media.heroVilla}
-          sequenceImages={[media.stylingDetail, media.cleaningTeam, media.guestArrival, media.detailShot]}
         />
         <Compare
           compare={content.compare}

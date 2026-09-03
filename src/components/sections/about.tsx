@@ -8,9 +8,11 @@ import type { AboutContent } from "@/content/types";
 export default function About({
   about,
   bgImageSrc,
+  founderPhotoSrc,
 }: {
   about: AboutContent;
   bgImageSrc?: string;
+  founderPhotoSrc?: string;
 }) {
   return (
     <section id="about" className="relative overflow-hidden bg-ivory-soft py-24 sm:py-32 lg:py-40">
@@ -31,9 +33,15 @@ export default function About({
 
             <Reveal delay={0.1}>
               <div className="mt-12 border-t border-charcoal/15 pt-8">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-charcoal font-serif-display text-lg text-ivory">
-                  PS
-                </div>
+                {founderPhotoSrc ? (
+                  <div className="relative h-20 w-20 overflow-hidden rounded-full">
+                    <Image src={founderPhotoSrc} alt={about.founderName} fill sizes="80px" className="object-cover" />
+                  </div>
+                ) : (
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full bg-charcoal font-serif-display text-lg text-ivory">
+                    PS
+                  </div>
+                )}
                 <p className="mt-5 font-serif-display text-2xl text-charcoal">{about.founderName}</p>
                 <p className="mt-1 eyebrow text-charcoal/45">{about.founderRole}</p>
                 <p className="mt-6 max-w-sm font-serif-display text-xl italic leading-snug text-charcoal/80">

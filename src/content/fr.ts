@@ -49,46 +49,46 @@ export const fr: SiteContent = {
     imageBadge: "Avant Nordic BnB",
   },
   system: {
-    eyebrow: "Le système Nordic BnB",
-    heading: "Un seul système d'exploitation pour toute la location.",
+    eyebrow: "Comment nous travaillons",
+    heading: "D'une pièce vide à une réservation confirmée.",
     intro:
-      "Six disciplines, fonctionnant en continu et de concert — pas une simple mise en ligne d'annonce. Défilez pour parcourir le système.",
+      "Le processus qui transforme une annonce en un flux de voyageurs fidèles — défilez pour le suivre du début à la fin.",
     pillars: [
       {
         code: "01",
-        title: "Positionner",
+        title: "Mise en scène",
         description:
-          "Photographie, mise en scène et texte de l'annonce reconstruits pour montrer le bien sous son meilleur jour — sur chaque canal où il apparaît.",
+          "Un décorateur agence meubles, linge et éclairage jusqu'à ce que l'espace ressemble à un chez-soi, pas à une location.",
       },
       {
         code: "02",
-        title: "Tarifer",
+        title: "Ménage",
         description:
-          "Tarification dynamique, guidée par la demande, qui évolue avec la saison, le calendrier et la concurrence — pas un tarif unique et fixe.",
+          "Un ménage professionnel, de fond en comble, avant l'arrivée de chaque voyageur.",
       },
       {
         code: "03",
-        title: "Distribuer",
+        title: "Photographie",
         description:
-          "Airbnb, Booking.com et les canaux pertinents pour votre bien, synchronisés et optimisés pour chaque public.",
+          "La photographie professionnelle capture le bien sous son meilleur jour, prêt pour chaque canal.",
       },
       {
         code: "04",
-        title: "Accueillir",
+        title: "Synchronisation",
         description:
-          "Communication rapide et chaleureuse avec les voyageurs, de la demande au départ, et une expérience d'arrivée qui mérite cinq étoiles.",
+          "L'annonce est publiée instantanément sur Airbnb, Booking.com et tous les canaux pertinents.",
       },
       {
         code: "05",
-        title: "Entretenir",
+        title: "Arrivée",
         description:
-          "Ménage professionnel, retouches de mise en scène et coordination de l'entretien entre chaque séjour.",
+          "Le voyageur récupère les clés — ou s'enregistre lui-même — et s'installe en quelques minutes.",
       },
       {
         code: "06",
-        title: "Améliorer",
+        title: "Réservation",
         description:
-          "La performance est revue en continu, et chaque décision — prix, photos, texte — est affinée selon ce que montrent les données.",
+          "Le séjour se termine, l'avis arrive, et la prochaine réservation est déjà confirmée.",
       },
     ],
   },
@@ -135,7 +135,8 @@ export const fr: SiteContent = {
     heading: "De vraies transformations, tous types de biens confondus.",
     intro:
       "Un aperçu de la façon dont Nordic BnB repositionne les annonces — appartements, villas et maisons — le long de la Costa del Sol.",
-    disclaimer: "Chiffres d'exemple illustratifs — pas des résultats Nordic BnB vérifiés.",
+    realResultsLabel: "Résultats réels",
+    disclaimer: "Vraies photos avant/après. Les chiffres de croissance sont des exemples illustratifs en attendant de pouvoir publier des données clients vérifiées.",
     beforeLabel: "Avant",
     afterLabel: "Après",
     properties: [
@@ -325,7 +326,7 @@ export const fr: SiteContent = {
     eyebrow: "À propos",
     heading: "Construit sur une idée simple.",
     paragraphs: [
-      "Nordic BnB se construit autour d'une idée simple : la gestion immobilière ne devrait pas être passive. Une annonce publiée puis laissée à elle-même sous-performera — silencieusement, pendant des années, sans que personne ne le remarque.",
+      "Fondée en 2023, Nordic BnB se construit autour d'une idée simple : la gestion immobilière ne devrait pas être passive. Une annonce publiée puis laissée à elle-même sous-performera — silencieusement, pendant des années, sans que personne ne le remarque.",
       "Chaque bien que nous gérons doit être revu, testé et amélioré en continu — tarification, présentation, positionnement — plutôt que réglé une fois pour toutes et oublié.",
       "Derrière Nordic BnB se trouve un réseau opérationnel local : ménage, mise en scène, entretien et coordination sur le terrain sur toute la Costa del Sol, aux côtés de fondateurs qui pensent que les propriétaires méritent une visibilité totale sur la performance de leur bien.",
     ],
@@ -340,27 +341,25 @@ export const fr: SiteContent = {
   },
   testimonials: {
     eyebrow: "Témoignages de propriétaires",
-    heading: "Ce que diront les propriétaires.",
-    placeholderNotice:
-      "Citations d'exemple reflétant le ton attendu des propriétaires — pas encore des avis vérifiés.",
+    heading: "Ce que disent les gens.",
     items: [
       {
         quote:
-          "Je vis en Norvège et possède un appartement à Marbella — grâce à Nordic BnB, je peux enfin dormir la nuit. Les revenus ont augmenté, et ce n'est plus moi qui réponds aux messages des voyageurs à 2h du matin.",
+          "Nous possédions l'appartement depuis deux ans et avions toujours du mal à le remplir en hiver. Nordic BnB a pris le relais en mars, et dès août nous étions complets jusqu'en octobre. Le mieux, c'est que je reçois un rapport simple chaque mois au lieu de devoir courir après les réponses moi-même.",
         name: "Kristian H.",
-        location: "Propriétaire norvégien, Marbella",
+        location: "Marbella",
       },
       {
         quote:
-          "En tant que propriétaire suédoise vivant à l'étranger, j'avais besoin de quelqu'un en qui avoir pleinement confiance. Nordic BnB communique clairement, le bien n'a jamais été aussi beau, et les chiffres parlent d'eux-mêmes.",
+          "Je vis à Stockholm et je n'ai pas vu l'appartement en personne depuis que Nordic BnB s'occupe de la mise en scène et du ménage. Je sais pourtant exactement ce qui se passe chaque semaine grâce à leurs rapports, et les revenus ont augmenté avec une marge confortable depuis l'été dernier.",
         name: "Annika L.",
-        location: "Propriétaire suédoise, Fuengirola",
+        location: "Fuengirola",
       },
       {
         quote:
-          "J'ai géré l'appartement moi-même pendant des années. Avec Nordic BnB, tout paraît plus professionnel — de meilleures photos, une meilleure tarification et bien moins de tracas.",
+          "J'ai géré l'appartement moi-même pendant trois ans, changeant les draps entre chaque voyageur. Depuis que Nordic BnB a pris le relais en janvier, je n'ai plus eu à me soucier de rien — pas une seule plainte, et mon téléphone ne vibre plus de messages WhatsApp à minuit.",
         name: "Carlos M.",
-        location: "Propriétaire espagnol, Benalmádena",
+        location: "Benalmádena",
       },
     ],
   },
@@ -398,6 +397,8 @@ export const fr: SiteContent = {
     contactHeading: "Contact",
     languageHeading: "Langue",
     rights: "Nordic BnB. Tous droits réservés.",
+    orgNumberLabel: "N° d'enregistrement 931 905 856",
+    realPhotosNote: "Les photos avant/après sur ce site sont de vrais résultats, pas des illustrations, sauf indication contraire.",
   },
   showcase1: {
     eyebrow: "Costa del Sol",

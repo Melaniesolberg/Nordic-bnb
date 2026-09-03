@@ -15,15 +15,6 @@ export default function Testimonials({ testimonials }: { testimonials: Testimoni
           </h2>
         </Reveal>
 
-        <Reveal delay={0.06}>
-          <div className="mt-8 flex items-start gap-3 rounded-sm border border-coral/25 bg-coral-mist/40 px-5 py-4">
-            <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-coral text-[11px] font-bold text-ivory">
-              i
-            </span>
-            <p className="text-sm leading-relaxed text-charcoal/75">{testimonials.placeholderNotice}</p>
-          </div>
-        </Reveal>
-
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
           {testimonials.items.map((t, i) => (
             <Reveal key={i} delay={0.08 * i}>

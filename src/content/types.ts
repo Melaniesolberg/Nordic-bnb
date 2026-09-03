@@ -74,6 +74,7 @@ export interface PortfolioContent {
   eyebrow: string;
   heading: string;
   intro: string;
+  realResultsLabel: string;
   disclaimer: string;
   beforeLabel: string;
   afterLabel: string;
@@ -205,7 +206,6 @@ export interface Testimonial {
 export interface TestimonialsContent {
   eyebrow: string;
   heading: string;
-  placeholderNotice: string;
   items: Testimonial[];
 }
 
@@ -245,6 +245,8 @@ export interface FooterContent {
   contactHeading: string;
   languageHeading: string;
   rights: string;
+  orgNumberLabel: string;
+  realPhotosNote: string;
 }
 
 export interface SiteContent {

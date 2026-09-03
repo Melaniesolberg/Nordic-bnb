@@ -1,67 +1,132 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactElement } from "react";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Eyebrow from "@/components/ui/eyebrow";
 import Reveal from "@/components/ui/reveal";
-import { useWebglSupported } from "@/lib/use-webgl";
 import { useMediaQuery } from "@/lib/use-media-query";
 import type { SystemContent } from "@/content/types";
 
-const SystemScene = dynamic(() => import("@/components/three/system-scene"), {
-  ssr: false,
-  loading: () => null,
-});
+/** One small line-icon per process step, in step order: style, clean, photograph, sync, arrive, book. */
+const STEP_ICONS: ((props: { className?: string }) => ReactElement)[] = [
+  ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M4 15V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <rect x="4" y="15" width="6" height="4" rx="1" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M10 17h6a2 2 0 0 1 2 2v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="18" cy="20" r="1.4" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  ),
+  ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M12 3v3M12 18v3M4.2 12H3M21 12h-1.2M6 6l1.4 1.4M16.6 16.6L18 18M18 6l-1.4 1.4M7.4 16.6L6 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="12" cy="12" r="3.4" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  ),
+  ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2l1-1.5h7L16.5 7h2A1.5 1.5 0 0 1 20 8.5v9A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5v-9Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <circle cx="12" cy="13" r="3.2" stroke="currentColor" strokeWidth="1.5" />
+    </svg>
+  ),
+  ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M4 12a8 8 0 0 1 13.5-5.8M20 12a8 8 0 0 1-13.5 5.8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M17.5 3.5v3h-3M6.5 20.5v-3h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  ),
+  ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <circle cx="8" cy="15" r="3.2" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M10.3 12.8 18 5.2M18 5.2l1.6 1.6M18 5.2l-2.2 2.2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  ),
+  ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <rect x="4" y="5.5" width="16" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M4 9.5h16M8 3.5v3M16 3.5v3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <path d="M8.5 14 11 16.5 15.5 12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  ),
+];
 
-function StaticGem() {
-  return (
-    <div className="relative flex h-full w-full items-center justify-center">
-      <div
-        className="h-56 w-56 rounded-[38%] opacity-90 sm:h-72 sm:w-72"
-        style={{
-          background:
-            "conic-gradient(from 210deg, #e0532e, #b47c4f, #4d4034, #8a8072, #e0532e)",
-          filter: "blur(0.5px)",
-        }}
-      />
-    </div>
-  );
-}
+const SYNC_CHANNELS = ["Airbnb", "Booking.com", "Direct"];
 
 /**
- * Crossfades through a sequence of property photos, one per pillar step, so
- * scrolling through the 6-step model visually "moves through" the property
- * from unstyled to fully styled.
+ * Crossfades through a sequence of real process photos, one per step, so
+ * scrolling through the process visually moves through the property from an
+ * empty room to a confirmed booking.
  */
-function PropertyCrossfade({ images, active }: { images: string[]; active: number }) {
+function ProcessVisual({
+  images,
+  active,
+  stepLabel,
+}: {
+  images: string[];
+  active: number;
+  stepLabel: string;
+}) {
+  const Icon = STEP_ICONS[active];
+  const isSyncStep = active === 3;
+
   return (
-    <div className="relative h-full w-full overflow-hidden">
+    <div className="relative h-full w-full overflow-hidden rounded-sm shadow-[0_40px_100px_rgba(0,0,0,0.5)]">
       {images.map((src, i) => (
         <motion.div
           key={src}
           className="absolute inset-0"
           initial={false}
-          animate={{ opacity: i === active ? 1 : 0, scale: i === active ? 1.07 : 1 }}
+          animate={{ opacity: i === active ? 1 : 0, scale: i === active ? 1.06 : 1 }}
           transition={{
             opacity: { duration: 0.9, ease: [0.16, 1, 0.3, 1] },
-            scale: { duration: 2.4, ease: "easeOut" },
+            scale: { duration: 2.6, ease: "easeOut" },
           }}
         >
           <Image
             src={src}
             alt=""
             fill
-            sizes="(min-width: 1024px) 32vw, 90vw"
+            sizes="(min-width: 1024px) 48vw, 92vw"
             className="object-cover"
             priority={i === 0}
           />
         </motion.div>
       ))}
-      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/75 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/5 to-charcoal/10" />
+
+      <AnimatePresence>
+        {isSyncStep && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="absolute inset-x-0 top-1/2 flex -translate-y-1/2 flex-wrap justify-center gap-2.5 px-6"
+          >
+            {SYNC_CHANNELS.map((c, i) => (
+              <motion.span
+                key={c}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.15 + i * 0.12, duration: 0.4 }}
+                className="rounded-full bg-ivory/95 px-4 py-2 text-xs font-medium tracking-wide text-charcoal shadow-lg"
+              >
+                {c}
+              </motion.span>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <div className="absolute bottom-5 left-5 flex items-center gap-2.5 rounded-full bg-charcoal/70 py-1.5 pl-2.5 pr-4 backdrop-blur-sm">
+        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-coral text-ivory">
+          <Icon className="h-3.5 w-3.5" />
+        </span>
+        <span className="text-[11px] font-medium tracking-wide text-ivory">{stepLabel}</span>
+      </div>
     </div>
   );
 }
@@ -69,15 +134,20 @@ function PropertyCrossfade({ images, active }: { images: string[]; active: numbe
 function PillarList({ system }: { system: SystemContent }) {
   return (
     <div className="grid grid-cols-1 gap-px overflow-hidden rounded-[2px] bg-ivory/10 sm:grid-cols-2">
-      {system.pillars.map((p, i) => (
-        <Reveal key={p.code} delay={0.04 * i} y={16}>
-          <div className="h-full bg-charcoal p-8">
-            <span className="eyebrow text-coral">{p.code}</span>
-            <p className="mt-4 font-serif-display text-2xl italic text-ivory">{p.title}</p>
-            <p className="mt-3 text-sm leading-relaxed text-ivory/60">{p.description}</p>
-          </div>
-        </Reveal>
-      ))}
+      {system.pillars.map((p, i) => {
+        const Icon = STEP_ICONS[i];
+        return (
+          <Reveal key={p.code} delay={0.04 * i} y={16}>
+            <div className="h-full bg-charcoal p-8">
+              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-coral/15 text-coral">
+                <Icon className="h-4 w-4" />
+              </span>
+              <p className="mt-4 font-serif-display text-2xl italic text-ivory">{p.title}</p>
+              <p className="mt-3 text-sm leading-relaxed text-ivory/60">{p.description}</p>
+            </div>
+          </Reveal>
+        );
+      })}
     </div>
   );
 }
@@ -92,10 +162,8 @@ export default function System({
   transformationImages?: string[];
 }) {
   const prefersReduced = useReducedMotion();
-  const webglSupported = useWebglSupported();
   const isDesktop = useMediaQuery("(min-width: 1024px)");
   const [active, setActive] = useState(0);
-  const progressRef = useRef(0);
   const sectionRef = useRef<HTMLDivElement>(null);
   const pinRef = useRef<HTMLDivElement>(null);
 
@@ -115,7 +183,6 @@ export default function System({
       pin: pinRef.current,
       pinSpacing: false,
       onUpdate: (self) => {
-        progressRef.current = self.progress;
         const idx = Math.min(pillarCount - 1, Math.floor(self.progress * pillarCount));
         setActive((prev) => (prev === idx ? prev : idx));
       },
@@ -163,9 +230,7 @@ export default function System({
                     exit={{ opacity: 0, y: -24 }}
                     transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
                   >
-                    <span className="font-serif-display text-8xl italic text-coral/40">
-                      {pillar.code}
-                    </span>
+                    <span className="eyebrow text-coral">{pillar.code}</span>
                     <h3 className="font-serif-display mt-4 text-4xl text-ivory lg:text-5xl">
                       {pillar.title}
                     </h3>
@@ -187,19 +252,9 @@ export default function System({
                 </div>
               </div>
 
-              <div className="relative h-[50vh] lg:h-full">
-                {webglSupported === false ? (
-                  <StaticGem />
-                ) : (
-                  <SystemScene progressRef={progressRef} />
-                )}
+              <div className="relative h-[50vh] lg:h-[72vh]">
                 {transformationImages && transformationImages.length === system.pillars.length && (
-                  <div className="pointer-events-none absolute inset-x-6 bottom-6 aspect-[4/3] w-[68%] max-w-sm overflow-hidden rounded-sm border border-ivory/15 shadow-[0_30px_70px_rgba(0,0,0,0.55)] sm:right-0 sm:left-auto sm:bottom-8">
-                    <PropertyCrossfade images={transformationImages} active={active} />
-                    <span className="absolute bottom-3 left-3 rounded-full bg-charcoal/70 px-3 py-1 text-[10px] tracking-wide text-ivory backdrop-blur-sm">
-                      {pillar.title}
-                    </span>
-                  </div>
+                  <ProcessVisual images={transformationImages} active={active} stepLabel={pillar.title} />
                 )}
               </div>
             </div>

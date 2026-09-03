@@ -111,7 +111,12 @@ export default function Portfolio({
     <section id="portfolio" className="relative bg-ivory-soft py-24 sm:py-32 lg:py-40">
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
         <Reveal>
-          <Eyebrow>{portfolio.eyebrow}</Eyebrow>
+          <div className="flex flex-wrap items-center gap-3">
+            <Eyebrow>{portfolio.eyebrow}</Eyebrow>
+            <span className="rounded-full bg-coral/15 px-3 py-1 text-[11px] font-medium tracking-wide text-coral-deep">
+              {portfolio.realResultsLabel}
+            </span>
+          </div>
           <h2 className="font-serif-display text-display-md mt-6 max-w-2xl text-charcoal">
             {portfolio.heading}
           </h2>

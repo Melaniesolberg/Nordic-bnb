@@ -14,3 +14,6 @@ export const CONTACT = {
   whatsappDisplay: "+47 404 65 093",
   site: "https://nordicbnb.es",
 };
+
+export const ORG_NUMBER_URL =
+  "https://www.proff.no/selskap/nordic-bnb-solberg/laksev%C3%A5g/reklamebyr%C3%A5er/IFETZ5S01DI";

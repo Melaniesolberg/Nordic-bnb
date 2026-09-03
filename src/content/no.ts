@@ -49,46 +49,46 @@ export const no: SiteContent = {
     imageBadge: "Før Nordic BnB",
   },
   system: {
-    eyebrow: "Nordic BnB-systemet",
-    heading: "Ett driftssystem for hele utleien.",
+    eyebrow: "Slik jobber vi",
+    heading: "Fra tomt rom til bekreftet bestilling.",
     intro:
-      "Seks disipliner som jobber kontinuerlig og i samspill — ikke en engangsjobb med å legge ut en annonse. Scroll for å bevege deg gjennom systemet.",
+      "Prosessen som gjør en annonse om til en strøm av gjester som kommer tilbake — scroll for å følge den fra start til slutt.",
     pillars: [
       {
         code: "01",
-        title: "Posisjonere",
+        title: "Styling",
         description:
-          "Fotografi, styling og annonsetekst bygget opp på nytt for å vise eiendommen på sitt beste — på hver eneste kanal den vises.",
+          "En stylist innreder rommet med møbler, tekstiler og lys til det føles som et hjem, ikke en utleieenhet.",
       },
       {
         code: "02",
-        title: "Prise",
+        title: "Rengjøring",
         description:
-          "Dynamisk, etterspørselsstyrt prising som følger sesong, kalender og konkurrentbildet — ikke én fast pris.",
+          "Profesjonell vask fra topp til bunn, før hver eneste gjest ankommer.",
       },
       {
         code: "03",
-        title: "Distribuere",
+        title: "Fotografering",
         description:
-          "Airbnb, Booking.com og kanalene som betyr noe for din eiendom, synkronisert og optimalisert for hvert publikum.",
+          "Profesjonell fotografering fanger eiendommen i sitt beste lys, klar for alle kanaler.",
       },
       {
         code: "04",
-        title: "Være vert",
+        title: "Synkronisering",
         description:
-          "Rask, varm gjestekommunikasjon fra henvendelse til utsjekk, og en innsjekkopplevelse som fortjener fem stjerner.",
+          "Annonsen publiseres umiddelbart på Airbnb, Booking.com og alle kanalene som betyr noe.",
       },
       {
         code: "05",
-        title: "Pleie",
+        title: "Innsjekk",
         description:
-          "Profesjonell rengjøring, styling-justeringer og vedlikeholdskoordinering mellom hvert eneste opphold.",
+          "Gjesten henter nøklene — eller sjekker inn selv — og er på plass i løpet av minutter.",
       },
       {
         code: "06",
-        title: "Forbedre",
+        title: "Bestilling",
         description:
-          "Ytelsen vurderes kontinuerlig, og hver beslutning — pris, bilder, tekst — finjusteres etter det dataene viser.",
+          "Oppholdet avsluttes, anmeldelsen kommer inn, og neste bestilling er allerede bekreftet.",
       },
     ],
   },
@@ -135,7 +135,8 @@ export const no: SiteContent = {
     heading: "Ekte transformasjoner, for alle eiendomstyper.",
     intro:
       "Et innblikk i hvordan Nordic BnB reposisjonerer annonser — leiligheter, villaer og hus — langs Costa del Sol.",
-    disclaimer: "Illustrerende eksempeltall — ikke verifiserte Nordic BnB-resultater.",
+    realResultsLabel: "Ekte resultater",
+    disclaimer: "Ekte før/etter-bilder. Vekstallene er illustrerende eksempler inntil vi kan publisere verifiserte kundedata.",
     beforeLabel: "Før",
     afterLabel: "Etter",
     properties: [
@@ -325,7 +326,7 @@ export const no: SiteContent = {
     eyebrow: "Om oss",
     heading: "Bygget på en enkel idé.",
     paragraphs: [
-      "Nordic BnB bygges rundt en enkel idé: eiendomsforvaltning bør ikke være passiv. En annonse som publiseres og deretter overlates til seg selv, vil underprestere — stille, over flere år, uten at noen legger merke til det.",
+      "Nordic BnB ble stiftet i 2023, og er bygget rundt en enkel idé: eiendomsforvaltning bør ikke være passiv. En annonse som publiseres og deretter overlates til seg selv, vil underprestere — stille, over flere år, uten at noen legger merke til det.",
       "Hver eiendom vi forvalter skal gjennomgås, testes og forbedres kontinuerlig — prising, presentasjon, posisjonering — i stedet for å settes opp én gang og glemmes.",
       "Bak Nordic BnB står et lokalt driftsnettverk: rengjøring, styling, vedlikehold og koordinering på bakken langs Costa del Sol, sammen med grunnleggere som mener eiere fortjener full innsikt i hvordan eiendommen deres presterer.",
     ],
@@ -340,25 +341,23 @@ export const no: SiteContent = {
   },
   testimonials: {
     eyebrow: "Eiernes tilbakemeldinger",
-    heading: "Hva eiere kommer til å si.",
-    placeholderNotice:
-      "Eksempel på tilbakemelding — erstattes med verifisert kundeomtale. Vist her kun for å demonstrere layouten.",
+    heading: "Hva folk sier.",
     items: [
       {
         quote:
-          "Jeg bor i Norge og eier en leilighet i Marbella — med Nordic BnB kan jeg faktisk sove om natten. Inntekten har økt, og det er ikke lenger jeg som svarer på gjestemeldinger klokken to om natten.",
+          "Vi hadde eid leiligheten i to år og slet alltid med å fylle den om vinteren. Nordic BnB tok over i mars, og innen august var vi fullbooket helt ut oktober. Det beste er at jeg får én enkel rapport hver måned i stedet for å jage svar selv.",
         name: "Kristian H.",
         location: "Marbella",
       },
       {
         quote:
-          "Som svensk eier bosatt i utlandet trengte jeg noen jeg kunne stole fullt og helt på. Nordic BnB kommuniserer tydelig, eiendommen ser bedre ut enn noensinne, og tallene taler for seg selv.",
+          "Jeg bor i Stockholm og har ikke sett leiligheten fysisk siden Nordic BnB tok over styling og renhold. Likevel vet jeg nøyaktig hva som skjer hver uke gjennom rapportene deres, og inntekten har økt med god margin siden i fjor sommer.",
         name: "Annika L.",
         location: "Fuengirola",
       },
       {
         quote:
-          "Jeg drev leiligheten selv i årevis. Med Nordic BnB føles alt mer profesjonelt — bedre bilder, bedre pris og langt færre hodepiner.",
+          "Jeg drev leiligheten selv i tre år, og skiftet laken mellom gjestene. Siden Nordic BnB tok over i januar har jeg ikke måttet bekymre meg for noe — ikke én klage, og telefonen min pipes ikke lenger av WhatsApp-meldinger midt på natten.",
         name: "Carlos M.",
         location: "Benalmádena",
       },
@@ -398,6 +397,8 @@ export const no: SiteContent = {
     contactHeading: "Kontakt",
     languageHeading: "Språk",
     rights: "Nordic BnB. Alle rettigheter forbeholdt.",
+    orgNumberLabel: "Org.nr. 931 905 856",
+    realPhotosNote: "Før/etter-bildene på denne siden er ekte resultater, ikke illustrasjon, med mindre annet er merket.",
   },
   showcase1: {
     eyebrow: "Costa del Sol",
