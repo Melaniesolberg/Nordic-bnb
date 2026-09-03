@@ -18,7 +18,7 @@ export default function Footer({
       <div className="mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <Logo tone="light" />
+            <Logo />
             <p className="mt-6 max-w-xs font-serif-display text-2xl italic text-ivory/85">
               {footer.tagline}
             </p>

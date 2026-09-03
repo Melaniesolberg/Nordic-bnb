@@ -33,7 +33,7 @@ export default function Nav({ locale, nav }: { locale: Locale; nav: NavContent }
     >
       <div className="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
         <Link href={home} className="z-10" onClick={() => setOpen(false)}>
-          <Logo tone={dark ? "dark" : "light"} />
+          <Logo />
         </Link>
 
         <nav className="hidden items-center gap-9 lg:flex">

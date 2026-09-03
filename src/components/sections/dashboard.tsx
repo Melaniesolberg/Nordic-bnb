@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import { motion } from "framer-motion";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import type { DashboardContent } from "@/content/types";
@@ -10,10 +12,23 @@ const UPCOMING = [
   { guest: "S. Lindqvist", dates: "23–30 Sep", nights: 7, channel: "Airbnb" },
 ];
 
-export default function Dashboard({ dashboard }: { dashboard: DashboardContent }) {
+export default function Dashboard({
+  dashboard,
+  bgImageSrc,
+  cardImageSrc,
+}: {
+  dashboard: DashboardContent;
+  bgImageSrc: string;
+  cardImageSrc: string;
+}) {
   return (
     <section className="relative overflow-hidden bg-charcoal py-24 sm:py-32 lg:py-40">
-      <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+      <div className="absolute inset-0 opacity-25">
+        <Image src={bgImageSrc} alt="" fill sizes="100vw" className="object-cover" />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-charcoal via-charcoal/92 to-charcoal" />
+
+      <div className="relative mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-4">
             <Reveal>
@@ -28,11 +43,23 @@ export default function Dashboard({ dashboard }: { dashboard: DashboardContent }
                 {dashboard.footnote}
               </p>
             </Reveal>
+
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-15% 0px -15% 0px" }}
+              transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+              className="relative mt-10 hidden aspect-[3/4] w-full max-w-[220px] overflow-hidden rounded-sm shadow-[0_30px_70px_rgba(0,0,0,0.5)] lg:block"
+            >
+              <Image src={cardImageSrc} alt="Villa Sunrise, the property behind this dashboard" fill sizes="220px" className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
+              <span className="absolute bottom-3 left-3 text-xs tracking-wide text-ivory/85">Villa Sunrise, Marbella</span>
+            </motion.div>
           </div>
 
           <div className="lg:col-span-8">
             <Reveal delay={0.1}>
-              <div className="overflow-hidden rounded-md border border-ivory/10 bg-charcoal-soft shadow-[0_40px_120px_rgba(0,0,0,0.45)]">
+              <div className="overflow-hidden rounded-md border border-ivory/10 bg-charcoal-soft/95 backdrop-blur-sm shadow-[0_40px_120px_rgba(0,0,0,0.45)]">
                 {/* Window chrome */}
                 <div className="flex items-center gap-2 border-b border-ivory/10 px-5 py-3.5">
                   <span className="h-2.5 w-2.5 rounded-full bg-ivory/15" />

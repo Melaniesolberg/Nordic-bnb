@@ -1,13 +1,32 @@
 "use client";
 
+import Image from "next/image";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import type { OperationsContent } from "@/content/types";
 
-export default function Operations({ operations }: { operations: OperationsContent }) {
+export default function Operations({
+  operations,
+  imageSrc,
+}: {
+  operations: OperationsContent;
+  imageSrc: string;
+}) {
   return (
-    <section className="relative bg-ivory-soft py-24 sm:py-32 lg:py-40">
-      <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+    <section className="relative bg-ivory-soft pb-24 sm:pb-32 lg:pb-40">
+      <div className="relative h-[42vh] min-h-[280px] w-full overflow-hidden grain">
+        <Image src={imageSrc} alt="" fill sizes="100vw" className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ivory-soft via-charcoal/25 to-charcoal/35" />
+        <div className="absolute inset-x-0 bottom-0 px-5 pb-8 sm:px-8 lg:px-12">
+          <div className="mx-auto max-w-[1600px]">
+            <p className="font-serif-display text-3xl italic text-ivory sm:text-4xl">
+              Every stay, prepared by hand.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="mx-auto max-w-[1600px] px-5 pt-20 sm:px-8 sm:pt-24 lg:px-12">
         <Reveal>
           <Eyebrow>{operations.eyebrow}</Eyebrow>
           <h2 className="font-serif-display text-display-md mt-6 max-w-2xl text-charcoal">

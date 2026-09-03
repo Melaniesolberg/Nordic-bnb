@@ -1,18 +1,36 @@
 "use client";
 
+import Image from "next/image";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import Magnetic from "@/components/ui/magnetic-button";
 import type { ServiceItem, ServicesContent } from "@/content/types";
 import { WHATSAPP_LINK } from "@/lib/utils";
 
-function ServiceCard({ item, dark, ctaLabel }: { item: ServiceItem; dark?: boolean; ctaLabel: string }) {
+function ServiceCard({
+  item,
+  dark,
+  ctaLabel,
+  imageSrc,
+}: {
+  item: ServiceItem;
+  dark?: boolean;
+  ctaLabel: string;
+  imageSrc?: string;
+}) {
   return (
     <div
-      className={`flex h-full flex-col rounded-sm p-8 sm:p-10 ${
+      className={`relative flex h-full flex-col overflow-hidden rounded-sm p-8 sm:p-10 ${
         dark ? "bg-charcoal text-ivory" : "border border-charcoal/12 bg-ivory-soft text-charcoal"
       }`}
     >
+      {dark && imageSrc && (
+        <>
+          <Image src={imageSrc} alt="" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover opacity-15" />
+          <div className="absolute inset-0 bg-gradient-to-br from-charcoal via-charcoal/95 to-charcoal/80" />
+        </>
+      )}
+      <div className="relative flex h-full flex-col">
       <h3 className="font-serif-display text-2xl sm:text-3xl">{item.title}</h3>
       <p className={`mt-4 text-sm leading-relaxed ${dark ? "text-ivory/65" : "text-charcoal/60"}`}>
         {item.description}
@@ -63,11 +81,18 @@ function ServiceCard({ item, dark, ctaLabel }: { item: ServiceItem; dark?: boole
           </a>
         </Magnetic>
       </div>
+      </div>
     </div>
   );
 }
 
-export default function Services({ services }: { services: ServicesContent }) {
+export default function Services({
+  services,
+  imageSrc,
+}: {
+  services: ServicesContent;
+  imageSrc?: string;
+}) {
   return (
     <section id="services" className="relative bg-ivory py-24 sm:py-32 lg:py-40">
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
@@ -83,7 +108,7 @@ export default function Services({ services }: { services: ServicesContent }) {
 
         <div className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <Reveal delay={0.05}>
-            <ServiceCard item={services.shortTerm} dark ctaLabel={services.ctaLabel} />
+            <ServiceCard item={services.shortTerm} dark ctaLabel={services.ctaLabel} imageSrc={imageSrc} />
           </Reveal>
           <Reveal delay={0.1}>
             <ServiceCard item={services.longTerm} ctaLabel={services.ctaLabel} />

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { fraunces, inter } from "@/lib/fonts";
 import { CONTACT } from "@/lib/utils";
+import { media } from "@/content/media";
 import SmoothScrollProvider from "@/components/providers/smooth-scroll-provider";
 import "./globals.css";
 
@@ -46,6 +47,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+  },
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: media.brandIcon, type: "image/png" },
+    ],
+    apple: media.brandIcon,
   },
 };
 

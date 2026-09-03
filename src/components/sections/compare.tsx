@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import Magnetic from "@/components/ui/magnetic-button";
@@ -10,10 +11,15 @@ import type { CompareContent } from "@/content/types";
 export default function Compare({
   compare,
   formHref,
+  shortImageSrc,
+  longImageSrc,
 }: {
   compare: CompareContent;
   formHref: string;
+  shortImageSrc: string;
+  longImageSrc: string;
 }) {
+  const images = [shortImageSrc, longImageSrc];
   const [active, setActive] = useState<"short" | "long">("short");
 
   return (
@@ -58,12 +64,25 @@ export default function Compare({
               <div
                 key={col.title}
                 onMouseEnter={() => setActive(key)}
-                className={`rounded-sm border p-8 transition-all duration-500 sm:p-10 ${
+                className={`relative overflow-hidden rounded-sm border p-8 transition-all duration-500 sm:p-10 ${
                   isActive
                     ? "border-coral/30 bg-charcoal text-ivory shadow-[0_30px_80px_rgba(20,17,13,0.15)]"
                     : "border-charcoal/10 bg-ivory-soft text-charcoal opacity-70"
                 }`}
               >
+                {isActive && (
+                  <>
+                    <Image
+                      src={images[i]}
+                      alt=""
+                      fill
+                      sizes="(min-width: 1024px) 50vw, 100vw"
+                      className="object-cover opacity-20"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/85 to-charcoal/70" />
+                  </>
+                )}
+                <div className="relative">
                 <h3 className="font-serif-display text-2xl sm:text-3xl">{col.title}</h3>
                 <p className={`mt-2 text-sm ${isActive ? "text-coral-soft" : "text-charcoal/50"}`}>
                   {col.tagline}
@@ -80,6 +99,7 @@ export default function Compare({
                     </li>
                   ))}
                 </ul>
+                </div>
               </div>
             );
           })}

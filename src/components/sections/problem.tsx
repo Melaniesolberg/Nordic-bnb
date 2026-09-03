@@ -1,10 +1,18 @@
 "use client";
 
+import Image from "next/image";
+import { motion } from "framer-motion";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import type { ProblemContent } from "@/content/types";
 
-export default function Problem({ problem }: { problem: ProblemContent }) {
+export default function Problem({
+  problem,
+  imageSrc,
+}: {
+  problem: ProblemContent;
+  imageSrc: string;
+}) {
   return (
     <section className="relative bg-ivory py-24 sm:py-32 lg:py-40">
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
@@ -21,6 +29,20 @@ export default function Problem({ problem }: { problem: ProblemContent }) {
                 {problem.intro}
               </p>
             </Reveal>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30, rotate: -3 }}
+              whileInView={{ opacity: 1, y: 0, rotate: -3 }}
+              viewport={{ once: true, margin: "-10% 0px -10% 0px" }}
+              transition={{ duration: 0.9, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+              className="relative mt-12 hidden aspect-[4/3] w-64 overflow-hidden rounded-sm border-4 border-ivory-soft shadow-[0_24px_48px_rgba(20,17,13,0.18)] sm:block"
+            >
+              <Image src={imageSrc} alt="A typical, undersold listing photo" fill sizes="256px" className="object-cover grayscale" />
+              <div className="absolute inset-0 bg-charcoal/10" />
+              <span className="absolute bottom-3 left-3 rounded-full bg-charcoal/70 px-3 py-1 text-[10px] tracking-wide text-ivory backdrop-blur-sm">
+                Before Nordic BnB
+              </span>
+            </motion.div>
           </div>
 
           <div className="lg:col-span-7">

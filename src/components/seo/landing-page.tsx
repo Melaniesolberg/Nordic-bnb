@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import WhatsappFab from "@/components/layout/whatsapp-fab";
@@ -8,6 +9,7 @@ import Magnetic from "@/components/ui/magnetic-button";
 import Services from "@/components/sections/services";
 import FinalCta from "@/components/sections/final-cta";
 import { en } from "@/content/en";
+import { media } from "@/content/media";
 import type { SeoPageConfig } from "@/content/seo-pages";
 import { localeHref } from "@/i18n/config";
 
@@ -19,11 +21,14 @@ export default function SeoLandingPage({ page }: { page: SeoPageConfig }) {
     <>
       <Nav locale="en" nav={content.nav} />
       <main>
-        <section className="relative flex min-h-[70vh] items-end overflow-hidden bg-charcoal pb-20 pt-32">
+        <section className="relative flex min-h-[70vh] items-end overflow-hidden bg-charcoal pb-20 pt-32 grain">
+          <div className="absolute inset-0 opacity-40">
+            <Image src={media.heroVilla} alt="" fill sizes="100vw" className="object-cover" />
+          </div>
           <div
-            className="absolute inset-0 opacity-70"
+            className="absolute inset-0"
             style={{
-              background: "radial-gradient(90% 70% at 20% 0%, #3a281c 0%, #14110d 65%)",
+              background: "radial-gradient(90% 70% at 20% 0%, rgba(58,40,28,0.75) 0%, rgba(20,17,13,0.9) 65%)",
             }}
           />
           <div className="relative mx-auto w-full max-w-[1600px] px-5 sm:px-8 lg:px-12">
@@ -71,8 +76,8 @@ export default function SeoLandingPage({ page }: { page: SeoPageConfig }) {
           </div>
         </section>
 
-        <Services services={content.services} />
-        <FinalCta finalCta={content.finalCta} />
+        <Services services={content.services} imageSrc={media.listingAfter} />
+        <FinalCta finalCta={content.finalCta} imageSrc={media.poolNight} />
       </main>
       <Footer locale="en" footer={content.footer} nav={content.nav} />
       <WhatsappFab label={content.nav.whatsapp} />

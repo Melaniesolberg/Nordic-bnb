@@ -9,6 +9,15 @@
  * replacing the URL string.
  */
 export const media = {
+  // Real Nordic BnB brand assets, uploaded by the user via the Higgsfield
+  // media widget. These are the exact original files — do not regenerate.
+  brandLogo:
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/bef9492b-de81-4667-856c-c1432fec1c60.png",
+  brandIcon:
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/3ae2acbc-bddb-4922-bfa9-d1e09c88d7d5.png",
+  brandMerch:
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/0b6e253a-5c3d-4549-8b13-bc988759332b.png",
+
   heroVilla:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111038_b2e7c852-74ff-4b5b-b324-ee38838ae978.png",
   listingBefore:

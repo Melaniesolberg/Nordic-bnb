@@ -13,7 +13,15 @@ const DOT_POSITIONS = [
   { x: 650, y: 85 },
 ];
 
-export default function Areas({ areas, imageSrc }: { areas: AreasContent; imageSrc: string }) {
+export default function Areas({
+  areas,
+  imageSrc,
+  detailImageSrc,
+}: {
+  areas: AreasContent;
+  imageSrc: string;
+  detailImageSrc: string;
+}) {
   const [active, setActive] = useState(0);
 
   return (
@@ -93,6 +101,20 @@ export default function Areas({ areas, imageSrc }: { areas: AreasContent; imageS
                   );
                 })}
               </svg>
+            </div>
+
+            <div className="relative mt-8 hidden aspect-[16/10] w-full overflow-hidden rounded-sm sm:block">
+              <Image
+                src={detailImageSrc}
+                alt=""
+                fill
+                sizes="(min-width: 1024px) 45vw, 90vw"
+                className="object-cover transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent" />
+              <span className="absolute bottom-4 left-4 font-serif-display text-xl italic text-ivory">
+                {areas.areas[active].name}
+              </span>
             </div>
           </Reveal>
 

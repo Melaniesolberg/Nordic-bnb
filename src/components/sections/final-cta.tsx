@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import Magnetic from "@/components/ui/magnetic-button";
@@ -13,7 +14,13 @@ const inputClasses =
   "w-full border-b border-ivory/25 bg-transparent py-3 text-ivory placeholder:text-ivory/35 focus:border-coral focus:outline-none transition-colors";
 const labelClasses = "eyebrow mb-2 block text-ivory/45";
 
-export default function FinalCta({ finalCta }: { finalCta: FinalCtaContent }) {
+export default function FinalCta({
+  finalCta,
+  imageSrc,
+}: {
+  finalCta: FinalCtaContent;
+  imageSrc: string;
+}) {
   const [status, setStatus] = useState<Status>("idle");
   const f = finalCta.form.fields;
 
@@ -39,7 +46,11 @@ export default function FinalCta({ finalCta }: { finalCta: FinalCtaContent }) {
   }
 
   return (
-    <section id="contact" className="relative overflow-hidden bg-charcoal py-24 sm:py-32 lg:py-40">
+    <section id="contact" className="relative overflow-hidden bg-charcoal py-24 sm:py-32 lg:py-40 grain">
+      <div className="absolute inset-0 opacity-35">
+        <Image src={imageSrc} alt="" fill sizes="100vw" className="object-cover" />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-b from-charcoal via-charcoal/90 to-charcoal" />
       <div
         className="absolute inset-0 opacity-60"
         style={{
