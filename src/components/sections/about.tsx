@@ -1,13 +1,25 @@
 "use client";
 
+import Image from "next/image";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import type { AboutContent } from "@/content/types";
 
-export default function About({ about }: { about: AboutContent }) {
+export default function About({
+  about,
+  bgImageSrc,
+}: {
+  about: AboutContent;
+  bgImageSrc?: string;
+}) {
   return (
-    <section id="about" className="relative bg-ivory-soft py-24 sm:py-32 lg:py-40">
-      <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+    <section id="about" className="relative overflow-hidden bg-ivory-soft py-24 sm:py-32 lg:py-40">
+      {bgImageSrc && (
+        <div className="absolute inset-0 opacity-[0.08]">
+          <Image src={bgImageSrc} alt="" fill sizes="100vw" className="object-cover" />
+        </div>
+      )}
+      <div className="relative mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-5">
             <Reveal>

@@ -29,14 +29,14 @@ export default function HomePage({ locale }: { locale: Locale }) {
     <>
       <Nav locale={locale} nav={content.nav} />
       <main>
-        <Hero hero={content.hero} formHref={formHref} imageSrc={media.heroVilla} />
+        <Hero hero={content.hero} formHref={formHref} imageSrc={media.villaAerial} />
         <Problem problem={content.problem} imageSrc={media.listingBefore} />
         <PropertyShowcase
-          imageSrc={media.coastline}
+          imageSrc={media.seaView}
           eyebrow="Costa del Sol"
           headline="Every property tells a story worth telling well."
         />
-        <System system={content.system} />
+        <System system={content.system} bgImageSrc={media.nightVilla} />
         <SectionDivider tone="light" />
         <BeforeAfter
           beforeAfter={content.beforeAfter}
@@ -45,30 +45,38 @@ export default function HomePage({ locale }: { locale: Locale }) {
         />
         <Performance performance={content.performance} />
         <PropertyShowcase
-          imageSrc={media.heroVilla}
+          imageSrc={media.interiorLiving}
           eyebrow="Presentation"
           headline="Styled, photographed and positioned to perform."
           align="right"
         />
-        <Services services={content.services} imageSrc={media.listingAfter} />
+        <Services services={content.services} imageSrc={media.poolDay} />
         <Dashboard
           dashboard={content.dashboard}
-          bgImageSrc={media.coastline}
-          cardImageSrc={media.poolNight}
+          bgImageSrc={media.aerialCoast}
+          cardImageSrc={media.heroVilla}
         />
-        <Operations operations={content.operations} imageSrc={media.heroVilla} />
+        <Operations
+          operations={content.operations}
+          imageSrc={media.heroVilla}
+          sequenceImages={[media.stylingDetail, media.cleaningMoment, media.guestArrival, media.detailShot]}
+        />
         <Compare
           compare={content.compare}
           formHref={formHref}
-          shortImageSrc={media.coastline}
+          shortImageSrc={media.marbellaLifestyle}
           longImageSrc={media.poolNight}
         />
-        <Areas areas={content.areas} imageSrc={media.coastline} detailImageSrc={media.heroVilla} />
-        <About about={content.about} />
+        <Areas
+          areas={content.areas}
+          imageSrc={media.coastline}
+          detailImages={[media.marbellaLifestyle, media.mijasScene, media.fuengirolaScene, media.benalmadenaScene]}
+        />
+        <About about={content.about} bgImageSrc={media.sunsetSea} />
         <Team team={content.team} />
         <Testimonials testimonials={content.testimonials} />
         <SectionDivider tone="light" />
-        <FinalCta finalCta={content.finalCta} imageSrc={media.poolNight} />
+        <FinalCta finalCta={content.finalCta} imageSrc={media.nightVilla} />
       </main>
       <Footer locale={locale} footer={content.footer} nav={content.nav} />
       <WhatsappFab label={content.nav.whatsapp} />

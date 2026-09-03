@@ -16,11 +16,11 @@ const DOT_POSITIONS = [
 export default function Areas({
   areas,
   imageSrc,
-  detailImageSrc,
+  detailImages,
 }: {
   areas: AreasContent;
   imageSrc: string;
-  detailImageSrc: string;
+  detailImages: string[];
 }) {
   const [active, setActive] = useState(0);
 
@@ -105,11 +105,12 @@ export default function Areas({
 
             <div className="relative mt-8 hidden aspect-[16/10] w-full overflow-hidden rounded-sm sm:block">
               <Image
-                src={detailImageSrc}
+                key={active}
+                src={detailImages[active]}
                 alt=""
                 fill
                 sizes="(min-width: 1024px) 45vw, 90vw"
-                className="object-cover transition-transform duration-700"
+                className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent" />
               <span className="absolute bottom-4 left-4 font-serif-display text-xl italic text-ivory">

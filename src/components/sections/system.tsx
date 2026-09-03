@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import dynamic from "next/dynamic";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import gsap from "gsap";
@@ -47,7 +48,13 @@ function PillarList({ system }: { system: SystemContent }) {
   );
 }
 
-export default function System({ system }: { system: SystemContent }) {
+export default function System({
+  system,
+  bgImageSrc,
+}: {
+  system: SystemContent;
+  bgImageSrc?: string;
+}) {
   const prefersReduced = useReducedMotion();
   const webglSupported = useWebglSupported();
   const isDesktop = useMediaQuery("(min-width: 1024px)");
@@ -86,8 +93,14 @@ export default function System({ system }: { system: SystemContent }) {
   const pillar = system.pillars[active];
 
   return (
-    <section id="system" className="relative bg-charcoal">
-      <div className="mx-auto max-w-[1600px] px-5 pt-24 sm:px-8 sm:pt-32 lg:px-12">
+    <section id="system" className="relative overflow-hidden bg-charcoal">
+      {bgImageSrc && (
+        <div className="absolute inset-0 opacity-20">
+          <Image src={bgImageSrc} alt="" fill sizes="100vw" className="object-cover" />
+          <div className="absolute inset-0 bg-charcoal/70" />
+        </div>
+      )}
+      <div className="relative mx-auto max-w-[1600px] px-5 pt-24 sm:px-8 sm:pt-32 lg:px-12">
         <Reveal>
           <Eyebrow tone="light">{system.eyebrow}</Eyebrow>
           <h2 className="font-serif-display text-display-md mt-6 max-w-3xl text-ivory">
@@ -149,7 +162,7 @@ export default function System({ system }: { system: SystemContent }) {
           </div>
         </div>
       ) : (
-        <div className="mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:px-12">
+        <div className="relative mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:px-12">
           <PillarList system={system} />
         </div>
       )}

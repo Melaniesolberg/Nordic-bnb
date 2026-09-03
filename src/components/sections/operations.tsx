@@ -5,12 +5,16 @@ import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import type { OperationsContent } from "@/content/types";
 
+const SEQUENCE_LABELS = ["Styling", "Cleaning", "Guest arrival", "Detail"];
+
 export default function Operations({
   operations,
   imageSrc,
+  sequenceImages,
 }: {
   operations: OperationsContent;
   imageSrc: string;
+  sequenceImages: string[];
 }) {
   return (
     <section className="relative bg-ivory-soft pb-24 sm:pb-32 lg:pb-40">
@@ -69,6 +73,26 @@ export default function Operations({
               </Reveal>
             ))}
           </div>
+        </div>
+
+        <div className="mt-20 grid grid-cols-2 gap-3 sm:mt-24 sm:grid-cols-4 sm:gap-4">
+          {sequenceImages.map((src, i) => (
+            <Reveal key={SEQUENCE_LABELS[i]} delay={0.05 * i}>
+              <div className="relative aspect-[3/4] overflow-hidden rounded-sm">
+                <Image
+                  src={src}
+                  alt=""
+                  fill
+                  sizes="(min-width: 640px) 22vw, 46vw"
+                  className="object-cover transition-transform duration-700 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
+                <span className="absolute bottom-3 left-3 text-xs tracking-wide text-ivory">
+                  {SEQUENCE_LABELS[i]}
+                </span>
+              </div>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
