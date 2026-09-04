@@ -29,25 +29,6 @@ export const de: SiteContent = {
     scrollHint: "Scrollen",
     locationTag: "Costa del Sol, Spanien",
   },
-  problem: {
-    eyebrow: "Das Problem",
-    heading: "Eine schöne Immobilie. Ein fragmentierter Betrieb.",
-    subline:
-      "Wir übernehmen Inserat, Preisgestaltung, Gästekommunikation, Reinigung und Instandhaltung — ein vollständiges Betriebssystem für Ihre Vermietung.",
-    intro:
-      "Den meisten Eigentümern an der Costa del Sol fehlt keine großartige Immobilie — ihnen fehlt ein System. Die Fotos sind veraltet. Der Preis hat sich seit Monaten nicht geändert. Nachrichten stapeln sich in drei verschiedenen Apps. Die Reinigung wird per Gruppenchat organisiert. Und niemand betrachtet das Gesamtbild.",
-    frictions: [
-      { label: "Inserat", detail: "Fotos und Texte, die die Immobilie unter Wert verkaufen" },
-      { label: "Preis", detail: "Ein Festpreis das ganze Jahr über, unabhängig von der Nachfrage" },
-      { label: "Kanäle", detail: "Airbnb, Booking.com und Anfragen werden getrennt verwaltet" },
-      { label: "Gäste", detail: "Nachrichten werden spät oder gar nicht beantwortet" },
-      { label: "Reinigung", detail: "Ad hoc koordiniert, ohne Qualitätskontrolle" },
-      { label: "Instandhaltung", detail: "Probleme werden vom nächsten Gast entdeckt, nicht vorher" },
-    ],
-    pivot: "Nordic BnB übernimmt die Kontrolle über den gesamten Betrieb.",
-    imageAlt: "Ein typisches, unter Wert verkauftes Inseratsfoto",
-    imageBadge: "Vor Nordic BnB",
-  },
   system: {
     eyebrow: "So arbeiten wir",
     heading: "Vom leeren Raum zur bestätigten Buchung.",
@@ -165,23 +146,6 @@ export const de: SiteContent = {
         ],
       },
     ],
-  },
-  performance: {
-    eyebrow: "Leistung",
-    heading: "So sieht kontinuierliche Verbesserung aus.",
-    intro:
-      "Ein illustratives Optimierungsszenario für eine Zwei-Zimmer-Immobilie an der Costa del Sol, das zeigt, welche Entwicklung ein vollständiges System im Laufe einer Saison bewirken kann.",
-    disclaimer:
-      "Nur zur Veranschaulichung — kein verifiziertes Nordic BnB-Ergebnis. Die Zahlen sind ein Demonstrationsszenario, bis echte Kundendaten hier veröffentlicht werden können.",
-    metrics: [
-      { value: "+18 %", label: "Durchschnittlicher Übernachtungspreis" },
-      { value: "+24 %", label: "Umsatzpotenzial" },
-      { value: "+13 %", label: "Auslastung" },
-      { value: "4,9", label: "Gästebewertung" },
-    ],
-    chartLabel: "Illustrative Umsatzkurve, Monat für Monat",
-    channelLabel: "Illustrative Kanalverteilung",
-    directOtherLabel: "Direkt & sonstige",
   },
   services: {
     eyebrow: "Leistungen",

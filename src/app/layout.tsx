@@ -54,10 +54,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: [
-      { url: "/icon.svg", type: "image/svg+xml" },
-      { url: media.brandIcon, type: "image/png" },
-    ],
+    icon: [{ url: media.brandIcon, type: "image/png" }],
     apple: media.brandIcon,
   },
 };

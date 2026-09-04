@@ -29,25 +29,6 @@ export const no: SiteContent = {
     scrollHint: "Scroll",
     locationTag: "Costa del Sol, Spania",
   },
-  problem: {
-    eyebrow: "Problemet",
-    heading: "En vakker eiendom. En fragmentert drift.",
-    subline:
-      "Vi tar over annonsering, prising, gjestekommunikasjon, renhold og vedlikehold — ett komplett driftssystem for utleien din.",
-    intro:
-      "De fleste eiere på Costa del Sol mangler ikke en flott eiendom — de mangler et system. Bildene er utdaterte. Prisen har ikke endret seg på måneder. Meldinger hoper seg opp på tre ulike apper. Rengjøring avtales i en gruppechat. Og ingen ser helheten.",
-    frictions: [
-      { label: "Annonse", detail: "Fotografi og tekst som underselger eiendommen" },
-      { label: "Prising", detail: "Én fast pris, hele året, uavhengig av etterspørsel" },
-      { label: "Kanaler", detail: "Airbnb, Booking.com og henvendelser håndtert hver for seg" },
-      { label: "Gjester", detail: "Meldinger besvart sent — eller ikke i det hele tatt" },
-      { label: "Rengjøring", detail: "Koordinert ad hoc, uten kvalitetskontroll" },
-      { label: "Vedlikehold", detail: "Feil oppdages av neste gjest, ikke før" },
-    ],
-    pivot: "Nordic BnB tar kontroll over hele driften.",
-    imageAlt: "Et typisk, underselgende annonsebilde",
-    imageBadge: "Før Nordic BnB",
-  },
   system: {
     eyebrow: "Slik jobber vi",
     heading: "Fra tomt rom til bekreftet bestilling.",
@@ -165,23 +146,6 @@ export const no: SiteContent = {
         ],
       },
     ],
-  },
-  performance: {
-    eyebrow: "Ytelse",
-    heading: "Slik ser kontinuerlig forbedring ut.",
-    intro:
-      "Et illustrerende optimaliseringsscenario for en leilighet med to soverom på Costa del Sol, som viser hva et helhetlig system kan gi over en sesong.",
-    disclaimer:
-      "Kun illustrerende eksempel — ikke et verifisert Nordic BnB-resultat. Tallene er et demonstrasjonsscenario inntil reelle kundedata kan publiseres her.",
-    metrics: [
-      { value: "+18 %", label: "Gjennomsnittlig døgnpris" },
-      { value: "+24 %", label: "Inntektspotensial" },
-      { value: "+13 %", label: "Belegg" },
-      { value: "4,9", label: "Gjestevurdering" },
-    ],
-    chartLabel: "Illustrerende inntektskurve, måned for måned",
-    channelLabel: "Illustrerende kanalfordeling",
-    directOtherLabel: "Direkte og annet",
   },
   services: {
     eyebrow: "Tjenester",

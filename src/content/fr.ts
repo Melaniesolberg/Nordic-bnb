@@ -29,25 +29,6 @@ export const fr: SiteContent = {
     scrollHint: "Défiler",
     locationTag: "Costa del Sol, Espagne",
   },
-  problem: {
-    eyebrow: "Le problème",
-    heading: "Un bien magnifique. Une exploitation fragmentée.",
-    subline:
-      "Nous prenons en charge l'annonce, la tarification, la communication avec les voyageurs, le ménage et l'entretien — un système d'exploitation complet pour votre location.",
-    intro:
-      "La plupart des propriétaires sur la Costa del Sol ne manquent pas d'un bien exceptionnel — ils manquent d'un système. Les photos sont datées. Le prix n'a pas bougé depuis des mois. Les messages s'accumulent dans trois applications différentes. Le ménage se coordonne par chat de groupe. Et personne ne regarde l'ensemble.",
-    frictions: [
-      { label: "Annonce", detail: "Photos et texte qui sous-vendent le bien" },
-      { label: "Prix", detail: "Un tarif fixe toute l'année, sans tenir compte de la demande" },
-      { label: "Canaux", detail: "Airbnb, Booking.com et demandes gérés séparément" },
-      { label: "Voyageurs", detail: "Messages répondus tard, ou jamais" },
-      { label: "Ménage", detail: "Coordonné au coup par coup, sans contrôle qualité" },
-      { label: "Entretien", detail: "Problèmes découverts par le voyageur suivant, pas avant" },
-    ],
-    pivot: "Nordic BnB prend le contrôle de toute l'exploitation.",
-    imageAlt: "Une photo d'annonce typique et sous-valorisée",
-    imageBadge: "Avant Nordic BnB",
-  },
   system: {
     eyebrow: "Comment nous travaillons",
     heading: "D'une pièce vide à une réservation confirmée.",
@@ -165,23 +146,6 @@ export const fr: SiteContent = {
         ],
       },
     ],
-  },
-  performance: {
-    eyebrow: "Performance",
-    heading: "À quoi ressemble l'amélioration continue.",
-    intro:
-      "Un scénario d'optimisation illustratif pour un bien de deux chambres sur la Costa del Sol, montrant le type d'évolution qu'un système complet peut produire sur une saison.",
-    disclaimer:
-      "Exemple illustratif uniquement — pas un résultat Nordic BnB vérifié. Les chiffres constituent un scénario de démonstration en attendant que de vraies données clients puissent être publiées ici.",
-    metrics: [
-      { value: "+18 %", label: "Tarif moyen par nuit" },
-      { value: "+24 %", label: "Potentiel de revenus" },
-      { value: "+13 %", label: "Occupation" },
-      { value: "4,9", label: "Note des voyageurs" },
-    ],
-    chartLabel: "Courbe de revenus illustrative, mois par mois",
-    channelLabel: "Répartition des canaux illustrative",
-    directOtherLabel: "Direct et autres",
   },
   services: {
     eyebrow: "Services",

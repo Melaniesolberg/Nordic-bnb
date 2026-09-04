@@ -29,25 +29,6 @@ export const fi: SiteContent = {
     scrollHint: "Vieritä",
     locationTag: "Costa del Sol, Espanja",
   },
-  problem: {
-    eyebrow: "Ongelma",
-    heading: "Kaunis kiinteistö. Hajanainen toiminta.",
-    subline:
-      "Otamme hoitaaksemme ilmoituksen, hinnoittelun, vieraiden viestinnän, siivouksen ja huollon — yhden kattavan käyttöjärjestelmän vuokrauksellesi.",
-    intro:
-      "Useimmilta Costa del Solin omistajilta ei puutu hieno kiinteistö — heiltä puuttuu järjestelmä. Kuvat ovat vanhentuneita. Hinta ei ole muuttunut kuukausiin. Viestejä kertyy kolmeen eri sovellukseen. Siivous sovitaan ryhmäkeskustelussa. Eikä kukaan katso kokonaiskuvaa.",
-    frictions: [
-      { label: "Ilmoitus", detail: "Valokuvat ja teksti, jotka aliarvioivat kiinteistön" },
-      { label: "Hinta", detail: "Yksi kiinteä hinta ympäri vuoden, kysynnästä riippumatta" },
-      { label: "Kanavat", detail: "Airbnb, Booking.com ja tiedustelut hoidetaan erikseen" },
-      { label: "Vieraat", detail: "Viesteihin vastataan myöhään tai ei ollenkaan" },
-      { label: "Siivous", detail: "Sovitaan tilapäisesti, ilman laadunvalvontaa" },
-      { label: "Huolto", detail: "Ongelmat huomaa seuraava vieras, ei ennen sitä" },
-    ],
-    pivot: "Nordic BnB ottaa haltuunsa koko toiminnan.",
-    imageAlt: "Tyypillinen, aliarvioiva ilmoituskuva",
-    imageBadge: "Ennen Nordic BnB:tä",
-  },
   system: {
     eyebrow: "Näin toimimme",
     heading: "Tyhjästä huoneesta vahvistettuun varaukseen.",
@@ -165,23 +146,6 @@ export const fi: SiteContent = {
         ],
       },
     ],
-  },
-  performance: {
-    eyebrow: "Suorituskyky",
-    heading: "Miltä jatkuva parantaminen näyttää.",
-    intro:
-      "Havainnollistava optimointiskenaario kahden makuuhuoneen Costa del Sol -kiinteistölle, joka näyttää millaista kehitystä täysi järjestelmä voi tuottaa yhden sesongin aikana.",
-    disclaimer:
-      "Vain havainnollistava esimerkki — ei todennettu Nordic BnB -tulos. Luvut ovat demonstraatioskenaario, kunnes todelliset asiakastiedot voidaan julkaista täällä.",
-    metrics: [
-      { value: "+18 %", label: "Keskimääräinen yöhinta" },
-      { value: "+24 %", label: "Tuottopotentiaali" },
-      { value: "+13 %", label: "Käyttöaste" },
-      { value: "4,9", label: "Vieraiden arvosana" },
-    ],
-    chartLabel: "Havainnollistava tuottokäyrä, kuukausittain",
-    channelLabel: "Havainnollistava kanavajakauma",
-    directOtherLabel: "Suora & muut",
   },
   services: {
     eyebrow: "Palvelut",

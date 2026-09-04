@@ -8,8 +8,8 @@ import { media } from "@/content/media";
  * light/dark variant is needed.
  */
 const SIZES = {
-  lg: "h-12 w-52 sm:h-14 sm:w-60",
-  sm: "h-8 w-36",
+  lg: "h-16 w-72 sm:h-20 sm:w-[22rem]",
+  sm: "h-9 w-40",
 } as const;
 
 export default function Logo({

@@ -74,4 +74,9 @@ export const media = {
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155215_a757e9a7-f8d9-4fe1-a790-788c4029c9d2.png",
   houseAfter:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155215_f2f3cdd6-db6c-433a-aa97-a6289337a244.png",
+
+  // Real, unedited photo of Petter (co-founder), uploaded by the user
+  // directly — used as-is in the About section.
+  founderPetter:
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/d809abb8-d01d-40d5-bca7-2e339ee0255e.png",
 } as const;

@@ -29,25 +29,6 @@ export const en: SiteContent = {
     scrollHint: "Scroll",
     locationTag: "Costa del Sol, Spain",
   },
-  problem: {
-    eyebrow: "The problem",
-    heading: "A beautiful property. A fragmented operation.",
-    subline:
-      "We take over listing, pricing, guest communication, cleaning and maintenance — one complete operating system for your rental.",
-    intro:
-      "Most owners on the Costa del Sol aren't short on a great property — they're short on a system. The photos are dated. The price hasn't moved in months. Messages pile up across three apps. Cleaning gets arranged by group chat. And nobody is looking at the whole picture.",
-    frictions: [
-      { label: "Listing", detail: "Photography and copy that undersell the property" },
-      { label: "Pricing", detail: "One flat rate, all year, regardless of demand" },
-      { label: "Channels", detail: "Airbnb, Booking.com and enquiries managed separately" },
-      { label: "Guests", detail: "Messages answered late, or not at all" },
-      { label: "Cleaning", detail: "Coordinated ad-hoc, with no quality checkpoint" },
-      { label: "Maintenance", detail: "Issues discovered by the next guest, not before" },
-    ],
-    pivot: "Nordic BnB takes control of the complete operation.",
-    imageAlt: "A typical, undersold listing photo",
-    imageBadge: "Before Nordic BnB",
-  },
   system: {
     eyebrow: "How it works",
     heading: "From empty room to confirmed booking.",
@@ -165,23 +146,6 @@ export const en: SiteContent = {
         ],
       },
     ],
-  },
-  performance: {
-    eyebrow: "Performance",
-    heading: "What continuous improvement looks like.",
-    intro:
-      "An illustrative optimisation scenario for a two-bedroom Costa del Sol property, showing the kind of movement a full system can produce over a season.",
-    disclaimer:
-      "Illustrative example only — not a verified Nordic BnB result. Figures are a demonstration scenario until real client data can be published here.",
-    metrics: [
-      { value: "+18%", label: "Average nightly rate" },
-      { value: "+24%", label: "Revenue potential" },
-      { value: "+13%", label: "Occupancy" },
-      { value: "4.9", label: "Guest rating" },
-    ],
-    chartLabel: "Illustrative revenue curve, month by month",
-    channelLabel: "Illustrative channel distribution",
-    directOtherLabel: "Direct & other",
   },
   services: {
     eyebrow: "Services",

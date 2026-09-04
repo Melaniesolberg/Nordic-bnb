@@ -29,25 +29,6 @@ export const sv: SiteContent = {
     scrollHint: "Scrolla",
     locationTag: "Costa del Sol, Spanien",
   },
-  problem: {
-    eyebrow: "Problemet",
-    heading: "En vacker fastighet. En splittrad drift.",
-    subline:
-      "Vi tar över annonsering, prissättning, gästkommunikation, städning och underhåll — ett komplett driftsystem för din uthyrning.",
-    intro:
-      "De flesta ägare på Costa del Sol saknar inte en fin fastighet — de saknar ett system. Bilderna är gamla. Priset har inte ändrats på månader. Meddelanden hopar sig i tre olika appar. Städningen sköts via gruppchatt. Och ingen ser helheten.",
-    frictions: [
-      { label: "Annons", detail: "Foton och text som undersäljer fastigheten" },
-      { label: "Pris", detail: "Ett fast pris, hela året, oavsett efterfrågan" },
-      { label: "Kanaler", detail: "Airbnb, Booking.com och förfrågningar hanteras separat" },
-      { label: "Gäster", detail: "Meddelanden besvaras sent, eller aldrig" },
-      { label: "Städning", detail: "Samordnas ad hoc, utan kvalitetskontroll" },
-      { label: "Underhåll", detail: "Problem upptäcks av nästa gäst, inte innan" },
-    ],
-    pivot: "Nordic BnB tar kontroll över hela driften.",
-    imageAlt: "Ett typiskt, undersäljande annonsfoto",
-    imageBadge: "Före Nordic BnB",
-  },
   system: {
     eyebrow: "Så här jobbar vi",
     heading: "Från tomt rum till bekräftad bokning.",
@@ -165,23 +146,6 @@ export const sv: SiteContent = {
         ],
       },
     ],
-  },
-  performance: {
-    eyebrow: "Resultat",
-    heading: "Så här ser kontinuerlig förbättring ut.",
-    intro:
-      "Ett illustrativt optimeringsscenario för en tvårumsfastighet på Costa del Sol, som visar den typ av utveckling ett komplett system kan skapa under en säsong.",
-    disclaimer:
-      "Endast illustrativt exempel — inte ett verifierat Nordic BnB-resultat. Siffrorna är ett demonstrationsscenario tills verklig kunddata kan publiceras här.",
-    metrics: [
-      { value: "+18 %", label: "Genomsnittligt nattpris" },
-      { value: "+24 %", label: "Intäktspotential" },
-      { value: "+13 %", label: "Beläggning" },
-      { value: "4,9", label: "Gästbetyg" },
-    ],
-    chartLabel: "Illustrativ intäktskurva, månad för månad",
-    channelLabel: "Illustrativ kanalfördelning",
-    directOtherLabel: "Direkt & övrigt",
   },
   services: {
     eyebrow: "Tjänster",

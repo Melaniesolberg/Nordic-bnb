@@ -22,17 +22,6 @@ export interface HeroContent {
   locationTag: string;
 }
 
-export interface ProblemContent {
-  eyebrow: string;
-  heading: string;
-  subline: string;
-  intro: string;
-  frictions: { label: string; detail: string }[];
-  pivot: string;
-  imageAlt: string;
-  imageBadge: string;
-}
-
 export interface SystemPillar {
   code: string;
   title: string;
@@ -79,22 +68,6 @@ export interface PortfolioContent {
   beforeLabel: string;
   afterLabel: string;
   properties: PortfolioProperty[];
-}
-
-export interface PerformanceMetric {
-  value: string;
-  label: string;
-}
-
-export interface PerformanceContent {
-  eyebrow: string;
-  heading: string;
-  intro: string;
-  disclaimer: string;
-  metrics: PerformanceMetric[];
-  chartLabel: string;
-  channelLabel: string;
-  directOtherLabel: string;
 }
 
 export interface ServiceItem {
@@ -256,10 +229,8 @@ export interface SiteContent {
   };
   nav: NavContent;
   hero: HeroContent;
-  problem: ProblemContent;
   system: SystemContent;
   beforeAfter: BeforeAfterContent;
-  performance: PerformanceContent;
   services: ServicesContent;
   dashboard: DashboardContent;
   operations: OperationsContent;

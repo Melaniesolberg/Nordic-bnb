@@ -10,32 +10,18 @@ import Reveal from "@/components/ui/reveal";
 import { useMediaQuery } from "@/lib/use-media-query";
 import type { SystemContent } from "@/content/types";
 
-/** One small line-icon per process step, in step order: style, clean, photograph, sync, arrive, book. */
+/**
+ * One small line-icon per step of the 7-step operational cycle, in order:
+ * inspected, guest arrives, review collected, performance feeds pricing,
+ * booking confirmed, guest prepared, cleaning scheduled.
+ */
 const STEP_ICONS: ((props: { className?: string }) => ReactElement)[] = [
   ({ className }) => (
     <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
-      <path d="M4 15V6a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      <rect x="4" y="15" width="6" height="4" rx="1" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M10 17h6a2 2 0 0 1 2 2v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="18" cy="20" r="1.4" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  ),
-  ({ className }) => (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
-      <path d="M12 3v3M12 18v3M4.2 12H3M21 12h-1.2M6 6l1.4 1.4M16.6 16.6L18 18M18 6l-1.4 1.4M7.4 16.6L6 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <circle cx="12" cy="12" r="3.4" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  ),
-  ({ className }) => (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
-      <path d="M4 8.5A1.5 1.5 0 0 1 5.5 7h2l1-1.5h7L16.5 7h2A1.5 1.5 0 0 1 20 8.5v9A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5v-9Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <circle cx="12" cy="13" r="3.2" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  ),
-  ({ className }) => (
-    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
-      <path d="M4 12a8 8 0 0 1 13.5-5.8M20 12a8 8 0 0 1-13.5 5.8" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M17.5 3.5v3h-3M6.5 20.5v-3h3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <rect x="4" y="4" width="13" height="16" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
+      <path d="M7.5 8.5h6M7.5 12h6M7.5 15.5h3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="18" cy="17.5" r="3.2" stroke="currentColor" strokeWidth="1.5" />
+      <path d="m19.8 19.3 1.4 1.4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
     </svg>
   ),
   ({ className }) => (
@@ -46,9 +32,42 @@ const STEP_ICONS: ((props: { className?: string }) => ReactElement)[] = [
   ),
   ({ className }) => (
     <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path
+        d="M12 4.5 14.2 9l5 .7-3.6 3.5.85 5-4.45-2.3-4.45 2.3.85-5L4.8 9.7l5-.7 2.2-4.5Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+    </svg>
+  ),
+  ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M4 19.5 9.5 13l3.5 3.5L20 8.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M15 8.5h5v5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  ),
+  ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
       <rect x="4" y="5.5" width="16" height="14" rx="1.5" stroke="currentColor" strokeWidth="1.5" />
       <path d="M4 9.5h16M8 3.5v3M16 3.5v3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
       <path d="M8.5 14 11 16.5 15.5 12" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  ),
+  ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path
+        d="M4 6.5A1.5 1.5 0 0 1 5.5 5h13A1.5 1.5 0 0 1 20 6.5v9a1.5 1.5 0 0 1-1.5 1.5H9l-4 3v-3h-.5A1.5 1.5 0 0 1 3 15.5v-9Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path d="M7.5 9.5h9M7.5 12.5h6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+    </svg>
+  ),
+  ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path d="M12 3v3M12 18v3M4.2 12H3M21 12h-1.2M6 6l1.4 1.4M16.6 16.6L18 18M18 6l-1.4 1.4M7.4 16.6L6 18" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="12" cy="12" r="3.4" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   ),
 ];
@@ -70,7 +89,7 @@ function ProcessVisual({
   stepLabel: string;
 }) {
   const Icon = STEP_ICONS[active];
-  const isSyncStep = active === 3;
+  const isSyncStep = active === 4;
 
   return (
     <div className="relative h-full w-full overflow-hidden rounded-sm shadow-[0_40px_100px_rgba(0,0,0,0.5)]">
@@ -156,10 +175,12 @@ export default function System({
   system,
   bgImageSrc,
   transformationImages,
+  secondaryIntro,
 }: {
   system: SystemContent;
   bgImageSrc?: string;
   transformationImages?: string[];
+  secondaryIntro?: string;
 }) {
   const prefersReduced = useReducedMotion();
   const isDesktop = useMediaQuery("(min-width: 1024px)");
@@ -214,6 +235,11 @@ export default function System({
           <p className="mt-7 max-w-lg text-base leading-relaxed text-ivory/60 sm:text-lg">
             {system.intro}
           </p>
+          {secondaryIntro && (
+            <p className="mt-4 max-w-lg text-sm leading-relaxed text-ivory/40">
+              {secondaryIntro}
+            </p>
+          )}
         </Reveal>
       </div>
 
