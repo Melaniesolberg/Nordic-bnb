@@ -9,14 +9,13 @@
  * replacing the URL string.
  */
 export const media = {
-  // Real Nordic BnB brand assets — the user's latest icon + wordmark
-  // uploads, run through Higgsfield's dedicated background remover.
-  // (Earlier uploads were screenshots of a transparency-preview UI, which
-  // bakes the checkerboard pattern into real pixels instead of true alpha —
-  // remove_background strips whatever backing is in the source and produces
-  // a genuinely transparent PNG regardless.) Do not swap for another variant.
+  // Real Nordic BnB brand assets. brandLogo is the user's single combined
+  // lockup file (icon + "Nordic bnb" wordmark already laid out together as
+  // one image), run through Higgsfield's background remover to guarantee a
+  // transparent PNG. brandIcon is the icon alone, used standalone for the
+  // favicon and small decorative marks. Do not swap for another variant.
   brandLogo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_144049_ce4c2636-d68f-4882-8f3d-3c8963abd381.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_155755_d3b1c2bb-37b2-4fcc-860f-904cf002174d.png",
   brandIcon:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_144026_4d601721-c7fe-4183-9978-c1ed89f0ef51.png",
   brandMerch:
