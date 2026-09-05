@@ -29,8 +29,8 @@ export default function HomePage({ locale }: { locale: Locale }) {
         <Hero hero={content.hero} formHref={formHref} imageSrc={media.villaAerial} />
         <BeforeAfter
           beforeAfter={content.beforeAfter}
-          beforeSrc={media.listingBefore}
-          afterSrc={media.listingAfter}
+          beforeSrc={media.roomBeforeUnstyled}
+          afterSrc={media.roomAfterStyled}
         />
         <PropertyShowcase
           imageSrc={media.seaView}
@@ -42,9 +42,9 @@ export default function HomePage({ locale }: { locale: Locale }) {
           bgImageSrc={media.nightVilla}
           secondaryIntro={content.operations.intro}
           transformationImages={[
-            media.villaAerial,
+            media.handoverVilla,
             media.stylingDetail,
-            media.listingAfter,
+            media.roomAfterStyled,
             media.guestArrival,
             media.aerialCoast,
           ]}

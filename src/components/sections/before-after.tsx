@@ -15,7 +15,7 @@ export default function BeforeAfter({
   beforeSrc: string;
   afterSrc: string;
 }) {
-  const [pos, setPos] = useState(62);
+  const [pos, setPos] = useState(100);
   const containerRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
 

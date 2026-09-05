@@ -9,14 +9,15 @@
  * replacing the URL string.
  */
 export const media = {
-  // Real Nordic BnB brand assets — the user's own already-transparent PNG
-  // files, uploaded as-is via the Higgsfield media widget (raw uploads, not
-  // AI-regenerated/background-removed derivatives). Use these exact files
-  // everywhere the logo appears; do not swap for a processed variant.
+  // Real Nordic BnB brand assets. The user's raw uploads were losing true
+  // alpha transparency somewhere in the upload pipeline (a solid dark fill
+  // was showing behind the logo in production), so these are the same
+  // files run back through Higgsfield's dedicated background remover to
+  // guarantee a real transparent PNG. Do not swap for another variant.
   brandLogo:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/9ea96015-4dd1-471a-adc7-79cad51dadd2.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_093824_66ae220c-5d2f-4781-bd95-6742f8230ed5.png",
   brandIcon:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/c92634cc-7a16-4c7a-b6a3-3147e2209ce0.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_093822_37579566-9764-41c9-b5e7-4eec69ed52fa.png",
   brandMerch:
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/0b6e253a-5c3d-4549-8b13-bc988759332b.png",
 
@@ -91,4 +92,17 @@ export const media = {
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/44c187ed-db20-4a8b-bf10-124f45313c5e.png",
   realVillaMarbellaCollage:
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/de5a5661-ae99-4028-9e89-e305c9704a6f.png",
+
+  // Matching before/after pair for the top "Samme eiendom" slider — the
+  // "before" was generated from the "after" via reference-guided editing so
+  // it is guaranteed to be the same room/layout, just unstyled and dim.
+  roomAfterStyled:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_094141_2601516f-f042-4a87-9500-b16787052be0.png",
+  roomBeforeUnstyled:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_094239_592a1a1a-c3b8-464f-a0aa-cd4afc3a06a8.png",
+
+  // Handover visual for the process section's first step — customer and
+  // Nordic BnB team member shaking hands / exchanging keys outside a villa.
+  handoverVilla:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_094209_7fbb138f-2980-446b-8ee7-5a84cebb3147.png",
 } as const;
