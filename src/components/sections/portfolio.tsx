@@ -6,16 +6,32 @@ import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import type { PortfolioContent } from "@/content/types";
 
+const OBJECT_POSITION_CLASS = {
+  center: "object-center",
+  left: "object-left",
+  right: "object-right",
+} as const;
+
 function PortfolioSlider({
   beforeSrc,
   afterSrc,
   beforeLabel,
   afterLabel,
+  beforePosition = "center",
+  afterPosition = "center",
 }: {
   beforeSrc: string;
   afterSrc: string;
   beforeLabel: string;
   afterLabel: string;
+  /**
+   * When before/after are crops of a single combined collage image (same
+   * src, "before" on the left half and "after" on the right half), pass
+   * "left"/"right" so object-fit:cover crops to the correct half instead of
+   * centering. Defaults to "center" for two genuinely separate images.
+   */
+  beforePosition?: "center" | "left" | "right";
+  afterPosition?: "center" | "left" | "right";
 }) {
   const [pos, setPos] = useState(62);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -58,7 +74,7 @@ function PortfolioSlider({
         alt={beforeLabel}
         fill
         sizes="(min-width: 1024px) 33vw, 100vw"
-        className="pointer-events-none object-cover"
+        className={`pointer-events-none object-cover ${OBJECT_POSITION_CLASS[beforePosition]}`}
         draggable={false}
       />
       <div
@@ -70,7 +86,7 @@ function PortfolioSlider({
           alt={afterLabel}
           fill
           sizes="(min-width: 1024px) 33vw, 100vw"
-          className="object-cover"
+          className={`object-cover ${OBJECT_POSITION_CLASS[afterPosition]}`}
           draggable={false}
         />
       </div>
@@ -105,7 +121,12 @@ export default function Portfolio({
   images,
 }: {
   portfolio: PortfolioContent;
-  images: { before: string; after: string }[];
+  images: {
+    before: string;
+    after: string;
+    beforePosition?: "center" | "left" | "right";
+    afterPosition?: "center" | "left" | "right";
+  }[];
 }) {
   return (
     <section id="portfolio" className="relative bg-ivory-soft py-24 sm:py-32 lg:py-40">
@@ -133,6 +154,8 @@ export default function Portfolio({
                 afterSrc={images[i].after}
                 beforeLabel={portfolio.beforeLabel}
                 afterLabel={portfolio.afterLabel}
+                beforePosition={images[i].beforePosition}
+                afterPosition={images[i].afterPosition}
               />
               <div className="mt-5 flex items-start justify-between gap-4">
                 <div>

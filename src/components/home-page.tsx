@@ -18,28 +18,9 @@ import { getContent } from "@/content";
 import { media } from "@/content/media";
 import { localeHref, type Locale } from "@/i18n/config";
 
-/**
- * The 7-step operational cycle re-orders the Operations content (still
- * authored once, in content.operations.steps) into a loop starting at
- * "Property inspected" rather than "Booking confirmed" — see original
- * indices: 0 booking confirmed, 1 guest prepared, 2 cleaner scheduled,
- * 3 property inspected, 4 guest arrives, 5 review collected, 6 performance
- * feeds pricing.
- */
-const CYCLE_ORDER = [3, 4, 5, 6, 0, 1, 2];
-
 export default function HomePage({ locale }: { locale: Locale }) {
   const content = getContent(locale);
   const formHref = `${localeHref(locale, "/")}#contact-form`;
-
-  const processSteps = CYCLE_ORDER.map((stepIndex, i) => {
-    const step = content.operations.steps[stepIndex];
-    return {
-      code: String(i + 1).padStart(2, "0"),
-      title: step.title,
-      description: step.detail,
-    };
-  });
 
   return (
     <>
@@ -57,26 +38,39 @@ export default function HomePage({ locale }: { locale: Locale }) {
           headline={content.showcase1.heading}
         />
         <System
-          system={{ ...content.system, pillars: processSteps }}
+          system={content.system}
           bgImageSrc={media.nightVilla}
           secondaryIntro={content.operations.intro}
           transformationImages={[
-            media.detailShot,
-            media.guestArrival,
-            media.seaView,
-            media.aerialCoast,
-            media.interiorLiving,
+            media.villaAerial,
             media.stylingDetail,
-            media.cleaningTeam,
+            media.listingAfter,
+            media.guestArrival,
+            media.aerialCoast,
           ]}
         />
         <SectionDivider tone="light" />
         <Portfolio
           portfolio={content.portfolio}
           images={[
-            { before: media.listingBefore, after: media.listingAfter },
-            { before: media.villaBefore, after: media.villaAfter },
-            { before: media.houseBefore, after: media.houseAfter },
+            {
+              before: media.realApartmentFuengirolaCollage,
+              after: media.realApartmentFuengirolaCollage,
+              beforePosition: "left",
+              afterPosition: "right",
+            },
+            {
+              before: media.realVillaMarbellaCollage,
+              after: media.realVillaMarbellaCollage,
+              beforePosition: "left",
+              afterPosition: "right",
+            },
+            {
+              before: media.realHouseMijasCollage,
+              after: media.realHouseMijasCollage,
+              beforePosition: "left",
+              afterPosition: "right",
+            },
           ]}
         />
         <Testimonials testimonials={content.testimonials} />

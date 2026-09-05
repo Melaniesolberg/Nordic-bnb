@@ -33,43 +33,32 @@ export const en: SiteContent = {
     eyebrow: "How it works",
     heading: "From empty room to confirmed booking.",
     intro:
-      "The process that turns a listing into a stream of returning guests — scroll to follow it from start to finish.",
+      "The process that turns a listing into a stream of returning guests.",
     pillars: [
       {
-        code: "01",
-        title: "Style",
-        description:
-          "A stylist arranges furniture, linen and lighting until the space feels like a home, not a rental.",
+        code: "",
+        title: "We take over the property",
+        description: "From first contact to full responsibility, with zero stress for you.",
       },
       {
-        code: "02",
-        title: "Clean",
-        description:
-          "A professional clean, top to bottom, before every single guest arrives.",
+        code: "",
+        title: "We inspect and upgrade the styling",
+        description: "Furniture, textiles and details adjusted to impress guests.",
       },
       {
-        code: "03",
-        title: "Photograph",
-        description:
-          "Professional photography captures the property at its best, ready for every channel.",
+        code: "",
+        title: "We photograph and launch the listing",
+        description: "Professional photos, live on every channel the same week.",
       },
       {
-        code: "04",
-        title: "Sync",
-        description:
-          "The listing goes live instantly across Airbnb, Booking.com and every channel that matters.",
+        code: "",
+        title: "We handle bookings and guests",
+        description: "From the first message to key handover — we take care of it all.",
       },
       {
-        code: "05",
-        title: "Arrive",
-        description:
-          "The guest picks up the keys — or checks in themselves — and settles in within minutes.",
-      },
-      {
-        code: "06",
-        title: "Book",
-        description:
-          "The stay wraps up, the review comes in, and the next booking is already confirmed.",
+        code: "",
+        title: "We report and improve continuously",
+        description: "You follow the progress, we fine-tune pricing and presentation.",
       },
     ],
   },
@@ -297,7 +286,7 @@ export const en: SiteContent = {
     founderName: "Petter Solberg",
     founderRole: "Founder, Nordic BnB",
     founderQuote:
-      "Owners shouldn't have to choose between a beautiful property and a well-run one. Our job is to make sure they never have to.",
+      "We don't just run a listing — we build a property that actually converts. We know the Costa del Sol market, and we know the guests, especially the Scandinavians who book here.",
     founder2Name: "Melanie Solberg",
     founder2Role: "Co-Founder, Nordic BnB",
     founder2Quote:
@@ -309,19 +298,19 @@ export const en: SiteContent = {
     items: [
       {
         quote:
-          "We'd owned the apartment for two years and always struggled to fill it through winter. Nordic BnB took over in March, and by August we were fully booked through October. Best part is I get one simple report each month instead of chasing answers myself.",
+          "Struggled to fill the apartment in winter. Nordic BnB took over in March, and by August we were fully booked through October. Now I get one report a month instead of chasing answers myself.",
         name: "Kristian H.",
         location: "Marbella",
       },
       {
         quote:
-          "I live in Stockholm and haven't seen the apartment in person since Nordic BnB took over the styling and cleaning. I still know exactly what's happening every week from their reports, and revenue is up by a comfortable margin since last summer.",
+          "Live in Stockholm, haven't seen the apartment in over a year. Nordic BnB handles everything, and revenue is up.",
         name: "Annika L.",
         location: "Fuengirola",
       },
       {
         quote:
-          "I managed the apartment myself for three years, changing sheets between guests. Since Nordic BnB took over in January I haven't had to worry about a thing — not one complaint, and my phone doesn't buzz with WhatsApp messages at midnight anymore.",
+          "Ran it myself for three years. Now I don't have to worry — no complaints, and my phone doesn't ring at midnight anymore.",
         name: "Carlos M.",
         location: "Benalmádena",
       },

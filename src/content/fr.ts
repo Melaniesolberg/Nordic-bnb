@@ -33,43 +33,32 @@ export const fr: SiteContent = {
     eyebrow: "Comment nous travaillons",
     heading: "D'une pièce vide à une réservation confirmée.",
     intro:
-      "Le processus qui transforme une annonce en un flux de voyageurs fidèles — défilez pour le suivre du début à la fin.",
+      "Le processus qui transforme une annonce en un flux de voyageurs fidèles.",
     pillars: [
       {
-        code: "01",
-        title: "Mise en scène",
-        description:
-          "Un décorateur agence meubles, linge et éclairage jusqu'à ce que l'espace ressemble à un chez-soi, pas à une location.",
+        code: "",
+        title: "Nous prenons en charge le bien",
+        description: "Du premier contact à la pleine responsabilité, sans aucun stress pour vous.",
       },
       {
-        code: "02",
-        title: "Ménage",
-        description:
-          "Un ménage professionnel, de fond en comble, avant l'arrivée de chaque voyageur.",
+        code: "",
+        title: "Nous inspectons et améliorons la mise en scène",
+        description: "Meubles, textiles et détails ajustés pour impressionner les voyageurs.",
       },
       {
-        code: "03",
-        title: "Photographie",
-        description:
-          "La photographie professionnelle capture le bien sous son meilleur jour, prêt pour chaque canal.",
+        code: "",
+        title: "Nous photographions et publions l'annonce",
+        description: "Photos professionnelles, en ligne sur tous les canaux la même semaine.",
       },
       {
-        code: "04",
-        title: "Synchronisation",
-        description:
-          "L'annonce est publiée instantanément sur Airbnb, Booking.com et tous les canaux pertinents.",
+        code: "",
+        title: "Nous gérons les réservations et les voyageurs",
+        description: "Du premier message à la remise des clés — nous nous occupons de tout.",
       },
       {
-        code: "05",
-        title: "Arrivée",
-        description:
-          "Le voyageur récupère les clés — ou s'enregistre lui-même — et s'installe en quelques minutes.",
-      },
-      {
-        code: "06",
-        title: "Réservation",
-        description:
-          "Le séjour se termine, l'avis arrive, et la prochaine réservation est déjà confirmée.",
+        code: "",
+        title: "Nous faisons un rapport et améliorons en continu",
+        description: "Vous suivez les progrès, nous ajustons le prix et la présentation.",
       },
     ],
   },
@@ -297,7 +286,7 @@ export const fr: SiteContent = {
     founderName: "Petter Solberg",
     founderRole: "Fondateur, Nordic BnB",
     founderQuote:
-      "Les propriétaires ne devraient pas avoir à choisir entre un bien magnifique et un bien bien géré. Notre travail est de veiller à ce qu'ils n'aient jamais à le faire.",
+      "Nous ne gérons pas seulement une annonce — nous construisons un bien qui convertit vraiment. Nous connaissons le marché de la Costa del Sol, et nous connaissons les voyageurs, en particulier les Scandinaves qui réservent ici.",
     founder2Name: "Melanie Solberg",
     founder2Role: "Co-fondatrice, Nordic BnB",
     founder2Quote:
@@ -309,19 +298,19 @@ export const fr: SiteContent = {
     items: [
       {
         quote:
-          "Nous possédions l'appartement depuis deux ans et avions toujours du mal à le remplir en hiver. Nordic BnB a pris le relais en mars, et dès août nous étions complets jusqu'en octobre. Le mieux, c'est que je reçois un rapport simple chaque mois au lieu de devoir courir après les réponses moi-même.",
+          "Difficile de remplir l'appartement en hiver. Nordic BnB a pris le relais en mars, et dès août nous étions complets jusqu'en octobre. Je reçois maintenant un rapport par mois au lieu de courir après les réponses moi-même.",
         name: "Kristian H.",
         location: "Marbella",
       },
       {
         quote:
-          "Je vis à Stockholm et je n'ai pas vu l'appartement en personne depuis que Nordic BnB s'occupe de la mise en scène et du ménage. Je sais pourtant exactement ce qui se passe chaque semaine grâce à leurs rapports, et les revenus ont augmenté avec une marge confortable depuis l'été dernier.",
+          "Je vis à Stockholm, je n'ai pas vu l'appartement depuis plus d'un an. Nordic BnB s'occupe de tout, et les revenus ont augmenté.",
         name: "Annika L.",
         location: "Fuengirola",
       },
       {
         quote:
-          "J'ai géré l'appartement moi-même pendant trois ans, changeant les draps entre chaque voyageur. Depuis que Nordic BnB a pris le relais en janvier, je n'ai plus eu à me soucier de rien — pas une seule plainte, et mon téléphone ne vibre plus de messages WhatsApp à minuit.",
+          "Je le gérais moi-même depuis trois ans. Maintenant je n'ai plus à m'inquiéter — aucune plainte, et le téléphone ne sonne plus au milieu de la nuit.",
         name: "Carlos M.",
         location: "Benalmádena",
       },

@@ -33,43 +33,32 @@ export const fi: SiteContent = {
     eyebrow: "Näin toimimme",
     heading: "Tyhjästä huoneesta vahvistettuun varaukseen.",
     intro:
-      "Prosessi, joka muuttaa ilmoituksen palaavien vieraiden virraksi — vieritä seurataksesi sitä alusta loppuun.",
+      "Prosessi, joka muuttaa ilmoituksen palaavien vieraiden virraksi.",
     pillars: [
       {
-        code: "01",
-        title: "Tyylittely",
-        description:
-          "Tyylittelijä järjestää huonekalut, tekstiilit ja valaistuksen, kunnes tila tuntuu kodilta, ei vuokrakohteelta.",
+        code: "",
+        title: "Otamme kiinteistön vastuullemme",
+        description: "Ensikontaktista täyteen vastuuseen, ilman stressiä sinulle.",
       },
       {
-        code: "02",
-        title: "Siivous",
-        description:
-          "Ammattimainen siivous alusta loppuun ennen jokaisen vieraan saapumista.",
+        code: "",
+        title: "Tarkastamme ja päivitämme tyylittelyn",
+        description: "Huonekalut, tekstiilit ja yksityiskohdat säädetty vieraita miellyttäviksi.",
       },
       {
-        code: "03",
-        title: "Kuvaus",
-        description:
-          "Ammattimainen valokuvaus vangitsee kiinteistön parhaimmillaan, valmiina jokaiselle kanavalle.",
+        code: "",
+        title: "Kuvaamme ja julkaisemme ilmoituksen",
+        description: "Ammattimaiset kuvat, live kaikilla kanavilla samalla viikolla.",
       },
       {
-        code: "04",
-        title: "Synkronointi",
-        description:
-          "Ilmoitus julkaistaan välittömästi Airbnbssa, Booking.comissa ja kaikilla merkityksellisillä kanavilla.",
+        code: "",
+        title: "Hoidamme varaukset ja vieraat",
+        description: "Ensimmäisestä viestistä avainten luovutukseen — hoidamme kaiken.",
       },
       {
-        code: "05",
-        title: "Saapuminen",
-        description:
-          "Vieras hakee avaimet — tai kirjautuu sisään itse — ja asettuu taloksi muutamassa minuutissa.",
-      },
-      {
-        code: "06",
-        title: "Varaus",
-        description:
-          "Oleskelu päättyy, arvostelu saapuu, ja seuraava varaus on jo vahvistettu.",
+        code: "",
+        title: "Raportoimme ja parannamme jatkuvasti",
+        description: "Sinä seuraat kehitystä, me hienosäädämme hintaa ja esittelyä.",
       },
     ],
   },
@@ -297,7 +286,7 @@ export const fi: SiteContent = {
     founderName: "Petter Solberg",
     founderRole: "Perustaja, Nordic BnB",
     founderQuote:
-      "Omistajien ei pitäisi joutua valitsemaan kauniin ja hyvin hoidetun kiinteistön välillä. Meidän tehtävämme on varmistaa, ettei heidän koskaan tarvitse.",
+      "Emme vain ylläpidä ilmoitusta — rakennamme kiinteistön, joka oikeasti konvertoi. Tunnemme Costa del Solin markkinat, ja tunnemme vieraat, erityisesti pohjoismaiset vieraat, jotka varaavat täältä.",
     founder2Name: "Melanie Solberg",
     founder2Role: "Perustajakumppani, Nordic BnB",
     founder2Quote:
@@ -309,19 +298,19 @@ export const fi: SiteContent = {
     items: [
       {
         quote:
-          "Olimme omistaneet asunnon kaksi vuotta ja meillä oli aina vaikeuksia saada se täyteen talvella. Nordic BnB otti vastuun maaliskuussa, ja elokuuhun mennessä olimme täyteen varattuja lokakuulle asti. Parasta on, että saan yhden yksinkertaisen raportin joka kuukausi sen sijaan, että jahtaisin vastauksia itse.",
+          "Asunnon täyttäminen talvella oli vaikeaa. Nordic BnB otti vastuun maaliskuussa, ja elokuuhun mennessä olimme täyteen varattuja lokakuulle asti. Saan nyt yhden raportin kuukaudessa sen sijaan, että jahtaisin vastauksia itse.",
         name: "Kristian H.",
         location: "Marbella",
       },
       {
         quote:
-          "Asun Tukholmassa enkä ole nähnyt asuntoa paikan päällä sen jälkeen, kun Nordic BnB otti tyylittelyn ja siivouksen hoitaakseen. Silti tiedän tarkalleen, mitä joka viikko tapahtuu heidän raporttiensa ansiosta, ja tuotto on noussut mukavasti viime kesästä lähtien.",
+          "Asun Tukholmassa, en ole nähnyt asuntoa yli vuoteen. Nordic BnB hoitaa kaiken, ja tuotto on noussut.",
         name: "Annika L.",
         location: "Fuengirola",
       },
       {
         quote:
-          "Hoidin asuntoa itse kolme vuotta ja vaihdoin lakanat vieraiden välillä. Sen jälkeen kun Nordic BnB otti vastuun tammikuussa, minun ei ole tarvinnut huolehtia mistään — ei yhtään valitusta, eikä puhelimeni enää pirise WhatsApp-viesteistä keskellä yötä.",
+          "Hoidin sitä itse kolme vuotta. Nyt minun ei tarvitse huolehtia — ei valituksia, eikä puhelin enää soi keskellä yötä.",
         name: "Carlos M.",
         location: "Benalmádena",
       },

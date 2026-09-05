@@ -33,43 +33,32 @@ export const da: SiteContent = {
     eyebrow: "Sådan arbejder vi",
     heading: "Fra tomt rum til bekræftet booking.",
     intro:
-      "Processen der gør en annonce til en strøm af gæster, der kommer igen — scroll for at følge den fra start til slut.",
+      "Processen der gør en annonce til en strøm af gæster, der kommer igen.",
     pillars: [
       {
-        code: "01",
-        title: "Styling",
-        description:
-          "En stylist indretter rummet med tekstiler og lys, til det føles som et hjem, ikke en udlejningsenhed.",
+        code: "",
+        title: "Vi overtager ejendommen",
+        description: "Fra første kontakt til fuldt ansvar, uden stress for dig.",
       },
       {
-        code: "02",
-        title: "Rengøring",
-        description:
-          "Professionel rengøring fra top til bund, før hver eneste gæst ankommer.",
+        code: "",
+        title: "Vi inspicerer og opgraderer stylingen",
+        description: "Møbler, tekstiler og detaljer justeret for at imponere gæster.",
       },
       {
-        code: "03",
-        title: "Fotografering",
-        description:
-          "Professionel fotografering fanger ejendommen i sit bedste lys, klar til hver kanal.",
+        code: "",
+        title: "Vi fotograferer og lancerer annoncen",
+        description: "Professionelle billeder, live på alle kanaler samme uge.",
       },
       {
-        code: "04",
-        title: "Synkronisering",
-        description:
-          "Annoncen offentliggøres øjeblikkeligt på Airbnb, Booking.com og alle kanaler der betyder noget.",
+        code: "",
+        title: "Vi håndterer bookinger og gæster",
+        description: "Fra første besked til nøgleoverdragelse — vi tager os af det hele.",
       },
       {
-        code: "05",
-        title: "Indtjekning",
-        description:
-          "Gæsten henter nøglerne — eller tjekker selv ind — og er på plads i løbet af få minutter.",
-      },
-      {
-        code: "06",
-        title: "Booking",
-        description:
-          "Opholdet afsluttes, anmeldelsen kommer ind, og den næste booking er allerede bekræftet.",
+        code: "",
+        title: "Vi rapporterer og forbedrer løbende",
+        description: "Du følger udviklingen, vi finjusterer pris og præsentation.",
       },
     ],
   },
@@ -297,7 +286,7 @@ export const da: SiteContent = {
     founderName: "Petter Solberg",
     founderRole: "Grundlægger, Nordic BnB",
     founderQuote:
-      "Ejere bør ikke skulle vælge mellem en smuk ejendom og en velholdt en. Vores job er at sikre, at de aldrig behøver det.",
+      "Vi driver ikke bare en annonce — vi bygger en ejendom, der faktisk konverterer. Vi kender markedet på Costa del Sol, og vi kender gæsterne, især de skandinaviske gæster, der booker her.",
     founder2Name: "Melanie Solberg",
     founder2Role: "Medstifter, Nordic BnB",
     founder2Quote:
@@ -309,19 +298,19 @@ export const da: SiteContent = {
     items: [
       {
         quote:
-          "Vi havde ejet lejligheden i to år og havde altid svært ved at fylde den om vinteren. Nordic BnB overtog i marts, og allerede i august var vi fuldt booket helt frem til oktober. Det bedste er, at jeg får én enkel rapport hver måned i stedet for selv at skulle jagte svar.",
+          "Havde svært ved at fylde lejligheden om vinteren. Nordic BnB overtog i marts, og i august var vi fuldt booket ud oktober. Får én rapport om måneden nu i stedet for selv at jagte svar.",
         name: "Kristian H.",
         location: "Marbella",
       },
       {
         quote:
-          "Jeg bor i Stockholm og har ikke set lejligheden fysisk, siden Nordic BnB overtog styling og rengøring. Alligevel ved jeg præcis, hvad der sker hver uge gennem deres rapporter, og indtægten er steget med en pæn margin siden sidste sommer.",
+          "Bor i Stockholm, har ikke set lejligheden i over et år. Nordic BnB klarer det hele, og indtægten er steget.",
         name: "Annika L.",
         location: "Fuengirola",
       },
       {
         quote:
-          "Jeg drev selv lejligheden i tre år og skiftede lagner mellem gæsterne. Siden Nordic BnB overtog i januar har jeg ikke skullet bekymre mig om noget — ikke én klage, og min telefon summer ikke længere af WhatsApp-beskeder ved midnat.",
+          "Drev det selv i tre år. Nu slipper jeg for at bekymre mig — ingen klager, og telefonen ringer ikke længere midt om natten.",
         name: "Carlos M.",
         location: "Benalmádena",
       },

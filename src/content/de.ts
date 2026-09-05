@@ -33,43 +33,32 @@ export const de: SiteContent = {
     eyebrow: "So arbeiten wir",
     heading: "Vom leeren Raum zur bestätigten Buchung.",
     intro:
-      "Der Prozess, der aus einem Inserat einen stetigen Strom wiederkehrender Gäste macht — scrollen Sie, um ihn von Anfang bis Ende zu verfolgen.",
+      "Der Prozess, der aus einem Inserat einen stetigen Strom wiederkehrender Gäste macht.",
     pillars: [
       {
-        code: "01",
-        title: "Styling",
-        description:
-          "Eine Stylistin arrangiert Möbel, Textilien und Licht, bis sich der Raum wie ein Zuhause anfühlt, nicht wie eine Mietwohnung.",
+        code: "",
+        title: "Wir übernehmen die Immobilie",
+        description: "Vom ersten Kontakt bis zur vollen Verantwortung, ohne Stress für Sie.",
       },
       {
-        code: "02",
-        title: "Reinigung",
-        description:
-          "Eine professionelle Reinigung von oben bis unten, vor jedem einzelnen Gast.",
+        code: "",
+        title: "Wir prüfen und verbessern das Styling",
+        description: "Möbel, Textilien und Details abgestimmt, um Gäste zu beeindrucken.",
       },
       {
-        code: "03",
-        title: "Fotografie",
-        description:
-          "Professionelle Fotografie zeigt die Immobilie von ihrer besten Seite, bereit für jeden Kanal.",
+        code: "",
+        title: "Wir fotografieren und veröffentlichen das Inserat",
+        description: "Professionelle Fotos, live auf allen Kanälen in derselben Woche.",
       },
       {
-        code: "04",
-        title: "Synchronisierung",
-        description:
-          "Das Inserat geht sofort auf Airbnb, Booking.com und allen relevanten Kanälen live.",
+        code: "",
+        title: "Wir kümmern uns um Buchungen und Gäste",
+        description: "Von der ersten Nachricht bis zur Schlüsselübergabe — wir übernehmen alles.",
       },
       {
-        code: "05",
-        title: "Ankunft",
-        description:
-          "Der Gast holt den Schlüssel ab — oder checkt selbst ein — und ist innerhalb weniger Minuten eingerichtet.",
-      },
-      {
-        code: "06",
-        title: "Buchung",
-        description:
-          "Der Aufenthalt endet, die Bewertung kommt herein, und die nächste Buchung ist bereits bestätigt.",
+        code: "",
+        title: "Wir berichten und verbessern kontinuierlich",
+        description: "Sie verfolgen den Fortschritt, wir feinjustieren Preis und Präsentation.",
       },
     ],
   },
@@ -297,7 +286,7 @@ export const de: SiteContent = {
     founderName: "Petter Solberg",
     founderRole: "Gründer, Nordic BnB",
     founderQuote:
-      "Eigentümer sollten nicht zwischen einer schönen und einer gut geführten Immobilie wählen müssen. Unsere Aufgabe ist es sicherzustellen, dass sie das nie müssen.",
+      "Wir betreiben nicht einfach nur ein Inserat — wir bauen eine Immobilie, die tatsächlich konvertiert. Wir kennen den Markt an der Costa del Sol, und wir kennen die Gäste, besonders die skandinavischen Gäste, die hier buchen.",
     founder2Name: "Melanie Solberg",
     founder2Role: "Mitgründerin, Nordic BnB",
     founder2Quote:
@@ -309,19 +298,19 @@ export const de: SiteContent = {
     items: [
       {
         quote:
-          "Wir besaßen die Wohnung seit zwei Jahren und hatten immer Mühe, sie im Winter zu vermieten. Nordic BnB übernahm im März, und bis August waren wir bis Oktober komplett ausgebucht. Das Beste ist, dass ich jeden Monat einen einfachen Bericht erhalte, statt selbst Antworten hinterherzujagen.",
+          "Hatte im Winter Mühe, die Wohnung zu vermieten. Nordic BnB übernahm im März, und bis August waren wir bis Oktober ausgebucht. Jetzt bekomme ich einen Bericht im Monat, statt selbst Antworten hinterherzujagen.",
         name: "Kristian H.",
         location: "Marbella",
       },
       {
         quote:
-          "Ich lebe in Stockholm und habe die Wohnung nicht mehr persönlich gesehen, seit Nordic BnB Styling und Reinigung übernommen hat. Trotzdem weiß ich dank ihrer Berichte genau, was jede Woche passiert, und die Einnahmen sind seit letztem Sommer spürbar gestiegen.",
+          "Wohne in Stockholm, habe die Wohnung seit über einem Jahr nicht gesehen. Nordic BnB kümmert sich um alles, und die Einnahmen sind gestiegen.",
         name: "Annika L.",
         location: "Fuengirola",
       },
       {
         quote:
-          "Ich habe die Wohnung drei Jahre lang selbst verwaltet und zwischen den Gästen die Bettwäsche gewechselt. Seit Nordic BnB im Januar übernommen hat, musste ich mich um nichts mehr kümmern — keine einzige Beschwerde, und mein Handy summt mitten in der Nacht nicht mehr wegen WhatsApp-Nachrichten.",
+          "Habe es drei Jahre selbst gemacht. Jetzt muss ich mir keine Sorgen mehr machen — keine Beschwerden, und das Telefon klingelt nicht mehr mitten in der Nacht.",
         name: "Carlos M.",
         location: "Benalmádena",
       },

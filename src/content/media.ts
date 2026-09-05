@@ -9,13 +9,14 @@
  * replacing the URL string.
  */
 export const media = {
-  // Real Nordic BnB brand assets, uploaded by the user via the Higgsfield
-  // media widget. brandLogo/brandIcon are background-removed (transparent
-  // PNG) versions of the original uploads — do not regenerate.
+  // Real Nordic BnB brand assets — the user's own already-transparent PNG
+  // files, uploaded as-is via the Higgsfield media widget (raw uploads, not
+  // AI-regenerated/background-removed derivatives). Use these exact files
+  // everywhere the logo appears; do not swap for a processed variant.
   brandLogo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155119_a3142800-c62d-4feb-a38c-5769e028866d.png",
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/9ea96015-4dd1-471a-adc7-79cad51dadd2.png",
   brandIcon:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155250_8e06505d-88fc-4a67-a2b6-0ebefa090888.png",
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/c92634cc-7a16-4c7a-b6a3-3147e2209ce0.png",
   brandMerch:
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/0b6e253a-5c3d-4549-8b13-bc988759332b.png",
 
@@ -79,4 +80,15 @@ export const media = {
   // directly — used as-is in the About section.
   founderPetter:
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/d809abb8-d01d-40d5-bca7-2e339ee0255e.png",
+
+  // Real before/after property photography, uploaded by the user directly.
+  // Each file is a single collage image with the "before" half on the left
+  // and the "after" half on the right — rendered via object-position crop
+  // (see Portfolio component) rather than as two separate images.
+  realApartmentFuengirolaCollage:
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/6ba95803-1cd9-4813-a13e-300aca84c83a.png",
+  realHouseMijasCollage:
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/44c187ed-db20-4a8b-bf10-124f45313c5e.png",
+  realVillaMarbellaCollage:
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/de5a5661-ae99-4028-9e89-e305c9704a6f.png",
 } as const;
