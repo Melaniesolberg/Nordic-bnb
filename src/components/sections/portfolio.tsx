@@ -6,34 +6,51 @@ import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import type { PortfolioContent } from "@/content/types";
 
-const OBJECT_POSITION_CLASS = {
-  center: "object-center",
-  left: "object-left",
-  right: "object-right",
-} as const;
+/**
+ * Renders exactly one half (left or right) of a two-panel before/after
+ * collage, filling its container with no trace of the other half. Doubling
+ * the rendered width and clipping via the parent's overflow:hidden is
+ * robust to any source aspect ratio — unlike object-position, it can never
+ * blend or bleed the two panels together.
+ */
+function CollageHalf({
+  src,
+  alt,
+  half,
+  priority,
+}: {
+  src: string;
+  alt: string;
+  half: "before" | "after";
+  priority?: boolean;
+}) {
+  return (
+    <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-y-0 w-[200%]" style={{ left: half === "before" ? "0%" : "-100%" }}>
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(min-width: 1024px) 66vw, 200vw"
+          className="pointer-events-none object-cover"
+          draggable={false}
+          priority={priority}
+        />
+      </div>
+    </div>
+  );
+}
 
 function PortfolioSlider({
-  beforeSrc,
-  afterSrc,
+  src,
   beforeLabel,
   afterLabel,
-  beforePosition = "center",
-  afterPosition = "center",
 }: {
-  beforeSrc: string;
-  afterSrc: string;
+  src: string;
   beforeLabel: string;
   afterLabel: string;
-  /**
-   * When before/after are crops of a single combined collage image (same
-   * src, "before" on the left half and "after" on the right half), pass
-   * "left"/"right" so object-fit:cover crops to the correct half instead of
-   * centering. Defaults to "center" for two genuinely separate images.
-   */
-  beforePosition?: "center" | "left" | "right";
-  afterPosition?: "center" | "left" | "right";
 }) {
-  const [pos, setPos] = useState(62);
+  const [pos, setPos] = useState(100);
   const containerRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
 
@@ -69,26 +86,12 @@ function PortfolioSlider({
         if (e.key === "ArrowRight") setPos((p) => Math.min(100, p + 4));
       }}
     >
-      <Image
-        src={beforeSrc}
-        alt={beforeLabel}
-        fill
-        sizes="(min-width: 1024px) 33vw, 100vw"
-        className={`pointer-events-none object-cover ${OBJECT_POSITION_CLASS[beforePosition]}`}
-        draggable={false}
-      />
+      <CollageHalf src={src} alt={beforeLabel} half="before" />
       <div
         className="pointer-events-none absolute inset-0 overflow-hidden"
         style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
       >
-        <Image
-          src={afterSrc}
-          alt={afterLabel}
-          fill
-          sizes="(min-width: 1024px) 33vw, 100vw"
-          className={`object-cover ${OBJECT_POSITION_CLASS[afterPosition]}`}
-          draggable={false}
-        />
+        <CollageHalf src={src} alt={afterLabel} half="after" priority />
       </div>
 
       <div
@@ -121,12 +124,7 @@ export default function Portfolio({
   images,
 }: {
   portfolio: PortfolioContent;
-  images: {
-    before: string;
-    after: string;
-    beforePosition?: "center" | "left" | "right";
-    afterPosition?: "center" | "left" | "right";
-  }[];
+  images: string[];
 }) {
   return (
     <section id="portfolio" className="relative bg-ivory-soft py-24 sm:py-32 lg:py-40">
@@ -150,12 +148,9 @@ export default function Portfolio({
           {portfolio.properties.map((property, i) => (
             <Reveal key={property.name} delay={0.08 * i}>
               <PortfolioSlider
-                beforeSrc={images[i].before}
-                afterSrc={images[i].after}
+                src={images[i]}
                 beforeLabel={portfolio.beforeLabel}
                 afterLabel={portfolio.afterLabel}
-                beforePosition={images[i].beforePosition}
-                afterPosition={images[i].afterPosition}
               />
               <div className="mt-5 flex items-start justify-between gap-4">
                 <div>

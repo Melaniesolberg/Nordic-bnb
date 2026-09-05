@@ -9,15 +9,16 @@
  * replacing the URL string.
  */
 export const media = {
-  // Real Nordic BnB brand assets. The user's raw uploads were losing true
-  // alpha transparency somewhere in the upload pipeline (a solid dark fill
-  // was showing behind the logo in production), so these are the same
-  // files run back through Higgsfield's dedicated background remover to
-  // guarantee a real transparent PNG. Do not swap for another variant.
+  // Real Nordic BnB brand assets — the user's latest icon + wordmark
+  // uploads, run through Higgsfield's dedicated background remover.
+  // (Earlier uploads were screenshots of a transparency-preview UI, which
+  // bakes the checkerboard pattern into real pixels instead of true alpha —
+  // remove_background strips whatever backing is in the source and produces
+  // a genuinely transparent PNG regardless.) Do not swap for another variant.
   brandLogo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_093824_66ae220c-5d2f-4781-bd95-6742f8230ed5.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_144049_ce4c2636-d68f-4882-8f3d-3c8963abd381.png",
   brandIcon:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_093822_37579566-9764-41c9-b5e7-4eec69ed52fa.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_144026_4d601721-c7fe-4183-9978-c1ed89f0ef51.png",
   brandMerch:
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/0b6e253a-5c3d-4549-8b13-bc988759332b.png",
 
@@ -84,14 +85,16 @@ export const media = {
 
   // Real before/after property photography, uploaded by the user directly.
   // Each file is a single collage image with the "before" half on the left
-  // and the "after" half on the right — rendered via object-position crop
-  // (see Portfolio component) rather than as two separate images.
+  // and the "after" half on the right — rendered as a real drag-to-reveal
+  // slider (see PortfolioSlider in the Portfolio component), which crops
+  // each half via a doubled-width clip rather than object-position so the
+  // two halves never blend together at rest.
   realApartmentFuengirolaCollage:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/6ba95803-1cd9-4813-a13e-300aca84c83a.png",
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/99861524-ba90-4bfc-ad2f-f7d894a803c4.png",
   realHouseMijasCollage:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/44c187ed-db20-4a8b-bf10-124f45313c5e.png",
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/b4167031-8506-4a4a-b763-37fe7975a2bf.png",
   realVillaMarbellaCollage:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/de5a5661-ae99-4028-9e89-e305c9704a6f.png",
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/a1fcdf64-b1b0-44da-9e6d-d2fc8467149a.png",
 
   // Matching before/after pair for the top "Samme eiendom" slider — the
   // "before" was generated from the "after" via reference-guided editing so

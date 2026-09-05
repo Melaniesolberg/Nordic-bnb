@@ -52,26 +52,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
         <SectionDivider tone="light" />
         <Portfolio
           portfolio={content.portfolio}
-          images={[
-            {
-              before: media.realApartmentFuengirolaCollage,
-              after: media.realApartmentFuengirolaCollage,
-              beforePosition: "left",
-              afterPosition: "right",
-            },
-            {
-              before: media.realVillaMarbellaCollage,
-              after: media.realVillaMarbellaCollage,
-              beforePosition: "left",
-              afterPosition: "right",
-            },
-            {
-              before: media.realHouseMijasCollage,
-              after: media.realHouseMijasCollage,
-              beforePosition: "left",
-              afterPosition: "right",
-            },
-          ]}
+          images={[media.realApartmentFuengirolaCollage, media.realVillaMarbellaCollage, media.realHouseMijasCollage]}
         />
         <Testimonials testimonials={content.testimonials} />
         <PropertyShowcase
