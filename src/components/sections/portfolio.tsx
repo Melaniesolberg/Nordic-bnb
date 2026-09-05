@@ -50,7 +50,7 @@ function PortfolioSlider({
   beforeLabel: string;
   afterLabel: string;
 }) {
-  const [pos, setPos] = useState(100);
+  const [pos, setPos] = useState(90);
   const containerRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
 

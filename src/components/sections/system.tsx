@@ -81,10 +81,10 @@ function ProcessVisual({
           key={src}
           className="absolute inset-0"
           initial={false}
-          animate={{ opacity: i === active ? 1 : 0, scale: i === active ? 1.06 : 1 }}
+          animate={{ opacity: i === active ? 1 : 0, scale: i === active ? 1.02 : 1 }}
           transition={{
-            opacity: { duration: 0.55, ease: [0.16, 1, 0.3, 1] },
-            scale: { duration: 1.7, ease: "easeOut" },
+            opacity: { duration: 0.35, ease: [0.16, 1, 0.3, 1] },
+            scale: { duration: 1.1, ease: "easeOut" },
           }}
         >
           <Image
@@ -227,7 +227,7 @@ export default function System({
       </div>
 
       {usePinned ? (
-        <div ref={sectionRef} style={{ height: `${system.pillars.length * 65}vh` }} className="mt-16">
+        <div ref={sectionRef} style={{ height: `${system.pillars.length * 42}vh` }} className="mt-16">
           <div ref={pinRef} className="relative h-screen w-full overflow-hidden">
             <div className="mx-auto grid h-full max-w-[1600px] grid-cols-1 items-center gap-8 px-5 sm:px-8 lg:grid-cols-2 lg:px-12">
               <div className="relative z-10">
@@ -250,12 +250,20 @@ export default function System({
 
                 <div className="mt-14 flex gap-2">
                   {system.pillars.map((p, i) => (
-                    <span
-                      key={p.title}
-                      className={`h-1 flex-1 rounded-full transition-colors duration-500 ${
-                        i <= active ? "bg-coral" : "bg-ivory/15"
-                      }`}
-                    />
+                    <div key={p.title} className="flex flex-1 flex-col items-start gap-2">
+                      <span
+                        className={`h-1 w-full rounded-full transition-colors duration-500 ${
+                          i <= active ? "bg-coral" : "bg-ivory/15"
+                        }`}
+                      />
+                      <span
+                        className={`hidden text-[11px] leading-snug transition-colors duration-500 sm:block ${
+                          i === active ? "text-ivory/85" : "text-ivory/35"
+                        }`}
+                      >
+                        {p.title}
+                      </span>
+                    </div>
                   ))}
                 </div>
               </div>

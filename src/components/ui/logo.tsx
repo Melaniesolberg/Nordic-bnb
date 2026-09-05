@@ -8,8 +8,8 @@ import { media } from "@/content/media";
  * light/dark variant is needed.
  */
 const SIZES = {
-  lg: { icon: "h-11 w-11 sm:h-14 sm:w-14", wordmark: "h-8 w-44 sm:h-10 sm:w-56", gap: "gap-2.5 sm:gap-3" },
-  sm: { icon: "h-7 w-7", wordmark: "h-5 w-28", gap: "gap-2" },
+  lg: { icon: "h-11 w-11 sm:h-14 sm:w-14", wordmark: "h-11 w-52 sm:h-14 sm:w-64", gap: "gap-2.5 sm:gap-3" },
+  sm: { icon: "h-7 w-7", wordmark: "h-7 w-32", gap: "gap-2" },
 } as const;
 
 export default function Logo({
@@ -25,13 +25,13 @@ export default function Logo({
       <span className={cn("relative inline-block shrink-0", s.icon)}>
         <Image src={media.brandIcon} alt="" fill sizes="80px" className="object-contain" priority />
       </span>
-      <span className={cn("relative inline-block", s.wordmark)}>
+      <span className={cn("relative inline-block overflow-hidden", s.wordmark)}>
         <Image
           src={media.brandLogo}
           alt="Nordic BnB"
           fill
-          sizes="200px"
-          className="object-contain object-left"
+          sizes="256px"
+          className="object-cover"
           priority
         />
       </span>
