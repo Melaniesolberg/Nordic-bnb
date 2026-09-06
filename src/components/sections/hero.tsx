@@ -77,7 +77,7 @@ export default function Hero({
         <div
           className="absolute left-1/2 top-[34%] h-[280px] w-[280px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-70"
           style={{
-            background: "radial-gradient(circle, #f2a98a 0%, #e0532e 45%, rgba(224,83,46,0) 72%)",
+            background: "radial-gradient(circle, #ff9a95 0%, #f5423f 45%, rgba(245,66,63,0) 72%)",
             filter: "blur(6px)",
           }}
         />

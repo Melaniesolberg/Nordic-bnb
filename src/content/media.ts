@@ -15,7 +15,7 @@ export const media = {
   // transparent PNG. brandIcon is the icon alone, used standalone for the
   // favicon and small decorative marks. Do not swap for another variant.
   brandLogo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_155755_d3b1c2bb-37b2-4fcc-860f-904cf002174d.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260906_082506_33fdbab6-624b-4f34-87f8-0aabe7fc3cd8.png",
   brandIcon:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_144026_4d601721-c7fe-4183-9978-c1ed89f0ef51.png",
   brandMerch:
@@ -81,6 +81,13 @@ export const media = {
   // directly — used as-is in the About section.
   founderPetter:
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/d809abb8-d01d-40d5-bca7-2e339ee0255e.png",
+
+  // Real, unedited team photos (Petter and Melanie, in Nordic BnB polo
+  // shirts), uploaded by the user directly — used as-is on the Contact page.
+  contactPetterPhoto:
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/8f0ea737-3fef-4592-93e7-a43cfb9b4d44.png",
+  contactMelaniePhoto:
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/6713dab7-637e-4218-aa38-66ee56082f0b.png",
 
   // Real before/after property photography, uploaded by the user directly.
   // Each file is a single collage image with the "before" half on the left

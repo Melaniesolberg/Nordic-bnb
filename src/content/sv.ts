@@ -12,6 +12,7 @@ export const sv: SiteContent = {
       { label: "Tjänster", href: "#services" },
       { label: "Områden", href: "#areas" },
       { label: "Om oss", href: "#about" },
+      { label: "Kontakta oss", href: "/sv/contact" },
     ],
     cta: "Begär en fastighetsgenomgång",
     whatsapp: "WhatsApp",
@@ -360,5 +361,20 @@ export const sv: SiteContent = {
   showcase2: {
     eyebrow: "Presentation",
     heading: "Stylad, fotograferad och positionerad för att prestera.",
+  },
+  contactPage: {
+    eyebrow: "Kontakt",
+    heading: "Människorna bakom Nordic BnB.",
+    intro:
+      "Ett litet, handplockat team — inte ett callcenter. Hör av dig direkt, eller läs vem som står bakom arbetet med din fastighet.",
+    teamHeading: "Teamet på plats",
+    teamIntro:
+      "Vid sidan av Petter och Melanie håller ett lokalt driftteam varje fastighet igång, dag för dag.",
+    roles: ["Städning", "Handyman och underhåll", "Fotografering", "Gästsupport"],
+    emailHeading: "Maila oss direkt",
+    ctaHeading: "Låt oss prata om din fastighet.",
+    ctaSubline:
+      "Har du en fråga, eller vill se vad Nordic BnB kan göra för din fastighet? Skicka ett mail — vi svarar personligen, oftast inom en dag.",
+    ctaButton: "Maila oss",
   },
 };

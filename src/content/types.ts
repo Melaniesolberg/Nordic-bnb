@@ -222,6 +222,19 @@ export interface FooterContent {
   realPhotosNote: string;
 }
 
+export interface ContactPageContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+  teamHeading: string;
+  teamIntro: string;
+  roles: string[];
+  emailHeading: string;
+  ctaHeading: string;
+  ctaSubline: string;
+  ctaButton: string;
+}
+
 export interface SiteContent {
   meta: {
     title: string;
@@ -243,4 +256,5 @@ export interface SiteContent {
   showcase1: ShowcaseContent;
   showcase2: ShowcaseContent;
   portfolio: PortfolioContent;
+  contactPage: ContactPageContent;
 }

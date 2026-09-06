@@ -12,6 +12,7 @@ export const da: SiteContent = {
       { label: "Tjenester", href: "#services" },
       { label: "Områder", href: "#areas" },
       { label: "Om os", href: "#about" },
+      { label: "Kontakt os", href: "/da/contact" },
     ],
     cta: "Anmod om en ejendomsgennemgang",
     whatsapp: "WhatsApp",
@@ -360,5 +361,20 @@ export const da: SiteContent = {
   showcase2: {
     eyebrow: "Præsentation",
     heading: "Stylet, fotograferet og positioneret til at præstere.",
+  },
+  contactPage: {
+    eyebrow: "Kontakt",
+    heading: "Menneskene bag Nordic BnB.",
+    intro:
+      "Et lille, håndplukket team — ikke et callcenter. Tag direkte kontakt, eller læs hvem der står bag arbejdet på din ejendom.",
+    teamHeading: "Teamet på jorden",
+    teamIntro:
+      "Ved siden af Petter og Melanie holder et lokalt driftsteam hver ejendom kørende, dag for dag.",
+    roles: ["Rengøring", "Handyman og vedligeholdelse", "Fotografering", "Gæstesupport"],
+    emailHeading: "Skriv direkte til os",
+    ctaHeading: "Lad os tale om din ejendom.",
+    ctaSubline:
+      "Har du et spørgsmål, eller vil du se hvad Nordic BnB kan gøre for din ejendom? Send os en mail — vi svarer personligt, som regel inden for en dag.",
+    ctaButton: "Send os en mail",
   },
 };

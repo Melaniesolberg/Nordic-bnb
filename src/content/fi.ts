@@ -12,6 +12,7 @@ export const fi: SiteContent = {
       { label: "Palvelut", href: "#services" },
       { label: "Alueet", href: "#areas" },
       { label: "Meistä", href: "#about" },
+      { label: "Ota yhteyttä", href: "/fi/contact" },
     ],
     cta: "Pyydä kiinteistökatsaus",
     whatsapp: "WhatsApp",
@@ -360,5 +361,20 @@ export const fi: SiteContent = {
   showcase2: {
     eyebrow: "Esittely",
     heading: "Tyyliteltynä, kuvattuna ja aseteltuna suoriutumaan.",
+  },
+  contactPage: {
+    eyebrow: "Yhteystiedot",
+    heading: "Ihmiset Nordic BnB:n takana.",
+    intro:
+      "Pieni, käytännönläheinen tiimi — ei puhelinpalvelukeskus. Ota suoraan yhteyttä, tai lue kuka on kiinteistösi työn takana.",
+    teamHeading: "Tiimi paikan päällä",
+    teamIntro:
+      "Petterin ja Melanien lisäksi paikallinen operatiivinen tiimi pitää jokaisen kiinteistön toiminnassa päivittäin.",
+    roles: ["Siivous", "Huoltomies ja kunnossapito", "Valokuvaus", "Vieraiden tuki"],
+    emailHeading: "Ota yhteyttä sähköpostitse",
+    ctaHeading: "Puhutaan kiinteistöstäsi.",
+    ctaSubline:
+      "Onko sinulla kysymys, tai haluatko nähdä mitä Nordic BnB voisi tehdä kiinteistöllesi? Lähetä meille sähköpostia — vastaamme henkilökohtaisesti, yleensä vuorokauden sisällä.",
+    ctaButton: "Lähetä sähköpostia",
   },
 };

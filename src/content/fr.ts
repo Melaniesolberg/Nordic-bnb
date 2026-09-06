@@ -12,6 +12,7 @@ export const fr: SiteContent = {
       { label: "Services", href: "#services" },
       { label: "Zones", href: "#areas" },
       { label: "À propos", href: "#about" },
+      { label: "Contactez-nous", href: "/fr/contact" },
     ],
     cta: "Demander un bilan de votre bien",
     whatsapp: "WhatsApp",
@@ -360,5 +361,20 @@ export const fr: SiteContent = {
   showcase2: {
     eyebrow: "Présentation",
     heading: "Mis en scène, photographié et positionné pour performer.",
+  },
+  contactPage: {
+    eyebrow: "Contact",
+    heading: "Les personnes derrière Nordic BnB.",
+    intro:
+      "Une petite équipe, très impliquée — pas un centre d'appels. Contactez-nous directement, ou découvrez qui se cache derrière le travail sur votre bien.",
+    teamHeading: "L'équipe sur le terrain",
+    teamIntro:
+      "Aux côtés de Petter et Melanie, une équipe opérationnelle locale fait tourner chaque bien au quotidien.",
+    roles: ["Ménage", "Homme à tout faire & entretien", "Photographie", "Support voyageurs"],
+    emailHeading: "Écrivez-nous directement",
+    ctaHeading: "Parlons de votre bien.",
+    ctaSubline:
+      "Une question, ou envie de voir ce que Nordic BnB pourrait faire pour votre bien ? Envoyez-nous un e-mail — nous répondons personnellement, en général sous un jour.",
+    ctaButton: "Nous écrire",
   },
 };

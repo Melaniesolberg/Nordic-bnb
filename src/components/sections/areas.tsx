@@ -72,7 +72,7 @@ export default function Areas({
                         cx={pos.x}
                         cy={pos.y}
                         r={isActive ? 8 : 5}
-                        fill={isActive ? "#e0532e" : "#f6f1e8"}
+                        fill={isActive ? "#f5423f" : "#f6f1e8"}
                         fillOpacity={isActive ? 1 : 0.5}
                         style={{ transition: "all 0.35s ease" }}
                       />
@@ -82,7 +82,7 @@ export default function Areas({
                           cy={pos.y}
                           r={16}
                           fill="none"
-                          stroke="#e0532e"
+                          stroke="#f5423f"
                           strokeOpacity={0.5}
                         />
                       )}
@@ -90,7 +90,7 @@ export default function Areas({
                         x={pos.x}
                         y={pos.y - 18}
                         textAnchor="middle"
-                        fill={isActive ? "#f2a98a" : "#f6f1e8"}
+                        fill={isActive ? "#ff9a95" : "#f6f1e8"}
                         fillOpacity={isActive ? 1 : 0.55}
                         fontSize={13}
                         style={{ fontFamily: "var(--font-sans)", letterSpacing: "0.04em" }}

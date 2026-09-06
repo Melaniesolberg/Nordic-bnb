@@ -12,6 +12,7 @@ export const en: SiteContent = {
       { label: "Services", href: "#services" },
       { label: "Areas", href: "#areas" },
       { label: "About", href: "#about" },
+      { label: "Contact us", href: "/contact" },
     ],
     cta: "Request a property review",
     whatsapp: "WhatsApp",
@@ -360,5 +361,20 @@ export const en: SiteContent = {
   showcase2: {
     eyebrow: "Presentation",
     heading: "Styled, photographed and positioned to perform.",
+  },
+  contactPage: {
+    eyebrow: "Contact",
+    heading: "The people behind Nordic BnB.",
+    intro:
+      "A small, hands-on team — not a call center. Reach out directly, or read who's behind the work on your property.",
+    teamHeading: "The team on the ground",
+    teamIntro:
+      "Alongside Petter and Melanie, a local operational team keeps every property running day to day.",
+    roles: ["Cleaning", "Handyman & maintenance", "Photography", "Guest support"],
+    emailHeading: "Email us directly",
+    ctaHeading: "Let's talk about your property.",
+    ctaSubline:
+      "Have a question, or want to see what Nordic BnB could do for your property? Send us an email — we reply personally, usually within a day.",
+    ctaButton: "Email us",
   },
 };
