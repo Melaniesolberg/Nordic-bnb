@@ -38,13 +38,13 @@ export default function ContactPage({ locale }: { locale: Locale }) {
             <div className="mt-16 grid max-w-2xl grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8">
               {people.map((p, i) => (
                 <Reveal key={p.name} delay={0.08 * i}>
-                  <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-ivory-deep">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-sm">
                     <Image
                       src={p.photo}
                       alt={p.name}
                       fill
                       sizes="(min-width: 640px) 380px, 100vw"
-                      className="object-contain"
+                      className="object-cover object-center"
                     />
                   </div>
                   <p className="mt-5 font-serif-display text-2xl text-charcoal">{p.name}</p>

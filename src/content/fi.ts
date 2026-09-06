@@ -285,11 +285,11 @@ export const fi: SiteContent = {
       "Nordic BnB:n takana on paikallinen toimintaverkosto: siivous, tyylittely, huolto ja paikan päällä tapahtuva koordinointi koko Costa del Solilla, yhdessä perustajien kanssa, jotka uskovat, että omistajat ansaitsevat täyden näkyvyyden siihen, miten heidän kiinteistönsä suoriutuu.",
     ],
     founderName: "Petter Solberg",
-    founderRole: "Perustaja, Nordic BnB",
+    founderRole: "Founder & Head of Growth, Nordic BnB",
     founderQuote:
       "Emme vain ylläpidä ilmoitusta — rakennamme kiinteistön, joka oikeasti konvertoi. Tunnemme Costa del Solin markkinat, ja tunnemme vieraat, erityisesti pohjoismaiset vieraat, jotka varaavat täältä.",
     founder2Name: "Melanie Solberg",
-    founder2Role: "Perustajakumppani, Nordic BnB",
+    founder2Role: "Head of Operations & Marketing, Nordic BnB",
     founder2Quote:
       "Jokainen omistaja ansaitsee nähdä tarkalleen, miten hänen kiinteistönsä suoriutuu — ei arvailua, ei mustaa laatikkoa.",
   },

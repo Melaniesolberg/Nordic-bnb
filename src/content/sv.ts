@@ -285,11 +285,11 @@ export const sv: SiteContent = {
       "Bakom Nordic BnB finns ett lokalt driftsnätverk: städning, styling, underhåll och samordning på plats längs hela Costa del Sol, tillsammans med grundare som tror att ägare förtjänar full insyn i hur deras fastighet presterar.",
     ],
     founderName: "Petter Solberg",
-    founderRole: "Grundare, Nordic BnB",
+    founderRole: "Founder & Head of Growth, Nordic BnB",
     founderQuote:
       "Vi driver inte bara en annons — vi bygger en fastighet som faktiskt konverterar. Vi känner marknaden på Costa del Sol, och vi känner gästerna, särskilt de skandinaviska gästerna som bokar här.",
     founder2Name: "Melanie Solberg",
-    founder2Role: "Medgrundare, Nordic BnB",
+    founder2Role: "Head of Operations & Marketing, Nordic BnB",
     founder2Quote:
       "Varje ägare förtjänar att se exakt hur deras fastighet presterar — ingen gissning, ingen svart låda.",
   },

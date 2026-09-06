@@ -285,11 +285,11 @@ export const de: SiteContent = {
       "Hinter Nordic BnB steht ein lokales operatives Netzwerk: Reinigung, Styling, Instandhaltung und Koordination vor Ort entlang der gesamten Costa del Sol, zusammen mit Gründern, die glauben, dass Eigentümer volle Transparenz darüber verdienen, wie ihre Immobilie performt.",
     ],
     founderName: "Petter Solberg",
-    founderRole: "Gründer, Nordic BnB",
+    founderRole: "Founder & Head of Growth, Nordic BnB",
     founderQuote:
       "Wir betreiben nicht einfach nur ein Inserat — wir bauen eine Immobilie, die tatsächlich konvertiert. Wir kennen den Markt an der Costa del Sol, und wir kennen die Gäste, besonders die skandinavischen Gäste, die hier buchen.",
     founder2Name: "Melanie Solberg",
-    founder2Role: "Mitgründerin, Nordic BnB",
+    founder2Role: "Head of Operations & Marketing, Nordic BnB",
     founder2Quote:
       "Jeder Eigentümer verdient es, genau zu sehen, wie seine Immobilie performt — kein Rätselraten, keine Blackbox.",
   },

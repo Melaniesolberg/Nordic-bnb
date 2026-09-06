@@ -84,11 +84,11 @@ export const media = {
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/d809abb8-d01d-40d5-bca7-2e339ee0255e.png",
 
   // Real, unedited team photos (Petter and Melanie, in Nordic BnB polo
-  // shirts), uploaded by the user directly — used as-is on the Contact page.
+  // shirts), uploaded by the user directly — used as-is on the Team page.
   contactPetterPhoto:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/6713dab7-637e-4218-aa38-66ee56082f0b.png",
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/ced4315f-6dc6-42f1-8803-adb38ce10356.png",
   contactMelaniePhoto:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/8f0ea737-3fef-4592-93e7-a43cfb9b4d44.png",
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/678fdc58-169c-42dd-a20a-0eedfd05c936.png",
 
   // Real before/after property photography, uploaded by the user directly.
   // Each file is a single collage image with the "before" half on the left
@@ -111,7 +111,7 @@ export const media = {
   roomAfterStyled:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_094141_2601516f-f042-4a87-9500-b16787052be0.png",
   roomBeforeUnstyled:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260906_103736_e2debdc9-077e-4615-a0a1-298494b21502.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260906_104954_30e38245-efa0-416f-a72e-8c9670f0507d.png",
 
   // Handover visual for the process section's first step — customer and
   // Nordic BnB team member shaking hands / exchanging keys outside a villa.
