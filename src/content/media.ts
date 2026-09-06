@@ -106,13 +106,12 @@ export const media = {
   // Matching before/after pair for the top "Samme eiendom" slider — the
   // "before" was generated from the "after" via reference-guided editing so
   // it is guaranteed to be the same room/layout (same walls, windows,
-  // perspective), just with dated, ugly furniture, curtains left partly
-  // open, worn terrace decking (no grass) and greyer weather visible
-  // through the window, and no TV/electronics of any kind.
+  // perspective), with dated, ugly furniture, no TV/electronics, and
+  // horrible, mismatched curtains.
   roomAfterStyled:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_094141_2601516f-f042-4a87-9500-b16787052be0.png",
   roomBeforeUnstyled:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260906_103458_ceaf3384-e9f7-44f7-9fd3-67e9fc1b6adb.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260906_103736_e2debdc9-077e-4615-a0a1-298494b21502.png",
 
   // Handover visual for the process section's first step — customer and
   // Nordic BnB team member shaking hands / exchanging keys outside a villa.
