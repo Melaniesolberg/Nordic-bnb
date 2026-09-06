@@ -8,11 +8,11 @@ export const fi: SiteContent = {
   },
   nav: {
     links: [
-      { label: "Järjestelmä", href: "#system" },
-      { label: "Palvelut", href: "#services" },
-      { label: "Alueet", href: "#areas" },
-      { label: "Meistä", href: "#about" },
-      { label: "Ota yhteyttä", href: "/fi/contact" },
+      { label: "Järjestelmä", href: "/fi#system" },
+      { label: "Palvelut", href: "/fi#services" },
+      { label: "Alueet", href: "/fi#areas" },
+      { label: "Meistä", href: "/fi#about" },
+      { label: "Tiimi", href: "/fi/contact" },
     ],
     cta: "Pyydä kiinteistökatsaus",
     whatsapp: "WhatsApp",
@@ -363,14 +363,18 @@ export const fi: SiteContent = {
     heading: "Tyyliteltynä, kuvattuna ja aseteltuna suoriutumaan.",
   },
   contactPage: {
-    eyebrow: "Yhteystiedot",
-    heading: "Ihmiset Nordic BnB:n takana.",
+    eyebrow: "Tiimi",
+    heading: "Nordic BnB:n tiimi.",
     intro:
       "Pieni, käytännönläheinen tiimi — ei puhelinpalvelukeskus. Ota suoraan yhteyttä, tai lue kuka on kiinteistösi työn takana.",
     teamHeading: "Tiimi paikan päällä",
     teamIntro:
       "Petterin ja Melanien lisäksi paikallinen operatiivinen tiimi pitää jokaisen kiinteistön toiminnassa päivittäin.",
-    roles: ["Siivous", "Huoltomies ja kunnossapito", "Valokuvaus", "Vieraiden tuki"],
+    roles: [
+      { title: "Huoltomies", description: "Kunnossapito, korjaukset ja tarkastukset varausten välillä." },
+      { title: "Siivoustiimi", description: "Ammattimainen siivous ja tekstiilien vaihto jokaisen vieraan jälkeen." },
+      { title: "Valokuvaaja/stylisti", description: "Sisustus ja kuvaus jokaiselle uudelle ilmoitukselle." },
+    ],
     emailHeading: "Ota yhteyttä sähköpostitse",
     ctaHeading: "Puhutaan kiinteistöstäsi.",
     ctaSubline:

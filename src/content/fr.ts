@@ -8,11 +8,11 @@ export const fr: SiteContent = {
   },
   nav: {
     links: [
-      { label: "Le système", href: "#system" },
-      { label: "Services", href: "#services" },
-      { label: "Zones", href: "#areas" },
-      { label: "À propos", href: "#about" },
-      { label: "Contactez-nous", href: "/fr/contact" },
+      { label: "Le système", href: "/fr#system" },
+      { label: "Services", href: "/fr#services" },
+      { label: "Zones", href: "/fr#areas" },
+      { label: "À propos", href: "/fr#about" },
+      { label: "Équipe", href: "/fr/contact" },
     ],
     cta: "Demander un bilan de votre bien",
     whatsapp: "WhatsApp",
@@ -363,14 +363,18 @@ export const fr: SiteContent = {
     heading: "Mis en scène, photographié et positionné pour performer.",
   },
   contactPage: {
-    eyebrow: "Contact",
-    heading: "Les personnes derrière Nordic BnB.",
+    eyebrow: "Équipe",
+    heading: "L'équipe derrière Nordic BnB.",
     intro:
       "Une petite équipe, très impliquée — pas un centre d'appels. Contactez-nous directement, ou découvrez qui se cache derrière le travail sur votre bien.",
     teamHeading: "L'équipe sur le terrain",
     teamIntro:
       "Aux côtés de Petter et Melanie, une équipe opérationnelle locale fait tourner chaque bien au quotidien.",
-    roles: ["Ménage", "Homme à tout faire & entretien", "Photographie", "Support voyageurs"],
+    roles: [
+      { title: "Homme à tout faire", description: "Entretien, réparations et contrôles entre chaque séjour." },
+      { title: "Équipe de ménage", description: "Ménage professionnel et changement du linge après chaque voyageur." },
+      { title: "Photographe & styliste", description: "Mise en scène et photographie pour chaque nouvelle annonce." },
+    ],
     emailHeading: "Écrivez-nous directement",
     ctaHeading: "Parlons de votre bien.",
     ctaSubline:

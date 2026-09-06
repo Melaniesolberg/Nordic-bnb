@@ -8,11 +8,11 @@ export const de: SiteContent = {
   },
   nav: {
     links: [
-      { label: "System", href: "#system" },
-      { label: "Leistungen", href: "#services" },
-      { label: "Gebiete", href: "#areas" },
-      { label: "Über uns", href: "#about" },
-      { label: "Kontakt", href: "/de/contact" },
+      { label: "System", href: "/de#system" },
+      { label: "Leistungen", href: "/de#services" },
+      { label: "Gebiete", href: "/de#areas" },
+      { label: "Über uns", href: "/de#about" },
+      { label: "Team", href: "/de/contact" },
     ],
     cta: "Immobilien-Check anfordern",
     whatsapp: "WhatsApp",
@@ -363,14 +363,18 @@ export const de: SiteContent = {
     heading: "Gestylt, fotografiert und positioniert, um zu performen.",
   },
   contactPage: {
-    eyebrow: "Kontakt",
-    heading: "Die Menschen hinter Nordic BnB.",
+    eyebrow: "Team",
+    heading: "Das Team hinter Nordic BnB.",
     intro:
       "Ein kleines, handverlesenes Team — kein Callcenter. Melden Sie sich direkt, oder lesen Sie, wer hinter der Arbeit an Ihrer Immobilie steht.",
     teamHeading: "Das Team vor Ort",
     teamIntro:
       "Neben Petter und Melanie hält ein lokales Betriebsteam jede Immobilie Tag für Tag am Laufen.",
-    roles: ["Reinigung", "Hausmeister & Instandhaltung", "Fotografie", "Gästesupport"],
+    roles: [
+      { title: "Hausmeister", description: "Instandhaltung, Reparaturen und Kontrollen zwischen den Aufenthalten." },
+      { title: "Reinigungsteam", description: "Professionelle Endreinigung und Wäschewechsel nach jedem Gast." },
+      { title: "Fotograf & Stylist", description: "Styling und Fotografie für jedes neue Inserat." },
+    ],
     emailHeading: "Schreiben Sie uns direkt",
     ctaHeading: "Lassen Sie uns über Ihre Immobilie sprechen.",
     ctaSubline:

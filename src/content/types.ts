@@ -228,7 +228,7 @@ export interface ContactPageContent {
   intro: string;
   teamHeading: string;
   teamIntro: string;
-  roles: string[];
+  roles: { title: string; description: string }[];
   emailHeading: string;
   ctaHeading: string;
   ctaSubline: string;

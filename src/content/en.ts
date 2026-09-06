@@ -8,11 +8,11 @@ export const en: SiteContent = {
   },
   nav: {
     links: [
-      { label: "System", href: "#system" },
-      { label: "Services", href: "#services" },
-      { label: "Areas", href: "#areas" },
-      { label: "About", href: "#about" },
-      { label: "Contact us", href: "/contact" },
+      { label: "System", href: "/#system" },
+      { label: "Services", href: "/#services" },
+      { label: "Areas", href: "/#areas" },
+      { label: "About", href: "/#about" },
+      { label: "Team", href: "/contact" },
     ],
     cta: "Request a property review",
     whatsapp: "WhatsApp",
@@ -363,14 +363,18 @@ export const en: SiteContent = {
     heading: "Styled, photographed and positioned to perform.",
   },
   contactPage: {
-    eyebrow: "Contact",
-    heading: "The people behind Nordic BnB.",
+    eyebrow: "Team",
+    heading: "The team behind Nordic BnB.",
     intro:
       "A small, hands-on team — not a call center. Reach out directly, or read who's behind the work on your property.",
     teamHeading: "The team on the ground",
     teamIntro:
       "Alongside Petter and Melanie, a local operational team keeps every property running day to day.",
-    roles: ["Cleaning", "Handyman & maintenance", "Photography", "Guest support"],
+    roles: [
+      { title: "Handyman", description: "Maintenance, repairs and upkeep between stays." },
+      { title: "Cleaning team", description: "Professional turnover and linen service after every guest." },
+      { title: "Photographer & stylist", description: "Styling and photography for every new listing." },
+    ],
     emailHeading: "Email us directly",
     ctaHeading: "Let's talk about your property.",
     ctaSubline:

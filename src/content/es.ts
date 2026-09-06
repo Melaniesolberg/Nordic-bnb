@@ -8,11 +8,11 @@ export const es: SiteContent = {
   },
   nav: {
     links: [
-      { label: "El sistema", href: "#system" },
-      { label: "Servicios", href: "#services" },
-      { label: "Zonas", href: "#areas" },
-      { label: "Nosotros", href: "#about" },
-      { label: "Contáctanos", href: "/es/contact" },
+      { label: "El sistema", href: "/es#system" },
+      { label: "Servicios", href: "/es#services" },
+      { label: "Zonas", href: "/es#areas" },
+      { label: "Nosotros", href: "/es#about" },
+      { label: "Equipo", href: "/es/contact" },
     ],
     cta: "Solicita una revisión de tu propiedad",
     whatsapp: "WhatsApp",
@@ -363,14 +363,18 @@ export const es: SiteContent = {
     heading: "Estilizada, fotografiada y posicionada para rendir.",
   },
   contactPage: {
-    eyebrow: "Contacto",
-    heading: "Las personas detrás de Nordic BnB.",
+    eyebrow: "Equipo",
+    heading: "El equipo detrás de Nordic BnB.",
     intro:
       "Un equipo pequeño y muy implicado — no un call center. Escríbenos directamente, o descubre quién está detrás del trabajo en tu propiedad.",
     teamHeading: "El equipo sobre el terreno",
     teamIntro:
       "Junto a Petter y Melanie, un equipo operativo local mantiene cada propiedad funcionando día a día.",
-    roles: ["Limpieza", "Mantenimiento y reparaciones", "Fotografía", "Atención al huésped"],
+    roles: [
+      { title: "Mantenimiento", description: "Reparaciones, mantenimiento y revisiones entre estancias." },
+      { title: "Equipo de limpieza", description: "Limpieza profesional y cambio de textiles tras cada huésped." },
+      { title: "Fotógrafo/a y estilista", description: "Estilismo y fotografía para cada nuevo anuncio." },
+    ],
     emailHeading: "Escríbenos directamente",
     ctaHeading: "Hablemos de tu propiedad.",
     ctaSubline:

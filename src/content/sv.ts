@@ -8,11 +8,11 @@ export const sv: SiteContent = {
   },
   nav: {
     links: [
-      { label: "Systemet", href: "#system" },
-      { label: "Tjänster", href: "#services" },
-      { label: "Områden", href: "#areas" },
-      { label: "Om oss", href: "#about" },
-      { label: "Kontakta oss", href: "/sv/contact" },
+      { label: "Systemet", href: "/sv#system" },
+      { label: "Tjänster", href: "/sv#services" },
+      { label: "Områden", href: "/sv#areas" },
+      { label: "Om oss", href: "/sv#about" },
+      { label: "Team", href: "/sv/contact" },
     ],
     cta: "Begär en fastighetsgenomgång",
     whatsapp: "WhatsApp",
@@ -363,14 +363,18 @@ export const sv: SiteContent = {
     heading: "Stylad, fotograferad och positionerad för att prestera.",
   },
   contactPage: {
-    eyebrow: "Kontakt",
-    heading: "Människorna bakom Nordic BnB.",
+    eyebrow: "Team",
+    heading: "Teamet bakom Nordic BnB.",
     intro:
       "Ett litet, handplockat team — inte ett callcenter. Hör av dig direkt, eller läs vem som står bakom arbetet med din fastighet.",
     teamHeading: "Teamet på plats",
     teamIntro:
       "Vid sidan av Petter och Melanie håller ett lokalt driftteam varje fastighet igång, dag för dag.",
-    roles: ["Städning", "Handyman och underhåll", "Fotografering", "Gästsupport"],
+    roles: [
+      { title: "Handyman", description: "Underhåll, reparationer och tillsyn mellan bokningar." },
+      { title: "Städteam", description: "Professionell städning och byte av textilier efter varje gäst." },
+      { title: "Fotograf/stylist", description: "Styling och fotografering för varje ny annons." },
+    ],
     emailHeading: "Maila oss direkt",
     ctaHeading: "Låt oss prata om din fastighet.",
     ctaSubline:

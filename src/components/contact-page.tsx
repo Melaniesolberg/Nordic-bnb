@@ -69,11 +69,12 @@ export default function ContactPage({ locale }: { locale: Locale }) {
                 {contactPage.teamIntro}
               </p>
             </Reveal>
-            <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-[2px] bg-charcoal/10 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-[2px] bg-charcoal/10 sm:grid-cols-3">
               {contactPage.roles.map((role, i) => (
-                <Reveal key={role} delay={0.05 * i}>
+                <Reveal key={role.title} delay={0.05 * i}>
                   <div className="h-full bg-ivory p-7">
-                    <p className="font-serif-display text-lg italic text-charcoal">{role}</p>
+                    <p className="font-serif-display text-lg italic text-charcoal">{role.title}</p>
+                    <p className="mt-2 text-sm leading-relaxed text-charcoal/55">{role.description}</p>
                   </div>
                 </Reveal>
               ))}
