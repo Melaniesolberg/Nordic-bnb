@@ -20,5 +20,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...homeEntries, ...seoEntries];
+  const contactEntries: MetadataRoute.Sitemap = locales.map((locale) => ({
+    url: locale === defaultLocale ? `${CONTACT.site}/contact` : `${CONTACT.site}/${locale}/contact`,
+    lastModified: now,
+    changeFrequency: "yearly",
+    priority: 0.5,
+  }));
+
+  return [...homeEntries, ...seoEntries, ...contactEntries];
 }

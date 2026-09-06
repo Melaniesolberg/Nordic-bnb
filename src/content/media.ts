@@ -15,7 +15,7 @@ export const media = {
   // transparent PNG. brandIcon is the icon alone, used standalone for the
   // favicon and small decorative marks. Do not swap for another variant.
   brandLogo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260906_082506_33fdbab6-624b-4f34-87f8-0aabe7fc3cd8.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260906_082800_32efbac9-aebd-4c5d-9bd7-8e9d9db20987.png",
   brandIcon:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_144026_4d601721-c7fe-4183-9978-c1ed89f0ef51.png",
   brandMerch:
