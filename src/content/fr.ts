@@ -58,6 +58,11 @@ export const fr: SiteContent = {
       },
       {
         code: "",
+        title: "Nous nettoyons et entretenons entre chaque séjour",
+        description: "Ménage professionnel, linge et entretien, pour que le bien soit toujours prêt à accueillir.",
+      },
+      {
+        code: "",
         title: "Nous faisons un rapport et améliorons en continu",
         description: "Vous suivez les progrès, nous ajustons le prix et la présentation.",
       },
@@ -254,7 +259,7 @@ export const fr: SiteContent = {
   },
   areas: {
     eyebrow: "Où nous intervenons",
-    heading: "Costa del Sol, de Marbella à Benalmádena.",
+    heading: "Costa del Sol, de Málaga à Marbella.",
     intro:
       "Une présence locale le long de la côte signifie des temps de réponse plus rapides, une meilleure connaissance locale et une tarification qui reflète chaque micro-marché.",
     areas: [
@@ -273,6 +278,14 @@ export const fr: SiteContent = {
       {
         name: "Benalmádena",
         description: "Un équilibre entre locations de vacances familiales et vie côtière de longue durée.",
+      },
+      {
+        name: "Málaga",
+        description: "Une capitale culturelle avec un marché croissant de séjours urbains et de locations longue durée.",
+      },
+      {
+        name: "Torremolinos",
+        description: "Une destination balnéaire classique avec une demande touristique stable toute l'année.",
       },
     ],
   },
@@ -369,7 +382,7 @@ export const fr: SiteContent = {
       "Une petite équipe, très impliquée — pas un centre d'appels. Contactez-nous directement, ou découvrez qui se cache derrière le travail sur votre bien.",
     teamHeading: "L'équipe sur le terrain",
     teamIntro:
-      "Aux côtés de Petter et Melanie, une équipe opérationnelle locale fait tourner chaque bien au quotidien.",
+      "À nos côtés, une équipe opérationnelle locale fait tourner chaque bien au quotidien.",
     roles: [
       { title: "Homme à tout faire", description: "Entretien, réparations et contrôles entre chaque séjour." },
       { title: "Équipe de ménage", description: "Ménage professionnel et changement du linge après chaque voyageur." },
@@ -380,5 +393,7 @@ export const fr: SiteContent = {
     ctaSubline:
       "Une question, ou envie de voir ce que Nordic BnB pourrait faire pour votre bien ? Envoyez-nous un e-mail — nous répondons personnellement, en général sous un jour.",
     ctaButton: "Nous écrire",
+    recruitCta:
+      "Envie de rejoindre notre équipe locale comme agent d'entretien, homme à tout faire ou photographe ? Contactez-nous — nous sommes toujours ouverts aux bonnes personnes.",
   },
 };

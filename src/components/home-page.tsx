@@ -46,6 +46,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
             media.stylingDetail,
             media.roomAfterStyled,
             media.guestArrival,
+            media.cleaningMoment,
             media.aerialCoast,
           ]}
         />
@@ -65,7 +66,14 @@ export default function HomePage({ locale }: { locale: Locale }) {
         <Areas
           areas={content.areas}
           imageSrc={media.coastline}
-          detailImages={[media.marbellaLifestyle, media.mijasScene, media.fuengirolaScene, media.benalmadenaScene]}
+          detailImages={[
+            media.marbellaLifestyle,
+            media.mijasScene,
+            media.fuengirolaScene,
+            media.benalmadenaScene,
+            media.coastline,
+            media.aerialCoast,
+          ]}
         />
         <Dashboard
           dashboard={content.dashboard}

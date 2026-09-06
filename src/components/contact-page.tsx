@@ -35,7 +35,7 @@ export default function ContactPage({ locale }: { locale: Locale }) {
               </p>
             </Reveal>
 
-            <div className="mt-16 grid max-w-2xl grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8">
+            <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8">
               {people.map((p, i) => (
                 <Reveal key={p.name} delay={0.08 * i}>
                   <div className="relative aspect-square w-full overflow-hidden rounded-sm">
@@ -44,7 +44,7 @@ export default function ContactPage({ locale }: { locale: Locale }) {
                       alt={p.name}
                       fill
                       sizes="(min-width: 640px) 380px, 100vw"
-                      className="object-cover object-center"
+                      className="object-cover object-top"
                     />
                   </div>
                   <p className="mt-5 font-serif-display text-2xl text-charcoal">{p.name}</p>
@@ -104,6 +104,9 @@ export default function ContactPage({ locale }: { locale: Locale }) {
                   </a>
                 </Magnetic>
               </div>
+              <p className="mx-auto mt-8 max-w-xl text-sm leading-relaxed text-ivory/45">
+                {contactPage.recruitCta}
+              </p>
             </Reveal>
           </div>
         </section>

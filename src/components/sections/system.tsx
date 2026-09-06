@@ -11,9 +11,9 @@ import { useMediaQuery } from "@/lib/use-media-query";
 import type { SystemContent } from "@/content/types";
 
 /**
- * One small line-icon per step of the 5-step process, in order: take over,
- * inspect & style, photograph & launch, handle bookings & guests, report &
- * improve.
+ * One small line-icon per step of the 6-step process, in order: take over,
+ * inspect & style, photograph & launch, handle bookings & guests, clean &
+ * maintain, report & improve.
  */
 const STEP_ICONS: ((props: { className?: string }) => ReactElement)[] = [
   ({ className }) => (
@@ -45,6 +45,17 @@ const STEP_ICONS: ((props: { className?: string }) => ReactElement)[] = [
         strokeLinejoin="round"
       />
       <path d="M7.5 9.5h9M7.5 12.5h6" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" />
+    </svg>
+  ),
+  ({ className }) => (
+    <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden>
+      <path
+        d="M12 4v4M12 16v4M4 12h4M16 12h4M6.5 6.5l2.5 2.5M15 15l2.5 2.5M17.5 6.5 15 9M9 15l-2.5 2.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <circle cx="12" cy="12" r="2.6" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   ),
   ({ className }) => (

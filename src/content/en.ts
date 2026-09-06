@@ -58,6 +58,11 @@ export const en: SiteContent = {
       },
       {
         code: "",
+        title: "We clean and maintain between every stay",
+        description: "Professional cleaning, linen and upkeep, so the property is always guest-ready.",
+      },
+      {
+        code: "",
         title: "We report and improve continuously",
         description: "You follow the progress, we fine-tune pricing and presentation.",
       },
@@ -254,7 +259,7 @@ export const en: SiteContent = {
   },
   areas: {
     eyebrow: "Where we operate",
-    heading: "Costa del Sol, from Marbella to Benalmádena.",
+    heading: "Costa del Sol, from Málaga to Marbella.",
     intro:
       "Local presence across the coast means faster response times, better local knowledge, and pricing that reflects each micro-market.",
     areas: [
@@ -273,6 +278,14 @@ export const en: SiteContent = {
       {
         name: "Benalmádena",
         description: "A balanced mix of family holiday lets and long-term coastal living.",
+      },
+      {
+        name: "Málaga",
+        description: "A cultural capital with a growing city-break and long-stay rental market.",
+      },
+      {
+        name: "Torremolinos",
+        description: "A classic beach destination with steady, year-round tourist demand.",
       },
     ],
   },
@@ -369,7 +382,7 @@ export const en: SiteContent = {
       "A small, hands-on team — not a call center. Reach out directly, or read who's behind the work on your property.",
     teamHeading: "The team on the ground",
     teamIntro:
-      "Alongside Petter and Melanie, a local operational team keeps every property running day to day.",
+      "Alongside us, a local operational team keeps every property running day to day.",
     roles: [
       { title: "Handyman", description: "Maintenance, repairs and upkeep between stays." },
       { title: "Cleaning team", description: "Professional turnover and linen service after every guest." },
@@ -380,5 +393,7 @@ export const en: SiteContent = {
     ctaSubline:
       "Have a question, or want to see what Nordic BnB could do for your property? Send us an email — we reply personally, usually within a day.",
     ctaButton: "Email us",
+    recruitCta:
+      "Interested in joining our local team as a cleaner, handyman or photographer? Reach out — we're always open to good people.",
   },
 };

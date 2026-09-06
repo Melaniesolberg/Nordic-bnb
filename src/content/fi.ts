@@ -58,6 +58,11 @@ export const fi: SiteContent = {
       },
       {
         code: "",
+        title: "Siivoamme ja huollamme jokaisen oleskelun välissä",
+        description: "Ammattimainen siivous, tekstiilit ja huolto, jotta kiinteistö on aina vieraille valmis.",
+      },
+      {
+        code: "",
         title: "Raportoimme ja parannamme jatkuvasti",
         description: "Sinä seuraat kehitystä, me hienosäädämme hintaa ja esittelyä.",
       },
@@ -254,7 +259,7 @@ export const fi: SiteContent = {
   },
   areas: {
     eyebrow: "Missä toimimme",
-    heading: "Costa del Sol, Marbellasta Benalmádenaan.",
+    heading: "Costa del Sol, Málagasta Marbellaan.",
     intro:
       "Paikallinen läsnäolo koko rannikolla tarkoittaa nopeampia vastausaikoja, parempaa paikallistuntemusta ja hinnoittelua, joka heijastaa kutakin mikromarkkinaa.",
     areas: [
@@ -273,6 +278,14 @@ export const fi: SiteContent = {
       {
         name: "Benalmádena",
         description: "Tasapainoinen sekoitus perheiden lomavuokrausta ja pitkäaikaista rannikkoasumista.",
+      },
+      {
+        name: "Málaga",
+        description: "Kulttuuripääkaupunki, jonka kaupunkilomien ja pitkäaikaisvuokrauksen markkina kasvaa.",
+      },
+      {
+        name: "Torremolinos",
+        description: "Klassinen rantakohde, jolla on tasainen ympärivuotinen matkailukysyntä.",
       },
     ],
   },
@@ -369,7 +382,7 @@ export const fi: SiteContent = {
       "Pieni, käytännönläheinen tiimi — ei puhelinpalvelukeskus. Ota suoraan yhteyttä, tai lue kuka on kiinteistösi työn takana.",
     teamHeading: "Tiimi paikan päällä",
     teamIntro:
-      "Petterin ja Melanien lisäksi paikallinen operatiivinen tiimi pitää jokaisen kiinteistön toiminnassa päivittäin.",
+      "Meidän lisäksemme paikallinen operatiivinen tiimi pitää jokaisen kiinteistön toiminnassa päivittäin.",
     roles: [
       { title: "Huoltomies", description: "Kunnossapito, korjaukset ja tarkastukset varausten välillä." },
       { title: "Siivoustiimi", description: "Ammattimainen siivous ja tekstiilien vaihto jokaisen vieraan jälkeen." },
@@ -380,5 +393,7 @@ export const fi: SiteContent = {
     ctaSubline:
       "Onko sinulla kysymys, tai haluatko nähdä mitä Nordic BnB voisi tehdä kiinteistöllesi? Lähetä meille sähköpostia — vastaamme henkilökohtaisesti, yleensä vuorokauden sisällä.",
     ctaButton: "Lähetä sähköpostia",
+    recruitCta:
+      "Kiinnostaisiko liittyä paikalliseen tiimiimme siivoojana, huoltomiehenä tai valokuvaajana? Ota yhteyttä — olemme aina avoimia hyville tekijöille.",
   },
 };

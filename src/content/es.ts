@@ -58,6 +58,11 @@ export const es: SiteContent = {
       },
       {
         code: "",
+        title: "Limpiamos y mantenemos entre cada estancia",
+        description: "Limpieza profesional, textiles y mantenimiento, para que la propiedad esté siempre lista para huéspedes.",
+      },
+      {
+        code: "",
         title: "Informamos y mejoramos continuamente",
         description: "Tú sigues el progreso, nosotros ajustamos el precio y la presentación.",
       },
@@ -254,7 +259,7 @@ export const es: SiteContent = {
   },
   areas: {
     eyebrow: "Dónde operamos",
-    heading: "Costa del Sol, de Marbella a Benalmádena.",
+    heading: "Costa del Sol, de Málaga a Marbella.",
     intro:
       "La presencia local a lo largo de la costa significa tiempos de respuesta más rápidos, mejor conocimiento local y precios que reflejan cada micromercado.",
     areas: [
@@ -273,6 +278,14 @@ export const es: SiteContent = {
       {
         name: "Benalmádena",
         description: "Una combinación equilibrada de alquiler vacacional familiar y vida costera de larga temporada.",
+      },
+      {
+        name: "Málaga",
+        description: "Una capital cultural con un mercado creciente de escapadas urbanas y alquiler de larga estancia.",
+      },
+      {
+        name: "Torremolinos",
+        description: "Un destino de playa clásico con una demanda turística estable todo el año.",
       },
     ],
   },
@@ -369,7 +382,7 @@ export const es: SiteContent = {
       "Un equipo pequeño y muy implicado — no un call center. Escríbenos directamente, o descubre quién está detrás del trabajo en tu propiedad.",
     teamHeading: "El equipo sobre el terreno",
     teamIntro:
-      "Junto a Petter y Melanie, un equipo operativo local mantiene cada propiedad funcionando día a día.",
+      "Junto a nosotros, un equipo operativo local mantiene cada propiedad funcionando día a día.",
     roles: [
       { title: "Mantenimiento", description: "Reparaciones, mantenimiento y revisiones entre estancias." },
       { title: "Equipo de limpieza", description: "Limpieza profesional y cambio de textiles tras cada huésped." },
@@ -380,5 +393,7 @@ export const es: SiteContent = {
     ctaSubline:
       "¿Tienes una pregunta, o quieres ver qué podría hacer Nordic BnB por tu propiedad? Envíanos un correo — respondemos personalmente, normalmente en menos de un día.",
     ctaButton: "Escribinos",
+    recruitCta:
+      "¿Te interesa unirte a nuestro equipo local como personal de limpieza, mantenimiento o fotógrafo/a? Escríbenos — siempre estamos abiertos a gente buena.",
   },
 };

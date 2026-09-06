@@ -58,6 +58,11 @@ export const sv: SiteContent = {
       },
       {
         code: "",
+        title: "Vi städar och underhåller mellan varje vistelse",
+        description: "Professionell städning, textilier och underhåll, så fastigheten alltid är gästklar.",
+      },
+      {
+        code: "",
         title: "Vi rapporterar och förbättrar kontinuerligt",
         description: "Du följer utvecklingen, vi finjusterar pris och presentation.",
       },
@@ -254,7 +259,7 @@ export const sv: SiteContent = {
   },
   areas: {
     eyebrow: "Var vi verkar",
-    heading: "Costa del Sol, från Marbella till Benalmádena.",
+    heading: "Costa del Sol, från Málaga till Marbella.",
     intro:
       "Lokal närvaro längs kusten innebär snabbare svarstider, bättre lokalkännedom och prissättning som speglar varje delmarknad.",
     areas: [
@@ -273,6 +278,14 @@ export const sv: SiteContent = {
       {
         name: "Benalmádena",
         description: "En balanserad mix av familjesemestrar och långtidsboende vid kusten.",
+      },
+      {
+        name: "Málaga",
+        description: "En kulturell huvudstad med en växande marknad för stadssemestrar och långtidsuthyrning.",
+      },
+      {
+        name: "Torremolinos",
+        description: "En klassisk badort med jämn turistefterfrågan året runt.",
       },
     ],
   },
@@ -369,7 +382,7 @@ export const sv: SiteContent = {
       "Ett litet, handplockat team — inte ett callcenter. Hör av dig direkt, eller läs vem som står bakom arbetet med din fastighet.",
     teamHeading: "Teamet på plats",
     teamIntro:
-      "Vid sidan av Petter och Melanie håller ett lokalt driftteam varje fastighet igång, dag för dag.",
+      "Vid sidan av oss håller ett lokalt driftteam varje fastighet igång, dag för dag.",
     roles: [
       { title: "Handyman", description: "Underhåll, reparationer och tillsyn mellan bokningar." },
       { title: "Städteam", description: "Professionell städning och byte av textilier efter varje gäst." },
@@ -380,5 +393,7 @@ export const sv: SiteContent = {
     ctaSubline:
       "Har du en fråga, eller vill se vad Nordic BnB kan göra för din fastighet? Skicka ett mail — vi svarar personligen, oftast inom en dag.",
     ctaButton: "Maila oss",
+    recruitCta:
+      "Intresserad av att bli en del av vårt lokala team som städare, handyman eller fotograf? Hör av dig — vi är alltid öppna för bra folk.",
   },
 };

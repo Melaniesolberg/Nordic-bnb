@@ -233,6 +233,7 @@ export interface ContactPageContent {
   ctaHeading: string;
   ctaSubline: string;
   ctaButton: string;
+  recruitCta: string;
 }
 
 export interface SiteContent {

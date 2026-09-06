@@ -58,6 +58,11 @@ export const no: SiteContent = {
       },
       {
         code: "",
+        title: "Vi rengjør og vedlikeholder mellom hvert opphold",
+        description: "Profesjonell vask, tekstiler og vedlikehold, slik at eiendommen alltid er gjesteklar.",
+      },
+      {
+        code: "",
         title: "Vi rapporterer og forbedrer kontinuerlig",
         description: "Du følger utviklingen, vi finjusterer prisen og presentasjonen.",
       },
@@ -254,7 +259,7 @@ export const no: SiteContent = {
   },
   areas: {
     eyebrow: "Hvor vi opererer",
-    heading: "Costa del Sol, fra Marbella til Benalmádena.",
+    heading: "Costa del Sol, fra Málaga til Marbella.",
     intro:
       "Lokal tilstedeværelse langs kysten gir raskere responstid, bedre lokalkunnskap og priser som gjenspeiler hvert mikromarked.",
     areas: [
@@ -273,6 +278,14 @@ export const no: SiteContent = {
       {
         name: "Benalmádena",
         description: "En balansert miks av familieferier og langsiktig kystliv.",
+      },
+      {
+        name: "Málaga",
+        description: "En kulturell hovedstad med et voksende marked for bykortferier og langtidsleie.",
+      },
+      {
+        name: "Torremolinos",
+        description: "En klassisk strandby med jevn turistetterspørsel hele året.",
       },
     ],
   },
@@ -369,7 +382,7 @@ export const no: SiteContent = {
       "Et lite, håndplukket team — ikke et kundesenter. Ta direkte kontakt, eller les hvem som står bak arbeidet på eiendommen din.",
     teamHeading: "Teamet på bakken",
     teamIntro:
-      "Ved siden av Petter og Melanie holder et lokalt driftsteam hver eiendom i gang, dag for dag.",
+      "Ved siden av oss holder et lokalt driftsteam hver eiendom i gang, dag for dag.",
     roles: [
       { title: "Handyman", description: "Vedlikehold, reparasjoner og tilsyn mellom opphold." },
       { title: "Vasketeam", description: "Profesjonell klargjøring og skift av tekstiler etter hver gjest." },
@@ -380,5 +393,7 @@ export const no: SiteContent = {
     ctaSubline:
       "Har du et spørsmål, eller vil se hva Nordic BnB kan gjøre for eiendommen din? Send oss en e-post — vi svarer personlig, som regel innen en dag.",
     ctaButton: "Send e-post",
+    recruitCta:
+      "Interessert i å bli en del av vårt lokale team som vasker, handyman eller fotograf? Ta kontakt — vi er alltid åpne for gode folk.",
   },
 };

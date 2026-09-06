@@ -11,6 +11,8 @@ const DOT_POSITIONS = [
   { x: 290, y: 95 },
   { x: 470, y: 130 },
   { x: 650, y: 85 },
+  { x: 690, y: 65 },
+  { x: 715, y: 95 },
 ];
 
 export default function Areas({

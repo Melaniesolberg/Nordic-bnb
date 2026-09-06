@@ -13,21 +13,26 @@ const SIZES = {
   sm: "h-7 w-24",
 } as const;
 
+const ICON_SIZE = "h-10 w-10 sm:h-11 sm:w-11";
+
 export default function Logo({
   className,
   size = "lg",
+  variant = "full",
 }: {
   className?: string;
   size?: keyof typeof SIZES;
+  variant?: "full" | "icon";
 }) {
+  const isIcon = variant === "icon";
   return (
-    <span className={cn("relative inline-block", SIZES[size], className)}>
+    <span className={cn("relative inline-block", isIcon ? ICON_SIZE : SIZES[size], className)}>
       <Image
-        src={media.brandLogo}
-        alt="Nordic BnB"
+        src={isIcon ? media.brandIcon : media.brandLogo}
+        alt={isIcon ? "" : "Nordic BnB"}
         fill
         sizes="240px"
-        className="object-contain object-left"
+        className={cn("object-contain", !isIcon && "object-left")}
         priority
       />
     </span>

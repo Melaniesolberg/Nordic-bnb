@@ -58,6 +58,11 @@ export const de: SiteContent = {
       },
       {
         code: "",
+        title: "Wir reinigen und pflegen zwischen jedem Aufenthalt",
+        description: "Professionelle Reinigung, Wäsche und Instandhaltung, damit die Immobilie immer gästefertig ist.",
+      },
+      {
+        code: "",
         title: "Wir berichten und verbessern kontinuierlich",
         description: "Sie verfolgen den Fortschritt, wir feinjustieren Preis und Präsentation.",
       },
@@ -254,7 +259,7 @@ export const de: SiteContent = {
   },
   areas: {
     eyebrow: "Wo wir tätig sind",
-    heading: "Costa del Sol, von Marbella bis Benalmádena.",
+    heading: "Costa del Sol, von Málaga bis Marbella.",
     intro:
       "Lokale Präsenz entlang der Küste bedeutet schnellere Reaktionszeiten, besseres Ortswissen und Preise, die jeden Mikromarkt widerspiegeln.",
     areas: [
@@ -273,6 +278,14 @@ export const de: SiteContent = {
       {
         name: "Benalmádena",
         description: "Eine ausgewogene Mischung aus familienfreundlicher Ferienvermietung und langfristigem Küstenleben.",
+      },
+      {
+        name: "Málaga",
+        description: "Eine kulturelle Hauptstadt mit einem wachsenden Markt für Städtereisen und Langzeitmiete.",
+      },
+      {
+        name: "Torremolinos",
+        description: "Ein klassisches Strandziel mit gleichbleibender touristischer Nachfrage das ganze Jahr über.",
       },
     ],
   },
@@ -369,7 +382,7 @@ export const de: SiteContent = {
       "Ein kleines, handverlesenes Team — kein Callcenter. Melden Sie sich direkt, oder lesen Sie, wer hinter der Arbeit an Ihrer Immobilie steht.",
     teamHeading: "Das Team vor Ort",
     teamIntro:
-      "Neben Petter und Melanie hält ein lokales Betriebsteam jede Immobilie Tag für Tag am Laufen.",
+      "Neben uns hält ein lokales Betriebsteam jede Immobilie Tag für Tag am Laufen.",
     roles: [
       { title: "Hausmeister", description: "Instandhaltung, Reparaturen und Kontrollen zwischen den Aufenthalten." },
       { title: "Reinigungsteam", description: "Professionelle Endreinigung und Wäschewechsel nach jedem Gast." },
@@ -380,5 +393,7 @@ export const de: SiteContent = {
     ctaSubline:
       "Haben Sie eine Frage, oder möchten Sie sehen, was Nordic BnB für Ihre Immobilie tun könnte? Schreiben Sie uns eine E-Mail — wir antworten persönlich, meist innerhalb eines Tages.",
     ctaButton: "E-Mail schreiben",
+    recruitCta:
+      "Interesse, Teil unseres lokalen Teams als Reinigungskraft, Hausmeister oder Fotograf zu werden? Melden Sie sich — wir sind immer offen für gute Leute.",
   },
 };
