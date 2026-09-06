@@ -111,7 +111,7 @@ export const media = {
   roomAfterStyled:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_094141_2601516f-f042-4a87-9500-b16787052be0.png",
   roomBeforeUnstyled:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260906_104954_30e38245-efa0-416f-a72e-8c9670f0507d.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260906_105343_018b2252-01ec-4992-b690-b0f049089bc6.png",
 
   // Handover visual for the process section's first step — customer and
   // Nordic BnB team member shaking hands / exchanging keys outside a villa.
