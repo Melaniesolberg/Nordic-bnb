@@ -391,7 +391,7 @@ export const fi: SiteContent = {
   },
   showcase1: {
     eyebrow: "Costa del Sol",
-    heading: "Jokaisella kiinteistöllä on tarina, joka ansaitsee tulla kerrotuksi hyvin — me varmistamme, että se kuullaan.",
+    heading: "Jokaisella kiinteistöllä on jotain ainutlaatuista. Käytä sitä.",
   },
   showcase2: {
     eyebrow: "Esittely",
@@ -405,7 +405,7 @@ export const fi: SiteContent = {
     teamName: "Operatiivinen tiimimme",
     teamHeading: "Tiimi paikan päällä",
     teamIntro:
-      "Käsityöt, siivous ja sisustus — kaiken hoitavat ihmiset, joita tunnemme ja joihin luotamme, emme satunnaiset alihankkijat.",
+      "Käsityöt, siivous ja sisustus — kaiken hoitavat yhteistyökumppanit, joihin luotamme, emme satunnaiset alihankkijat.",
     roles: [
       { title: "Huoltomies", description: "Kunnossapito, korjaukset ja tarkastukset varausten välillä." },
       { title: "Siivoustiimi", description: "Ammattimainen siivous ja tekstiilien vaihto jokaisen vieraan jälkeen." },
@@ -433,12 +433,12 @@ export const fi: SiteContent = {
         {
           period: "2024",
           title: "Lähempänä kiinteistöalaa",
-          body: "Siihen mennessä olimme jo viettäneet vuosia vuokrakiinteistöjen parissa itsekin — ostaneet, remontoineet ja vuokranneet asuntoja Norjassa, sekä lyhyt- että pitkäaikaisvuokrauksena. Työmme keskittyi yhä enemmän kiinteistöön, sisältöön, valokuvaukseen, asemointiin ja tapaan, jolla koteja esiteltiin verkossa. Näimme saman ongelman yhä uudelleen: hyviä kiinteistöjä markkinoitiin kaukana niiden potentiaalista.",
+          body: "Siihen mennessä olimme jo viettäneet vuosia vuokrakiinteistöjen parissa itsekin — vuokranneet asuntoja Norjassa ja vuokranneet niitä edelleen vuokra-arbitraasin kautta, sekä lyhyt- että pitkäaikaisvuokrauksena, samalla kun remontoimme ja nostimme vastuullamme olleiden kiinteistöjen arvoa. Työmme keskittyi yhä enemmän kiinteistöön, sisältöön, valokuvaukseen, asemointiin ja tapaan, jolla koteja esiteltiin verkossa. Näimme saman ongelman yhä uudelleen: hyviä kiinteistöjä markkinoitiin kaukana niiden potentiaalista.",
         },
         {
           period: "2025",
           title: "Norjasta Espanjaan 🇪🇸",
-          body: "Muutimme Norjasta Espanjaan ja koimme Costa del Solin vuokramarkkinat sisältäpäin — asukkaina ja kiinteistön omistajina ja operaattoreina. Siitä, mikä alkoi markkinointiosaamisena, yhdistettynä vuosien kokemukseen omien asuntojen vuokraamisesta kotimaassa, tuli jotain suurempaa: ymmärrys siitä, mitä kansainväliset vieraat odottavat, mistä omistajat kamppailevat, ja mikä saa yhden kiinteistön suoriutumaan toista paremmin.",
+          body: "Muutimme Norjasta Espanjaan ja koimme Costa del Solin vuokramarkkinat sisältäpäin — asukkaina ja vuokraustoiminnan harjoittajina. Siitä, mikä alkoi markkinointiosaamisena, yhdistettynä vuosien kokemukseen kotimaassa asuntojen vuokraamisesta, edelleenvuokraamisesta ja remontoinnista, tuli jotain suurempaa: ymmärrys siitä, mitä kansainväliset vieraat odottavat, mistä omistajat kamppailevat, ja mikä saa yhden kiinteistön suoriutumaan toista paremmin.",
         },
         {
           period: "Loppuvuosi 2025",

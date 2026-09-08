@@ -391,7 +391,7 @@ export const de: SiteContent = {
   },
   showcase1: {
     eyebrow: "Costa del Sol",
-    heading: "Jede Immobilie erzählt eine Geschichte, die es verdient, gut erzählt zu werden — wir sorgen dafür, dass sie gehört wird.",
+    heading: "Jede Immobilie hat etwas Einzigartiges. Nutzen Sie es.",
   },
   showcase2: {
     eyebrow: "Präsentation",
@@ -405,7 +405,7 @@ export const de: SiteContent = {
     teamName: "Unser Betriebsteam",
     teamHeading: "Das Team vor Ort",
     teamIntro:
-      "Handwerk, Reinigung und Styling — alles wird von Menschen erledigt, die wir kennen und denen wir vertrauen, nicht von zufälligen Subunternehmern.",
+      "Handwerk, Reinigung und Styling — alles wird von Partnern erledigt, denen wir vertrauen, nicht von zufälligen Subunternehmern.",
     roles: [
       { title: "Hausmeister", description: "Instandhaltung, Reparaturen und Kontrollen zwischen den Aufenthalten." },
       { title: "Reinigungsteam", description: "Professionelle Endreinigung und Wäschewechsel nach jedem Gast." },
@@ -433,12 +433,12 @@ export const de: SiteContent = {
         {
           period: "2024",
           title: "Näher an der Immobilienbranche",
-          body: "Zu diesem Zeitpunkt hatten wir bereits Jahre mit Mietimmobilien selbst verbracht — Wohnungen in Norwegen gekauft, renoviert und vermietet, kurz- wie langfristig. Unsere Arbeit konzentrierte sich zunehmend auf Immobilien, Content, Fotografie, Positionierung und die Art, wie Häuser online präsentiert wurden. Wir sahen immer wieder dasselbe Problem: großartige Immobilien weit unter ihrem Potenzial vermarktet.",
+          body: "Zu diesem Zeitpunkt hatten wir bereits Jahre mit Mietimmobilien selbst verbracht — Wohnungen in Norwegen gemietet und über Mietarbitrage weitervermietet, kurz- wie langfristig, während wir die Immobilien, für die wir verantwortlich waren, renovierten und aufwerteten. Unsere Arbeit konzentrierte sich zunehmend auf Immobilien, Content, Fotografie, Positionierung und die Art, wie Häuser online präsentiert wurden. Wir sahen immer wieder dasselbe Problem: großartige Immobilien weit unter ihrem Potenzial vermarktet.",
         },
         {
           period: "2025",
           title: "Von Norwegen nach Spanien 🇪🇸",
-          body: "Wir zogen von Norwegen nach Spanien und erlebten den Mietmarkt der Costa del Sol von innen — als Anwohner und als Immobilieneigentümer und -betreiber. Aus Marketing-Know-how, kombiniert mit jahrelanger Erfahrung mit der Vermietung eigener Wohnungen zuhause, wurde etwas Größeres: das Verständnis dafür, was internationale Gäste erwarten, womit Eigentümer kämpfen, und was eine Immobilie besser performen lässt als eine andere.",
+          body: "Wir zogen von Norwegen nach Spanien und erlebten den Mietmarkt der Costa del Sol von innen — als Anwohner und als Vermietungsbetreiber. Aus Marketing-Know-how, kombiniert mit jahrelanger Erfahrung im Mieten, Untervermieten und Renovieren von Wohnungen zuhause, wurde etwas Größeres: das Verständnis dafür, was internationale Gäste erwarten, womit Eigentümer kämpfen, und was eine Immobilie besser performen lässt als eine andere.",
         },
         {
           period: "Ende 2025",

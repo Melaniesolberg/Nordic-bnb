@@ -391,7 +391,7 @@ export const es: SiteContent = {
   },
   showcase1: {
     eyebrow: "Costa del Sol",
-    heading: "Cada propiedad cuenta una historia que merece contarse bien — nos aseguramos de que se escuche.",
+    heading: "Cada propiedad tiene algo único. Aprovéchalo.",
   },
   showcase2: {
     eyebrow: "Presentación",
@@ -405,7 +405,7 @@ export const es: SiteContent = {
     teamName: "Nuestro equipo operativo",
     teamHeading: "El equipo sobre el terreno",
     teamIntro:
-      "Mantenimiento, limpieza y estilismo — todo lo gestionan personas que conocemos y en las que confiamos, no subcontratistas al azar.",
+      "Mantenimiento, limpieza y estilismo — todo lo gestionan socios de confianza, no subcontratistas al azar.",
     roles: [
       { title: "Mantenimiento", description: "Reparaciones, mantenimiento y revisiones entre estancias." },
       { title: "Equipo de limpieza", description: "Limpieza profesional y cambio de textiles tras cada huésped." },
@@ -433,12 +433,12 @@ export const es: SiteContent = {
         {
           period: "2024",
           title: "Más cerca del sector inmobiliario",
-          body: "Para entonces ya llevábamos años relacionados con el alquiler de propiedades nosotros mismos — comprando, reformando y alquilando viviendas en Noruega, tanto a corto como a largo plazo. Nuestro trabajo se centró cada vez más en la propiedad, el contenido, la fotografía, el posicionamiento y la forma en que se presentaban las viviendas en internet. Vimos el mismo problema una y otra vez: propiedades excelentes comercializadas muy por debajo de su potencial.",
+          body: "Para entonces ya llevábamos años relacionados con el alquiler de propiedades nosotros mismos — alquilando viviendas en Noruega y subarrendándolas mediante arbitraje de alquiler, tanto a corto como a largo plazo, mientras reformábamos y revalorizábamos las propiedades de las que éramos responsables. Nuestro trabajo se centró cada vez más en la propiedad, el contenido, la fotografía, el posicionamiento y la forma en que se presentaban las viviendas en internet. Vimos el mismo problema una y otra vez: propiedades excelentes comercializadas muy por debajo de su potencial.",
         },
         {
           period: "2025",
           title: "De Noruega a España 🇪🇸",
-          body: "Nos mudamos de Noruega a España y vivimos el mercado del alquiler de la Costa del Sol desde dentro — como residentes y como propietarios y operadores de propiedades. Lo que empezó como conocimiento de marketing, combinado con años de experiencia alquilando nuestras propias viviendas en casa, se convirtió en algo mayor: entender qué esperan los huéspedes internacionales, con qué luchan los propietarios y qué hace que una propiedad rinda mejor que otra.",
+          body: "Nos mudamos de Noruega a España y vivimos el mercado del alquiler de la Costa del Sol desde dentro — como residentes y como operadores de alquiler. Lo que empezó como conocimiento de marketing, combinado con años de experiencia alquilando, subarrendando y reformando viviendas en casa, se convirtió en algo mayor: entender qué esperan los huéspedes internacionales, con qué luchan los propietarios y qué hace que una propiedad rinda mejor que otra.",
         },
         {
           period: "Finales de 2025",

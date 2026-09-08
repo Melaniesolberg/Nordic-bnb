@@ -388,7 +388,7 @@ export const en: SiteContent = {
   },
   showcase1: {
     eyebrow: "Costa del Sol",
-    heading: "Every property tells a story worth telling well — we make sure it's heard.",
+    heading: "Every property has something unique. Use it.",
   },
   showcase2: {
     eyebrow: "Presentation",
@@ -402,7 +402,7 @@ export const en: SiteContent = {
     teamName: "Our operations team",
     teamHeading: "The team on the ground",
     teamIntro:
-      "Handyman work, cleaning and styling — all handled by people we know and trust, not random subcontractors.",
+      "Handyman work, cleaning and styling — all handled by partners we trust, not random subcontractors.",
     roles: [
       { title: "Handyman", description: "Maintenance, repairs and upkeep between stays." },
       { title: "Cleaning team", description: "Professional turnover and linen service after every guest." },
@@ -430,12 +430,12 @@ export const en: SiteContent = {
         {
           period: "2024",
           title: "Closer to real estate",
-          body: "By then we'd already spent years around rental property ourselves — buying, renovating and letting out homes in Norway, short-term and long-term alike. Our work turned increasingly toward property, content, photography, positioning and the way homes were presented online. We kept seeing the same problem: great properties marketed far below their potential.",
+          body: "By then we'd already spent years around rental property ourselves — renting homes in Norway and subletting them through rental arbitrage, short-term and long-term alike, while renovating and improving the properties we were responsible for. Our work turned increasingly toward property, content, photography, positioning and the way homes were presented online. We kept seeing the same problem: great properties marketed far below their potential.",
         },
         {
           period: "2025",
           title: "From Norway to Spain 🇪🇸",
-          body: "We moved from Norway to Spain and experienced the Costa del Sol rental market from the inside — as residents and as property owners and operators. What started as marketing knowledge, paired with years of renting out our own properties back home, became something bigger: understanding what international guests expect, what owners struggle with, and what makes one property outperform another.",
+          body: "We moved from Norway to Spain and experienced the Costa del Sol rental market from the inside — as residents and as rental operators. What started as marketing knowledge, paired with years of renting, subletting and renovating homes back home, became something bigger: understanding what international guests expect, what owners struggle with, and what makes one property outperform another.",
         },
         {
           period: "Late 2025",

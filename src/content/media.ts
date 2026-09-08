@@ -9,26 +9,29 @@
  * replacing the URL string.
  */
 export const media = {
-  // Real Nordic BnB brand assets. brandLogo is the user's lockup file
-  // (icon + "Nordic BnB" wordmark laid out together as one image). Round 12's
-  // casing edit accidentally added a white background; round 13 redid the
-  // edit from the original file and ran it through background removal, so
-  // this is back to a fully transparent PNG with only the wordmark casing
-  // corrected to "Nordic BnB" — do not regenerate again beyond that fix.
+  // Real Nordic BnB brand assets. brandLogo is the user's final exact
+  // lockup file (icon + "Nordic BnB" wordmark laid out together as one
+  // image), used exactly as uploaded — do not run through background
+  // removal or regenerate it; the user asked for this file unmodified.
+  // Round 12/13 tried image-edits to fix the wordmark casing but both
+  // attempts broke the logo (white background, then a blank/broken render)
+  // — round 14 reverted straight back to this original, untouched file.
   // brandIcon is the icon alone, used standalone for the favicon and small
   // decorative marks. Do not swap for another variant.
   brandLogo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_141240_402769c7-b5b8-4f1e-8410-e7cd863aa2db.png",
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/7b9c8310-432d-4798-837e-838e5a9c5f95.png",
   brandIcon:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_144026_4d601721-c7fe-4183-9978-c1ed89f0ef51.png",
   brandMerch:
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/0b6e253a-5c3d-4549-8b13-bc988759332b.png",
 
-  // Round 13: simple partner-company logo covers for the Team page's three
-  // role cards (Handyman, Cleaning team). The Photographer/stylist card
-  // reuses brandLogo directly, so no separate asset is needed for it.
+  // Simple partner-company logo covers for the Team page's three role
+  // cards (Handyman, Cleaning team). The Photographer/stylist card reuses
+  // brandLogo directly, so no separate asset is needed for it. Round 14:
+  // handyman partner renamed to "MSandro Reforma" with a clean logo on a
+  // white background.
   roleHandymanLogo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_141611_f4030ab4-e047-4b76-9fec-f05c51fa605a.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_155415_0e12052b-4748-4de8-9183-c6021faf05a3.png",
   roleCleaningLogo:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_141615_2a9acf12-d7b1-4717-8e89-f9a567371a18.png",
 
@@ -122,14 +125,6 @@ export const media = {
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_094141_2601516f-f042-4a87-9500-b16787052be0.png",
   roomBeforeUnstyled:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260906_110715_0036c165-cac1-4b8b-8a08-24d418ec0a00.png",
-
-  // Round 13: the top BeforeAfter section was rebuilt entirely around this
-  // one cinematic 4K video (a person sets up a dull listing, the camera
-  // dives into the screen into the flat unstyled room, pulls back out,
-  // then the same beat repeats for a new, beautifully styled listing) —
-  // replacing the old drag-slider + comparison-table layout completely.
-  beforeAfterListingVideo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_141547_b232e04a-3498-4173-841a-7b11b55a10b5.mp4",
 
   // Handover visual for the process section's first step ("We take over the
   // property") — a nice Marbella villa with its front door open and a

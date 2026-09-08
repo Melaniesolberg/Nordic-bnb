@@ -21,9 +21,9 @@ export default function ContactPage({ locale }: { locale: Locale }) {
   ];
 
   const ROLE_COVERS = [
-    { src: media.roleHandymanLogo, alt: "Costa Handyman Services", caption: "" },
-    { src: media.roleCleaningLogo, alt: "Costa Cleaning Group", caption: "" },
-    { src: media.brandLogo, alt: "Nordic BnB", caption: contactPage.photoDesignLabel },
+    { src: media.roleHandymanLogo, alt: "MSandro Reforma", caption: "", boxed: false },
+    { src: media.roleCleaningLogo, alt: "Costa Cleaning Group", caption: "", boxed: false },
+    { src: media.brandLogo, alt: "Nordic BnB", caption: contactPage.photoDesignLabel, boxed: true },
   ];
 
   return (
@@ -83,9 +83,15 @@ export default function ContactPage({ locale }: { locale: Locale }) {
                 return (
                   <Reveal key={role.title} delay={0.05 * i}>
                     <div className="h-full bg-ivory p-7">
-                      <div className="relative h-10 w-28">
-                        <Image src={cover.src} alt={cover.alt} fill sizes="112px" className="object-contain object-left" />
-                      </div>
+                      {cover.boxed ? (
+                        <div className="relative h-20 w-56 rounded-sm border border-charcoal/12 bg-ivory-soft p-3">
+                          <Image src={cover.src} alt={cover.alt} fill sizes="224px" className="object-contain p-3" />
+                        </div>
+                      ) : (
+                        <div className="relative h-20 w-56">
+                          <Image src={cover.src} alt={cover.alt} fill sizes="224px" className="object-contain object-left" />
+                        </div>
+                      )}
                       {cover.caption && (
                         <p className="mt-1 text-[0.7rem] tracking-wide text-charcoal/40">{cover.caption}</p>
                       )}

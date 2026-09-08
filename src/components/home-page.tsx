@@ -29,8 +29,11 @@ export default function HomePage({ locale }: { locale: Locale }) {
         <Hero hero={content.hero} formHref={formHref} imageSrc={media.villaAerial} />
         <BeforeAfter
           beforeAfter={content.beforeAfter}
-          videoSrc={media.beforeAfterListingVideo}
-          posterSrc={media.roomAfterStyled}
+          listingImages={[
+            { beforeSrc: media.villaBefore, afterSrc: media.villaAfter },
+            { beforeSrc: media.houseBefore, afterSrc: media.houseAfter },
+            { beforeSrc: media.roomBeforeUnstyled, afterSrc: media.roomAfterStyled },
+          ]}
         />
         <PropertyShowcase
           imageSrc={media.seaView}

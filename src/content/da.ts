@@ -391,7 +391,7 @@ export const da: SiteContent = {
   },
   showcase1: {
     eyebrow: "Costa del Sol",
-    heading: "Hver ejendom fortæller en historie, der fortjener at blive fortalt godt — vi sørger for, at den bliver hørt.",
+    heading: "Hver ejendom har noget unikt. Brug det.",
   },
   showcase2: {
     eyebrow: "Præsentation",
@@ -405,7 +405,7 @@ export const da: SiteContent = {
     teamName: "Vores driftsteam",
     teamHeading: "Teamet på jorden",
     teamIntro:
-      "Håndværk, rengøring og styling — alt håndteres af folk, vi kender og stoler på, ikke tilfældige underleverandører.",
+      "Håndværk, rengøring og styling — alt håndteres af samarbejdspartnere, vi stoler på, ikke tilfældige underleverandører.",
     roles: [
       { title: "Handyman", description: "Vedligeholdelse, reparationer og tilsyn mellem ophold." },
       { title: "Rengøringsteam", description: "Professionel klargøring og skift af tekstiler efter hver gæst." },
@@ -433,12 +433,12 @@ export const da: SiteContent = {
         {
           period: "2024",
           title: "Tættere på ejendomsbranchen",
-          body: "På det tidspunkt havde vi allerede brugt flere år på udlejningsejendom selv — købt, renoveret og udlejet boliger i Norge, både korttids- og langtidsudlejning. Vores arbejde blev i stigende grad fokuseret på ejendom, indhold, fotografering, positionering og måden hjem blev præsenteret på online. Vi så det samme problem igen og igen: gode ejendomme markedsført langt under deres potentiale.",
+          body: "På det tidspunkt havde vi allerede brugt flere år på udlejningsejendom selv — lejet boliger i Norge og fremlejet dem gennem udlejningsarbitrage, både korttids- og langtidsudlejning, mens vi renoverede og øgede værdien af de ejendomme, vi havde ansvaret for. Vores arbejde blev i stigende grad fokuseret på ejendom, indhold, fotografering, positionering og måden hjem blev præsenteret på online. Vi så det samme problem igen og igen: gode ejendomme markedsført langt under deres potentiale.",
         },
         {
           period: "2025",
           title: "Fra Norge til Spanien 🇪🇸",
-          body: "Vi flyttede fra Norge til Spanien og oplevede udlejningsmarkedet på Costa del Sol indefra — som beboere og som ejendomsejere og -operatører. Det, der startede som markedsføringsviden, kombineret med flere års erfaring med at udleje egne boliger derhjemme, blev til noget større: forståelse for, hvad internationale gæster forventer, hvad ejere kæmper med, og hvad der gør, at én ejendom præsterer bedre end en anden.",
+          body: "Vi flyttede fra Norge til Spanien og oplevede udlejningsmarkedet på Costa del Sol indefra — som beboere og som udlejningsoperatører. Det, der startede som markedsføringsviden, kombineret med flere års erfaring med at leje, fremleje og renovere boliger derhjemme, blev til noget større: forståelse for, hvad internationale gæster forventer, hvad ejere kæmper med, og hvad der gør, at én ejendom præsterer bedre end en anden.",
         },
         {
           period: "Sent 2025",

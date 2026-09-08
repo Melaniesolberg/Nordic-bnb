@@ -391,7 +391,7 @@ export const fr: SiteContent = {
   },
   showcase1: {
     eyebrow: "Costa del Sol",
-    heading: "Chaque bien raconte une histoire qui mérite d'être bien racontée — nous veillons à ce qu'elle soit entendue.",
+    heading: "Chaque bien a quelque chose d'unique. Exploitez-le.",
   },
   showcase2: {
     eyebrow: "Présentation",
@@ -405,7 +405,7 @@ export const fr: SiteContent = {
     teamName: "Notre équipe opérationnelle",
     teamHeading: "L'équipe sur le terrain",
     teamIntro:
-      "Bricolage, ménage et mise en scène — tout est géré par des personnes que nous connaissons et en qui nous avons confiance, pas des sous-traitants au hasard.",
+      "Bricolage, ménage et mise en scène — tout est géré par des partenaires en qui nous avons confiance, pas des sous-traitants au hasard.",
     roles: [
       { title: "Homme à tout faire", description: "Entretien, réparations et contrôles entre chaque séjour." },
       { title: "Équipe de ménage", description: "Ménage professionnel et changement du linge après chaque voyageur." },
@@ -433,12 +433,12 @@ export const fr: SiteContent = {
         {
           period: "2024",
           title: "Plus proche de l'immobilier",
-          body: "À cette époque, nous avions déjà passé des années autour de la location immobilière nous-mêmes — achetant, rénovant et louant des logements en Norvège, en courte comme en longue durée. Notre travail s'est de plus en plus concentré sur le bien, le contenu, la photographie, le positionnement et la manière dont les maisons étaient présentées en ligne. Nous avons vu le même problème revenir sans cesse : de superbes biens commercialisés bien en dessous de leur potentiel.",
+          body: "À cette époque, nous avions déjà passé des années autour de la location immobilière nous-mêmes — louant des logements en Norvège et les relouant via l'arbitrage locatif, en courte comme en longue durée, tout en rénovant et en valorisant les biens dont nous avions la responsabilité. Notre travail s'est de plus en plus concentré sur le bien, le contenu, la photographie, le positionnement et la manière dont les maisons étaient présentées en ligne. Nous avons vu le même problème revenir sans cesse : de superbes biens commercialisés bien en dessous de leur potentiel.",
         },
         {
           period: "2025",
           title: "De la Norvège à l'Espagne 🇪🇸",
-          body: "Nous avons déménagé de Norvège en Espagne et vécu le marché locatif de la Costa del Sol de l'intérieur — comme résidents et comme propriétaires et exploitants de biens. Ce qui n'était au départ que des connaissances marketing, combinées à des années d'expérience de location de nos propres logements chez nous, est devenu quelque chose de plus grand : comprendre ce qu'attendent les voyageurs internationaux, ce contre quoi luttent les propriétaires, et ce qui fait qu'un bien surperforme un autre.",
+          body: "Nous avons déménagé de Norvège en Espagne et vécu le marché locatif de la Costa del Sol de l'intérieur — comme résidents et comme opérateurs locatifs. Ce qui n'était au départ que des connaissances marketing, combinées à des années d'expérience à louer, relouer et rénover des logements chez nous, est devenu quelque chose de plus grand : comprendre ce qu'attendent les voyageurs internationaux, ce contre quoi luttent les propriétaires, et ce qui fait qu'un bien surperforme un autre.",
         },
         {
           period: "Fin 2025",

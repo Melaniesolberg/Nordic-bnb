@@ -391,7 +391,7 @@ export const sv: SiteContent = {
   },
   showcase1: {
     eyebrow: "Costa del Sol",
-    heading: "Varje fastighet har en historia värd att berätta väl — vi ser till att den blir hörd.",
+    heading: "Varje fastighet har något unikt. Använd det.",
   },
   showcase2: {
     eyebrow: "Presentation",
@@ -405,7 +405,7 @@ export const sv: SiteContent = {
     teamName: "Vårt driftteam",
     teamHeading: "Teamet på plats",
     teamIntro:
-      "Hantverk, städning och styling — allt hanteras av folk vi känner och litar på, inte slumpmässiga underleverantörer.",
+      "Hantverk, städning och styling — allt hanteras av samarbetspartners vi litar på, inte slumpmässiga underleverantörer.",
     roles: [
       { title: "Handyman", description: "Underhåll, reparationer och tillsyn mellan bokningar." },
       { title: "Städteam", description: "Professionell städning och byte av textilier efter varje gäst." },
@@ -433,12 +433,12 @@ export const sv: SiteContent = {
         {
           period: "2024",
           title: "Närmare fastighetsbranschen",
-          body: "Vid det laget hade vi redan lagt flera år på uthyrningsfastigheter själva — köpt, renoverat och hyrt ut bostäder i Norge, både korttids- och långtidsuthyrning. Vårt arbete blev allt mer inriktat på fastigheter, innehåll, fotografering, positionering och hur bostäder presenterades online. Vi såg samma problem om och om igen: bra fastigheter marknadsförda långt under sin potential.",
+          body: "Vid det laget hade vi redan lagt flera år på uthyrningsfastigheter själva — hyrt bostäder i Norge och hyrt ut dem vidare genom uthyrningsarbitrage, både korttids- och långtidsuthyrning, samtidigt som vi renoverade och höjde värdet på de fastigheter vi ansvarade för. Vårt arbete blev allt mer inriktat på fastigheter, innehåll, fotografering, positionering och hur bostäder presenterades online. Vi såg samma problem om och om igen: bra fastigheter marknadsförda långt under sin potential.",
         },
         {
           period: "2025",
           title: "Från Norge till Spanien 🇪🇸",
-          body: "Vi flyttade från Norge till Spanien och upplevde uthyrningsmarknaden på Costa del Sol inifrån — som boende och som fastighetsägare och -operatörer. Det som började som marknadsföringskunskap, kombinerat med flera års erfarenhet av att hyra ut egna bostäder hemma, blev till något större: förståelse för vad internationella gäster förväntar sig, vad ägare kämpar med, och vad som gör att en fastighet presterar bättre än en annan.",
+          body: "Vi flyttade från Norge till Spanien och upplevde uthyrningsmarknaden på Costa del Sol inifrån — som boende och som uthyrningsoperatörer. Det som började som marknadsföringskunskap, kombinerat med flera års erfarenhet av att hyra, hyra ut i andra hand och renovera bostäder hemma, blev till något större: förståelse för vad internationella gäster förväntar sig, vad ägare kämpar med, och vad som gör att en fastighet presterar bättre än en annan.",
         },
         {
           period: "Sent 2025",
