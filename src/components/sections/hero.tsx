@@ -1,9 +1,16 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useScroll, useTransform, useReducedMotion, type Variants } from "framer-motion";
+import {
+  motion,
+  useScroll,
+  useTransform,
+  useMotionValueEvent,
+  useReducedMotion,
+  type Variants,
+} from "framer-motion";
 import Magnetic from "@/components/ui/magnetic-button";
 import { WHATSAPP_LINK } from "@/lib/utils";
 import type { HeroContent } from "@/content/types";
@@ -30,24 +37,36 @@ export default function Hero({
   hero,
   formHref,
   imageSrc,
+  videoSrc,
 }: {
   hero: HeroContent;
   formHref: string;
   imageSrc?: string;
+  videoSrc?: string;
 }) {
   const sectionRef = useRef<HTMLElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const prefersReduced = useReducedMotion();
+  const [videoDuration, setVideoDuration] = useState(0);
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"],
   });
 
-  const bgScale = useTransform(scrollYProgress, [0, 1], [1, prefersReduced ? 1 : 1.18]);
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", prefersReduced ? "0%" : "14%"]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.55], [1, 0]);
   const contentY = useTransform(scrollYProgress, [0, 0.6], [0, prefersReduced ? 0 : -60]);
   const vignette = useTransform(scrollYProgress, [0, 1], [0.35, 0.75]);
+
+  // Scroll scrubs the hero video's playhead directly — no autoplay. The
+  // video is the camera motion itself, so it replaces the old CSS
+  // scale/translate parallax rather than layering on top of it.
+  useMotionValueEvent(scrollYProgress, "change", (progress) => {
+    if (prefersReduced || !videoDuration) return;
+    const video = videoRef.current;
+    if (!video) return;
+    video.currentTime = Math.min(videoDuration, Math.max(0, progress * videoDuration));
+  });
 
   return (
     <section
@@ -56,7 +75,7 @@ export default function Hero({
       className="relative flex h-[100svh] min-h-[640px] w-full items-end overflow-hidden bg-charcoal grain"
     >
       {/* Background scene */}
-      <motion.div className="absolute inset-0" style={{ scale: bgScale, y: bgY }}>
+      <div className="absolute inset-0">
         <div
           className="absolute inset-0"
           style={{
@@ -100,23 +119,39 @@ export default function Hero({
           <path d="M470 130V210" stroke="#0c0a08" strokeWidth="2" />
         </svg>
 
-        {/* Cinematic photograph, layered above the crafted gradient scene */}
-        {imageSrc && (
-          <Image
-            src={imageSrc}
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-90"
+        {/* Cinematic scroll-scrubbed hero footage, layered above the crafted
+            gradient scene. Falls back to the static photograph when there's
+            no video (or the user prefers reduced motion) — either way the
+            opening frame matches the exact same hero shot. */}
+        {videoSrc && !prefersReduced ? (
+          <video
+            ref={videoRef}
+            src={videoSrc}
+            poster={imageSrc}
+            muted
+            playsInline
+            preload="auto"
+            className="absolute inset-0 h-full w-full object-cover opacity-90"
+            onLoadedMetadata={(e) => setVideoDuration(e.currentTarget.duration)}
           />
+        ) : (
+          imageSrc && (
+            <Image
+              src={imageSrc}
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover opacity-90"
+            />
+          )
         )}
 
         <motion.div
           className="absolute inset-0 bg-charcoal"
           style={{ opacity: vignette }}
         />
-      </motion.div>
+      </div>
 
       {/* Content */}
       <motion.div
