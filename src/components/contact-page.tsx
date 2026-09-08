@@ -86,8 +86,8 @@ export default function ContactPage({ locale }: { locale: Locale }) {
 
         <section className="bg-charcoal py-24 sm:py-32">
           <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
-            <div className="grid grid-cols-1 gap-16 sm:grid-cols-2 sm:gap-10">
-              <Reveal>
+            <Reveal>
+              <div className="max-w-xl">
                 <Eyebrow tone="light">{contactPage.emailHeading}</Eyebrow>
                 <h2 className="font-serif-display text-3xl text-ivory sm:text-4xl">
                   {contactPage.ctaHeading}
@@ -105,9 +105,17 @@ export default function ContactPage({ locale }: { locale: Locale }) {
                     </a>
                   </Magnetic>
                 </div>
-              </Reveal>
+              </div>
+            </Reveal>
+          </div>
+        </section>
 
-              <Reveal delay={0.08}>
+        <StoryTimeline story={contactPage.story} />
+
+        <section className="bg-charcoal py-24 sm:py-32">
+          <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+            <Reveal>
+              <div className="max-w-xl">
                 <Eyebrow tone="light">{contactPage.recruitEyebrow}</Eyebrow>
                 <h2 className="font-serif-display text-3xl text-ivory sm:text-4xl">
                   {contactPage.recruitHeading}
@@ -125,12 +133,10 @@ export default function ContactPage({ locale }: { locale: Locale }) {
                     </a>
                   </Magnetic>
                 </div>
-              </Reveal>
-            </div>
+              </div>
+            </Reveal>
           </div>
         </section>
-
-        <StoryTimeline story={contactPage.story} />
       </main>
       <Footer locale={locale} footer={footer} nav={nav} locationTag={hero.locationTag} />
       <WhatsappFab label={nav.whatsapp} message={nav.whatsappMessage} />

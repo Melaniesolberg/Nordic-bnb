@@ -2,6 +2,7 @@
 
 import { useRef, useState, useCallback } from "react";
 import Image from "next/image";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import type { BeforeAfterContent } from "@/content/types";
@@ -10,14 +11,24 @@ export default function BeforeAfter({
   beforeAfter,
   beforeSrc,
   afterSrc,
+  afterVideoSrc,
 }: {
   beforeAfter: BeforeAfterContent;
   beforeSrc: string;
   afterSrc: string;
+  afterVideoSrc?: string;
 }) {
   const [pos, setPos] = useState(90);
   const containerRef = useRef<HTMLDivElement>(null);
+  const frameRef = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
+
+  const { scrollYProgress } = useScroll({
+    target: frameRef,
+    offset: ["start 0.95", "start 0.35"],
+  });
+  const scale = useTransform(scrollYProgress, [0, 1], [0.94, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
   const updateFromClientX = useCallback((clientX: number) => {
     const el = containerRef.current;
@@ -28,20 +39,36 @@ export default function BeforeAfter({
   }, []);
 
   return (
-    <section className="relative bg-ivory py-24 sm:py-32 lg:py-40">
-      <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+    <section className="relative overflow-hidden bg-charcoal py-24 sm:py-32 lg:py-40">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.15]"
+        style={{
+          background:
+            "radial-gradient(55% 40% at 20% 0%, rgba(245,66,63,0.5) 0%, transparent 70%), radial-gradient(50% 40% at 85% 100%, rgba(245,66,63,0.35) 0%, transparent 70%)",
+        }}
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
         <Reveal>
-          <Eyebrow>{beforeAfter.eyebrow}</Eyebrow>
-          <h2 className="font-serif-display text-display-md mt-6 max-w-3xl text-charcoal">
+          <Eyebrow tone="light">{beforeAfter.eyebrow}</Eyebrow>
+          <h2 className="font-serif-display text-display-md mt-6 max-w-3xl text-ivory">
             {beforeAfter.heading}
           </h2>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-charcoal/65 sm:text-lg">
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/65 sm:text-lg">
             {beforeAfter.intro}
           </p>
-          <p className="mt-3 text-xs text-charcoal/40">{beforeAfter.disclaimer}</p>
+          <p className="mt-3 text-xs text-ivory/35">{beforeAfter.disclaimer}</p>
         </Reveal>
 
-        <Reveal delay={0.1}>
+        <motion.div ref={frameRef} style={{ scale, opacity }} className="relative mt-14">
+          <div
+            className="pointer-events-none absolute -inset-6 rounded-[28px] opacity-60 blur-2xl sm:-inset-10"
+            style={{
+              background:
+                "linear-gradient(120deg, rgba(245,66,63,0.35), transparent 40%, transparent 60%, rgba(245,66,63,0.25))",
+            }}
+            aria-hidden
+          />
           <div
             ref={containerRef}
             role="slider"
@@ -50,7 +77,7 @@ export default function BeforeAfter({
             aria-valuenow={Math.round(pos)}
             aria-valuemin={0}
             aria-valuemax={100}
-            className="relative mt-14 aspect-[4/3] w-full cursor-ew-resize touch-none overflow-hidden rounded-sm bg-charcoal-mute select-none sm:aspect-[16/9]"
+            className="relative aspect-[4/3] w-full cursor-ew-resize touch-none overflow-hidden rounded-md bg-charcoal-mute shadow-[0_60px_140px_rgba(0,0,0,0.55)] select-none ring-1 ring-ivory/10 sm:aspect-[21/9]"
             onPointerDown={(e) => {
               dragging.current = true;
               (e.target as HTMLElement).setPointerCapture(e.pointerId);
@@ -69,34 +96,49 @@ export default function BeforeAfter({
               src={beforeSrc}
               alt={beforeAfter.beforeAlt}
               fill
-              sizes="(min-width: 1024px) 1400px, 100vw"
-              className="pointer-events-none object-cover"
+              sizes="(min-width: 1024px) 1600px, 100vw"
+              className="pointer-events-none object-cover grayscale-[35%] brightness-90 contrast-95"
               draggable={false}
             />
             <div
               className="pointer-events-none absolute inset-0 overflow-hidden"
               style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }}
             >
-              <Image
-                src={afterSrc}
-                alt={beforeAfter.afterAlt}
-                fill
-                sizes="(min-width: 1024px) 1400px, 100vw"
-                className="object-cover"
-                draggable={false}
-              />
+              {afterVideoSrc ? (
+                <video
+                  src={afterVideoSrc}
+                  poster={afterSrc}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              ) : (
+                <Image
+                  src={afterSrc}
+                  alt={beforeAfter.afterAlt}
+                  fill
+                  sizes="(min-width: 1024px) 1600px, 100vw"
+                  className="object-cover"
+                  draggable={false}
+                />
+              )}
             </div>
 
-            {/* Labels — the styled "after" image is clipped to the left portion of the
+            {/* Labels — the styled "after" media is clipped to the left portion of the
                 container (0–pos%), and the base "before" image shows through on the
                 right, so the labels are pinned opposite to their usual sides. */}
             <div
-              className="pointer-events-none absolute left-5 top-5 rounded-full bg-coral/90 px-4 py-1.5 text-xs font-medium tracking-wide text-ivory backdrop-blur-sm"
+              className="pointer-events-none absolute left-5 top-5 flex items-center gap-2 rounded-full bg-coral/90 px-4 py-1.5 text-xs font-medium tracking-wide text-ivory backdrop-blur-sm"
               style={{ opacity: pos > 12 ? 1 : 0, transition: "opacity 0.3s" }}
             >
+              {afterVideoSrc && (
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-ivory" aria-hidden />
+              )}
               {beforeAfter.afterLabel}
             </div>
-            <div className="pointer-events-none absolute right-5 top-5 rounded-full bg-charcoal/70 px-4 py-1.5 text-xs font-medium tracking-wide text-ivory backdrop-blur-sm">
+            <div className="pointer-events-none absolute right-5 top-5 rounded-full bg-charcoal/70 px-4 py-1.5 text-xs font-medium tracking-wide text-ivory/80 backdrop-blur-sm">
               {beforeAfter.beforeLabel}
             </div>
 
@@ -113,17 +155,17 @@ export default function BeforeAfter({
               </div>
             </div>
           </div>
-        </Reveal>
+        </motion.div>
 
         <Reveal delay={0.15}>
-          <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-[2px] bg-charcoal/10 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-[2px] bg-ivory/10 sm:grid-cols-2 lg:grid-cols-5">
             {beforeAfter.fields.map((f) => (
-              <div key={f.label} className="bg-ivory p-6">
-                <p className="eyebrow text-charcoal/40">{f.label}</p>
-                <p className="mt-3 text-sm leading-relaxed text-charcoal/45 line-through decoration-charcoal/25">
+              <div key={f.label} className="bg-charcoal-soft p-6">
+                <p className="eyebrow text-ivory/40">{f.label}</p>
+                <p className="mt-3 text-sm leading-relaxed text-ivory/40 line-through decoration-ivory/25">
                   {f.before}
                 </p>
-                <p className="mt-2 text-sm leading-relaxed text-charcoal">{f.after}</p>
+                <p className="mt-2 text-sm leading-relaxed text-ivory">{f.after}</p>
               </div>
             ))}
           </div>

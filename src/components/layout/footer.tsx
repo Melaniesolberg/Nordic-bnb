@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "@/components/ui/logo";
-import { CONTACT, ORG_NUMBER_URL, WHATSAPP_LINK } from "@/lib/utils";
+import { CONTACT, ORG_NUMBER_URL } from "@/lib/utils";
 import { locales, localeHref, localeLabels, type Locale } from "@/i18n/config";
 import type { FooterContent, NavContent } from "@/content/types";
 
@@ -58,16 +58,6 @@ export default function Footer({
               <li>
                 <a href={`mailto:${CONTACT.emailSupport}`} className="text-ivory/75 transition-colors hover:text-coral">
                   {CONTACT.emailSupport}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={WHATSAPP_LINK()}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-ivory/75 transition-colors hover:text-coral"
-                >
-                  {CONTACT.whatsappDisplay}
                 </a>
               </li>
             </ul>

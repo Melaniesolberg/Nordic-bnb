@@ -72,7 +72,7 @@ export const fi: SiteContent = {
     eyebrow: "Ennen → jälkeen",
     heading: "Sama kiinteistö. Täysin erilainen ilmoitus.",
     intro:
-      "Tavalliset ilmoitukset aliarvioivat poikkeukselliset kiinteistöt. Näin kaikki muuttuu, kun Nordic BnB ottaa ohjat.",
+      "Kumman ilmoituksen sinä valitsisit?",
     beforeLabel: "Ennen",
     afterLabel: "Nordic BnB",
     sliderAriaLabel: "Ennen ja jälkeen -ilmoitusvertailu",
@@ -113,7 +113,7 @@ export const fi: SiteContent = {
     intro:
       "Katsaus siihen, miten Nordic BnB asemoi ilmoitukset uudelleen — asunnot, huvilat ja talot — pitkin Costa del Solia.",
     realResultsLabel: "Aitoja tuloksia",
-    disclaimer: "Aidot ennen/jälkeen-kuvat. Kasvuluvut ovat havainnollistavia esimerkkejä, kunnes voimme julkaista todennettua asiakasdataa.",
+    disclaimer: "Aidot ennen/jälkeen-kuvat ja aidot kasvuluvut omilta kiinteistöiltämme.",
     beforeLabel: "Ennen",
     afterLabel: "Jälkeen",
     properties: [
@@ -298,11 +298,11 @@ export const fi: SiteContent = {
       "Nordic BnB:n takana on paikallinen toimintaverkosto: siivous, tyylittely, huolto ja paikan päällä tapahtuva koordinointi koko Costa del Solilla, yhdessä perustajien kanssa, jotka uskovat, että omistajat ansaitsevat täyden näkyvyyden siihen, miten heidän kiinteistönsä suoriutuu.",
     ],
     founderName: "Petter Solberg",
-    founderRole: "Founder & Head of Growth, Nordic BnB",
+    founderRole: "Founder & Head of Growth",
     founderQuote:
-      "Emme vain ylläpidä ilmoitusta — rakennamme kiinteistön, joka oikeasti konvertoi. Tunnemme Costa del Solin markkinat, ja tunnemme vieraat, erityisesti pohjoismaiset vieraat, jotka varaavat täältä. Emmekä hallinnoi vain etänä — oma huoltomies- ja kunnossapitotiimimme tekee päivitykset, korjaukset ja huollon itse, jokaisella hallinnoimallamme kiinteistöllä.",
+      "Emme vain ylläpidä ilmoitusta — rakennamme ja muotoilemme kiinteistön, joka oikeasti konvertoi. Tunnemme Costa del Solin markkinat, ja tunnemme vieraat, erityisesti pohjoismaiset vieraat, jotka varaavat täältä.",
     founder2Name: "Melanie Solberg",
-    founder2Role: "Head of Operations & Marketing, Nordic BnB",
+    founder2Role: "Head of Operations & Marketing",
     founder2Quote:
       "Jokainen omistaja ansaitsee nähdä tarkalleen, miten hänen kiinteistönsä suoriutuu — ei arvailua, ei mustaa laatikkoa.",
   },
@@ -326,6 +326,60 @@ export const fi: SiteContent = {
         quote:
           "Hoidin sitä itse kolme vuotta. Nyt minun ei tarvitse huolehtia — ei valituksia, eikä puhelin enää soi keskellä yötä.",
         name: "Carlos M.",
+        location: "Benalmádena",
+      },
+      {
+        quote:
+          "Hoitaa sen paremmin kuin minä itse, ja hallinnoin ennen kolmea kiinteistöä.",
+        name: "Erik B.",
+        location: "Mijas",
+      },
+      {
+        quote:
+          "Olin epäileväinen koko homman luovuttamisesta, mutta raportointi on yksityiskohtaisempaa kuin se, mitä saan kirjanpitäjältäni. Näen käyttöasteen, siivouksen, kaiken.",
+        name: "Sofia T.",
+        location: "Marbella",
+      },
+      {
+        quote:
+          "Perimme vanhempieni asunnon emmekä tienneet, mitä sillä tehdä. Nordic BnB kuvasi sen, listasi uudelleen, ja kuudessa viikossa saimme ensimmäiset varaukset. Vuotta myöhemmin se suoriutuu paremmin kuin vastaavat asunnot lähialueella, enkä ole koskaan joutunut asioimaan vieraan kanssa suoraan.",
+        name: "Henrik J.",
+        location: "Fuengirola",
+      },
+      {
+        quote:
+          "Nopeita vastaamaan, ja siivous on joka kerta todella moitteeton.",
+        name: "Maja P.",
+        location: "Benalmádena",
+      },
+      {
+        quote:
+          "Vaihdoin toisesta toimistosta, joka tuskin viestitti. Nordic BnB soittaa oikeasti, kun jokin vaatii päätöksen, sen sijaan että hoitaisi asian hiljaa ja toivoisi, etten huomaa.",
+        name: "Thomas R.",
+        location: "Marbella",
+      },
+      {
+        quote:
+          "Vuokrasin pitkäaikaisesti aiemmin. Vuokralainen jätti asunnon huonoon kuntoon, ja menetin kaksi kuukautta tuloja sen korjaamiseen. Nyt se on lyhytaikaisvuokrausta Nordic BnB:n kautta, ja jopa vieraiden välisen ylimääräisen siivouksen kanssa tienaan enemmän kuin yhdellä vuokralaisella.",
+        name: "Ingrid S.",
+        location: "Mijas",
+      },
+      {
+        quote:
+          "Täyteen varattu useimmiksi viikonlopuiksi ennen kuin olin edes saanut luovutuspaperit valmiiksi.",
+        name: "Daniel K.",
+        location: "Torremolinos",
+      },
+      {
+        quote:
+          "Huvilani seisoi tyhjänä puoli vuotta vanhalla ilmoituksella. Nyt se on harvoin vapaana enempää kuin muutaman päivän kerrallaan, ja kuvat näyttävät oikeasti minun talooltani.",
+        name: "Camilla W.",
+        location: "Fuengirola",
+      },
+      {
+        quote:
+          "Se mikä sai minut vakuuttuneeksi, oli hinnoittelu. Ennen asetin yhden hinnan ja unohdin sen. He säätävät sitä päivittäin kysynnän mukaan, ja näen tarkalleen miksi kuukausiraportissa. Tulot ovat nousseet lähes kolmanneksella vaihdon jälkeen.",
+        name: "Anders G.",
         location: "Benalmádena",
       },
     ],
@@ -369,7 +423,7 @@ export const fi: SiteContent = {
   },
   showcase1: {
     eyebrow: "Costa del Sol",
-    heading: "Jokainen kiinteistö ansaitsee tulla kerrotuksi hyvin.",
+    heading: "Jokaisella kiinteistöllä on tarina, joka ansaitsee tulla kerrotuksi hyvin — me varmistamme, että se kuullaan.",
   },
   showcase2: {
     eyebrow: "Esittely",
@@ -379,11 +433,11 @@ export const fi: SiteContent = {
     eyebrow: "Tiimi",
     heading: "Nordic BnB:n tiimi.",
     intro:
-      "Omistautunut tiimi, joka oikeasti hoitaa — ei vain hallinnoi — kiinteistöäsi. Ota suoraan yhteyttä, tai lue kuka on kiinteistösi työn takana.",
+      "Seuraamme kiinteistösi tilannetta joka ainoa päivä — yhdessä oman vakituisen tiimimme kanssa. Ota rohkeasti suoraan yhteyttä.",
     teamName: "Operatiivinen tiimimme",
     teamHeading: "Tiimi paikan päällä",
     teamIntro:
-      "Tämä on oma tiimimme — ei ulkoistettu — joka pitää jokaisen kiinteistön toiminnassa päivittäin.",
+      "Tämä on oma tiimimme — mukaan lukien oma siivoushenkilöstömme — joka pitää jokaisen kiinteistön käynnissä päivästä toiseen.",
     roles: [
       { title: "Huoltomies", description: "Kunnossapito, korjaukset ja tarkastukset varausten välillä." },
       { title: "Siivoustiimi", description: "Ammattimainen siivous ja tekstiilien vaihto jokaisen vieraan jälkeen." },
@@ -405,22 +459,22 @@ export const fi: SiteContent = {
         {
           period: "Elokuu 2023",
           title: "Siitä se alkoi",
-          body: "Nordic BnB aloitti digitaalisesta markkinoinnista, ja auttoi yrityksiä ja kiinteistönvälittäjiä esittelemään itsensä ja kiinteistönsä paremmin verkossa. Se opetti meille yhden asian jo varhain: esittely muuttaa mielikuvaa — ja mielikuva muuttaa arvoa.",
+          body: "Nordic BnB aloitti Norjassa digitaalisesta markkinoinnista, ja auttoi yrityksiä ja kiinteistösijoittajia esittelemään itsensä — ja kiinteistönsä — paremmin verkossa. Se opetti meille yhden asian jo varhain: esittely muuttaa mielikuvaa, ja mielikuva muuttaa arvoa.",
         },
         {
           period: "2024",
           title: "Lähempänä kiinteistöalaa",
-          body: "Työmme keskittyi yhä enemmän kiinteistöön, sisältöön, valokuvaukseen, asemointiin ja tapaan, jolla koteja esiteltiin verkossa. Aloimme nähdä saman ongelman yhä uudelleen: hyviä kiinteistöjä markkinoitiin usein kaukana niiden potentiaalista.",
+          body: "Siihen mennessä olimme jo viettäneet vuosia vuokrakiinteistöjen parissa itsekin — ostaneet, remontoineet ja vuokranneet asuntoja Norjassa, sekä lyhyt- että pitkäaikaisvuokrauksena. Työmme keskittyi yhä enemmän kiinteistöön, sisältöön, valokuvaukseen, asemointiin ja tapaan, jolla koteja esiteltiin verkossa. Näimme saman ongelman yhä uudelleen: hyviä kiinteistöjä markkinoitiin kaukana niiden potentiaalista.",
         },
         {
           period: "2025",
-          title: "Norjasta Costa del Solille 🇪🇸",
-          body: "Muutimme Espanjaan ja koimme Costa del Solin vuokramarkkinat sisältäpäin — sekä asukkaina että kiinteistön omistajina/operaattoreina. Siitä, mikä alkoi markkinointiosaamisena, tuli nopeasti jotain suurempaa: ymmärrys siitä, mitä kansainväliset vieraat odottavat, mistä omistajat kamppailevat, ja mikä saa yhden kiinteistön suoriutumaan toista paremmin.",
+          title: "Norjasta Espanjaan 🇪🇸",
+          body: "Muutimme Norjasta Espanjaan ja koimme Costa del Solin vuokramarkkinat sisältäpäin — asukkaina ja kiinteistön omistajina ja operaattoreina. Siitä, mikä alkoi markkinointiosaamisena, yhdistettynä vuosien kokemukseen omien asuntojen vuokraamisesta kotimaassa, tuli jotain suurempaa: ymmärrys siitä, mitä kansainväliset vieraat odottavat, mistä omistajat kamppailevat, ja mikä saa yhden kiinteistön suoriutumaan toista paremmin.",
         },
         {
           period: "Loppuvuosi 2025",
           title: "Idea kehittyi",
-          body: "Aloimme yhdistää kaiken jo osaamamme — markkinoinnin, esittelyn, sisustuksen, vieraskokemuksen ja kiinteistön — yhdeksi kokonaispalveluksi lomavuokrauksen omistajille.",
+          body: "Aloimme yhdistää kaiken jo osaamamme — markkinoinnin, esittelyn, sisustuksen, vieraskokemuksen ja käytännön vuokraustoiminnan — yhdeksi kokonaispalveluksi lomavuokrauksen omistajille, rakennettuna sen varaan, mitä olimme oppineet auttaessamme sijoittajia luomaan arvoa kiinteistöistään, sekä Norjassa että Espanjassa.",
         },
         {
           period: "2026",

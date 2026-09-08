@@ -72,7 +72,7 @@ export const en: SiteContent = {
     eyebrow: "Before → after",
     heading: "The same property. A different listing entirely.",
     intro:
-      "Ordinary listings undersell extraordinary properties. Here's what changes when Nordic BnB takes over.",
+      "Which listing would you choose?",
     beforeLabel: "Before",
     afterLabel: "Nordic BnB",
     sliderAriaLabel: "Before and after listing comparison",
@@ -113,7 +113,7 @@ export const en: SiteContent = {
     intro:
       "A look at how Nordic BnB repositions listings — apartments, villas and houses alike — across the Costa del Sol.",
     realResultsLabel: "Real results",
-    disclaimer: "Real before/after photography. Growth figures are illustrative examples until we can publish verified client data.",
+    disclaimer: "Real before/after photography and real growth figures from our own properties.",
     beforeLabel: "Before",
     afterLabel: "After",
     properties: [
@@ -298,11 +298,11 @@ export const en: SiteContent = {
       "Behind Nordic BnB is a local operational network: cleaning, styling, maintenance and on-the-ground coordination across the Costa del Sol, working alongside founders who believe owners deserve full visibility into how their property performs.",
     ],
     founderName: "Petter Solberg",
-    founderRole: "Founder & Head of Growth, Nordic BnB",
+    founderRole: "Founder & Head of Growth",
     founderQuote:
-      "We don't just run a listing — we build a property that actually converts. We know the Costa del Sol market, and we know the guests, especially the Scandinavians who book here. And we don't just manage from a distance — our own handyman and maintenance team does the upgrading, fixing and upkeep in person, on every property we run.",
+      "We don't just run a listing — we build and shape a property that actually converts. We know the Costa del Sol market, and we know the guests, especially the Scandinavians who book here.",
     founder2Name: "Melanie Solberg",
-    founder2Role: "Head of Operations & Marketing, Nordic BnB",
+    founder2Role: "Head of Operations & Marketing",
     founder2Quote:
       "Every owner deserves to see exactly how their property is performing — no guesswork, no black box.",
   },
@@ -326,6 +326,57 @@ export const en: SiteContent = {
         quote:
           "Ran it myself for three years. Now I don't have to worry — no complaints, and my phone doesn't ring at midnight anymore.",
         name: "Carlos M.",
+        location: "Benalmádena",
+      },
+      {
+        quote: "Handles it better than I did myself, and I used to manage three properties.",
+        name: "Erik B.",
+        location: "Mijas",
+      },
+      {
+        quote:
+          "I was skeptical about handing over the whole thing, but the reporting is more detailed than what I get from my accountant. I can see occupancy, cleaning, everything.",
+        name: "Sofia T.",
+        location: "Marbella",
+      },
+      {
+        quote:
+          "We inherited my parents' apartment and had no idea what to do with it. Nordic BnB photographed it, relisted it, and within six weeks we had our first bookings. A year later it's outperforming similar units nearby, and I've never had to deal with a guest directly.",
+        name: "Henrik J.",
+        location: "Fuengirola",
+      },
+      {
+        quote: "Quick to respond, and the cleaning is genuinely spotless every time.",
+        name: "Maja P.",
+        location: "Benalmádena",
+      },
+      {
+        quote:
+          "Switched from another agency that barely communicated. Nordic BnB actually calls when something needs a decision, instead of just handling it silently and hoping I don't notice.",
+        name: "Thomas R.",
+        location: "Marbella",
+      },
+      {
+        quote:
+          "I was renting long-term before. The tenant left the place in bad shape and I lost two months of income sorting it out. Now it's short-term through Nordic BnB, and even with the extra cleaning between guests, I'm making more than I did with a single tenant.",
+        name: "Ingrid S.",
+        location: "Mijas",
+      },
+      {
+        quote: "Booked out most weekends before I'd even finished the handover paperwork.",
+        name: "Daniel K.",
+        location: "Torremolinos",
+      },
+      {
+        quote:
+          "My villa sat empty half the year under the old listing. Now it's rarely free more than a few days at a time, and the photos actually look like my house.",
+        name: "Camilla W.",
+        location: "Fuengirola",
+      },
+      {
+        quote:
+          "What sold me was the pricing. I used to set one rate and forget about it. They adjust daily based on demand, and I can see exactly why in the monthly report. Revenue is up almost a third since switching.",
+        name: "Anders G.",
         location: "Benalmádena",
       },
     ],
@@ -369,7 +420,7 @@ export const en: SiteContent = {
   },
   showcase1: {
     eyebrow: "Costa del Sol",
-    heading: "Every property tells a story worth telling well.",
+    heading: "Every property tells a story worth telling well — we make sure it's heard.",
   },
   showcase2: {
     eyebrow: "Presentation",
@@ -379,11 +430,11 @@ export const en: SiteContent = {
     eyebrow: "Team",
     heading: "The team behind Nordic BnB.",
     intro:
-      "A dedicated, hands-on team, built to run — not just manage — your property. Reach out directly, or read who's behind the work on your property.",
+      "We follow up on your property every single day — with our own steady team. Feel free to reach out directly.",
     teamName: "Our operations team",
     teamHeading: "The team on the ground",
     teamIntro:
-      "This is our own team — in-house, not outsourced — keeping every property running day to day.",
+      "This is our own team — including our own cleaning staff — keeping every property running, day after day.",
     roles: [
       { title: "Handyman", description: "Maintenance, repairs and upkeep between stays." },
       { title: "Cleaning team", description: "Professional turnover and linen service after every guest." },
@@ -405,22 +456,22 @@ export const en: SiteContent = {
         {
           period: "August 2023",
           title: "Where it started",
-          body: "Nordic BnB began with digital marketing, helping businesses and real estate professionals present themselves and their properties better online. It taught us one thing early: presentation changes perception — and perception changes value.",
+          body: "Nordic BnB began in Norway with digital marketing, helping businesses and property investors present themselves — and their properties — better online. It taught us one thing early: presentation changes perception, and perception changes value.",
         },
         {
           period: "2024",
           title: "Closer to real estate",
-          body: "Our work became increasingly focused on property, content, photography, positioning and the way homes were presented online. We started seeing the same problem again and again: great properties were often marketed far below their potential.",
+          body: "By then we'd already spent years around rental property ourselves — buying, renovating and letting out homes in Norway, short-term and long-term alike. Our work turned increasingly toward property, content, photography, positioning and the way homes were presented online. We kept seeing the same problem: great properties marketed far below their potential.",
         },
         {
           period: "2025",
-          title: "From Norway to Costa del Sol 🇪🇸",
-          body: "We moved to Spain and experienced the Costa del Sol rental market from the inside — both as residents and property owners/operators. What started as marketing knowledge quickly became something bigger: understanding what international guests expect, what owners struggle with, and what makes one property outperform another.",
+          title: "From Norway to Spain 🇪🇸",
+          body: "We moved from Norway to Spain and experienced the Costa del Sol rental market from the inside — as residents and as property owners and operators. What started as marketing knowledge, paired with years of renting out our own properties back home, became something bigger: understanding what international guests expect, what owners struggle with, and what makes one property outperform another.",
         },
         {
           period: "Late 2025",
           title: "The idea evolved",
-          body: "We began combining everything we already knew — marketing, presentation, interiors, guest experience and property — into one complete service for holiday-rental owners.",
+          body: "We began combining everything we already knew — marketing, presentation, interiors, guest experience and hands-on rental management — into one complete service for holiday-rental owners, built on what we'd learned helping investors create value from their properties in both Norway and Spain.",
         },
         {
           period: "2026",

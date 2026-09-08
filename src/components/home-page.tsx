@@ -31,6 +31,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
           beforeAfter={content.beforeAfter}
           beforeSrc={media.roomBeforeUnstyled}
           afterSrc={media.roomAfterStyled}
+          afterVideoSrc={media.roomAfterVideo}
         />
         <PropertyShowcase
           imageSrc={media.seaView}
@@ -79,7 +80,6 @@ export default function HomePage({ locale }: { locale: Locale }) {
           dashboard={content.dashboard}
           bgImageSrc={media.aerialCoast}
           cardImageSrc={media.heroVilla}
-          extraCardImages={[media.villaAerial, media.interiorLiving]}
         />
         <About about={content.about} bgImageSrc={media.sunsetSea} founderPhotoSrc={media.founderPetter} />
         <SectionDivider tone="light" />

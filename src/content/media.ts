@@ -9,14 +9,15 @@
  * replacing the URL string.
  */
 export const media = {
-  // Real Nordic BnB brand assets. brandLogo is the user's final exact
-  // lockup file (icon + "Nordic BnB" wordmark laid out together as one
-  // image), used exactly as uploaded — do not run through background
-  // removal or regenerate it; the user asked for this file unmodified.
-  // brandIcon is the icon alone, used standalone for the favicon and small
-  // decorative marks. Do not swap for another variant.
+  // Real Nordic BnB brand assets. brandLogo is the user's lockup file
+  // (icon + "Nordic BnB" wordmark laid out together as one image). Round 12:
+  // corrected the wordmark casing to read exactly "Nordic BnB" (capital B
+  // at the start and end of "BnB") via an image-reference edit that kept
+  // the icon, colors, font and layout identical — do not regenerate again
+  // beyond that fix. brandIcon is the icon alone, used standalone for the
+  // favicon and small decorative marks. Do not swap for another variant.
   brandLogo:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/7b9c8310-432d-4798-837e-838e5a9c5f95.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_131119_5cc935ed-775b-4906-8147-3930c0c23c4a.png",
   brandIcon:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_144026_4d601721-c7fe-4183-9978-c1ed89f0ef51.png",
   brandMerch:
@@ -113,10 +114,17 @@ export const media = {
   roomBeforeUnstyled:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260906_110715_0036c165-cac1-4b8b-8a08-24d418ec0a00.png",
 
-  // Handover visual for the process section's first step — customer and
-  // Nordic BnB team member shaking hands / exchanging keys outside a villa.
+  // Round 12: a short looping cinematic video of the styled "after" room,
+  // used only in the top BeforeAfter section so the Nordic BnB side plays
+  // as a living, moving showcase against the flat, static "before" photo.
+  roomAfterVideo:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_132531_ae6502a2-1c32-4269-95de-32826953f946.mp4",
+
+  // Handover visual for the process section's first step ("We take over the
+  // property") — a nice Marbella villa with its front door open and a
+  // Nordic BnB-branded car parked outside, symbolizing a fresh takeover.
   handoverVilla:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_094209_7fbb138f-2980-446b-8ee7-5a84cebb3147.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_132431_70344c50-0bbb-4857-bf5d-6264439e7a8c.png",
 
   // Real, distinctive Málaga cityscape photo for the Areas section's detail
   // panel (not a reused/generic scene like the other area photos).

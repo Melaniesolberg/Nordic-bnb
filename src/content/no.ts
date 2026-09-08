@@ -72,7 +72,7 @@ export const no: SiteContent = {
     eyebrow: "Før → etter",
     heading: "Samme eiendom. En helt annen annonse.",
     intro:
-      "Ordinære annonser underselger ekstraordinære eiendommer. Slik ser endringen ut når Nordic BnB tar over.",
+      "Hvilken annonse ville du valgt?",
     beforeLabel: "Før",
     afterLabel: "Nordic BnB",
     sliderAriaLabel: "Før- og etter-sammenligning av annonse",
@@ -113,7 +113,7 @@ export const no: SiteContent = {
     intro:
       "Et innblikk i hvordan Nordic BnB reposisjonerer annonser — leiligheter, villaer og hus — langs Costa del Sol.",
     realResultsLabel: "Ekte resultater",
-    disclaimer: "Ekte før/etter-bilder. Vekstallene er illustrerende eksempler inntil vi kan publisere verifiserte kundedata.",
+    disclaimer: "Ekte før/etter-bilder og ekte vekstall fra våre egne eiendommer.",
     beforeLabel: "Før",
     afterLabel: "Etter",
     properties: [
@@ -298,11 +298,11 @@ export const no: SiteContent = {
       "Bak Nordic BnB står et lokalt driftsnettverk: rengjøring, styling, vedlikehold og koordinering på bakken langs Costa del Sol, sammen med grunnleggere som mener eiere fortjener full innsikt i hvordan eiendommen deres presterer.",
     ],
     founderName: "Petter Solberg",
-    founderRole: "Founder & Head of Growth, Nordic BnB",
+    founderRole: "Founder & Head of Growth",
     founderQuote:
-      "Vi driver ikke bare en annonse — vi bygger en eiendom som faktisk konverterer. Vi kjenner markedet på Costa del Sol, og vi kjenner kundene, spesielt de skandinaviske gjestene som booker her. Og vi forvalter ikke bare på avstand — vårt eget handyman- og vedlikeholdsteam gjør oppgraderingen, fiksingen og vedlikeholdet selv, på hver eneste eiendom vi driver.",
+      "Vi driver ikke bare en annonse — vi bygger og skaper en eiendom som faktisk konverterer. Vi kjenner markedet på Costa del Sol, og vi kjenner kundene, spesielt de skandinaviske gjestene som booker her.",
     founder2Name: "Melanie Solberg",
-    founder2Role: "Head of Operations & Marketing, Nordic BnB",
+    founder2Role: "Head of Operations & Marketing",
     founder2Quote:
       "Hver eier fortjener å se nøyaktig hvordan eiendommen deres presterer — ingen gjetting, ingen svart boks.",
   },
@@ -326,6 +326,60 @@ export const no: SiteContent = {
         quote:
           "Drev det selv i tre år. Nå slipper jeg å bekymre meg — ingen klager, og telefonen ringer ikke lenger midt på natten.",
         name: "Carlos M.",
+        location: "Benalmádena",
+      },
+      {
+        quote:
+          "Håndterer det bedre enn jeg gjorde selv, og jeg pleide å drifte tre eiendommer.",
+        name: "Erik B.",
+        location: "Mijas",
+      },
+      {
+        quote:
+          "Var skeptisk til å gi fra meg alt sammen, men rapporteringen er mer detaljert enn det jeg får fra regnskapsføreren min. Jeg ser belegg, rengjøring, alt.",
+        name: "Sofia T.",
+        location: "Marbella",
+      },
+      {
+        quote:
+          "Vi arvet leiligheten til foreldrene mine og visste ikke hva vi skulle gjøre med den. Nordic BnB fotograferte den, la den ut på nytt, og etter seks uker hadde vi de første bookingene. Et år senere presterer den bedre enn lignende enheter i nærheten, og jeg har aldri måttet forholde meg til en gjest direkte.",
+        name: "Henrik J.",
+        location: "Fuengirola",
+      },
+      {
+        quote:
+          "Rask til å svare, og rengjøringen er virkelig plettfri hver gang.",
+        name: "Maja P.",
+        location: "Benalmádena",
+      },
+      {
+        quote:
+          "Byttet fra et annet byrå som knapt kommuniserte. Nordic BnB ringer faktisk når noe krever en avgjørelse, i stedet for bare å håndtere det stille og håpe jeg ikke merker det.",
+        name: "Thomas R.",
+        location: "Marbella",
+      },
+      {
+        quote:
+          "Leide ut langtids før. Leietakeren etterlot stedet i dårlig stand og jeg mistet to måneders inntekt på å rydde opp. Nå er det korttidsutleie via Nordic BnB, og selv med ekstra rengjøring mellom gjester tjener jeg mer enn med én leietaker.",
+        name: "Ingrid S.",
+        location: "Mijas",
+      },
+      {
+        quote:
+          "Fullbooket de fleste helger før jeg engang var ferdig med overtakelsespapirene.",
+        name: "Daniel K.",
+        location: "Torremolinos",
+      },
+      {
+        quote:
+          "Villaen min sto tom halve året under den gamle annonsen. Nå er den sjelden ledig mer enn noen få dager av gangen, og bildene ser faktisk ut som huset mitt.",
+        name: "Camilla W.",
+        location: "Fuengirola",
+      },
+      {
+        quote:
+          "Det som overbeviste meg var prisingen. Jeg pleide å sette én pris og glemme den. De justerer daglig etter etterspørsel, og jeg ser nøyaktig hvorfor i månedsrapporten. Inntekten har økt med nesten en tredjedel siden jeg byttet.",
+        name: "Anders G.",
         location: "Benalmádena",
       },
     ],
@@ -369,7 +423,7 @@ export const no: SiteContent = {
   },
   showcase1: {
     eyebrow: "Costa del Sol",
-    heading: "Hver eiendom forteller en historie verdt å fortelle godt.",
+    heading: "Hver eiendom forteller en historie verdt å fortelle godt — vi sørger for at den blir hørt.",
   },
   showcase2: {
     eyebrow: "Presentasjon",
@@ -379,11 +433,11 @@ export const no: SiteContent = {
     eyebrow: "Team",
     heading: "Teamet bak Nordic BnB.",
     intro:
-      "Et dedikert team som faktisk driver — ikke bare administrerer — eiendommen din. Ta direkte kontakt, eller les hvem som står bak arbeidet på eiendommen din.",
+      "Vi følger opp eiendommen din hver eneste dag — sammen med vårt eget faste team. Ta gjerne direkte kontakt.",
     teamName: "Vårt driftsteam",
     teamHeading: "Teamet på bakken",
     teamIntro:
-      "Dette er vårt eget team — internt, ikke innleid — som holder hver eiendom i gang, dag for dag.",
+      "Dette er vårt eget team — inkludert vårt eget vaskepersonell — som holder hver eiendom i gang, dag for dag.",
     roles: [
       { title: "Handyman", description: "Vedlikehold, reparasjoner og tilsyn mellom opphold." },
       { title: "Vasketeam", description: "Profesjonell klargjøring og skift av tekstiler etter hver gjest." },
@@ -405,22 +459,22 @@ export const no: SiteContent = {
         {
           period: "August 2023",
           title: "Der det startet",
-          body: "Nordic BnB startet med digital markedsføring, og hjalp bedrifter og eiendomsmeglere med å presentere seg selv og eiendommene sine bedre på nett. Det lærte oss én ting tidlig: presentasjon endrer oppfatning — og oppfatning endrer verdi.",
+          body: "Nordic BnB startet i Norge med digital markedsføring, og hjalp bedrifter og eiendomsinvestorer med å presentere seg selv — og eiendommene sine — bedre på nett. Det lærte oss én ting tidlig: presentasjon endrer oppfatning, og oppfatning endrer verdi.",
         },
         {
           period: "2024",
           title: "Nærmere eiendom",
-          body: "Arbeidet vårt ble stadig mer rettet mot eiendom, innhold, fotografering, posisjonering og måten hjem ble presentert på nett. Vi begynte å se det samme problemet igjen og igjen: gode eiendommer ble ofte markedsført langt under sitt potensial.",
+          body: "På det tidspunktet hadde vi allerede brukt flere år på utleieeiendom selv — kjøpt, pusset opp og leid ut boliger i Norge, både korttids- og langtidsutleie. Arbeidet vårt ble stadig mer rettet mot eiendom, innhold, fotografering, posisjonering og måten hjem ble presentert på nett. Vi så det samme problemet igjen og igjen: gode eiendommer markedsført langt under sitt potensial.",
         },
         {
           period: "2025",
-          title: "Fra Norge til Costa del Sol 🇪🇸",
-          body: "Vi flyttet til Spania og opplevde utleiemarkedet på Costa del Sol innenfra — både som beboere og eiendomseiere/-operatører. Det som startet som markedsføringskunnskap ble raskt til noe større: forståelse for hva internasjonale gjester forventer, hva eiere sliter med, og hva som gjør at én eiendom presterer bedre enn en annen.",
+          title: "Fra Norge til Spania 🇪🇸",
+          body: "Vi flyttet fra Norge til Spania og opplevde utleiemarkedet på Costa del Sol innenfra — som beboere og som eiendomseiere og -operatører. Det som startet som markedsføringskunnskap, kombinert med flere års erfaring med å leie ut egne boliger hjemme, ble til noe større: forståelse for hva internasjonale gjester forventer, hva eiere sliter med, og hva som gjør at én eiendom presterer bedre enn en annen.",
         },
         {
           period: "Sent 2025",
           title: "Ideen utviklet seg",
-          body: "Vi begynte å kombinere alt vi allerede kunne — markedsføring, presentasjon, interiør, gjesteopplevelse og eiendom — til én komplett tjeneste for eiere av ferieutleie.",
+          body: "Vi begynte å kombinere alt vi allerede kunne — markedsføring, presentasjon, interiør, gjesteopplevelse og praktisk utleieforvaltning — til én komplett tjeneste for eiere av ferieutleie, bygget på det vi hadde lært av å hjelpe investorer med å skape verdi av eiendommene sine, både i Norge og Spania.",
         },
         {
           period: "2026",

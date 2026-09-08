@@ -4,7 +4,7 @@ import { media } from "@/content/media";
 
 /**
  * Real Nordic BnB brand mark — the user's single combined lockup file
- * (icon + "Nordic bnb" wordmark already laid out together as one image),
+ * (icon + "Nordic BnB" wordmark already laid out together as one image),
  * rendered as one unit. The coral artwork reads cleanly on both light and
  * dark backgrounds, so no light/dark variant is needed.
  */

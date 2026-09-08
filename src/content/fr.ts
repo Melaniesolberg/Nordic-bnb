@@ -72,7 +72,7 @@ export const fr: SiteContent = {
     eyebrow: "Avant → après",
     heading: "Le même bien. Une annonce complètement différente.",
     intro:
-      "Les annonces ordinaires sous-vendent des biens extraordinaires. Voici ce qui change quand Nordic BnB prend le relais.",
+      "Quelle annonce choisiriez-vous ?",
     beforeLabel: "Avant",
     afterLabel: "Nordic BnB",
     sliderAriaLabel: "Comparaison avant/après de l'annonce",
@@ -113,7 +113,7 @@ export const fr: SiteContent = {
     intro:
       "Un aperçu de la façon dont Nordic BnB repositionne les annonces — appartements, villas et maisons — le long de la Costa del Sol.",
     realResultsLabel: "Résultats réels",
-    disclaimer: "Vraies photos avant/après. Les chiffres de croissance sont des exemples illustratifs en attendant de pouvoir publier des données clients vérifiées.",
+    disclaimer: "De vraies photos avant/après et de vrais chiffres de croissance issus de nos propres biens.",
     beforeLabel: "Avant",
     afterLabel: "Après",
     properties: [
@@ -298,11 +298,11 @@ export const fr: SiteContent = {
       "Derrière Nordic BnB se trouve un réseau opérationnel local : ménage, mise en scène, entretien et coordination sur le terrain sur toute la Costa del Sol, aux côtés de fondateurs qui pensent que les propriétaires méritent une visibilité totale sur la performance de leur bien.",
     ],
     founderName: "Petter Solberg",
-    founderRole: "Founder & Head of Growth, Nordic BnB",
+    founderRole: "Founder & Head of Growth",
     founderQuote:
-      "Nous ne gérons pas seulement une annonce — nous construisons un bien qui convertit vraiment. Nous connaissons le marché de la Costa del Sol, et nous connaissons les voyageurs, en particulier les Scandinaves qui réservent ici. Et nous ne gérons pas seulement à distance — notre propre équipe d'entretien et de maintenance réalise elle-même les améliorations, réparations et l'entretien, en personne, sur chaque bien que nous gérons.",
+      "Nous ne gérons pas seulement une annonce — nous construisons et façonnons un bien qui convertit vraiment. Nous connaissons le marché de la Costa del Sol, et nous connaissons les voyageurs, en particulier les Scandinaves qui réservent ici.",
     founder2Name: "Melanie Solberg",
-    founder2Role: "Head of Operations & Marketing, Nordic BnB",
+    founder2Role: "Head of Operations & Marketing",
     founder2Quote:
       "Chaque propriétaire mérite de voir exactement comment son bien performe — sans conjectures, sans boîte noire.",
   },
@@ -326,6 +326,60 @@ export const fr: SiteContent = {
         quote:
           "Je le gérais moi-même depuis trois ans. Maintenant je n'ai plus à m'inquiéter — aucune plainte, et le téléphone ne sonne plus au milieu de la nuit.",
         name: "Carlos M.",
+        location: "Benalmádena",
+      },
+      {
+        quote:
+          "Gère mieux que moi-même, et je gérais trois biens avant.",
+        name: "Erik B.",
+        location: "Mijas",
+      },
+      {
+        quote:
+          "J'étais sceptique à l'idée de tout confier, mais les rapports sont plus détaillés que ceux de mon comptable. Je vois l'occupation, le ménage, tout.",
+        name: "Sofia T.",
+        location: "Marbella",
+      },
+      {
+        quote:
+          "Nous avons hérité de l'appartement de mes parents et ne savions pas quoi en faire. Nordic BnB l'a photographié, republié, et en six semaines nous avions nos premières réservations. Un an plus tard, il surperforme des biens similaires à proximité, et je n'ai jamais eu à gérer un voyageur directement.",
+        name: "Henrik J.",
+        location: "Fuengirola",
+      },
+      {
+        quote:
+          "Réactifs, et le ménage est vraiment impeccable à chaque fois.",
+        name: "Maja P.",
+        location: "Benalmádena",
+      },
+      {
+        quote:
+          "J'ai changé d'agence, l'ancienne communiquait à peine. Nordic BnB appelle vraiment quand une décision est nécessaire, au lieu de tout gérer en silence en espérant que je ne remarque rien.",
+        name: "Thomas R.",
+        location: "Marbella",
+      },
+      {
+        quote:
+          "Je louais en longue durée avant. Le locataire a laissé le bien en mauvais état et j'ai perdu deux mois de revenus à tout remettre en ordre. Maintenant c'est de la courte durée via Nordic BnB, et même avec le ménage supplémentaire entre chaque voyageur, je gagne plus qu'avec un seul locataire.",
+        name: "Ingrid S.",
+        location: "Mijas",
+      },
+      {
+        quote:
+          "Complet la plupart des week-ends avant même d'avoir fini les papiers de remise des clés.",
+        name: "Daniel K.",
+        location: "Torremolinos",
+      },
+      {
+        quote:
+          "Ma villa restait vide la moitié de l'année avec l'ancienne annonce. Maintenant elle est rarement libre plus de quelques jours d'affilée, et les photos ressemblent vraiment à ma maison.",
+        name: "Camilla W.",
+        location: "Fuengirola",
+      },
+      {
+        quote:
+          "Ce qui m'a convaincu, c'est la tarification. Avant je fixais un prix et je l'oubliais. Ils l'ajustent chaque jour selon la demande, et je vois exactement pourquoi dans le rapport mensuel. Les revenus ont augmenté de près d'un tiers depuis que j'ai changé.",
+        name: "Anders G.",
         location: "Benalmádena",
       },
     ],
@@ -369,7 +423,7 @@ export const fr: SiteContent = {
   },
   showcase1: {
     eyebrow: "Costa del Sol",
-    heading: "Chaque bien mérite que l'on raconte bien son histoire.",
+    heading: "Chaque bien raconte une histoire qui mérite d'être bien racontée — nous veillons à ce qu'elle soit entendue.",
   },
   showcase2: {
     eyebrow: "Présentation",
@@ -379,11 +433,11 @@ export const fr: SiteContent = {
     eyebrow: "Équipe",
     heading: "L'équipe derrière Nordic BnB.",
     intro:
-      "Une équipe dévouée et impliquée sur le terrain, conçue pour vraiment gérer votre bien — pas seulement l'administrer. Contactez-nous directement, ou découvrez qui se cache derrière le travail sur votre bien.",
+      "Nous suivons votre bien chaque jour — avec notre propre équipe fixe. N'hésitez pas à nous contacter directement.",
     teamName: "Notre équipe opérationnelle",
     teamHeading: "L'équipe sur le terrain",
     teamIntro:
-      "C'est notre propre équipe — interne, pas sous-traitée — qui fait tourner chaque bien au quotidien.",
+      "C'est notre propre équipe — y compris notre propre personnel de ménage — qui fait tourner chaque bien, jour après jour.",
     roles: [
       { title: "Homme à tout faire", description: "Entretien, réparations et contrôles entre chaque séjour." },
       { title: "Équipe de ménage", description: "Ménage professionnel et changement du linge après chaque voyageur." },
@@ -405,22 +459,22 @@ export const fr: SiteContent = {
         {
           period: "Août 2023",
           title: "Où tout a commencé",
-          body: "Nordic BnB a commencé avec le marketing digital, en aidant des entreprises et des professionnels de l'immobilier à mieux se présenter, eux et leurs biens, en ligne. Cela nous a appris une chose très tôt : la présentation change la perception — et la perception change la valeur.",
+          body: "Nordic BnB a commencé en Norvège avec le marketing digital, en aidant des entreprises et des investisseurs immobiliers à mieux se présenter — eux et leurs biens — en ligne. Cela nous a appris une chose très tôt : la présentation change la perception, et la perception change la valeur.",
         },
         {
           period: "2024",
           title: "Plus proche de l'immobilier",
-          body: "Notre travail s'est de plus en plus concentré sur le bien, le contenu, la photographie, le positionnement et la manière dont les maisons étaient présentées en ligne. Nous avons vu le même problème revenir sans cesse : de superbes biens souvent commercialisés bien en dessous de leur potentiel.",
+          body: "À cette époque, nous avions déjà passé des années autour de la location immobilière nous-mêmes — achetant, rénovant et louant des logements en Norvège, en courte comme en longue durée. Notre travail s'est de plus en plus concentré sur le bien, le contenu, la photographie, le positionnement et la manière dont les maisons étaient présentées en ligne. Nous avons vu le même problème revenir sans cesse : de superbes biens commercialisés bien en dessous de leur potentiel.",
         },
         {
           period: "2025",
-          title: "De la Norvège à la Costa del Sol 🇪🇸",
-          body: "Nous avons déménagé en Espagne et vécu le marché locatif de la Costa del Sol de l'intérieur — à la fois comme résidents et comme propriétaires/exploitants de biens. Ce qui n'était au départ que des connaissances marketing est vite devenu quelque chose de plus grand : comprendre ce qu'attendent les voyageurs internationaux, ce contre quoi luttent les propriétaires, et ce qui fait qu'un bien surperforme un autre.",
+          title: "De la Norvège à l'Espagne 🇪🇸",
+          body: "Nous avons déménagé de Norvège en Espagne et vécu le marché locatif de la Costa del Sol de l'intérieur — comme résidents et comme propriétaires et exploitants de biens. Ce qui n'était au départ que des connaissances marketing, combinées à des années d'expérience de location de nos propres logements chez nous, est devenu quelque chose de plus grand : comprendre ce qu'attendent les voyageurs internationaux, ce contre quoi luttent les propriétaires, et ce qui fait qu'un bien surperforme un autre.",
         },
         {
           period: "Fin 2025",
           title: "L'idée a évolué",
-          body: "Nous avons commencé à combiner tout ce que nous savions déjà — marketing, présentation, intérieurs, expérience voyageur et immobilier — en un service complet pour les propriétaires de locations de vacances.",
+          body: "Nous avons commencé à combiner tout ce que nous savions déjà — marketing, présentation, intérieurs, expérience voyageur et gestion locative pratique — en un service complet pour les propriétaires de locations de vacances, construit sur ce que nous avions appris en aidant des investisseurs à créer de la valeur à partir de leurs biens, en Norvège comme en Espagne.",
         },
         {
           period: "2026",
