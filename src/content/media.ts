@@ -37,6 +37,13 @@ export const media = {
 
   heroVilla:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111038_b2e7c852-74ff-4b5b-b324-ee38838ae978.png",
+
+  // Round 15: scroll-scrubbed hero background clip (Hero section) — a
+  // clean, textless 7s flythrough starting on the exact villaAerial frame,
+  // slow exterior hold then a fast dive through the terrace doors into the
+  // interior. No autoplay; its currentTime is driven by scroll position.
+  heroVideo:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_194140_80e409be-5f39-48a2-ad70-16b70eac2e60.mp4",
   listingBefore:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111040_7feec892-c68f-44bd-b8d1-3d2d8b72b8b7.png",
   listingAfter:
