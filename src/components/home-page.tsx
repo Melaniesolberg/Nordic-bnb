@@ -27,11 +27,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
       <Nav locale={locale} nav={content.nav} />
       <main>
         <Hero hero={content.hero} formHref={formHref} imageSrc={media.villaAerial} videoSrc={media.heroVideo} />
-        <BeforeAfter
-          beforeAfter={content.beforeAfter}
-          videoSrc={media.heroVideo}
-          posterSrc={media.villaAerial}
-        />
+        <BeforeAfter beforeAfter={content.beforeAfter} posterSrc={media.villaAerial} />
         <PropertyShowcase
           imageSrc={media.seaView}
           eyebrow={content.showcase1.eyebrow}

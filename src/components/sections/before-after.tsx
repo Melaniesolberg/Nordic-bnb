@@ -1,28 +1,27 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { motion, useScroll, useTransform, useMotionValueEvent, useReducedMotion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Eyebrow from "@/components/ui/eyebrow";
 import type { BeforeAfterContent } from "@/content/types";
 
-/** Fraction of the local scroll track spent fading the heading/intro away
- * before the video itself starts scrubbing forward. */
+/** Fraction of the local scroll track spent fading the heading/intro away. */
 const TEXT_FADE_END = 0.16;
 
+// Round 17: the scroll-scrubbed flythrough now lives solely in the Hero
+// section at the very top of the page — this section no longer duplicates
+// it further down. It keeps its own scroll-linked text reveal over a still
+// frame of the same property instead.
 export default function BeforeAfter({
   beforeAfter,
-  videoSrc,
   posterSrc,
 }: {
   beforeAfter: BeforeAfterContent;
-  videoSrc: string;
   posterSrc?: string;
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
   const prefersReduced = useReducedMotion();
-  const [videoDuration, setVideoDuration] = useState(0);
 
   const { scrollYProgress } = useScroll({
     target: trackRef,
@@ -32,16 +31,6 @@ export default function BeforeAfter({
   const textOpacity = useTransform(scrollYProgress, [0, TEXT_FADE_END], [1, 0]);
   const textY = useTransform(scrollYProgress, [0, TEXT_FADE_END], [0, prefersReduced ? 0 : -40]);
   const scrimOpacity = useTransform(scrollYProgress, [0, TEXT_FADE_END, 1], [0.55, 0.15, 0.4]);
-
-  // First scroll fades the text away; only after that does continued
-  // scrolling scrub the video forward, step by step, from its own start.
-  useMotionValueEvent(scrollYProgress, "change", (progress) => {
-    if (prefersReduced || !videoDuration) return;
-    const video = videoRef.current;
-    if (!video) return;
-    const videoProgress = Math.max(0, (progress - TEXT_FADE_END) / (1 - TEXT_FADE_END));
-    video.currentTime = Math.min(videoDuration, Math.max(0, videoProgress * videoDuration));
-  });
 
   return (
     <section className="relative bg-charcoal py-24 sm:py-32 lg:py-40">
@@ -61,21 +50,8 @@ export default function BeforeAfter({
               aria-hidden
             />
 
-            {!prefersReduced ? (
-              <video
-                ref={videoRef}
-                src={videoSrc}
-                poster={posterSrc}
-                muted
-                playsInline
-                preload="auto"
-                className="absolute inset-0 h-full w-full object-cover"
-                onLoadedMetadata={(e) => setVideoDuration(e.currentTarget.duration)}
-              />
-            ) : (
-              posterSrc && (
-                <Image src={posterSrc} alt="" fill sizes="(min-width: 1024px) 1600px, 100vw" className="object-cover" />
-              )
+            {posterSrc && (
+              <Image src={posterSrc} alt="" fill sizes="(min-width: 1024px) 1600px, 100vw" className="object-cover" />
             )}
 
             <motion.div className="absolute inset-0 bg-charcoal" style={{ opacity: scrimOpacity }} />

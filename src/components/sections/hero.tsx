@@ -17,6 +17,11 @@ import type { HeroContent } from "@/content/types";
 
 const EASE_EDITORIAL = [0.16, 1, 0.3, 1] as const;
 
+/** Fraction of the hero's scroll range spent fading the text/UI away
+ * before the video itself starts scrubbing forward. Round 17: the
+ * disappearance and the scrub must happen in that order, not at once. */
+const TEXT_FADE_END = 0.22;
+
 const container: Variants = {
   hidden: {},
   visible: {
@@ -54,18 +59,19 @@ export default function Hero({
     offset: ["start start", "end start"],
   });
 
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.55], [1, 0]);
-  const contentY = useTransform(scrollYProgress, [0, 0.6], [0, prefersReduced ? 0 : -60]);
+  const contentOpacity = useTransform(scrollYProgress, [0, TEXT_FADE_END], [1, 0]);
+  const contentY = useTransform(scrollYProgress, [0, TEXT_FADE_END], [0, prefersReduced ? 0 : -60]);
   const vignette = useTransform(scrollYProgress, [0, 1], [0.35, 0.75]);
 
-  // Scroll scrubs the hero video's playhead directly — no autoplay. The
-  // video is the camera motion itself, so it replaces the old CSS
-  // scale/translate parallax rather than layering on top of it.
+  // First scroll fades the headline/CTAs away; only once that's fully
+  // gone does continued scrolling scrub the video forward, step by step,
+  // from its own start — no autoplay, the scrub is the only playback.
   useMotionValueEvent(scrollYProgress, "change", (progress) => {
     if (prefersReduced || !videoDuration) return;
     const video = videoRef.current;
     if (!video) return;
-    video.currentTime = Math.min(videoDuration, Math.max(0, progress * videoDuration));
+    const videoProgress = Math.max(0, (progress - TEXT_FADE_END) / (1 - TEXT_FADE_END));
+    video.currentTime = Math.min(videoDuration, Math.max(0, videoProgress * videoDuration));
   });
 
   return (
