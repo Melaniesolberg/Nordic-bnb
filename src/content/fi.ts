@@ -24,15 +24,15 @@ export const fi: SiteContent = {
     eyebrow: "Kiinteistöhallinta — Costa del Sol",
     headlineLines: ["Kiinteistösi.", "Jatkuvasti parannettuna."],
     subline:
-      "Täyden palvelun lyhyt- ja pitkäaikaisvuokrauksen hallinta Marbellassa, Mijasissa, Fuengirolassa ja Benalmádenassa — asemointi, hinnoittelu ja esittely, hiottuna keskeytyksettä.",
+      "Täyden palvelun lyhyt- ja pitkäaikaisvuokrauksen hallinta Marbellassa, Mijasissa, Fuengirolassa, Benalmádenassa, Torremolinosissa ja Málagassa — asemointi, hinnoittelu ja esittely, hiottuna keskeytyksettä.",
     ctaPrimary: "Pyydä kiinteistökatsaus",
     ctaSecondary: "Ota yhteyttä WhatsAppissa",
     scrollHint: "Vieritä",
     locationTag: "Costa del Sol, Espanja",
   },
   system: {
-    eyebrow: "Näin toimimme",
-    heading: "Tyhjästä huoneesta vahvistettuun varaukseen.",
+    eyebrow: "Mitä voit odottaa",
+    heading: "Mitä voit odottaa meiltä?",
     intro:
       "Prosessi, joka muuttaa ilmoituksen palaavien vieraiden virraksi.",
     pillars: [
@@ -78,6 +78,7 @@ export const fi: SiteContent = {
     sliderAriaLabel: "Ennen ja jälkeen -ilmoitusvertailu",
     beforeAlt: "Tavallinen ilmoituskuva, ennen Nordic BnB:tä",
     afterAlt: "Tyylitelty Nordic BnB -ilmoituskuva, jälkeen",
+    disclaimer: "Havainnollistava esimerkki, vain esittelytarkoitukseen.",
     fields: [
       {
         label: "Otsikko",
@@ -190,7 +191,6 @@ export const fi: SiteContent = {
     heading: "Sinä omistat kiinteistön. Me hoidamme toiminnan.",
     intro:
       "Reaaliaikainen näkymä siihen, miten kiinteistösi suoriutuu — varaukset, käyttöaste, siivouksen tila, huolto ja kuukausittainen maksusi, aina näkyvillä.",
-    footnote: "Konseptikäyttöliittymä — havainnollistava omistajapaneeli, näytetty esimerkkitiedoilla.",
     windowTitle: "Villa Sunrise — Omistajaportaali",
     cardAlt: "Villa Sunrise, tämän paneelin taustalla oleva kiinteistö",
     revenueChangeNote: "+18 % edelliseen kuukauteen verrattuna",
@@ -280,12 +280,12 @@ export const fi: SiteContent = {
         description: "Tasapainoinen sekoitus perheiden lomavuokrausta ja pitkäaikaista rannikkoasumista.",
       },
       {
-        name: "Málaga",
-        description: "Kulttuuripääkaupunki, jonka kaupunkilomien ja pitkäaikaisvuokrauksen markkina kasvaa.",
-      },
-      {
         name: "Torremolinos",
         description: "Klassinen rantakohde, jolla on tasainen ympärivuotinen matkailukysyntä.",
+      },
+      {
+        name: "Málaga",
+        description: "Kulttuuripääkaupunki, jonka kaupunkilomien ja pitkäaikaisvuokrauksen markkina kasvaa.",
       },
     ],
   },
@@ -300,7 +300,7 @@ export const fi: SiteContent = {
     founderName: "Petter Solberg",
     founderRole: "Founder & Head of Growth, Nordic BnB",
     founderQuote:
-      "Emme vain ylläpidä ilmoitusta — rakennamme kiinteistön, joka oikeasti konvertoi. Tunnemme Costa del Solin markkinat, ja tunnemme vieraat, erityisesti pohjoismaiset vieraat, jotka varaavat täältä.",
+      "Emme vain ylläpidä ilmoitusta — rakennamme kiinteistön, joka oikeasti konvertoi. Tunnemme Costa del Solin markkinat, ja tunnemme vieraat, erityisesti pohjoismaiset vieraat, jotka varaavat täältä. Emmekä hallinnoi vain etänä — oma huoltomies- ja kunnossapitotiimimme tekee päivitykset, korjaukset ja huollon itse, jokaisella hallinnoimallamme kiinteistöllä.",
     founder2Name: "Melanie Solberg",
     founder2Role: "Head of Operations & Marketing, Nordic BnB",
     founder2Quote:
@@ -365,7 +365,7 @@ export const fi: SiteContent = {
     languageHeading: "Kieli",
     rights: "Nordic BnB. Kaikki oikeudet pidätetään.",
     orgNumberLabel: "Y-tunnus 931 905 856",
-    realPhotosNote: "Tämän sivuston ennen/jälkeen-kuvat ovat aitoja tuloksia, eivät kuvituskuvia, ellei toisin mainita.",
+    privacyLabel: "Tietosuoja",
   },
   showcase1: {
     eyebrow: "Costa del Sol",
@@ -379,10 +379,11 @@ export const fi: SiteContent = {
     eyebrow: "Tiimi",
     heading: "Nordic BnB:n tiimi.",
     intro:
-      "Pieni, käytännönläheinen tiimi — ei puhelinpalvelukeskus. Ota suoraan yhteyttä, tai lue kuka on kiinteistösi työn takana.",
+      "Omistautunut tiimi, joka oikeasti hoitaa — ei vain hallinnoi — kiinteistöäsi. Ota suoraan yhteyttä, tai lue kuka on kiinteistösi työn takana.",
+    teamName: "Operatiivinen tiimimme",
     teamHeading: "Tiimi paikan päällä",
     teamIntro:
-      "Meidän lisäksemme paikallinen operatiivinen tiimi pitää jokaisen kiinteistön toiminnassa päivittäin.",
+      "Tämä on oma tiimimme — ei ulkoistettu — joka pitää jokaisen kiinteistön toiminnassa päivittäin.",
     roles: [
       { title: "Huoltomies", description: "Kunnossapito, korjaukset ja tarkastukset varausten välillä." },
       { title: "Siivoustiimi", description: "Ammattimainen siivous ja tekstiilien vaihto jokaisen vieraan jälkeen." },
@@ -393,7 +394,72 @@ export const fi: SiteContent = {
     ctaSubline:
       "Onko sinulla kysymys, tai haluatko nähdä mitä Nordic BnB voisi tehdä kiinteistöllesi? Lähetä meille sähköpostia — vastaamme henkilökohtaisesti, yleensä vuorokauden sisällä.",
     ctaButton: "Lähetä sähköpostia",
-    recruitCta:
-      "Kiinnostaisiko liittyä paikalliseen tiimiimme siivoojana, huoltomiehenä tai valokuvaajana? Ota yhteyttä — olemme aina avoimia hyville tekijöille.",
+    recruitEyebrow: "Liity tiimiin",
+    recruitHeading: "Haluatko työskennellä kanssamme?",
+    recruitSubline:
+      "Olemme aina avoimia hyville tekijöille. Jos olet siivooja, huoltomies tai valokuvaaja Costa del Solilla, kuulisimme mielellämme sinusta.",
+    story: {
+      eyebrow: "Tarinamme",
+      heading: "Markkinoinnista vieraanvaraisuuteen.",
+      milestones: [
+        {
+          period: "Elokuu 2023",
+          title: "Siitä se alkoi",
+          body: "Nordic BnB aloitti digitaalisesta markkinoinnista, ja auttoi yrityksiä ja kiinteistönvälittäjiä esittelemään itsensä ja kiinteistönsä paremmin verkossa. Se opetti meille yhden asian jo varhain: esittely muuttaa mielikuvaa — ja mielikuva muuttaa arvoa.",
+        },
+        {
+          period: "2024",
+          title: "Lähempänä kiinteistöalaa",
+          body: "Työmme keskittyi yhä enemmän kiinteistöön, sisältöön, valokuvaukseen, asemointiin ja tapaan, jolla koteja esiteltiin verkossa. Aloimme nähdä saman ongelman yhä uudelleen: hyviä kiinteistöjä markkinoitiin usein kaukana niiden potentiaalista.",
+        },
+        {
+          period: "2025",
+          title: "Norjasta Costa del Solille 🇪🇸",
+          body: "Muutimme Espanjaan ja koimme Costa del Solin vuokramarkkinat sisältäpäin — sekä asukkaina että kiinteistön omistajina/operaattoreina. Siitä, mikä alkoi markkinointiosaamisena, tuli nopeasti jotain suurempaa: ymmärrys siitä, mitä kansainväliset vieraat odottavat, mistä omistajat kamppailevat, ja mikä saa yhden kiinteistön suoriutumaan toista paremmin.",
+        },
+        {
+          period: "Loppuvuosi 2025",
+          title: "Idea kehittyi",
+          body: "Aloimme yhdistää kaiken jo osaamamme — markkinoinnin, esittelyn, sisustuksen, vieraskokemuksen ja kiinteistön — yhdeksi kokonaispalveluksi lomavuokrauksen omistajille.",
+        },
+        {
+          period: "2026",
+          title: "Nordic BnB tänään",
+          body: "Nordic BnB:stä tuli täyden palvelun lomavuokraus- ja kiinteistöhallintayhtiö Costa del Solilla. Kiinteistön valmistelusta ja päivityksestä alkaen: tyylittely, valokuvaus, ilmoitukset, hinnoittelu, vierasviestintä, siivous, huolto ja täysi hallinta. Yksi yhtiö. Yksi yhteyspiste. Kaikki hoidettuna.",
+        },
+        {
+          period: "2026 →",
+          title: "Seuraava luku",
+          body: "Tavoitteemme on yksinkertainen: rakentaa uusi standardi lomavuokrauksen hallinnalle Costa del Solilla — yhdistäen skandinaavisen palvelun, vahvan esittelyn ja paikallisen toteutuksen. Me päivitämme. Me tyylittelemme. Me hallinnoimme.",
+        },
+      ],
+    },
+  },
+  privacyPage: {
+    eyebrow: "Tietosuoja",
+    heading: "Tietosuojaseloste.",
+    updated: "Viimeksi päivitetty: syyskuu 2026",
+    intro:
+      "Tämä sivu selittää selkeästi, mitä tietoja Nordic BnB kerää, kun otat meihin yhteyttä, ja miten käytämme niitä.",
+    sections: [
+      {
+        heading: "Mitä keräämme",
+        body: "Kun otat yhteyttä yhteydenottolomakkeemme, sähköpostin tai WhatsAppin kautta, keräämme antamasi tiedot — tyypillisesti nimen, sähköpostiosoitteen, puhelinnumeron ja tiedot kiinteistöstäsi tai kyselystäsi.",
+      },
+      {
+        heading: "Miten käytämme sitä",
+        body: "Käytämme näitä tietoja vain vastataksemme kyselyysi, tarjotaksemme kiinteistökatsauksen tai tarjouksen, ja — jos sinusta tulee asiakas — hallinnoidaksemme kiinteistöäsi ja kommunikoidaksemme kanssasi siitä. Emme myy tietojasi kolmansille osapuolille.",
+      },
+      {
+        heading: "Kuinka kauan säilytämme sitä",
+        body: "Säilytämme kyselytiedot niin kauan kuin on tarpeen vastataksemme sinulle, tai — jos sinusta tulee asiakas — yhteistyömme keston ajan ja sen jälkeen lain vaatiman ajan.",
+      },
+      {
+        heading: "Oikeutesi",
+        body: "Voit milloin tahansa kysyä meiltä, mitä tietoja meillä on sinusta, pyytää meitä korjaamaan niitä tai pyytää niiden poistamista. Lähetä meille vain sähköpostia, niin hoidamme sen.",
+      },
+    ],
+    contactHeading: "Kysymyksiä tiedoistasi?",
+    contactBody: "Kaikissa tietosuojaan liittyvissä pyynnöissä lähetä meille sähköpostia suoraan, niin vastaamme henkilökohtaisesti.",
   },
 };

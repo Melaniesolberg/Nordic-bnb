@@ -117,4 +117,16 @@ export const media = {
   // Nordic BnB team member shaking hands / exchanging keys outside a villa.
   handoverVilla:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_094209_7fbb138f-2980-446b-8ee7-5a84cebb3147.png",
+
+  // Real, distinctive Málaga cityscape photo for the Areas section's detail
+  // panel (not a reused/generic scene like the other area photos).
+  malagaScene:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_114148_41a34ad0-49ae-4b57-baca-acc05a794d88.png",
+
+  // Process section step-3 visual ("we photograph and launch") — a
+  // reference-guided edit of roomAfterStyled with a 360 camera and tripod
+  // added, so it visibly reads as an active photo shoot. roomAfterStyled
+  // itself (used by the "Samme eiendom" before/after section) is untouched.
+  photographySessionRoom:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_114151_a7fd9be8-8a5e-4d15-afa0-217582f67a2c.png",
 } as const;

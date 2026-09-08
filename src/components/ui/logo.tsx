@@ -13,7 +13,10 @@ const SIZES = {
   sm: "h-7 w-24",
 } as const;
 
-const ICON_SIZE = "h-10 w-10 sm:h-11 sm:w-11";
+const ICON_SIZES = {
+  icon: "h-10 w-10 sm:h-11 sm:w-11",
+  "icon-lg": "h-20 w-20 sm:h-[88px] sm:w-[88px]",
+} as const;
 
 export default function Logo({
   className,
@@ -22,11 +25,13 @@ export default function Logo({
 }: {
   className?: string;
   size?: keyof typeof SIZES;
-  variant?: "full" | "icon";
+  variant?: "full" | "icon" | "icon-lg";
 }) {
-  const isIcon = variant === "icon";
+  const isIcon = variant === "icon" || variant === "icon-lg";
   return (
-    <span className={cn("relative inline-block", isIcon ? ICON_SIZE : SIZES[size], className)}>
+    <span
+      className={cn("relative inline-block", isIcon ? ICON_SIZES[variant as keyof typeof ICON_SIZES] : SIZES[size], className)}
+    >
       <Image
         src={isIcon ? media.brandIcon : media.brandLogo}
         alt={isIcon ? "" : "Nordic BnB"}

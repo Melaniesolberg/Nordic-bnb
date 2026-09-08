@@ -16,10 +16,12 @@ export default function Dashboard({
   dashboard,
   bgImageSrc,
   cardImageSrc,
+  extraCardImages,
 }: {
   dashboard: DashboardContent;
   bgImageSrc: string;
   cardImageSrc: string;
+  extraCardImages?: string[];
 }) {
   return (
     <section className="relative overflow-hidden bg-charcoal py-24 sm:py-32 lg:py-40">
@@ -39,22 +41,34 @@ export default function Dashboard({
               <p className="mt-6 max-w-md text-base leading-relaxed text-ivory/60 sm:text-lg">
                 {dashboard.intro}
               </p>
-              <p className="mt-6 text-xs uppercase tracking-wide text-ivory/35">
-                {dashboard.footnote}
-              </p>
             </Reveal>
 
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-15% 0px -15% 0px" }}
-              transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="relative mt-10 hidden aspect-[3/4] w-full max-w-[220px] overflow-hidden rounded-sm shadow-[0_30px_70px_rgba(0,0,0,0.5)] lg:block"
-            >
-              <Image src={cardImageSrc} alt={dashboard.cardAlt} fill sizes="220px" className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
-              <span className="absolute bottom-3 left-3 text-xs tracking-wide text-ivory/85">Villa Sunrise, Marbella</span>
-            </motion.div>
+            <div className="mt-10 hidden gap-3 lg:flex">
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-15% 0px -15% 0px" }}
+                transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+                className="relative aspect-[3/4] w-full max-w-[220px] overflow-hidden rounded-sm shadow-[0_30px_70px_rgba(0,0,0,0.5)]"
+              >
+                <Image src={cardImageSrc} alt={dashboard.cardAlt} fill sizes="220px" className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent" />
+                <span className="absolute bottom-3 left-3 text-xs tracking-wide text-ivory/85">Villa Sunrise, Marbella</span>
+              </motion.div>
+              {extraCardImages?.map((src, i) => (
+                <motion.div
+                  key={src}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-15% 0px -15% 0px" }}
+                  transition={{ duration: 0.8, delay: 0.15 + (i + 1) * 0.08, ease: [0.16, 1, 0.3, 1] }}
+                  className="relative aspect-[3/4] w-full max-w-[110px] overflow-hidden rounded-sm opacity-70 shadow-[0_30px_70px_rgba(0,0,0,0.5)]"
+                >
+                  <Image src={src} alt="" fill sizes="110px" className="object-cover" />
+                  <div className="absolute inset-0 bg-charcoal/25" />
+                </motion.div>
+              ))}
+            </div>
           </div>
 
           <div className="lg:col-span-8">

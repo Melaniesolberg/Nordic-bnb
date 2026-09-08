@@ -7,12 +7,12 @@ import Eyebrow from "@/components/ui/eyebrow";
 import type { AreasContent } from "@/content/types";
 
 const DOT_POSITIONS = [
-  { x: 90, y: 150 },
-  { x: 290, y: 95 },
-  { x: 470, y: 130 },
-  { x: 650, y: 85 },
-  { x: 690, y: 65 },
-  { x: 715, y: 95 },
+  { x: 60, y: 155 },
+  { x: 195, y: 90 },
+  { x: 330, y: 140 },
+  { x: 460, y: 75 },
+  { x: 590, y: 120 },
+  { x: 710, y: 65 },
 ];
 
 export default function Areas({
@@ -55,7 +55,7 @@ export default function Areas({
             <div className="hidden sm:block">
               <svg viewBox="0 0 740 220" className="w-full" aria-hidden>
                 <path
-                  d="M20 170 C 150 210, 220 60, 320 110 S 480 190, 560 60 S 680 40, 720 90"
+                  d="M40 175 C 100 200, 150 110, 195 90 S 290 175, 330 140 S 420 55, 460 75 S 540 165, 590 120 S 670 45, 710 65"
                   stroke="#f6f1e8"
                   strokeOpacity={0.18}
                   strokeWidth={1.5}

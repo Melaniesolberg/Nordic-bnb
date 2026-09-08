@@ -20,7 +20,7 @@ export default function Footer({
       <div className="mx-auto max-w-[1600px] px-5 py-16 sm:px-8 lg:px-12 lg:py-24">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
-            <Logo variant="icon" />
+            <Logo variant="icon-lg" />
             <p className="mt-6 max-w-xs font-serif-display text-2xl italic text-ivory/85">
               {footer.tagline}
             </p>
@@ -36,6 +36,14 @@ export default function Footer({
                   </a>
                 </li>
               ))}
+              <li>
+                <Link
+                  href={localeHref(locale, "/privacy")}
+                  className="text-[0.95rem] text-ivory/75 transition-colors hover:text-coral"
+                >
+                  {footer.privacyLabel}
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -48,8 +56,8 @@ export default function Footer({
                 </a>
               </li>
               <li>
-                <a href={`mailto:${CONTACT.emailFounder}`} className="text-ivory/75 transition-colors hover:text-coral">
-                  {CONTACT.emailFounder}
+                <a href={`mailto:${CONTACT.emailSupport}`} className="text-ivory/75 transition-colors hover:text-coral">
+                  {CONTACT.emailSupport}
                 </a>
               </li>
               <li>
@@ -98,7 +106,6 @@ export default function Footer({
           </a>
           <p>{locationTag}</p>
         </div>
-        <p className="mt-4 text-xs text-ivory/35">{footer.realPhotosNote}</p>
       </div>
     </footer>
   );

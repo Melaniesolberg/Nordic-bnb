@@ -24,15 +24,15 @@ export const en: SiteContent = {
     eyebrow: "Property management — Costa del Sol",
     headlineLines: ["Your property.", "Continuously improved."],
     subline:
-      "Full-service short-term and long-term rental management across Marbella, Mijas, Fuengirola and Benalmádena — positioning, pricing and presentation, refined without pause.",
+      "Full-service short-term and long-term rental management across Marbella, Mijas, Fuengirola, Benalmádena, Torremolinos and Málaga — positioning, pricing and presentation, refined without pause.",
     ctaPrimary: "Request a property review",
     ctaSecondary: "Talk to us on WhatsApp",
     scrollHint: "Scroll",
     locationTag: "Costa del Sol, Spain",
   },
   system: {
-    eyebrow: "How it works",
-    heading: "From empty room to confirmed booking.",
+    eyebrow: "What to expect",
+    heading: "What can you expect from us?",
     intro:
       "The process that turns a listing into a stream of returning guests.",
     pillars: [
@@ -78,6 +78,7 @@ export const en: SiteContent = {
     sliderAriaLabel: "Before and after listing comparison",
     beforeAlt: "Ordinary listing photography, before Nordic BnB",
     afterAlt: "Styled Nordic BnB listing photography, after",
+    disclaimer: "Illustrated example, for demonstration purposes.",
     fields: [
       {
         label: "Title",
@@ -190,7 +191,6 @@ export const en: SiteContent = {
     heading: "You own the property. We handle the operation.",
     intro:
       "A live view into how your property is performing — bookings, occupancy, cleaning status, maintenance and your monthly payout, always visible.",
-    footnote: "Concept interface — illustrative owner dashboard, shown with example data.",
     windowTitle: "Villa Sunrise — Owner portal",
     cardAlt: "Villa Sunrise, the property behind this dashboard",
     revenueChangeNote: "+18% vs. last month",
@@ -280,12 +280,12 @@ export const en: SiteContent = {
         description: "A balanced mix of family holiday lets and long-term coastal living.",
       },
       {
-        name: "Málaga",
-        description: "A cultural capital with a growing city-break and long-stay rental market.",
-      },
-      {
         name: "Torremolinos",
         description: "A classic beach destination with steady, year-round tourist demand.",
+      },
+      {
+        name: "Málaga",
+        description: "A cultural capital with a growing city-break and long-stay rental market.",
       },
     ],
   },
@@ -300,7 +300,7 @@ export const en: SiteContent = {
     founderName: "Petter Solberg",
     founderRole: "Founder & Head of Growth, Nordic BnB",
     founderQuote:
-      "We don't just run a listing — we build a property that actually converts. We know the Costa del Sol market, and we know the guests, especially the Scandinavians who book here.",
+      "We don't just run a listing — we build a property that actually converts. We know the Costa del Sol market, and we know the guests, especially the Scandinavians who book here. And we don't just manage from a distance — our own handyman and maintenance team does the upgrading, fixing and upkeep in person, on every property we run.",
     founder2Name: "Melanie Solberg",
     founder2Role: "Head of Operations & Marketing, Nordic BnB",
     founder2Quote:
@@ -365,7 +365,7 @@ export const en: SiteContent = {
     languageHeading: "Language",
     rights: "Nordic BnB. All rights reserved.",
     orgNumberLabel: "Company reg. no. 931 905 856",
-    realPhotosNote: "Before/after photos on this site are real results, not illustration, unless otherwise labeled.",
+    privacyLabel: "Privacy",
   },
   showcase1: {
     eyebrow: "Costa del Sol",
@@ -379,10 +379,11 @@ export const en: SiteContent = {
     eyebrow: "Team",
     heading: "The team behind Nordic BnB.",
     intro:
-      "A small, hands-on team — not a call center. Reach out directly, or read who's behind the work on your property.",
+      "A dedicated, hands-on team, built to run — not just manage — your property. Reach out directly, or read who's behind the work on your property.",
+    teamName: "Our operations team",
     teamHeading: "The team on the ground",
     teamIntro:
-      "Alongside us, a local operational team keeps every property running day to day.",
+      "This is our own team — in-house, not outsourced — keeping every property running day to day.",
     roles: [
       { title: "Handyman", description: "Maintenance, repairs and upkeep between stays." },
       { title: "Cleaning team", description: "Professional turnover and linen service after every guest." },
@@ -393,7 +394,72 @@ export const en: SiteContent = {
     ctaSubline:
       "Have a question, or want to see what Nordic BnB could do for your property? Send us an email — we reply personally, usually within a day.",
     ctaButton: "Email us",
-    recruitCta:
-      "Interested in joining our local team as a cleaner, handyman or photographer? Reach out — we're always open to good people.",
+    recruitEyebrow: "Join the team",
+    recruitHeading: "Want to work with us?",
+    recruitSubline:
+      "We're always open to good people. If you're a cleaner, handyman or photographer on the Costa del Sol, we'd like to hear from you.",
+    story: {
+      eyebrow: "Our story",
+      heading: "From marketing to hospitality.",
+      milestones: [
+        {
+          period: "August 2023",
+          title: "Where it started",
+          body: "Nordic BnB began with digital marketing, helping businesses and real estate professionals present themselves and their properties better online. It taught us one thing early: presentation changes perception — and perception changes value.",
+        },
+        {
+          period: "2024",
+          title: "Closer to real estate",
+          body: "Our work became increasingly focused on property, content, photography, positioning and the way homes were presented online. We started seeing the same problem again and again: great properties were often marketed far below their potential.",
+        },
+        {
+          period: "2025",
+          title: "From Norway to Costa del Sol 🇪🇸",
+          body: "We moved to Spain and experienced the Costa del Sol rental market from the inside — both as residents and property owners/operators. What started as marketing knowledge quickly became something bigger: understanding what international guests expect, what owners struggle with, and what makes one property outperform another.",
+        },
+        {
+          period: "Late 2025",
+          title: "The idea evolved",
+          body: "We began combining everything we already knew — marketing, presentation, interiors, guest experience and property — into one complete service for holiday-rental owners.",
+        },
+        {
+          period: "2026",
+          title: "Nordic BnB today",
+          body: "Nordic BnB became a full-service holiday rental and property management company on the Costa del Sol. From preparing and upgrading the property to styling, photography, listings, pricing, guest communication, cleaning, maintenance and full management. One company. One point of contact. Everything handled.",
+        },
+        {
+          period: "2026 →",
+          title: "The next chapter",
+          body: "Our goal is simple: build a new standard for holiday rental management on the Costa del Sol — combining Scandinavian service, strong presentation and local execution. We upgrade. We style. We manage.",
+        },
+      ],
+    },
+  },
+  privacyPage: {
+    eyebrow: "Privacy",
+    heading: "Privacy policy.",
+    updated: "Last updated: September 2026",
+    intro:
+      "This page explains, in plain terms, what information Nordic BnB collects when you contact us and how we use it.",
+    sections: [
+      {
+        heading: "What we collect",
+        body: "When you reach out through our contact form, email or WhatsApp, we collect the details you provide — typically your name, email address, phone number and any information about your property or enquiry.",
+      },
+      {
+        heading: "How we use it",
+        body: "We use this information only to respond to your enquiry, provide a property review or quote, and, if you become a client, to manage your property and communicate with you about it. We do not sell your information to third parties.",
+      },
+      {
+        heading: "How long we keep it",
+        body: "We keep enquiry information for as long as needed to respond to you or, if you become a client, for the duration of our working relationship and as required by law afterwards.",
+      },
+      {
+        heading: "Your rights",
+        body: "You can ask us at any time what information we hold about you, ask us to correct it, or request that we delete it. Just email us and we'll take care of it.",
+      },
+    ],
+    contactHeading: "Questions about your data?",
+    contactBody: "For any privacy-related request, email us directly and we'll get back to you personally.",
   },
 };

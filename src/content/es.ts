@@ -24,15 +24,15 @@ export const es: SiteContent = {
     eyebrow: "Gestión de propiedades — Costa del Sol",
     headlineLines: ["Tu propiedad.", "Mejorada continuamente."],
     subline:
-      "Gestión integral de alquiler vacacional y de larga temporada en Marbella, Mijas, Fuengirola y Benalmádena — posicionamiento, precio y presentación, perfeccionados sin pausa.",
+      "Gestión integral de alquiler vacacional y de larga temporada en Marbella, Mijas, Fuengirola, Benalmádena, Torremolinos y Málaga — posicionamiento, precio y presentación, perfeccionados sin pausa.",
     ctaPrimary: "Solicita una revisión de tu propiedad",
     ctaSecondary: "Escríbenos por WhatsApp",
     scrollHint: "Desplázate",
     locationTag: "Costa del Sol, España",
   },
   system: {
-    eyebrow: "Cómo trabajamos",
-    heading: "De una habitación vacía a una reserva confirmada.",
+    eyebrow: "Qué puedes esperar",
+    heading: "¿Qué puedes esperar de nosotros?",
     intro:
       "El proceso que convierte un anuncio en un flujo de huéspedes que repiten.",
     pillars: [
@@ -105,6 +105,7 @@ export const es: SiteContent = {
     sliderAriaLabel: "Comparación antes y después del anuncio",
     beforeAlt: "Fotografía de anuncio ordinaria, antes de Nordic BnB",
     afterAlt: "Fotografía de anuncio Nordic BnB estilizada, después",
+    disclaimer: "Ejemplo ilustrado, con fines demostrativos.",
   },
   portfolio: {
     eyebrow: "Portafolio",
@@ -190,7 +191,6 @@ export const es: SiteContent = {
     heading: "Tú eres el propietario. Nosotros llevamos la operación.",
     intro:
       "Una vista en tiempo real de cómo rinde tu propiedad — reservas, ocupación, estado de limpieza, mantenimiento y tu liquidación mensual, siempre visibles.",
-    footnote: "Interfaz conceptual — panel de propietario ilustrativo, mostrado con datos de ejemplo.",
     windowTitle: "Villa Sunrise — Portal del propietario",
     cardAlt: "Villa Sunrise, la propiedad de este panel",
     revenueChangeNote: "+18 % respecto al mes anterior",
@@ -280,12 +280,12 @@ export const es: SiteContent = {
         description: "Una combinación equilibrada de alquiler vacacional familiar y vida costera de larga temporada.",
       },
       {
-        name: "Málaga",
-        description: "Una capital cultural con un mercado creciente de escapadas urbanas y alquiler de larga estancia.",
-      },
-      {
         name: "Torremolinos",
         description: "Un destino de playa clásico con una demanda turística estable todo el año.",
+      },
+      {
+        name: "Málaga",
+        description: "Una capital cultural con un mercado creciente de escapadas urbanas y alquiler de larga estancia.",
       },
     ],
   },
@@ -300,7 +300,7 @@ export const es: SiteContent = {
     founderName: "Petter Solberg",
     founderRole: "Founder & Head of Growth, Nordic BnB",
     founderQuote:
-      "No nos limitamos a gestionar un anuncio — construimos una propiedad que realmente convierte. Conocemos el mercado de la Costa del Sol, y conocemos a los huéspedes, especialmente a los escandinavos que reservan aquí.",
+      "No nos limitamos a gestionar un anuncio — construimos una propiedad que realmente convierte. Conocemos el mercado de la Costa del Sol, y conocemos a los huéspedes, especialmente a los escandinavos que reservan aquí. Y no gestionamos solo a distancia — nuestro propio equipo de mantenimiento se encarga en persona de las mejoras, reparaciones y el mantenimiento de cada propiedad que gestionamos.",
     founder2Name: "Melanie Solberg",
     founder2Role: "Head of Operations & Marketing, Nordic BnB",
     founder2Quote:
@@ -365,7 +365,7 @@ export const es: SiteContent = {
     languageHeading: "Idioma",
     rights: "Nordic BnB. Todos los derechos reservados.",
     orgNumberLabel: "N.º de registro 931 905 856",
-    realPhotosNote: "Las fotos de antes/después en esta web son resultados reales, no ilustraciones, salvo que se indique lo contrario.",
+    privacyLabel: "Privacidad",
   },
   showcase1: {
     eyebrow: "Costa del Sol",
@@ -379,10 +379,11 @@ export const es: SiteContent = {
     eyebrow: "Equipo",
     heading: "El equipo detrás de Nordic BnB.",
     intro:
-      "Un equipo pequeño y muy implicado — no un call center. Escríbenos directamente, o descubre quién está detrás del trabajo en tu propiedad.",
+      "Un equipo dedicado y muy implicado sobre el terreno, pensado para llevar de verdad tu propiedad — no solo administrarla. Escríbenos directamente, o descubre quién está detrás del trabajo en tu propiedad.",
+    teamName: "Nuestro equipo operativo",
     teamHeading: "El equipo sobre el terreno",
     teamIntro:
-      "Junto a nosotros, un equipo operativo local mantiene cada propiedad funcionando día a día.",
+      "Este es nuestro propio equipo — interno, no externalizado — que mantiene cada propiedad funcionando día a día.",
     roles: [
       { title: "Mantenimiento", description: "Reparaciones, mantenimiento y revisiones entre estancias." },
       { title: "Equipo de limpieza", description: "Limpieza profesional y cambio de textiles tras cada huésped." },
@@ -393,7 +394,72 @@ export const es: SiteContent = {
     ctaSubline:
       "¿Tienes una pregunta, o quieres ver qué podría hacer Nordic BnB por tu propiedad? Envíanos un correo — respondemos personalmente, normalmente en menos de un día.",
     ctaButton: "Escribinos",
-    recruitCta:
-      "¿Te interesa unirte a nuestro equipo local como personal de limpieza, mantenimiento o fotógrafo/a? Escríbenos — siempre estamos abiertos a gente buena.",
+    recruitEyebrow: "Únete al equipo",
+    recruitHeading: "¿Quieres trabajar con nosotros?",
+    recruitSubline:
+      "Siempre estamos abiertos a gente buena. Si eres personal de limpieza, mantenimiento o fotógrafo/a en la Costa del Sol, nos gustaría saber de ti.",
+    story: {
+      eyebrow: "Nuestra historia",
+      heading: "Del marketing a la hospitalidad.",
+      milestones: [
+        {
+          period: "Agosto de 2023",
+          title: "Dónde empezó todo",
+          body: "Nordic BnB comenzó con marketing digital, ayudando a empresas y profesionales inmobiliarios a presentarse mejor a sí mismos y a sus propiedades en internet. Aprendimos algo muy pronto: la presentación cambia la percepción — y la percepción cambia el valor.",
+        },
+        {
+          period: "2024",
+          title: "Más cerca del sector inmobiliario",
+          body: "Nuestro trabajo se centró cada vez más en la propiedad, el contenido, la fotografía, el posicionamiento y la forma en que se presentaban las viviendas en internet. Vimos el mismo problema una y otra vez: propiedades excelentes que a menudo se comercializaban muy por debajo de su potencial.",
+        },
+        {
+          period: "2025",
+          title: "De Noruega a la Costa del Sol 🇪🇸",
+          body: "Nos mudamos a España y vivimos el mercado del alquiler de la Costa del Sol desde dentro — tanto como residentes como propietarios/operadores de propiedades. Lo que empezó como conocimiento de marketing se convirtió rápidamente en algo mayor: entender qué esperan los huéspedes internacionales, con qué luchan los propietarios y qué hace que una propiedad rinda mejor que otra.",
+        },
+        {
+          period: "Finales de 2025",
+          title: "La idea evolucionó",
+          body: "Empezamos a combinar todo lo que ya sabíamos — marketing, presentación, interiorismo, experiencia del huésped y propiedad — en un servicio completo para propietarios de alquileres vacacionales.",
+        },
+        {
+          period: "2026",
+          title: "Nordic BnB hoy",
+          body: "Nordic BnB se convirtió en una empresa de servicio completo de alquiler vacacional y gestión de propiedades en la Costa del Sol. Desde preparar y mejorar la propiedad hasta: Estilismo • Fotografía • Anuncios • Precios • Comunicación con huéspedes • Limpieza • Mantenimiento • Gestión integral. Una sola empresa. Un único punto de contacto. Todo resuelto.",
+        },
+        {
+          period: "2026 →",
+          title: "El próximo capítulo",
+          body: "Nuestro objetivo es sencillo: crear un nuevo estándar para la gestión del alquiler vacacional en la Costa del Sol — combinando servicio escandinavo, presentación potente y ejecución local. Mejoramos. Estilizamos. Gestionamos.",
+        },
+      ],
+    },
+  },
+  privacyPage: {
+    eyebrow: "Privacidad",
+    heading: "Política de privacidad.",
+    updated: "Última actualización: septiembre de 2026",
+    intro:
+      "Esta página explica en términos sencillos qué datos recopilamos cuando te pones en contacto con Nordic BnB, y cómo los usamos.",
+    sections: [
+      {
+        heading: "Qué recopilamos",
+        body: "Cuando rellenas nuestro formulario de contacto o nos escribes por correo electrónico o WhatsApp, recopilamos los datos que nos proporcionas — normalmente tu nombre, correo electrónico, número de teléfono y detalles sobre tu propiedad o consulta.",
+      },
+      {
+        heading: "Cómo lo usamos",
+        body: "Usamos estos datos únicamente para responder a tu consulta y, si te conviertes en cliente, para gestionar tu propiedad. Nunca vendemos ni alquilamos tus datos a terceros.",
+      },
+      {
+        heading: "Cuánto tiempo los conservamos",
+        body: "Conservamos tus datos solo el tiempo necesario para responder a tu consulta o mantener nuestra colaboración, salvo que la ley exija un plazo mayor.",
+      },
+      {
+        heading: "Tus derechos",
+        body: "Puedes solicitar en cualquier momento acceder, corregir o eliminar los datos que tenemos sobre ti. Simplemente contáctanos y atenderemos tu solicitud con prontitud.",
+      },
+    ],
+    contactHeading: "¿Preguntas sobre privacidad?",
+    contactBody: "Si tienes preguntas sobre esta política o sobre tus datos, contáctanos directamente.",
   },
 };

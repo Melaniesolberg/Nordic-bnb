@@ -7,9 +7,11 @@ import { cn } from "@/lib/utils";
 /** Subtle branded transition mark used between major homepage sections. */
 export default function SectionDivider({
   className,
+  iconClassName,
   tone = "light",
 }: {
   className?: string;
+  iconClassName?: string;
   tone?: "light" | "dark";
 }) {
   return (
@@ -32,7 +34,7 @@ export default function SectionDivider({
         viewport={{ once: true, margin: "-20% 0px -20% 0px" }}
         transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       >
-        <BrandIcon className="mx-6 h-6 w-6 opacity-80" />
+        <BrandIcon className={cn("mx-6 opacity-80", iconClassName ?? "h-6 w-6")} />
       </motion.div>
       <div
         className={cn(

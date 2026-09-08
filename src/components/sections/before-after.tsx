@@ -38,6 +38,7 @@ export default function BeforeAfter({
           <p className="mt-6 max-w-xl text-base leading-relaxed text-charcoal/65 sm:text-lg">
             {beforeAfter.intro}
           </p>
+          <p className="mt-3 text-xs text-charcoal/40">{beforeAfter.disclaimer}</p>
         </Reveal>
 
         <Reveal delay={0.1}>

@@ -12,6 +12,7 @@ export const CONTACT = {
   emailGeneral: "hello@nordicbnb.es",
   emailFounder: "petter@nordicbnb.es",
   emailMelanie: "melanie@nordicbnb.es",
+  emailSupport: "support@nordicbnb.es",
   whatsappDisplay: "+47 404 65 093",
   site: "https://nordicbnb.es",
 };

@@ -24,15 +24,15 @@ export const da: SiteContent = {
     eyebrow: "Ejendomsadministration — Costa del Sol",
     headlineLines: ["Din ejendom.", "Løbende forbedret."],
     subline:
-      "Fuld service korttids- og langtidsudlejning i Marbella, Mijas, Fuengirola og Benalmádena — positionering, prissætning og præsentation, konstant forfinet.",
+      "Fuld service korttids- og langtidsudlejning i Marbella, Mijas, Fuengirola, Benalmádena, Torremolinos og Málaga — positionering, prissætning og præsentation, konstant forfinet.",
     ctaPrimary: "Anmod om en ejendomsgennemgang",
     ctaSecondary: "Skriv til os på WhatsApp",
     scrollHint: "Scroll",
     locationTag: "Costa del Sol, Spanien",
   },
   system: {
-    eyebrow: "Sådan arbejder vi",
-    heading: "Fra tomt rum til bekræftet booking.",
+    eyebrow: "Hvad du kan forvente",
+    heading: "Hvad kan du forvente af os?",
     intro:
       "Processen der gør en annonce til en strøm af gæster, der kommer igen.",
     pillars: [
@@ -78,6 +78,7 @@ export const da: SiteContent = {
     sliderAriaLabel: "Før- og efter-sammenligning af annonce",
     beforeAlt: "Almindeligt annoncefoto, før Nordic BnB",
     afterAlt: "Stylet Nordic BnB-annoncefoto, efter",
+    disclaimer: "Illustreret eksempel, kun til demonstrationsformål.",
     fields: [
       {
         label: "Titel",
@@ -190,7 +191,6 @@ export const da: SiteContent = {
     heading: "Du ejer ejendommen. Vi håndterer driften.",
     intro:
       "Et live overblik over hvordan din ejendom præsterer — bookinger, belægning, rengøringsstatus, vedligeholdelse og din månedlige udbetaling, altid synlige.",
-    footnote: "Koncept-interface — illustrativt ejerpanel, vist med eksempeldata.",
     windowTitle: "Villa Sunrise — Ejerportal",
     cardAlt: "Villa Sunrise, ejendommen bag dette panel",
     revenueChangeNote: "+18 % ift. sidste måned",
@@ -280,12 +280,12 @@ export const da: SiteContent = {
         description: "En afbalanceret mix af familieferieboliger og langtidsliv ved kysten.",
       },
       {
-        name: "Málaga",
-        description: "En kulturel hovedstad med et voksende marked for bykortferier og langtidsudlejning.",
-      },
-      {
         name: "Torremolinos",
         description: "En klassisk badeby med jævn turistefterspørgsel året rundt.",
+      },
+      {
+        name: "Málaga",
+        description: "En kulturel hovedstad med et voksende marked for bykortferier og langtidsudlejning.",
       },
     ],
   },
@@ -300,7 +300,7 @@ export const da: SiteContent = {
     founderName: "Petter Solberg",
     founderRole: "Founder & Head of Growth, Nordic BnB",
     founderQuote:
-      "Vi driver ikke bare en annonce — vi bygger en ejendom, der faktisk konverterer. Vi kender markedet på Costa del Sol, og vi kender gæsterne, især de skandinaviske gæster, der booker her.",
+      "Vi driver ikke bare en annonce — vi bygger en ejendom, der faktisk konverterer. Vi kender markedet på Costa del Sol, og vi kender gæsterne, især de skandinaviske gæster, der booker her. Og vi administrerer ikke bare på afstand — vores eget handyman- og vedligeholdelsesteam står selv for opgraderingen, reparationerne og vedligeholdelsen, på hver eneste ejendom vi driver.",
     founder2Name: "Melanie Solberg",
     founder2Role: "Head of Operations & Marketing, Nordic BnB",
     founder2Quote:
@@ -365,7 +365,7 @@ export const da: SiteContent = {
     languageHeading: "Sprog",
     rights: "Nordic BnB. Alle rettigheder forbeholdes.",
     orgNumberLabel: "CVR-lign. nr. 931 905 856",
-    realPhotosNote: "Før/efter-billederne på denne side er ægte resultater, ikke illustration, medmindre andet er angivet.",
+    privacyLabel: "Privatliv",
   },
   showcase1: {
     eyebrow: "Costa del Sol",
@@ -379,10 +379,11 @@ export const da: SiteContent = {
     eyebrow: "Team",
     heading: "Teamet bag Nordic BnB.",
     intro:
-      "Et lille, håndplukket team — ikke et callcenter. Tag direkte kontakt, eller læs hvem der står bag arbejdet på din ejendom.",
+      "Et dedikeret team, der rent faktisk driver — ikke bare administrerer — din ejendom. Tag direkte kontakt, eller læs hvem der står bag arbejdet på din ejendom.",
+    teamName: "Vores driftsteam",
     teamHeading: "Teamet på jorden",
     teamIntro:
-      "Ved siden af os holder et lokalt driftsteam hver ejendom kørende, dag for dag.",
+      "Dette er vores eget team — internt, ikke indlejet — der holder hver ejendom kørende, dag for dag.",
     roles: [
       { title: "Handyman", description: "Vedligeholdelse, reparationer og tilsyn mellem ophold." },
       { title: "Rengøringsteam", description: "Professionel klargøring og skift af tekstiler efter hver gæst." },
@@ -393,7 +394,72 @@ export const da: SiteContent = {
     ctaSubline:
       "Har du et spørgsmål, eller vil du se hvad Nordic BnB kan gøre for din ejendom? Send os en mail — vi svarer personligt, som regel inden for en dag.",
     ctaButton: "Send os en mail",
-    recruitCta:
-      "Interesseret i at blive en del af vores lokale team som rengøring, handyman eller fotograf? Tag kontakt — vi er altid åbne for gode folk.",
+    recruitEyebrow: "Bliv en del af teamet",
+    recruitHeading: "Vil du arbejde med os?",
+    recruitSubline:
+      "Vi er altid åbne for gode folk. Er du rengøring, handyman eller fotograf på Costa del Sol, hører vi gerne fra dig.",
+    story: {
+      eyebrow: "Vores historie",
+      heading: "Fra markedsføring til gæstfrihed.",
+      milestones: [
+        {
+          period: "August 2023",
+          title: "Der hvor det startede",
+          body: "Nordic BnB startede med digital markedsføring og hjalp virksomheder og ejendomsmæglere med at præsentere sig selv og deres ejendomme bedre online. Det lærte os én ting tidligt: præsentation ændrer opfattelse — og opfattelse ændrer værdi.",
+        },
+        {
+          period: "2024",
+          title: "Tættere på ejendomsbranchen",
+          body: "Vores arbejde blev i stigende grad fokuseret på ejendom, indhold, fotografering, positionering og måden hjem blev præsenteret på online. Vi begyndte at se det samme problem igen og igen: gode ejendomme blev ofte markedsført langt under deres potentiale.",
+        },
+        {
+          period: "2025",
+          title: "Fra Norge til Costa del Sol 🇪🇸",
+          body: "Vi flyttede til Spanien og oplevede udlejningsmarkedet på Costa del Sol indefra — både som beboere og ejendomsejere/-operatører. Det, der startede som markedsføringsviden, blev hurtigt til noget større: forståelse for, hvad internationale gæster forventer, hvad ejere kæmper med, og hvad der gør, at én ejendom præsterer bedre end en anden.",
+        },
+        {
+          period: "Sent 2025",
+          title: "Idéen udviklede sig",
+          body: "Vi begyndte at kombinere alt, hvad vi allerede kunne — markedsføring, præsentation, interiør, gæsteoplevelse og ejendom — til én komplet tjeneste for ejere af ferieudlejning.",
+        },
+        {
+          period: "2026",
+          title: "Nordic BnB i dag",
+          body: "Nordic BnB blev et fuld-service ferieudlejnings- og ejendomsadministrationsselskab på Costa del Sol. Fra klargøring og opgradering af ejendommen til styling, fotografering, annoncer, prissætning, gæstekommunikation, rengøring, vedligeholdelse og fuld administration. Ét selskab. Ét kontaktpunkt. Alt håndteret.",
+        },
+        {
+          period: "2026 →",
+          title: "Næste kapitel",
+          body: "Vores mål er enkelt: bygge en ny standard for ferieudlejningsadministration på Costa del Sol — der kombinerer skandinavisk service, stærk præsentation og lokal udførelse. Vi opgraderer. Vi styler. Vi administrerer.",
+        },
+      ],
+    },
+  },
+  privacyPage: {
+    eyebrow: "Privatliv",
+    heading: "Privatlivspolitik.",
+    updated: "Sidst opdateret: september 2026",
+    intro:
+      "Denne side forklarer, i enkle vendinger, hvilke oplysninger Nordic BnB indsamler, når du kontakter os, og hvordan vi bruger dem.",
+    sections: [
+      {
+        heading: "Hvad vi indsamler",
+        body: "Når du kontakter os via vores kontaktformular, e-mail eller WhatsApp, indsamler vi de oplysninger, du oplyser — typisk navn, e-mailadresse, telefonnummer og oplysninger om din ejendom eller henvendelse.",
+      },
+      {
+        heading: "Hvordan vi bruger det",
+        body: "Vi bruger kun disse oplysninger til at besvare din henvendelse, give en ejendomsgennemgang eller et tilbud, og — hvis du bliver kunde — til at administrere din ejendom og kommunikere med dig om den. Vi sælger ikke dine oplysninger til tredjeparter.",
+      },
+      {
+        heading: "Hvor længe vi opbevarer det",
+        body: "Vi opbevarer henvendelsesoplysninger, så længe det er nødvendigt for at svare dig, eller — hvis du bliver kunde — i vores samarbejdsperiode og derefter så længe loven kræver det.",
+      },
+      {
+        heading: "Dine rettigheder",
+        body: "Du kan til enhver tid spørge os, hvilke oplysninger vi har om dig, bede os rette dem eller anmode om, at vi sletter dem. Send os blot en e-mail, så ordner vi det.",
+      },
+    ],
+    contactHeading: "Spørgsmål om dine data?",
+    contactBody: "Ved enhver henvendelse om databeskyttelse, send os en e-mail direkte, så vender vi personligt tilbage.",
   },
 };

@@ -44,13 +44,13 @@ export default function HomePage({ locale }: { locale: Locale }) {
           transformationImages={[
             media.handoverVilla,
             media.stylingDetail,
-            media.roomAfterStyled,
+            media.photographySessionRoom,
             media.guestArrival,
             media.cleaningMoment,
             media.aerialCoast,
           ]}
         />
-        <SectionDivider tone="light" />
+        <SectionDivider tone="light" iconClassName="h-12 w-12" />
         <Portfolio
           portfolio={content.portfolio}
           images={[media.realApartmentFuengirolaCollage, media.realVillaMarbellaCollage, media.realHouseMijasCollage]}
@@ -71,14 +71,15 @@ export default function HomePage({ locale }: { locale: Locale }) {
             media.mijasScene,
             media.fuengirolaScene,
             media.benalmadenaScene,
-            media.coastline,
             media.aerialCoast,
+            media.malagaScene,
           ]}
         />
         <Dashboard
           dashboard={content.dashboard}
           bgImageSrc={media.aerialCoast}
           cardImageSrc={media.heroVilla}
+          extraCardImages={[media.villaAerial, media.interiorLiving]}
         />
         <About about={content.about} bgImageSrc={media.sunsetSea} founderPhotoSrc={media.founderPetter} />
         <SectionDivider tone="light" />

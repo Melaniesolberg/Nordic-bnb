@@ -24,15 +24,15 @@ export const sv: SiteContent = {
     eyebrow: "Fastighetsförvaltning — Costa del Sol",
     headlineLines: ["Din fastighet.", "Kontinuerligt förbättrad."],
     subline:
-      "Fullservice kortids- och långtidsuthyrning i Marbella, Mijas, Fuengirola och Benalmádena — positionering, prissättning och presentation, ständigt förfinade.",
+      "Fullservice kortids- och långtidsuthyrning i Marbella, Mijas, Fuengirola, Benalmádena, Torremolinos och Málaga — positionering, prissättning och presentation, ständigt förfinade.",
     ctaPrimary: "Begär en fastighetsgenomgång",
     ctaSecondary: "Prata med oss på WhatsApp",
     scrollHint: "Scrolla",
     locationTag: "Costa del Sol, Spanien",
   },
   system: {
-    eyebrow: "Så här jobbar vi",
-    heading: "Från tomt rum till bekräftad bokning.",
+    eyebrow: "Vad du kan förvänta dig",
+    heading: "Vad kan du förvänta dig av oss?",
     intro:
       "Processen som gör en annons till en ström av återkommande gäster.",
     pillars: [
@@ -78,6 +78,7 @@ export const sv: SiteContent = {
     sliderAriaLabel: "Före- och efter-jämförelse av annons",
     beforeAlt: "Vanligt annonsfoto, före Nordic BnB",
     afterAlt: "Stylat Nordic BnB-annonsfoto, efter",
+    disclaimer: "Illustrerat exempel, endast i demonstrationssyfte.",
     fields: [
       {
         label: "Titel",
@@ -190,7 +191,6 @@ export const sv: SiteContent = {
     heading: "Du äger fastigheten. Vi sköter driften.",
     intro:
       "En livevy över hur din fastighet presterar — bokningar, beläggning, städstatus, underhåll och din månatliga utbetalning, alltid synliga.",
-    footnote: "Konceptgränssnitt — illustrativ ägarpanel, visad med exempeldata.",
     windowTitle: "Villa Sunrise — Ägarportal",
     cardAlt: "Villa Sunrise, fastigheten bakom denna panel",
     revenueChangeNote: "+18 % jämfört med förra månaden",
@@ -280,12 +280,12 @@ export const sv: SiteContent = {
         description: "En balanserad mix av familjesemestrar och långtidsboende vid kusten.",
       },
       {
-        name: "Málaga",
-        description: "En kulturell huvudstad med en växande marknad för stadssemestrar och långtidsuthyrning.",
-      },
-      {
         name: "Torremolinos",
         description: "En klassisk badort med jämn turistefterfrågan året runt.",
+      },
+      {
+        name: "Málaga",
+        description: "En kulturell huvudstad med en växande marknad för stadssemestrar och långtidsuthyrning.",
       },
     ],
   },
@@ -300,7 +300,7 @@ export const sv: SiteContent = {
     founderName: "Petter Solberg",
     founderRole: "Founder & Head of Growth, Nordic BnB",
     founderQuote:
-      "Vi driver inte bara en annons — vi bygger en fastighet som faktiskt konverterar. Vi känner marknaden på Costa del Sol, och vi känner gästerna, särskilt de skandinaviska gästerna som bokar här.",
+      "Vi driver inte bara en annons — vi bygger en fastighet som faktiskt konverterar. Vi känner marknaden på Costa del Sol, och vi känner gästerna, särskilt de skandinaviska gästerna som bokar här. Och vi förvaltar inte bara på distans — vårt eget handyman- och underhållsteam gör uppgraderingen, lagningen och skötseln själva, på varje fastighet vi driver.",
     founder2Name: "Melanie Solberg",
     founder2Role: "Head of Operations & Marketing, Nordic BnB",
     founder2Quote:
@@ -365,7 +365,7 @@ export const sv: SiteContent = {
     languageHeading: "Språk",
     rights: "Nordic BnB. Alla rättigheter förbehållna.",
     orgNumberLabel: "Org.nr 931 905 856",
-    realPhotosNote: "Före/efter-bilderna på denna sida är verkliga resultat, inte illustration, om inget annat anges.",
+    privacyLabel: "Integritet",
   },
   showcase1: {
     eyebrow: "Costa del Sol",
@@ -379,10 +379,11 @@ export const sv: SiteContent = {
     eyebrow: "Team",
     heading: "Teamet bakom Nordic BnB.",
     intro:
-      "Ett litet, handplockat team — inte ett callcenter. Hör av dig direkt, eller läs vem som står bakom arbetet med din fastighet.",
+      "Ett dedikerat team som faktiskt driver — inte bara förvaltar — din fastighet. Hör av dig direkt, eller läs vem som står bakom arbetet med din fastighet.",
+    teamName: "Vårt driftteam",
     teamHeading: "Teamet på plats",
     teamIntro:
-      "Vid sidan av oss håller ett lokalt driftteam varje fastighet igång, dag för dag.",
+      "Det här är vårt eget team — internt, inte inhyrt — som håller varje fastighet igång, dag för dag.",
     roles: [
       { title: "Handyman", description: "Underhåll, reparationer och tillsyn mellan bokningar." },
       { title: "Städteam", description: "Professionell städning och byte av textilier efter varje gäst." },
@@ -393,7 +394,72 @@ export const sv: SiteContent = {
     ctaSubline:
       "Har du en fråga, eller vill se vad Nordic BnB kan göra för din fastighet? Skicka ett mail — vi svarar personligen, oftast inom en dag.",
     ctaButton: "Maila oss",
-    recruitCta:
-      "Intresserad av att bli en del av vårt lokala team som städare, handyman eller fotograf? Hör av dig — vi är alltid öppna för bra folk.",
+    recruitEyebrow: "Bli en del av teamet",
+    recruitHeading: "Vill du jobba med oss?",
+    recruitSubline:
+      "Vi är alltid öppna för bra folk. Är du städare, handyman eller fotograf på Costa del Sol hör vi gärna av dig.",
+    story: {
+      eyebrow: "Vår historia",
+      heading: "Från marknadsföring till gästfrihet.",
+      milestones: [
+        {
+          period: "Augusti 2023",
+          title: "Där det började",
+          body: "Nordic BnB startade med digital marknadsföring och hjälpte företag och fastighetsmäklare att presentera sig själva och sina fastigheter bättre online. Det lärde oss en sak tidigt: presentation förändrar uppfattning — och uppfattning förändrar värde.",
+        },
+        {
+          period: "2024",
+          title: "Närmare fastighetsbranschen",
+          body: "Vårt arbete blev allt mer inriktat på fastigheter, innehåll, fotografering, positionering och hur bostäder presenterades online. Vi började se samma problem om och om igen: bra fastigheter marknadsfördes ofta långt under sin potential.",
+        },
+        {
+          period: "2025",
+          title: "Från Norge till Costa del Sol 🇪🇸",
+          body: "Vi flyttade till Spanien och upplevde uthyrningsmarknaden på Costa del Sol inifrån — både som boende och fastighetsägare/-operatörer. Det som började som marknadsföringskunskap blev snabbt något större: förståelse för vad internationella gäster förväntar sig, vad ägare kämpar med, och vad som gör att en fastighet presterar bättre än en annan.",
+        },
+        {
+          period: "Sent 2025",
+          title: "Idén utvecklades",
+          body: "Vi började kombinera allt vi redan kunde — marknadsföring, presentation, inredning, gästupplevelse och fastighet — till en komplett tjänst för ägare av semesteruthyrning.",
+        },
+        {
+          period: "2026",
+          title: "Nordic BnB idag",
+          body: "Nordic BnB blev ett fullservicebolag för semesteruthyrning och fastighetsförvaltning på Costa del Sol. Från att förbereda och uppgradera fastigheten till styling, fotografering, annonser, prissättning, gästkommunikation, städning, underhåll och full förvaltning. Ett bolag. En kontaktpunkt. Allt hanterat.",
+        },
+        {
+          period: "2026 →",
+          title: "Nästa kapitel",
+          body: "Vårt mål är enkelt: bygga en ny standard för semesteruthyrningsförvaltning på Costa del Sol — som kombinerar skandinavisk service, stark presentation och lokalt genomförande. Vi uppgraderar. Vi stylar. Vi förvaltar.",
+        },
+      ],
+    },
+  },
+  privacyPage: {
+    eyebrow: "Integritet",
+    heading: "Integritetspolicy.",
+    updated: "Senast uppdaterad: september 2026",
+    intro:
+      "Den här sidan förklarar, i enkla ord, vilken information Nordic BnB samlar in när du kontaktar oss och hur vi använder den.",
+    sections: [
+      {
+        heading: "Vad vi samlar in",
+        body: "När du hör av dig via vårt kontaktformulär, e-post eller WhatsApp samlar vi in de uppgifter du lämnar — vanligtvis namn, e-postadress, telefonnummer och information om din fastighet eller förfrågan.",
+      },
+      {
+        heading: "Hur vi använder det",
+        body: "Vi använder denna information endast för att svara på din förfrågan, ge en fastighetsgenomgång eller offert, och om du blir kund, för att förvalta din fastighet och kommunicera med dig om den. Vi säljer inte din information till tredje part.",
+      },
+      {
+        heading: "Hur länge vi sparar det",
+        body: "Vi sparar förfrågningsinformation så länge det behövs för att svara dig, eller om du blir kund, under vår samarbetsperiod och därefter så länge lagen kräver.",
+      },
+      {
+        heading: "Dina rättigheter",
+        body: "Du kan när som helst fråga oss vilken information vi har om dig, be oss rätta den, eller begära att vi raderar den. Maila oss bara så ordnar vi det.",
+      },
+    ],
+    contactHeading: "Frågor om din data?",
+    contactBody: "För personuppgiftsrelaterade förfrågningar, maila oss direkt så svarar vi dig personligen.",
   },
 };

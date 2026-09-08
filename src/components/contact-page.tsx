@@ -4,6 +4,7 @@ import WhatsappFab from "@/components/layout/whatsapp-fab";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import Magnetic from "@/components/ui/magnetic-button";
+import StoryTimeline from "@/components/sections/story-timeline";
 import Image from "next/image";
 import { getContent } from "@/content";
 import { media } from "@/content/media";
@@ -65,7 +66,8 @@ export default function ContactPage({ locale }: { locale: Locale }) {
           <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
             <Reveal>
               <Eyebrow>{contactPage.teamHeading}</Eyebrow>
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-charcoal/65 sm:text-lg">
+              <p className="mt-6 font-serif-display text-2xl text-charcoal">{contactPage.teamName}</p>
+              <p className="mt-2 max-w-xl text-base leading-relaxed text-charcoal/65 sm:text-lg">
                 {contactPage.teamIntro}
               </p>
             </Reveal>
@@ -83,33 +85,52 @@ export default function ContactPage({ locale }: { locale: Locale }) {
         </section>
 
         <section className="bg-charcoal py-24 sm:py-32">
-          <div className="mx-auto max-w-[1600px] px-5 text-center sm:px-8 lg:px-12">
-            <Reveal>
-              <Eyebrow tone="light" className="justify-center">
-                {contactPage.emailHeading}
-              </Eyebrow>
-              <h2 className="font-serif-display text-display-md mt-6 text-ivory">
-                {contactPage.ctaHeading}
-              </h2>
-              <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-ivory/65 sm:text-lg">
-                {contactPage.ctaSubline}
-              </p>
-              <div className="mt-10 flex justify-center">
-                <Magnetic>
-                  <a
-                    href={`mailto:${CONTACT.emailGeneral}`}
-                    className="inline-flex items-center rounded-full bg-coral px-7 py-4 text-sm font-medium tracking-wide text-ivory transition-colors hover:bg-coral-deep"
-                  >
-                    {contactPage.ctaButton}
-                  </a>
-                </Magnetic>
-              </div>
-              <p className="mx-auto mt-8 max-w-xl text-sm leading-relaxed text-ivory/45">
-                {contactPage.recruitCta}
-              </p>
-            </Reveal>
+          <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
+            <div className="grid grid-cols-1 gap-16 sm:grid-cols-2 sm:gap-10">
+              <Reveal>
+                <Eyebrow tone="light">{contactPage.emailHeading}</Eyebrow>
+                <h2 className="font-serif-display text-3xl text-ivory sm:text-4xl">
+                  {contactPage.ctaHeading}
+                </h2>
+                <p className="mt-5 max-w-md text-base leading-relaxed text-ivory/65">
+                  {contactPage.ctaSubline}
+                </p>
+                <div className="mt-8">
+                  <Magnetic>
+                    <a
+                      href={`mailto:${CONTACT.emailGeneral}`}
+                      className="inline-flex items-center rounded-full bg-coral px-7 py-4 text-sm font-medium tracking-wide text-ivory transition-colors hover:bg-coral-deep"
+                    >
+                      {contactPage.ctaButton}
+                    </a>
+                  </Magnetic>
+                </div>
+              </Reveal>
+
+              <Reveal delay={0.08}>
+                <Eyebrow tone="light">{contactPage.recruitEyebrow}</Eyebrow>
+                <h2 className="font-serif-display text-3xl text-ivory sm:text-4xl">
+                  {contactPage.recruitHeading}
+                </h2>
+                <p className="mt-5 max-w-md text-base leading-relaxed text-ivory/65">
+                  {contactPage.recruitSubline}
+                </p>
+                <div className="mt-8">
+                  <Magnetic>
+                    <a
+                      href={`mailto:${CONTACT.emailGeneral}`}
+                      className="inline-flex items-center rounded-full border border-ivory/25 px-7 py-4 text-sm font-medium tracking-wide text-ivory transition-colors hover:border-ivory/60"
+                    >
+                      {contactPage.ctaButton}
+                    </a>
+                  </Magnetic>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </section>
+
+        <StoryTimeline story={contactPage.story} />
       </main>
       <Footer locale={locale} footer={footer} nav={nav} locationTag={hero.locationTag} />
       <WhatsappFab label={nav.whatsapp} message={nav.whatsappMessage} />

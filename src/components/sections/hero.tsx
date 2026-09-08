@@ -182,9 +182,8 @@ export default function Hero({
             variants={item}
             initial="hidden"
             animate="visible"
-            className="mt-10 flex items-center justify-between border-t border-ivory/15 pt-6 text-ivory/55 sm:mt-16"
+            className="mt-10 flex items-center justify-end border-t border-ivory/15 pt-6 text-ivory/55 sm:mt-16"
           >
-            <span className="eyebrow">{hero.locationTag}</span>
             <span className="flex items-center gap-2 eyebrow">
               {hero.scrollHint}
               <motion.span

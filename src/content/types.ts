@@ -51,6 +51,7 @@ export interface BeforeAfterContent {
   sliderAriaLabel: string;
   beforeAlt: string;
   afterAlt: string;
+  disclaimer: string;
 }
 
 export interface PortfolioProperty {
@@ -93,7 +94,6 @@ export interface DashboardContent {
   eyebrow: string;
   heading: string;
   intro: string;
-  footnote: string;
   windowTitle: string;
   cardAlt: string;
   revenueChangeNote: string;
@@ -219,13 +219,36 @@ export interface FooterContent {
   languageHeading: string;
   rights: string;
   orgNumberLabel: string;
-  realPhotosNote: string;
+  privacyLabel: string;
+}
+
+export interface PrivacyPageContent {
+  eyebrow: string;
+  heading: string;
+  updated: string;
+  intro: string;
+  sections: { heading: string; body: string }[];
+  contactHeading: string;
+  contactBody: string;
+}
+
+export interface StoryMilestone {
+  period: string;
+  title: string;
+  body: string;
+}
+
+export interface StorySectionContent {
+  eyebrow: string;
+  heading: string;
+  milestones: StoryMilestone[];
 }
 
 export interface ContactPageContent {
   eyebrow: string;
   heading: string;
   intro: string;
+  teamName: string;
   teamHeading: string;
   teamIntro: string;
   roles: { title: string; description: string }[];
@@ -233,7 +256,10 @@ export interface ContactPageContent {
   ctaHeading: string;
   ctaSubline: string;
   ctaButton: string;
-  recruitCta: string;
+  recruitEyebrow: string;
+  recruitHeading: string;
+  recruitSubline: string;
+  story: StorySectionContent;
 }
 
 export interface SiteContent {
@@ -258,4 +284,5 @@ export interface SiteContent {
   showcase2: ShowcaseContent;
   portfolio: PortfolioContent;
   contactPage: ContactPageContent;
+  privacyPage: PrivacyPageContent;
 }
