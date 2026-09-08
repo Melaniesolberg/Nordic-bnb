@@ -123,11 +123,13 @@ export const media = {
   roomBeforeUnstyled:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260906_110715_0036c165-cac1-4b8b-8a08-24d418ec0a00.png",
 
-  // Round 12: a short looping cinematic video of the styled "after" room,
-  // used only in the top BeforeAfter section so the Nordic BnB side plays
-  // as a living, moving showcase against the flat, static "before" photo.
-  roomAfterVideo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_132531_ae6502a2-1c32-4269-95de-32826953f946.mp4",
+  // Round 13: the top BeforeAfter section was rebuilt entirely around this
+  // one cinematic 4K video (a person sets up a dull listing, the camera
+  // dives into the screen into the flat unstyled room, pulls back out,
+  // then the same beat repeats for a new, beautifully styled listing) —
+  // replacing the old drag-slider + comparison-table layout completely.
+  beforeAfterListingVideo:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_141547_b232e04a-3498-4173-841a-7b11b55a10b5.mp4",
 
   // Handover visual for the process section's first step ("We take over the
   // property") — a nice Marbella villa with its front door open and a
