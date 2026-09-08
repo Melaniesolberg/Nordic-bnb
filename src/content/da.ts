@@ -73,39 +73,7 @@ export const da: SiteContent = {
     heading: "Samme ejendom. En helt anden annonce.",
     intro:
       "Hvilken annonce ville du have valgt?",
-    beforeLabel: "Før",
-    afterLabel: "Nordic BnB",
-    sliderAriaLabel: "Før- og efter-sammenligning af annonce",
-    beforeAlt: "Almindeligt annoncefoto, før Nordic BnB",
-    afterAlt: "Stylet Nordic BnB-annoncefoto, efter",
     disclaimer: "Illustreret eksempel, kun til demonstrationsformål.",
-    fields: [
-      {
-        label: "Titel",
-        before: "Fin lejlighed nær stranden, 2 værelser",
-        after: "Solrigt tilflugtssted i Marbella, 90 sekunder fra sandet",
-      },
-      {
-        label: "Fotografi",
-        before: "Mobilbilleder, blandet lys, rodede rum",
-        after: "Stylet, professionelt fotograferet, eksteriør i det gyldne timelys",
-      },
-      {
-        label: "Pris",
-        before: "90 €/nat, fast hele året",
-        after: "68–165 €/nat, justeret efter efterspørgsel i realtid",
-      },
-      {
-        label: "Beskrivelse",
-        before: "To linjer. Ingen historie, ingen detaljer.",
-        after: "Skrevet for at sælge oplevelsen — og for at konvertere",
-      },
-      {
-        label: "Synlighed",
-        before: "Annonceret på én platform",
-        after: "Distribueret på alle kanaler der betyder noget",
-      },
-    ],
   },
   portfolio: {
     eyebrow: "Portefølje",
@@ -437,12 +405,13 @@ export const da: SiteContent = {
     teamName: "Vores driftsteam",
     teamHeading: "Teamet på jorden",
     teamIntro:
-      "Dette er vores eget team — inklusive vores eget rengøringspersonale — der holder hver ejendom kørende, dag efter dag.",
+      "Håndværk, rengøring og styling — alt håndteres af folk, vi kender og stoler på, ikke tilfældige underleverandører.",
     roles: [
       { title: "Handyman", description: "Vedligeholdelse, reparationer og tilsyn mellem ophold." },
       { title: "Rengøringsteam", description: "Professionel klargøring og skift af tekstiler efter hver gæst." },
       { title: "Fotograf/stylist", description: "Styling og fotografering til hver ny annonce." },
     ],
+    photoDesignLabel: "Foto/Design",
     emailHeading: "Skriv direkte til os",
     ctaHeading: "Lad os tale om din ejendom.",
     ctaSubline:

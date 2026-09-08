@@ -35,22 +35,10 @@ export interface SystemContent {
   pillars: SystemPillar[];
 }
 
-export interface BeforeAfterField {
-  label: string;
-  before: string;
-  after: string;
-}
-
 export interface BeforeAfterContent {
   eyebrow: string;
   heading: string;
   intro: string;
-  beforeLabel: string;
-  afterLabel: string;
-  fields: BeforeAfterField[];
-  sliderAriaLabel: string;
-  beforeAlt: string;
-  afterAlt: string;
   disclaimer: string;
 }
 
@@ -252,6 +240,7 @@ export interface ContactPageContent {
   teamHeading: string;
   teamIntro: string;
   roles: { title: string; description: string }[];
+  photoDesignLabel: string;
   emailHeading: string;
   ctaHeading: string;
   ctaSubline: string;

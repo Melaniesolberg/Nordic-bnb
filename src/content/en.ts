@@ -73,39 +73,7 @@ export const en: SiteContent = {
     heading: "The same property. A different listing entirely.",
     intro:
       "Which listing would you choose?",
-    beforeLabel: "Before",
-    afterLabel: "Nordic BnB",
-    sliderAriaLabel: "Before and after listing comparison",
-    beforeAlt: "Ordinary listing photography, before Nordic BnB",
-    afterAlt: "Styled Nordic BnB listing photography, after",
     disclaimer: "Illustrated example, for demonstration purposes.",
-    fields: [
-      {
-        label: "Title",
-        before: "Nice apartment near the beach, 2 bedrooms",
-        after: "Sunlit Marbella retreat, 90 seconds from the sand",
-      },
-      {
-        label: "Photography",
-        before: "Phone photos, mixed lighting, cluttered rooms",
-        after: "Styled, professionally shot, golden-hour exteriors",
-      },
-      {
-        label: "Pricing",
-        before: "€90/night, fixed all year",
-        after: "€68–€165/night, adjusted to demand in real time",
-      },
-      {
-        label: "Description",
-        before: "Two lines. No story, no detail.",
-        after: "Written to sell the experience — and to convert",
-      },
-      {
-        label: "Presence",
-        before: "Listed on one platform",
-        after: "Distributed across every channel that matters",
-      },
-    ],
   },
   portfolio: {
     eyebrow: "Portfolio",
@@ -434,12 +402,13 @@ export const en: SiteContent = {
     teamName: "Our operations team",
     teamHeading: "The team on the ground",
     teamIntro:
-      "This is our own team — including our own cleaning staff — keeping every property running, day after day.",
+      "Handyman work, cleaning and styling — all handled by people we know and trust, not random subcontractors.",
     roles: [
       { title: "Handyman", description: "Maintenance, repairs and upkeep between stays." },
       { title: "Cleaning team", description: "Professional turnover and linen service after every guest." },
       { title: "Photographer & stylist", description: "Styling and photography for every new listing." },
     ],
+    photoDesignLabel: "Photo/Design",
     emailHeading: "Email us directly",
     ctaHeading: "Let's talk about your property.",
     ctaSubline:

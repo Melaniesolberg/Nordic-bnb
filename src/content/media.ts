@@ -10,18 +10,27 @@
  */
 export const media = {
   // Real Nordic BnB brand assets. brandLogo is the user's lockup file
-  // (icon + "Nordic BnB" wordmark laid out together as one image). Round 12:
-  // corrected the wordmark casing to read exactly "Nordic BnB" (capital B
-  // at the start and end of "BnB") via an image-reference edit that kept
-  // the icon, colors, font and layout identical — do not regenerate again
-  // beyond that fix. brandIcon is the icon alone, used standalone for the
-  // favicon and small decorative marks. Do not swap for another variant.
+  // (icon + "Nordic BnB" wordmark laid out together as one image). Round 12's
+  // casing edit accidentally added a white background; round 13 redid the
+  // edit from the original file and ran it through background removal, so
+  // this is back to a fully transparent PNG with only the wordmark casing
+  // corrected to "Nordic BnB" — do not regenerate again beyond that fix.
+  // brandIcon is the icon alone, used standalone for the favicon and small
+  // decorative marks. Do not swap for another variant.
   brandLogo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_131119_5cc935ed-775b-4906-8147-3930c0c23c4a.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_141240_402769c7-b5b8-4f1e-8410-e7cd863aa2db.png",
   brandIcon:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_144026_4d601721-c7fe-4183-9978-c1ed89f0ef51.png",
   brandMerch:
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/0b6e253a-5c3d-4549-8b13-bc988759332b.png",
+
+  // Round 13: simple partner-company logo covers for the Team page's three
+  // role cards (Handyman, Cleaning team). The Photographer/stylist card
+  // reuses brandLogo directly, so no separate asset is needed for it.
+  roleHandymanLogo:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_141611_f4030ab4-e047-4b76-9fec-f05c51fa605a.png",
+  roleCleaningLogo:
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_141615_2a9acf12-d7b1-4717-8e89-f9a567371a18.png",
 
   heroVilla:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111038_b2e7c852-74ff-4b5b-b324-ee38838ae978.png",
@@ -123,8 +132,10 @@ export const media = {
   // Handover visual for the process section's first step ("We take over the
   // property") — a nice Marbella villa with its front door open and a
   // Nordic BnB-branded car parked outside, symbolizing a fresh takeover.
+  // Round 13: fixed the car's decal to be an exact copy of the real logo
+  // (not a reinvented variant), with "Costa del Sol" in small type beneath.
   handoverVilla:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_132431_70344c50-0bbb-4857-bf5d-6264439e7a8c.png",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_141315_50e6bef8-8fbd-422c-a0da-258ff792ef57.png",
 
   // Real, distinctive Málaga cityscape photo for the Areas section's detail
   // panel (not a reused/generic scene like the other area photos).

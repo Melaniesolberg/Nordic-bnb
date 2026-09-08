@@ -73,39 +73,7 @@ export const de: SiteContent = {
     heading: "Dieselbe Immobilie. Ein völlig anderes Inserat.",
     intro:
       "Welches Inserat würden Sie wählen?",
-    beforeLabel: "Vorher",
-    afterLabel: "Nordic BnB",
-    sliderAriaLabel: "Vorher-Nachher-Vergleich des Inserats",
-    beforeAlt: "Gewöhnliches Inseratsfoto, vor Nordic BnB",
-    afterAlt: "Stilvolles Nordic BnB-Inseratsfoto, nachher",
     disclaimer: "Illustriertes Beispiel, zu Demonstrationszwecken.",
-    fields: [
-      {
-        label: "Titel",
-        before: "Schöne Wohnung nahe dem Strand, 2 Schlafzimmer",
-        after: "Sonniges Refugium in Marbella, 90 Sekunden vom Sand entfernt",
-      },
-      {
-        label: "Fotografie",
-        before: "Handyfotos, wechselndes Licht, unaufgeräumte Zimmer",
-        after: "Gestylt, professionell fotografiert, Außenaufnahmen zur goldenen Stunde",
-      },
-      {
-        label: "Preis",
-        before: "90 €/Nacht, das ganze Jahr über fest",
-        after: "68–165 €/Nacht, in Echtzeit an die Nachfrage angepasst",
-      },
-      {
-        label: "Beschreibung",
-        before: "Zwei Zeilen. Keine Geschichte, keine Details.",
-        after: "Geschrieben, um das Erlebnis zu verkaufen — und zu konvertieren",
-      },
-      {
-        label: "Präsenz",
-        before: "Auf einer einzigen Plattform gelistet",
-        after: "Verteilt über jeden relevanten Kanal",
-      },
-    ],
   },
   portfolio: {
     eyebrow: "Portfolio",
@@ -437,12 +405,13 @@ export const de: SiteContent = {
     teamName: "Unser Betriebsteam",
     teamHeading: "Das Team vor Ort",
     teamIntro:
-      "Das ist unser eigenes Team — einschließlich unseres eigenen Reinigungspersonals — das jede Immobilie Tag für Tag am Laufen hält.",
+      "Handwerk, Reinigung und Styling — alles wird von Menschen erledigt, die wir kennen und denen wir vertrauen, nicht von zufälligen Subunternehmern.",
     roles: [
       { title: "Hausmeister", description: "Instandhaltung, Reparaturen und Kontrollen zwischen den Aufenthalten." },
       { title: "Reinigungsteam", description: "Professionelle Endreinigung und Wäschewechsel nach jedem Gast." },
       { title: "Fotograf & Stylist", description: "Styling und Fotografie für jedes neue Inserat." },
     ],
+    photoDesignLabel: "Foto/Design",
     emailHeading: "Schreiben Sie uns direkt",
     ctaHeading: "Lassen Sie uns über Ihre Immobilie sprechen.",
     ctaSubline:

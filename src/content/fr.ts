@@ -73,39 +73,7 @@ export const fr: SiteContent = {
     heading: "Le même bien. Une annonce complètement différente.",
     intro:
       "Quelle annonce choisiriez-vous ?",
-    beforeLabel: "Avant",
-    afterLabel: "Nordic BnB",
-    sliderAriaLabel: "Comparaison avant/après de l'annonce",
-    beforeAlt: "Photo d'annonce ordinaire, avant Nordic BnB",
-    afterAlt: "Photo d'annonce Nordic BnB mise en scène, après",
     disclaimer: "Exemple illustré, à des fins de démonstration.",
-    fields: [
-      {
-        label: "Titre",
-        before: "Bel appartement près de la plage, 2 chambres",
-        after: "Havre lumineux à Marbella, à 90 secondes du sable",
-      },
-      {
-        label: "Photographie",
-        before: "Photos de téléphone, éclairage inégal, pièces en désordre",
-        after: "Mis en scène, photographié par un professionnel, extérieurs à l'heure dorée",
-      },
-      {
-        label: "Prix",
-        before: "90 €/nuit, fixe toute l'année",
-        after: "68–165 €/nuit, ajusté à la demande en temps réel",
-      },
-      {
-        label: "Description",
-        before: "Deux lignes. Aucune histoire, aucun détail.",
-        after: "Rédigée pour vendre l'expérience — et pour convertir",
-      },
-      {
-        label: "Présence",
-        before: "Publié sur une seule plateforme",
-        after: "Distribué sur tous les canaux pertinents",
-      },
-    ],
   },
   portfolio: {
     eyebrow: "Portefeuille",
@@ -437,12 +405,13 @@ export const fr: SiteContent = {
     teamName: "Notre équipe opérationnelle",
     teamHeading: "L'équipe sur le terrain",
     teamIntro:
-      "C'est notre propre équipe — y compris notre propre personnel de ménage — qui fait tourner chaque bien, jour après jour.",
+      "Bricolage, ménage et mise en scène — tout est géré par des personnes que nous connaissons et en qui nous avons confiance, pas des sous-traitants au hasard.",
     roles: [
       { title: "Homme à tout faire", description: "Entretien, réparations et contrôles entre chaque séjour." },
       { title: "Équipe de ménage", description: "Ménage professionnel et changement du linge après chaque voyageur." },
       { title: "Photographe & styliste", description: "Mise en scène et photographie pour chaque nouvelle annonce." },
     ],
+    photoDesignLabel: "Photo/Design",
     emailHeading: "Écrivez-nous directement",
     ctaHeading: "Parlons de votre bien.",
     ctaSubline:

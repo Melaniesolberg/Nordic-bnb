@@ -29,9 +29,8 @@ export default function HomePage({ locale }: { locale: Locale }) {
         <Hero hero={content.hero} formHref={formHref} imageSrc={media.villaAerial} />
         <BeforeAfter
           beforeAfter={content.beforeAfter}
-          beforeSrc={media.roomBeforeUnstyled}
-          afterSrc={media.roomAfterStyled}
-          afterVideoSrc={media.roomAfterVideo}
+          videoSrc={media.roomAfterVideo}
+          posterSrc={media.roomAfterStyled}
         />
         <PropertyShowcase
           imageSrc={media.seaView}
@@ -82,7 +81,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
           cardImageSrc={media.heroVilla}
         />
         <About about={content.about} bgImageSrc={media.sunsetSea} founderPhotoSrc={media.founderPetter} />
-        <SectionDivider tone="light" />
+        <SectionDivider tone="light" iconClassName="h-12 w-12" />
         <FinalCta
           finalCta={content.finalCta}
           imageSrc={media.nightVilla}

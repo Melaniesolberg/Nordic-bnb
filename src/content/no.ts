@@ -73,39 +73,7 @@ export const no: SiteContent = {
     heading: "Samme eiendom. En helt annen annonse.",
     intro:
       "Hvilken annonse ville du valgt?",
-    beforeLabel: "Før",
-    afterLabel: "Nordic BnB",
-    sliderAriaLabel: "Før- og etter-sammenligning av annonse",
-    beforeAlt: "Ordinært annonsefoto, før Nordic BnB",
-    afterAlt: "Stylet Nordic BnB-annonsefoto, etter",
     disclaimer: "Illustrert eksempel, kun til demonstrasjon.",
-    fields: [
-      {
-        label: "Tittel",
-        before: "Fin leilighet nær stranden, 2 soverom",
-        after: "Solfylt tilfluktssted i Marbella, 90 sekunder fra sanden",
-      },
-      {
-        label: "Fotografi",
-        before: "Mobilbilder, blandet lys, rotete rom",
-        after: "Stylet, profesjonelt fotografert, eksteriør i gyllent lys",
-      },
-      {
-        label: "Prising",
-        before: "900 kr/natt, fast hele året",
-        after: "680–1650 kr/natt, justert etter etterspørsel i sanntid",
-      },
-      {
-        label: "Beskrivelse",
-        before: "To linjer. Ingen historie, ingen detaljer.",
-        after: "Skrevet for å selge opplevelsen — og for å konvertere",
-      },
-      {
-        label: "Synlighet",
-        before: "Annonsert på én plattform",
-        after: "Distribuert på alle kanaler som betyr noe",
-      },
-    ],
   },
   portfolio: {
     eyebrow: "Portefølje",
@@ -437,12 +405,13 @@ export const no: SiteContent = {
     teamName: "Vårt driftsteam",
     teamHeading: "Teamet på bakken",
     teamIntro:
-      "Dette er vårt eget team — inkludert vårt eget vaskepersonell — som holder hver eiendom i gang, dag for dag.",
+      "Handverk, renhold og styling — alt håndteres av folk vi kjenner og stoler på, ikke tilfeldige underleverandører.",
     roles: [
       { title: "Handyman", description: "Vedlikehold, reparasjoner og tilsyn mellom opphold." },
       { title: "Vasketeam", description: "Profesjonell klargjøring og skift av tekstiler etter hver gjest." },
       { title: "Fotograf/stylist", description: "Styling og fotografering for hver nye annonse." },
     ],
+    photoDesignLabel: "Foto/Design",
     emailHeading: "Send oss en e-post direkte",
     ctaHeading: "La oss snakke om eiendommen din.",
     ctaSubline:

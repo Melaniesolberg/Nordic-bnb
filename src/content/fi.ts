@@ -73,39 +73,7 @@ export const fi: SiteContent = {
     heading: "Sama kiinteistö. Täysin erilainen ilmoitus.",
     intro:
       "Kumman ilmoituksen sinä valitsisit?",
-    beforeLabel: "Ennen",
-    afterLabel: "Nordic BnB",
-    sliderAriaLabel: "Ennen ja jälkeen -ilmoitusvertailu",
-    beforeAlt: "Tavallinen ilmoituskuva, ennen Nordic BnB:tä",
-    afterAlt: "Tyylitelty Nordic BnB -ilmoituskuva, jälkeen",
     disclaimer: "Havainnollistava esimerkki, vain esittelytarkoitukseen.",
-    fields: [
-      {
-        label: "Otsikko",
-        before: "Mukava asunto lähellä rantaa, 2 makuuhuonetta",
-        after: "Aurinkoinen keidas Marbellassa, 90 sekuntia hiekasta",
-      },
-      {
-        label: "Valokuvaus",
-        before: "Puhelinkuvia, epätasainen valaistus, sotkuiset huoneet",
-        after: "Tyylitelty, ammattimaisesti kuvattu, ulkotilat kultaisessa tunnissa",
-      },
-      {
-        label: "Hinta",
-        before: "90 €/yö, kiinteä ympäri vuoden",
-        after: "68–165 €/yö, mukautuu kysyntään reaaliajassa",
-      },
-      {
-        label: "Kuvaus",
-        before: "Kaksi riviä. Ei tarinaa, ei yksityiskohtia.",
-        after: "Kirjoitettu myymään kokemusta — ja konvertoimaan",
-      },
-      {
-        label: "Näkyvyys",
-        before: "Ilmoitettu yhdellä alustalla",
-        after: "Jaeltu jokaiseen merkitykselliseen kanavaan",
-      },
-    ],
   },
   portfolio: {
     eyebrow: "Referenssit",
@@ -437,12 +405,13 @@ export const fi: SiteContent = {
     teamName: "Operatiivinen tiimimme",
     teamHeading: "Tiimi paikan päällä",
     teamIntro:
-      "Tämä on oma tiimimme — mukaan lukien oma siivoushenkilöstömme — joka pitää jokaisen kiinteistön käynnissä päivästä toiseen.",
+      "Käsityöt, siivous ja sisustus — kaiken hoitavat ihmiset, joita tunnemme ja joihin luotamme, emme satunnaiset alihankkijat.",
     roles: [
       { title: "Huoltomies", description: "Kunnossapito, korjaukset ja tarkastukset varausten välillä." },
       { title: "Siivoustiimi", description: "Ammattimainen siivous ja tekstiilien vaihto jokaisen vieraan jälkeen." },
       { title: "Valokuvaaja/stylisti", description: "Sisustus ja kuvaus jokaiselle uudelle ilmoitukselle." },
     ],
+    photoDesignLabel: "Kuvaus/Suunnittelu",
     emailHeading: "Ota yhteyttä sähköpostitse",
     ctaHeading: "Puhutaan kiinteistöstäsi.",
     ctaSubline:

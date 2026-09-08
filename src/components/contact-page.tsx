@@ -20,6 +20,12 @@ export default function ContactPage({ locale }: { locale: Locale }) {
     { name: about.founder2Name, role: about.founder2Role, photo: media.contactMelaniePhoto, email: CONTACT.emailMelanie },
   ];
 
+  const ROLE_COVERS = [
+    { src: media.roleHandymanLogo, alt: "Costa Handyman Services", caption: "" },
+    { src: media.roleCleaningLogo, alt: "Costa Cleaning Group", caption: "" },
+    { src: media.brandLogo, alt: "Nordic BnB", caption: contactPage.photoDesignLabel },
+  ];
+
   return (
     <>
       <Nav locale={locale} nav={nav} />
@@ -72,14 +78,23 @@ export default function ContactPage({ locale }: { locale: Locale }) {
               </p>
             </Reveal>
             <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-[2px] bg-charcoal/10 sm:grid-cols-3">
-              {contactPage.roles.map((role, i) => (
-                <Reveal key={role.title} delay={0.05 * i}>
-                  <div className="h-full bg-ivory p-7">
-                    <p className="font-serif-display text-lg italic text-charcoal">{role.title}</p>
-                    <p className="mt-2 text-sm leading-relaxed text-charcoal/55">{role.description}</p>
-                  </div>
-                </Reveal>
-              ))}
+              {contactPage.roles.map((role, i) => {
+                const cover = ROLE_COVERS[i];
+                return (
+                  <Reveal key={role.title} delay={0.05 * i}>
+                    <div className="h-full bg-ivory p-7">
+                      <div className="relative h-10 w-28">
+                        <Image src={cover.src} alt={cover.alt} fill sizes="112px" className="object-contain object-left" />
+                      </div>
+                      {cover.caption && (
+                        <p className="mt-1 text-[0.7rem] tracking-wide text-charcoal/40">{cover.caption}</p>
+                      )}
+                      <p className="mt-4 font-serif-display text-lg italic text-charcoal">{role.title}</p>
+                      <p className="mt-2 text-sm leading-relaxed text-charcoal/55">{role.description}</p>
+                    </div>
+                  </Reveal>
+                );
+              })}
             </div>
           </div>
         </section>

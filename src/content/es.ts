@@ -73,38 +73,6 @@ export const es: SiteContent = {
     heading: "La misma propiedad. Un anuncio completamente distinto.",
     intro:
       "¿Qué anuncio elegirías?",
-    beforeLabel: "Antes",
-    afterLabel: "Nordic BnB",
-    fields: [
-      {
-        label: "Título",
-        before: "Apartamento bonito cerca de la playa, 2 habitaciones",
-        after: "Retiro luminoso en Marbella, a 90 segundos de la arena",
-      },
-      {
-        label: "Fotografía",
-        before: "Fotos de móvil, luz irregular, habitaciones desordenadas",
-        after: "Estilismo profesional, fotografía cuidada, exteriores en hora dorada",
-      },
-      {
-        label: "Precio",
-        before: "90 €/noche, fijo todo el año",
-        after: "68–165 €/noche, ajustado a la demanda en tiempo real",
-      },
-      {
-        label: "Descripción",
-        before: "Dos líneas. Sin historia, sin detalle.",
-        after: "Escrita para vender la experiencia — y para convertir",
-      },
-      {
-        label: "Presencia",
-        before: "Publicado en una sola plataforma",
-        after: "Distribuido en todos los canales relevantes",
-      },
-    ],
-    sliderAriaLabel: "Comparación antes y después del anuncio",
-    beforeAlt: "Fotografía de anuncio ordinaria, antes de Nordic BnB",
-    afterAlt: "Fotografía de anuncio Nordic BnB estilizada, después",
     disclaimer: "Ejemplo ilustrado, con fines demostrativos.",
   },
   portfolio: {
@@ -437,12 +405,13 @@ export const es: SiteContent = {
     teamName: "Nuestro equipo operativo",
     teamHeading: "El equipo sobre el terreno",
     teamIntro:
-      "Este es nuestro propio equipo — incluido nuestro propio personal de limpieza — que mantiene cada propiedad funcionando, día tras día.",
+      "Mantenimiento, limpieza y estilismo — todo lo gestionan personas que conocemos y en las que confiamos, no subcontratistas al azar.",
     roles: [
       { title: "Mantenimiento", description: "Reparaciones, mantenimiento y revisiones entre estancias." },
       { title: "Equipo de limpieza", description: "Limpieza profesional y cambio de textiles tras cada huésped." },
       { title: "Fotógrafo/a y estilista", description: "Estilismo y fotografía para cada nuevo anuncio." },
     ],
+    photoDesignLabel: "Foto/Diseño",
     emailHeading: "Escríbenos directamente",
     ctaHeading: "Hablemos de tu propiedad.",
     ctaSubline:

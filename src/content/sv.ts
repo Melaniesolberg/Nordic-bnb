@@ -73,39 +73,7 @@ export const sv: SiteContent = {
     heading: "Samma fastighet. En helt annan annons.",
     intro:
       "Vilken annons hade du valt?",
-    beforeLabel: "Före",
-    afterLabel: "Nordic BnB",
-    sliderAriaLabel: "Före- och efter-jämförelse av annons",
-    beforeAlt: "Vanligt annonsfoto, före Nordic BnB",
-    afterAlt: "Stylat Nordic BnB-annonsfoto, efter",
     disclaimer: "Illustrerat exempel, endast i demonstrationssyfte.",
-    fields: [
-      {
-        label: "Titel",
-        before: "Trevlig lägenhet nära stranden, 2 sovrum",
-        after: "Solig oas i Marbella, 90 sekunder från sanden",
-      },
-      {
-        label: "Foto",
-        before: "Mobilbilder, blandat ljus, stökiga rum",
-        after: "Stylat, professionellt fotograferat, exteriörer i gyllene timmen",
-      },
-      {
-        label: "Pris",
-        before: "90 €/natt, fast hela året",
-        after: "68–165 €/natt, justerat efter efterfrågan i realtid",
-      },
-      {
-        label: "Beskrivning",
-        before: "Två rader. Ingen historia, inga detaljer.",
-        after: "Skriven för att sälja upplevelsen — och för att konvertera",
-      },
-      {
-        label: "Synlighet",
-        before: "Listad på en enda plattform",
-        after: "Distribuerad på alla kanaler som betyder något",
-      },
-    ],
   },
   portfolio: {
     eyebrow: "Portfölj",
@@ -437,12 +405,13 @@ export const sv: SiteContent = {
     teamName: "Vårt driftteam",
     teamHeading: "Teamet på plats",
     teamIntro:
-      "Det här är vårt eget team — inklusive vår egen städpersonal — som håller varje fastighet igång, dag efter dag.",
+      "Hantverk, städning och styling — allt hanteras av folk vi känner och litar på, inte slumpmässiga underleverantörer.",
     roles: [
       { title: "Handyman", description: "Underhåll, reparationer och tillsyn mellan bokningar." },
       { title: "Städteam", description: "Professionell städning och byte av textilier efter varje gäst." },
       { title: "Fotograf/stylist", description: "Styling och fotografering för varje ny annons." },
     ],
+    photoDesignLabel: "Foto/Design",
     emailHeading: "Maila oss direkt",
     ctaHeading: "Låt oss prata om din fastighet.",
     ctaSubline:
