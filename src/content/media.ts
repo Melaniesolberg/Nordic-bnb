@@ -38,24 +38,24 @@ export const media = {
   heroVilla:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111038_b2e7c852-74ff-4b5b-b324-ee38838ae978.png",
 
-  // Round 18+19: scroll-scrubbed hero background clip (Hero section) — a
+  // Round 18-20: scroll-scrubbed hero background clip (Hero section) — a
   // clean, textless 12s flythrough starting on the exact villaAerial frame,
   // slow exterior hold, fast dive through the terrace doors, then an
   // extended multi-room interior walkthrough (kitchen into dining/lounge)
-  // at 4K quality with bright, clear exposure throughout. Superseded by
-  // heroSprite below as the actual background driver — video-currentTime
-  // seeking proved unreliable once scrubbed on a real network connection.
-  // Left here unused rather than deleted, in case the video is needed again.
+  // at 4K quality with bright, clear exposure throughout. Round 20: this is
+  // the live background driver again — the round 18/19 sprite-sheet/canvas
+  // approach (see heroSprite below) forced every frame through a small
+  // per-cell resolution that looked soft/blurry when stretched to fill the
+  // screen, and caused perceptible lag. A real <video> element scrubbed via
+  // currentTime (throttled + smoothed, see hero.tsx) delivers full native
+  // quality with no forced downscaling.
   heroVideo:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260909_124814_ea0e6112-2d82-44b4-a226-7fecbfa81215.mp4",
   // Round 18+19: the same flythrough, re-encoded as a 96-frame sprite sheet
   // (12 cols x 8 rows, 640x360 per cell, frame 1 = top-left = the exact
-  // villaAerial frame) so the Hero can scrub it by drawing the matching
-  // cell onto a <canvas> instead of seeking a <video>'s currentTime — a
-  // canvas draw from an already-loaded image is deterministic and doesn't
-  // depend on how much of a compressed video the browser has buffered.
-  // Grid layout MUST match SPRITE_COLS/SPRITE_ROWS/CELL_W/CELL_H in
-  // hero.tsx exactly, or the canvas will draw the wrong crop.
+  // villaAerial frame) for canvas-based scrubbing. Superseded by heroVideo
+  // above (round 20) — left here unused rather than deleted in case a
+  // canvas-based approach is worth revisiting with higher-res cells.
   heroSprite:
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/02f8480d-5802-4a64-b96b-50cd44649b24.jpg",
   listingBefore:
