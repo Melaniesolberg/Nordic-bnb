@@ -16,16 +16,16 @@ import type { HeroContent } from "@/content/types";
 
 const EASE_EDITORIAL = [0.16, 1, 0.3, 1] as const;
 
-// Layout of the pre-rendered sprite sheet (see media.heroSprite): 60 frames
-// of the flythrough tiled 10 columns x 6 rows, 480x270 per cell, frame 1 at
+// Layout of the pre-rendered sprite sheet (see media.heroSprite): 96 frames
+// of the flythrough tiled 12 columns x 8 rows, 640x360 per cell, frame 1 at
 // top-left = the exact opening hero shot. Scrubbing draws the matching cell
 // onto a canvas instead of seeking a <video>'s currentTime — deterministic,
 // and doesn't depend on how much of a compressed video is buffered.
-const SPRITE_COLS = 10;
-const SPRITE_ROWS = 6;
+const SPRITE_COLS = 12;
+const SPRITE_ROWS = 8;
 const SPRITE_FRAME_COUNT = SPRITE_COLS * SPRITE_ROWS;
-const CELL_W = 480;
-const CELL_H = 270;
+const CELL_W = 640;
+const CELL_H = 360;
 
 /**
  * Non-linear scroll → frame-sequence curve. Plain fractions of local scroll
