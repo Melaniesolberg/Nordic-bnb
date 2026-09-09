@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -95,7 +95,6 @@ export default function Hero({
   const trackRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const prefersReduced = useReducedMotion();
-  const [videoDuration, setVideoDuration] = useState(0);
   const currentVideoProgressRef = useRef(0);
   const lastUpdateRef = useRef(0);
 
@@ -113,24 +112,39 @@ export default function Hero({
   // autoplay — scrolling is the only thing that ever advances the clip,
   // and it freezes the instant scrolling stops, reversing cleanly on
   // scroll-up.
+  //
+  // Round 21: this loop used to be gated behind a `videoDuration` React
+  // state value that only ever got set once, from the <video>'s
+  // one-shot `onLoadedMetadata` event. On a real connection that event
+  // can fire late (or be delayed well behind first paint) for a large 4K
+  // file, which meant the loop — and all scroll binding — simply never
+  // started. Now the loop starts immediately on mount and reads
+  // `video.duration` straight off the element every frame instead,
+  // so it has no dependency on that event's timing at all.
   useEffect(() => {
-    if (prefersReduced || !videoDuration) return;
+    if (prefersReduced) return;
     let raf = 0;
     const tick = (now: number) => {
       const video = videoRef.current;
-      if (video && now - lastUpdateRef.current >= UPDATE_INTERVAL_MS) {
+      const duration = video?.duration;
+      if (
+        video &&
+        duration &&
+        !Number.isNaN(duration) &&
+        now - lastUpdateRef.current >= UPDATE_INTERVAL_MS
+      ) {
         lastUpdateRef.current = now;
         const target = mapScrollToVideoProgress(scrollYProgress.get());
         const current = currentVideoProgressRef.current;
         const next = current + (target - current) * SCRUB_SMOOTHING;
         currentVideoProgressRef.current = next;
-        video.currentTime = Math.min(videoDuration, Math.max(0, next * videoDuration));
+        video.currentTime = Math.min(duration, Math.max(0, next * duration));
       }
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [prefersReduced, videoDuration, scrollYProgress]);
+  }, [prefersReduced, scrollYProgress]);
 
   return (
     <section id="hero" className="relative bg-charcoal">
@@ -159,7 +173,6 @@ export default function Hero({
                 playsInline
                 preload="auto"
                 className="absolute inset-0 h-full w-full object-cover"
-                onLoadedMetadata={(e) => setVideoDuration(e.currentTarget.duration)}
               />
             ) : (
               imageSrc && (
