@@ -41,9 +41,20 @@ export const media = {
   // Round 15: scroll-scrubbed hero background clip (Hero section) — a
   // clean, textless 7s flythrough starting on the exact villaAerial frame,
   // slow exterior hold then a fast dive through the terrace doors into the
-  // interior. No autoplay; its currentTime is driven by scroll position.
+  // interior. Superseded by heroSprite below (round 18) as the actual
+  // background driver — video-currentTime seeking proved unreliable once
+  // scrubbed on a real network connection. Left here unused rather than
+  // deleted, in case the video is needed again.
   heroVideo:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_194140_80e409be-5f39-48a2-ad70-16b70eac2e60.mp4",
+  // Round 18: the same flythrough, re-encoded as a 60-frame sprite sheet
+  // (10 cols x 6 rows, 480x270 per cell, frame 1 = top-left = the exact
+  // villaAerial frame) so the Hero can scrub it by drawing the matching
+  // cell onto a <canvas> instead of seeking a <video>'s currentTime — a
+  // canvas draw from an already-loaded image is deterministic and doesn't
+  // depend on how much of a compressed video the browser has buffered.
+  heroSprite:
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/970f7de3-e9ab-4f1c-ba5c-a9d705a86bdf.jpg",
   listingBefore:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111040_7feec892-c68f-44bd-b8d1-3d2d8b72b8b7.png",
   listingAfter:

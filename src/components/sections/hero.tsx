@@ -16,18 +16,29 @@ import type { HeroContent } from "@/content/types";
 
 const EASE_EDITORIAL = [0.16, 1, 0.3, 1] as const;
 
+// Layout of the pre-rendered sprite sheet (see media.heroSprite): 60 frames
+// of the flythrough tiled 10 columns x 6 rows, 480x270 per cell, frame 1 at
+// top-left = the exact opening hero shot. Scrubbing draws the matching cell
+// onto a canvas instead of seeking a <video>'s currentTime — deterministic,
+// and doesn't depend on how much of a compressed video is buffered.
+const SPRITE_COLS = 10;
+const SPRITE_ROWS = 6;
+const SPRITE_FRAME_COUNT = SPRITE_COLS * SPRITE_ROWS;
+const CELL_W = 480;
+const CELL_H = 270;
+
 /**
- * Non-linear scroll → video-timeline curve. Plain fractions of local scroll
- * progress (p) mapped to fractions of the clip's duration (v), interpolated
+ * Non-linear scroll → frame-sequence curve. Plain fractions of local scroll
+ * progress (p) mapped to fractions of the clip's frame range (v), interpolated
  * with a smoothstep ease between anchors so the joints don't kink:
- *  - 0–12%  video almost frozen (anticipation, only ~4.5% of the clip)
+ *  - 0–12%  almost frozen (anticipation, only ~4.5% into the sequence)
  *  - 12–25% acceleration begins as the UI clears away
- *  - 25–58% the big descent — most of the clip's motion happens here
+ *  - 25–58% the big descent — most of the motion happens here
  *  - 58–72% straight through the terrace opening, no lingering
  *  - 72–94% fast interior walkthrough
  *  - 94–100% slight deceleration before releasing into the next section
  */
-const VIDEO_CURVE: { p: number; v: number }[] = [
+const FRAME_CURVE: { p: number; v: number }[] = [
   { p: 0, v: 0 },
   { p: 0.12, v: 0.045 },
   { p: 0.25, v: 0.15 },
@@ -37,9 +48,9 @@ const VIDEO_CURVE: { p: number; v: number }[] = [
   { p: 1, v: 1 },
 ];
 
-/** How quickly the video's actual playhead eases toward the scroll-mapped
- * target each frame — small enough to feel like luxurious smoothing,
- * large enough to still read as directly, immediately controlled. */
+/** How quickly the drawn frame eases toward the scroll-mapped target each
+ * animation frame — small enough to feel like luxurious smoothing, large
+ * enough to still read as directly, immediately controlled. */
 const SCRUB_SMOOTHING = 0.18;
 
 function smoothstep(t: number) {
@@ -47,17 +58,48 @@ function smoothstep(t: number) {
   return c * c * (3 - 2 * c);
 }
 
-function mapScrollToVideoProgress(progress: number): number {
+function mapScrollToFrameProgress(progress: number): number {
   const p = Math.min(1, Math.max(0, progress));
-  for (let i = 0; i < VIDEO_CURVE.length - 1; i++) {
-    const a = VIDEO_CURVE[i];
-    const b = VIDEO_CURVE[i + 1];
+  for (let i = 0; i < FRAME_CURVE.length - 1; i++) {
+    const a = FRAME_CURVE[i];
+    const b = FRAME_CURVE[i + 1];
     if (p <= b.p) {
       const local = b.p === a.p ? 0 : (p - a.p) / (b.p - a.p);
       return a.v + (b.v - a.v) * smoothstep(local);
     }
   }
   return 1;
+}
+
+/** Draws sprite cell `frameIndex` onto the canvas with object-fit: cover
+ * semantics (crop to fill dw x dh, preserving the cell's own aspect ratio). */
+function drawCoverFrame(
+  ctx: CanvasRenderingContext2D,
+  img: HTMLImageElement,
+  frameIndex: number,
+  dw: number,
+  dh: number,
+) {
+  const col = frameIndex % SPRITE_COLS;
+  const row = Math.floor(frameIndex / SPRITE_COLS);
+  const sx0 = col * CELL_W;
+  const sy0 = row * CELL_H;
+
+  const srcAspect = CELL_W / CELL_H;
+  const dstAspect = dw / dh;
+  let cropW = CELL_W;
+  let cropH = CELL_H;
+  let cropX = sx0;
+  let cropY = sy0;
+  if (srcAspect > dstAspect) {
+    cropW = CELL_H * dstAspect;
+    cropX = sx0 + (CELL_W - cropW) / 2;
+  } else {
+    cropH = CELL_W / dstAspect;
+    cropY = sy0 + (CELL_H - cropH) / 2;
+  }
+  ctx.clearRect(0, 0, dw, dh);
+  ctx.drawImage(img, cropX, cropY, cropW, cropH, 0, 0, dw, dh);
 }
 
 const container: Variants = {
@@ -80,18 +122,20 @@ export default function Hero({
   hero,
   formHref,
   imageSrc,
-  videoSrc,
+  spriteSrc,
 }: {
   hero: HeroContent;
   formHref: string;
   imageSrc?: string;
-  videoSrc?: string;
+  spriteSrc?: string;
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const spriteImgRef = useRef<HTMLImageElement | null>(null);
+  const currentFrameProgressRef = useRef(0);
+  const lastFrameIndexRef = useRef(0);
   const prefersReduced = useReducedMotion();
-  const [videoDuration, setVideoDuration] = useState(0);
-  const currentVideoProgressRef = useRef(0);
+  const [spriteReady, setSpriteReady] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: trackRef,
@@ -107,29 +151,78 @@ export default function Hero({
   const bgScale = useTransform(scrollYProgress, [0, 0.25], [1, prefersReduced ? 1 : 1.04]);
   const vignette = useTransform(scrollYProgress, [0, 0.25, 1], [0.35, 0.5, 0.78]);
 
+  // Preload the sprite sheet once. Only after it's fully loaded does the
+  // canvas start drawing — until then the static photo underneath (same
+  // exact opening frame) shows through, so there's never a blank canvas.
+  useEffect(() => {
+    if (!spriteSrc || prefersReduced) return;
+    const img = new window.Image();
+    img.decoding = "async";
+    img.onload = () => {
+      spriteImgRef.current = img;
+      setSpriteReady(true);
+    };
+    img.src = spriteSrc;
+    return () => {
+      img.onload = null;
+    };
+  }, [spriteSrc, prefersReduced]);
+
+  // Keep the canvas's backing resolution in sync with its on-screen size
+  // (capped devicePixelRatio) and redraw the last frame after any resize,
+  // since resizing a canvas element clears its contents.
+  useEffect(() => {
+    if (prefersReduced) return;
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const resize = () => {
+      const rect = canvas.getBoundingClientRect();
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.max(1, Math.round(rect.width * dpr));
+      canvas.height = Math.max(1, Math.round(rect.height * dpr));
+      const ctx = canvas.getContext("2d");
+      const img = spriteImgRef.current;
+      if (ctx && img) {
+        drawCoverFrame(ctx, img, lastFrameIndexRef.current, canvas.width, canvas.height);
+      }
+    };
+    resize();
+    const observer = new ResizeObserver(resize);
+    observer.observe(canvas);
+    return () => observer.disconnect();
+  }, [prefersReduced, spriteReady]);
+
   // requestAnimationFrame loop: each frame reads the current scroll
   // progress, maps it through the non-linear curve above, then eases the
-  // video's actual playhead toward that target. No autoplay — scrolling is
-  // the only thing that ever advances the clip, and it freezes the instant
+  // drawn frame toward that target. No autoplay — scrolling is the only
+  // thing that ever advances the sequence, and it freezes the instant
   // scrolling stops (and reverses cleanly on scroll-up), but the small
   // per-frame smoothing keeps it from feeling like a raw scrubber drag.
   useEffect(() => {
-    if (prefersReduced || !videoDuration) return;
+    if (prefersReduced || !spriteReady) return;
     let raf = 0;
     const tick = () => {
-      const video = videoRef.current;
-      if (video) {
-        const target = mapScrollToVideoProgress(scrollYProgress.get());
-        const current = currentVideoProgressRef.current;
+      const canvas = canvasRef.current;
+      const img = spriteImgRef.current;
+      const ctx = canvas?.getContext("2d");
+      if (canvas && img && ctx) {
+        const target = mapScrollToFrameProgress(scrollYProgress.get());
+        const current = currentFrameProgressRef.current;
         const next = current + (target - current) * SCRUB_SMOOTHING;
-        currentVideoProgressRef.current = next;
-        video.currentTime = Math.min(videoDuration, Math.max(0, next * videoDuration));
+        currentFrameProgressRef.current = next;
+        const frameIndex = Math.round(
+          Math.min(SPRITE_FRAME_COUNT - 1, Math.max(0, next * (SPRITE_FRAME_COUNT - 1))),
+        );
+        if (frameIndex !== lastFrameIndexRef.current) {
+          lastFrameIndexRef.current = frameIndex;
+          drawCoverFrame(ctx, img, frameIndex, canvas.width, canvas.height);
+        }
       }
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [prefersReduced, videoDuration, scrollYProgress]);
+  }, [prefersReduced, spriteReady, scrollYProgress]);
 
   return (
     <section id="hero" className="relative bg-charcoal">
@@ -186,33 +279,24 @@ export default function Hero({
               <path d="M470 130V210" stroke="#0c0a08" strokeWidth="2" />
             </svg>
 
-            {/* Cinematic scroll-scrubbed hero footage, layered above the
-                crafted gradient scene. Falls back to the static photograph
-                when there's no video (or the user prefers reduced motion)
-                — either way the opening frame matches the exact same hero
-                shot, so there's never a visible jump from image to video. */}
-            {videoSrc && !prefersReduced ? (
-              <video
-                ref={videoRef}
-                src={videoSrc}
-                poster={imageSrc}
-                muted
-                playsInline
-                preload="auto"
-                className="absolute inset-0 h-full w-full object-cover opacity-90"
-                onLoadedMetadata={(e) => setVideoDuration(e.currentTarget.duration)}
+            {/* Static opening photo, always present underneath — same exact
+                frame as sprite cell 1, so there's never a visible jump. The
+                canvas draws on top once the sprite sheet has loaded. */}
+            {imageSrc && (
+              <Image
+                src={imageSrc}
+                alt=""
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover opacity-90"
               />
-            ) : (
-              imageSrc && (
-                <Image
-                  src={imageSrc}
-                  alt=""
-                  fill
-                  priority
-                  sizes="100vw"
-                  className="object-cover opacity-90"
-                />
-              )
+            )}
+
+            {/* Cinematic scroll-scrubbed hero sequence, layered above the
+                crafted gradient scene and the static fallback photo. */}
+            {spriteSrc && !prefersReduced && (
+              <canvas ref={canvasRef} className="absolute inset-0 h-full w-full opacity-90" />
             )}
 
             <motion.div className="absolute inset-0 bg-charcoal" style={{ opacity: vignette }} />
