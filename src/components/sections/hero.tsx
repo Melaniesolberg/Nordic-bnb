@@ -103,6 +103,31 @@ export default function Hero({
     offset: ["start start", "end end"],
   });
 
+  // Round 21 (follow-up): some mobile browsers — iOS Safari in particular —
+  // silently ignore preload="auto" and never fetch any video data at all
+  // until there's a user-initiated play, which would leave video.duration
+  // unavailable indefinitely and make scroll-scrubbing look completely
+  // dead. A muted video's play() is allowed without a user gesture by every
+  // major browser's autoplay policy, so calling play() immediately and
+  // pausing again in the same tick (before any frame is perceptibly shown)
+  // is the standard trick to force real loading to start — it is not
+  // autoplay in any visible sense, playback never actually proceeds.
+  useEffect(() => {
+    if (prefersReduced) return;
+    const video = videoRef.current;
+    if (!video) return;
+    video.load();
+    const playPromise = video.play();
+    if (playPromise) {
+      playPromise
+        .then(() => video.pause())
+        .catch(() => {
+          // Autoplay was blocked outright — scrubbing will still work once
+          // the browser loads metadata some other way (e.g. user scroll).
+        });
+    }
+  }, [prefersReduced, videoSrc]);
+
   // Round 20: the text no longer fades or moves on scroll at all — it stays
   // fully visible the whole time. Scrolling only ever advances the video.
   // requestAnimationFrame loop: each frame reads the current scroll
