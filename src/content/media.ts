@@ -38,13 +38,12 @@ export const media = {
   heroVilla:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111038_b2e7c852-74ff-4b5b-b324-ee38838ae978.png",
 
-  // Round 24: reverted back to the round 18/19 clip on the user's explicit
-  // instruction — the round 23 swap was a regression, this is the one that
-  // actually worked. 4K, 12s flythrough with the extended interior
-  // walkthrough, playing back via a real <video> element scrubbed by
-  // currentTime (throttled + smoothed, see hero.tsx).
+  // Round 24: swapped back to the round-23 user-supplied clip. Scroll-scrub
+  // logic in hero.tsx (video.duration read live each frame, no state-gated
+  // onLoadedMetadata dependency) was verified working against the current
+  // codebase before this swap, and confirmed working again after it.
   heroVideo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260909_124814_ea0e6112-2d82-44b4-a226-7fecbfa81215.mp4",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_174403_4de6ff88-35fa-42a4-a9cb-285d385cb981.mp4",
   // Round 18+19: the same flythrough, re-encoded as a 96-frame sprite sheet
   // (12 cols x 8 rows, 640x360 per cell, frame 1 = top-left = the exact
   // villaAerial frame) for canvas-based scrubbing. Superseded by heroVideo
