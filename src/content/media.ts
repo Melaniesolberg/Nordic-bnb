@@ -38,19 +38,16 @@ export const media = {
   heroVilla:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111038_b2e7c852-74ff-4b5b-b324-ee38838ae978.png",
 
-  // Round 18-20: scroll-scrubbed hero background clip (Hero section) — a
-  // clean, textless 12s flythrough starting on the exact villaAerial frame,
-  // slow exterior hold, fast dive through the terrace doors, then an
-  // extended multi-room interior walkthrough (kitchen into dining/lounge)
-  // at 4K quality with bright, clear exposure throughout. Round 20: this is
-  // the live background driver again — the round 18/19 sprite-sheet/canvas
-  // approach (see heroSprite below) forced every frame through a small
-  // per-cell resolution that looked soft/blurry when stretched to fill the
-  // screen, and caused perceptible lag. A real <video> element scrubbed via
-  // currentTime (throttled + smoothed, see hero.tsx) delivers full native
-  // quality with no forced downscaling.
+  // Round 23: scroll-scrubbed hero background clip (Hero section) — user-
+  // supplied replacement clip, verified before wiring in: H.264, 3852x2152
+  // (near-4K), 24fps, ~35 Mbps, 7.042s, average luma 108.9/255 (bright,
+  // well-exposed, not dark). Played back via a real <video> element
+  // scrubbed by currentTime (throttled + smoothed, see hero.tsx) rather
+  // than any sprite-sheet/canvas approach — that was tried in round 18/19
+  // (see heroSprite below) and reverted in round 20 for forcing a small
+  // per-cell resolution that looked soft when stretched to fill the screen.
   heroVideo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260909_124814_ea0e6112-2d82-44b4-a226-7fecbfa81215.mp4",
+    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_174403_4de6ff88-35fa-42a4-a9cb-285d385cb981.mp4",
   // Round 18+19: the same flythrough, re-encoded as a 96-frame sprite sheet
   // (12 cols x 8 rows, 640x360 per cell, frame 1 = top-left = the exact
   // villaAerial frame) for canvas-based scrubbing. Superseded by heroVideo
