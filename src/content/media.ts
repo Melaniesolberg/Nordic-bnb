@@ -38,12 +38,13 @@ export const media = {
   heroVilla:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111038_b2e7c852-74ff-4b5b-b324-ee38838ae978.png",
 
-  // Round 24: swapped back to the round-23 user-supplied clip. Scroll-scrub
-  // logic in hero.tsx (video.duration read live each frame, no state-gated
-  // onLoadedMetadata dependency) was verified working against the current
-  // codebase before this swap, and confirmed working again after it.
+  // Round 26: new 27s concept clip built from two generated segments
+  // concatenated together — a 12s aerial drone descent onto the villa,
+  // then a 15s interior walkthrough (living room → kitchen/dining), so the
+  // full scroll genuinely goes from above, down into the property, and
+  // through the house. Bright, no on-screen text, 4K source footage.
   heroVideo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_174403_4de6ff88-35fa-42a4-a9cb-285d385cb981.mp4",
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/8c9188e8-e442-4bb5-99b3-8e25bfaf350f.mp4",
   // Round 18+19: the same flythrough, re-encoded as a 96-frame sprite sheet
   // (12 cols x 8 rows, 640x360 per cell, frame 1 = top-left = the exact
   // villaAerial frame) for canvas-based scrubbing. Superseded by heroVideo
