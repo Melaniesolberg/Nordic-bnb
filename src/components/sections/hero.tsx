@@ -36,17 +36,6 @@ const VIDEO_CURVE: { p: number; v: number }[] = [
   { p: 1, v: 1 },
 ];
 
-/** How quickly the video's actual playhead eases toward the scroll-mapped
- * target each frame. Round 20: raised from 0.18 and the update rate is
- * capped (see UPDATE_INTERVAL_MS below) — writing video.currentTime on
- * every animation frame is what was causing the seek-stutter, since each
- * seek has to decode forward from the nearest keyframe. */
-const SCRUB_SMOOTHING = 0.22;
-
-/** Minimum ms between video.currentTime writes — throttles seek frequency
- * to keep scrubbing smooth instead of thrashing the decoder. */
-const UPDATE_INTERVAL_MS = 1000 / 30;
-
 function smoothstep(t: number) {
   const c = Math.min(1, Math.max(0, t));
   return c * c * (3 - 2 * c);
@@ -95,8 +84,6 @@ export default function Hero({
   const trackRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const prefersReduced = useReducedMotion();
-  const currentVideoProgressRef = useRef(0);
-  const lastUpdateRef = useRef(0);
 
   const { scrollYProgress } = useScroll({
     target: trackRef,
@@ -131,12 +118,10 @@ export default function Hero({
   // Round 20: the text no longer fades or moves on scroll at all — it stays
   // fully visible the whole time. Scrolling only ever advances the video.
   // requestAnimationFrame loop: each frame reads the current scroll
-  // progress, maps it through the non-linear curve above, then eases the
-  // video's actual playhead toward that target (throttled — see
-  // UPDATE_INTERVAL_MS — to avoid thrashing the decoder with seeks). No
-  // autoplay — scrolling is the only thing that ever advances the clip,
-  // and it freezes the instant scrolling stops, reversing cleanly on
-  // scroll-up.
+  // progress, maps it through the non-linear curve above, and writes it
+  // straight to the video's playhead. No autoplay — scrolling is the only
+  // thing that ever advances the clip, and it freezes the instant
+  // scrolling stops, reversing cleanly on scroll-up.
   //
   // Round 21: this loop used to be gated behind a `videoDuration` React
   // state value that only ever got set once, from the <video>'s
@@ -146,24 +131,23 @@ export default function Hero({
   // started. Now the loop starts immediately on mount and reads
   // `video.duration` straight off the element every frame instead,
   // so it has no dependency on that event's timing at all.
+  //
+  // Round 27: removed the per-frame update throttle and the lerp-based
+  // easing that used to trail the scroll target — both were compensating
+  // for the video file itself being expensive to seek (a ~10s gap to the
+  // first keyframe, no faststart), which made every seek decode hundreds
+  // of frames forward and cost up to ~2s. The real fix was the asset:
+  // re-encoded with a keyframe every ~8 frames and `+faststart`, so a
+  // seek is now cheap enough to do every animation frame with zero lag.
   useEffect(() => {
     if (prefersReduced) return;
     let raf = 0;
-    const tick = (now: number) => {
+    const tick = () => {
       const video = videoRef.current;
       const duration = video?.duration;
-      if (
-        video &&
-        duration &&
-        !Number.isNaN(duration) &&
-        now - lastUpdateRef.current >= UPDATE_INTERVAL_MS
-      ) {
-        lastUpdateRef.current = now;
+      if (video && duration && !Number.isNaN(duration)) {
         const target = mapScrollToVideoProgress(scrollYProgress.get());
-        const current = currentVideoProgressRef.current;
-        const next = current + (target - current) * SCRUB_SMOOTHING;
-        currentVideoProgressRef.current = next;
-        video.currentTime = Math.min(duration, Math.max(0, next * duration));
+        video.currentTime = Math.min(duration, Math.max(0, target * duration));
       }
       raf = requestAnimationFrame(tick);
     };
