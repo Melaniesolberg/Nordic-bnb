@@ -45,13 +45,27 @@ export const media = {
   // clips — the interior segment used to start from an unrelated stock
   // photo, so the cut didn't match place or light. Regenerated the interior
   // segment using the exterior clip's actual last frame as its start image
-  // (same terrace, same dusk light), extended the walkthrough further
-  // through the house, and added a third segment continuing out through
-  // the terrace to a closing sea view — each new segment seeded from the
-  // previous one's real last frame for a continuous, uncut feel. 42s total.
-  // Brightness ~111/255, same scrub-friendly encoding as round 27.
+  // (same terrace, same dusk light), and added a third segment continuing
+  // out through the terrace to a closing sea view — each new segment
+  // seeded from the previous one's real last frame for a continuous,
+  // uncut feel.
+  // Round 29: regenerated the interior + terrace segments again to fix a
+  // motion hitch partway through the hallway and an abrupt "pop" where the
+  // outdoor terrace became visible — prompts now explicitly call for one
+  // constant, unbroken walking pace throughout (no slowdown/stop anywhere)
+  // and a gradual, progressive brightness reveal through the doorway
+  // instead of a sudden exposure jump. Also pushed the interior/exterior
+  // materials and light explicitly toward an authentic Marbella / Costa
+  // del Sol look (pale limestone, light oak, white plaster, warm
+  // Mediterranean dusk light) rather than a generic modern villa.
+  // Generated at Kling "pro" (not "4k") for these two segments due to a
+  // Higgsfield credit shortfall mid-round — output is still ~1080p+ native
+  // and the final encode downscales to 1080p regardless, so no visible
+  // quality loss versus the 4k-sourced exterior segment. 36s total.
+  // Brightness ~103/255, same scrub-friendly encoding as round 27
+  // (1080p, keyframe every ~8 frames, +faststart).
   heroVideo:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/53cb42a4-2d4b-48f5-971b-fbabb81fc83f.mp4",
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/57322695-077f-45a1-810c-a9bfc8c2887b.mp4",
   // Round 18+19: the same flythrough, re-encoded as a 96-frame sprite sheet
   // (12 cols x 8 rows, 640x360 per cell, frame 1 = top-left = the exact
   // villaAerial frame) for canvas-based scrubbing. Superseded by heroVideo
