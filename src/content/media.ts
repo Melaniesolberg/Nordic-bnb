@@ -38,19 +38,20 @@ export const media = {
   heroVilla:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111038_b2e7c852-74ff-4b5b-b324-ee38838ae978.png",
 
-  // Round 26: 27s concept clip (12s aerial drone descent onto the villa,
-  // then a 15s interior walkthrough) so the scroll genuinely goes from
-  // above, down into the property, and through the house.
-  // Round 27: re-encoded purely for scrub performance, same edit/content —
-  // the round-26 export had a ~10s gap to its first keyframe and no
-  // faststart, so every seek during scrolling had to decode hundreds of
-  // frames forward (measured ~1-2s per seek, the cause of the stutter).
-  // Re-encoded at 1080p (still sharp for a background video, and far
-  // cheaper to decode) with a keyframe every ~8 frames and `+faststart`,
-  // cutting real seek cost by more than half in direct ffmpeg benchmarks
-  // and removing the multi-second gap entirely. Same brightness (~108/255).
+  // Round 26/27: aerial drone descent onto the villa, then an interior
+  // walkthrough, encoded for smooth scroll-scrubbing (1080p, keyframe every
+  // ~8 frames, +faststart).
+  // Round 28: fixed the visible jump between the exterior and interior
+  // clips — the interior segment used to start from an unrelated stock
+  // photo, so the cut didn't match place or light. Regenerated the interior
+  // segment using the exterior clip's actual last frame as its start image
+  // (same terrace, same dusk light), extended the walkthrough further
+  // through the house, and added a third segment continuing out through
+  // the terrace to a closing sea view — each new segment seeded from the
+  // previous one's real last frame for a continuous, uncut feel. 42s total.
+  // Brightness ~111/255, same scrub-friendly encoding as round 27.
   heroVideo:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/1c04e96e-ac4c-4246-8999-e926c983781b.mp4",
+    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/53cb42a4-2d4b-48f5-971b-fbabb81fc83f.mp4",
   // Round 18+19: the same flythrough, re-encoded as a 96-frame sprite sheet
   // (12 cols x 8 rows, 640x360 per cell, frame 1 = top-left = the exact
   // villaAerial frame) for canvas-based scrubbing. Superseded by heroVideo
