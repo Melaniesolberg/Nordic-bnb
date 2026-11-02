@@ -127,17 +127,15 @@ export const media = {
   houseAfter:
     "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155215_f2f3cdd6-db6c-433a-aa97-a6289337a244.png",
 
-  // Real, unedited photo of Petter (co-founder), uploaded by the user
+  // Real, unedited photo of Petter (founder), uploaded by the user
   // directly — used as-is in the About section.
   founderPetter:
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/d809abb8-d01d-40d5-bca7-2e339ee0255e.png",
 
-  // Real, unedited team photos (Petter and Melanie, in Nordic BnB polo
-  // shirts), uploaded by the user directly — used as-is on the Team page.
+  // Real, unedited photo of Petter, in a Nordic BnB polo shirt, uploaded by
+  // the user directly — used as-is on the Team page.
   contactPetterPhoto:
     "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/ced4315f-6dc6-42f1-8803-adb38ce10356.png",
-  contactMelaniePhoto:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/678fdc58-169c-42dd-a20a-0eedfd05c936.png",
 
   // Real before/after property photography, uploaded by the user directly.
   // Each file is a single collage image with the "before" half on the left
