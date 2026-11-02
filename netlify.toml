@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Netlify auto-detects Next.js and applies the official Next.js Runtime
+# (@netlify/plugin-nextjs) to handle SSR, image optimization, and routing
+# the same way Vercel does. No publish directory is set here on purpose —
+# the Next.js Runtime manages that itself.
