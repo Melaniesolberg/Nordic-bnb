@@ -34,5 +34,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.3,
   }));
 
-  return [...homeEntries, ...seoEntries, ...contactEntries, ...privacyEntries];
+  const boligboostPaths = [
+    "/boligboost",
+    "/boligboost/en",
+    "/boligboost/bildeloft",
+    "/boligboost/en/photo-boost",
+    "/boligboost/digital-styling",
+    "/boligboost/en/virtual-staging",
+    "/boligboost/salgsloftet",
+    "/boligboost/en/sale-boost",
+    "/boligboost/bestill",
+    "/boligboost/en/order",
+    "/boligboost/personvern",
+    "/boligboost/en/privacy",
+    "/boligboost/vilkar",
+    "/boligboost/en/terms",
+    "/boligboost/cookies",
+    "/boligboost/en/cookies",
+  ];
+
+  const boligboostEntries: MetadataRoute.Sitemap = boligboostPaths.map((path) => ({
+    url: `${CONTACT.site}${path}`,
+    lastModified: now,
+    changeFrequency: "monthly",
+    priority: path === "/boligboost" || path === "/boligboost/en" ? 0.9 : 0.6,
+  }));
+
+  return [...homeEntries, ...seoEntries, ...contactEntries, ...privacyEntries, ...boligboostEntries];
 }

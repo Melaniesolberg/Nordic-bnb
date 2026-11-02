@@ -1,0 +1,30 @@
+# Boligboost
+
+> AI-forbedrede boligbilder, digital styling og salgsløft for det norske markedet.
+> AI-enhanced property photos, virtual staging and sale-boost reports for the Norwegian market.
+
+## Norsk
+
+Boligboost forbedrer boligbilder med AI, møblerer tomme rom digitalt og viser hvordan enkle
+oppgraderinger kan løfte en bolig før salg eller utleie. Levering på 24–48 timer, ingen fotograf
+nødvendig.
+
+Tjenester og priser:
+- Bildeløft (AI-forbedring av egne bilder): 790 kr. https://nordicbnb.es/boligboost/bildeloft
+- Digital styling (digital møblering av tomme rom): 1 190 kr per rom, 3 rom for 2 990 kr. https://nordicbnb.es/boligboost/digital-styling
+- Salgsløftet (før/etter-rapport med oppgraderingsforslag): Mini 4 900 kr, Stor 9 900 kr. https://nordicbnb.es/boligboost/salgsloftet
+
+Bestilling: https://nordicbnb.es/boligboost/bestill
+
+## English
+
+Boligboost enhances property photos with AI, furnishes empty rooms digitally, and shows how
+simple upgrades can lift a property before sale or rental. Delivered in 24–48 hours, no
+photographer needed.
+
+Services and prices:
+- Photo Boost (AI enhancement of your own photos): NOK 790. https://nordicbnb.es/boligboost/en/photo-boost
+- Virtual Staging (digital furnishing of empty rooms): NOK 1,190 per room, 3 rooms for NOK 2,990. https://nordicbnb.es/boligboost/en/virtual-staging
+- Sale Boost (before/after report with upgrade suggestions): Mini NOK 4,900, Large NOK 9,900. https://nordicbnb.es/boligboost/en/sale-boost
+
+Order: https://nordicbnb.es/boligboost/en/order

@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
         hostname: "d2ol7oe51mr4n9.cloudfront.net",
       },
     ],
+    // Needed for the local Boligboost placeholder graphics in /public,
+    // which are static SVGs authored in this repo, not user uploads.
+    dangerouslyAllowSVG: true,
+    contentDispositionType: "attachment",
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 };
 

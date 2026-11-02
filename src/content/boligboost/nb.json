@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "title": "Boligboost – AI-forbedrede boligbilder, digital styling og salgsløft",
+    "description": "Vi forbedrer bildene dine med AI, møblerer tomme rom digitalt og viser hvordan enkle oppgraderinger kan løfte boligen – levert på 24–48 timer."
+  },
+  "nav": {
+    "home": "Hjem",
+    "services": "Tjenester",
+    "about": "Om meg",
+    "faq": "FAQ",
+    "orderCta": "Bestill bildeløft",
+    "langLabel": "Velg språk"
+  },
+  "hero": {
+    "h1": "Førstebildet avgjør om de klikker.",
+    "subtitle": "Vi gjør bildene dine klare for FINN og Airbnb – lysere, skarpere og mer innbydende. Uten fotograf, levert på 24 timer.",
+    "ctaPrimary": "Bestill bildeløft",
+    "ctaSecondary": "Se tjenestene"
+  },
+  "beforeAfter": {
+    "eyebrow": "Eksempler",
+    "heading": "Se forskjellen selv.",
+    "improvedLabel": "Forbedret med AI",
+    "cases": {
+      "stue": { "caption": "Lysere og skarpere stue, rettet horisont, løst rot fjernet." },
+      "kjokken": { "caption": "Varmere lys og renere farger på kjøkkenet." },
+      "soverom": { "caption": "Mer innbydende soverom med bedre lys og skarphet." }
+    }
+  },
+  "problem": {
+    "eyebrow": "Problemet",
+    "heading": "Du har bare noen sekunder.",
+    "points": [
+      "Folk scroller forbi annonser med mørke eller rotete bilder – uansett hvor fin boligen er.",
+      "Det er førstebildet og tittelen som avgjør om noen klikker seg inn.",
+      "Hver måned boligen står tom, taper du en hel månedsleie. Står en bolig til 15 000 kr i måneden tom én måned ekstra, har du tapt 15 000 kr."
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "Slik fungerer det",
+    "heading": "Tre enkle steg.",
+    "steps": [
+      "Send bildene eller lenken til annonsen.",
+      "Vi forbedrer og leverer innen 24–48 timer.",
+      "Du laster opp de nye bildene og får flere klikk."
+    ]
+  },
+  "servicesOverview": {
+    "eyebrow": "Tjenester",
+    "heading": "Finn riktig løft for boligen din.",
+    "cta": "Se tjenesten"
+  },
+  "honesty": {
+    "eyebrow": "Ærlighet",
+    "heading": "Vi forbedrer – vi lurer ikke.",
+    "points": [
+      "Vi justerer lys, farger, skarphet og rette linjer, og fjerner løst rot.",
+      "Vi endrer aldri vegger, gulv, vinduer, utsikt eller skader.",
+      "Digitalt møblerte bilder merkes alltid, og originalen ligger ved siden av.",
+      "Til Airbnb gjør vi kun naturlig forbedring: ingen møbler som ikke finnes, og ingen tekst i bildene."
+    ]
+  },
+  "about": {
+    "eyebrow": "Om meg",
+    "name": "Melanie Solberg",
+    "role": "Grunnlegger, Boligboost",
+    "bio": "[2–3 SETNINGER OM DEG PÅ NORSK]",
+    "replyNote": "Jeg svarer på e-post innen 24 timer på hverdager."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "heading": "Ofte stilte spørsmål.",
+    "items": [
+      { "q": "Er dette lov?", "a": "Ja, når bildene ikke villeder. Vi forbedrer lys og kvalitet, merker digital styling og endrer aldri faste ting eller skader." },
+      { "q": "Kan jeg bruke bildene på Airbnb?", "a": "Ja, Bildeløft er laget for det. Vi holder det naturlig og legger aldri tekst i bildene." },
+      { "q": "Hvem eier bildene?", "a": "Du bekrefter at du har rett til bildene du sender. Du får full bruksrett til resultatet." },
+      { "q": "Hvor fort får jeg dem?", "a": "Bildeløft innen 24 timer, styling og Salgsløftet innen 48 timer." },
+      { "q": "Hva hvis jeg ikke er fornøyd?", "a": "Du får én ny runde gratis, eller pengene tilbake." },
+      { "q": "Må jeg ta nye bilder?", "a": "Nei. Vi bruker bildene du har, også mobilbilder." },
+      { "q": "Øker Salgsløftet verdien?", "a": "Mange enkle oppgraderinger gjør boligen mer attraktiv. Hvor mye verdien kan øke, bør megler eller takstmann vurdere. Vi lover ingen bestemt sum." },
+      { "q": "Hvordan betaler jeg?", "a": "Du får faktura på e-post etter levering." }
+    ]
+  },
+  "finalCta": {
+    "heading": "Klar for flere klikk? Send bildene dine i dag.",
+    "cta": "Bestill nå"
+  },
+  "pricingNote": "Alle priser inkl. mva. Meglere faktureres eks. mva.",
+  "services": {
+    "photoBoost": {
+      "slug": "bildeloft",
+      "heading": "Gjør dine egne bilder klare for FINN og Airbnb",
+      "tagline": "Bildeløft",
+      "forWho": "Passer for: private utleiere, Airbnb-verter og privatpersoner som selger selv, som har tatt bildene selv.",
+      "whatItIs": "Du sender bildene du har. Vi forbedrer dem med AI: lys, farger, skarphet, rette linjer og rydding av løst rot. Du får også et sterkere forsidebilde og forslag til tittel.",
+      "includes": ["Inntil 20 forbedrede bilder", "Valgt og optimalisert forsidebilde", "3 forslag til annonsetittel", "Levert innen 24 timer"],
+      "price": "790 kr",
+      "note": "Til Airbnb gjør vi kun naturlig forbedring, slik Airbnbs regler krever."
+    },
+    "virtualStaging": {
+      "slug": "digital-styling",
+      "heading": "Møbler tomme rom – eller bytt ut det som trekker ned",
+      "tagline": "Digital styling",
+      "forWho": "Passer for: tomme boliger som skal selges eller leies ut langtid, og boliger med møbler som ikke følger med, for eksempel en gammel sofa.",
+      "whatItIs": "Vi møblerer tomme rom digitalt, eller bytter ut løse møbler som ikke følger med i salget, for eksempel en slitt sofa. Faste ting som vegger, gulv, kjøkken og vinduer endres aldri.",
+      "includes": ["Stylede bilder i 2 stilvalg", "Merket «Digital styling – illustrasjon. Møbler følger ikke med.»", "Originalbildet ved siden av", "Levert innen 48 timer"],
+      "price": "1 190 kr per rom",
+      "priceNote": "3 rom for 2 990 kr",
+      "note": "Ikke for Airbnb. Der skal gjestene se møblene de faktisk får."
+    },
+    "saleBoostMini": {
+      "slug": "salgsloftet",
+      "heading": "Mini",
+      "tagline": "Salgsløftet – Mini",
+      "forWho": "",
+      "whatItIs": "",
+      "includes": [],
+      "price": "4 900 kr",
+      "priceNote": "tiltak under 20 000 kr, 5 før/etter"
+    },
+    "saleBoostLarge": {
+      "slug": "salgsloftet",
+      "heading": "Stor",
+      "tagline": "Salgsløftet – Stor",
+      "forWho": "",
+      "whatItIs": "",
+      "includes": [],
+      "price": "9 900 kr",
+      "priceNote": "tiltak 20 000–100 000 kr, 10 før/etter og prioritert liste"
+    },
+    "saleBoostValueNote": "Hvor mye verdien kan øke, vurderer megleren eller takstmannen din. Vi viser hva det koster og hvordan det kan se ut.",
+    "saleBoostHeading": "Vis kjøperne hva boligen kan bli – og hva det koster",
+    "saleBoostTagline": "Salgsløftet",
+    "saleBoostForWho": "Passer for: boliger med oppussingsbehov som skal selges, eller som har ligget lenge på markedet. For selgere og meglere.",
+    "saleBoostWhatItIs": "Vi lager før/etter-bilder av enkle oppgraderinger, som å male skap og vegger, bytte benkeplate med folie eller olje gulvet. Du får en rapport med tiltak, kostnad og rekkefølge. Gjør du tiltakene, får annonsen ekte nye bilder. Gjør du dem ikke, ser kjøperne potensialet.",
+    "saleBoostIncludes": ["Før/etter-bilder", "Salgsløft-rapport (PDF) med tiltak, kostnad og hva som må gjøres av fagfolk", "Merket «Illustrasjon – ikke utført»", "Levert innen 48 timer"]
+  },
+  "order": {
+    "eyebrow": "Bestilling",
+    "heading": "Bestill bildeløft",
+    "intro": "Fyll ut skjemaet under, og du får svar på e-post innen 24 timer.",
+    "fields": {
+      "name": "Navn",
+      "email": "E-post",
+      "customerType": "Jeg er",
+      "service": "Tjeneste",
+      "photosLink": "Lenke til bildene (Google Drive, Dropbox, WeTransfer) eller annonsen",
+      "message": "Kommentar",
+      "rights": "Jeg bekrefter at jeg har rett til å bruke disse bildene.",
+      "marketing": "Valgfritt – 10 % rabatt: Boligboost kan bruke før/etter-bildene uten adresse og personlige detaljer i egen markedsføring."
+    },
+    "customerTypes": ["Privat utleier", "Airbnb-vert", "Selger selv", "Megler"],
+    "serviceOptions": ["Bildeløft", "Digital styling", "Salgsløftet", "Usikker"],
+    "submit": "Send bestilling"
+  },
+  "thanks": {
+    "heading": "Takk!",
+    "body": "Du får svar på e-post innen 24 timer.",
+    "back": "Tilbake til forsiden"
+  },
+  "legal": {
+    "privacy": {
+      "heading": "Personvern",
+      "updated": "Sist oppdatert: november 2026",
+      "intro": "Denne siden forklarer hva Boligboost samler inn når du bruker bestillingsskjemaet, hvorfor, og hvilke rettigheter du har.",
+      "sections": [
+        { "heading": "Hva vi samler inn", "body": "Når du fyller ut bestillingsskjemaet, lagrer vi navn, e-post, hvilken type kunde du er, hvilken tjeneste du ønsker, lenken til bildene dine, eventuell kommentar og om du samtykker til markedsføringsbruk av før/etter-bilder." },
+        { "heading": "Hvorfor vi samler det inn", "body": "Opplysningene brukes til å levere tjenesten du bestiller, svare på henvendelsen din og sende faktura. Markedsføringssamtykke brukes kun hvis du har krysset det av." },
+        { "heading": "Hvor lenge vi lagrer det", "body": "Vi lagrer bestillingsopplysninger så lenge det er nødvendig for leveranse og bokføring, normalt i opptil 5 år i tråd med bokføringsloven." },
+        { "heading": "Underleverandører", "body": "Skjemaet driftes av Netlify (Netlify Forms), som mottar og lagrer innsendingene. Vi bruker også e-post og eventuelt analyseverktøy for å forstå bruken av siden." },
+        { "heading": "Dine rettigheter", "body": "Du kan be om innsyn i, retting eller sletting av dine opplysninger ved å kontakte oss på e-post." }
+      ]
+    },
+    "terms": {
+      "heading": "Vilkår",
+      "intro": "Disse vilkårene gjelder når du bestiller en tjeneste fra Boligboost.",
+      "sections": [
+        { "heading": "Bilderettigheter", "body": "Ved bestilling bekrefter du at du har rett til å bruke bildene du sender inn, og at vi kan bearbeide dem for deg." },
+        { "heading": "Bruksrett til resultatet", "body": "Du får full bruksrett til de forbedrede bildene og eventuelle rapporter vi leverer." },
+        { "heading": "Merking", "body": "Digitalt møblerte bilder og illustrasjoner fra Salgsløftet merkes alltid tydelig, slik at det ikke er tvil om hva som er ekte og hva som er illustrasjon." },
+        { "heading": "Ditt ansvar", "body": "Du er selv ansvarlig for hvordan og hvor bildene publiseres, og for at publiseringen følger gjeldende regler, for eksempel Airbnbs retningslinjer." },
+        { "heading": "Betaling", "body": "Du mottar faktura på e-post etter levering, med 14 dagers forfall." },
+        { "heading": "Hvis du ikke er fornøyd", "body": "Du får én ny runde gratis, eller pengene tilbake." },
+        { "heading": "Lovvalg", "body": "Norsk lov gjelder for disse vilkårene." }
+      ]
+    },
+    "cookies": {
+      "heading": "Informasjonskapsler",
+      "intro": "Vi bruker informasjonskapsler (cookies) kun etter samtykke, og du kan endre valget ditt når du vil.",
+      "sections": [
+        { "heading": "Nødvendige", "body": "Noen få tekniske informasjonskapsler er nødvendige for at siden skal fungere, og krever ikke samtykke." },
+        { "heading": "Analyse og markedsføring", "body": "Analyse- og markedsføringsverktøy (som GA4 og Meta Pixel) lastes kun hvis du har godtatt dette i samtykkebanneret." },
+        { "heading": "Endre samtykke", "body": "Du kan endre samtykket ditt når som helst via lenken «Endre samtykke» i bunnteksten." }
+      ]
+    }
+  },
+  "consent": {
+    "message": "Vi bruker informasjonskapsler til analyse og markedsføring. Du velger selv hva du godtar.",
+    "acceptAll": "Godta alle",
+    "rejectAll": "Avvis alle",
+    "settings": "Innstillinger",
+    "changeConsent": "Endre samtykke"
+  },
+  "footer": {
+    "legalName": "[JURIDISK SELSKAPSNAVN]",
+    "orgNumber": "930 895 008",
+    "email": "hei@boligboost.no",
+    "linkPrivacy": "Personvern",
+    "linkTerms": "Vilkår",
+    "linkCookies": "Informasjonskapsler",
+    "rights": "Alle rettigheter reservert."
+  }
+}

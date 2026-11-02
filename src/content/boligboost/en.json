@@ -1,0 +1,213 @@
+{
+  "meta": {
+    "title": "Boligboost – AI-enhanced property photos, virtual staging and sale boost",
+    "description": "We enhance your photos with AI, furnish empty rooms digitally and show how simple upgrades can lift your property – delivered in 24–48 hours."
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "faq": "FAQ",
+    "orderCta": "Order a photo boost",
+    "langLabel": "Choose language"
+  },
+  "hero": {
+    "h1": "Your first photo decides whether they click.",
+    "subtitle": "We get your photos ready for FINN and Airbnb – brighter, sharper and more inviting. No photographer needed, delivered in 24 hours.",
+    "ctaPrimary": "Order a photo boost",
+    "ctaSecondary": "See services"
+  },
+  "beforeAfter": {
+    "eyebrow": "Examples",
+    "heading": "See the difference yourself.",
+    "improvedLabel": "Enhanced with AI",
+    "cases": {
+      "stue": { "caption": "A brighter, sharper living room, straightened horizon, loose clutter removed." },
+      "kjokken": { "caption": "Warmer light and cleaner colours in the kitchen." },
+      "soverom": { "caption": "A more inviting bedroom with better light and sharpness." }
+    }
+  },
+  "problem": {
+    "eyebrow": "The problem",
+    "heading": "You only have a few seconds.",
+    "points": [
+      "People scroll past listings with dark or messy photos – no matter how good the home is.",
+      "The first photo and the title decide whether anyone clicks.",
+      "Every month your property sits empty costs you a full month's rent. If a 15,000 NOK/month rental stays empty one extra month, you've lost 15,000 NOK."
+    ]
+  },
+  "howItWorks": {
+    "eyebrow": "How it works",
+    "heading": "Three simple steps.",
+    "steps": [
+      "Send us your photos or a link to your listing.",
+      "We enhance them and deliver within 24–48 hours.",
+      "You upload the new photos and get more clicks."
+    ]
+  },
+  "servicesOverview": {
+    "eyebrow": "Services",
+    "heading": "Find the right boost for your property.",
+    "cta": "See service"
+  },
+  "honesty": {
+    "eyebrow": "Honesty",
+    "heading": "We enhance – we don't mislead.",
+    "points": [
+      "We adjust light, colour, sharpness and straight lines, and remove loose clutter.",
+      "We never change walls, floors, windows, views or damage.",
+      "Digitally furnished photos are always labelled, with the original shown alongside.",
+      "For Airbnb we only do natural enhancement: no furniture that isn't there, and no text in the photos."
+    ]
+  },
+  "about": {
+    "eyebrow": "About",
+    "name": "Melanie Solberg",
+    "role": "Founder, Boligboost",
+    "bio": "[2–3 SENTENCES ABOUT YOU IN ENGLISH]",
+    "replyNote": "I reply to emails within 24 hours on weekdays."
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "heading": "Frequently asked questions.",
+    "items": [
+      { "q": "Is this allowed?", "a": "Yes, as long as the photos don't mislead. We improve light and quality, label virtual staging and never change fixed features or damage." },
+      { "q": "Can I use the photos on Airbnb?", "a": "Yes, Photo Boost is made for that. We keep it natural and never add text to the photos." },
+      { "q": "Who owns the photos?", "a": "You confirm you have the rights to the photos you send. You get full rights to use the result." },
+      { "q": "How fast do I get them?", "a": "Photo Boost within 24 hours, staging and Sale Boost within 48 hours." },
+      { "q": "What if I'm not happy?", "a": "You get one free revision, or your money back." },
+      { "q": "Do I need new photos?", "a": "No. We use the photos you have, including phone photos." },
+      { "q": "Does Sale Boost increase the value?", "a": "Many simple upgrades make a home more attractive. How much the value may increase should be assessed by an agent or valuer. We don't promise a specific amount." },
+      { "q": "How do I pay?", "a": "You receive an invoice by email after delivery." }
+    ]
+  },
+  "finalCta": {
+    "heading": "Ready for more clicks? Send us your photos today.",
+    "cta": "Order now"
+  },
+  "pricingNote": "All prices include VAT. Estate agents are invoiced excl. VAT.",
+  "services": {
+    "photoBoost": {
+      "slug": "photo-boost",
+      "heading": "Make your own photos ready for FINN and Airbnb",
+      "tagline": "Photo Boost",
+      "forWho": "Suitable for: private landlords, Airbnb hosts and people selling privately, who have taken the photos themselves.",
+      "whatItIs": "Send us the photos you have. We enhance them with AI: light, colour, sharpness, straight lines and removal of loose clutter. You also get a stronger cover photo and title suggestions.",
+      "includes": ["Up to 20 enhanced photos", "A selected and optimised cover photo", "3 listing title suggestions", "Delivered within 24 hours"],
+      "price": "NOK 790",
+      "note": "For Airbnb we only do natural enhancement, as Airbnb's rules require."
+    },
+    "virtualStaging": {
+      "slug": "virtual-staging",
+      "heading": "Furnish empty rooms – or replace what holds them back",
+      "tagline": "Virtual Staging",
+      "forWho": "Suitable for: empty properties for sale or long-term rental, and properties with furniture that isn't included in the sale, like a worn sofa.",
+      "whatItIs": "We furnish empty rooms digitally, or replace loose furniture that isn't included in the sale, like a worn sofa. Fixed features such as walls, floors, kitchens and windows are never changed.",
+      "includes": ["Staged photos in 2 style options", "Labelled \"Virtual staging – illustration. Furniture not included.\"", "Original photo alongside", "Delivered within 48 hours"],
+      "price": "NOK 1,190 per room",
+      "priceNote": "3 rooms for NOK 2,990",
+      "note": "Not for Airbnb, where guests must see the furniture they actually get."
+    },
+    "saleBoostMini": {
+      "slug": "sale-boost",
+      "heading": "Mini",
+      "tagline": "Sale Boost – Mini",
+      "forWho": "",
+      "whatItIs": "",
+      "includes": [],
+      "price": "NOK 4,900",
+      "priceNote": "upgrades under NOK 20,000, 5 before/after"
+    },
+    "saleBoostLarge": {
+      "slug": "sale-boost",
+      "heading": "Large",
+      "tagline": "Sale Boost – Large",
+      "forWho": "",
+      "whatItIs": "",
+      "includes": [],
+      "price": "NOK 9,900",
+      "priceNote": "upgrades NOK 20,000–100,000, 10 before/after and a prioritised list"
+    },
+    "saleBoostValueNote": "How much the value may increase is assessed by your estate agent or valuer. We show what it costs and how it could look.",
+    "saleBoostHeading": "Show buyers what the home could become – and what it costs",
+    "saleBoostTagline": "Sale Boost",
+    "saleBoostForWho": "Suitable for: properties needing renovation that are being sold, or that have been on the market a long time. For sellers and estate agents.",
+    "saleBoostWhatItIs": "We create before/after images of simple upgrades, like painting cabinets and walls, refreshing the worktop with film or oiling the floor. You get a report with the work, costs and the order to do it in. Do the work and your listing gets real new photos. Don't, and buyers still see the potential.",
+    "saleBoostIncludes": ["Before/after images", "Sale Boost report (PDF) with the work, costs and what requires a professional", "Labelled \"Illustration – not carried out\"", "Delivered within 48 hours"]
+  },
+  "order": {
+    "eyebrow": "Order",
+    "heading": "Order a photo boost",
+    "intro": "Fill in the form below and you'll get a reply by email within 24 hours.",
+    "fields": {
+      "name": "Name",
+      "email": "Email",
+      "customerType": "I am a",
+      "service": "Service",
+      "photosLink": "Link to your photos (Google Drive, Dropbox, WeTransfer) or your listing",
+      "message": "Comment",
+      "rights": "I confirm I have the right to use these photos.",
+      "marketing": "Optional – 10% off: Boligboost may use the before/after photos, without address or personal details, in its own marketing."
+    },
+    "customerTypes": ["Private landlord", "Airbnb host", "Selling privately", "Estate agent"],
+    "serviceOptions": ["Photo Boost", "Virtual Staging", "Sale Boost", "Not sure"],
+    "submit": "Send order"
+  },
+  "thanks": {
+    "heading": "Thank you!",
+    "body": "You'll get a reply by email within 24 hours.",
+    "back": "Back to the homepage"
+  },
+  "legal": {
+    "privacy": {
+      "heading": "Privacy",
+      "updated": "Last updated: November 2026",
+      "intro": "This page explains what Boligboost collects when you use the order form, why, and what rights you have.",
+      "sections": [
+        { "heading": "What we collect", "body": "When you fill in the order form, we store your name, email, customer type, requested service, a link to your photos, any comment, and whether you consent to marketing use of the before/after photos." },
+        { "heading": "Why we collect it", "body": "The information is used to deliver the service you order, respond to your enquiry and send an invoice. Marketing consent is only used if you've ticked that box." },
+        { "heading": "How long we keep it", "body": "We keep order information for as long as necessary for delivery and bookkeeping, normally up to 5 years in line with Norwegian accounting law." },
+        { "heading": "Sub-processors", "body": "The form is run on Netlify (Netlify Forms), which receives and stores submissions. We also use email and may use analytics tools to understand how the site is used." },
+        { "heading": "Your rights", "body": "You can request access to, correction of, or deletion of your data by contacting us by email." }
+      ]
+    },
+    "terms": {
+      "heading": "Terms",
+      "intro": "These terms apply when you order a service from Boligboost.",
+      "sections": [
+        { "heading": "Photo rights", "body": "By ordering, you confirm you have the right to use the photos you submit, and that we may edit them for you." },
+        { "heading": "Right to use the result", "body": "You get full rights to use the enhanced photos and any reports we deliver." },
+        { "heading": "Labelling", "body": "Digitally furnished photos and Sale Boost illustrations are always clearly labelled, so there's no doubt about what's real and what's an illustration." },
+        { "heading": "Your responsibility", "body": "You are responsible for how and where the photos are published, and for ensuring publication follows applicable rules, such as Airbnb's guidelines." },
+        { "heading": "Payment", "body": "You receive an invoice by email after delivery, due within 14 days." },
+        { "heading": "If you're not happy", "body": "You get one free revision, or your money back." },
+        { "heading": "Governing law", "body": "Norwegian law applies to these terms." }
+      ]
+    },
+    "cookies": {
+      "heading": "Cookies",
+      "intro": "We only use cookies after consent, and you can change your choice at any time.",
+      "sections": [
+        { "heading": "Necessary", "body": "A few technical cookies are necessary for the site to function, and don't require consent." },
+        { "heading": "Analytics and marketing", "body": "Analytics and marketing tools (such as GA4 and Meta Pixel) are only loaded if you've accepted this in the consent banner." },
+        { "heading": "Change consent", "body": "You can change your consent at any time via the \"Change consent\" link in the footer." }
+      ]
+    }
+  },
+  "consent": {
+    "message": "We use cookies for analytics and marketing. You choose what you accept.",
+    "acceptAll": "Accept all",
+    "rejectAll": "Reject all",
+    "settings": "Settings",
+    "changeConsent": "Change consent"
+  },
+  "footer": {
+    "legalName": "[LEGAL COMPANY NAME]",
+    "orgNumber": "930 895 008",
+    "email": "hei@boligboost.no",
+    "linkPrivacy": "Privacy",
+    "linkTerms": "Terms",
+    "linkCookies": "Cookies",
+    "rights": "All rights reserved."
+  }
+}

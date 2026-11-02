@@ -1,0 +1,17 @@
+[
+  {
+    "id": "stue",
+    "before": "/cases/case-stue-before.svg",
+    "after": "/cases/case-stue-after.svg"
+  },
+  {
+    "id": "kjokken",
+    "before": "/cases/case-kjokken-before.svg",
+    "after": "/cases/case-kjokken-after.svg"
+  },
+  {
+    "id": "soverom",
+    "before": "/cases/case-soverom-before.svg",
+    "after": "/cases/case-soverom-after.svg"
+  }
+]
