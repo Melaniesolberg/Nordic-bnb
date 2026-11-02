@@ -263,16 +263,12 @@ export const fi: SiteContent = {
     paragraphs: [
       "Nordic BnB perustettiin vuonna 2023, ja se rakentuu yksinkertaisen ajatuksen ympärille: kiinteistöhallinnan ei pitäisi olla passiivista. Ilmoitus, joka julkaistaan ja jätetään yksin, alisuoriutuu — hiljaa, vuosien ajan, kenenkään huomaamatta.",
       "Jokaista hallinnoimaamme kiinteistöä on tarkoitus tarkastella, testata ja parantaa jatkuvasti — hinnoittelua, esittelyä, asemointia — sen sijaan että se asetettaisiin kerran ja unohdettaisiin.",
-      "Nordic BnB:n takana on paikallinen toimintaverkosto: siivous, tyylittely, huolto ja paikan päällä tapahtuva koordinointi koko Costa del Solilla, yhdessä perustajien kanssa, jotka uskovat, että omistajat ansaitsevat täyden näkyvyyden siihen, miten heidän kiinteistönsä suoriutuu.",
+      "Nordic BnB:n takana on paikallinen toimintaverkosto: siivous, tyylittely, huolto ja paikan päällä tapahtuva koordinointi koko Costa del Solilla, yhdessä perustajan kanssa, joka uskoo, että omistajat ansaitsevat täyden näkyvyyden siihen, miten heidän kiinteistönsä suoriutuu.",
     ],
     founderName: "Petter Solberg",
     founderRole: "Founder & Head of Growth",
     founderQuote:
       "Emme vain ylläpidä ilmoitusta — rakennamme ja muotoilemme kiinteistön, joka oikeasti konvertoi. Tunnemme Costa del Solin markkinat, ja tunnemme vieraat, erityisesti pohjoismaiset vieraat, jotka varaavat täältä.",
-    founder2Name: "Melanie Solberg",
-    founder2Role: "Head of Operations & Marketing",
-    founder2Quote:
-      "Jokainen omistaja ansaitsee nähdä tarkalleen, miten hänen kiinteistönsä suoriutuu — ei arvailua, ei mustaa laatikkoa.",
   },
   testimonials: {
     eyebrow: "Omistajien kokemuksia",

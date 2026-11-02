@@ -263,16 +263,12 @@ export const no: SiteContent = {
     paragraphs: [
       "Nordic BnB ble stiftet i 2023, og er bygget rundt en enkel idé: eiendomsforvaltning bør ikke være passiv. En annonse som publiseres og deretter overlates til seg selv, vil underprestere — stille, over flere år, uten at noen legger merke til det.",
       "Hver eiendom vi forvalter skal gjennomgås, testes og forbedres kontinuerlig — prising, presentasjon, posisjonering — i stedet for å settes opp én gang og glemmes.",
-      "Bak Nordic BnB står et lokalt driftsnettverk: rengjøring, styling, vedlikehold og koordinering på bakken langs Costa del Sol, sammen med grunnleggere som mener eiere fortjener full innsikt i hvordan eiendommen deres presterer.",
+      "Bak Nordic BnB står et lokalt driftsnettverk: rengjøring, styling, vedlikehold og koordinering på bakken langs Costa del Sol, sammen med en grunnlegger som mener eiere fortjener full innsikt i hvordan eiendommen deres presterer.",
     ],
     founderName: "Petter Solberg",
     founderRole: "Founder & Head of Growth",
     founderQuote:
       "Vi driver ikke bare en annonse — vi bygger og skaper en eiendom som faktisk konverterer. Vi kjenner markedet på Costa del Sol, og vi kjenner kundene, spesielt de skandinaviske gjestene som booker her.",
-    founder2Name: "Melanie Solberg",
-    founder2Role: "Head of Operations & Marketing",
-    founder2Quote:
-      "Hver eier fortjener å se nøyaktig hvordan eiendommen deres presterer — ingen gjetting, ingen svart boks.",
   },
   testimonials: {
     eyebrow: "Eiernes tilbakemeldinger",

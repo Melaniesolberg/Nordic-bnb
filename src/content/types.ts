@@ -153,9 +153,6 @@ export interface AboutContent {
   founderName: string;
   founderRole: string;
   founderQuote: string;
-  founder2Name: string;
-  founder2Role: string;
-  founder2Quote: string;
 }
 
 export interface Testimonial {

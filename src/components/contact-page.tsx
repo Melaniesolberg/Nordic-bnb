@@ -17,7 +17,6 @@ export default function ContactPage({ locale }: { locale: Locale }) {
 
   const people = [
     { name: about.founderName, role: about.founderRole, photo: media.contactPetterPhoto, email: CONTACT.emailFounder },
-    { name: about.founder2Name, role: about.founder2Role, photo: media.contactMelaniePhoto, email: CONTACT.emailMelanie },
   ];
 
   const ROLE_COVERS = [
@@ -42,7 +41,7 @@ export default function ContactPage({ locale }: { locale: Locale }) {
               </p>
             </Reveal>
 
-            <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8">
+            <div className="mx-auto mt-16 max-w-xs">
               {people.map((p, i) => (
                 <Reveal key={p.name} delay={0.08 * i}>
                   <div className="relative aspect-square w-full overflow-hidden rounded-sm">
