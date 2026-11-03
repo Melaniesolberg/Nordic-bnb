@@ -72,6 +72,7 @@ export interface BbContent {
     role: string;
     bio: string;
     replyNote: string;
+    photoAlt: string;
   };
   faq: {
     eyebrow: string;
@@ -132,7 +133,6 @@ export interface BbContent {
   };
   footer: {
     legalName: string;
-    orgNumber: string;
     email: string;
     linkPrivacy: string;
     linkTerms: string;

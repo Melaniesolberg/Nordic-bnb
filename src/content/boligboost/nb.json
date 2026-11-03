@@ -64,8 +64,9 @@
     "eyebrow": "Om meg",
     "name": "Melanie Solberg",
     "role": "Grunnlegger, Boligboost",
-    "bio": "[2–3 SETNINGER OM DEG PÅ NORSK]",
-    "replyNote": "Jeg svarer på e-post innen 24 timer på hverdager."
+    "bio": "Jeg heter Melanie Solberg og startet Boligboost fordi altfor mange fine boliger blir scrollet forbi på grunn av mørke og rotete bilder. Jeg er utdannet innen salg, ledelse og digital markedsføring, og driver også SynligAI, som hjelper bedrifter å bli synlige i AI-søk. Hos Boligboost bruker jeg AI til å gjøre boligen din klar for klikk – og jeg sjekker hvert eneste bilde selv, så resultatet er ærlig og ser naturlig ut.",
+    "replyNote": "Jeg svarer på e-post innen 24 timer på hverdager.",
+    "photoAlt": "Melanie Solberg, grunnlegger av Boligboost"
   },
   "faq": {
     "eyebrow": "FAQ",
@@ -202,8 +203,7 @@
     "changeConsent": "Endre samtykke"
   },
   "footer": {
-    "legalName": "[JURIDISK SELSKAPSNAVN]",
-    "orgNumber": "930 895 008",
+    "legalName": "[LIM INN NAVNET FRA BRØNNØYSUND], org.nr 930 895 008",
     "email": "hei@boligboost.no",
     "linkPrivacy": "Personvern",
     "linkTerms": "Vilkår",

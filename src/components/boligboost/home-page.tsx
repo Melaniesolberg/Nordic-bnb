@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/ui/reveal";
@@ -8,13 +10,20 @@ import BbFooter from "@/components/boligboost/footer";
 import BbConsentBanner from "@/components/boligboost/consent-banner";
 import BeforeAfterSlider from "@/components/boligboost/before-after-slider";
 import { getBbContent, getBbCases, bbSlugHref, BB_EMAIL } from "@/content/boligboost";
+import { BB_CONFIG } from "@/content/boligboost/config";
 import { bbJsonLd } from "@/content/boligboost/json-ld";
 import type { BbLocale } from "@/content/boligboost/types";
+
+function founderPhotoSrc(): string {
+  const realPhoto = path.join(process.cwd(), "public/boligboost/melanie.jpg");
+  return fs.existsSync(realPhoto) ? "/boligboost/melanie.jpg" : "/boligboost/melanie-placeholder.svg";
+}
 
 export default function BbHomePage({ locale }: { locale: BbLocale }) {
   const content = getBbContent(locale);
   const cases = getBbCases();
   const jsonLd = bbJsonLd(locale);
+  const photoSrc = founderPhotoSrc();
 
   const services = [
     {
@@ -39,6 +48,56 @@ export default function BbHomePage({ locale }: { locale: BbLocale }) {
       price: content.services.saleBoostMini.price,
     },
   ];
+
+  const beforeAfterSection = (
+    <section key="before-after" className="py-20 sm:py-28">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+        <Reveal>
+          <Eyebrow>{content.beforeAfter.eyebrow}</Eyebrow>
+          <h2 className="font-serif-display text-display-md mt-5 max-w-xl text-charcoal">
+            {content.beforeAfter.heading}
+          </h2>
+        </Reveal>
+        <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-3">
+          {cases.map((c, i) => {
+            const caption = content.beforeAfter.cases[c.id]?.caption ?? "";
+            return (
+              <Reveal key={c.id} delay={0.06 * i}>
+                <BeforeAfterSlider
+                  before={c.before}
+                  after={c.after}
+                  alt={caption}
+                  improvedLabel={content.beforeAfter.improvedLabel}
+                />
+                <p className="mt-4 text-sm leading-relaxed text-charcoal/60">{caption}</p>
+              </Reveal>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+
+  const howItWorksSection = (
+    <section key="how-it-works" className="py-20 sm:py-28">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+        <Reveal>
+          <Eyebrow>{content.howItWorks.eyebrow}</Eyebrow>
+          <h2 className="font-serif-display text-display-md mt-5 max-w-xl text-charcoal">
+            {content.howItWorks.heading}
+          </h2>
+        </Reveal>
+        <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-3">
+          {content.howItWorks.steps.map((step, i) => (
+            <Reveal key={step} delay={0.06 * i}>
+              <span className="font-serif-display text-4xl text-amber-600">{i + 1}</span>
+              <p className="mt-4 text-sm leading-relaxed text-charcoal/70 sm:text-base">{step}</p>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 
   return (
     <>
@@ -75,33 +134,7 @@ export default function BbHomePage({ locale }: { locale: BbLocale }) {
           </div>
         </section>
 
-        {/* Before / after */}
-        <section className="py-20 sm:py-28">
-          <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-            <Reveal>
-              <Eyebrow>{content.beforeAfter.eyebrow}</Eyebrow>
-              <h2 className="font-serif-display text-display-md mt-5 max-w-xl text-charcoal">
-                {content.beforeAfter.heading}
-              </h2>
-            </Reveal>
-            <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-3">
-              {cases.map((c, i) => {
-                const caption = content.beforeAfter.cases[c.id]?.caption ?? "";
-                return (
-                  <Reveal key={c.id} delay={0.06 * i}>
-                    <BeforeAfterSlider
-                      before={c.before}
-                      after={c.after}
-                      alt={caption}
-                      improvedLabel={content.beforeAfter.improvedLabel}
-                    />
-                    <p className="mt-4 text-sm leading-relaxed text-charcoal/60">{caption}</p>
-                  </Reveal>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+        {BB_CONFIG.showCases ? beforeAfterSection : howItWorksSection}
 
         {/* Problem */}
         <section className="bg-charcoal py-20 text-ivory sm:py-28">
@@ -122,25 +155,7 @@ export default function BbHomePage({ locale }: { locale: BbLocale }) {
           </div>
         </section>
 
-        {/* How it works */}
-        <section className="py-20 sm:py-28">
-          <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-            <Reveal>
-              <Eyebrow>{content.howItWorks.eyebrow}</Eyebrow>
-              <h2 className="font-serif-display text-display-md mt-5 max-w-xl text-charcoal">
-                {content.howItWorks.heading}
-              </h2>
-            </Reveal>
-            <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-3">
-              {content.howItWorks.steps.map((step, i) => (
-                <Reveal key={step} delay={0.06 * i}>
-                  <span className="font-serif-display text-4xl text-amber-600">{i + 1}</span>
-                  <p className="mt-4 text-sm leading-relaxed text-charcoal/70 sm:text-base">{step}</p>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
+        {BB_CONFIG.showCases && howItWorksSection}
 
         {/* Services */}
         <section id="tjenester" className="bg-ivory-soft py-20 sm:py-28">
@@ -198,7 +213,7 @@ export default function BbHomePage({ locale }: { locale: BbLocale }) {
           <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
             <Reveal className="flex flex-col items-start gap-10 sm:flex-row sm:items-center">
               <div className="relative aspect-square w-full max-w-[220px] overflow-hidden rounded-sm">
-                <Image src="/boligboost/melanie-placeholder.svg" alt={content.about.name} fill sizes="220px" className="object-cover" />
+                <Image src={photoSrc} alt={content.about.photoAlt} fill sizes="220px" className="object-cover" />
               </div>
               <div>
                 <Eyebrow tone="light">{content.about.eyebrow}</Eyebrow>

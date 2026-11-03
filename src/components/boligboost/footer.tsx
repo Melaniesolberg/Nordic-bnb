@@ -11,7 +11,7 @@ export default function BbFooter({ locale, footer }: { locale: BbLocale; footer:
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p className="font-serif-display text-xl text-ivory">Boligboost</p>
-            <p className="mt-2 text-sm">{footer.legalName}, org.nr {footer.orgNumber}</p>
+            <p className="mt-2 text-sm">{footer.legalName}</p>
             <a href={`mailto:${footer.email}`} className="mt-1 inline-block text-sm hover:text-amber-500">
               {footer.email}
             </a>
