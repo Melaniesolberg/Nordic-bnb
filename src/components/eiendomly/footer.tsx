@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { bbSlugHref } from "@/content/boligboost";
-import type { BbContent, BbLocale } from "@/content/boligboost/types";
+import { bbSlugHref } from "@/content/eiendomly";
+import type { BbContent, BbLocale } from "@/content/eiendomly/types";
 
 export default function BbFooter({ locale, footer }: { locale: BbLocale; footer: BbContent["footer"] }) {
   const year = new Date().getFullYear();
@@ -10,7 +10,7 @@ export default function BbFooter({ locale, footer }: { locale: BbLocale; footer:
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
           <div>
-            <p className="font-serif-display text-xl text-ivory">Boligboost</p>
+            <p className="font-serif-display text-xl text-ivory">Eiendomly</p>
             <p className="mt-2 text-sm">{footer.legalName}</p>
             <a href={`mailto:${footer.email}`} className="mt-1 inline-block text-sm hover:text-amber-500">
               {footer.email}
@@ -38,7 +38,7 @@ export default function BbFooter({ locale, footer }: { locale: BbLocale; footer:
         </div>
 
         <p className="mt-8 text-xs text-ivory/40">
-          © {year} Boligboost. {footer.rights}
+          © {year} Eiendomly. {footer.rights}
         </p>
       </div>
     </footer>

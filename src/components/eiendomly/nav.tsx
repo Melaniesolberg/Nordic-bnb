@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import Magnetic from "@/components/ui/magnetic-button";
-import { bbHref, bbSlugHref } from "@/content/boligboost";
-import type { BbContent, BbLocale } from "@/content/boligboost/types";
+import { bbHref, bbSlugHref } from "@/content/eiendomly";
+import type { BbContent, BbLocale } from "@/content/eiendomly/types";
 
 export default function BbNav({ locale, nav }: { locale: BbLocale; nav: BbContent["nav"] }) {
   const [open, setOpen] = useState(false);
@@ -21,7 +21,7 @@ export default function BbNav({ locale, nav }: { locale: BbLocale; nav: BbConten
     <header className="sticky top-0 z-40 border-b border-charcoal/10 bg-ivory/90 backdrop-blur-sm">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between px-5 py-4 sm:px-8">
         <Link href={bbHref(locale)} className="font-serif-display text-xl text-charcoal">
-          Boligboost
+          Eiendomly
         </Link>
 
         <nav className="hidden items-center gap-7 text-sm text-charcoal/75 lg:flex">

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import BbNav from "@/components/boligboost/nav";
-import BbFooter from "@/components/boligboost/footer";
-import { getBbContent, bbHref } from "@/content/boligboost";
+import BbNav from "@/components/eiendomly/nav";
+import BbFooter from "@/components/eiendomly/footer";
+import { getBbContent, bbHref } from "@/content/eiendomly";
 
 export default function NotFound() {
   const content = getBbContent("nb");

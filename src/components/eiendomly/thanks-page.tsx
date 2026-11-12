@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Reveal from "@/components/ui/reveal";
-import BbNav from "@/components/boligboost/nav";
-import BbFooter from "@/components/boligboost/footer";
-import { getBbContent, bbHref } from "@/content/boligboost";
-import type { BbLocale } from "@/content/boligboost/types";
+import BbNav from "@/components/eiendomly/nav";
+import BbFooter from "@/components/eiendomly/footer";
+import { getBbContent, bbHref } from "@/content/eiendomly";
+import type { BbLocale } from "@/content/eiendomly/types";
 
 export default function BbThanksPage({ locale }: { locale: BbLocale }) {
   const content = getBbContent(locale);

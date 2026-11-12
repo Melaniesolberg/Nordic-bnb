@@ -1,14 +1,14 @@
-import BbLegalPage from "@/components/boligboost/legal-page";
-import { getBbContent } from "@/content/boligboost";
-import { bbMetadata } from "@/content/boligboost/metadata";
+import BbLegalPage from "@/components/eiendomly/legal-page";
+import { getBbContent } from "@/content/eiendomly";
+import { bbMetadata } from "@/content/eiendomly/metadata";
 
 export function generateMetadata() {
   const content = getBbContent("en");
   return bbMetadata("en", {
     title: content.legal.terms.heading,
     description: content.legal.terms.intro,
-    nbPath: "/boligboost/vilkar",
-    enPath: "/boligboost/en/terms",
+    nbPath: "/eiendomly/vilkar",
+    enPath: "/eiendomly/en/terms",
   });
 }
 

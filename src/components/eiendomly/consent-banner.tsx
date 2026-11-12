@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useSyncExternalStore } from "react";
 import Script from "next/script";
-import type { BbContent } from "@/content/boligboost/types";
+import type { BbContent } from "@/content/eiendomly/types";
 
 interface BbConsent {
   analytics: boolean;

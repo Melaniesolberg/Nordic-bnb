@@ -1,8 +1,8 @@
 import Reveal from "@/components/ui/reveal";
-import BbNav from "@/components/boligboost/nav";
-import BbFooter from "@/components/boligboost/footer";
-import { getBbContent } from "@/content/boligboost";
-import type { BbLocale } from "@/content/boligboost/types";
+import BbNav from "@/components/eiendomly/nav";
+import BbFooter from "@/components/eiendomly/footer";
+import { getBbContent } from "@/content/eiendomly";
+import type { BbLocale } from "@/content/eiendomly/types";
 
 // Legal copy on this page and the terms/cookies pages is a working draft —
 // have it quality-checked by a lawyer before relying on it in production.

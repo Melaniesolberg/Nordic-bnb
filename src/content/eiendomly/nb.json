@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Boligboost – AI-forbedrede boligbilder, digital styling og salgsløft",
+    "title": "Eiendomly – AI-forbedrede boligbilder, digital styling og salgsløft",
     "description": "Vi forbedrer bildene dine med AI, møblerer tomme rom digitalt og viser hvordan enkle oppgraderinger kan løfte boligen – levert på 24–48 timer."
   },
   "nav": {
@@ -63,10 +63,10 @@
   "about": {
     "eyebrow": "Om meg",
     "name": "Melanie Solberg",
-    "role": "Grunnlegger, Boligboost",
-    "bio": "Jeg heter Melanie Solberg og startet Boligboost fordi altfor mange fine boliger blir scrollet forbi på grunn av mørke og rotete bilder. Jeg er utdannet innen salg, ledelse og digital markedsføring, og driver også SynligAI, som hjelper bedrifter å bli synlige i AI-søk. Hos Boligboost bruker jeg AI til å gjøre boligen din klar for klikk – og jeg sjekker hvert eneste bilde selv, så resultatet er ærlig og ser naturlig ut.",
+    "role": "Grunnlegger, Eiendomly",
+    "bio": "Jeg heter Melanie Solberg og startet Eiendomly fordi altfor mange fine boliger blir scrollet forbi på grunn av mørke og rotete bilder. Jeg er utdannet innen salg, ledelse og digital markedsføring, og driver også SynligAI, som hjelper bedrifter å bli synlige i AI-søk. Hos Eiendomly bruker jeg AI til å gjøre boligen din klar for klikk – og jeg sjekker hvert eneste bilde selv, så resultatet er ærlig og ser naturlig ut.",
     "replyNote": "Jeg svarer på e-post innen 24 timer på hverdager.",
-    "photoAlt": "Melanie Solberg, grunnlegger av Boligboost"
+    "photoAlt": "Melanie Solberg, grunnlegger av Eiendomly"
   },
   "faq": {
     "eyebrow": "FAQ",
@@ -148,7 +148,7 @@
       "photosLink": "Lenke til bildene (Google Drive, Dropbox, WeTransfer) eller annonsen",
       "message": "Kommentar",
       "rights": "Jeg bekrefter at jeg har rett til å bruke disse bildene.",
-      "marketing": "Valgfritt – 10 % rabatt: Boligboost kan bruke før/etter-bildene uten adresse og personlige detaljer i egen markedsføring."
+      "marketing": "Valgfritt – 10 % rabatt: Eiendomly kan bruke før/etter-bildene uten adresse og personlige detaljer i egen markedsføring."
     },
     "customerTypes": ["Privat utleier", "Airbnb-vert", "Selger selv", "Megler"],
     "serviceOptions": ["Bildeløft", "Digital styling", "Salgsløftet", "Usikker"],
@@ -163,7 +163,7 @@
     "privacy": {
       "heading": "Personvern",
       "updated": "Sist oppdatert: november 2026",
-      "intro": "Denne siden forklarer hva Boligboost samler inn når du bruker bestillingsskjemaet, hvorfor, og hvilke rettigheter du har.",
+      "intro": "Denne siden forklarer hva Eiendomly samler inn når du bruker bestillingsskjemaet, hvorfor, og hvilke rettigheter du har.",
       "sections": [
         { "heading": "Hva vi samler inn", "body": "Når du fyller ut bestillingsskjemaet, lagrer vi navn, e-post, hvilken type kunde du er, hvilken tjeneste du ønsker, lenken til bildene dine, eventuell kommentar og om du samtykker til markedsføringsbruk av før/etter-bilder." },
         { "heading": "Hvorfor vi samler det inn", "body": "Opplysningene brukes til å levere tjenesten du bestiller, svare på henvendelsen din og sende faktura. Markedsføringssamtykke brukes kun hvis du har krysset det av." },
@@ -174,7 +174,7 @@
     },
     "terms": {
       "heading": "Vilkår",
-      "intro": "Disse vilkårene gjelder når du bestiller en tjeneste fra Boligboost.",
+      "intro": "Disse vilkårene gjelder når du bestiller en tjeneste fra Eiendomly.",
       "sections": [
         { "heading": "Bilderettigheter", "body": "Ved bestilling bekrefter du at du har rett til å bruke bildene du sender inn, og at vi kan bearbeide dem for deg." },
         { "heading": "Bruksrett til resultatet", "body": "Du får full bruksrett til de forbedrede bildene og eventuelle rapporter vi leverer." },
@@ -203,8 +203,8 @@
     "changeConsent": "Endre samtykke"
   },
   "footer": {
-    "legalName": "Boligboost Solberg, org.nr 930 895 008",
-    "email": "hei@boligboost.no",
+    "legalName": "Eiendomly Solberg, org.nr 930 895 008",
+    "email": "hei@eiendomly.no",
     "linkPrivacy": "Personvern",
     "linkTerms": "Vilkår",
     "linkCookies": "Informasjonskapsler",

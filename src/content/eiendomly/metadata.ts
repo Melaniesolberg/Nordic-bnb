@@ -6,8 +6,8 @@ import type { BbLocale } from "./types";
  * Builds per-page, per-language metadata with hreflang alternates between
  * the Norwegian and English version of the same page.
  *
- * @param nbPath path of the Norwegian version, e.g. "/boligboost/bildeloft"
- * @param enPath path of the English version, e.g. "/boligboost/en/photo-boost"
+ * @param nbPath path of the Norwegian version, e.g. "/eiendomly/bildeloft"
+ * @param enPath path of the English version, e.g. "/eiendomly/en/photo-boost"
  */
 export function bbMetadata(
   locale: BbLocale,
@@ -17,7 +17,7 @@ export function bbMetadata(
 
   return {
     // `{ absolute: ... }` bypasses the root layout's "%s — Nordic BnB"
-    // title template — Boligboost is a separate brand, not a Nordic BnB page.
+    // title template — Eiendomly is a separate brand, not a Nordic BnB page.
     title: { absolute: title },
     description,
     alternates: {
@@ -28,7 +28,7 @@ export function bbMetadata(
       title,
       description,
       url: `${CONTACT.site}${canonical}`,
-      siteName: "Boligboost",
+      siteName: "Eiendomly",
       locale: locale === "nb" ? "nb_NO" : "en_US",
       type: "website",
     },

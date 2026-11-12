@@ -1,14 +1,14 @@
-import BbLegalPage from "@/components/boligboost/legal-page";
-import { getBbContent } from "@/content/boligboost";
-import { bbMetadata } from "@/content/boligboost/metadata";
+import BbLegalPage from "@/components/eiendomly/legal-page";
+import { getBbContent } from "@/content/eiendomly";
+import { bbMetadata } from "@/content/eiendomly/metadata";
 
 export function generateMetadata() {
   const content = getBbContent("en");
   return bbMetadata("en", {
     title: content.legal.privacy.heading,
     description: content.legal.privacy.intro,
-    nbPath: "/boligboost/personvern",
-    enPath: "/boligboost/en/privacy",
+    nbPath: "/eiendomly/personvern",
+    enPath: "/eiendomly/en/privacy",
   });
 }
 

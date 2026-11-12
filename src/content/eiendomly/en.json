@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Boligboost – AI-enhanced property photos, virtual staging and sale boost",
+    "title": "Eiendomly – AI-enhanced property photos, virtual staging and sale boost",
     "description": "We enhance your photos with AI, furnish empty rooms digitally and show how simple upgrades can lift your property – delivered in 24–48 hours."
   },
   "nav": {
@@ -63,10 +63,10 @@
   "about": {
     "eyebrow": "About",
     "name": "Melanie Solberg",
-    "role": "Founder, Boligboost",
-    "bio": "I'm Melanie Solberg, and I started Boligboost because too many great homes get scrolled past because of dark, cluttered photos. I have a background in sales, management and digital marketing, and I also run SynligAI, which helps businesses become visible in AI search. At Boligboost I use AI to get your property ready for clicks – and I check every single photo myself, so the result is honest and looks natural.",
+    "role": "Founder, Eiendomly",
+    "bio": "I'm Melanie Solberg, and I started Eiendomly because too many great homes get scrolled past because of dark, cluttered photos. I have a background in sales, management and digital marketing, and I also run SynligAI, which helps businesses become visible in AI search. At Eiendomly I use AI to get your property ready for clicks – and I check every single photo myself, so the result is honest and looks natural.",
     "replyNote": "I reply to emails within 24 hours on weekdays.",
-    "photoAlt": "Melanie Solberg, founder of Boligboost"
+    "photoAlt": "Melanie Solberg, founder of Eiendomly"
   },
   "faq": {
     "eyebrow": "FAQ",
@@ -148,7 +148,7 @@
       "photosLink": "Link to your photos (Google Drive, Dropbox, WeTransfer) or your listing",
       "message": "Comment",
       "rights": "I confirm I have the right to use these photos.",
-      "marketing": "Optional – 10% off: Boligboost may use the before/after photos, without address or personal details, in its own marketing."
+      "marketing": "Optional – 10% off: Eiendomly may use the before/after photos, without address or personal details, in its own marketing."
     },
     "customerTypes": ["Private landlord", "Airbnb host", "Selling privately", "Estate agent"],
     "serviceOptions": ["Photo Boost", "Virtual Staging", "Sale Boost", "Not sure"],
@@ -163,7 +163,7 @@
     "privacy": {
       "heading": "Privacy",
       "updated": "Last updated: November 2026",
-      "intro": "This page explains what Boligboost collects when you use the order form, why, and what rights you have.",
+      "intro": "This page explains what Eiendomly collects when you use the order form, why, and what rights you have.",
       "sections": [
         { "heading": "What we collect", "body": "When you fill in the order form, we store your name, email, customer type, requested service, a link to your photos, any comment, and whether you consent to marketing use of the before/after photos." },
         { "heading": "Why we collect it", "body": "The information is used to deliver the service you order, respond to your enquiry and send an invoice. Marketing consent is only used if you've ticked that box." },
@@ -174,7 +174,7 @@
     },
     "terms": {
       "heading": "Terms",
-      "intro": "These terms apply when you order a service from Boligboost.",
+      "intro": "These terms apply when you order a service from Eiendomly.",
       "sections": [
         { "heading": "Photo rights", "body": "By ordering, you confirm you have the right to use the photos you submit, and that we may edit them for you." },
         { "heading": "Right to use the result", "body": "You get full rights to use the enhanced photos and any reports we deliver." },
@@ -203,8 +203,8 @@
     "changeConsent": "Change consent"
   },
   "footer": {
-    "legalName": "Boligboost Solberg, org. no. 930 895 008",
-    "email": "hei@boligboost.no",
+    "legalName": "Eiendomly Solberg, org. no. 930 895 008",
+    "email": "hei@eiendomly.no",
     "linkPrivacy": "Privacy",
     "linkTerms": "Terms",
     "linkCookies": "Cookies",

@@ -5,18 +5,18 @@ import Image from "next/image";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import Magnetic from "@/components/ui/magnetic-button";
-import BbNav from "@/components/boligboost/nav";
-import BbFooter from "@/components/boligboost/footer";
-import BbConsentBanner from "@/components/boligboost/consent-banner";
-import BeforeAfterSlider from "@/components/boligboost/before-after-slider";
-import { getBbContent, getBbCases, bbSlugHref, BB_EMAIL } from "@/content/boligboost";
-import { BB_CONFIG } from "@/content/boligboost/config";
-import { bbJsonLd } from "@/content/boligboost/json-ld";
-import type { BbLocale } from "@/content/boligboost/types";
+import BbNav from "@/components/eiendomly/nav";
+import BbFooter from "@/components/eiendomly/footer";
+import BbConsentBanner from "@/components/eiendomly/consent-banner";
+import BeforeAfterSlider from "@/components/eiendomly/before-after-slider";
+import { getBbContent, getBbCases, bbSlugHref, BB_EMAIL } from "@/content/eiendomly";
+import { BB_CONFIG } from "@/content/eiendomly/config";
+import { bbJsonLd } from "@/content/eiendomly/json-ld";
+import type { BbLocale } from "@/content/eiendomly/types";
 
 function founderPhotoSrc(): string {
-  const realPhoto = path.join(process.cwd(), "public/boligboost/melanie.jpg");
-  return fs.existsSync(realPhoto) ? "/boligboost/melanie.jpg" : "/boligboost/melanie-placeholder.svg";
+  const realPhoto = path.join(process.cwd(), "public/eiendomly/melanie.jpg");
+  return fs.existsSync(realPhoto) ? "/eiendomly/melanie.jpg" : "/eiendomly/melanie-placeholder.svg";
 }
 
 export default function BbHomePage({ locale }: { locale: BbLocale }) {

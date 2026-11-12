@@ -4,11 +4,11 @@ import { Suspense, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
-import BbNav from "@/components/boligboost/nav";
-import BbFooter from "@/components/boligboost/footer";
-import BbConsentBanner from "@/components/boligboost/consent-banner";
-import { getBbContent, bbSlugHref } from "@/content/boligboost";
-import type { BbLocale } from "@/content/boligboost/types";
+import BbNav from "@/components/eiendomly/nav";
+import BbFooter from "@/components/eiendomly/footer";
+import BbConsentBanner from "@/components/eiendomly/consent-banner";
+import { getBbContent, bbSlugHref } from "@/content/eiendomly";
+import type { BbLocale } from "@/content/eiendomly/types";
 
 const SERVICE_OPTION_INDEX: Record<string, number> = {
   photoBoost: 0,

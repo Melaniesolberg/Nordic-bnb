@@ -1,14 +1,14 @@
-import BbServicePage from "@/components/boligboost/service-page";
-import { getBbContent } from "@/content/boligboost";
-import { bbMetadata } from "@/content/boligboost/metadata";
+import BbServicePage from "@/components/eiendomly/service-page";
+import { getBbContent } from "@/content/eiendomly";
+import { bbMetadata } from "@/content/eiendomly/metadata";
 
 export function generateMetadata() {
   const content = getBbContent("nb");
   return bbMetadata("nb", {
     title: `${content.services.virtualStaging.tagline} – ${content.services.virtualStaging.heading}`,
     description: content.services.virtualStaging.whatItIs,
-    nbPath: "/boligboost/digital-styling",
-    enPath: "/boligboost/en/virtual-staging",
+    nbPath: "/eiendomly/digital-styling",
+    enPath: "/eiendomly/en/virtual-staging",
   });
 }
 

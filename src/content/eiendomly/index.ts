@@ -21,7 +21,7 @@ export function getBbCases(): BbCase[] {
 
 export function bbHref(locale: BbLocale, path = ""): string {
   const clean = path ? `/${path.replace(/^\/+/, "")}` : "";
-  return locale === "nb" ? `/boligboost${clean}` : `/boligboost/en${clean}`;
+  return locale === "nb" ? `/eiendomly${clean}` : `/eiendomly/en${clean}`;
 }
 
 /** Localized slugs for pages whose path differs between Norwegian and English. */
@@ -40,4 +40,4 @@ export function bbSlugHref(locale: BbLocale, key: keyof typeof BB_SLUGS, anchor 
   return bbHref(locale, BB_SLUGS[key][locale] + anchor);
 }
 
-export const BB_EMAIL = "hei@boligboost.no";
+export const BB_EMAIL = "hei@eiendomly.no";

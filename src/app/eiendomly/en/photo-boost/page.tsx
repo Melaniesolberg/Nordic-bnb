@@ -1,14 +1,14 @@
-import BbServicePage from "@/components/boligboost/service-page";
-import { getBbContent } from "@/content/boligboost";
-import { bbMetadata } from "@/content/boligboost/metadata";
+import BbServicePage from "@/components/eiendomly/service-page";
+import { getBbContent } from "@/content/eiendomly";
+import { bbMetadata } from "@/content/eiendomly/metadata";
 
 export function generateMetadata() {
   const content = getBbContent("en");
   return bbMetadata("en", {
     title: `${content.services.photoBoost.tagline} – ${content.services.photoBoost.heading}`,
     description: content.services.photoBoost.whatItIs,
-    nbPath: "/boligboost/bildeloft",
-    enPath: "/boligboost/en/photo-boost",
+    nbPath: "/eiendomly/bildeloft",
+    enPath: "/eiendomly/en/photo-boost",
   });
 }
 

@@ -2,11 +2,11 @@ import Link from "next/link";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import Magnetic from "@/components/ui/magnetic-button";
-import BbNav from "@/components/boligboost/nav";
-import BbFooter from "@/components/boligboost/footer";
-import BbConsentBanner from "@/components/boligboost/consent-banner";
-import { getBbContent, bbSlugHref } from "@/content/boligboost";
-import type { BbLocale } from "@/content/boligboost/types";
+import BbNav from "@/components/eiendomly/nav";
+import BbFooter from "@/components/eiendomly/footer";
+import BbConsentBanner from "@/components/eiendomly/consent-banner";
+import { getBbContent, bbSlugHref } from "@/content/eiendomly";
+import type { BbLocale } from "@/content/eiendomly/types";
 
 export default function BbServicePage({
   locale,

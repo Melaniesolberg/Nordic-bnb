@@ -1,14 +1,14 @@
-import BbThanksPage from "@/components/boligboost/thanks-page";
-import { getBbContent } from "@/content/boligboost";
-import { bbMetadata } from "@/content/boligboost/metadata";
+import BbThanksPage from "@/components/eiendomly/thanks-page";
+import { getBbContent } from "@/content/eiendomly";
+import { bbMetadata } from "@/content/eiendomly/metadata";
 
 export function generateMetadata() {
   const content = getBbContent("nb");
   return bbMetadata("nb", {
     title: content.thanks.heading,
     description: content.thanks.body,
-    nbPath: "/boligboost/takk",
-    enPath: "/boligboost/en/thanks",
+    nbPath: "/eiendomly/takk",
+    enPath: "/eiendomly/en/thanks",
   });
 }
 

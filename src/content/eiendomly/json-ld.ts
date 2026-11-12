@@ -4,7 +4,7 @@ import { CONTACT } from "@/lib/utils";
 
 /**
  * Organization, ProfessionalService, per-service Offer, Person and
- * FAQPage structured data for the Boligboost home page, in the given
+ * FAQPage structured data for the Eiendomly home page, in the given
  * language. Rendered as a single @graph so search engines and AI
  * crawlers see one connected entity rather than duplicate nodes.
  */
@@ -43,7 +43,7 @@ export function bbJsonLd(locale: BbLocale) {
       {
         "@type": "Organization",
         "@id": `${site}#organization`,
-        name: "Boligboost",
+        name: "Eiendomly",
         url: site,
         email: BB_EMAIL,
         founder: { "@type": "Person", name: content.about.name },
@@ -51,7 +51,7 @@ export function bbJsonLd(locale: BbLocale) {
       {
         "@type": "ProfessionalService",
         "@id": `${site}#service`,
-        name: "Boligboost",
+        name: "Eiendomly",
         url: site,
         email: BB_EMAIL,
         areaServed: "NO",

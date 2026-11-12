@@ -34,31 +34,31 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.3,
   }));
 
-  const boligboostPaths = [
-    "/boligboost",
-    "/boligboost/en",
-    "/boligboost/bildeloft",
-    "/boligboost/en/photo-boost",
-    "/boligboost/digital-styling",
-    "/boligboost/en/virtual-staging",
-    "/boligboost/salgsloftet",
-    "/boligboost/en/sale-boost",
-    "/boligboost/bestill",
-    "/boligboost/en/order",
-    "/boligboost/personvern",
-    "/boligboost/en/privacy",
-    "/boligboost/vilkar",
-    "/boligboost/en/terms",
-    "/boligboost/cookies",
-    "/boligboost/en/cookies",
+  const eiendomlyPaths = [
+    "/eiendomly",
+    "/eiendomly/en",
+    "/eiendomly/bildeloft",
+    "/eiendomly/en/photo-boost",
+    "/eiendomly/digital-styling",
+    "/eiendomly/en/virtual-staging",
+    "/eiendomly/salgsloftet",
+    "/eiendomly/en/sale-boost",
+    "/eiendomly/bestill",
+    "/eiendomly/en/order",
+    "/eiendomly/personvern",
+    "/eiendomly/en/privacy",
+    "/eiendomly/vilkar",
+    "/eiendomly/en/terms",
+    "/eiendomly/cookies",
+    "/eiendomly/en/cookies",
   ];
 
-  const boligboostEntries: MetadataRoute.Sitemap = boligboostPaths.map((path) => ({
+  const eiendomlyEntries: MetadataRoute.Sitemap = eiendomlyPaths.map((path) => ({
     url: `${CONTACT.site}${path}`,
     lastModified: now,
     changeFrequency: "monthly",
-    priority: path === "/boligboost" || path === "/boligboost/en" ? 0.9 : 0.6,
+    priority: path === "/eiendomly" || path === "/eiendomly/en" ? 0.9 : 0.6,
   }));
 
-  return [...homeEntries, ...seoEntries, ...contactEntries, ...privacyEntries, ...boligboostEntries];
+  return [...homeEntries, ...seoEntries, ...contactEntries, ...privacyEntries, ...eiendomlyEntries];
 }
