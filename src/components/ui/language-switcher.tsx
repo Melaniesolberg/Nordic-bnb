@@ -3,16 +3,18 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
-import { locales, localeHref, localeLabels, localeFlags, type Locale } from "@/i18n/config";
+import { locales, pageHref, localeLabels, localeFlags, type Locale, type PageKey } from "@/i18n/config";
 
 export default function LanguageSwitcher({
   locale,
   dark,
   label,
+  pageKey = "home",
 }: {
   locale: Locale;
   dark: boolean;
   label: string;
+  pageKey?: PageKey;
 }) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
@@ -67,7 +69,7 @@ export default function LanguageSwitcher({
             {locales.map((l) => (
               <Link
                 key={l}
-                href={localeHref(l, "/")}
+                href={pageHref(l, pageKey)}
                 onClick={() => setOpen(false)}
                 role="option"
                 aria-selected={l === locale}

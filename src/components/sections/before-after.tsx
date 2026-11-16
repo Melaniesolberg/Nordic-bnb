@@ -4,20 +4,17 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import Eyebrow from "@/components/ui/eyebrow";
-import type { BeforeAfterContent } from "@/content/types";
+import type { ProblemContent } from "@/content/types";
 
 /** Fraction of the local scroll track spent fading the heading/intro away. */
 const TEXT_FADE_END = 0.16;
 
-// Round 17: the scroll-scrubbed flythrough now lives solely in the Hero
-// section at the very top of the page — this section no longer duplicates
-// it further down. It keeps its own scroll-linked text reveal over a still
-// frame of the same property instead.
+/** "The problem" — scroll-linked text reveal over a dim, cluttered listing photo. */
 export default function BeforeAfter({
-  beforeAfter,
+  problem,
   posterSrc,
 }: {
-  beforeAfter: BeforeAfterContent;
+  problem: ProblemContent;
   posterSrc?: string;
 }) {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -60,14 +57,14 @@ export default function BeforeAfter({
               style={{ opacity: prefersReduced ? 1 : textOpacity, y: prefersReduced ? 0 : textY }}
               className="absolute inset-x-0 bottom-0 p-6 sm:p-10"
             >
-              <Eyebrow tone="light">{beforeAfter.eyebrow}</Eyebrow>
+              <Eyebrow tone="light">{problem.eyebrow}</Eyebrow>
               <h2 className="font-serif-display text-display-md mt-6 max-w-3xl text-ivory">
-                {beforeAfter.heading}
+                {problem.heading}
               </h2>
               <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/70 sm:text-lg">
-                {beforeAfter.intro}
+                {problem.intro}
               </p>
-              <p className="mt-3 text-xs text-ivory/40">{beforeAfter.disclaimer}</p>
+              <p className="mt-4 max-w-xl text-sm leading-relaxed text-coral-soft">{problem.note}</p>
             </motion.div>
           </div>
         </div>

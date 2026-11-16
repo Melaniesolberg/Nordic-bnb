@@ -1,93 +1,53 @@
 import type { Metadata } from "next";
 import { fraunces, inter } from "@/lib/fonts";
-import { CONTACT } from "@/lib/utils";
+import { SITE_URL } from "@/lib/utils";
+import { getContent } from "@/content";
 import { media } from "@/content/media";
 import SmoothScrollProvider from "@/components/providers/smooth-scroll-provider";
 import "./globals.css";
 
+const no = getContent("no");
+
 export const metadata: Metadata = {
-  metadataBase: new URL(CONTACT.site),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Nordic BnB — Property Management, Costa del Sol",
-    template: "%s — Nordic BnB",
+    default: no.meta.title,
+    template: "%s – Eiendomly",
   },
-  description:
-    "Premium short-term and long-term rental management across Marbella, Mijas, Fuengirola and Benalmádena. Your property, continuously improved.",
+  description: no.meta.description,
   keywords: [
-    "property management costa del sol",
-    "airbnb management marbella",
-    "airbnb management fuengirola",
-    "airbnb management benalmadena",
-    "property management mijas",
-    "long term rental management costa del sol",
+    "bedre bilder utleiebolig",
+    "airbnb bilder forbedre",
+    "digital boligstyling",
+    "boligstyling før salg",
+    "oppussingsobjekt selge",
+    "før og etter bilder bolig",
+    "improve rental listing photos",
+    "airbnb photo enhancement",
+    "virtual staging Norway",
   ],
-  alternates: {
-    canonical: "/",
-    languages: {
-      en: "/",
-      no: "/no",
-      sv: "/sv",
-      da: "/da",
-      fi: "/fi",
-      de: "/de",
-      fr: "/fr",
-      es: "/es",
-    },
-  },
   openGraph: {
-    title: "Nordic BnB — Your property. Continuously improved.",
-    description:
-      "Premium short-term and long-term rental management across Marbella, Mijas, Fuengirola and Benalmádena.",
-    url: CONTACT.site,
-    siteName: "Nordic BnB",
-    locale: "en_US",
+    title: no.meta.title,
+    description: no.meta.description,
+    url: SITE_URL,
+    siteName: "Eiendomly",
+    locale: "nb_NO",
     type: "website",
+    images: [{ url: media.heroPoster, width: 1920, height: 1080, alt: "Eiendomly" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nordic BnB — Your property. Continuously improved.",
-    description:
-      "Premium short-term and long-term rental management across Marbella, Mijas, Fuengirola and Benalmádena.",
+    title: no.meta.title,
+    description: no.meta.description,
+    images: [media.heroPoster],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
-  icons: {
-    icon: [{ url: media.brandIcon, type: "image/png" }],
-    apple: media.brandIcon,
-  },
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "RealEstateAgent",
-  name: "Nordic BnB",
-  url: CONTACT.site,
-  email: CONTACT.emailGeneral,
-  areaServed: ["Marbella", "Mijas", "Fuengirola", "Benalmádena", "Costa del Sol"],
-  address: {
-    "@type": "PostalAddress",
-    addressRegion: "Andalucía",
-    addressCountry: "ES",
-  },
-  founder: {
-    "@type": "Person",
-    name: "Petter Solberg",
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
-    >
+    <html lang="nb" className={`${fraunces.variable} ${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-ivory text-charcoal">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
         <SmoothScrollProvider>{children}</SmoothScrollProvider>
       </body>
     </html>

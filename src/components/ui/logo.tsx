@@ -1,45 +1,25 @@
-import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { media } from "@/content/media";
 
-/**
- * Real Nordic BnB brand mark — the user's single combined lockup file
- * (icon + "Nordic BnB" wordmark already laid out together as one image),
- * rendered as one unit. The coral artwork reads cleanly on both light and
- * dark backgrounds, so no light/dark variant is needed.
- */
-const SIZES = {
-  lg: "h-11 w-36 sm:h-14 sm:w-48",
-  sm: "h-7 w-24",
-} as const;
-
-const ICON_SIZES = {
-  icon: "h-10 w-10 sm:h-11 sm:w-11",
-  "icon-lg": "h-20 w-20 sm:h-[88px] sm:w-[88px]",
-} as const;
-
+/** Eiendomly wordmark: serif name with a coral full stop. */
 export default function Logo({
   className,
-  size = "lg",
-  variant = "full",
+  tone = "dark",
+  size = "md",
 }: {
   className?: string;
-  size?: keyof typeof SIZES;
-  variant?: "full" | "icon" | "icon-lg";
+  tone?: "dark" | "light";
+  size?: "md" | "lg";
 }) {
-  const isIcon = variant === "icon" || variant === "icon-lg";
   return (
     <span
-      className={cn("relative inline-block", isIcon ? ICON_SIZES[variant as keyof typeof ICON_SIZES] : SIZES[size], className)}
+      className={cn(
+        "font-serif-display tracking-tight transition-colors duration-500",
+        size === "lg" ? "text-4xl sm:text-5xl" : "text-2xl sm:text-[1.7rem]",
+        tone === "light" ? "text-ivory" : "text-charcoal",
+        className,
+      )}
     >
-      <Image
-        src={isIcon ? media.brandIcon : media.brandLogo}
-        alt={isIcon ? "" : "Nordic BnB"}
-        fill
-        sizes="240px"
-        className={cn("object-contain", !isIcon && "object-left")}
-        priority
-      />
+      Eiendomly<span className="text-coral">.</span>
     </span>
   );
 }

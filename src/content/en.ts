@@ -2,480 +2,426 @@ import type { SiteContent } from "./types";
 
 export const en: SiteContent = {
   meta: {
-    title: "Nordic BnB — Property Management, Costa del Sol",
+    title: "Eiendomly – AI-enhanced property photos, virtual staging and sale boost",
     description:
-      "Premium short-term and long-term rental management across Marbella, Mijas, Fuengirola and Benalmádena. Your property, continuously improved.",
+      "We enhance your photos with AI, furnish empty rooms digitally and show how simple upgrades can lift your property – delivered in 24–48 hours.",
   },
   nav: {
     links: [
-      { label: "System", href: "/#system" },
-      { label: "Services", href: "/#services" },
-      { label: "Areas", href: "/#areas" },
-      { label: "About", href: "/#about" },
-      { label: "Team", href: "/contact" },
+      { label: "How it works", href: "/en#system" },
+      { label: "Services", href: "/en#services" },
+      { label: "Who we help", href: "/en#areas" },
+      { label: "About", href: "/en#about" },
+      { label: "FAQ", href: "/en#faq" },
     ],
-    cta: "Request a property review",
-    whatsapp: "WhatsApp",
-    whatsappMessage: "Hi Nordic BnB — I'd like to talk about my property.",
-    toggleMenu: "Toggle menu",
-    selectLanguage: "Select language",
+    cta: "Order a photo boost",
+    toggleMenu: "Open menu",
+    selectLanguage: "Choose language",
   },
   hero: {
-    eyebrow: "Property management — Costa del Sol",
-    headlineLines: ["Your property.", "Continuously improved."],
+    eyebrow: "Property photos · Virtual staging · Sale boost",
+    headlineLines: ["Your first photo decides", "whether they click."],
     subline:
-      "Full-service short-term and long-term rental management across Marbella, Mijas, Fuengirola, Benalmádena, Torremolinos and Málaga — positioning, pricing and presentation, refined without pause.",
-    ctaPrimary: "Request a property review",
-    ctaSecondary: "Talk to us on WhatsApp",
+      "We get your photos ready for FINN and Airbnb – brighter, sharper and more inviting. No photographer needed, delivered in 24 hours.",
+    ctaPrimary: "Order a photo boost",
+    ctaSecondary: "See services",
     scrollHint: "Scroll",
-    locationTag: "Costa del Sol, Spain",
+    locationTag: "Norway",
   },
-  system: {
-    eyebrow: "What to expect",
-    heading: "What can you expect from us?",
+  problem: {
+    eyebrow: "The problem",
+    heading: "You only have a few seconds.",
     intro:
-      "The process that turns a listing into a stream of returning guests.",
-    pillars: [
-      {
-        code: "",
-        title: "We take over the property",
-        description: "From first contact to full responsibility, with zero stress for you.",
-      },
-      {
-        code: "",
-        title: "We inspect and upgrade the styling",
-        description: "Furniture, textiles and details adjusted to impress guests.",
-      },
-      {
-        code: "",
-        title: "We photograph and launch the listing",
-        description: "Professional photos, live on every channel the same week.",
-      },
-      {
-        code: "",
-        title: "We handle bookings and guests",
-        description: "From the first message to key handover — we take care of it all.",
-      },
-      {
-        code: "",
-        title: "We clean and maintain between every stay",
-        description: "Professional cleaning, linen and upkeep, so the property is always guest-ready.",
-      },
-      {
-        code: "",
-        title: "We report and improve continuously",
-        description: "You follow the progress, we fine-tune pricing and presentation.",
-      },
+      "People scroll past listings with dark or messy photos – no matter how good the home is. The first photo and the title decide whether anyone clicks.",
+    note: "Every month your property sits empty costs you a full month's rent. If a 15,000 NOK/month rental stays empty one extra month, you've lost 15,000 NOK.",
+  },
+  showcase1: {
+    eyebrow: "Photo Boost",
+    heading: "Brighter, sharper and more inviting – no photographer needed.",
+  },
+  showcase2: {
+    eyebrow: "Virtual Staging",
+    heading: "Show what an empty room could become.",
+  },
+  howItWorks: {
+    eyebrow: "How it works",
+    heading: "Three simple steps.",
+    intro:
+      "Everything happens in writing: you send the photos, we enhance them, and you get them back via a link. No meetings, no photographer.",
+    steps: [
+      { title: "Send your photos", description: "Send us your photos or a link to your listing." },
+      { title: "We enhance them", description: "We enhance them and deliver within 24–48 hours." },
+      { title: "More clicks", description: "You upload the new photos and get more clicks." },
     ],
+    channels: ["FINN", "Airbnb", "Booking.com"],
   },
-  beforeAfter: {
-    eyebrow: "Before → after",
-    heading: "The same property. A different listing entirely.",
-    intro:
-      "Which listing would you choose?",
-    disclaimer: "Illustrated example, for demonstration purposes.",
-  },
-  portfolio: {
-    eyebrow: "Portfolio",
-    heading: "Real transformations, across every property type.",
-    intro:
-      "A look at how Nordic BnB repositions listings — apartments, villas and houses alike — across the Costa del Sol.",
-    realResultsLabel: "Real results",
-    disclaimer: "Real before/after photography and real growth figures from our own properties.",
+  cases: {
+    eyebrow: "Examples",
+    heading: "See the difference yourself.",
+    improvedLabel: "Enhanced with AI",
     beforeLabel: "Before",
-    afterLabel: "After",
-    properties: [
-      {
-        name: "Apartment, Fuengirola",
-        location: "Fuengirola",
-        stats: [
-          { value: "+29%", label: "revenue" },
-          { value: "82%", label: "occupancy" },
-        ],
-      },
-      {
-        name: "Villa, Marbella",
-        location: "Marbella",
-        stats: [
-          { value: "+34%", label: "revenue" },
-          { value: "86%", label: "occupancy" },
-        ],
-      },
-      {
-        name: "House, Mijas",
-        location: "Mijas",
-        stats: [
-          { value: "+27%", label: "revenue" },
-          { value: "79%", label: "occupancy" },
-        ],
-      },
-    ],
+    captions: {
+      stue: "A brighter, sharper living room, straightened horizon, loose clutter removed.",
+      kjokken: "Warmer light and cleaner colours in the kitchen.",
+      soverom: "A more inviting bedroom with better light and sharpness.",
+    },
   },
   services: {
     eyebrow: "Services",
-    heading: "Two strategies. One standard of care.",
+    heading: "Find the right boost for your property.",
     intro:
-      "Whether your property is best suited to holiday guests or a long-term tenant, the same discipline applies: full-service management, continuously optimised.",
-    whatsappTemplate: "Hi Nordic BnB — I'd like to ask about {service}.",
-    shortTerm: {
-      title: "Short-term & holiday rental management",
-      price: "14.9% + IVA",
-      priceNote: "of rental revenue",
-      description:
-        "Complete Airbnb and Booking.com management — from first listing to nightly operations.",
-      features: [
-        "Listing creation & ongoing optimisation",
-        "Dynamic, demand-led pricing",
-        "Multi-channel distribution (Airbnb, Booking.com & more)",
-        "Guest communication & check-in coordination",
-        "Professional cleaning & linen service",
-        "Property inspections between stays",
-        "Maintenance coordination",
-        "Styling & photography/content coordination",
-        "Owner reporting",
-      ],
-    },
-    longTerm: {
-      title: "Long-term rental management",
-      price: "7.45% + IVA",
-      priceNote: "of monthly rent",
-      description:
-        "Marketing, tenant coordination and ongoing oversight for owners who want predictable, low-intensity income.",
-      features: [
-        "Property marketing & tenant sourcing",
-        "Tenant coordination & communication",
-        "Rent collection & management",
-        "Property oversight",
-        "Maintenance coordination",
-        "Owner reporting",
-      ],
-    },
-    termsNote:
-      "Final commercial terms can depend on the property, its type and the specific service requirements — figures above reflect our standard structure.",
-    ctaLabel: "Ask about this service",
-  },
-  dashboard: {
-    eyebrow: "Owner experience",
-    heading: "You own the property. We handle the operation.",
-    intro:
-      "A live view into how your property is performing — bookings, occupancy, cleaning status, maintenance and your monthly payout, always visible.",
-    windowTitle: "Villa Sunrise — Owner portal",
-    cardAlt: "Villa Sunrise, the property behind this dashboard",
-    revenueChangeNote: "+18% vs. last month",
-    payoutNote: "Oct 1 — bank transfer",
-    cleaningStatusText: "Turnover scheduled",
-    maintenanceStatusText: "No open issues",
-    labels: {
-      revenue: "Revenue this month",
-      occupancy: "Occupancy",
-      upcoming: "Upcoming stays",
-      cleaning: "Cleaning status",
-      maintenance: "Maintenance",
-      payout: "Next payout",
-      guest: "Guest",
-      status: "Status",
-    },
-  },
-  operations: {
-    eyebrow: "Operations",
-    heading: "The system behind every stay.",
-    intro:
-      "A local network of cleaners, stylists and maintenance coordinators — moving in sequence around every guest, every time.",
-    bannerHeadline: "Every stay, prepared by hand.",
-    sequenceLabels: {
-      styling: "Styling",
-      cleaning: "Cleaning",
-      guestArrival: "Guest arrival",
-      detail: "Detail",
-    },
-    steps: [
-      { title: "Booking confirmed", detail: "Reservation synced across every channel instantly." },
-      { title: "Guest prepared", detail: "Check-in details, house guide and welcome message sent." },
-      { title: "Cleaner scheduled", detail: "Professional turnover booked and confirmed automatically." },
-      { title: "Property inspected", detail: "Styling, condition and amenities checked before arrival." },
-      { title: "Guest arrives", detail: "Smooth check-in, and a team on call for anything needed." },
-      { title: "Review collected", detail: "Guest experience closed out, feedback gathered." },
-      { title: "Performance feeds pricing", detail: "Every stay's data sharpens the next pricing decision." },
+      "Three services – from quick photo enhancement to a complete plan for selling. Fixed prices, invoiced after delivery.",
+    items: [
+      {
+        key: "photoBoost",
+        title: "Photo Boost",
+        price: "NOK 790",
+        priceNote: "up to 20 photos",
+        description:
+          "Send us the photos you have. We enhance them with AI: light, colour, sharpness, straight lines and removal of loose clutter. You also get a stronger cover photo and title suggestions.",
+        features: [
+          "Up to 20 enhanced photos",
+          "A selected and optimised cover photo",
+          "3 listing title suggestions",
+          "Delivered within 24 hours",
+        ],
+        note: "For Airbnb we only do natural enhancement, as Airbnb's rules require.",
+      },
+      {
+        key: "virtualStaging",
+        title: "Virtual Staging",
+        price: "NOK 1,190",
+        priceNote: "per room · 3 rooms for NOK 2,990",
+        description:
+          "We furnish empty rooms digitally, or replace loose furniture that isn't included in the sale, like a worn sofa. Fixed features such as walls, floors, kitchens and windows are never changed.",
+        features: [
+          "Staged photos in 2 style options",
+          "Labelled \"Virtual staging – illustration. Furniture not included.\"",
+          "Original photo alongside",
+          "Delivered within 48 hours",
+        ],
+        note: "Not for Airbnb, where guests must see the furniture they actually get.",
+      },
+      {
+        key: "saleBoost",
+        title: "Sale Boost",
+        price: "NOK 4,900",
+        priceNote: "Mini · Large: NOK 9,900",
+        description:
+          "We create before/after images of simple upgrades, like painting cabinets and walls, refreshing the worktop with film or oiling the floor – plus a report with the work, costs and order.",
+        features: [
+          "Before/after images",
+          "Sale Boost report (PDF) with the work, costs and what requires a professional",
+          "Labelled \"Illustration – not carried out\"",
+          "Delivered within 48 hours",
+        ],
+        note: "How much the value may increase is assessed by your estate agent or valuer.",
+      },
     ],
+    termsNote: "All prices include VAT. Estate agents are invoiced excl. VAT.",
+    ctaLabel: "Read more",
   },
-  compare: {
-    eyebrow: "Short-term vs. long-term",
-    heading: "Not sure which strategy fits your property?",
+  audiences: {
+    eyebrow: "Who we help",
+    heading: "From cabins to hotels.",
     intro:
-      "Both paths can work well on the Costa del Sol. The right one depends on your property, your goals and how hands-on you want to be.",
-    shortTerm: {
-      title: "Short-term / holiday rental",
-      tagline: "Higher potential income, more active management",
-      points: [
-        "Higher revenue potential in peak season",
-        "Requires active, continuous management",
-        "Income varies with seasonality",
-        "More flexibility to use the property yourself",
-      ],
-    },
-    longTerm: {
-      title: "Long-term rental",
-      tagline: "Predictable income, lower operational intensity",
-      points: [
-        "Stable, predictable monthly income",
-        "Lower day-to-day operational intensity",
-        "Longer, more stable tenancy",
-        "Less flexibility to use the property yourself",
-      ],
-    },
-    cta: "Find the right strategy for your property",
-  },
-  areas: {
-    eyebrow: "Where we operate",
-    heading: "Costa del Sol, from Málaga to Marbella.",
-    intro:
-      "Local presence across the coast means faster response times, better local knowledge, and pricing that reflects each micro-market.",
-    areas: [
+      "Photos are the first thing people see – whether they're renting, buying, booking or dining. We make that first impression count.",
+    items: [
       {
-        name: "Marbella",
-        description: "Premium villas and beachfront apartments in Spain's most established luxury market.",
+        name: "Airbnb hosts",
+        description:
+          "Natural, honest enhancement that follows Airbnb's rules – more clicks without promising anything the home doesn't have.",
       },
       {
-        name: "Mijas",
-        description: "Coastal Mijas Costa and the hillside pueblo — strong year-round appeal.",
+        name: "Landlords",
+        description:
+          "Photos that stand out on FINN, so your listing doesn't get scrolled past. We use the photos you have, including phone photos.",
       },
       {
-        name: "Fuengirola",
-        description: "High-volume beachfront tourism with consistent short-term demand.",
+        name: "Selling privately",
+        description:
+          "Selling without an agent? We get your own photos ready for the listing – no photographer needed.",
       },
       {
-        name: "Benalmádena",
-        description: "A balanced mix of family holiday lets and long-term coastal living.",
+        name: "Estate agents",
+        description:
+          "Virtual staging of empty rooms and Sale Boost for homes that need work. Estate agents are invoiced excl. VAT.",
       },
       {
-        name: "Torremolinos",
-        description: "A classic beach destination with steady, year-round tourist demand.",
+        name: "Hotels",
+        description: "Brighter, sharper room photos for your own website and booking sites.",
       },
       {
-        name: "Málaga",
-        description: "A cultural capital with a growing city-break and long-stay rental market.",
+        name: "Restaurants",
+        description: "Inviting photos of your venue for your website, Google and social media.",
       },
     ],
   },
   about: {
     eyebrow: "About",
-    heading: "Built on a simple idea.",
+    heading: "Honest photos. More clicks.",
     paragraphs: [
-      "Founded in 2023, Nordic BnB is built around a simple idea: property management should not be passive. A listing that goes live and is left alone will underperform — quietly, for years, without anyone noticing.",
-      "Every property we manage is meant to be reviewed, tested and improved continuously — pricing, presentation, positioning — rather than set once and forgotten.",
-      "Behind Nordic BnB is a local operational network: cleaning, styling, maintenance and on-the-ground coordination across the Costa del Sol, working alongside a founder who believes owners deserve full visibility into how their property performs.",
+      "I'm Melanie Solberg, and I started Eiendomly because too many great homes get scrolled past because of dark, cluttered photos.",
+      "I have a background in sales, management and digital marketing, and I also run SynligAI, which helps businesses become visible in AI search.",
+      "At Eiendomly I use AI to get your property ready for clicks.",
     ],
-    founderName: "Petter Solberg",
-    founderRole: "Founder & Head of Growth",
-    founderQuote:
-      "We don't just run a listing — we build and shape a property that actually converts. We know the Costa del Sol market, and we know the guests, especially the Scandinavians who book here.",
+    founderName: "Melanie Solberg",
+    founderRole: "Founder",
+    founderQuote: "I check every single photo myself, so the result is honest and looks natural.",
+    photoAlt: "Melanie Solberg, founder of Eiendomly",
+    replyNote: "I reply to emails within 24 hours on weekdays.",
   },
-  testimonials: {
-    eyebrow: "Owner testimonials",
-    heading: "What people say.",
+  honesty: {
+    eyebrow: "Honesty",
+    heading: "We enhance – we don't mislead.",
+    intro:
+      "Good photos should make people click – not disappoint them at the viewing. That's why there are clear limits on what we change.",
+    does: {
+      title: "What we do",
+      tagline: "Natural enhancement",
+      points: [
+        "Adjust light, colour and sharpness",
+        "Straighten crooked lines",
+        "Remove loose clutter",
+        "Label digitally furnished photos, with the original alongside",
+      ],
+    },
+    never: {
+      title: "What we never do",
+      tagline: "No misleading",
+      points: [
+        "Change walls, floors or windows",
+        "Change the view",
+        "Hide damage",
+        "Add furniture that isn't there, or text, to Airbnb photos",
+      ],
+    },
+    cta: "Order a photo boost",
+  },
+  faq: {
+    eyebrow: "FAQ",
+    heading: "Frequently asked questions.",
     items: [
-      {
-        quote:
-          "Struggled to fill the apartment in winter. Nordic BnB took over in March, and by August we were fully booked through October. Now I get one report a month instead of chasing answers myself.",
-        name: "Kristian H.",
-        location: "Marbella",
-      },
-      {
-        quote:
-          "Live in Stockholm, haven't seen the apartment in over a year. Nordic BnB handles everything, and revenue is up.",
-        name: "Annika L.",
-        location: "Fuengirola",
-      },
-      {
-        quote:
-          "Ran it myself for three years. Now I don't have to worry — no complaints, and my phone doesn't ring at midnight anymore.",
-        name: "Carlos M.",
-        location: "Benalmádena",
-      },
-      {
-        quote: "Handles it better than I did myself, and I used to manage three properties.",
-        name: "Erik B.",
-        location: "Mijas",
-      },
-      {
-        quote:
-          "I was skeptical about handing over the whole thing, but the reporting is more detailed than what I get from my accountant. I can see occupancy, cleaning, everything.",
-        name: "Sofia T.",
-        location: "Marbella",
-      },
-      {
-        quote:
-          "We inherited my parents' apartment and had no idea what to do with it. Nordic BnB photographed it, relisted it, and within six weeks we had our first bookings. A year later it's outperforming similar units nearby, and I've never had to deal with a guest directly.",
-        name: "Henrik J.",
-        location: "Fuengirola",
-      },
-      {
-        quote: "Quick to respond, and the cleaning is genuinely spotless every time.",
-        name: "Maja P.",
-        location: "Benalmádena",
-      },
-      {
-        quote:
-          "Switched from another agency that barely communicated. Nordic BnB actually calls when something needs a decision, instead of just handling it silently and hoping I don't notice.",
-        name: "Thomas R.",
-        location: "Marbella",
-      },
-      {
-        quote:
-          "I was renting long-term before. The tenant left the place in bad shape and I lost two months of income sorting it out. Now it's short-term through Nordic BnB, and even with the extra cleaning between guests, I'm making more than I did with a single tenant.",
-        name: "Ingrid S.",
-        location: "Mijas",
-      },
-      {
-        quote: "Booked out most weekends before I'd even finished the handover paperwork.",
-        name: "Daniel K.",
-        location: "Torremolinos",
-      },
-      {
-        quote:
-          "My villa sat empty half the year under the old listing. Now it's rarely free more than a few days at a time, and the photos actually look like my house.",
-        name: "Camilla W.",
-        location: "Fuengirola",
-      },
-      {
-        quote:
-          "What sold me was the pricing. I used to set one rate and forget about it. They adjust daily based on demand, and I can see exactly why in the monthly report. Revenue is up almost a third since switching.",
-        name: "Anders G.",
-        location: "Benalmádena",
-      },
+      { q: "Is this allowed?", a: "Yes, as long as the photos don't mislead. We improve light and quality, label virtual staging and never change fixed features or damage." },
+      { q: "Can I use the photos on Airbnb?", a: "Yes, Photo Boost is made for that. We keep it natural and never add text to the photos." },
+      { q: "Who owns the photos?", a: "You confirm you have the rights to the photos you send. You get full rights to use the result." },
+      { q: "How fast do I get them?", a: "Photo Boost within 24 hours, staging and Sale Boost within 48 hours." },
+      { q: "What if I'm not happy?", a: "You get one free revision, or your money back." },
+      { q: "Do I need new photos?", a: "No. We use the photos you have, including phone photos." },
+      { q: "Does Sale Boost increase the value?", a: "Many simple upgrades make a home more attractive. How much the value may increase should be assessed by an agent or valuer. We don't promise a specific amount." },
+      { q: "How do I pay?", a: "You receive an invoice by email after delivery." },
     ],
   },
   finalCta: {
-    eyebrow: "Let's talk",
-    heading: "Let's see what your property could do.",
+    eyebrow: "Order",
+    heading: "Ready for more clicks?",
     subline:
-      "Your property deserves more than basic management. Request a free property review and we'll show you exactly where it's underperforming — and what continuous improvement would look like.",
-    ctaPrimary: "Request a property review",
-    ctaSecondary: "WhatsApp us",
+      "Send us your photos today. Fill in the form and you'll get a reply by email within 24 hours.",
+    ctaPrimary: "Order now",
     form: {
       fields: {
         name: "Name",
         email: "Email",
-        phone: "Phone / WhatsApp",
-        location: "Property location",
-        propertyType: "Property type",
-        bedrooms: "Bedrooms",
-        currentlyRented: "Currently rented?",
-        yes: "Yes",
-        no: "No",
-        strategy: "Short-term, long-term, or unsure?",
-        strategyOptions: { short: "Short-term", long: "Long-term", unsure: "Unsure" },
-        message: "Message",
+        customerType: "I am a",
+        service: "Service",
+        photosLink: "Link to your photos (Google Drive, Dropbox, WeTransfer) or your listing",
+        message: "Comment (optional)",
+        rights: "I confirm I have the right to use these photos.",
+        marketing:
+          "Optional – 10% off: Eiendomly may use the before/after photos, without address or personal details, in its own marketing.",
       },
-      submit: "Get your free property review",
-      successTitle: "Received.",
-      successBody: "Thank you — we'll be in touch shortly. For anything urgent, message us on WhatsApp.",
-      errorMessage: "Something went wrong — please try WhatsApp instead.",
+      selectPlaceholder: "Choose …",
+      customerTypes: ["Private landlord", "Airbnb host", "Selling privately", "Estate agent", "Hotel", "Restaurant"],
+      serviceOptions: [
+        { key: "photoBoost", label: "Photo Boost" },
+        { key: "virtualStaging", label: "Virtual Staging" },
+        { key: "saleBoost", label: "Sale Boost" },
+        { key: "unsure", label: "Not sure" },
+      ],
+      submit: "Send order",
+      errorMessage: "Something went wrong. Please try again, or email us at",
     },
   },
-  footer: {
-    tagline: "Your property. Continuously improved.",
-    linksHeading: "Site",
-    contactHeading: "Contact",
-    languageHeading: "Language",
-    rights: "Nordic BnB. All rights reserved.",
-    orgNumberLabel: "Company reg. no. 931 905 856",
-    privacyLabel: "Privacy",
+  servicePages: {
+    photoBoost: {
+      eyebrow: "Photo Boost",
+      heading: "Make your own photos ready for FINN and Airbnb",
+      forWho:
+        "Suitable for private landlords, Airbnb hosts and people selling privately, who have taken the photos themselves.",
+      whatItIs:
+        "Send us the photos you have. We enhance them with AI: light, colour, sharpness, straight lines and removal of loose clutter. You also get a stronger cover photo and title suggestions.",
+      includesHeading: "You get",
+      includes: [
+        "Up to 20 enhanced photos",
+        "A selected and optimised cover photo",
+        "3 listing title suggestions",
+        "Delivered within 24 hours",
+      ],
+      priceHeading: "Price",
+      price: "NOK 790",
+      note: "For Airbnb we only do natural enhancement, as Airbnb's rules require.",
+      cta: "Order a photo boost",
+    },
+    virtualStaging: {
+      eyebrow: "Virtual Staging",
+      heading: "Furnish empty rooms – or replace what holds them back",
+      forWho:
+        "Suitable for empty properties for sale or long-term rental, and properties with furniture that isn't included in the sale, like a worn sofa.",
+      whatItIs:
+        "We furnish empty rooms digitally, or replace loose furniture that isn't included in the sale, like a worn sofa. Fixed features such as walls, floors, kitchens and windows are never changed.",
+      includesHeading: "You get",
+      includes: [
+        "Staged photos in 2 style options",
+        "Labelled \"Virtual staging – illustration. Furniture not included.\"",
+        "Original photo alongside",
+        "Delivered within 48 hours",
+      ],
+      priceHeading: "Price",
+      price: "NOK 1,190 per room",
+      priceNote: "3 rooms for NOK 2,990",
+      note: "Not for Airbnb, where guests must see the furniture they actually get.",
+      cta: "Order virtual staging",
+    },
+    saleBoost: {
+      eyebrow: "Sale Boost",
+      heading: "Show buyers what the home could become – and what it costs",
+      forWho:
+        "Suitable for properties needing renovation that are being sold, or that have been on the market a long time. For sellers and estate agents.",
+      whatItIs:
+        "We create before/after images of simple upgrades, like painting cabinets and walls, refreshing the worktop with film or oiling the floor. You get a report with the work, costs and the order to do it in. Do the work and your listing gets real new photos. Don't, and buyers still see the potential.",
+      includesHeading: "You get",
+      includes: [
+        "Before/after images",
+        "Sale Boost report (PDF) with the work, costs and what requires a professional",
+        "Labelled \"Illustration – not carried out\"",
+        "Delivered within 48 hours",
+      ],
+      priceHeading: "Price",
+      tiers: [
+        { name: "Mini", price: "NOK 4,900", detail: "Upgrades under NOK 20,000, 5 before/after" },
+        {
+          name: "Large",
+          price: "NOK 9,900",
+          detail: "Upgrades NOK 20,000–100,000, 10 before/after and a prioritised list",
+        },
+      ],
+      note: "How much the value may increase is assessed by your estate agent or valuer. We show what it costs and how it could look.",
+      cta: "Order Sale Boost",
+    },
   },
-  showcase1: {
-    eyebrow: "Costa del Sol",
-    heading: "Every property has something unique. Use it.",
+  orderPage: {
+    eyebrow: "Order",
+    heading: "Order a photo boost",
+    intro: "Fill in the form below and you'll get a reply by email within 24 hours.",
   },
-  showcase2: {
-    eyebrow: "Presentation",
-    heading: "Styled, photographed and positioned to perform.",
+  thanks: {
+    eyebrow: "Received",
+    heading: "Thank you!",
+    intro: "You'll get a reply by email within 24 hours.",
+    back: "Back to the homepage",
   },
-  contactPage: {
-    eyebrow: "Team",
-    heading: "The team behind Nordic BnB.",
-    intro:
-      "We follow up on your property every single day — with our own steady team. Feel free to reach out directly.",
-    teamName: "Our operations team",
-    teamHeading: "The team on the ground",
-    teamIntro:
-      "Handyman work, cleaning and styling — all handled by partners we trust, not random subcontractors.",
-    roles: [
-      { title: "Handyman", description: "Maintenance, repairs and upkeep between stays." },
-      { title: "Cleaning team", description: "Professional turnover and linen service after every guest." },
-      { title: "Photographer & stylist", description: "Styling and photography for every new listing." },
-    ],
-    photoDesignLabel: "Photo/Design",
-    emailHeading: "Email us directly",
-    ctaHeading: "Let's talk about your property.",
-    ctaSubline:
-      "Have a question, or want to see what Nordic BnB could do for your property? Send us an email — we reply personally, usually within a day.",
-    ctaButton: "Email us",
-    recruitEyebrow: "Join the team",
-    recruitHeading: "Want to work with us?",
-    recruitSubline:
-      "We're always open to good people. If you're a cleaner, handyman or photographer on the Costa del Sol, we'd like to hear from you.",
-    story: {
-      eyebrow: "Our story",
-      heading: "From marketing to hospitality.",
-      milestones: [
+  notFound: {
+    eyebrow: "404",
+    heading: "Page not found.",
+    intro: "The page you're looking for doesn't exist, or has moved.",
+    back: "Back to the homepage",
+  },
+  legal: {
+    privacy: {
+      eyebrow: "Privacy",
+      heading: "Privacy",
+      updated: "Last updated: November 2026",
+      intro:
+        "This page explains what Eiendomly collects when you use the order form, why, and what rights you have.",
+      sections: [
         {
-          period: "August 2023",
-          title: "Where it started",
-          body: "Nordic BnB began in Norway with digital marketing, helping businesses and property investors present themselves — and their properties — better online. It taught us one thing early: presentation changes perception, and perception changes value.",
+          heading: "What we collect",
+          body: "When you fill in the order form, we store your name, email, customer type, requested service, a link to your photos, any comment, and whether you consent to marketing use of the before/after photos.",
         },
         {
-          period: "2024",
-          title: "Closer to real estate",
-          body: "By then we'd already spent years around rental property ourselves — renting homes in Norway and subletting them through rental arbitrage, short-term and long-term alike, while renovating and improving the properties we were responsible for. Our work turned increasingly toward property, content, photography, positioning and the way homes were presented online. We kept seeing the same problem: great properties marketed far below their potential.",
+          heading: "Why we collect it",
+          body: "The information is used to deliver the service you order, respond to your enquiry and send an invoice. Marketing consent is only used if you've ticked that box.",
         },
         {
-          period: "2025",
-          title: "From Norway to Spain 🇪🇸",
-          body: "We moved from Norway to Spain and experienced the Costa del Sol rental market from the inside — as residents and as rental operators. What started as marketing knowledge, paired with years of renting, subletting and renovating homes back home, became something bigger: understanding what international guests expect, what owners struggle with, and what makes one property outperform another.",
+          heading: "How long we keep it",
+          body: "We keep order information for as long as necessary for delivery and bookkeeping, normally up to 5 years in line with Norwegian accounting law.",
         },
         {
-          period: "Late 2025",
-          title: "The idea evolved",
-          body: "We began combining everything we already knew — marketing, presentation, interiors, guest experience and hands-on rental management — into one complete service for holiday-rental owners, built on what we'd learned helping investors create value from their properties in both Norway and Spain.",
+          heading: "Sub-processors",
+          body: "The form is run on Netlify (Netlify Forms), which receives and stores submissions. We also use email and may use analytics tools to understand how the site is used.",
         },
         {
-          period: "2026",
-          title: "Nordic BnB today",
-          body: "Nordic BnB became a full-service holiday rental and property management company on the Costa del Sol. From preparing and upgrading the property to styling, photography, listings, pricing, guest communication, cleaning, maintenance and full management. One company. One point of contact. Everything handled.",
+          heading: "Your rights",
+          body: "You can request access to, correction of, or deletion of your data by contacting us by email.",
+        },
+      ],
+    },
+    terms: {
+      eyebrow: "Terms",
+      heading: "Terms",
+      updated: "Last updated: November 2026",
+      intro: "These terms apply when you order a service from Eiendomly.",
+      sections: [
+        {
+          heading: "Photo rights",
+          body: "By ordering, you confirm you have the right to use the photos you submit, and that we may edit them for you.",
         },
         {
-          period: "2026 →",
-          title: "The next chapter",
-          body: "Our goal is simple: build a new standard for holiday rental management on the Costa del Sol — combining Scandinavian service, strong presentation and local execution. We upgrade. We style. We manage.",
+          heading: "Right to use the result",
+          body: "You get full rights to use the enhanced photos and any reports we deliver.",
+        },
+        {
+          heading: "Labelling",
+          body: "Digitally furnished photos and Sale Boost illustrations are always clearly labelled, so there's no doubt about what's real and what's an illustration.",
+        },
+        {
+          heading: "Your responsibility",
+          body: "You are responsible for how and where the photos are published, and for ensuring publication follows applicable rules, such as Airbnb's guidelines.",
+        },
+        { heading: "Payment", body: "You receive an invoice by email after delivery, due within 14 days." },
+        { heading: "If you're not happy", body: "You get one free revision, or your money back." },
+        { heading: "Governing law", body: "Norwegian law applies to these terms." },
+      ],
+    },
+    cookies: {
+      eyebrow: "Cookies",
+      heading: "Cookies",
+      updated: "Last updated: November 2026",
+      intro: "We only use cookies after consent, and you can change your choice at any time.",
+      sections: [
+        {
+          heading: "Necessary",
+          body: "A few technical cookies are necessary for the site to function, and don't require consent.",
+        },
+        {
+          heading: "Analytics and marketing",
+          body: "Analytics and marketing tools (such as GA4 and Meta Pixel) are only loaded if you've accepted this in the consent banner.",
+        },
+        {
+          heading: "Change consent",
+          body: "You can change your consent at any time via the \"Change consent\" link in the footer.",
         },
       ],
     },
   },
-  privacyPage: {
-    eyebrow: "Privacy",
-    heading: "Privacy policy.",
-    updated: "Last updated: September 2026",
-    intro:
-      "This page explains, in plain terms, what information Nordic BnB collects when you contact us and how we use it.",
-    sections: [
-      {
-        heading: "What we collect",
-        body: "When you reach out through our contact form, email or WhatsApp, we collect the details you provide — typically your name, email address, phone number and any information about your property or enquiry.",
-      },
-      {
-        heading: "How we use it",
-        body: "We use this information only to respond to your enquiry, provide a property review or quote, and, if you become a client, to manage your property and communicate with you about it. We do not sell your information to third parties.",
-      },
-      {
-        heading: "How long we keep it",
-        body: "We keep enquiry information for as long as needed to respond to you or, if you become a client, for the duration of our working relationship and as required by law afterwards.",
-      },
-      {
-        heading: "Your rights",
-        body: "You can ask us at any time what information we hold about you, ask us to correct it, or request that we delete it. Just email us and we'll take care of it.",
-      },
-    ],
-    contactHeading: "Questions about your data?",
-    contactBody: "For any privacy-related request, email us directly and we'll get back to you personally.",
+  consent: {
+    message: "We use cookies for analytics and marketing. You choose what you accept.",
+    acceptAll: "Accept all",
+    rejectAll: "Reject all",
+    settings: "Settings",
+    save: "Save choices",
+    analytics: "Analytics",
+    marketing: "Marketing",
+    changeConsent: "Change consent",
+  },
+  footer: {
+    tagline: "Your first photo decides. We make it count.",
+    linksHeading: "Site",
+    legalHeading: "Legal",
+    contactHeading: "Contact",
+    languageHeading: "Language",
+    rights: "Eiendomly. All rights reserved.",
+    legalName: "Eiendomly Solberg",
+    replyNote: "Reply within 24 hours on weekdays.",
   },
 };

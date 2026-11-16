@@ -10,7 +10,6 @@ import {
   type Variants,
 } from "framer-motion";
 import Magnetic from "@/components/ui/magnetic-button";
-import { WHATSAPP_LINK } from "@/lib/utils";
 import type { HeroContent } from "@/content/types";
 
 const EASE_EDITORIAL = [0.16, 1, 0.3, 1] as const;
@@ -73,11 +72,13 @@ const item: Variants = {
 export default function Hero({
   hero,
   formHref,
+  secondaryHref,
   imageSrc,
   videoSrc,
 }: {
   hero: HeroContent;
   formHref: string;
+  secondaryHref: string;
   imageSrc?: string;
   videoSrc?: string;
 }) {
@@ -247,14 +248,12 @@ export default function Hero({
                     </Link>
                   </Magnetic>
                   <Magnetic>
-                    <a
-                      href={WHATSAPP_LINK()}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                    <Link
+                      href={secondaryHref}
                       className="inline-flex items-center rounded-full border border-ivory/25 px-7 py-4 text-sm font-medium tracking-wide text-ivory transition-colors hover:border-ivory/60"
                     >
                       {hero.ctaSecondary}
-                    </a>
+                    </Link>
                   </Magnetic>
                 </motion.div>
               </motion.div>

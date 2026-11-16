@@ -1,13 +1,9 @@
 import type { MetadataRoute } from "next";
-import { CONTACT } from "@/lib/utils";
+import { SITE_URL } from "@/lib/utils";
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: {
-      userAgent: "*",
-      allow: "/",
-      disallow: "/api/",
-    },
-    sitemap: `${CONTACT.site}/sitemap.xml`,
+    rules: { userAgent: "*", allow: "/", disallow: ["/takk", "/en/thanks", "/__forms.html"] },
+    sitemap: `${SITE_URL}/sitemap.xml`,
   };
 }

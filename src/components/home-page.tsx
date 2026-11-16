@@ -1,102 +1,78 @@
-import Nav from "@/components/layout/nav";
-import Footer from "@/components/layout/footer";
-import WhatsappFab from "@/components/layout/whatsapp-fab";
+import PageShell from "@/components/layout/page-shell";
 import Hero from "@/components/sections/hero";
+import BeforeAfter from "@/components/sections/before-after";
 import PropertyShowcase from "@/components/sections/property-showcase";
 import System from "@/components/sections/system";
-import BeforeAfter from "@/components/sections/before-after";
-import Portfolio from "@/components/sections/portfolio";
+import Cases from "@/components/sections/cases";
 import Services from "@/components/sections/services";
-import Dashboard from "@/components/sections/dashboard";
-import Compare from "@/components/sections/compare";
 import Areas from "@/components/sections/areas";
 import About from "@/components/sections/about";
-import Testimonials from "@/components/sections/testimonials";
+import Compare from "@/components/sections/compare";
+import Faq from "@/components/sections/faq";
 import FinalCta from "@/components/sections/final-cta";
 import SectionDivider from "@/components/ui/section-divider";
 import { getContent } from "@/content";
 import { media } from "@/content/media";
+import { SITE_CONFIG } from "@/content/config";
+import { homeJsonLd } from "@/content/json-ld";
 import { localeHref, type Locale } from "@/i18n/config";
 
 export default function HomePage({ locale }: { locale: Locale }) {
   const content = getContent(locale);
-  const formHref = `${localeHref(locale, "/")}#contact-form`;
+  const formHref = localeHref(locale, "/#contact-form");
 
   return (
-    <>
-      <Nav locale={locale} nav={content.nav} />
-      <main>
-        <Hero hero={content.hero} formHref={formHref} imageSrc={media.villaAerial} videoSrc={media.heroVideo} />
-        <BeforeAfter beforeAfter={content.beforeAfter} posterSrc={media.villaAerial} />
-        <PropertyShowcase
-          imageSrc={media.seaView}
-          eyebrow={content.showcase1.eyebrow}
-          headline={content.showcase1.heading}
-        />
-        <System
-          system={content.system}
-          bgImageSrc={media.nightVilla}
-          secondaryIntro={content.operations.intro}
-          transformationImages={[
-            media.handoverVilla,
-            media.stylingDetail,
-            media.photographySessionRoom,
-            media.guestArrival,
-            media.cleaningMoment,
-            media.aerialCoast,
-          ]}
-        />
-        <SectionDivider tone="light" iconClassName="h-12 w-12" />
-        <Portfolio
-          portfolio={content.portfolio}
-          images={[media.realApartmentFuengirolaCollage, media.realVillaMarbellaCollage, media.realHouseMijasCollage]}
-        />
-        <Testimonials testimonials={content.testimonials} />
-        <PropertyShowcase
-          imageSrc={media.interiorLiving}
-          eyebrow={content.showcase2.eyebrow}
-          headline={content.showcase2.heading}
-          align="right"
-        />
-        <Services services={content.services} imageSrc={media.poolDay} />
-        <Areas
-          areas={content.areas}
-          imageSrc={media.coastline}
-          detailImages={[
-            media.marbellaLifestyle,
-            media.mijasScene,
-            media.fuengirolaScene,
-            media.benalmadenaScene,
-            media.aerialCoast,
-            media.malagaScene,
-          ]}
-        />
-        <Dashboard
-          dashboard={content.dashboard}
-          bgImageSrc={media.aerialCoast}
-          cardImageSrc={media.heroVilla}
-        />
-        <About about={content.about} bgImageSrc={media.sunsetSea} founderPhotoSrc={media.founderPetter} />
-        <SectionDivider tone="light" iconClassName="h-12 w-12" />
-        <FinalCta
-          finalCta={content.finalCta}
-          imageSrc={media.nightVilla}
-          whatsappMessage={content.nav.whatsappMessage}
-        />
-        <Compare
-          compare={content.compare}
-          formHref={formHref}
-          shortImageSrc={media.marbellaLifestyle}
-          longImageSrc={media.poolNight}
-        />
-      </main>
-      <Footer
-        locale={locale}
-        footer={content.footer}
-        nav={content.nav}
-        locationTag={content.hero.locationTag}
+    <PageShell locale={locale} pageKey="home" overHero>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd(locale)) }} />
+      <Hero
+        hero={content.hero}
+        formHref={formHref}
+        secondaryHref={localeHref(locale, "/#services")}
+        imageSrc={media.heroPoster}
+        videoSrc={media.heroVideo}
       />
-      <WhatsappFab label={content.nav.whatsapp} message={content.nav.whatsappMessage} />
-    </>
+      <BeforeAfter problem={content.problem} posterSrc={media.livingBefore} />
+      <PropertyShowcase
+        imageSrc={media.livingAfter}
+        eyebrow={content.showcase1.eyebrow}
+        headline={content.showcase1.heading}
+      />
+      <System
+        system={content.howItWorks}
+        bgImageSrc={media.houseDusk}
+        transformationImages={[media.stepPhone, media.stepEditing, media.stepListing]}
+      />
+      {SITE_CONFIG.showCases && <Cases content={content.cases} />}
+      <SectionDivider tone="light" iconClassName="h-10 w-10" />
+      <PropertyShowcase
+        imageSrc={media.stagedLiving}
+        eyebrow={content.showcase2.eyebrow}
+        headline={content.showcase2.heading}
+        align="right"
+      />
+      <Services locale={locale} services={content.services} imageSrc={media.kitchenRefresh} />
+      <Areas
+        areas={content.audiences}
+        imageSrc={media.harbourTown}
+        detailImages={[
+          media.audienceCabin,
+          media.audienceRental,
+          media.audienceSeller,
+          media.audienceAgent,
+          media.audienceHotel,
+          media.audienceRestaurant,
+        ]}
+      />
+      <About about={content.about} bgImageSrc={media.livingAfter} founderPhotoSrc={media.founderPhoto} />
+      <SectionDivider tone="light" iconClassName="h-10 w-10" />
+      <Compare
+        compare={content.honesty}
+        formHref={formHref}
+        shortImageSrc={media.livingAfter}
+        longImageSrc={media.heroAerial}
+      />
+      <Faq faq={content.faq} />
+      <FinalCta locale={locale} finalCta={content.finalCta} imageSrc={media.houseDusk} />
+    </PageShell>
   );
 }

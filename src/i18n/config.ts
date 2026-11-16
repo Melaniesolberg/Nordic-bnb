@@ -1,32 +1,46 @@
-export const locales = ["en", "no", "sv", "da", "fi", "de", "fr", "es"] as const;
+export const locales = ["no", "en"] as const;
 export type Locale = (typeof locales)[number];
-export const defaultLocale: Locale = "en";
+export const defaultLocale: Locale = "no";
 
 export const localeLabels: Record<Locale, string> = {
-  en: "English",
   no: "Norsk",
-  sv: "Svenska",
-  da: "Dansk",
-  fi: "Suomi",
-  de: "Deutsch",
-  fr: "Français",
-  es: "Español",
+  en: "English",
 };
 
 export const localeFlags: Record<Locale, string> = {
-  en: "🇬🇧",
   no: "🇳🇴",
-  sv: "🇸🇪",
-  da: "🇩🇰",
-  fi: "🇫🇮",
-  de: "🇩🇪",
-  fr: "🇫🇷",
-  es: "🇪🇸",
+  en: "🇬🇧",
 };
 
-/** English is served unprefixed at "/"; every other locale is prefixed. */
+export const htmlLang: Record<Locale, string> = {
+  no: "nb",
+  en: "en",
+};
+
+/** Norwegian is served unprefixed at "/"; English lives under "/en". */
 export function localeHref(locale: Locale, path = "/"): string {
   const clean = path === "/" ? "" : path;
   if (locale === defaultLocale) return clean || "/";
   return `/${locale}${clean}`;
+}
+
+/** Pages whose URL slug differs between the two languages. */
+export const pageSlugs = {
+  home: { no: "", en: "" },
+  photoBoost: { no: "bildeloft", en: "photo-boost" },
+  virtualStaging: { no: "digital-styling", en: "virtual-staging" },
+  saleBoost: { no: "salgsloftet", en: "sale-boost" },
+  order: { no: "bestill", en: "order" },
+  thanks: { no: "takk", en: "thanks" },
+  privacy: { no: "personvern", en: "privacy" },
+  terms: { no: "vilkar", en: "terms" },
+  cookies: { no: "cookies", en: "cookies" },
+} as const satisfies Record<string, Record<Locale, string>>;
+
+export type PageKey = keyof typeof pageSlugs;
+export type ServiceKey = "photoBoost" | "virtualStaging" | "saleBoost";
+
+export function pageHref(locale: Locale, key: PageKey): string {
+  const slug = pageSlugs[key][locale];
+  return localeHref(locale, slug ? `/${slug}` : "/");
 }

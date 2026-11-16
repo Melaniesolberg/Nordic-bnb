@@ -1,15 +1,10 @@
+import type { ServiceKey } from "@/i18n/config";
+
 export interface NavContent {
   links: { label: string; href: string }[];
   cta: string;
-  whatsapp: string;
-  whatsappMessage: string;
   toggleMenu: string;
   selectLanguage: string;
-}
-
-export interface ShowcaseContent {
-  eyebrow: string;
-  heading: string;
 }
 
 export interface HeroContent {
@@ -22,128 +17,51 @@ export interface HeroContent {
   locationTag: string;
 }
 
-export interface SystemPillar {
-  code: string;
-  title: string;
-  description: string;
-}
-
-export interface SystemContent {
+export interface ProblemContent {
   eyebrow: string;
   heading: string;
   intro: string;
-  pillars: SystemPillar[];
+  note: string;
 }
 
-export interface BeforeAfterContent {
+export interface ShowcaseContent {
+  eyebrow: string;
+  heading: string;
+}
+
+export interface HowItWorksContent {
   eyebrow: string;
   heading: string;
   intro: string;
-  disclaimer: string;
-}
-
-export interface PortfolioProperty {
-  name: string;
-  location: string;
-  stats: { value: string; label: string }[];
-}
-
-export interface PortfolioContent {
-  eyebrow: string;
-  heading: string;
-  intro: string;
-  realResultsLabel: string;
-  disclaimer: string;
-  beforeLabel: string;
-  afterLabel: string;
-  properties: PortfolioProperty[];
+  steps: { title: string; description: string }[];
+  /** Listing sites shown as chips over the last step's image. */
+  channels: string[];
 }
 
 export interface ServiceItem {
+  key: ServiceKey;
   title: string;
   price: string;
   priceNote: string;
   description: string;
   features: string[];
+  note?: string;
 }
 
 export interface ServicesContent {
   eyebrow: string;
   heading: string;
   intro: string;
-  shortTerm: ServiceItem;
-  longTerm: ServiceItem;
+  items: ServiceItem[];
   termsNote: string;
   ctaLabel: string;
-  whatsappTemplate: string;
 }
 
-export interface DashboardContent {
+export interface AudiencesContent {
   eyebrow: string;
   heading: string;
   intro: string;
-  windowTitle: string;
-  cardAlt: string;
-  revenueChangeNote: string;
-  payoutNote: string;
-  cleaningStatusText: string;
-  maintenanceStatusText: string;
-  labels: {
-    revenue: string;
-    occupancy: string;
-    upcoming: string;
-    cleaning: string;
-    maintenance: string;
-    payout: string;
-    guest: string;
-    status: string;
-  };
-}
-
-export interface OperationsStep {
-  title: string;
-  detail: string;
-}
-
-export interface OperationsContent {
-  eyebrow: string;
-  heading: string;
-  intro: string;
-  steps: OperationsStep[];
-  bannerHeadline: string;
-  sequenceLabels: {
-    styling: string;
-    cleaning: string;
-    guestArrival: string;
-    detail: string;
-  };
-}
-
-export interface CompareColumn {
-  title: string;
-  tagline: string;
-  points: string[];
-}
-
-export interface CompareContent {
-  eyebrow: string;
-  heading: string;
-  intro: string;
-  shortTerm: CompareColumn;
-  longTerm: CompareColumn;
-  cta: string;
-}
-
-export interface AreaItem {
-  name: string;
-  description: string;
-}
-
-export interface AreasContent {
-  eyebrow: string;
-  heading: string;
-  intro: string;
-  areas: AreaItem[];
+  items: { name: string; description: string }[];
 }
 
 export interface AboutContent {
@@ -153,38 +71,54 @@ export interface AboutContent {
   founderName: string;
   founderRole: string;
   founderQuote: string;
+  photoAlt: string;
+  replyNote: string;
 }
 
-export interface Testimonial {
-  quote: string;
-  name: string;
-  location: string;
+export interface HonestyColumn {
+  title: string;
+  tagline: string;
+  points: string[];
 }
 
-export interface TestimonialsContent {
+export interface HonestyContent {
   eyebrow: string;
   heading: string;
-  items: Testimonial[];
+  intro: string;
+  does: HonestyColumn;
+  never: HonestyColumn;
+  cta: string;
 }
 
-export interface ContactFormContent {
+export interface FaqContent {
+  eyebrow: string;
+  heading: string;
+  items: { q: string; a: string }[];
+}
+
+export interface CasesContent {
+  eyebrow: string;
+  heading: string;
+  improvedLabel: string;
+  beforeLabel: string;
+  captions: Record<string, string>;
+}
+
+export interface OrderFormContent {
   fields: {
     name: string;
     email: string;
-    phone: string;
-    location: string;
-    propertyType: string;
-    bedrooms: string;
-    currentlyRented: string;
-    yes: string;
-    no: string;
-    strategy: string;
-    strategyOptions: { short: string; long: string; unsure: string };
+    customerType: string;
+    service: string;
+    photosLink: string;
     message: string;
+    rights: string;
+    marketing: string;
   };
+  selectPlaceholder: string;
+  customerTypes: string[];
+  serviceOptions: { key: ServiceKey | "unsure"; label: string }[];
   submit: string;
-  successTitle: string;
-  successBody: string;
   errorMessage: string;
 }
 
@@ -193,82 +127,84 @@ export interface FinalCtaContent {
   heading: string;
   subline: string;
   ctaPrimary: string;
-  ctaSecondary: string;
-  form: ContactFormContent;
+  form: OrderFormContent;
 }
 
-export interface FooterContent {
-  tagline: string;
-  linksHeading: string;
-  contactHeading: string;
-  languageHeading: string;
-  rights: string;
-  orgNumberLabel: string;
-  privacyLabel: string;
+export interface ServicePageContent {
+  eyebrow: string;
+  heading: string;
+  forWho: string;
+  whatItIs: string;
+  includesHeading: string;
+  includes: string[];
+  priceHeading: string;
+  price?: string;
+  priceNote?: string;
+  tiers?: { name: string; price: string; detail: string }[];
+  note?: string;
+  cta: string;
 }
 
-export interface PrivacyPageContent {
+export interface SimplePageContent {
+  eyebrow: string;
+  heading: string;
+  intro: string;
+}
+
+export interface LegalPageContent {
   eyebrow: string;
   heading: string;
   updated: string;
   intro: string;
   sections: { heading: string; body: string }[];
+}
+
+export interface ConsentContent {
+  message: string;
+  acceptAll: string;
+  rejectAll: string;
+  settings: string;
+  save: string;
+  analytics: string;
+  marketing: string;
+  changeConsent: string;
+}
+
+export interface FooterContent {
+  tagline: string;
+  linksHeading: string;
+  legalHeading: string;
   contactHeading: string;
-  contactBody: string;
-}
-
-export interface StoryMilestone {
-  period: string;
-  title: string;
-  body: string;
-}
-
-export interface StorySectionContent {
-  eyebrow: string;
-  heading: string;
-  milestones: StoryMilestone[];
-}
-
-export interface ContactPageContent {
-  eyebrow: string;
-  heading: string;
-  intro: string;
-  teamName: string;
-  teamHeading: string;
-  teamIntro: string;
-  roles: { title: string; description: string }[];
-  photoDesignLabel: string;
-  emailHeading: string;
-  ctaHeading: string;
-  ctaSubline: string;
-  ctaButton: string;
-  recruitEyebrow: string;
-  recruitHeading: string;
-  recruitSubline: string;
-  story: StorySectionContent;
+  languageHeading: string;
+  rights: string;
+  legalName: string;
+  replyNote: string;
 }
 
 export interface SiteContent {
-  meta: {
-    title: string;
-    description: string;
-  };
+  meta: { title: string; description: string };
   nav: NavContent;
   hero: HeroContent;
-  system: SystemContent;
-  beforeAfter: BeforeAfterContent;
-  services: ServicesContent;
-  dashboard: DashboardContent;
-  operations: OperationsContent;
-  compare: CompareContent;
-  areas: AreasContent;
-  about: AboutContent;
-  testimonials: TestimonialsContent;
-  finalCta: FinalCtaContent;
-  footer: FooterContent;
+  problem: ProblemContent;
   showcase1: ShowcaseContent;
   showcase2: ShowcaseContent;
-  portfolio: PortfolioContent;
-  contactPage: ContactPageContent;
-  privacyPage: PrivacyPageContent;
+  howItWorks: HowItWorksContent;
+  cases: CasesContent;
+  services: ServicesContent;
+  audiences: AudiencesContent;
+  about: AboutContent;
+  honesty: HonestyContent;
+  faq: FaqContent;
+  finalCta: FinalCtaContent;
+  servicePages: Record<ServiceKey, ServicePageContent>;
+  orderPage: SimplePageContent;
+  thanks: SimplePageContent & { back: string };
+  notFound: SimplePageContent & { back: string };
+  legal: {
+    privacy: LegalPageContent;
+    terms: LegalPageContent;
+    cookies: LegalPageContent;
+  };
+  consent: ConsentContent;
+  footer: FooterContent;
 }

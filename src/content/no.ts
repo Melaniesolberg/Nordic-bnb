@@ -2,483 +2,435 @@ import type { SiteContent } from "./types";
 
 export const no: SiteContent = {
   meta: {
-    title: "Nordic BnB — Eiendomsforvaltning, Costa del Sol",
+    title: "Eiendomly – AI-forbedrede boligbilder, digital styling og salgsløft",
     description:
-      "Førsteklasses forvaltning av korttids- og langtidsutleie i Marbella, Mijas, Fuengirola og Benalmádena. Din eiendom, kontinuerlig forbedret.",
+      "Vi forbedrer bildene dine med AI, møblerer tomme rom digitalt og viser hvordan enkle oppgraderinger kan løfte boligen – levert på 24–48 timer.",
   },
   nav: {
     links: [
-      { label: "Systemet", href: "/no#system" },
-      { label: "Tjenester", href: "/no#services" },
-      { label: "Områder", href: "/no#areas" },
-      { label: "Om oss", href: "/no#about" },
-      { label: "Team", href: "/no/contact" },
+      { label: "Slik fungerer det", href: "/#system" },
+      { label: "Tjenester", href: "/#services" },
+      { label: "Hvem vi hjelper", href: "/#areas" },
+      { label: "Om meg", href: "/#about" },
+      { label: "FAQ", href: "/#faq" },
     ],
-    cta: "Be om en eiendomsgjennomgang",
-    whatsapp: "WhatsApp",
-    whatsappMessage: "Hei Nordic BnB — jeg vil gjerne snakke om eiendommen min.",
+    cta: "Bestill bildeløft",
     toggleMenu: "Åpne meny",
     selectLanguage: "Velg språk",
   },
   hero: {
-    eyebrow: "Eiendomsforvaltning — Costa del Sol",
-    headlineLines: ["Din eiendom.", "Kontinuerlig forbedret."],
+    eyebrow: "Boligfoto · Digital styling · Salgsløft",
+    headlineLines: ["Førstebildet avgjør", "om de klikker."],
     subline:
-      "Komplett forvaltning av korttids- og langtidsutleie i Marbella, Mijas, Fuengirola, Benalmádena, Torremolinos og Málaga — posisjonering, prising og presentasjon, finpusset uten stopp.",
-    ctaPrimary: "Be om en eiendomsgjennomgang",
-    ctaSecondary: "Snakk med oss på WhatsApp",
+      "Vi gjør bildene dine klare for FINN og Airbnb – lysere, skarpere og mer innbydende. Uten fotograf, levert på 24 timer.",
+    ctaPrimary: "Bestill bildeløft",
+    ctaSecondary: "Se tjenestene",
     scrollHint: "Scroll",
-    locationTag: "Costa del Sol, Spania",
+    locationTag: "Norge",
   },
-  system: {
-    eyebrow: "Hva kan du forvente",
-    heading: "Hva kan du forvente av oss?",
+  problem: {
+    eyebrow: "Problemet",
+    heading: "Du har bare noen sekunder.",
     intro:
-      "Prosessen som gjør en annonse om til en strøm av gjester som kommer tilbake.",
-    pillars: [
-      {
-        code: "",
-        title: "Vi overtar eiendommen",
-        description: "Fra første kontakt til fullt ansvar, uten stress for deg.",
-      },
-      {
-        code: "",
-        title: "Vi inspiserer og oppgraderer styling",
-        description: "Møbler, tekstiler og detaljer justert for å imponere gjester.",
-      },
-      {
-        code: "",
-        title: "Vi fotograferer og lanserer annonsen",
-        description: "Profesjonelle bilder, live på alle kanaler samme uke.",
-      },
-      {
-        code: "",
-        title: "Vi håndterer bookinger og gjester",
-        description: "Fra første melding til nøkkeloverlevering — vi tar oss av alt.",
-      },
-      {
-        code: "",
-        title: "Vi rengjør og vedlikeholder mellom hvert opphold",
-        description: "Profesjonell vask, tekstiler og vedlikehold, slik at eiendommen alltid er gjesteklar.",
-      },
-      {
-        code: "",
-        title: "Vi rapporterer og forbedrer kontinuerlig",
-        description: "Du følger utviklingen, vi finjusterer prisen og presentasjonen.",
-      },
+      "Folk scroller forbi annonser med mørke eller rotete bilder – uansett hvor fin boligen er. Det er førstebildet og tittelen som avgjør om noen klikker seg inn.",
+    note: "Hver måned boligen står tom, taper du en hel månedsleie. Står en bolig til 15 000 kr i måneden tom én måned ekstra, har du tapt 15 000 kr.",
+  },
+  showcase1: {
+    eyebrow: "Bildeløft",
+    heading: "Lysere, skarpere og mer innbydende – uten fotograf.",
+  },
+  showcase2: {
+    eyebrow: "Digital styling",
+    heading: "Vis hva et tomt rom kan bli.",
+  },
+  howItWorks: {
+    eyebrow: "Slik fungerer det",
+    heading: "Tre enkle steg.",
+    intro:
+      "Alt skjer skriftlig: du sender bildene, vi forbedrer dem, og du får dem tilbake på lenke. Ingen møter, ingen fotograf.",
+    steps: [
+      { title: "Send bildene", description: "Send bildene eller lenken til annonsen." },
+      { title: "Vi forbedrer", description: "Vi forbedrer og leverer innen 24–48 timer." },
+      { title: "Flere klikk", description: "Du laster opp de nye bildene og får flere klikk." },
     ],
+    channels: ["FINN", "Airbnb", "Booking.com"],
   },
-  beforeAfter: {
-    eyebrow: "Før → etter",
-    heading: "Samme eiendom. En helt annen annonse.",
-    intro:
-      "Hvilken annonse ville du valgt?",
-    disclaimer: "Illustrert eksempel, kun til demonstrasjon.",
-  },
-  portfolio: {
-    eyebrow: "Portefølje",
-    heading: "Ekte transformasjoner, for alle eiendomstyper.",
-    intro:
-      "Et innblikk i hvordan Nordic BnB reposisjonerer annonser — leiligheter, villaer og hus — langs Costa del Sol.",
-    realResultsLabel: "Ekte resultater",
-    disclaimer: "Ekte før/etter-bilder og ekte vekstall fra våre egne eiendommer.",
+  cases: {
+    eyebrow: "Eksempler",
+    heading: "Se forskjellen selv.",
+    improvedLabel: "Forbedret med AI",
     beforeLabel: "Før",
-    afterLabel: "Etter",
-    properties: [
-      {
-        name: "Leilighet, Fuengirola",
-        location: "Fuengirola",
-        stats: [
-          { value: "+29 %", label: "inntekt" },
-          { value: "82 %", label: "belegg" },
-        ],
-      },
-      {
-        name: "Villa, Marbella",
-        location: "Marbella",
-        stats: [
-          { value: "+34 %", label: "inntekt" },
-          { value: "86 %", label: "belegg" },
-        ],
-      },
-      {
-        name: "Hus, Mijas",
-        location: "Mijas",
-        stats: [
-          { value: "+27 %", label: "inntekt" },
-          { value: "79 %", label: "belegg" },
-        ],
-      },
-    ],
+    captions: {
+      stue: "Lysere og skarpere stue, rettet horisont, løst rot fjernet.",
+      kjokken: "Varmere lys og renere farger på kjøkkenet.",
+      soverom: "Mer innbydende soverom med bedre lys og skarphet.",
+    },
   },
   services: {
     eyebrow: "Tjenester",
-    heading: "To strategier. Én standard for omsorg.",
+    heading: "Finn riktig løft for eiendommen din.",
     intro:
-      "Enten eiendommen egner seg best for feriegjester eller en langtidsleietaker, gjelder samme disiplin: fullservice-forvaltning, kontinuerlig optimalisert.",
-    whatsappTemplate: "Hei Nordic BnB — jeg vil gjerne spørre om {service}.",
-    shortTerm: {
-      title: "Forvaltning av korttids- og ferieutleie",
-      price: "14,9 % + moms",
-      priceNote: "av leieinntekten",
-      description:
-        "Komplett forvaltning av Airbnb og Booking.com — fra første annonse til daglig drift.",
-      features: [
-        "Opprettelse og løpende optimalisering av annonse",
-        "Dynamisk, etterspørselsstyrt prising",
-        "Distribusjon på flere kanaler (Airbnb, Booking.com m.fl.)",
-        "Gjestekommunikasjon og innsjekkkoordinering",
-        "Profesjonell rengjøring og linservice",
-        "Eiendomsinspeksjon mellom opphold",
-        "Vedlikeholdskoordinering",
-        "Styling og koordinering av foto/innhold",
-        "Rapportering til eier",
-      ],
-    },
-    longTerm: {
-      title: "Forvaltning av langtidsutleie",
-      price: "7,45 % + moms",
-      priceNote: "av månedlig leie",
-      description:
-        "Markedsføring, leietakerkoordinering og løpende oppfølging for eiere som ønsker forutsigbar inntekt med lav driftsintensitet.",
-      features: [
-        "Markedsføring og leietakersøk",
-        "Leietakerkoordinering og kommunikasjon",
-        "Innkreving og forvaltning av leie",
-        "Eiendomsoppfølging",
-        "Vedlikeholdskoordinering",
-        "Rapportering til eier",
-      ],
-    },
-    termsNote:
-      "Endelige kommersielle vilkår kan avhenge av eiendommen, typen og de spesifikke tjenestebehovene — tallene over reflekterer vår standardstruktur.",
-    ctaLabel: "Spør om denne tjenesten",
-  },
-  dashboard: {
-    eyebrow: "Eieropplevelsen",
-    heading: "Du eier eiendommen. Vi håndterer driften.",
-    intro:
-      "Full innsikt i hvordan eiendommen din presterer — bookinger, belegg, rengjøringsstatus, vedlikehold og din månedlige utbetaling, alltid synlig.",
-    windowTitle: "Villa Sunrise — Eierportal",
-    cardAlt: "Villa Sunrise, eiendommen bak dette panelet",
-    revenueChangeNote: "+18 % sammenlignet med forrige måned",
-    payoutNote: "1. okt — bankoverføring",
-    cleaningStatusText: "Rengjøring planlagt",
-    maintenanceStatusText: "Ingen åpne saker",
-    labels: {
-      revenue: "Inntekt denne måneden",
-      occupancy: "Belegg",
-      upcoming: "Kommende opphold",
-      cleaning: "Rengjøringsstatus",
-      maintenance: "Vedlikehold",
-      payout: "Neste utbetaling",
-      guest: "Gjest",
-      status: "Status",
-    },
-  },
-  operations: {
-    eyebrow: "Drift",
-    heading: "Systemet bak hvert eneste opphold.",
-    intro:
-      "Et lokalt nettverk av renholdere, stylister og vedlikeholdskoordinatorer — som beveger seg i sekvens rundt hver gjest, hver gang.",
-    bannerHeadline: "Hvert opphold, forberedt for hånd.",
-    sequenceLabels: {
-      styling: "Styling",
-      cleaning: "Rengjøring",
-      guestArrival: "Gjesteankomst",
-      detail: "Detalj",
-    },
-    steps: [
-      { title: "Booking bekreftet", detail: "Reservasjon synkronisert på tvers av alle kanaler umiddelbart." },
-      { title: "Gjest forberedt", detail: "Innsjekkinfo, husguide og velkomstmelding sendt." },
-      { title: "Renhold planlagt", detail: "Profesjonelt renhold bestilt og bekreftet automatisk." },
-      { title: "Eiendom inspisert", detail: "Styling, tilstand og fasiliteter sjekket før ankomst." },
-      { title: "Gjest ankommer", detail: "Smidig innsjekk, og et team tilgjengelig ved behov." },
-      { title: "Anmeldelse innhentet", detail: "Gjesteopplevelsen avsluttes, tilbakemelding samles inn." },
-      { title: "Ytelse styrer prising", detail: "Data fra hvert opphold skjerper neste prisbeslutning." },
+      "Tre tjenester – fra raske bildeforbedringer til en komplett plan for salg. Du betaler fast pris, og får faktura etter levering.",
+    items: [
+      {
+        key: "photoBoost",
+        title: "Bildeløft",
+        price: "790 kr",
+        priceNote: "inntil 20 bilder",
+        description:
+          "Du sender bildene du har. Vi forbedrer dem med AI: lys, farger, skarphet, rette linjer og rydding av løst rot. Du får også et sterkere forsidebilde og forslag til tittel.",
+        features: [
+          "Inntil 20 forbedrede bilder",
+          "Valgt og optimalisert forsidebilde",
+          "3 forslag til annonsetittel",
+          "Levert innen 24 timer",
+        ],
+        note: "Til Airbnb gjør vi kun naturlig forbedring, slik Airbnbs regler krever.",
+      },
+      {
+        key: "virtualStaging",
+        title: "Digital styling",
+        price: "1 190 kr",
+        priceNote: "per rom · 3 rom for 2 990 kr",
+        description:
+          "Vi møblerer tomme rom digitalt, eller bytter ut løse møbler som ikke følger med i salget, for eksempel en slitt sofa. Faste ting som vegger, gulv, kjøkken og vinduer endres aldri.",
+        features: [
+          "Stylede bilder i 2 stilvalg",
+          "Merket «Digital styling – illustrasjon. Møbler følger ikke med.»",
+          "Originalbildet ved siden av",
+          "Levert innen 48 timer",
+        ],
+        note: "Ikke for Airbnb. Der skal gjestene se møblene de faktisk får.",
+      },
+      {
+        key: "saleBoost",
+        title: "Salgsløftet",
+        price: "4 900 kr",
+        priceNote: "Mini · Stor: 9 900 kr",
+        description:
+          "Vi lager før/etter-bilder av enkle oppgraderinger, som å male skap og vegger, bytte benkeplate med folie eller olje gulvet – og en rapport med tiltak, kostnad og rekkefølge.",
+        features: [
+          "Før/etter-bilder",
+          "Salgsløft-rapport (PDF) med tiltak, kostnad og hva som må gjøres av fagfolk",
+          "Merket «Illustrasjon – ikke utført»",
+          "Levert innen 48 timer",
+        ],
+        note: "Hvor mye verdien kan øke, vurderer megleren eller takstmannen din.",
+      },
     ],
+    termsNote: "Alle priser inkl. mva. Meglere faktureres eks. mva.",
+    ctaLabel: "Les mer",
   },
-  compare: {
-    eyebrow: "Korttid vs. langtid",
-    heading: "Usikker på hvilken strategi som passer din eiendom?",
+  audiences: {
+    eyebrow: "Hvem vi hjelper",
+    heading: "Fra hytta til hotellet.",
     intro:
-      "Begge veier kan fungere godt på Costa del Sol. Den rette avhenger av eiendommen, målene dine og hvor involvert du ønsker å være.",
-    shortTerm: {
-      title: "Korttids-/ferieutleie",
-      tagline: "Høyere inntektspotensial, mer aktiv forvaltning",
-      points: [
-        "Høyere inntektspotensial i høysesong",
-        "Krever aktiv, kontinuerlig forvaltning",
-        "Inntekten varierer med sesong",
-        "Mer fleksibilitet til å bruke eiendommen selv",
-      ],
-    },
-    longTerm: {
-      title: "Langtidsutleie",
-      tagline: "Forutsigbar inntekt, lavere driftsintensitet",
-      points: [
-        "Stabil, forutsigbar månedlig inntekt",
-        "Lavere daglig driftsintensitet",
-        "Lengre, mer stabilt leieforhold",
-        "Mindre fleksibilitet til å bruke eiendommen selv",
-      ],
-    },
-    cta: "Finn riktig strategi for din eiendom",
-  },
-  areas: {
-    eyebrow: "Hvor vi opererer",
-    heading: "Costa del Sol, fra Málaga til Marbella.",
-    intro:
-      "Lokal tilstedeværelse langs kysten gir raskere responstid, bedre lokalkunnskap og priser som gjenspeiler hvert mikromarked.",
-    areas: [
+      "Bildene er det første folk ser – enten de skal leie, kjøpe, booke eller spise. Vi gjør førsteinntrykket riktig.",
+    items: [
       {
-        name: "Marbella",
-        description: "Eksklusive villaer og leiligheter ved sjøen i Spanias mest etablerte luksusmarked.",
+        name: "Airbnb-verter",
+        description:
+          "Naturlige, ærlige forbedringer som følger Airbnbs regler – flere klikk uten å love noe boligen ikke har.",
       },
       {
-        name: "Mijas",
-        description: "Kystnære Mijas Costa og fjellandsbyen — sterk appell hele året.",
+        name: "Utleiere",
+        description:
+          "Bilder som skiller seg ut på FINN, så annonsen ikke blir scrollet forbi. Vi bruker bildene du har, også mobilbilder.",
       },
       {
-        name: "Fuengirola",
-        description: "Høyt turistvolum ved stranden med jevn etterspørsel etter korttidsutleie.",
+        name: "Selger selv",
+        description:
+          "Selger du uten megler? Vi gjør dine egne bilder klare for annonsen – uten fotograf.",
       },
       {
-        name: "Benalmádena",
-        description: "En balansert miks av familieferier og langsiktig kystliv.",
+        name: "Meglere",
+        description:
+          "Digital styling av tomme rom og Salgsløftet for boliger med oppussingsbehov. Meglere faktureres eks. mva.",
       },
       {
-        name: "Torremolinos",
-        description: "En klassisk strandby med jevn turistetterspørsel hele året.",
+        name: "Hoteller",
+        description:
+          "Lysere og skarpere rombilder til egen nettside og bookingsider.",
       },
       {
-        name: "Málaga",
-        description: "En kulturell hovedstad med et voksende marked for bykortferier og langtidsleie.",
+        name: "Restauranter",
+        description:
+          "Innbydende bilder av lokalet til nettside, Google og sosiale medier.",
       },
     ],
   },
   about: {
-    eyebrow: "Om oss",
-    heading: "Bygget på en enkel idé.",
+    eyebrow: "Om meg",
+    heading: "Ærlige bilder. Flere klikk.",
     paragraphs: [
-      "Nordic BnB ble stiftet i 2023, og er bygget rundt en enkel idé: eiendomsforvaltning bør ikke være passiv. En annonse som publiseres og deretter overlates til seg selv, vil underprestere — stille, over flere år, uten at noen legger merke til det.",
-      "Hver eiendom vi forvalter skal gjennomgås, testes og forbedres kontinuerlig — prising, presentasjon, posisjonering — i stedet for å settes opp én gang og glemmes.",
-      "Bak Nordic BnB står et lokalt driftsnettverk: rengjøring, styling, vedlikehold og koordinering på bakken langs Costa del Sol, sammen med en grunnlegger som mener eiere fortjener full innsikt i hvordan eiendommen deres presterer.",
+      "Jeg heter Melanie Solberg og startet Eiendomly fordi altfor mange fine boliger blir scrollet forbi på grunn av mørke og rotete bilder.",
+      "Jeg er utdannet innen salg, ledelse og digital markedsføring, og driver også SynligAI, som hjelper bedrifter å bli synlige i AI-søk.",
+      "Hos Eiendomly bruker jeg AI til å gjøre boligen din klar for klikk.",
     ],
-    founderName: "Petter Solberg",
-    founderRole: "Founder & Head of Growth",
-    founderQuote:
-      "Vi driver ikke bare en annonse — vi bygger og skaper en eiendom som faktisk konverterer. Vi kjenner markedet på Costa del Sol, og vi kjenner kundene, spesielt de skandinaviske gjestene som booker her.",
+    founderName: "Melanie Solberg",
+    founderRole: "Grunnlegger",
+    founderQuote: "Jeg sjekker hvert eneste bilde selv, så resultatet er ærlig og ser naturlig ut.",
+    photoAlt: "Melanie Solberg, grunnlegger av Eiendomly",
+    replyNote: "Jeg svarer på e-post innen 24 timer på hverdager.",
   },
-  testimonials: {
-    eyebrow: "Eiernes tilbakemeldinger",
-    heading: "Hva folk sier.",
+  honesty: {
+    eyebrow: "Ærlighet",
+    heading: "Vi forbedrer – vi lurer ikke.",
+    intro:
+      "Gode bilder skal få folk til å klikke – ikke skuffe dem på visning. Derfor er det tydelige grenser for hva vi endrer.",
+    does: {
+      title: "Det vi gjør",
+      tagline: "Naturlig forbedring",
+      points: [
+        "Justerer lys, farger og skarphet",
+        "Retter opp skjeve linjer",
+        "Fjerner løst rot",
+        "Merker digitalt møblerte bilder, med originalen ved siden av",
+      ],
+    },
+    never: {
+      title: "Det vi aldri gjør",
+      tagline: "Ingen villedning",
+      points: [
+        "Endrer vegger, gulv eller vinduer",
+        "Endrer utsikten",
+        "Skjuler skader",
+        "Legger inn møbler som ikke finnes, eller tekst, i Airbnb-bilder",
+      ],
+    },
+    cta: "Bestill bildeløft",
+  },
+  faq: {
+    eyebrow: "FAQ",
+    heading: "Ofte stilte spørsmål.",
     items: [
-      {
-        quote:
-          "Slet med å fylle leiligheten om vinteren. Nordic BnB tok over i mars, og i august var vi fullbooket ut oktober. Får én rapport i måneden nå i stedet for å jage svar selv.",
-        name: "Kristian H.",
-        location: "Marbella",
-      },
-      {
-        quote:
-          "Bor i Stockholm, har ikke sett leiligheten på over et år. Nordic BnB tar seg av alt, og inntekten har gått opp.",
-        name: "Annika L.",
-        location: "Fuengirola",
-      },
-      {
-        quote:
-          "Drev det selv i tre år. Nå slipper jeg å bekymre meg — ingen klager, og telefonen ringer ikke lenger midt på natten.",
-        name: "Carlos M.",
-        location: "Benalmádena",
-      },
-      {
-        quote:
-          "Håndterer det bedre enn jeg gjorde selv, og jeg pleide å drifte tre eiendommer.",
-        name: "Erik B.",
-        location: "Mijas",
-      },
-      {
-        quote:
-          "Var skeptisk til å gi fra meg alt sammen, men rapporteringen er mer detaljert enn det jeg får fra regnskapsføreren min. Jeg ser belegg, rengjøring, alt.",
-        name: "Sofia T.",
-        location: "Marbella",
-      },
-      {
-        quote:
-          "Vi arvet leiligheten til foreldrene mine og visste ikke hva vi skulle gjøre med den. Nordic BnB fotograferte den, la den ut på nytt, og etter seks uker hadde vi de første bookingene. Et år senere presterer den bedre enn lignende enheter i nærheten, og jeg har aldri måttet forholde meg til en gjest direkte.",
-        name: "Henrik J.",
-        location: "Fuengirola",
-      },
-      {
-        quote:
-          "Rask til å svare, og rengjøringen er virkelig plettfri hver gang.",
-        name: "Maja P.",
-        location: "Benalmádena",
-      },
-      {
-        quote:
-          "Byttet fra et annet byrå som knapt kommuniserte. Nordic BnB ringer faktisk når noe krever en avgjørelse, i stedet for bare å håndtere det stille og håpe jeg ikke merker det.",
-        name: "Thomas R.",
-        location: "Marbella",
-      },
-      {
-        quote:
-          "Leide ut langtids før. Leietakeren etterlot stedet i dårlig stand og jeg mistet to måneders inntekt på å rydde opp. Nå er det korttidsutleie via Nordic BnB, og selv med ekstra rengjøring mellom gjester tjener jeg mer enn med én leietaker.",
-        name: "Ingrid S.",
-        location: "Mijas",
-      },
-      {
-        quote:
-          "Fullbooket de fleste helger før jeg engang var ferdig med overtakelsespapirene.",
-        name: "Daniel K.",
-        location: "Torremolinos",
-      },
-      {
-        quote:
-          "Villaen min sto tom halve året under den gamle annonsen. Nå er den sjelden ledig mer enn noen få dager av gangen, og bildene ser faktisk ut som huset mitt.",
-        name: "Camilla W.",
-        location: "Fuengirola",
-      },
-      {
-        quote:
-          "Det som overbeviste meg var prisingen. Jeg pleide å sette én pris og glemme den. De justerer daglig etter etterspørsel, og jeg ser nøyaktig hvorfor i månedsrapporten. Inntekten har økt med nesten en tredjedel siden jeg byttet.",
-        name: "Anders G.",
-        location: "Benalmádena",
-      },
+      { q: "Er dette lov?", a: "Ja, når bildene ikke villeder. Vi forbedrer lys og kvalitet, merker digital styling og endrer aldri faste ting eller skader." },
+      { q: "Kan jeg bruke bildene på Airbnb?", a: "Ja, Bildeløft er laget for det. Vi holder det naturlig og legger aldri tekst i bildene." },
+      { q: "Hvem eier bildene?", a: "Du bekrefter at du har rett til bildene du sender. Du får full bruksrett til resultatet." },
+      { q: "Hvor fort får jeg dem?", a: "Bildeløft innen 24 timer, styling og Salgsløftet innen 48 timer." },
+      { q: "Hva hvis jeg ikke er fornøyd?", a: "Du får én ny runde gratis, eller pengene tilbake." },
+      { q: "Må jeg ta nye bilder?", a: "Nei. Vi bruker bildene du har, også mobilbilder." },
+      { q: "Øker Salgsløftet verdien?", a: "Mange enkle oppgraderinger gjør boligen mer attraktiv. Hvor mye verdien kan øke, bør megler eller takstmann vurdere. Vi lover ingen bestemt sum." },
+      { q: "Hvordan betaler jeg?", a: "Du får faktura på e-post etter levering." },
     ],
   },
   finalCta: {
-    eyebrow: "La oss snakke",
-    heading: "La oss se hva eiendommen din kan gjøre.",
+    eyebrow: "Bestilling",
+    heading: "Klar for flere klikk?",
     subline:
-      "Eiendommen din fortjener mer enn grunnleggende forvaltning. Be om en gratis eiendomsgjennomgang, så viser vi deg nøyaktig hvor den underpresterer — og hvordan kontinuerlig forbedring kan se ut.",
-    ctaPrimary: "Be om en eiendomsgjennomgang",
-    ctaSecondary: "Skriv til oss på WhatsApp",
+      "Send bildene dine i dag. Fyll ut skjemaet, så får du svar på e-post innen 24 timer.",
+    ctaPrimary: "Bestill nå",
     form: {
       fields: {
         name: "Navn",
         email: "E-post",
-        phone: "Telefon / WhatsApp",
-        location: "Eiendommens beliggenhet",
-        propertyType: "Eiendomstype",
-        bedrooms: "Antall soverom",
-        currentlyRented: "Leies den ut i dag?",
-        yes: "Ja",
-        no: "Nei",
-        strategy: "Korttid, langtid, eller usikker?",
-        strategyOptions: { short: "Korttid", long: "Langtid", unsure: "Usikker" },
-        message: "Melding",
+        customerType: "Jeg er",
+        service: "Tjeneste",
+        photosLink: "Lenke til bildene (Google Drive, Dropbox, WeTransfer) eller annonsen",
+        message: "Kommentar (valgfritt)",
+        rights: "Jeg bekrefter at jeg har rett til å bruke disse bildene.",
+        marketing:
+          "Valgfritt – 10 % rabatt: Eiendomly kan bruke før/etter-bildene uten adresse og personlige detaljer i egen markedsføring.",
       },
-      submit: "Få din gratis eiendomsgjennomgang",
-      successTitle: "Mottatt.",
-      successBody: "Takk — vi tar kontakt snart. For noe akutt, skriv til oss på WhatsApp.",
-      errorMessage: "Noe gikk galt — prøv WhatsApp i stedet.",
+      selectPlaceholder: "Velg …",
+      customerTypes: ["Privat utleier", "Airbnb-vert", "Selger selv", "Megler", "Hotell", "Restaurant"],
+      serviceOptions: [
+        { key: "photoBoost", label: "Bildeløft" },
+        { key: "virtualStaging", label: "Digital styling" },
+        { key: "saleBoost", label: "Salgsløftet" },
+        { key: "unsure", label: "Usikker" },
+      ],
+      submit: "Send bestilling",
+      errorMessage: "Noe gikk galt. Prøv igjen, eller send oss en e-post på",
     },
   },
-  footer: {
-    tagline: "Din eiendom. Kontinuerlig forbedret.",
-    linksHeading: "Nettsted",
-    contactHeading: "Kontakt",
-    languageHeading: "Språk",
-    rights: "Nordic BnB. Alle rettigheter forbeholdt.",
-    orgNumberLabel: "Org.nr. 931 905 856",
-    privacyLabel: "Personvern",
+  servicePages: {
+    photoBoost: {
+      eyebrow: "Bildeløft",
+      heading: "Gjør dine egne bilder klare for FINN og Airbnb",
+      forWho:
+        "Passer for private utleiere, Airbnb-verter og privatpersoner som selger selv, og som har tatt bildene selv.",
+      whatItIs:
+        "Du sender bildene du har. Vi forbedrer dem med AI: lys, farger, skarphet, rette linjer og rydding av løst rot. Du får også et sterkere forsidebilde og forslag til tittel.",
+      includesHeading: "Du får",
+      includes: [
+        "Inntil 20 forbedrede bilder",
+        "Valgt og optimalisert forsidebilde",
+        "3 forslag til annonsetittel",
+        "Levert innen 24 timer",
+      ],
+      priceHeading: "Pris",
+      price: "790 kr",
+      note: "Til Airbnb gjør vi kun naturlig forbedring, slik Airbnbs regler krever.",
+      cta: "Bestill bildeløft",
+    },
+    virtualStaging: {
+      eyebrow: "Digital styling",
+      heading: "Møbler tomme rom – eller bytt ut det som trekker ned",
+      forWho:
+        "Passer for tomme boliger som skal selges eller leies ut langtid, og boliger med møbler som ikke følger med, for eksempel en gammel sofa.",
+      whatItIs:
+        "Vi møblerer tomme rom digitalt, eller bytter ut løse møbler som ikke følger med i salget, for eksempel en slitt sofa. Faste ting som vegger, gulv, kjøkken og vinduer endres aldri.",
+      includesHeading: "Du får",
+      includes: [
+        "Stylede bilder i 2 stilvalg",
+        "Merket «Digital styling – illustrasjon. Møbler følger ikke med.»",
+        "Originalbildet ved siden av",
+        "Levert innen 48 timer",
+      ],
+      priceHeading: "Pris",
+      price: "1 190 kr per rom",
+      priceNote: "3 rom for 2 990 kr",
+      note: "Ikke for Airbnb. Der skal gjestene se møblene de faktisk får.",
+      cta: "Bestill digital styling",
+    },
+    saleBoost: {
+      eyebrow: "Salgsløftet",
+      heading: "Vis kjøperne hva boligen kan bli – og hva det koster",
+      forWho:
+        "Passer for boliger med oppussingsbehov som skal selges, eller som har ligget lenge på markedet. For selgere og meglere.",
+      whatItIs:
+        "Vi lager før/etter-bilder av enkle oppgraderinger, som å male skap og vegger, bytte benkeplate med folie eller olje gulvet. Du får en rapport med tiltak, kostnad og rekkefølge. Gjør du tiltakene, får annonsen ekte nye bilder. Gjør du dem ikke, ser kjøperne potensialet.",
+      includesHeading: "Du får",
+      includes: [
+        "Før/etter-bilder",
+        "Salgsløft-rapport (PDF) med tiltak, kostnad og hva som må gjøres av fagfolk",
+        "Merket «Illustrasjon – ikke utført»",
+        "Levert innen 48 timer",
+      ],
+      priceHeading: "Pris",
+      tiers: [
+        { name: "Mini", price: "4 900 kr", detail: "Tiltak under 20 000 kr, 5 før/etter" },
+        {
+          name: "Stor",
+          price: "9 900 kr",
+          detail: "Tiltak 20 000–100 000 kr, 10 før/etter og prioritert liste",
+        },
+      ],
+      note: "Hvor mye verdien kan øke, vurderer megleren eller takstmannen din. Vi viser hva det koster og hvordan det kan se ut.",
+      cta: "Bestill Salgsløftet",
+    },
   },
-  showcase1: {
-    eyebrow: "Costa del Sol",
-    heading: "Hver eiendom har noe unikt. Bruk det.",
+  orderPage: {
+    eyebrow: "Bestilling",
+    heading: "Bestill bildeløft",
+    intro: "Fyll ut skjemaet under, og du får svar på e-post innen 24 timer.",
   },
-  showcase2: {
-    eyebrow: "Presentasjon",
-    heading: "Stylet, fotografert og posisjonert for å prestere.",
+  thanks: {
+    eyebrow: "Mottatt",
+    heading: "Takk!",
+    intro: "Du får svar på e-post innen 24 timer.",
+    back: "Tilbake til forsiden",
   },
-  contactPage: {
-    eyebrow: "Team",
-    heading: "Teamet bak Nordic BnB.",
-    intro:
-      "Vi følger opp eiendommen din hver eneste dag — sammen med vårt eget faste team. Ta gjerne direkte kontakt.",
-    teamName: "Vårt driftsteam",
-    teamHeading: "Teamet på bakken",
-    teamIntro:
-      "Handverk, renhold og styling — alt håndteres av samarbeidspartnere vi stoler på, ikke tilfeldige underleverandører.",
-    roles: [
-      { title: "Handyman", description: "Vedlikehold, reparasjoner og tilsyn mellom opphold." },
-      { title: "Vasketeam", description: "Profesjonell klargjøring og skift av tekstiler etter hver gjest." },
-      { title: "Fotograf/stylist", description: "Styling og fotografering for hver nye annonse." },
-    ],
-    photoDesignLabel: "Foto/Design",
-    emailHeading: "Send oss en e-post direkte",
-    ctaHeading: "La oss snakke om eiendommen din.",
-    ctaSubline:
-      "Har du et spørsmål, eller vil se hva Nordic BnB kan gjøre for eiendommen din? Send oss en e-post — vi svarer personlig, som regel innen en dag.",
-    ctaButton: "Send e-post",
-    recruitEyebrow: "Bli en del av teamet",
-    recruitHeading: "Vil du jobbe hos oss?",
-    recruitSubline:
-      "Vi er alltid åpne for gode folk. Er du vasker, handyman eller fotograf på Costa del Sol, hører vi gjerne fra deg.",
-    story: {
-      eyebrow: "Vår historie",
-      heading: "Fra markedsføring til vertskap.",
-      milestones: [
+  notFound: {
+    eyebrow: "404",
+    heading: "Siden finnes ikke.",
+    intro: "Siden du ser etter finnes ikke, eller har flyttet.",
+    back: "Tilbake til forsiden",
+  },
+  legal: {
+    privacy: {
+      eyebrow: "Personvern",
+      heading: "Personvern",
+      updated: "Sist oppdatert: november 2026",
+      intro:
+        "Denne siden forklarer hva Eiendomly samler inn når du bruker bestillingsskjemaet, hvorfor, og hvilke rettigheter du har.",
+      sections: [
         {
-          period: "August 2023",
-          title: "Der det startet",
-          body: "Nordic BnB startet i Norge med digital markedsføring, og hjalp bedrifter og eiendomsinvestorer med å presentere seg selv — og eiendommene sine — bedre på nett. Det lærte oss én ting tidlig: presentasjon endrer oppfatning, og oppfatning endrer verdi.",
+          heading: "Hva vi samler inn",
+          body: "Når du fyller ut bestillingsskjemaet, lagrer vi navn, e-post, hvilken type kunde du er, hvilken tjeneste du ønsker, lenken til bildene dine, eventuell kommentar og om du samtykker til markedsføringsbruk av før/etter-bilder.",
         },
         {
-          period: "2024",
-          title: "Nærmere eiendom",
-          body: "På det tidspunktet hadde vi allerede brukt flere år på utleieeiendom selv — leid boliger i Norge og leid dem videre ut gjennom utleie-arbitrasje, både korttids- og langtidsutleie, samtidig som vi pusset opp og økte verdien på eiendommene vi hadde ansvar for. Arbeidet vårt ble stadig mer rettet mot eiendom, innhold, fotografering, posisjonering og måten hjem ble presentert på nett. Vi så det samme problemet igjen og igjen: gode eiendommer markedsført langt under sitt potensial.",
+          heading: "Hvorfor vi samler det inn",
+          body: "Opplysningene brukes til å levere tjenesten du bestiller, svare på henvendelsen din og sende faktura. Markedsføringssamtykke brukes kun hvis du har krysset det av.",
         },
         {
-          period: "2025",
-          title: "Fra Norge til Spania 🇪🇸",
-          body: "Vi flyttet fra Norge til Spania og opplevde utleiemarkedet på Costa del Sol innenfra — som beboere og som utleieoperatører. Det som startet som markedsføringskunnskap, kombinert med flere års erfaring med å leie, leie videre ut og pusse opp boliger hjemme, ble til noe større: forståelse for hva internasjonale gjester forventer, hva eiere sliter med, og hva som gjør at én eiendom presterer bedre enn en annen.",
+          heading: "Hvor lenge vi lagrer det",
+          body: "Vi lagrer bestillingsopplysninger så lenge det er nødvendig for leveranse og bokføring, normalt i opptil 5 år i tråd med bokføringsloven.",
         },
         {
-          period: "Sent 2025",
-          title: "Ideen utviklet seg",
-          body: "Vi begynte å kombinere alt vi allerede kunne — markedsføring, presentasjon, interiør, gjesteopplevelse og praktisk utleieforvaltning — til én komplett tjeneste for eiere av ferieutleie, bygget på det vi hadde lært av å hjelpe investorer med å skape verdi av eiendommene sine, både i Norge og Spania.",
+          heading: "Underleverandører",
+          body: "Skjemaet driftes av Netlify (Netlify Forms), som mottar og lagrer innsendingene. Vi bruker også e-post og eventuelt analyseverktøy for å forstå bruken av siden.",
         },
         {
-          period: "2026",
-          title: "Nordic BnB i dag",
-          body: "Nordic BnB ble et fullservice selskap for ferieutleie og eiendomsforvaltning på Costa del Sol. Fra klargjøring og oppgradering av eiendommen til styling, fotografering, annonser, prising, gjestekommunikasjon, rengjøring, vedlikehold og full forvaltning. Ett selskap. Ett kontaktpunkt. Alt håndtert.",
+          heading: "Dine rettigheter",
+          body: "Du kan be om innsyn i, retting eller sletting av dine opplysninger ved å kontakte oss på e-post.",
+        },
+      ],
+    },
+    terms: {
+      eyebrow: "Vilkår",
+      heading: "Vilkår",
+      updated: "Sist oppdatert: november 2026",
+      intro: "Disse vilkårene gjelder når du bestiller en tjeneste fra Eiendomly.",
+      sections: [
+        {
+          heading: "Bilderettigheter",
+          body: "Ved bestilling bekrefter du at du har rett til å bruke bildene du sender inn, og at vi kan bearbeide dem for deg.",
         },
         {
-          period: "2026 →",
-          title: "Neste kapittel",
-          body: "Målet vårt er enkelt: bygge en ny standard for ferieutleieforvaltning på Costa del Sol — som kombinerer skandinavisk service, sterk presentasjon og lokal gjennomføring. Vi oppgraderer. Vi styler. Vi forvalter.",
+          heading: "Bruksrett til resultatet",
+          body: "Du får full bruksrett til de forbedrede bildene og eventuelle rapporter vi leverer.",
+        },
+        {
+          heading: "Merking",
+          body: "Digitalt møblerte bilder og illustrasjoner fra Salgsløftet merkes alltid tydelig, slik at det ikke er tvil om hva som er ekte og hva som er illustrasjon.",
+        },
+        {
+          heading: "Ditt ansvar",
+          body: "Du er selv ansvarlig for hvordan og hvor bildene publiseres, og for at publiseringen følger gjeldende regler, for eksempel Airbnbs retningslinjer.",
+        },
+        {
+          heading: "Betaling",
+          body: "Du mottar faktura på e-post etter levering, med 14 dagers forfall.",
+        },
+        {
+          heading: "Hvis du ikke er fornøyd",
+          body: "Du får én ny runde gratis, eller pengene tilbake.",
+        },
+        { heading: "Lovvalg", body: "Norsk lov gjelder for disse vilkårene." },
+      ],
+    },
+    cookies: {
+      eyebrow: "Informasjonskapsler",
+      heading: "Informasjonskapsler",
+      updated: "Sist oppdatert: november 2026",
+      intro:
+        "Vi bruker informasjonskapsler (cookies) kun etter samtykke, og du kan endre valget ditt når du vil.",
+      sections: [
+        {
+          heading: "Nødvendige",
+          body: "Noen få tekniske informasjonskapsler er nødvendige for at siden skal fungere, og krever ikke samtykke.",
+        },
+        {
+          heading: "Analyse og markedsføring",
+          body: "Analyse- og markedsføringsverktøy (som GA4 og Meta Pixel) lastes kun hvis du har godtatt dette i samtykkebanneret.",
+        },
+        {
+          heading: "Endre samtykke",
+          body: "Du kan endre samtykket ditt når som helst via lenken «Endre samtykke» i bunnteksten.",
         },
       ],
     },
   },
-  privacyPage: {
-    eyebrow: "Personvern",
-    heading: "Personvernerklæring.",
-    updated: "Sist oppdatert: september 2026",
-    intro:
-      "Denne siden forklarer, i enkle ord, hvilke opplysninger Nordic BnB samler inn når du kontakter oss, og hvordan vi bruker dem.",
-    sections: [
-      {
-        heading: "Hva vi samler inn",
-        body: "Når du tar kontakt via kontaktskjemaet vårt, e-post eller WhatsApp, samler vi inn opplysningene du oppgir — vanligvis navn, e-postadresse, telefonnummer og informasjon om eiendommen din eller henvendelsen.",
-      },
-      {
-        heading: "Hvordan vi bruker det",
-        body: "Vi bruker disse opplysningene kun til å svare på henvendelsen din, gi en eiendomsgjennomgang eller et tilbud, og — om du blir kunde — til å forvalte eiendommen din og kommunisere med deg om den. Vi selger ikke opplysningene dine til tredjeparter.",
-      },
-      {
-        heading: "Hvor lenge vi oppbevarer det",
-        body: "Vi oppbevarer henvendelsesopplysninger så lenge det er nødvendig for å svare deg, eller — om du blir kunde — for varigheten av samarbeidet vårt og deretter så lenge loven krever.",
-      },
-      {
-        heading: "Dine rettigheter",
-        body: "Du kan når som helst spørre oss om hvilke opplysninger vi har om deg, be oss rette dem, eller be om at vi sletter dem. Send oss bare en e-post, så ordner vi det.",
-      },
-    ],
-    contactHeading: "Spørsmål om dine opplysninger?",
-    contactBody: "For personvernhenvendelser, send oss en e-post direkte, så svarer vi deg personlig.",
+  consent: {
+    message: "Vi bruker informasjonskapsler til analyse og markedsføring. Du velger selv hva du godtar.",
+    acceptAll: "Godta alle",
+    rejectAll: "Avvis alle",
+    settings: "Innstillinger",
+    save: "Lagre valg",
+    analytics: "Analyse",
+    marketing: "Markedsføring",
+    changeConsent: "Endre samtykke",
+  },
+  footer: {
+    tagline: "Førstebildet avgjør. Vi gjør det riktig.",
+    linksHeading: "Nettsted",
+    legalHeading: "Juridisk",
+    contactHeading: "Kontakt",
+    languageHeading: "Språk",
+    rights: "Eiendomly. Alle rettigheter reservert.",
+    legalName: "Eiendomly Solberg",
+    replyNote: "Svar innen 24 timer på hverdager.",
   },
 };

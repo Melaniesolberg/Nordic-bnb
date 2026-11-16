@@ -6,11 +6,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import Logo from "@/components/ui/logo";
 import Magnetic from "@/components/ui/magnetic-button";
 import LanguageSwitcher from "@/components/ui/language-switcher";
-import { WHATSAPP_LINK } from "@/lib/utils";
-import { locales, localeHref, localeFlags, type Locale } from "@/i18n/config";
+import { locales, localeFlags, pageHref, type Locale, type PageKey } from "@/i18n/config";
 import type { NavContent } from "@/content/types";
 
-export default function Nav({ locale, nav }: { locale: Locale; nav: NavContent }) {
+export default function Nav({
+  locale,
+  nav,
+  pageKey = "home",
+  overHero = false,
+}: {
+  locale: Locale;
+  nav: NavContent;
+  pageKey?: PageKey;
+  /** True when the page opens on a dark full-bleed image, so the bar starts transparent. */
+  overHero?: boolean;
+}) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -23,8 +33,8 @@ export default function Nav({ locale, nav }: { locale: Locale; nav: NavContent }
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const home = localeHref(locale, "/");
-  const dark = scrolled || open;
+  const dark = scrolled || open || !overHero;
+  const orderHref = pageHref(locale, "order");
 
   return (
     <header
@@ -33,8 +43,8 @@ export default function Nav({ locale, nav }: { locale: Locale; nav: NavContent }
       }`}
     >
       <div className="mx-auto flex max-w-[1600px] items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
-        <Link href={home} className="z-10" onClick={() => setOpen(false)}>
-          <Logo />
+        <Link href={pageHref(locale, "home")} className="z-10" onClick={() => setOpen(false)}>
+          <Logo tone={dark ? "dark" : "light"} />
         </Link>
 
         <nav className="hidden items-center gap-9 lg:flex">
@@ -52,24 +62,23 @@ export default function Nav({ locale, nav }: { locale: Locale; nav: NavContent }
         </nav>
 
         <div className="hidden items-center gap-4 lg:flex">
-          <LanguageSwitcher locale={locale} dark={dark} label={nav.selectLanguage} />
+          <LanguageSwitcher locale={locale} dark={dark} label={nav.selectLanguage} pageKey={pageKey} />
           <Magnetic>
-            <a
-              href={WHATSAPP_LINK()}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`rounded-full px-5 py-2.5 text-[0.8rem] font-medium tracking-wide transition-colors hover:bg-coral ${
+            <Link
+              href={orderHref}
+              className={`rounded-full px-5 py-2.5 text-[0.8rem] font-medium tracking-wide transition-colors hover:bg-coral hover:text-ivory ${
                 dark ? "bg-charcoal text-ivory" : "bg-ivory text-charcoal"
               }`}
             >
               {nav.cta}
-            </a>
+            </Link>
           </Magnetic>
         </div>
 
         <button
           className="z-10 flex flex-col gap-1.5 lg:hidden"
           aria-label={nav.toggleMenu}
+          aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
           <span
@@ -109,7 +118,7 @@ export default function Nav({ locale, nav }: { locale: Locale; nav: NavContent }
                 {locales.map((l) => (
                   <Link
                     key={l}
-                    href={localeHref(l, "/")}
+                    href={pageHref(l, pageKey)}
                     onClick={() => setOpen(false)}
                     className={`eyebrow flex items-center gap-1.5 rounded-full border border-charcoal/15 px-3 py-1.5 ${
                       l === locale ? "border-coral text-coral" : "text-charcoal/60"
@@ -120,14 +129,13 @@ export default function Nav({ locale, nav }: { locale: Locale; nav: NavContent }
                   </Link>
                 ))}
               </div>
-              <a
-                href={WHATSAPP_LINK()}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href={orderHref}
+                onClick={() => setOpen(false)}
                 className="mt-2 rounded-full bg-charcoal px-6 py-3.5 text-center text-sm font-medium text-ivory"
               >
                 {nav.cta}
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

@@ -34,12 +34,12 @@ export default function About({
             <Reveal delay={0.1}>
               <div className="mt-12 border-t border-charcoal/15 pt-8">
                 {founderPhotoSrc ? (
-                  <div className="relative h-20 w-20 overflow-hidden rounded-full">
-                    <Image src={founderPhotoSrc} alt={about.founderName} fill sizes="80px" className="object-cover" />
+                  <div className="relative h-24 w-24 overflow-hidden rounded-full">
+                    <Image src={founderPhotoSrc} alt={about.photoAlt} fill sizes="96px" className="object-cover" />
                   </div>
                 ) : (
                   <div className="flex h-14 w-14 items-center justify-center rounded-full bg-charcoal font-serif-display text-lg text-ivory">
-                    PS
+                    MS
                   </div>
                 )}
                 <p className="mt-5 font-serif-display text-2xl text-charcoal">{about.founderName}</p>
@@ -59,6 +59,9 @@ export default function About({
                 </p>
               </Reveal>
             ))}
+            <Reveal delay={0.15}>
+              <p className="mt-2 text-sm text-charcoal/50">{about.replyNote}</p>
+            </Reveal>
           </div>
         </div>
       </div>

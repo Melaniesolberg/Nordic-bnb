@@ -1,182 +1,40 @@
 /**
- * Cinematic imagery generated via Higgsfield for the Nordic BnB experience.
- *
- * These are served directly from Higgsfield's CDN (see next.config.ts
- * remotePatterns). This sandbox's network policy blocks that CDN host, so
- * the images can't be downloaded into /public or verified with a local
- * screenshot in this environment — they will render normally once the site
- * is deployed. Swap any of these for real property photography by
- * replacing the URL string.
+ * Imagery generated via Higgsfield for Eiendomly, served from Higgsfield's
+ * CDN (see next.config.ts remotePatterns). Replace any entry with real
+ * photography by swapping the URL.
  */
+const CDN = "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf";
+const UPLOADS = "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf";
+
 export const media = {
-  // Real Nordic BnB brand assets. brandLogo is the user's final exact
-  // lockup file (icon + "Nordic BnB" wordmark laid out together as one
-  // image), used exactly as uploaded — do not run through background
-  // removal or regenerate it; the user asked for this file unmodified.
-  // Round 12/13 tried image-edits to fix the wordmark casing but both
-  // attempts broke the logo (white background, then a blank/broken render)
-  // — round 14 reverted straight back to this original, untouched file.
-  // brandIcon is the icon alone, used standalone for the favicon and small
-  // decorative marks. Do not swap for another variant.
-  brandLogo:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/7b9c8310-432d-4798-837e-838e5a9c5f95.png",
-  brandIcon:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_144026_4d601721-c7fe-4183-9978-c1ed89f0ef51.png",
-  brandMerch:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/0b6e253a-5c3d-4549-8b13-bc988759332b.png",
+  // Scroll-scrubbed hero: drone glide toward a timber house above a fjord,
+  // ending inside the living room. Encoded 1080p, keyframe every 8 frames,
+  // +faststart so per-frame seeking stays cheap. Poster = its first frame.
+  heroVideo: `${UPLOADS}/8c205a3b-2025-4389-adc4-f7e025c752b8.mp4`,
+  heroPoster: `${UPLOADS}/bcda31b0-8a5c-410b-affb-851cd074e153.jpg`,
 
-  // Simple partner-company logo covers for the Team page's three role
-  // cards (Handyman, Cleaning team). The Photographer/stylist card reuses
-  // brandLogo directly, so no separate asset is needed for it. Round 14:
-  // handyman partner renamed to "MSandro Reforma" with a clean logo on a
-  // white background.
-  roleHandymanLogo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_155415_0e12052b-4748-4de8-9183-c6021faf05a3.png",
-  roleCleaningLogo:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_141615_2a9acf12-d7b1-4717-8e89-f9a567371a18.png",
+  // Same living room before and after enhancement (the "before" was made
+  // from the "after" by reference editing, so layout and furniture match).
+  livingBefore: `${CDN}/hf_20261116_213749_70dfe499-4ed2-499e-802a-a194c5d5e267.png`,
+  livingAfter: `${CDN}/hf_20261116_213508_08bff40a-482a-40a1-aacd-d6b6d29b3ac5.png`,
 
-  heroVilla:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111038_b2e7c852-74ff-4b5b-b324-ee38838ae978.png",
+  stagedLiving: `${CDN}/hf_20261116_213509_220da4bb-c3da-4aea-bfe9-18fedb3d0c1d.png`,
+  kitchenRefresh: `${CDN}/hf_20261116_213509_8a920441-9089-4c93-bbc7-024f339a0103.png`,
 
-  // Round 26/27: aerial drone descent onto the villa, then an interior
-  // walkthrough, encoded for smooth scroll-scrubbing (1080p, keyframe every
-  // ~8 frames, +faststart).
-  // Round 28: fixed the visible jump between the exterior and interior
-  // clips — the interior segment used to start from an unrelated stock
-  // photo, so the cut didn't match place or light. Regenerated the interior
-  // segment using the exterior clip's actual last frame as its start image
-  // (same terrace, same dusk light), and added a third segment continuing
-  // out through the terrace to a closing sea view — each new segment
-  // seeded from the previous one's real last frame for a continuous,
-  // uncut feel.
-  // Round 29: regenerated the interior + terrace segments again to fix a
-  // motion hitch partway through the hallway and an abrupt "pop" where the
-  // outdoor terrace became visible — prompts now explicitly call for one
-  // constant, unbroken walking pace throughout (no slowdown/stop anywhere)
-  // and a gradual, progressive brightness reveal through the doorway
-  // instead of a sudden exposure jump. Also pushed the interior/exterior
-  // materials and light explicitly toward an authentic Marbella / Costa
-  // del Sol look (pale limestone, light oak, white plaster, warm
-  // Mediterranean dusk light) rather than a generic modern villa.
-  // Generated at Kling "pro" (not "4k") for these two segments due to a
-  // Higgsfield credit shortfall mid-round — output is still ~1080p+ native
-  // and the final encode downscales to 1080p regardless, so no visible
-  // quality loss versus the 4k-sourced exterior segment. 36s total.
-  // Brightness ~103/255, same scrub-friendly encoding as round 27
-  // (1080p, keyframe every ~8 frames, +faststart).
-  heroVideo:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/57322695-077f-45a1-810c-a9bfc8c2887b.mp4",
-  // Round 18+19: the same flythrough, re-encoded as a 96-frame sprite sheet
-  // (12 cols x 8 rows, 640x360 per cell, frame 1 = top-left = the exact
-  // villaAerial frame) for canvas-based scrubbing. Superseded by heroVideo
-  // above (round 20) — left here unused rather than deleted in case a
-  // canvas-based approach is worth revisiting with higher-res cells.
-  heroSprite:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/02f8480d-5802-4a64-b96b-50cd44649b24.jpg",
-  listingBefore:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111040_7feec892-c68f-44bd-b8d1-3d2d8b72b8b7.png",
-  listingAfter:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111038_bd665605-7742-45cf-9af5-3e76cffdbc59.png",
-  coastline:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111038_f024a3e1-fa0d-4e99-97c2-1d6b8ea3b843.png",
-  poolNight:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_111038_85c14d1a-1427-46c3-9492-061fd5951b29.png",
+  stepPhone: `${CDN}/hf_20261116_213240_42f24f55-0986-442b-ba20-1e66d060f369.png`,
+  stepEditing: `${CDN}/hf_20261116_213241_3b19953d-7860-42c1-8710-13d9303a51a2.png`,
+  stepListing: `${CDN}/hf_20261116_213240_58c31b83-ba53-4ef8-899e-1780af743258.png`,
 
-  // Second generation batch — villas, interiors, per-area scenes, operations
-  // sequence and atmosphere shots.
-  villaAerial:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142507_ddd9ed1a-0039-44e5-a0d0-b118c8263e90.png",
-  interiorLiving:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142507_da4e262f-5178-490b-8255-6a5705c00f96.png",
-  poolDay:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142507_52b1592c-fc99-42af-a05d-9538eca19cd9.png",
-  seaView:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142506_61d8aaa9-7b5f-4908-a074-07a80feee1ec.png",
-  marbellaLifestyle:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142506_ed904f5e-2909-4109-987b-2c36e82adc79.png",
-  mijasScene:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142506_5d3397da-3e0e-4e28-bd63-2dcee47812ad.png",
-  fuengirolaScene:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142506_8459ec8b-33ee-4de4-9ae7-bef59aac9c1d.png",
-  benalmadenaScene:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142507_f862026c-5f13-4d08-bdf8-02c5e985676e.png",
-  stylingDetail:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142506_cc4032a0-85da-44a2-92bc-ce7f5c0855d2.png",
-  cleaningMoment:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142507_b6f43e44-537e-45b2-8b86-9c5aadeb758f.png",
-  guestArrival:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142507_105a43a9-4d16-45c6-ac53-0a30d6c6fc08.png",
-  detailShot:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142507_d05137c2-2315-4b37-8004-fc29842197a9.png",
-  nightVilla:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142518_d0ce9f72-cd5b-4e89-a3fb-79971b81778e.png",
-  sunsetSea:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142518_695df57d-bd33-4802-add5-d8f74ce54828.png",
-  aerialCoast:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_142518_e12d2911-c97a-4929-a1b8-1ea84be93f9b.png",
+  audienceCabin: `${CDN}/hf_20261116_213240_abf74ea5-1f78-4dd0-869f-7e15d6b12fdf.png`,
+  audienceRental: `${CDN}/hf_20261116_213241_8a804e0e-1527-4dc4-89d7-b55f580fd833.png`,
+  audienceSeller: `${CDN}/hf_20261116_213241_847aa9d1-b0cf-4a4c-a4d7-4588dde2790a.png`,
+  audienceAgent: `${CDN}/hf_20261116_213240_23f8cb9c-20c7-4b85-9901-d07ee866a36d.png`,
+  audienceHotel: `${CDN}/hf_20261116_213240_7140580b-79ec-4701-bec8-9920337f26da.png`,
+  audienceRestaurant: `${CDN}/hf_20261116_213748_3d3b0522-df2a-4c9b-b857-10d9a93b32f8.png`,
 
-  // Third generation batch — team + expanded before/after portfolio.
-  cleaningTeam:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155215_22cc0b87-e5fd-41b5-a277-878265765037.png",
-  villaBefore:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155215_44bfeb9a-3fe5-4007-a2f5-cca43bd832b3.png",
-  villaAfter:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155215_0f75446e-fe33-4291-a4ac-ed7da9bc72c0.png",
-  houseBefore:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155215_a757e9a7-f8d9-4fe1-a790-788c4029c9d2.png",
-  houseAfter:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260903_155215_f2f3cdd6-db6c-433a-aa97-a6289337a244.png",
+  harbourTown: `${CDN}/hf_20261116_213749_15b0e138-383f-4570-848c-7ac87d68723a.png`,
+  houseDusk: `${CDN}/hf_20261116_213749_25d5d00b-08e4-4bbf-86b5-2b5db1bab669.png`,
+  heroAerial: `${CDN}/hf_20261116_213511_1e13cb4f-1ca0-4d85-ac5d-4decb663a8db.png`,
 
-  // Real, unedited photo of Petter (founder), uploaded by the user
-  // directly — used as-is in the About section.
-  founderPetter:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/d809abb8-d01d-40d5-bca7-2e339ee0255e.png",
-
-  // Real, unedited photo of Petter, in a Nordic BnB polo shirt, uploaded by
-  // the user directly — used as-is on the Team page.
-  contactPetterPhoto:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/ced4315f-6dc6-42f1-8803-adb38ce10356.png",
-
-  // Real before/after property photography, uploaded by the user directly.
-  // Each file is a single collage image with the "before" half on the left
-  // and the "after" half on the right — rendered as a real drag-to-reveal
-  // slider (see PortfolioSlider in the Portfolio component), which crops
-  // each half via a doubled-width clip rather than object-position so the
-  // two halves never blend together at rest.
-  realApartmentFuengirolaCollage:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/99861524-ba90-4bfc-ad2f-f7d894a803c4.png",
-  realHouseMijasCollage:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/b4167031-8506-4a4a-b763-37fe7975a2bf.png",
-  realVillaMarbellaCollage:
-    "https://d2ol7oe51mr4n9.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/a1fcdf64-b1b0-44da-9e6d-d2fc8467149a.png",
-
-  // Matching before/after pair for the top "Samme eiendom" slider — the
-  // "before" was generated from the "after" via reference-guided editing so
-  // it is guaranteed to be the same room/layout (same walls, windows,
-  // perspective), with dated, ugly furniture, no TV/electronics, and
-  // horrible, mismatched curtains.
-  roomAfterStyled:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260905_094141_2601516f-f042-4a87-9500-b16787052be0.png",
-  roomBeforeUnstyled:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260906_110715_0036c165-cac1-4b8b-8a08-24d418ec0a00.png",
-
-  // Handover visual for the process section's first step ("We take over the
-  // property") — a nice Marbella villa with its front door open and a
-  // Nordic BnB-branded car parked outside, symbolizing a fresh takeover.
-  // Round 13: fixed the car's decal to be an exact copy of the real logo
-  // (not a reinvented variant), with "Costa del Sol" in small type beneath.
-  handoverVilla:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_141315_50e6bef8-8fbd-422c-a0da-258ff792ef57.png",
-
-  // Real, distinctive Málaga cityscape photo for the Areas section's detail
-  // panel (not a reused/generic scene like the other area photos).
-  malagaScene:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_114148_41a34ad0-49ae-4b57-baca-acc05a794d88.png",
-
-  // Process section step-3 visual ("we photograph and launch") — a
-  // reference-guided edit of roomAfterStyled with a 360 camera and tripod
-  // added, so it visibly reads as an active photo shoot. roomAfterStyled
-  // itself (used by the "Samme eiendom" before/after section) is untouched.
-  photographySessionRoom:
-    "https://d8j0ntlcm91z4.cloudfront.net/user_3IoUHDHJ3bn5M2naOproHddtTuf/hf_20260908_114151_a7fd9be8-8a5e-4d15-afa0-217582f67a2c.png",
+  founderPhoto: "/images/melanie.jpg",
 } as const;

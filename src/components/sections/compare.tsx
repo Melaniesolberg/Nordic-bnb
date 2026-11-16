@@ -6,15 +6,16 @@ import Image from "next/image";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import Magnetic from "@/components/ui/magnetic-button";
-import type { CompareContent } from "@/content/types";
+import type { HonestyContent } from "@/content/types";
 
+/** Honesty: what we do vs. what we never do, as two toggleable columns. */
 export default function Compare({
   compare,
   formHref,
   shortImageSrc,
   longImageSrc,
 }: {
-  compare: CompareContent;
+  compare: HonestyContent;
   formHref: string;
   shortImageSrc: string;
   longImageSrc: string;
@@ -43,7 +44,7 @@ export default function Compare({
                 active === "short" ? "bg-charcoal text-ivory" : "text-charcoal/60"
               }`}
             >
-              {compare.shortTerm.title}
+              {compare.does.title}
             </button>
             <button
               onClick={() => setActive("long")}
@@ -51,13 +52,13 @@ export default function Compare({
                 active === "long" ? "bg-charcoal text-ivory" : "text-charcoal/60"
               }`}
             >
-              {compare.longTerm.title}
+              {compare.never.title}
             </button>
           </div>
         </Reveal>
 
         <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
-          {[compare.shortTerm, compare.longTerm].map((col, i) => {
+          {[compare.does, compare.never].map((col, i) => {
             const key = i === 0 ? "short" : "long";
             const isActive = active === key;
             return (

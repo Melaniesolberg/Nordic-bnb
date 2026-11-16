@@ -4,30 +4,21 @@ import { useState } from "react";
 import Image from "next/image";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
-import type { AreasContent } from "@/content/types";
-
-const DOT_POSITIONS = [
-  { x: 60, y: 155 },
-  { x: 195, y: 90 },
-  { x: 330, y: 140 },
-  { x: 460, y: 75 },
-  { x: 590, y: 120 },
-  { x: 710, y: 65 },
-];
+import type { AudiencesContent } from "@/content/types";
 
 export default function Areas({
   areas,
   imageSrc,
   detailImages,
 }: {
-  areas: AreasContent;
+  areas: AudiencesContent;
   imageSrc: string;
   detailImages: string[];
 }) {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="areas" className="relative overflow-hidden bg-charcoal py-24 sm:py-32 lg:py-40">
+    <section id="areas" className="relative scroll-mt-20 overflow-hidden bg-charcoal py-24 sm:py-32 lg:py-40">
       <div className="absolute inset-0">
         <Image
           src={imageSrc}
@@ -52,60 +43,7 @@ export default function Areas({
 
         <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8">
           <Reveal delay={0.08}>
-            <div className="hidden sm:block">
-              <svg viewBox="0 0 740 220" className="w-full" aria-hidden>
-                <path
-                  d="M40 175 C 100 200, 150 110, 195 90 S 290 175, 330 140 S 420 55, 460 75 S 540 165, 590 120 S 670 45, 710 65"
-                  stroke="#f6f1e8"
-                  strokeOpacity={0.18}
-                  strokeWidth={1.5}
-                  fill="none"
-                />
-                {areas.areas.map((a, i) => {
-                  const pos = DOT_POSITIONS[i];
-                  const isActive = active === i;
-                  return (
-                    <g
-                      key={a.name}
-                      className="cursor-pointer"
-                      onMouseEnter={() => setActive(i)}
-                    >
-                      <circle
-                        cx={pos.x}
-                        cy={pos.y}
-                        r={isActive ? 8 : 5}
-                        fill={isActive ? "#f5423f" : "#f6f1e8"}
-                        fillOpacity={isActive ? 1 : 0.5}
-                        style={{ transition: "all 0.35s ease" }}
-                      />
-                      {isActive && (
-                        <circle
-                          cx={pos.x}
-                          cy={pos.y}
-                          r={16}
-                          fill="none"
-                          stroke="#f5423f"
-                          strokeOpacity={0.5}
-                        />
-                      )}
-                      <text
-                        x={pos.x}
-                        y={pos.y - 18}
-                        textAnchor="middle"
-                        fill={isActive ? "#ff9a95" : "#f6f1e8"}
-                        fillOpacity={isActive ? 1 : 0.55}
-                        fontSize={13}
-                        style={{ fontFamily: "var(--font-sans)", letterSpacing: "0.04em" }}
-                      >
-                        {a.name}
-                      </text>
-                    </g>
-                  );
-                })}
-              </svg>
-            </div>
-
-            <div className="relative mt-8 hidden aspect-[16/10] w-full overflow-hidden rounded-sm sm:block">
+            <div className="relative aspect-[3/2] w-full overflow-hidden rounded-sm">
               <Image
                 key={active}
                 src={detailImages[active]}
@@ -116,13 +54,13 @@ export default function Areas({
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent" />
               <span className="absolute bottom-4 left-4 font-serif-display text-xl italic text-ivory">
-                {areas.areas[active].name}
+                {areas.items[active].name}
               </span>
             </div>
           </Reveal>
 
           <div className="flex flex-col divide-y divide-ivory/10 border-t border-ivory/10">
-            {areas.areas.map((a, i) => (
+            {areas.items.map((a, i) => (
               <button
                 key={a.name}
                 onMouseEnter={() => setActive(i)}
@@ -142,7 +80,7 @@ export default function Areas({
               </button>
             ))}
             <p className="sm:hidden pt-6 text-sm leading-relaxed text-ivory/65">
-              {areas.areas[active].description}
+              {areas.items[active].description}
             </p>
           </div>
         </div>

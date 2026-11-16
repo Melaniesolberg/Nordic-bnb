@@ -6,25 +6,28 @@
 ## Norsk
 
 Eiendomly forbedrer boligbilder med AI, møblerer tomme rom digitalt og viser hvordan enkle
-oppgraderinger kan løfte en bolig før salg eller utleie. Levering på 24–48 timer, ingen fotograf
-nødvendig.
+oppgraderinger kan løfte en bolig før salg eller utleie. For Airbnb-verter, utleiere, privatpersoner
+som selger selv, meglere, hoteller og restauranter. Levering på 24–48 timer, ingen fotograf nødvendig.
+Alt skjer skriftlig: skjema, e-post og levering på lenke. Grunnlegger: Melanie Solberg.
 
-Tjenester og priser:
-- Bildeløft (AI-forbedring av egne bilder): 790 kr. https://nordicbnb.es/eiendomly/bildeloft
-- Digital styling (digital møblering av tomme rom): 1 190 kr per rom, 3 rom for 2 990 kr. https://nordicbnb.es/eiendomly/digital-styling
-- Salgsløftet (før/etter-rapport med oppgraderingsforslag): Mini 4 900 kr, Stor 9 900 kr. https://nordicbnb.es/eiendomly/salgsloftet
+Tjenester og priser (inkl. mva., meglere faktureres eks. mva.):
+- Bildeløft – AI-forbedring av egne bilder, inntil 20 bilder: 790 kr. https://eiendomly.no/bildeloft
+- Digital styling – digital møblering av tomme rom: 1 190 kr per rom, 3 rom for 2 990 kr. https://eiendomly.no/digital-styling
+- Salgsløftet – før/etter-bilder og rapport med tiltak og kostnad: Mini 4 900 kr, Stor 9 900 kr. https://eiendomly.no/salgsloftet
 
-Bestilling: https://nordicbnb.es/eiendomly/bestill
+Bestilling: https://eiendomly.no/bestill
+Kontakt: hei@eiendomly.no
 
 ## English
 
 Eiendomly enhances property photos with AI, furnishes empty rooms digitally, and shows how
-simple upgrades can lift a property before sale or rental. Delivered in 24–48 hours, no
-photographer needed.
+simple upgrades can lift a property before sale or rental. For Airbnb hosts, landlords, private
+sellers, estate agents, hotels and restaurants. Delivered in 24–48 hours, no photographer needed.
 
-Services and prices:
-- Photo Boost (AI enhancement of your own photos): NOK 790. https://nordicbnb.es/eiendomly/en/photo-boost
-- Virtual Staging (digital furnishing of empty rooms): NOK 1,190 per room, 3 rooms for NOK 2,990. https://nordicbnb.es/eiendomly/en/virtual-staging
-- Sale Boost (before/after report with upgrade suggestions): Mini NOK 4,900, Large NOK 9,900. https://nordicbnb.es/eiendomly/en/sale-boost
+Services and prices (incl. VAT; estate agents invoiced excl. VAT):
+- Photo Boost – AI enhancement of your own photos, up to 20 photos: NOK 790. https://eiendomly.no/en/photo-boost
+- Virtual Staging – digital furnishing of empty rooms: NOK 1,190 per room, 3 rooms for NOK 2,990. https://eiendomly.no/en/virtual-staging
+- Sale Boost – before/after images and a report with work and costs: Mini NOK 4,900, Large NOK 9,900. https://eiendomly.no/en/sale-boost
 
-Order: https://nordicbnb.es/eiendomly/en/order
+Order: https://eiendomly.no/en/order
+Contact: hei@eiendomly.no
