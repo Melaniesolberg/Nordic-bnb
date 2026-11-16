@@ -28,8 +28,8 @@ export default function Cases({ content }: { content: CasesContent }) {
                   before={c.before}
                   after={c.after}
                   alt={caption}
-                  improvedLabel={content.improvedLabel}
                   beforeLabel={content.beforeLabel}
+                  afterLabel={content.improvedLabel}
                 />
                 <p className="mt-4 text-sm leading-relaxed text-charcoal/60">{caption}</p>
               </Reveal>

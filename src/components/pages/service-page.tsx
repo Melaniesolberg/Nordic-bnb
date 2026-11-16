@@ -37,10 +37,28 @@ export default function ServicePage({ locale, service }: { locale: Locale; servi
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-16 px-5 sm:px-8 lg:grid-cols-12 lg:gap-10 lg:px-12">
           <div className="lg:col-span-7">
             <Reveal>
-              <p className="max-w-2xl font-serif-display text-2xl leading-snug text-charcoal sm:text-3xl">
-                {page.whatItIs}
-              </p>
+              {page.highlight && (
+                <p className="max-w-2xl font-serif-display text-3xl leading-snug text-charcoal sm:text-4xl">
+                  {page.highlight}
+                </p>
+              )}
+              <p className="mt-8 max-w-2xl text-lg leading-relaxed text-charcoal/75">{page.whatItIs}</p>
             </Reveal>
+            {page.facts && (
+              <Reveal delay={0.05}>
+                <div className="mt-12 grid grid-cols-1 gap-px overflow-hidden rounded-sm bg-charcoal/10 sm:grid-cols-3">
+                  {page.facts.map((fact) => (
+                    <div key={fact.value} className="bg-ivory-soft p-6">
+                      <p className="font-serif-display text-4xl text-coral">{fact.value}</p>
+                      <p className="mt-3 text-sm leading-relaxed text-charcoal/70">{fact.label}</p>
+                      {fact.source && (
+                        <p className="mt-3 text-[0.68rem] uppercase tracking-[0.16em] text-charcoal/40">{fact.source}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+            )}
             <Reveal delay={0.08}>
               <Eyebrow className="mt-14">{page.includesHeading}</Eyebrow>
               <ul className="mt-6 space-y-4">

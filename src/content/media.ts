@@ -11,11 +11,13 @@ export const media = {
   // ending inside the living room. Encoded 1080p, keyframe every 8 frames,
   // +faststart so per-frame seeking stays cheap. Poster = its first frame.
   heroVideo: `${UPLOADS}/8c205a3b-2025-4389-adc4-f7e025c752b8.mp4`,
+  // 1280px, keyframe every 6 frames: lighter and smoother to scrub on phones.
+  heroVideoMobile: `${UPLOADS}/8054de05-1db7-46f7-a811-d513256757e1.mp4`,
   heroPoster: `${UPLOADS}/bcda31b0-8a5c-410b-affb-851cd074e153.jpg`,
 
   // Same living room before and after enhancement (the "before" was made
   // from the "after" by reference editing, so layout and furniture match).
-  livingBefore: `${CDN}/hf_20261116_213749_70dfe499-4ed2-499e-802a-a194c5d5e267.png`,
+  livingBefore: `${CDN}/hf_20261116_231520_c02b0d3e-e6a1-4930-8546-f2fb9bb14f91.png`,
   livingAfter: `${CDN}/hf_20261116_213508_08bff40a-482a-40a1-aacd-d6b6d29b3ac5.png`,
 
   stagedLiving: `${CDN}/hf_20261116_213509_220da4bb-c3da-4aea-bfe9-18fedb3d0c1d.png`,

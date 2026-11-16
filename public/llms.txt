@@ -1,33 +1,33 @@
 # Eiendomly
 
-> AI-forbedrede boligbilder, digital styling og salgsløft for det norske markedet.
-> AI-enhanced property photos, virtual staging and sale-boost reports for the Norwegian market.
+> Bildeløft, digital styling og salgsløft for boliger – med AI-verktøy, for det norske markedet.
+> Photo boost, virtual staging and sale boost for properties – using AI tools, for the Norwegian market.
 
 ## Norsk
 
-Eiendomly forbedrer boligbilder med AI, møblerer tomme rom digitalt og viser hvordan enkle
+Eiendomly bruker AI-verktøy til å gi boligbilder et løft, møblerer tomme rom digitalt og viser hvordan enkle
 oppgraderinger kan løfte en bolig før salg eller utleie. For Airbnb-verter, utleiere, privatpersoner
-som selger selv, meglere, hoteller og restauranter. Levering på 24–48 timer, ingen fotograf nødvendig.
+som selger selv, meglere, hoteller og restauranter. Bildeløft leveres innen 24 timer, ingen fotograf nødvendig.
 Alt skjer skriftlig: skjema, e-post og levering på lenke. Grunnlegger: Melanie Solberg.
 
 Tjenester og priser (inkl. mva., meglere faktureres eks. mva.):
-- Bildeløft – AI-forbedring av egne bilder, inntil 20 bilder: 790 kr. https://eiendomly.no/bildeloft
-- Digital styling – digital møblering av tomme rom: 1 190 kr per rom, 3 rom for 2 990 kr. https://eiendomly.no/digital-styling
-- Salgsløftet – før/etter-bilder og rapport med tiltak og kostnad: Mini 4 900 kr, Stor 9 900 kr. https://eiendomly.no/salgsloftet
+- Bildeløft – lysere og skarpere bilder for korttidsutleie, langtidsutleie og salg, inntil 40 bilder: 1 890 kr. https://eiendomly.no/bildeloft
+- Digital styling – digital møblering i stilen du velger: 1 190 kr per rom. https://eiendomly.no/digital-styling
+- Salgsløftet – før/etter-bilder av boligens potensial og handleliste med tiltak og kostnad: Mini 4 900 kr, Stor 9 900 kr. https://eiendomly.no/salgsloftet
 
 Bestilling: https://eiendomly.no/bestill
 Kontakt: hei@eiendomly.no
 
 ## English
 
-Eiendomly enhances property photos with AI, furnishes empty rooms digitally, and shows how
+Eiendomly uses AI tools to give property photos a lift, furnishes empty rooms digitally, and shows how
 simple upgrades can lift a property before sale or rental. For Airbnb hosts, landlords, private
-sellers, estate agents, hotels and restaurants. Delivered in 24–48 hours, no photographer needed.
+sellers, estate agents, hotels and restaurants. Photo Boost is delivered within 24 hours, no photographer needed.
 
 Services and prices (incl. VAT; estate agents invoiced excl. VAT):
-- Photo Boost – AI enhancement of your own photos, up to 20 photos: NOK 790. https://eiendomly.no/en/photo-boost
-- Virtual Staging – digital furnishing of empty rooms: NOK 1,190 per room, 3 rooms for NOK 2,990. https://eiendomly.no/en/virtual-staging
-- Sale Boost – before/after images and a report with work and costs: Mini NOK 4,900, Large NOK 9,900. https://eiendomly.no/en/sale-boost
+- Photo Boost – brighter, sharper photos for short-term rentals, long-term rentals and sales, up to 40 photos: NOK 1,890. https://eiendomly.no/en/photo-boost
+- Virtual Staging – digital furnishing in the style you choose: NOK 1,190 per room. https://eiendomly.no/en/virtual-staging
+- Sale Boost – before/after images of the home's potential and a shopping list with work and costs: Mini NOK 4,900, Large NOK 9,900. https://eiendomly.no/en/sale-boost
 
 Order: https://eiendomly.no/en/order
 Contact: hei@eiendomly.no

@@ -1,6 +1,7 @@
 import PageShell from "@/components/layout/page-shell";
 import Hero from "@/components/sections/hero";
-import BeforeAfter from "@/components/sections/before-after";
+import Problem from "@/components/sections/problem";
+import PhotoBoostReveal from "@/components/sections/photo-boost-reveal";
 import PropertyShowcase from "@/components/sections/property-showcase";
 import System from "@/components/sections/system";
 import Cases from "@/components/sections/cases";
@@ -30,13 +31,10 @@ export default function HomePage({ locale }: { locale: Locale }) {
         secondaryHref={localeHref(locale, "/#services")}
         imageSrc={media.heroPoster}
         videoSrc={media.heroVideo}
+        mobileVideoSrc={media.heroVideoMobile}
       />
-      <BeforeAfter problem={content.problem} posterSrc={media.livingBefore} />
-      <PropertyShowcase
-        imageSrc={media.livingAfter}
-        eyebrow={content.showcase1.eyebrow}
-        headline={content.showcase1.heading}
-      />
+      <Problem locale={locale} problem={content.problem} imageSrc={media.livingBefore} />
+      <PhotoBoostReveal content={content.photoBoost} beforeSrc={media.livingBefore} afterSrc={media.livingAfter} />
       <System
         system={content.howItWorks}
         bgImageSrc={media.houseDusk}

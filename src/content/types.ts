@@ -13,7 +13,8 @@ export interface HeroContent {
   subline: string;
   ctaPrimary: string;
   ctaSecondary: string;
-  scrollHint: string;
+  /** Text that replaces the intro as the visitor scrolls through the hero video. */
+  beats: { eyebrow: string; heading: string; body: string }[];
   locationTag: string;
 }
 
@@ -21,7 +22,19 @@ export interface ProblemContent {
   eyebrow: string;
   heading: string;
   intro: string;
-  note: string;
+  /** Seconds the countdown starts from. */
+  seconds: number;
+  unit: string;
+  stat: { value: string; text: string; source: string };
+}
+
+export interface PhotoBoostRevealContent {
+  eyebrow: string;
+  heading: string;
+  body: string;
+  hint: string;
+  beforeLabel: string;
+  afterLabel: string;
 }
 
 export interface ShowcaseContent {
@@ -137,6 +150,9 @@ export interface ServicePageContent {
   whatItIs: string;
   includesHeading: string;
   includes: string[];
+  /** One short line shown large under the intro. */
+  highlight?: string;
+  facts?: { value: string; label: string; source?: string }[];
   priceHeading: string;
   price?: string;
   priceNote?: string;
@@ -186,7 +202,7 @@ export interface SiteContent {
   nav: NavContent;
   hero: HeroContent;
   problem: ProblemContent;
-  showcase1: ShowcaseContent;
+  photoBoost: PhotoBoostRevealContent;
   showcase2: ShowcaseContent;
   howItWorks: HowItWorksContent;
   cases: CasesContent;
