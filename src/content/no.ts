@@ -20,7 +20,7 @@ export const no: SiteContent = {
   },
   hero: {
     eyebrow: "Boligfoto · Digital styling · Salgsløft",
-    headlineLines: ["Førstebildet avgjør", "om de klikker."],
+    headlineLines: ["Det første bildet avgjør", "om de klikker."],
     subline: "Vi gjør bildene dine klare for FINN, Airbnb og Booking.com – uten fotograf.",
     ctaPrimary: "Bestill bildeløft",
     ctaSecondary: "Se tjenestene",
@@ -98,7 +98,7 @@ export const no: SiteContent = {
         price: "1 890 kr",
         priceNote: "inntil 40 bilder",
         description:
-          "Førstebildet avgjør på 2,7 sekunder om noen klikker seg inn. Vi bruker AI-verktøy til å gjøre bildene lysere og skarpere, rette opp linjer og fjerne løst rot. Passer for korttidsutleie, langtidsutleie og salg av bolig.",
+          "Det første bildet avgjør på 2,7 sekunder om noen klikker seg inn. Vi bruker AI-verktøy til å gjøre bildene lysere og skarpere, rette opp linjer og fjerne løst rot. Passer for korttidsutleie, langtidsutleie og salg av bolig.",
         features: [
           "Inntil 40 bilder med bildeløft",
           "Valgt og optimalisert forsidebilde",
@@ -262,6 +262,8 @@ export const no: SiteContent = {
       ],
       submit: "Send bestilling",
       errorMessage: "Noe gikk galt. Prøv igjen, eller send oss en e-post på",
+      privacyNote: "Vi verner om personvernet ditt. Opplysningene du oppgir brukes kun til å svare deg og levere tjenesten – vi deler dem ikke med andre.",
+      privacyLink: "Les om personvern",
     },
   },
   servicePages: {
@@ -272,7 +274,7 @@ export const no: SiteContent = {
         "Passer for korttidsutleie, langtidsutleie og salg av bolig – for private utleiere, Airbnb-verter og deg som selger selv.",
       whatItIs:
         "Du sender bildene du har, også mobilbilder. Vi bruker AI-verktøy til å gjøre dem lysere og skarpere, rette opp linjer og fjerne løst rot. Du får også et sterkere forsidebilde og forslag til tittel.",
-      highlight: "Førstebildet avgjør på 2,7 sekunder om noen klikker seg inn – eller blar videre.",
+      highlight: "Det første bildet avgjør på 2,7 sekunder om noen klikker seg inn – eller blar videre.",
       facts: [
         {
           value: "2,7 sek",
@@ -371,8 +373,12 @@ export const no: SiteContent = {
       heading: "Personvern",
       updated: "Sist oppdatert: november 2026",
       intro:
-        "Denne siden forklarer hva Eiendomly samler inn når du bruker bestillingsskjemaet, hvorfor, og hvilke rettigheter du har.",
+        "Vi verner om personvernet ditt. Opplysningene du gir oss brukes kun til å levere tjenesten du bestiller – vi selger dem ikke og deler dem ikke med andre. Under kan du lese hva vi samler inn, hvorfor, og hvilke rettigheter du har.",
       sections: [
+        {
+          heading: "Vi deler ikke opplysningene dine",
+          body: "Navn, e-post, bilder og annet du sender oss blir hos Eiendomly. Vi selger, leier ut eller deler aldri opplysningene dine med andre. De eneste som behandler dem er tekniske leverandører som drifter skjemaet og e-posten vår, og de gjør det kun på våre vegne.",
+        },
         {
           heading: "Hva vi samler inn",
           body: "Når du fyller ut bestillingsskjemaet, lagrer vi navn, e-post, hvilken type kunde du er, hvilken tjeneste du ønsker, lenken til bildene dine, eventuell kommentar og om du samtykker til markedsføringsbruk av før/etter-bilder.",
@@ -387,11 +393,11 @@ export const no: SiteContent = {
         },
         {
           heading: "Underleverandører",
-          body: "Skjemaet driftes av Netlify (Netlify Forms), som mottar og lagrer innsendingene. Vi bruker også e-post og eventuelt analyseverktøy for å forstå bruken av siden.",
+          body: "Skjemaet driftes av Netlify (Netlify Forms), som mottar og lagrer innsendingene på våre vegne. Vi bruker også en e-posttjeneste. Analyseverktøy brukes bare hvis du har godtatt det i cookie-valget.",
         },
         {
           heading: "Dine rettigheter",
-          body: "Du kan be om innsyn i, retting eller sletting av dine opplysninger ved å kontakte oss på e-post.",
+          body: "Du kan når som helst be om innsyn i, retting eller sletting av opplysningene dine ved å kontakte oss på e-post. Du kan også klage til Datatilsynet.",
         },
       ],
     },
@@ -433,7 +439,7 @@ export const no: SiteContent = {
       heading: "Informasjonskapsler",
       updated: "Sist oppdatert: november 2026",
       intro:
-        "Vi bruker informasjonskapsler (cookies) kun etter samtykke, og du kan endre valget ditt når du vil.",
+        "Vi verner om personvernet ditt. Vi bruker informasjonskapsler (cookies) til analyse og markedsføring kun etter samtykke, vi deler ikke opplysningene dine med andre, og du kan endre valget ditt når du vil.",
       sections: [
         {
           heading: "Nødvendige",
@@ -451,7 +457,7 @@ export const no: SiteContent = {
     },
   },
   consent: {
-    message: "Vi bruker informasjonskapsler til analyse og markedsføring. Du velger selv hva du godtar.",
+    message: "Vi verner om personvernet ditt og deler ikke opplysningene dine med andre. Informasjonskapsler til analyse og markedsføring brukes bare hvis du godtar det.",
     acceptAll: "Godta alle",
     rejectAll: "Avvis alle",
     settings: "Innstillinger",
@@ -461,7 +467,7 @@ export const no: SiteContent = {
     changeConsent: "Endre samtykke",
   },
   footer: {
-    tagline: "Førstebildet avgjør. Vi gjør det riktig.",
+    tagline: "Det første bildet avgjør. Vi gjør det riktig.",
     linksHeading: "Nettsted",
     legalHeading: "Juridisk",
     contactHeading: "Kontakt",

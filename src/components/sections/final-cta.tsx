@@ -188,6 +188,17 @@ export default function FinalCta({
                         {status === "submitting" ? "…" : finalCta.form.submit}
                       </button>
                     </Magnetic>
+                    <p className="mt-5 flex items-start gap-2 text-xs leading-relaxed text-ivory/55">
+                      <svg viewBox="0 0 24 24" fill="none" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-coral-soft" aria-hidden>
+                        <path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6l-7-3Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                      </svg>
+                      <span>
+                        {finalCta.form.privacyNote}{" "}
+                        <a href={pageHref(locale, "privacy")} className="underline underline-offset-2 hover:text-ivory">
+                          {finalCta.form.privacyLink}
+                        </a>
+                      </span>
+                    </p>
                     {status === "error" && (
                       <p role="alert" className="mt-4 text-sm text-coral-soft">
                         {finalCta.form.errorMessage}{" "}

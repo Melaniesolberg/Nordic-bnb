@@ -133,6 +133,8 @@ export interface OrderFormContent {
   serviceOptions: { key: ServiceKey | "unsure"; label: string }[];
   submit: string;
   errorMessage: string;
+  privacyNote: string;
+  privacyLink: string;
 }
 
 export interface FinalCtaContent {

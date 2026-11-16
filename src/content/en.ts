@@ -260,6 +260,8 @@ export const en: SiteContent = {
       ],
       submit: "Send order",
       errorMessage: "Something went wrong. Please try again, or email us at",
+      privacyNote: "We protect your privacy. The information you provide is only used to reply to you and deliver the service – we never share it with others.",
+      privacyLink: "Read our privacy policy",
     },
   },
   servicePages: {
@@ -369,8 +371,12 @@ export const en: SiteContent = {
       heading: "Privacy",
       updated: "Last updated: November 2026",
       intro:
-        "This page explains what Eiendomly collects when you use the order form, why, and what rights you have.",
+        "We protect your privacy. The information you give us is only used to deliver the service you order – we never sell it or share it with others. Below you can read what we collect, why, and what rights you have.",
       sections: [
+        {
+          heading: "We don't share your information",
+          body: "Your name, email, photos and anything else you send us stay with Eiendomly. We never sell, rent out or share your information with others. The only parties that process it are the technical providers that run our form and email, and they do so solely on our behalf.",
+        },
         {
           heading: "What we collect",
           body: "When you fill in the order form, we store your name, email, customer type, requested service, a link to your photos, any comment, and whether you consent to marketing use of the before/after photos.",
@@ -385,11 +391,11 @@ export const en: SiteContent = {
         },
         {
           heading: "Sub-processors",
-          body: "The form is run on Netlify (Netlify Forms), which receives and stores submissions. We also use email and may use analytics tools to understand how the site is used.",
+          body: "The form is run on Netlify (Netlify Forms), which receives and stores submissions on our behalf. We also use an email service. Analytics tools are only used if you have accepted them in the cookie settings.",
         },
         {
           heading: "Your rights",
-          body: "You can request access to, correction of, or deletion of your data by contacting us by email.",
+          body: "You can request access to, correction of, or deletion of your data at any time by contacting us by email. You can also complain to the Norwegian Data Protection Authority (Datatilsynet).",
         },
       ],
     },
@@ -424,7 +430,7 @@ export const en: SiteContent = {
       eyebrow: "Cookies",
       heading: "Cookies",
       updated: "Last updated: November 2026",
-      intro: "We only use cookies after consent, and you can change your choice at any time.",
+      intro: "We protect your privacy. We only use analytics and marketing cookies after consent, we don't share your information with others, and you can change your choice at any time.",
       sections: [
         {
           heading: "Necessary",
@@ -442,7 +448,7 @@ export const en: SiteContent = {
     },
   },
   consent: {
-    message: "We use cookies for analytics and marketing. You choose what you accept.",
+    message: "We protect your privacy and never share your information with others. Analytics and marketing cookies are only used if you accept them.",
     acceptAll: "Accept all",
     rejectAll: "Reject all",
     settings: "Settings",
