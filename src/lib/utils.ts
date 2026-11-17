@@ -10,7 +10,7 @@ export function cn(...inputs: ClassValue[]) {
 export const SITE_URL = process.env.URL ?? "https://eiendomly.no";
 
 export const CONTACT = {
-  email: "hei@eiendomly.no",
+  email: "kontakt@eiendomly.no",
   orgNumber: "930 895 008",
   orgNumberUrl: "https://virksomhet.brreg.no/oppslag/enheter/930895008",
 };
