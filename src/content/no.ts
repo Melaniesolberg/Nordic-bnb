@@ -281,7 +281,7 @@ export const no: SiteContent = {
       { q: "Kan jeg bruke bildene på Airbnb?", a: "Ja, Bildeløft er laget for det. Vi holder det naturlig og legger aldri tekst i bildene." },
       { q: "Hvem eier bildene?", a: "Du bekrefter at du har rett til bildene du sender. Du får full bruksrett til resultatet." },
       { q: "Hvor fort får jeg dem?", a: "Bildeløft innen 24 timer. For digital styling og Salgsløftet får du beskjed om leveringstid når vi har sett bildene." },
-      { q: "Hva hvis jeg ikke er fornøyd?", a: "Du får én ny runde gratis, eller pengene tilbake." },
+      { q: "Hva hvis jeg ikke er fornøyd?", a: "Da får du én ny runde gratis der vi justerer bildene etter ønskene dine. Er du fortsatt ikke fornøyd etter det, får du 50 % av beløpet tilbake." },
       { q: "Må jeg ta nye bilder?", a: "Nei. Vi bruker bildene du har, også mobilbilder." },
       { q: "Øker Salgsløftet verdien?", a: "Enkle grep som maling og nye kjøkkenfronter kan løfte boligen betraktelig. Hvor mye taksten kan øke, vurderer megler eller takstmann – vi lover ingen bestemt sum." },
       { q: "Hvordan betaler jeg?", a: "Du får faktura på e-post etter levering." },
@@ -488,7 +488,7 @@ export const no: SiteContent = {
         },
         {
           heading: "Hvis du ikke er fornøyd",
-          body: "Du får én ny runde gratis, eller pengene tilbake.",
+          body: "Er du ikke fornøyd med leveransen, får du én ny runde gratis der vi justerer bildene etter ønskene dine. Er du fortsatt ikke fornøyd etter den nye runden, får du 50 % av beløpet tilbake. Resten dekker arbeidet som er utført. Si fra innen 7 dager etter levering.",
         },
         { heading: "Lovvalg", body: "Norsk lov gjelder for disse vilkårene." },
       ],
