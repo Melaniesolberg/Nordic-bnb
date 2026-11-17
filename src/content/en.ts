@@ -10,6 +10,7 @@ export const en: SiteContent = {
     links: [
       { label: "How it works", href: "/en#system" },
       { label: "Services", href: "/en#services" },
+      { label: "Plans", href: "/en#avtaler" },
       { label: "Who we help", href: "/en#areas" },
       { label: "About", href: "/en#about" },
       { label: "FAQ", href: "/en#faq" },
@@ -90,7 +91,7 @@ export const en: SiteContent = {
     eyebrow: "Services",
     heading: "Find the right boost for your property.",
     intro:
-      "Three services – from a quick photo boost to a complete plan for selling. Fixed prices, invoiced after delivery.",
+      "Three services – from a quick photo boost to a complete plan for selling. Fixed prices, invoiced after delivery. Several properties a month? A monthly plan gives the best value for money.",
     items: [
       {
         key: "photoBoost",
@@ -140,6 +141,49 @@ export const en: SiteContent = {
     ],
     termsNote: "All prices include VAT. Estate agents are invoiced excl. VAT.",
     ctaLabel: "Read more",
+  },
+  plans: {
+    eyebrow: "Monthly plans",
+    badge: "Best value for money",
+    heading: "Several properties a month? A plan gives you the most for your money.",
+    intro:
+      "For estate agents and rental managers who need good photos every month. One fixed price, one invoice – and up to 47% less than ordering each time.",
+    items: [
+      {
+        key: "brokerPlan",
+        title: "Agent Plan",
+        audience: "For estate agents and agencies",
+        price: "NOK 9,900",
+        pricePeriod: "per month",
+        value: "NOK 18,690",
+        savings: "Save NOK 8,790 a month",
+        badge: "Best value for money",
+        features: [
+          "Photo Boost for up to 8 properties a month – up to 40 photos each",
+          "Virtual staging of 3 rooms a month",
+          "Extra Photo Boost: NOK 1,490 (normally NOK 1,890)",
+          "One combined invoice a month",
+        ],
+      },
+      {
+        key: "managerPlan",
+        title: "Manager Plan",
+        audience: "For Airbnb and rental managers",
+        price: "NOK 4,900",
+        pricePeriod: "per month",
+        value: "NOK 7,560",
+        savings: "Save NOK 2,660 a month",
+        features: [
+          "Photo Boost for up to 4 units a month – up to 40 photos each",
+          "Natural enhancement that follows Airbnb's rules",
+          "Extra Photo Boost: NOK 1,490 (normally NOK 1,890)",
+          "One combined invoice a month",
+        ],
+      },
+    ],
+    terms: ["First month free", "3-month commitment, then 1 month's notice", "Invoiced at the start of each month"],
+    note: "Value when bought separately is based on standard prices. Unused jobs don't carry over to the next month. Sale Boost is ordered separately.",
+    ctaLabel: "Start free month",
   },
   audiences: {
     eyebrow: "Who we help",
@@ -222,6 +266,7 @@ export const en: SiteContent = {
     eyebrow: "FAQ",
     heading: "Frequently asked questions.",
     items: [
+      { q: "What is a monthly plan?", a: "For estate agents and rental managers with several properties a month. You pay a fixed price and get a number of photo jobs included every month – up to 47% cheaper than ordering one at a time. The first month is free." },
       { q: "Is this allowed?", a: "Yes, as long as the photos don't mislead. We improve light and quality, label virtual staging and never change fixed features or damage." },
       { q: "Can I use the photos on Airbnb?", a: "Yes, Photo Boost is made for that. We keep it natural and never add text to the photos." },
       { q: "Who owns the photos?", a: "You confirm you have the rights to the photos you send. You get full rights to use the result." },
@@ -251,11 +296,13 @@ export const en: SiteContent = {
           "Optional – 10% off: Eiendomly may use the before/after photos, without address or personal details, in its own marketing.",
       },
       selectPlaceholder: "Choose …",
-      customerTypes: ["Private landlord", "Airbnb host", "Selling privately", "Estate agent", "Hotel", "Restaurant"],
+      customerTypes: ["Private landlord", "Airbnb host", "Selling privately", "Estate agent", "Rental manager", "Hotel", "Restaurant"],
       serviceOptions: [
         { key: "photoBoost", label: "Photo Boost" },
         { key: "virtualStaging", label: "Virtual Staging" },
         { key: "saleBoost", label: "Sale Boost" },
+        { key: "brokerPlan", label: "Agent Plan – NOK 9,900/month" },
+        { key: "managerPlan", label: "Manager Plan – NOK 4,900/month" },
         { key: "unsure", label: "Not sure" },
       ],
       submit: "Send order",
@@ -420,6 +467,10 @@ export const en: SiteContent = {
         {
           heading: "Your responsibility",
           body: "You are responsible for how and where the photos are published, and for ensuring publication follows applicable rules, such as Airbnb's guidelines.",
+        },
+        {
+          heading: "Monthly plans",
+          body: "The Agent Plan and Manager Plan start with one free month, followed by a 3-month commitment and 1 month's notice. Plans are invoiced at the start of each month. Jobs not used during the month don't carry over. Extra Photo Boosts beyond the plan cost NOK 1,490.",
         },
         { heading: "Payment", body: "You receive an invoice by email after delivery, due within 14 days." },
         { heading: "If you're not happy", body: "You get one free revision, or your money back." },

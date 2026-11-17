@@ -6,6 +6,7 @@ import PropertyShowcase from "@/components/sections/property-showcase";
 import System from "@/components/sections/system";
 import Cases from "@/components/sections/cases";
 import Services from "@/components/sections/services";
+import Plans from "@/components/sections/plans";
 import Areas from "@/components/sections/areas";
 import About from "@/components/sections/about";
 import Compare from "@/components/sections/compare";
@@ -49,6 +50,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
         align="right"
       />
       <Services locale={locale} services={content.services} imageSrc={media.kitchenRefresh} />
+      <Plans locale={locale} plans={content.plans} />
       <Areas
         areas={content.audiences}
         imageSrc={media.harbourTown}

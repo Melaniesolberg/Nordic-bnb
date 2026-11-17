@@ -35,7 +35,15 @@ export function homeJsonLd(locale: Locale) {
           price: priceNumber(s.price),
           url: `${SITE_URL}${pageHref(locale, s.key)}`,
           itemOffered: { "@type": "Service", name: s.title, description: s.description },
-        })),
+        })).concat(
+          content.plans.items.map((plan) => ({
+            "@type": "Offer",
+            priceCurrency: "NOK",
+            price: priceNumber(plan.price),
+            url: `${SITE_URL}${pageHref(locale, "order")}?service=${plan.key}`,
+            itemOffered: { "@type": "Service", name: plan.title, description: plan.features.join(". ") },
+          })),
+        ),
       },
       {
         "@type": "Person",

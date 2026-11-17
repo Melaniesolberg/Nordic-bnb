@@ -10,6 +10,7 @@ export const no: SiteContent = {
     links: [
       { label: "Slik fungerer det", href: "/#system" },
       { label: "Tjenester", href: "/#services" },
+      { label: "Faste avtaler", href: "/#avtaler" },
       { label: "Hvem vi hjelper", href: "/#areas" },
       { label: "Om meg", href: "/#about" },
       { label: "FAQ", href: "/#faq" },
@@ -90,7 +91,7 @@ export const no: SiteContent = {
     eyebrow: "Tjenester",
     heading: "Finn riktig løft for eiendommen din.",
     intro:
-      "Tre tjenester – fra raske bildeløft til en komplett plan for salg. Du betaler fast pris, og får faktura etter levering.",
+      "Tre tjenester – fra raske bildeløft til en komplett plan for salg. Du betaler fast pris, og får faktura etter levering. Har du flere boliger i måneden, gir en fast avtale mest verdi for pengene.",
     items: [
       {
         key: "photoBoost",
@@ -140,6 +141,49 @@ export const no: SiteContent = {
     ],
     termsNote: "Alle priser inkl. mva. Meglere faktureres eks. mva.",
     ctaLabel: "Les mer",
+  },
+  plans: {
+    eyebrow: "Faste avtaler",
+    badge: "Mest verdi for pengene",
+    heading: "Flere boliger i måneden? Fast avtale gir mest for pengene.",
+    intro:
+      "For meglere og utleieforvaltere som trenger gode bilder hver måned. Én fast pris, én faktura – og opptil 47 % lavere pris enn å bestille hver gang.",
+    items: [
+      {
+        key: "brokerPlan",
+        title: "Megleravtale",
+        audience: "For eiendomsmeglere og meglerkontor",
+        price: "9 900 kr",
+        pricePeriod: "per måned",
+        value: "18 690 kr",
+        savings: "Spar 8 790 kr i måneden",
+        badge: "Mest verdi for pengene",
+        features: [
+          "Bildeløft for opptil 8 boliger i måneden – inntil 40 bilder per bolig",
+          "Digital styling av 3 rom i måneden",
+          "Ekstra Bildeløft: 1 490 kr (ellers 1 890 kr)",
+          "Én samlet faktura i måneden",
+        ],
+      },
+      {
+        key: "managerPlan",
+        title: "Forvalteravtale",
+        audience: "For Airbnb- og utleieforvaltere",
+        price: "4 900 kr",
+        pricePeriod: "per måned",
+        value: "7 560 kr",
+        savings: "Spar 2 660 kr i måneden",
+        features: [
+          "Bildeløft for opptil 4 enheter i måneden – inntil 40 bilder per enhet",
+          "Naturlig forbedring som følger Airbnbs regler",
+          "Ekstra Bildeløft: 1 490 kr (ellers 1 890 kr)",
+          "Én samlet faktura i måneden",
+        ],
+      },
+    ],
+    terms: ["Første måned gratis", "3 måneders binding, deretter 1 måneds oppsigelse", "Faktura i starten av måneden"],
+    note: "Verdi kjøpt enkeltvis er beregnet med vanlige priser. Ubrukte jobber overføres ikke til neste måned. Salgsløftet bestilles separat.",
+    ctaLabel: "Start gratis måned",
   },
   audiences: {
     eyebrow: "Hvem vi hjelper",
@@ -224,6 +268,7 @@ export const no: SiteContent = {
     eyebrow: "FAQ",
     heading: "Ofte stilte spørsmål.",
     items: [
+      { q: "Hva er en fast avtale?", a: "For meglere og utleieforvaltere med flere boliger i måneden. Du betaler en fast pris og får et antall bildejobber inkludert hver måned – opptil 47 % billigere enn å bestille enkeltvis. Første måned er gratis." },
       { q: "Er dette lov?", a: "Ja, når bildene ikke villeder. Vi forbedrer lys og kvalitet, merker digital styling og endrer aldri faste ting eller skader." },
       { q: "Kan jeg bruke bildene på Airbnb?", a: "Ja, Bildeløft er laget for det. Vi holder det naturlig og legger aldri tekst i bildene." },
       { q: "Hvem eier bildene?", a: "Du bekrefter at du har rett til bildene du sender. Du får full bruksrett til resultatet." },
@@ -253,11 +298,13 @@ export const no: SiteContent = {
           "Valgfritt – 10 % rabatt: Eiendomly kan bruke før/etter-bildene uten adresse og personlige detaljer i egen markedsføring.",
       },
       selectPlaceholder: "Velg …",
-      customerTypes: ["Privat utleier", "Airbnb-vert", "Selger selv", "Megler", "Hotell", "Restaurant"],
+      customerTypes: ["Privat utleier", "Airbnb-vert", "Selger selv", "Megler", "Utleieforvalter", "Hotell", "Restaurant"],
       serviceOptions: [
         { key: "photoBoost", label: "Bildeløft" },
         { key: "virtualStaging", label: "Digital styling" },
         { key: "saleBoost", label: "Salgsløftet" },
+        { key: "brokerPlan", label: "Megleravtale – 9 900 kr/mnd" },
+        { key: "managerPlan", label: "Forvalteravtale – 4 900 kr/mnd" },
         { key: "unsure", label: "Usikker" },
       ],
       submit: "Send bestilling",
@@ -422,6 +469,10 @@ export const no: SiteContent = {
         {
           heading: "Ditt ansvar",
           body: "Du er selv ansvarlig for hvordan og hvor bildene publiseres, og for at publiseringen følger gjeldende regler, for eksempel Airbnbs retningslinjer.",
+        },
+        {
+          heading: "Faste avtaler",
+          body: "Megleravtale og forvalteravtale har første måned gratis, deretter 3 måneders binding og 1 måneds oppsigelse. Avtalen faktureres i starten av hver måned. Jobber som ikke brukes i løpet av måneden, overføres ikke. Ekstra Bildeløft utover avtalen koster 1 490 kr.",
         },
         {
           heading: "Betaling",

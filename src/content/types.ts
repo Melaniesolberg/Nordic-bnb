@@ -70,6 +70,31 @@ export interface ServicesContent {
   ctaLabel: string;
 }
 
+export type PlanKey = "brokerPlan" | "managerPlan";
+
+export interface PlanItem {
+  key: PlanKey;
+  title: string;
+  audience: string;
+  price: string;
+  pricePeriod: string;
+  value: string;
+  savings: string;
+  features: string[];
+  badge?: string;
+}
+
+export interface PlansContent {
+  eyebrow: string;
+  badge: string;
+  heading: string;
+  intro: string;
+  items: PlanItem[];
+  terms: string[];
+  note: string;
+  ctaLabel: string;
+}
+
 export interface AudiencesContent {
   eyebrow: string;
   heading: string;
@@ -130,7 +155,7 @@ export interface OrderFormContent {
   };
   selectPlaceholder: string;
   customerTypes: string[];
-  serviceOptions: { key: ServiceKey | "unsure"; label: string }[];
+  serviceOptions: { key: ServiceKey | PlanKey | "unsure"; label: string }[];
   submit: string;
   errorMessage: string;
   privacyNote: string;
@@ -209,6 +234,7 @@ export interface SiteContent {
   howItWorks: HowItWorksContent;
   cases: CasesContent;
   services: ServicesContent;
+  plans: PlansContent;
   audiences: AudiencesContent;
   about: AboutContent;
   honesty: HonestyContent;
