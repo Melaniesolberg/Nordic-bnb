@@ -62,12 +62,14 @@ export const en: SiteContent = {
   },
   showcase2: {
     eyebrow: "Virtual Staging",
-    heading: "Show what an empty room could become.",
-    body: "An empty room is hard to picture. You choose the style – modern, cosy or somewhere in between – and we furnish the room digitally. Walls, floors and windows are never changed, and the image is labelled as virtual staging.",
+    heading: "Virtual staging: see what an empty room could become.",
+    body: "Virtual staging means an empty or unfurnished room is furnished digitally in the property photos. Eiendomly does it for NOK 1,190 per room – a fraction of the cost of physical home staging – for estate agents, home sellers and landlords across Norway. You choose the style, modern or cosy, and walls, floors and windows are never changed. The images are labelled as virtual staging, so buyers know what is an illustration.",
     hint: "Drag to see the room before and after",
-    beforeLabel: "Before",
+    beforeLabel: "Before: empty room",
     afterLabel: "After virtual staging",
-    link: "Read about virtual staging",
+    beforeAlt: "Empty living room with large windows facing birch trees and a lake, before virtual staging",
+    afterAlt: "The same living room digitally furnished with a light sofa, round oak table, curtains and plants – after virtual staging by Eiendomly",
+    link: "See the price and how virtual staging works",
   },
   howItWorks: {
     eyebrow: "How it works",
@@ -272,6 +274,7 @@ export const en: SiteContent = {
     heading: "Frequently asked questions.",
     items: [
       { q: "What is a monthly plan?", a: "For estate agents and rental managers with several properties a month. You pay a fixed price and get a number of photo jobs included every month – up to 47% cheaper than ordering one at a time. The first month is free." },
+      { q: "What is virtual staging, and what does it cost?", a: "Virtual staging is digital furnishing of empty or worn rooms in property photos. At Eiendomly it costs NOK 1,190 per room. You choose the style, and the images are labelled as virtual staging. It suits home sales and long-term rentals, but not Airbnb." },
       { q: "Is this allowed?", a: "Yes, as long as the photos don't mislead. We improve light and quality, label virtual staging and never change fixed features or damage." },
       { q: "Can I use the photos on Airbnb?", a: "Yes, Photo Boost is made for that. We keep it natural and never add text to the photos." },
       { q: "Who owns the photos?", a: "You confirm you have the rights to the photos you send. You get full rights to use the result." },

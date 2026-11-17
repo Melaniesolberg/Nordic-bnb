@@ -47,7 +47,8 @@ export default function PhotoBoostReveal({
             <BeforeAfterSlider
               before={beforeSrc}
               after={afterSrc}
-              alt={content.afterLabel}
+              alt={content.afterAlt ?? content.afterLabel}
+              beforeAlt={content.beforeAlt}
               beforeLabel={content.beforeLabel}
               afterLabel={content.afterLabel}
               className="aspect-[4/3] sm:aspect-[16/9]"

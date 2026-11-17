@@ -8,6 +8,7 @@ export default function BeforeAfterSlider({
   before,
   after,
   alt,
+  beforeAlt = "",
   beforeLabel,
   afterLabel,
   className,
@@ -16,6 +17,7 @@ export default function BeforeAfterSlider({
   before: string;
   after: string;
   alt: string;
+  beforeAlt?: string;
   beforeLabel: string;
   afterLabel: string;
   /** Sets the frame's aspect ratio, e.g. "aspect-[4/3]". */
@@ -56,7 +58,7 @@ export default function BeforeAfterSlider({
 
       {/* Clipped rather than resized, so the before image stays aligned with the after image. */}
       <div className="absolute inset-0" style={{ clipPath: `inset(0 ${100 - split}% 0 0)` }}>
-        <Image src={before} alt="" fill sizes={sizes} className="object-cover" draggable={false} />
+        <Image src={before} alt={beforeAlt} fill sizes={sizes} className="object-cover" draggable={false} />
         <span className="absolute left-3 top-3 rounded-full bg-charcoal/80 px-3 py-1.5 text-[0.7rem] font-medium uppercase tracking-wide text-ivory shadow">
           {beforeLabel}
         </span>

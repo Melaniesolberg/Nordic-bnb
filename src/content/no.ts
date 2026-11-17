@@ -62,12 +62,14 @@ export const no: SiteContent = {
   },
   showcase2: {
     eyebrow: "Digital styling",
-    heading: "Vis hva et tomt rom kan bli.",
-    body: "Et tomt rom er vanskelig å se for seg. Du velger stil – moderne, hjemmekoselig eller midt imellom – så møblerer vi rommet digitalt. Vegger, gulv og vinduer endres aldri, og bildet merkes som digital styling.",
+    heading: "Digital styling: se hva et tomt rom kan bli.",
+    body: "Digital styling betyr at et tomt eller umøblert rom møbleres digitalt på boligbildene. Eiendomly gjør dette for 1 190 kr per rom – en brøkdel av hva fysisk boligstyling koster – for meglere, boligselgere og utleiere i hele Norge. Du velger stil, moderne eller hjemmekoselig, og vegger, gulv og vinduer endres aldri. Bildene merkes som digital styling, så kjøperne vet hva som er illustrasjon.",
     hint: "Dra for å se rommet før og etter",
-    beforeLabel: "Før",
+    beforeLabel: "Før: tomt rom",
     afterLabel: "Etter digital styling",
-    link: "Les om digital styling",
+    beforeAlt: "Tom stue med store vinduer mot bjørkeskog og innsjø, før digital styling",
+    afterAlt: "Samme stue digitalt møblert med lys sofa, rundt eikebord, gardiner og planter – etter digital styling fra Eiendomly",
+    link: "Se pris og hvordan digital styling fungerer",
   },
   howItWorks: {
     eyebrow: "Slik fungerer det",
@@ -274,6 +276,7 @@ export const no: SiteContent = {
     heading: "Ofte stilte spørsmål.",
     items: [
       { q: "Hva er en fast avtale?", a: "For meglere og utleieforvaltere med flere boliger i måneden. Du betaler en fast pris og får et antall bildejobber inkludert hver måned – opptil 47 % billigere enn å bestille enkeltvis. Første måned er gratis." },
+      { q: "Hva er digital styling, og hva koster det?", a: "Digital styling er digital møblering av tomme eller slitte rom på boligbilder. Hos Eiendomly koster det 1 190 kr per rom. Du velger stil, og bildene merkes som digital styling. Det passer for boligsalg og langtidsutleie, men ikke for Airbnb." },
       { q: "Er dette lov?", a: "Ja, når bildene ikke villeder. Vi forbedrer lys og kvalitet, merker digital styling og endrer aldri faste ting eller skader." },
       { q: "Kan jeg bruke bildene på Airbnb?", a: "Ja, Bildeløft er laget for det. Vi holder det naturlig og legger aldri tekst i bildene." },
       { q: "Hvem eier bildene?", a: "Du bekrefter at du har rett til bildene du sender. Du får full bruksrett til resultatet." },

@@ -30,6 +30,8 @@ export interface ProblemContent {
 
 export interface PhotoBoostRevealContent {
   link?: string;
+  beforeAlt?: string;
+  afterAlt?: string;
   eyebrow: string;
   heading: string;
   body: string;
