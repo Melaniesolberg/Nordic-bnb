@@ -60,9 +60,12 @@ function writeConsent(consent: Consent) {
 // Next.js only exposes NEXT_PUBLIC_-prefixed env vars to the browser, so the
 // pixel IDs must be set under these names in Netlify.
 const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID;
-// Google Tag Manager container (Google Analytics is configured inside it).
-// Public by nature; can be overridden with NEXT_PUBLIC_GTM_ID in Netlify.
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID ?? "GTM-KKN4BF9K";
+// Google Tag Manager containers (Google tag + Google Analytics are set up inside
+// them). Public by nature; override with a comma-separated NEXT_PUBLIC_GTM_IDS.
+const GTM_IDS = (process.env.NEXT_PUBLIC_GTM_IDS ?? "GTM-KKN4BF9K,GTM-M7GG6XJN")
+  .split(",")
+  .map((id) => id.trim())
+  .filter(Boolean);
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 
 const outlineButton =
@@ -97,7 +100,7 @@ export default function ConsentBanner({ copy }: { copy: ConsentContent }) {
 
   return (
     <>
-      {GTM_ID && consent?.analytics && (
+      {GTM_IDS.length > 0 && consent?.analytics && (
         <Script id="gtm-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -108,10 +111,11 @@ export default function ConsentBanner({ copy }: { copy: ConsentContent }) {
               ad_personalization: '${consent.marketing ? "granted" : "denied"}'
             });
             gtag('js', new Date());
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
-            var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-            j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','${GTM_ID}');`}
+            ${JSON.stringify(GTM_IDS)}.forEach(function(i){
+              var w=window,d=document;w.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+              var f=d.getElementsByTagName('script')[0],j=d.createElement('script');
+              j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);
+            });`}
         </Script>
       )}
       {GA4_ID && consent?.analytics && (
