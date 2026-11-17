@@ -503,7 +503,7 @@ export const no: SiteContent = {
         },
         {
           heading: "Analyse og markedsføring",
-          body: "Analyse- og markedsføringsverktøy (som GA4 og Meta Pixel) lastes kun hvis du har godtatt dette i samtykkebanneret.",
+          body: "Analyse- og markedsføringsverktøy (som Google Analytics via Google Tag Manager og Meta Pixel) lastes kun hvis du har godtatt dette i samtykkebanneret.",
         },
         {
           heading: "Endre samtykke",

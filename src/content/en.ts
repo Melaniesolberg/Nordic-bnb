@@ -494,7 +494,7 @@ export const en: SiteContent = {
         },
         {
           heading: "Analytics and marketing",
-          body: "Analytics and marketing tools (such as GA4 and Meta Pixel) are only loaded if you've accepted this in the consent banner.",
+          body: "Analytics and marketing tools (such as Google Analytics via Google Tag Manager, and Meta Pixel) are only loaded if you've accepted this in the consent banner.",
         },
         {
           heading: "Change consent",
