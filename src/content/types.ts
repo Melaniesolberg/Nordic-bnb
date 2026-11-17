@@ -29,6 +29,7 @@ export interface ProblemContent {
 }
 
 export interface PhotoBoostRevealContent {
+  link?: string;
   eyebrow: string;
   heading: string;
   body: string;
@@ -230,7 +231,7 @@ export interface SiteContent {
   hero: HeroContent;
   problem: ProblemContent;
   photoBoost: PhotoBoostRevealContent;
-  showcase2: ShowcaseContent;
+  showcase2: PhotoBoostRevealContent & { link: string };
   howItWorks: HowItWorksContent;
   cases: CasesContent;
   services: ServicesContent;

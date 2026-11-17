@@ -2,7 +2,6 @@ import PageShell from "@/components/layout/page-shell";
 import Hero from "@/components/sections/hero";
 import Problem from "@/components/sections/problem";
 import PhotoBoostReveal from "@/components/sections/photo-boost-reveal";
-import PropertyShowcase from "@/components/sections/property-showcase";
 import System from "@/components/sections/system";
 import Cases from "@/components/sections/cases";
 import Services from "@/components/sections/services";
@@ -17,7 +16,7 @@ import { getContent } from "@/content";
 import { media } from "@/content/media";
 import { SITE_CONFIG } from "@/content/config";
 import { homeJsonLd } from "@/content/json-ld";
-import { localeHref, type Locale } from "@/i18n/config";
+import { localeHref, pageHref, type Locale } from "@/i18n/config";
 
 export default function HomePage({ locale }: { locale: Locale }) {
   const content = getContent(locale);
@@ -43,11 +42,12 @@ export default function HomePage({ locale }: { locale: Locale }) {
       />
       {SITE_CONFIG.showCases && <Cases content={content.cases} />}
       <SectionDivider tone="light" iconClassName="h-10 w-10" />
-      <PropertyShowcase
-        imageSrc={media.stagedLiving}
-        eyebrow={content.showcase2.eyebrow}
-        headline={content.showcase2.heading}
-        align="right"
+      <PhotoBoostReveal
+        content={content.showcase2}
+        beforeSrc={media.emptyLiving}
+        afterSrc={media.stagedLivingAligned}
+        tone="dark"
+        linkHref={pageHref(locale, "virtualStaging")}
       />
       <Services locale={locale} services={content.services} imageSrc={media.kitchenRefresh} />
       <Plans locale={locale} plans={content.plans} />

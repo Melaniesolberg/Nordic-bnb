@@ -21,6 +21,9 @@ export const media = {
   livingAfter: `${CDN}/hf_20261116_213508_08bff40a-482a-40a1-aacd-d6b6d29b3ac5.png`,
 
   stagedLiving: `${CDN}/hf_20261116_213509_220da4bb-c3da-4aea-bfe9-18fedb3d0c1d.png`,
+  // Same room, empty vs. digitally staged – aligned pair for the staging slider.
+  emptyLiving: `${CDN}/hf_20261117_012657_e8fd3047-03f6-4593-a613-c5ade3ece1cc.png`,
+  stagedLivingAligned: `${CDN}/hf_20261117_012953_62a5237b-e473-43ed-ba10-28744093a155.png`,
   kitchenRefresh: `${CDN}/hf_20261116_213509_8a920441-9089-4c93-bbc7-024f339a0103.png`,
 
   stepPhone: `${CDN}/hf_20261116_213240_42f24f55-0986-442b-ba20-1e66d060f369.png`,

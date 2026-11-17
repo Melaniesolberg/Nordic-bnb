@@ -63,6 +63,11 @@ export const en: SiteContent = {
   showcase2: {
     eyebrow: "Virtual Staging",
     heading: "Show what an empty room could become.",
+    body: "An empty room is hard to picture. You choose the style – modern, cosy or somewhere in between – and we furnish the room digitally. Walls, floors and windows are never changed, and the image is labelled as virtual staging.",
+    hint: "Drag to see the room before and after",
+    beforeLabel: "Before",
+    afterLabel: "After virtual staging",
+    link: "Read about virtual staging",
   },
   howItWorks: {
     eyebrow: "How it works",

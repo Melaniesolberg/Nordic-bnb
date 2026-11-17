@@ -63,6 +63,11 @@ export const no: SiteContent = {
   showcase2: {
     eyebrow: "Digital styling",
     heading: "Vis hva et tomt rom kan bli.",
+    body: "Et tomt rom er vanskelig å se for seg. Du velger stil – moderne, hjemmekoselig eller midt imellom – så møblerer vi rommet digitalt. Vegger, gulv og vinduer endres aldri, og bildet merkes som digital styling.",
+    hint: "Dra for å se rommet før og etter",
+    beforeLabel: "Før",
+    afterLabel: "Etter digital styling",
+    link: "Les om digital styling",
   },
   howItWorks: {
     eyebrow: "Slik fungerer det",
