@@ -56,6 +56,17 @@ export default function FinalCta({
 }) {
   const router = useRouter();
   const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
+  // Private customers ordering a one-off service must accept that work starts
+  // right away and the right of withdrawal ends on delivery (angrerettloven § 22 a).
+  const [askWithdrawal, setAskWithdrawal] = useState(false);
+  function updateWithdrawal(form: HTMLFormElement) {
+    const type = (form.elements.namedItem("customer_type") as HTMLSelectElement | null)?.value ?? "";
+    const serviceSelect = form.elements.namedItem("service") as HTMLSelectElement | null;
+    const serviceKey = serviceSelect?.selectedOptions[0]?.dataset.key ?? "";
+    const isPrivate = finalCta.form.privateCustomerTypes.includes(type);
+    const isPlan = serviceKey === "brokerPlan" || serviceKey === "managerPlan";
+    setAskWithdrawal(isPrivate && !isPlan);
+  }
   const f = finalCta.form.fields;
   const Heading = headingAs;
 
@@ -118,6 +129,7 @@ export default function FinalCta({
                   data-netlify="true"
                   data-netlify-honeypot="bot-field"
                   onSubmit={handleSubmit}
+                  onChange={(e) => updateWithdrawal(e.currentTarget)}
                   className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2"
                 >
                   <input type="hidden" name="form-name" value={FORM_NAME} />
@@ -173,6 +185,17 @@ export default function FinalCta({
                     <input type="checkbox" name="rights_confirmed" value="ja" required className="mt-1 accent-coral" />
                     {f.rights}
                   </label>
+                  {askWithdrawal && (
+                    <label className="flex items-start gap-3 text-sm leading-relaxed text-ivory/75 sm:col-span-2">
+                      <input type="checkbox" name="withdrawal_consent" value="ja" required className="mt-1 accent-coral" />
+                      <span>
+                        {f.withdrawal}{" "}
+                        <a href={pageHref(locale, "terms")} className="underline underline-offset-2 hover:text-ivory">
+                          {locale === "no" ? "Se vilkår" : "See terms"}
+                        </a>
+                      </span>
+                    </label>
+                  )}
                   <label className="flex items-start gap-3 text-sm leading-relaxed text-ivory/60 sm:col-span-2">
                     <input type="checkbox" name="marketing_consent" value="ja" className="mt-1 accent-coral" />
                     {f.marketing}

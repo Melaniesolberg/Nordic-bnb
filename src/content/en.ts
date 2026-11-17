@@ -302,7 +302,10 @@ export const en: SiteContent = {
         rights: "I confirm I have the right to use these photos.",
         marketing:
           "Optional – 10% off: Eiendomly may use the before/after photos, without address or personal details, in its own marketing.",
+        withdrawal:
+          "I ask for the work to start right away, and understand that the 14-day right of withdrawal ends once the photos are delivered. If I withdraw before delivery, I pay for the work already done.",
       },
+      privateCustomerTypes: ["Private landlord", "Airbnb host", "Selling privately"],
       selectPlaceholder: "Choose …",
       customerTypes: ["Private landlord", "Airbnb host", "Selling privately", "Estate agent", "Rental manager", "Hotel", "Restaurant"],
       serviceOptions: [
@@ -475,6 +478,10 @@ export const en: SiteContent = {
         {
           heading: "Your responsibility",
           body: "You are responsible for how and where the photos are published, and for ensuring publication follows applicable rules, such as Airbnb's guidelines.",
+        },
+        {
+          heading: "Right of withdrawal for private customers",
+          body: "If you order as a private person, you have a 14-day right of withdrawal under the Norwegian Right of Withdrawal Act. If you ask us to start right away and confirm in the order form that the right ends once the photos are delivered, you can't withdraw after delivery. If you withdraw before delivery, you pay for the part of the work already done. To withdraw, email kontakt@eiendomly.no. Businesses have no right of withdrawal.",
         },
         {
           heading: "Monthly plans",

@@ -155,7 +155,10 @@ export interface OrderFormContent {
     message: string;
     rights: string;
     marketing: string;
+    withdrawal: string;
   };
+  /** Customer types that are private persons (consumers with a right of withdrawal). */
+  privateCustomerTypes: string[];
   selectPlaceholder: string;
   customerTypes: string[];
   serviceOptions: { key: ServiceKey | PlanKey | "unsure"; label: string }[];

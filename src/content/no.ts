@@ -304,7 +304,10 @@ export const no: SiteContent = {
         rights: "Jeg bekrefter at jeg har rett til å bruke disse bildene.",
         marketing:
           "Valgfritt – 10 % rabatt: Eiendomly kan bruke før/etter-bildene uten adresse og personlige detaljer i egen markedsføring.",
+        withdrawal:
+          "Jeg ber om at arbeidet starter med en gang, og forstår at angreretten på 14 dager faller bort når bildene er levert. Angrer jeg før levering, betaler jeg for arbeidet som er gjort.",
       },
+      privateCustomerTypes: ["Privat utleier", "Airbnb-vert", "Selger selv"],
       selectPlaceholder: "Velg …",
       customerTypes: ["Privat utleier", "Airbnb-vert", "Selger selv", "Megler", "Utleieforvalter", "Hotell", "Restaurant"],
       serviceOptions: [
@@ -477,6 +480,10 @@ export const no: SiteContent = {
         {
           heading: "Ditt ansvar",
           body: "Du er selv ansvarlig for hvordan og hvor bildene publiseres, og for at publiseringen følger gjeldende regler, for eksempel Airbnbs retningslinjer.",
+        },
+        {
+          heading: "Angrerett for privatpersoner",
+          body: "Bestiller du som privatperson, har du 14 dagers angrerett etter angrerettloven. Ber du oss starte arbeidet med en gang, og bekrefter i bestillingsskjemaet at angreretten faller bort når bildene er levert, kan du ikke angre etter levering. Angrer du før vi har levert, betaler du for den delen av arbeidet som er gjort. Vil du angre, gi beskjed på e-post til kontakt@eiendomly.no. Bedrifter har ikke angrerett.",
         },
         {
           heading: "Faste avtaler",
