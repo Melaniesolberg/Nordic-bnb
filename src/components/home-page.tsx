@@ -20,14 +20,14 @@ import { localeHref, pageHref, type Locale } from "@/i18n/config";
 
 export default function HomePage({ locale }: { locale: Locale }) {
   const content = getContent(locale);
-  const formHref = localeHref(locale, "/#contact-form");
+  const photoBoostOrderHref = `${pageHref(locale, "order")}?service=photoBoost`;
 
   return (
     <PageShell locale={locale} pageKey="home" overHero>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd(locale)) }} />
       <Hero
         hero={content.hero}
-        formHref={formHref}
+        formHref={photoBoostOrderHref}
         secondaryHref={localeHref(locale, "/#services")}
         imageSrc={media.heroPoster}
         videoSrc={media.heroVideo}
@@ -55,22 +55,17 @@ export default function HomePage({ locale }: { locale: Locale }) {
         areas={content.audiences}
         imageSrc={media.harbourTown}
         detailImages={[
-          media.audienceCabin,
+          media.livingAfter,
           media.audienceRental,
           media.audienceSeller,
           media.audienceAgent,
           media.audienceHotel,
-          media.audienceRestaurant,
+          media.audienceCabin,
         ]}
       />
       <About about={content.about} bgImageSrc={media.livingAfter} founderPhotoSrc={media.founderPhoto} />
       <SectionDivider tone="light" iconClassName="h-10 w-10" />
-      <Compare
-        compare={content.honesty}
-        formHref={formHref}
-        shortImageSrc={media.livingAfter}
-        longImageSrc={media.heroAerial}
-      />
+      <Compare compare={content.honesty} imageSrc={media.livingAfter} />
       <Faq faq={content.faq} />
       <FinalCta locale={locale} finalCta={content.finalCta} imageSrc={media.houseDusk} />
     </PageShell>

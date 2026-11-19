@@ -65,7 +65,7 @@ function ServiceCard({
                 dark ? "bg-coral text-ivory hover:bg-coral-deep" : "bg-charcoal text-ivory hover:bg-coral"
               }`}
             >
-              {ctaLabel}
+              {ctaLabel} <span aria-hidden className="ml-1.5">→</span>
             </Link>
           </Magnetic>
         </div>
@@ -89,7 +89,9 @@ export default function Services({
         <Reveal>
           <Eyebrow>{services.eyebrow}</Eyebrow>
           <h2 className="font-serif-display text-display-md mt-6 max-w-2xl text-charcoal">{services.heading}</h2>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-charcoal/65 sm:text-lg">{services.intro}</p>
+          {services.intro && (
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-charcoal/65 sm:text-lg">{services.intro}</p>
+          )}
         </Reveal>
 
         <div className="mt-16 grid grid-cols-1 gap-6 lg:grid-cols-3">
@@ -99,7 +101,7 @@ export default function Services({
                 item={item}
                 dark={i === 0}
                 href={pageHref(locale, item.key)}
-                ctaLabel={services.ctaLabel}
+                ctaLabel={item.linkLabel}
                 imageSrc={i === 0 ? imageSrc : undefined}
               />
             </Reveal>
@@ -107,7 +109,10 @@ export default function Services({
         </div>
 
         <Reveal delay={0.15}>
-          <p className="mt-10 max-w-2xl text-sm leading-relaxed text-charcoal/50">{services.termsNote}</p>
+          <div className="mt-12 max-w-2xl border-t border-charcoal/10 pt-8">
+            <h3 className="font-serif-display text-xl text-charcoal">{services.termsHeading}</h3>
+            <p className="mt-3 text-sm leading-relaxed text-charcoal/60 sm:text-base">{services.termsNote}</p>
+          </div>
         </Reveal>
       </div>
     </section>

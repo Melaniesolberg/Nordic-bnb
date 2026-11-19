@@ -186,9 +186,9 @@ export default function System({
           </h2>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="mt-7 max-w-lg text-base leading-relaxed text-ivory/60 sm:text-lg">
+          {system.intro && (<p className="mt-7 max-w-lg text-base leading-relaxed text-ivory/60 sm:text-lg">
             {system.intro}
-          </p>
+          </p>)}
         </Reveal>
       </div>
 

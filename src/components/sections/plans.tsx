@@ -24,7 +24,7 @@ function PlanCard({
   ctaLabel: string;
   valueLabel: string;
 }) {
-  const featured = Boolean(plan.badge);
+  const featured = Boolean(plan.featured);
   return (
     <div
       className={`relative flex h-full flex-col rounded-sm p-8 sm:p-10 ${
@@ -88,7 +88,6 @@ function PlanCard({
 }
 
 export default function Plans({ locale, plans }: { locale: Locale; plans: PlansContent }) {
-  const valueLabel = locale === "no" ? "Verdi kjøpt enkeltvis:" : "Value bought separately:";
   return (
     <section id="avtaler" className="relative scroll-mt-20 overflow-hidden bg-charcoal py-24 text-ivory sm:py-32 lg:py-40">
       <div className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-coral/10 blur-3xl" aria-hidden />
@@ -96,9 +95,11 @@ export default function Plans({ locale, plans }: { locale: Locale; plans: PlansC
         <Reveal>
           <div className="flex flex-wrap items-center gap-4">
             <Eyebrow tone="light">{plans.eyebrow}</Eyebrow>
-            <span className="rounded-full border border-coral/50 px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-coral-soft">
-              {plans.badge}
-            </span>
+            {plans.badge && (
+              <span className="rounded-full border border-coral/50 px-3 py-1 text-xs font-medium uppercase tracking-[0.14em] text-coral-soft">
+                {plans.badge}
+              </span>
+            )}
           </div>
           <h2 className="font-serif-display text-display-md mt-6 max-w-3xl">{plans.heading}</h2>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/65 sm:text-lg">{plans.intro}</p>
@@ -110,8 +111,8 @@ export default function Plans({ locale, plans }: { locale: Locale; plans: PlansC
               <PlanCard
                 plan={plan}
                 href={`${pageHref(locale, "order")}?service=${plan.key}`}
-                ctaLabel={plans.ctaLabel}
-                valueLabel={valueLabel}
+                ctaLabel={plan.cta}
+                valueLabel={plans.valueLabel}
               />
             </Reveal>
           ))}

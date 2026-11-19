@@ -2,118 +2,167 @@ import type { SiteContent } from "./types";
 
 export const en: SiteContent = {
   meta: {
-    title: "Eiendomly – Photo boost, virtual staging and sale boost for your property",
+    title: "Property photos, virtual staging and sale boost | Eiendomly",
     description:
-      "We use AI tools to give your property photos a lift, furnish empty rooms digitally and show what your home could become – for short-term rentals, long-term rentals and sales.",
+      "Get better photos of homes and cabins for FINN, Airbnb and Booking.com, and of hotel rooms for the hotel's own website. See Eiendomly's services and prices.",
+  },
+  seo: {
+    home: {
+      title: "Property photos, virtual staging and sale boost | Eiendomly",
+      description:
+        "Get better photos of homes and cabins for FINN, Airbnb and Booking.com, and of hotel rooms for the hotel's own website. See Eiendomly's services and prices.",
+    },
+    photoBoost: {
+      title: "Photo Boost for FINN and Airbnb – NOK 1,890 | Eiendomly",
+      description:
+        "Get up to 40 property photos enhanced for NOK 1,890. Cover photo and three listing title suggestions included. Delivered within 24 hours.",
+    },
+    virtualStaging: {
+      title: "Virtual Staging – NOK 1,190 per room | Eiendomly",
+      description:
+        "Show how an empty room could be furnished. Choose a style and get a labelled illustration with the original photo alongside. For sales and long-term rentals.",
+    },
+    saleBoost: {
+      title: "Sale Boost – renovation plan before selling | Eiendomly",
+      description:
+        "See what simple upgrades could do before a sale. Get before/after illustrations, cost estimates and a prioritised action plan from NOK 4,900.",
+    },
+    order: {
+      title: "Order Photo Boost or Virtual Staging | Eiendomly",
+      description:
+        "Order Photo Boost, Virtual Staging, Sale Boost or a monthly plan. Send a link to your photos or listing and get a reply by email.",
+    },
   },
   nav: {
     links: [
       { label: "How it works", href: "/en#system" },
       { label: "Services", href: "/en#services" },
-      { label: "Plans", href: "/en#avtaler" },
+      { label: "Monthly plans", href: "/en#avtaler" },
       { label: "Who we help", href: "/en#areas" },
-      { label: "About", href: "/en#about" },
-      { label: "FAQ", href: "/en#faq" },
+      { label: "About Eiendomly", href: "/en#about" },
+      { label: "Questions and answers", href: "/en#faq" },
     ],
-    cta: "Order a photo boost",
+    cta: "Order Photo Boost",
     toggleMenu: "Open menu",
     selectLanguage: "Choose language",
   },
   hero: {
-    eyebrow: "Property photos · Virtual staging · Sale boost",
-    headlineLines: ["Your first photo decides", "whether they click."],
-    subline: "We get your photos ready for FINN, Airbnb and Booking.com – no photographer needed.",
-    ctaPrimary: "Order a photo boost",
-    ctaSecondary: "See services",
+    eyebrow: "Photo Boost · Virtual Staging · Sale Boost",
+    headlineLines: ["Better property photos", "for sales and rentals"],
+    subline:
+      "We improve the photos you already have of your home or cabin, so they are ready for FINN, Airbnb and Booking.com. For hotels, we get photos of rooms, shared spaces and outdoor areas ready for the hotel's own website. If you are selling a home, we can also furnish empty rooms digitally and show what simple upgrades could look like.",
+    ctaPrimary: "Order Photo Boost",
+    ctaSecondary: "See services and prices",
     beats: [
       {
         eyebrow: "Photo Boost",
-        heading: "Brighter. Sharper. More inviting.",
-        body: "We use AI tools to give your photos a lift – light, colour and straight lines, no photographer needed.",
+        heading: "Brighter, clearer photos.",
+        body: "We adjust light, colour and sharpness, straighten lines and tidy away small loose items where it makes sense.",
       },
       {
         eyebrow: "Ready for your listing",
-        heading: "From phone photo to first choice.",
-        body: "For short-term rentals, long-term rentals and sales – delivered via link within 24 hours.",
+        heading: "Photos you can publish straight away.",
+        body: "You get the photos back via a link. Photo Boost is delivered within 24 hours, and we check every photo before delivery.",
       },
     ],
     locationTag: "Norway",
   },
   problem: {
-    eyebrow: "First impression",
-    heading: "That's all the time your listing gets.",
-    intro:
-      "Home buyers on the UK's Rightmove spent 2.7 seconds on average before deciding to look closer at a property – or scroll on.",
+    eyebrow: "First impressions",
+    heading: "Good photos make a clear first impression",
     seconds: 2.7,
     unit: "sec",
     stat: {
       value: "58%",
-      text: "chose photos of the home when asked for the three most important elements of a property listing. Photos topped the list.",
-      source: "FINN property survey 2025",
+      text: "In FINN's 2025 property survey, 58% chose the photos of the home as one of the three most important elements of a property listing. Photos came top of the list.",
+      source: "FINN, Property Survey 2025",
+      href: "https://www.finn.no/bedriftskunde/aktuelt/finn-eiendom/eiendomsundersokelsen-2025",
+    },
+    timeStat: {
+      value: "2.7 sec",
+      text: "In Rightmove's 2012 UK study, prospective buyers spent an average of 2.7 seconds on a listing preview before choosing to look further or move on to the next property.",
+      source: "Rightmove, United Kingdom, 2012",
+    },
+    hotel: {
+      heading: "What do hotel guests look for before they book?",
+      value: "36%",
+      text: "In a survey by Expedia Group, 36% of travellers said they use descriptions and photos on the hotel's own website to judge whether its atmosphere suits them.",
+      source: "Hotels.com, Unpack ’24",
+      href: "https://partner.expediagroup.com/en-us/resources/blog/unpack-2024-hotel-trends",
     },
   },
   photoBoost: {
     eyebrow: "Photo Boost",
-    heading: "Messy, dark and shot on a phone?",
-    body: "Whether you're renting short-term or long-term – or selling – you don't always have the time or money for a photographer. We use AI tools to make your photos brighter and sharper, straighten the lines and remove loose clutter.",
-    hint: "Drag to see the difference",
-    beforeLabel: "Before",
-    afterLabel: "After photo boost",
+    heading: "See what Photo Boost does",
+    body: "Dark phone photos or crooked lines? We use AI tools to adjust light, colour and sharpness, straighten lines and tidy away small loose items where it makes sense. We check every photo before delivery.",
+    hint: "Drag to compare the photos.",
+    beforeLabel: "Original photo",
+    afterLabel: "After Photo Boost",
+    beforeAlt: "Original photo of a living room, before Photo Boost",
+    afterAlt: "The same living room after Photo Boost, with adjusted light, colour and sharpness",
+    caption: "The original photo and the same photo after Photo Boost: light, colour and sharpness adjusted, lines straightened and small loose items tidied away.",
   },
   showcase2: {
     eyebrow: "Virtual Staging",
-    heading: "Virtual staging: see what an empty room could become.",
-    body: "Virtual staging means an empty or unfurnished room is furnished digitally in the property photos. Eiendomly does it for NOK 1,190 per room – a fraction of the cost of physical home staging – for estate agents, home sellers and landlords across Norway. You choose the style, modern or cosy, and walls, floors and windows are never changed. The images are labelled as virtual staging, so buyers know what is an illustration.",
-    hint: "Drag to see the room before and after",
-    beforeLabel: "Before: empty room",
-    afterLabel: "After virtual staging",
-    beforeAlt: "Empty living room with large windows facing birch trees and a lake, before virtual staging",
-    afterAlt: "The same living room digitally furnished with a light sofa, round oak table, curtains and plants – after virtual staging by Eiendomly",
-    link: "See the price and how virtual staging works",
+    heading: "Virtual Staging shows how a room can be used",
+    body: "An empty room can be hard to furnish in your head. We furnish the room in the photo, so buyers or tenants can see how it could be used. You get the original photo alongside the illustration. Virtual Staging costs NOK 1,190 per room.",
+    hint: "Drag to compare the photos.",
+    beforeLabel: "Original photo",
+    afterLabel: "Virtual Staging – illustration",
+    beforeAlt: "Original photo of an empty living room with large windows",
+    afterAlt: "The same living room furnished digitally with a sofa, table and plants – Virtual Staging, illustration",
+    caption: "The original photo of an empty room and the same room furnished digitally. Walls, floors and windows are as in the original.",
+    link: "See prices and examples of Virtual Staging",
   },
   howItWorks: {
-    eyebrow: "How it works",
-    heading: "Three simple steps.",
-    intro:
-      "Everything happens in writing: you send the photos, we enhance them, and you get them back via a link. No meetings, no photographer.",
+    eyebrow: "Three steps",
+    heading: "How it works",
     steps: [
-      { title: "Send your photos", description: "Send us your photos or a link to your listing." },
-      { title: "We give them a lift", description: "We use AI tools and send the photos back via a link." },
-      { title: "More clicks", description: "You upload the new photos and get more clicks." },
+      {
+        title: "Send us your photos",
+        description: "Share a link to your photos or to the listing. Phone photos work too.",
+      },
+      {
+        title: "We do the work",
+        description:
+          "We use AI tools and check the result before delivery. For Virtual Staging, you choose the look you want.",
+      },
+      {
+        title: "Get your photos via a link",
+        description:
+          "You get the photos back digitally. You can publish them in your listing or on your own website.",
+      },
     ],
     channels: ["FINN", "Airbnb", "Booking.com"],
   },
   cases: {
     eyebrow: "Examples",
-    heading: "See the difference yourself.",
-    improvedLabel: "After photo boost",
-    beforeLabel: "Before",
+    heading: "See the difference.",
+    improvedLabel: "After Photo Boost",
+    beforeLabel: "Original photo",
     captions: {
-      stue: "A brighter, sharper living room, straightened horizon, loose clutter removed.",
+      stue: "Brighter, sharper living room, straightened horizon, small loose items tidied away.",
       kjokken: "Warmer light and cleaner colours in the kitchen.",
-      soverom: "A more inviting bedroom with better light and sharpness.",
+      soverom: "Bedroom with better light and sharpness.",
     },
   },
   services: {
     eyebrow: "Services",
-    heading: "Find the right boost for your property.",
-    intro:
-      "Three services – from a quick photo boost to a complete plan for selling. Fixed prices, invoiced after delivery. Several properties a month? A monthly plan gives the best value for money.",
+    heading: "Choose the service that suits your property",
     items: [
       {
         key: "photoBoost",
         title: "Photo Boost",
         price: "NOK 1,890",
         priceNote: "up to 40 photos",
-        description:
-          "Your first photo decides in 2.7 seconds whether anyone clicks. We use AI tools to make your photos brighter and sharper, straighten lines and remove loose clutter. Suitable for short-term rentals, long-term rentals and sales.",
+        description: "For when you want brighter, clearer photos of the home as it is today.",
         features: [
-          "Up to 40 photos with a photo boost",
-          "A selected and optimised cover photo",
-          "3 listing title suggestions",
+          "Up to 40 photos",
+          "Selected and edited cover photo",
+          "Three listing title suggestions",
           "Delivered within 24 hours",
         ],
-        note: "For Airbnb we only do natural enhancement, as Airbnb's rules require.",
+        linkLabel: "See what Photo Boost includes",
       },
       {
         key: "virtualStaging",
@@ -121,40 +170,36 @@ export const en: SiteContent = {
         price: "NOK 1,190",
         priceNote: "per room",
         description:
-          "Physical home staging can easily cost thousands. Now it can be done digitally: tell us the style you like – modern, cosy or somewhere in between – and we'll make the rooms feel properly homely.",
+          "For when you want to show how an empty room could be furnished, or how a room looks with different furniture.",
         features: [
-          "You choose the style – we do the rest",
-          "Empty rooms furnished, or worn furniture replaced",
-          "Labelled \"Virtual staging – illustration. Furniture not included.\"",
-          "Original photo alongside",
+          "You choose the style",
+          "Clearly labelled image with the original alongside",
+          "For sales and long-term rentals",
         ],
-        note: "Not for Airbnb, where guests must see the furniture they actually get.",
+        linkLabel: "See how Virtual Staging works",
       },
       {
         key: "saleBoost",
         title: "Sale Boost",
-        price: "NOK 4,900",
-        priceNote: "Mini · Large: NOK 9,900",
+        price: "From NOK 4,900",
+        priceNote: "The large package costs NOK 9,900",
         description:
-          "Show buyers the potential. With simple changes for NOK 20,000–100,000 – a coat of paint or new kitchen fronts – a home can be lifted considerably, valuation included.",
+          "For when you want to show what paint, new kitchen fronts or other small improvements could do before a sale.",
         features: [
-          "Before/after images of the home's potential",
-          "Shopping list with the work, costs and order (PDF)",
-          "What you can do yourself, and what needs a professional",
-          "Labelled \"Illustration – not carried out\"",
+          "Before/after illustrations",
+          "PDF with actions, cost estimates and a recommended order",
         ],
-        note: "For estate agents and private sellers. How much the valuation may increase is assessed by an agent or valuer.",
+        linkLabel: "Compare the Sale Boost packages",
       },
     ],
-    termsNote: "All prices include VAT. Estate agents are invoiced excl. VAT.",
-    ctaLabel: "Read more",
+    termsHeading: "Prices and payment",
+    termsNote:
+      "Prices shown include VAT. Estate agents are invoiced excluding VAT. One-off orders are invoiced after delivery.",
   },
   plans: {
     eyebrow: "Monthly plans",
-    badge: "Best value for money",
-    heading: "Several properties a month? A plan gives you the most for your money.",
-    intro:
-      "For estate agents and rental managers who need good photos every month. One fixed price, one invoice – and up to 47% less than ordering each time.",
+    heading: "Monthly plans for estate agents and rental managers",
+    intro: "Get photos for several properties every month and collect the jobs on one invoice.",
     items: [
       {
         key: "brokerPlan",
@@ -163,253 +208,436 @@ export const en: SiteContent = {
         price: "NOK 9,900",
         pricePeriod: "per month",
         value: "NOK 18,690",
-        savings: "Save NOK 8,790 a month",
-        badge: "Best value for money",
+        savings: "You save NOK 8,790 (approx. 47%) with full use",
+        featured: true,
         features: [
-          "Photo Boost for up to 8 properties a month – up to 40 photos each",
-          "Virtual staging of 3 rooms a month",
-          "Extra Photo Boost: NOK 1,490 (normally NOK 1,890)",
-          "One combined invoice a month",
+          "Photo Boost for up to 8 properties",
+          "Up to 40 photos per property",
+          "Virtual Staging of 3 rooms per month",
+          "Extra Photo Boost: NOK 1,490",
         ],
+        cta: "Start a free month with the Agent Plan",
       },
       {
         key: "managerPlan",
         title: "Manager Plan",
-        audience: "For Airbnb and rental managers",
+        audience: "For rental managers",
         price: "NOK 4,900",
         pricePeriod: "per month",
         value: "NOK 7,560",
-        savings: "Save NOK 2,660 a month",
+        savings: "You save NOK 2,660 (approx. 35%) with full use",
         features: [
-          "Photo Boost for up to 4 units a month – up to 40 photos each",
-          "Natural enhancement that follows Airbnb's rules",
-          "Extra Photo Boost: NOK 1,490 (normally NOK 1,890)",
-          "One combined invoice a month",
+          "Photo Boost for up to 4 units",
+          "Up to 40 photos per unit",
+          "Virtual Staging ordered separately",
+          "Extra Photo Boost: NOK 1,490",
         ],
+        cta: "Start a free month with the Manager Plan",
       },
     ],
-    terms: ["First month free", "3-month commitment, then 1 month's notice", "Invoiced at the start of each month"],
-    note: "Value when bought separately is based on standard prices. Unused jobs don't carry over to the next month. Sale Boost is ordered separately.",
-    ctaLabel: "Start free month",
+    valueLabel: "With full use, bought separately:",
+    terms: [
+      "The first month is free.",
+      "After that, the plan has a three-month minimum term and one month's notice.",
+      "Invoices are sent at the start of the month.",
+    ],
+    note: "Unused jobs expire at the end of the month. Sale Boost is ordered separately.",
   },
   audiences: {
-    eyebrow: "Who we help",
-    heading: "From cabins to hotels.",
-    intro:
-      "Photos are the first thing people see – whether they're renting, buying, booking or dining. We make that first impression count.",
+    eyebrow: "Audiences",
+    heading: "Who we help",
     items: [
       {
         name: "Airbnb hosts",
-        description:
-          "Natural, honest enhancement that follows Airbnb's rules – more clicks without promising anything the home doesn't have.",
+        description: "Get brighter, clearer photos that show the place as guests will find it.",
       },
       {
-        name: "Landlords",
-        description:
-          "Photos that stand out on FINN, so your listing doesn't get scrolled past. We use the photos you have, including phone photos.",
+        name: "Private landlords",
+        description: "Use the photos you have to show the rooms, light and layout in your rental listing.",
       },
       {
-        name: "Selling privately",
+        name: "Home sellers",
         description:
-          "Selling without an agent? We get your own photos ready for the listing – no photographer needed.",
+          "Improve the photos, show how an empty room could be furnished, or get a plan for simple improvements before selling.",
       },
       {
         name: "Estate agents",
         description:
-          "Sale Boost shows buyers the potential of homes that have been on the market a long time, and virtual staging fills empty rooms. Estate agents are invoiced excl. VAT.",
+          "Order Photo Boost, Virtual Staging or illustrations of upgrade options for one property or several.",
       },
       {
         name: "Hotels",
-        description: "Brighter, sharper room photos for your own website and booking sites.",
+        description:
+          "Show rooms and shared spaces on the hotel's own website, so guests can see what to expect before they book.",
       },
       {
-        name: "Restaurants",
-        description: "Inviting photos of your venue for your website, Google and social media.",
+        name: "Cabin owners",
+        description:
+          "Show the cabin as buyers or tenants will experience it, from the living room and sleeping areas to the outdoor space.",
       },
     ],
   },
   about: {
-    eyebrow: "About",
-    heading: "Honest photos. More clicks.",
+    eyebrow: "About Eiendomly",
+    heading: "Melanie Solberg, founder of Eiendomly",
     paragraphs: [
-      "I'm Melanie Solberg, and I started Eiendomly because too many great homes get scrolled past because of dark, cluttered photos.",
-      "I have a background in sales, management and digital marketing, and I also run SynligAI, which helps businesses become visible in AI search.",
-      "At Eiendomly I use AI tools to get your property ready for clicks.",
+      "My interest in property began when I read Rich Dad Poor Dad by Robert T. Kiyosaki. I became especially interested in the BRRRR method: buy a property, renovate it, rent it out, refinance and repeat. We now use the method in our own private property project.",
+      "Through other projects I have spent hundreds of hours on FINN, Airbnb and Booking.com. Over time I noticed how often the first photo decided whether I opened a listing. That is why I started Eiendomly. I want to help others show what makes their property worth a closer look.",
+      "I have a background in sales, management and digital marketing, and I also run SynligAI. At Eiendomly I use AI tools to improve the photos, and I review every photo myself before you get it back.",
     ],
     founderName: "Melanie Solberg",
     founderRole: "Founder",
-    founderQuote: "I check every single photo myself, so the result is honest and looks natural.",
     photoAlt: "Melanie Solberg, founder of Eiendomly",
     replyNote: "I reply to emails within 24 hours on weekdays.",
   },
   honesty: {
-    eyebrow: "Honesty",
-    heading: "We enhance – we don't mislead.",
-    intro:
-      "Good photos should make people click – not disappoint them at the viewing. That's why there are clear limits on what we change.",
-    does: {
-      title: "What we do",
-      tagline: "Natural enhancement",
-      points: [
-        "Adjust light, colour and sharpness",
-        "Straighten crooked lines",
-        "Remove loose clutter",
-        "Label digitally furnished photos, with the original alongside",
-      ],
-    },
-    never: {
-      title: "What we never do",
-      tagline: "No misleading",
-      points: [
-        "Change walls, floors or windows",
-        "Change the view",
-        "Hide damage",
-        "Add furniture that isn't there, or text, to Airbnb photos",
-      ],
-    },
-    cta: "Order a photo boost",
+    eyebrow: "Photo edits",
+    heading: "What do we change in property photos?",
+    items: [
+      {
+        title: "Photo Boost",
+        body: "Photo Boost adjusts light, colour, sharpness and crooked lines. We can remove small loose items where it makes sense. Views, damage and fixed parts of the home are shown as they are.",
+      },
+      {
+        title: "Virtual Staging",
+        body: "Virtual Staging shows one possible way to furnish a room. Walls, windows, kitchen and floors stay as in the original. You get the original photo together with the labelled illustration.",
+      },
+      {
+        title: "Sale Boost",
+        body: "Sale Boost shows what suggested upgrades could look like. The images are labelled “Illustration – not carried out”.",
+      },
+      {
+        title: "Airbnb",
+        body: "For Airbnb we use natural photo adjustments. The photos show the furniture and facilities guests actually get.",
+      },
+    ],
   },
   faq: {
-    eyebrow: "FAQ",
-    heading: "Frequently asked questions.",
+    eyebrow: "Questions and answers",
+    heading: "Frequently asked questions",
     items: [
-      { q: "What is a monthly plan?", a: "For estate agents and rental managers with several properties a month. You pay a fixed price and get a number of photo jobs included every month – up to 47% cheaper than ordering one at a time. The first month is free." },
-      { q: "What is virtual staging, and what does it cost?", a: "Virtual staging is digital furnishing of empty or worn rooms in property photos. At Eiendomly it costs NOK 1,190 per room. You choose the style, and the images are labelled as virtual staging. It suits home sales and long-term rentals, but not Airbnb." },
-      { q: "Is this allowed?", a: "Yes, as long as the photos don't mislead. We improve light and quality, label virtual staging and never change fixed features or damage." },
-      { q: "Can I use the photos on Airbnb?", a: "Yes, Photo Boost is made for that. We keep it natural and never add text to the photos." },
-      { q: "Who owns the photos?", a: "You confirm you have the rights to the photos you send. You get full rights to use the result." },
-      { q: "How fast do I get them?", a: "Photo Boost within 24 hours. For virtual staging and Sale Boost, we'll confirm the delivery time once we've seen your photos." },
-      { q: "What if I'm not happy?", a: "You get one free revision where we adjust the photos to your wishes. If you're still not happy after that, you get 50% of the price back." },
-      { q: "Do I need new photos?", a: "No. We use the photos you have, including phone photos." },
-      { q: "Does Sale Boost increase the value?", a: "Simple changes like paint and new kitchen fronts can lift a home considerably. How much the valuation may increase is assessed by an agent or valuer – we don't promise a specific amount." },
-      { q: "How do I pay?", a: "You receive an invoice by email after delivery." },
+      {
+        q: "How much does it cost to have property photos improved?",
+        a: "Photo Boost costs NOK 1,890 for up to 40 photos. A selected and edited cover photo and three listing title suggestions are included.",
+      },
+      {
+        q: "Do I need to take new photos?",
+        a: "You can send the photos you already have, including phone photos. Send a link to the photos or to the listing.",
+      },
+      {
+        q: "How quickly do I get the photos back?",
+        a: "Photo Boost is delivered within 24 hours. For Virtual Staging and Sale Boost, we confirm the delivery time once we have seen the photos.",
+      },
+      {
+        q: "What is Virtual Staging, and what does it cost?",
+        a: "Virtual Staging means furnishing a room in a property photo. At Eiendomly it costs NOK 1,190 per room. You choose the style and get a labelled illustration together with the original.",
+      },
+      {
+        q: "Can I use the photos on Airbnb?",
+        a: "Yes, Photo Boost works for Airbnb. We adjust the photo naturally, without added furniture or text. Virtual Staging is offered for home sales and long-term rentals.",
+      },
+      {
+        q: "How are edited images labelled?",
+        a: "Digitally furnished images are labelled “Virtual Staging – illustration. Furniture not included.” Sale Boost images are labelled “Illustration – not carried out”. Check the publishing rules wherever you plan to use the images.",
+      },
+      {
+        q: "What rights do I get to use the photos?",
+        a: "You confirm that you have the right to send the photos to us for editing. You get full rights to use the result.",
+      },
+      {
+        q: "What do I get with a monthly plan?",
+        a: "The Agent Plan costs NOK 9,900 per month and includes Photo Boost for up to eight properties and Virtual Staging of three rooms. The Manager Plan costs NOK 4,900 per month and includes Photo Boost for up to four units. The first month is free.",
+      },
+      {
+        q: "Can Sale Boost increase the value of a home?",
+        a: "Sale Boost shows possible improvements and gives you an estimate of what they cost. Any increase in value is assessed by an estate agent or valuer.",
+      },
+      {
+        q: "What if I want changes after delivery?",
+        a: "Let us know within seven days of delivery. You get one free round of adjustments. If you are still not satisfied after the adjustments, you get 50% of the price back.",
+      },
+      {
+        q: "When do I pay?",
+        a: "For one-off orders, you receive an invoice by email after delivery. Monthly plans are invoiced at the start of the month.",
+      },
     ],
   },
   finalCta: {
     eyebrow: "Order",
-    heading: "Ready for more clicks?",
+    heading: "Send us your photos",
     subline:
-      "Send us your photos today. Fill in the form and you'll get a reply by email within 24 hours.",
-    ctaPrimary: "Order now",
+      "Choose a service and add a link to your photos or listing. You will get a reply by email within 24 hours on weekdays.",
+    ctaPrimary: "Send order",
     form: {
       fields: {
         name: "Name",
         email: "Email",
-        customerType: "I am a",
-        service: "Service",
-        photosLink: "Link to your photos (Google Drive, Dropbox, WeTransfer) or your listing",
+        customerType: "Who is ordering?",
+        service: "Choose a service",
+        photosLink: "Link to the photos or listing",
+        photosLinkHelp: "For example Google Drive, Dropbox or WeTransfer. Check that we can open the link.",
         message: "Comment (optional)",
-        rights: "I confirm I have the right to use these photos.",
+        rights: "I confirm that I have the right to use the photos and to send them to Eiendomly for editing.",
         marketing:
-          "Optional – 10% off: Eiendomly may use the before/after photos, without address or personal details, in its own marketing.",
+          "I get a 10% discount and agree that Eiendomly may use the before/after photos in its own marketing, without the address or personal details.",
         withdrawal:
           "I ask for the work to start right away, and understand that the 14-day right of withdrawal ends once the photos are delivered. If I withdraw before delivery, I pay for the work already done.",
       },
-      privateCustomerTypes: ["Private landlord", "Airbnb host", "Selling privately"],
+      privateCustomerTypes: ["Private landlord", "Airbnb host", "Home seller", "Cabin owner"],
       selectPlaceholder: "Choose …",
-      customerTypes: ["Private landlord", "Airbnb host", "Selling privately", "Estate agent", "Rental manager", "Hotel", "Restaurant"],
+      customerTypes: [
+        "Private landlord",
+        "Airbnb host",
+        "Home seller",
+        "Estate agent",
+        "Rental manager",
+        "Cabin owner",
+        "Hotel",
+      ],
       serviceOptions: [
         { key: "photoBoost", label: "Photo Boost" },
         { key: "virtualStaging", label: "Virtual Staging" },
         { key: "saleBoost", label: "Sale Boost" },
-        { key: "brokerPlan", label: "Agent Plan – NOK 9,900/month" },
-        { key: "managerPlan", label: "Manager Plan – NOK 4,900/month" },
-        { key: "unsure", label: "Not sure" },
+        { key: "brokerPlan", label: "Agent Plan – NOK 9,900 per month" },
+        { key: "managerPlan", label: "Manager Plan – NOK 4,900 per month" },
+        { key: "unsure", label: "I'm not sure" },
       ],
       submit: "Send order",
       errorMessage: "Something went wrong. Please try again, or email us at",
-      privacyNote: "We protect your privacy. The information you provide is only used to reply to you and deliver the service – we never share it with others.",
-      privacyLink: "Read our privacy policy",
+      privacyNote: "We use your details to reply to you, deliver the service and send the invoice.",
+      privacyLink: "Read about privacy",
     },
   },
   servicePages: {
     photoBoost: {
       eyebrow: "Photo Boost",
-      heading: "Make your own photos ready for FINN and Airbnb",
-      forWho:
-        "Suitable for short-term rentals, long-term rentals and sales – for private landlords, Airbnb hosts and people selling privately.",
-      whatItIs:
-        "Send us the photos you have, including phone photos. We use AI tools to make them brighter and sharper, straighten lines and remove loose clutter. You also get a stronger cover photo and title suggestions.",
-      highlight: "Your first photo decides in 2.7 seconds whether anyone clicks – or scrolls on.",
-      facts: [
+      heading: "Photo Boost for FINN, Airbnb and Booking.com",
+      intro:
+        "We improve photos of homes and cabins for listings, and photos of hotel rooms and shared spaces for the hotel's own website. For property listings, you get up to 40 photos improved for NOK 1,890. You send the photos you have, and we deliver the finished photos within 24 hours together with an edited cover photo and three listing title suggestions.",
+      comparison: {
+        beforeLabel: "Original photo",
+        afterLabel: "After Photo Boost",
+        beforeAlt: "Original photo of a living room, before Photo Boost",
+        afterAlt: "The same living room after Photo Boost, with adjusted light, colour and sharpness",
+        caption: "The original photo and the same photo after Photo Boost: light, colour and sharpness adjusted, lines straightened and small loose items tidied away.",
+        hint: "Drag to compare the photos.",
+      },
+      sections: [
         {
-          value: "2.7 sec",
-          label: "is how long home buyers spent on average before deciding to look closer at a property – or scroll on.",
-          source: "Rightmove, UK",
+          heading: "Use the photos you already have",
+          blocks: [
+            {
+              type: "p",
+              text: "Photo Boost works for short-term rentals, long-term rentals and home sales. Send us phone photos, other photos you have the right to use, or a link to the listing. We adjust light, colour and sharpness, straighten crooked lines and can tidy away small loose items where it makes sense. We also choose the photo that works best as the listing's cover photo.",
+            },
+          ],
         },
         {
-          value: "58%",
-          label: "chose photos as one of the three most important elements of a property listing. Photos topped the list.",
-          source: "FINN property survey 2025",
+          heading: "What you get for NOK 1,890",
+          blocks: [
+            {
+              type: "list",
+              items: [
+                "Up to 40 edited photos.",
+                "A selected and edited cover photo.",
+                "Three listing title suggestions.",
+                "Delivery via a link within 24 hours.",
+              ],
+            },
+            { type: "cta" },
+          ],
         },
         {
-          value: "NOK 15,000",
-          label: "is what you lose if a NOK 15,000/month rental sits empty one extra month.",
+          heading: "What do you change in photos for Airbnb?",
+          blocks: [
+            {
+              type: "p",
+              text: "We stick to natural adjustments of the photo. Furniture, views and facilities must match what guests find. We do not add text to the photos either.",
+            },
+          ],
+        },
+        {
+          heading: "What does a month without a tenant cost?",
+          blocks: [
+            {
+              type: "p",
+              text: "For a home let at NOK 15,000 a month, one extra month without a tenant means NOK 15,000 in lost gross rental income. When you update your rental listing, the cover photo is a concrete place to start.",
+            },
+          ],
         },
       ],
-      includesHeading: "You get",
-      includes: [
-        "Up to 40 photos with a photo boost",
-        "A selected and optimised cover photo",
-        "3 listing title suggestions",
-        "Delivered within 24 hours",
+      links: [
+        { text: "Got empty rooms?", label: "See Virtual Staging", href: "/en/virtual-staging" },
+        { text: "Got several properties?", label: "See monthly plans", href: "/en#avtaler" },
       ],
       priceHeading: "Price",
       price: "NOK 1,890",
-      priceNote: "up to 40 photos",
-      note: "For Airbnb we only do natural enhancement, as Airbnb's rules require.",
-      cta: "Order a photo boost",
+      priceNote: "Up to 40 photos. Delivered within 24 hours.",
+      cta: "Order Photo Boost",
     },
     virtualStaging: {
       eyebrow: "Virtual Staging",
-      heading: "Furnish empty rooms – or replace what holds them back",
-      forWho:
-        "Suitable for empty homes being sold or rented out, and homes with furniture that isn't included – like a worn sofa.",
-      whatItIs:
-        "Physical home staging can easily cost thousands. Now it can be done digitally. Tell us the style you like – modern, cosy or somewhere in between – and we'll furnish the rooms and make them feel properly homely. Fixed features such as walls, floors, kitchens and windows are never changed.",
-      highlight: "Save thousands on staging – and give buyers the feeling of a home.",
-      includesHeading: "You get",
-      includes: [
-        "You choose the style – we do the rest",
-        "Empty rooms furnished, or worn furniture replaced",
-        "Labelled \"Virtual staging – illustration. Furniture not included.\"",
-        "Original photo alongside",
+      heading: "Virtual Staging for home sales and long-term rentals",
+      intro:
+        "Show how an empty room could be furnished for NOK 1,190 per room. You choose a style, from modern to cosy. We furnish the room in the photo and deliver the illustration together with the original.",
+      comparison: {
+        beforeLabel: "Original photo",
+        afterLabel: "Virtual Staging – illustration",
+        beforeAlt: "Original photo of an empty living room with large windows",
+        afterAlt: "The same living room furnished digitally with a sofa, table and plants – Virtual Staging, illustration",
+        caption: "The original photo of an empty room and the same room furnished digitally. Walls, floors and windows are as in the original.",
+        hint: "Drag to compare the photos.",
+      },
+      sections: [
+        {
+          heading: "What is Virtual Staging?",
+          blocks: [
+            {
+              type: "p",
+              text: "Virtual Staging shows a possible interior in an existing property photo. We can furnish empty rooms, or show different furniture where the current furniture is not included in the sale. Walls, floors, windows and the fitted kitchen are shown as in the original photo.",
+            },
+          ],
+        },
+        {
+          heading: "How much can you save with Virtual Staging?",
+          blocks: [
+            {
+              type: "p",
+              text: "In an empty three-room flat, we can furnish the living room and both bedrooms digitally for NOK 3,570. Two Norwegian stylists list starting prices of NOK 16,900 and NOK 23,500 for physically staging a whole three-room flat. At those prices, staging costs NOK 13,330–19,930 less when you choose digital furnishing for your listing.",
+            },
+            {
+              type: "table",
+              caption: "Digital furnishing at Eiendomly compared with listed starting prices for physical full staging",
+              head: [
+                "Flat",
+                "Eiendomly, NOK 1,190 per room",
+                "Full staging at Bolig Interiør",
+                "Full staging at Main Boligstyling",
+                "Difference from listed starting prices",
+              ],
+              rows: [
+                ["2 rooms", "NOK 2,380", "From NOK 12,900", "From NOK 17,500", "NOK 10,520–15,120"],
+                ["3 rooms", "NOK 3,570", "From NOK 16,900", "From NOK 23,500", "NOK 13,330–19,930"],
+                ["4 rooms", "NOK 4,760", "From NOK 18,900", "From NOK 27,800", "NOK 14,140–23,040"],
+              ],
+            },
+            {
+              type: "p",
+              text: "The figures cover digital furnishing of the living room and all bedrooms. You choose which rooms to show in your listing. With physical full staging, the whole home is furnished for photography and viewings. The suppliers include transport and furniture hire in the price. All prices include VAT.",
+            },
+            {
+              type: "note",
+              text: "Price lists checked on 19 November 2026. [Bolig Interiør](https://www.bolig-interior.no/priser) · [Main Boligstyling](https://www.mainboligstyling.no/priser-boligstyling/)",
+            },
+          ],
+        },
+        {
+          heading: "What you get for NOK 1,190 per room",
+          blocks: [
+            {
+              type: "list",
+              items: [
+                "One room furnished digitally in the style you choose.",
+                "A finished illustration labelled “Virtual Staging – illustration. Furniture not included.”",
+                "The original photo alongside, so buyers see both the room as it is and the furnishing suggestion.",
+              ],
+            },
+            { type: "p", text: "We confirm the delivery time once we have seen the photos." },
+            { type: "cta" },
+          ],
+        },
+        {
+          heading: "Can Virtual Staging be used on Airbnb?",
+          blocks: [
+            {
+              type: "p",
+              text: "We offer Virtual Staging for home sales and long-term rentals. For Airbnb we use [Photo Boost](/en/photo-boost), with natural adjustments to photos that show the interior guests actually get.",
+            },
+          ],
+        },
       ],
+      links: [],
       priceHeading: "Price",
       price: "NOK 1,190",
-      priceNote: "per room",
-      note: "Not for Airbnb, where guests must see the furniture they actually get.",
-      cta: "Order virtual staging",
+      priceNote: "Per room. We confirm the delivery time once we have seen the photos.",
+      cta: "Order Virtual Staging",
     },
     saleBoost: {
       eyebrow: "Sale Boost",
-      heading: "Show buyers what the home could become – and what it costs",
-      forWho:
-        "For estate agents and people selling without an agent – especially homes that have been on the market a long time, stand empty or are dated.",
-      whatItIs:
-        "Buyers need to see the potential. We create before/after images of simple changes – a coat of paint, new kitchen fronts or an oiled floor – and give you a shopping list with the work, costs and order. The changes should be simple and affordable for most people. If the home is empty, or old and you don't know where to start, you get inspiration and a concrete plan.",
-      highlight:
-        "With changes for NOK 20,000–100,000, a home can be lifted considerably, valuation included. If it has been on the market a long time without selling, this could be what turns it around.",
-      includesHeading: "You get",
-      includes: [
-        "Before/after images of the home's potential",
-        "Shopping list with the work, costs and order (PDF)",
-        "What you can do yourself, and what needs a professional",
-        "Labelled \"Illustration – not carried out\"",
+      heading: "Sale Boost – illustrations and a renovation plan before selling",
+      intro:
+        "See how paint, new kitchen fronts or a floor treatment could change the impression of a home. Eiendomly creates before/after illustrations and a PDF with actions, cost estimates and a recommended order. From NOK 4,900.",
+      sections: [
+        {
+          heading: "Who is Sale Boost for?",
+          blocks: [
+            {
+              type: "p",
+              text: "Sale Boost is for estate agents and people selling their own home. It is especially relevant for older homes, empty homes and homes that have been on the market for a while. Use the plan to choose which improvements to make before selling, or use labelled illustrations to show the home's potential.",
+            },
+          ],
+        },
+        {
+          heading: "What did others do before they sold? Two Norwegian home sales",
+          blocks: [
+            {
+              type: "case",
+              heading: "Lørenskog · Styling for NOK 200 before the viewing",
+              text: "Before the viewing of a three-room flat, the sellers swapped dark curtains for light ones they already had. They moved furniture, borrowed lamps and bought flowers. With a styling budget of NOK 200, they got the flat ready for photography and the viewing. The valuation and asking price were NOK 2.60 million. After one viewing and a bidding round, the home sold for NOK 2.85 million, NOK 250,000 above the valuation. [Read the report in Bergens Tidende (2015, Norwegian)](https://www.bt.no/husoghjem/bolig/i/Vbbpw3/stylingbudsjett-200-kroner-sjekk-hvordan-vi-fikset-leiligheten-foer-visning)",
+            },
+            {
+              type: "case",
+              heading: "Bergen · New floors and painted walls before selling",
+              text: "A 78 m² flat in Elvenesvegen was first valued by the estate agent at NOK 1.50 million. The owner kept the kitchen units, replaced the floors in several rooms, painted the walls and upgraded the lighting. According to the agent, the upgrade cost just under NOK 100,000, with work done by the owner. The flat sold for NOK 1.95 million plus shared debt, NOK 450,000 above the earlier valuation. The housing cooperative had also recently upgraded the facade and shared areas. Source: ProAktiv advertorial in Bergens Tidende.",
+            },
+            {
+              type: "note",
+              text: "The figures apply to these two sales. How much each improvement contributed to the bids is unknown.",
+            },
+          ],
+        },
+        {
+          heading: "Choose Mini or Large",
+          blocks: [
+            {
+              type: "table",
+              caption: "Comparison of Sale Boost Mini and Large",
+              head: ["", "Mini", "Large"],
+              rows: [
+                ["Price of Sale Boost", "NOK 4,900", "NOK 9,900"],
+                ["Budget for suggested improvements", "Under NOK 20,000", "NOK 20,000–100,000"],
+                ["Before/after comparisons", "5", "10"],
+                ["Plan", "Actions, cost estimates and order", "Prioritised list of actions, cost estimates and order"],
+              ],
+            },
+            {
+              type: "p",
+              text: "Both packages show what you can do yourself and what you should use professionals for. The images are labelled “Illustration – not carried out”. The cost estimates apply to the suggested improvements. Any increase in value is assessed by an estate agent or valuer. We confirm the delivery time once we have seen the photos.",
+            },
+            { type: "cta" },
+          ],
+        },
+      ],
+      links: [
+        {
+          text: "Want to show how an empty room could be furnished?",
+          label: "See Virtual Staging",
+          href: "/en/virtual-staging",
+        },
       ],
       priceHeading: "Price",
       tiers: [
-        { name: "Mini", price: "NOK 4,900", detail: "Upgrades under NOK 20,000, 5 before/after" },
-        { name: "Large", price: "NOK 9,900", detail: "Upgrades NOK 20,000–100,000, 10 before/after and a prioritised list" },
+        { name: "Mini", price: "NOK 4,900", detail: "5 before/after comparisons. Improvements under NOK 20,000." },
+        { name: "Large", price: "NOK 9,900", detail: "10 before/after comparisons. Improvements of NOK 20,000–100,000." },
       ],
-      note: "How much the valuation may increase is assessed by your estate agent or valuer. We show what it costs and how it could look.",
       cta: "Order Sale Boost",
     },
   },
   orderPage: {
     eyebrow: "Order",
-    heading: "Order a photo boost",
-    intro: "Fill in the form below and you'll get a reply by email within 24 hours.",
+    heading: "Order Photo Boost, Virtual Staging or Sale Boost",
+    intro:
+      "Choose the service you need and share a link to your photos or listing. We reply by email within 24 hours on weekdays.",
   },
   thanks: {
     eyebrow: "Received",
@@ -524,7 +752,7 @@ export const en: SiteContent = {
     changeConsent: "Change consent",
   },
   footer: {
-    tagline: "Your first photo decides. We make it count.",
+    tagline: "Photo Boost, Virtual Staging and simple improvements before selling.",
     linksHeading: "Site",
     legalHeading: "Legal",
     contactHeading: "Contact",

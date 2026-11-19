@@ -2,11 +2,11 @@ import HomePage from "@/components/home-page";
 import { getContent } from "@/content";
 import { pageMetadata } from "@/content/metadata";
 
-const content = getContent("no");
+const seo = getContent("no").seo.home;
 
 export const metadata = pageMetadata("no", "home", {
-  title: content.meta.title,
-  description: content.meta.description,
+  title: seo.title,
+  description: seo.description,
   absoluteTitle: true,
 });
 

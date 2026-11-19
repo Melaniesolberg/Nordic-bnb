@@ -6,7 +6,7 @@ import { useInView, useReducedMotion } from "framer-motion";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import type { Locale } from "@/i18n/config";
-import type { ProblemContent } from "@/content/types";
+import type { ProblemContent, SourcedStat } from "@/content/types";
 
 const RING_RADIUS = 54;
 const RING_LENGTH = 2 * Math.PI * RING_RADIUS;
@@ -85,6 +85,17 @@ function Countdown({ seconds, unit, locale }: { seconds: number; unit: string; l
   );
 }
 
+function Source({ stat, tone = "light" }: { stat: SourcedStat; tone?: "light" | "dark" }) {
+  const cls = `mt-3 text-xs uppercase tracking-[0.18em] ${tone === "light" ? "text-ivory/50" : "text-charcoal/45"}`;
+  return stat.href ? (
+    <a href={stat.href} target="_blank" rel="noopener noreferrer" className={`${cls} inline-block underline underline-offset-4 hover:text-coral-soft`}>
+      {stat.source}
+    </a>
+  ) : (
+    <p className={cls}>{stat.source}</p>
+  );
+}
+
 export default function Problem({
   locale,
   problem,
@@ -103,19 +114,29 @@ export default function Problem({
       <div className="relative mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
         <Reveal>
           <Eyebrow tone="light">{problem.eyebrow}</Eyebrow>
-          <div className="mt-10">
-            <Countdown seconds={problem.seconds} unit={problem.unit} locale={locale} />
-          </div>
-          <h2 className="font-serif-display text-display-md mt-10 max-w-3xl text-ivory">{problem.heading}</h2>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ivory/85 sm:text-xl">{problem.intro}</p>
+          <h2 className="font-serif-display text-display-md mt-6 max-w-3xl text-ivory">{problem.heading}</h2>
         </Reveal>
 
+        <div className="mt-14 grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-12">
+          <Reveal delay={0.05}>
+            <p className="font-serif-display text-[5.5rem] leading-none text-coral sm:text-[8rem]">{problem.stat.value}</p>
+            <p className="mt-8 max-w-xl text-base leading-relaxed text-ivory/85 sm:text-lg">{problem.stat.text}</p>
+            <Source stat={problem.stat} />
+          </Reveal>
+          <Reveal delay={0.1}>
+            <Countdown seconds={problem.seconds} unit={problem.unit} locale={locale} />
+            <p className="mt-8 max-w-xl text-base leading-relaxed text-ivory/85 sm:text-lg">{problem.timeStat.text}</p>
+            <Source stat={problem.timeStat} />
+          </Reveal>
+        </div>
+
         <Reveal delay={0.1}>
-          <div className="mt-14 flex max-w-2xl flex-col gap-4 border-t border-ivory/15 pt-10 sm:flex-row sm:items-baseline sm:gap-8">
-            <p className="font-serif-display text-6xl text-coral sm:text-7xl">{problem.stat.value}</p>
+          <div className="mt-16 flex max-w-3xl flex-col gap-4 border-t border-ivory/15 pt-10 sm:flex-row sm:items-start sm:gap-8">
+            <p className="font-serif-display text-6xl text-coral sm:text-7xl">{problem.hotel.value}</p>
             <div>
-              <p className="text-base leading-relaxed text-ivory/85 sm:text-lg">{problem.stat.text}</p>
-              <p className="mt-2 text-xs uppercase tracking-[0.18em] text-ivory/45">{problem.stat.source}</p>
+              <h3 className="font-serif-display text-2xl text-ivory sm:text-3xl">{problem.hotel.heading}</h3>
+              <p className="mt-3 text-base leading-relaxed text-ivory/85 sm:text-lg">{problem.hotel.text}</p>
+              <Source stat={problem.hotel} />
             </div>
           </div>
         </Reveal>

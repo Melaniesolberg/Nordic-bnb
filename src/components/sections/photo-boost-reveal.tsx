@@ -54,7 +54,12 @@ export default function PhotoBoostReveal({
               className="aspect-[4/3] sm:aspect-[16/9]"
               sizes="(min-width: 1600px) 1500px, 100vw"
             />
-            <p className={`mt-4 flex items-center justify-center gap-2 text-sm ${dark ? "text-ivory/55" : "text-charcoal/55"}`}>
+            {content.caption && (
+              <p className={`mt-5 text-center text-sm leading-relaxed sm:text-base ${dark ? "text-ivory/80" : "text-charcoal/75"}`}>
+                {content.caption}
+              </p>
+            )}
+            <p className={`mt-3 flex items-center justify-center gap-2 text-sm ${dark ? "text-ivory/55" : "text-charcoal/55"}`}>
               <svg width="16" height="10" viewBox="0 0 14 10" fill="none" aria-hidden>
                 <path d="M5 1L1 5l4 4M9 1l4 4-4 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

@@ -1,37 +1,39 @@
 # Eiendomly
 
-> Bildeløft, digital styling og salgsløft for boliger – med AI-verktøy, for det norske markedet.
-> Photo boost, virtual staging and sale boost for properties – using AI tools, for the Norwegian market.
+> Bildeløft, digital boligstyling og Salgsløftet for boliger, hytter og hoteller i Norge.
+> Photo Boost, Virtual Staging and Sale Boost for homes, cabins and hotels in Norway.
 
 ## Norsk
 
-Eiendomly bruker AI-verktøy til å gi boligbilder et løft, møblerer tomme rom digitalt og viser hvordan enkle
-oppgraderinger kan løfte en bolig før salg eller utleie. For Airbnb-verter, utleiere, privatpersoner
-som selger selv, meglere, hoteller og restauranter. Bildeløft leveres innen 24 timer, ingen fotograf nødvendig.
-Alt skjer skriftlig: skjema, e-post og levering på lenke. Grunnlegger: Melanie Solberg.
+Eiendomly forbedrer bildene du allerede har av boligen eller hytta, slik at de er klare for FINN, Airbnb og
+Booking.com. For hoteller gjør vi bilder av rom, fellesområder og uteområder klare for hotellets egen nettside.
+Skal du selge bolig, kan vi også møblere tomme rom digitalt og vise hvordan enkle oppgraderinger kan se ut.
+For Airbnb-verter, private utleiere, boligselgere, eiendomsmeglere, hoteller og hytteeiere.
+Vi bruker AI-verktøy og sjekker hvert bilde før levering. Svar på e-post innen 24 timer på hverdager.
 
-Tjenester og priser (inkl. mva., meglere faktureres eks. mva.):
-- Bildeløft – lysere og skarpere bilder for korttidsutleie, langtidsutleie og salg, inntil 40 bilder: 1 890 kr. https://eiendomly.no/bildeloft
-- Digital styling – digital møblering i stilen du velger: 1 190 kr per rom. https://eiendomly.no/digital-styling
-- Salgsløftet – før/etter-bilder av boligens potensial og handleliste med tiltak og kostnad: Mini 4 900 kr, Stor 9 900 kr. https://eiendomly.no/salgsloftet
-- Megleravtale (mest verdi for pengene) – Bildeløft for opptil 8 boliger og digital styling av 3 rom per måned: 9 900 kr/mnd, første måned gratis.
-- Forvalteravtale – Bildeløft for opptil 4 utleieenheter per måned: 4 900 kr/mnd, første måned gratis.
+Tjenester og priser (oppgitte priser inkluderer mva., meglere faktureres ekskl. mva.):
+- Bildeløft – opptil 40 bilder, valgt og bearbeidet forsidebilde og tre forslag til annonsetittel, levering innen 24 timer: 1 890 kr. https://eiendomly.no/bildeloft
+- Digital styling – et rom møblert digitalt i stilen du velger, merket «Digital styling – illustrasjon. Møbler følger ikke med.», med originalbildet ved siden av: 1 190 kr per rom. Til salg og langtidsutleie. https://eiendomly.no/digital-styling
+- Salgsløftet – før/etter-illustrasjoner merket «Illustrasjon – ikke utført» og en PDF med tiltak, kostnadsanslag og anbefalt rekkefølge: Mini 4 900 kr, Stor 9 900 kr. https://eiendomly.no/salgsloftet
+- Megleravtale – Bildeløft for opptil 8 boliger og digital styling av 3 rom per måned: 9 900 kr per måned. Første måned gratis, deretter tre måneders binding og én måneds oppsigelse.
+- Forvalteravtale – Bildeløft for opptil 4 enheter per måned: 4 900 kr per måned. Første måned gratis, deretter tre måneders binding og én måneds oppsigelse.
 
 Bestilling: https://eiendomly.no/bestill
 Kontakt: kontakt@eiendomly.no
 
 ## English
 
-Eiendomly uses AI tools to give property photos a lift, furnishes empty rooms digitally, and shows how
-simple upgrades can lift a property before sale or rental. For Airbnb hosts, landlords, private
-sellers, estate agents, hotels and restaurants. Photo Boost is delivered within 24 hours, no photographer needed.
+Eiendomly improves the photos you already have of your home or cabin, so they are ready for FINN, Airbnb and
+Booking.com. For hotels, we get photos of rooms, shared spaces and outdoor areas ready for the hotel's own
+website. If you are selling a home, we can also furnish empty rooms digitally and show what simple upgrades
+could look like. For Airbnb hosts, private landlords, home sellers, estate agents, hotels and cabin owners.
 
-Services and prices (incl. VAT; estate agents invoiced excl. VAT):
-- Photo Boost – brighter, sharper photos for short-term rentals, long-term rentals and sales, up to 40 photos: NOK 1,890. https://eiendomly.no/en/photo-boost
-- Virtual Staging – digital furnishing in the style you choose: NOK 1,190 per room. https://eiendomly.no/en/virtual-staging
-- Sale Boost – before/after images of the home's potential and a shopping list with work and costs: Mini NOK 4,900, Large NOK 9,900. https://eiendomly.no/en/sale-boost
-- Agent Plan (best value) – Photo Boost for up to 8 properties and virtual staging of 3 rooms a month: NOK 9,900/month, first month free.
-- Manager Plan – Photo Boost for up to 4 rental units a month: NOK 4,900/month, first month free.
+Services and prices (prices include VAT; estate agents are invoiced excluding VAT):
+- Photo Boost – up to 40 photos, a selected and edited cover photo and three listing title suggestions, delivered within 24 hours: NOK 1,890. https://eiendomly.no/en/photo-boost
+- Virtual Staging – one room furnished digitally in the style you choose, labelled as an illustration, with the original photo alongside: NOK 1,190 per room. For sales and long-term rentals. https://eiendomly.no/en/virtual-staging
+- Sale Boost – before/after illustrations labelled "Illustration – not carried out" and a PDF with actions, cost estimates and a recommended order: Mini NOK 4,900, Large NOK 9,900. https://eiendomly.no/en/sale-boost
+- Agent Plan – Photo Boost for up to 8 properties and Virtual Staging of 3 rooms per month: NOK 9,900 per month. First month free.
+- Manager Plan – Photo Boost for up to 4 units per month: NOK 4,900 per month. First month free.
 
 Order: https://eiendomly.no/en/order
 Contact: kontakt@eiendomly.no

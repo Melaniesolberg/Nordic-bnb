@@ -2,11 +2,12 @@ import ServicePage from "@/components/pages/service-page";
 import { getContent } from "@/content";
 import { pageMetadata } from "@/content/metadata";
 
-const page = getContent("en").servicePages.saleBoost;
+const seo = getContent("en").seo.saleBoost;
 
 export const metadata = pageMetadata("en", "saleBoost", {
-  title: `${page.eyebrow} – ${page.heading}`,
-  description: page.whatItIs,
+  title: seo.title,
+  description: seo.description,
+  absoluteTitle: true,
 });
 
 export default function Page() {

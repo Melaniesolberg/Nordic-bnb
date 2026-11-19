@@ -35,7 +35,6 @@ export const media = {
   audienceSeller: `${CDN}/hf_20261116_213241_847aa9d1-b0cf-4a4c-a4d7-4588dde2790a.png`,
   audienceAgent: `${CDN}/hf_20261116_213240_23f8cb9c-20c7-4b85-9901-d07ee866a36d.png`,
   audienceHotel: `${CDN}/hf_20261116_213240_7140580b-79ec-4701-bec8-9920337f26da.png`,
-  audienceRestaurant: `${CDN}/hf_20261116_213748_3d3b0522-df2a-4c9b-b857-10d9a93b32f8.png`,
 
   harbourTown: `${CDN}/hf_20261116_213749_15b0e138-383f-4570-848c-7ac87d68723a.png`,
   houseDusk: `${CDN}/hf_20261116_213749_25d5d00b-08e4-4bbf-86b5-2b5db1bab669.png`,

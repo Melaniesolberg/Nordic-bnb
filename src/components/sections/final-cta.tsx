@@ -174,7 +174,16 @@ export default function FinalCta({
                   </div>
                   <div className="sm:col-span-2">
                     <label className={labelClasses} htmlFor="photos_link">{f.photosLink}</label>
-                    <input id="photos_link" name="photos_link" type="url" required placeholder="https://" className={inputClasses} />
+                    <input
+                      id="photos_link"
+                      name="photos_link"
+                      type="url"
+                      required
+                      placeholder="https://"
+                      aria-describedby="photos_link_help"
+                      className={inputClasses}
+                    />
+                    <p id="photos_link_help" className="mt-2 text-xs leading-relaxed text-ivory/50">{f.photosLinkHelp}</p>
                   </div>
                   <div className="sm:col-span-2">
                     <label className={labelClasses} htmlFor="message">{f.message}</label>

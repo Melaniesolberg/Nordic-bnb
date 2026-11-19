@@ -110,6 +110,13 @@ body {
   letter-spacing: -0.02em;
 }
 
+/* Short phones: keep the hero headline, intro and buttons in view. */
+@media (max-height: 620px) {
+  .hero-headline {
+    font-size: 2.1rem;
+  }
+}
+
 .text-display-md {
   font-size: clamp(2.25rem, 1.8rem + 2.6vw, 5.25rem);
   line-height: 1;

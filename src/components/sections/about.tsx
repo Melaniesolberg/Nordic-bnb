@@ -44,9 +44,11 @@ export default function About({
                 )}
                 <p className="mt-5 font-serif-display text-2xl text-charcoal">{about.founderName}</p>
                 <p className="mt-1 eyebrow text-charcoal/45">{about.founderRole}</p>
-                <p className="mt-6 max-w-sm font-serif-display text-xl italic leading-snug text-charcoal/80">
-                  “{about.founderQuote}”
-                </p>
+                {about.founderQuote && (
+                  <p className="mt-6 max-w-sm font-serif-display text-xl italic leading-snug text-charcoal/80">
+                    “{about.founderQuote}”
+                  </p>
+                )}
               </div>
             </Reveal>
           </div>

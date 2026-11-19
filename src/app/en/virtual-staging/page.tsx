@@ -2,11 +2,12 @@ import ServicePage from "@/components/pages/service-page";
 import { getContent } from "@/content";
 import { pageMetadata } from "@/content/metadata";
 
-const page = getContent("en").servicePages.virtualStaging;
+const seo = getContent("en").seo.virtualStaging;
 
 export const metadata = pageMetadata("en", "virtualStaging", {
-  title: `${page.eyebrow} – ${page.heading}`,
-  description: page.whatItIs,
+  title: seo.title,
+  description: seo.description,
+  absoluteTitle: true,
 });
 
 export default function Page() {

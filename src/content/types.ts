@@ -18,14 +18,24 @@ export interface HeroContent {
   locationTag: string;
 }
 
+/** A figure with the sentence it belongs to and where it comes from. */
+export interface SourcedStat {
+  value: string;
+  text: string;
+  source: string;
+  href?: string;
+}
+
 export interface ProblemContent {
   eyebrow: string;
   heading: string;
-  intro: string;
   /** Seconds the countdown starts from. */
   seconds: number;
   unit: string;
-  stat: { value: string; text: string; source: string };
+  /** The listing-preview study the countdown illustrates. */
+  timeStat: SourcedStat;
+  stat: SourcedStat;
+  hotel: SourcedStat & { heading: string };
 }
 
 export interface PhotoBoostRevealContent {
@@ -38,6 +48,8 @@ export interface PhotoBoostRevealContent {
   hint: string;
   beforeLabel: string;
   afterLabel: string;
+  /** Visible caption saying what was done and which side is the original. */
+  caption?: string;
 }
 
 export interface ShowcaseContent {
@@ -48,7 +60,7 @@ export interface ShowcaseContent {
 export interface HowItWorksContent {
   eyebrow: string;
   heading: string;
-  intro: string;
+  intro?: string;
   steps: { title: string; description: string }[];
   /** Listing sites shown as chips over the last step's image. */
   channels: string[];
@@ -62,15 +74,17 @@ export interface ServiceItem {
   description: string;
   features: string[];
   note?: string;
+  /** Descriptive link to the service page. */
+  linkLabel: string;
 }
 
 export interface ServicesContent {
   eyebrow: string;
   heading: string;
-  intro: string;
+  intro?: string;
   items: ServiceItem[];
+  termsHeading: string;
   termsNote: string;
-  ctaLabel: string;
 }
 
 export type PlanKey = "brokerPlan" | "managerPlan";
@@ -85,23 +99,25 @@ export interface PlanItem {
   savings: string;
   features: string[];
   badge?: string;
+  featured?: boolean;
+  cta: string;
 }
 
 export interface PlansContent {
   eyebrow: string;
-  badge: string;
+  badge?: string;
   heading: string;
   intro: string;
   items: PlanItem[];
+  valueLabel: string;
   terms: string[];
   note: string;
-  ctaLabel: string;
 }
 
 export interface AudiencesContent {
   eyebrow: string;
   heading: string;
-  intro: string;
+  intro?: string;
   items: { name: string; description: string }[];
 }
 
@@ -111,24 +127,15 @@ export interface AboutContent {
   paragraphs: string[];
   founderName: string;
   founderRole: string;
-  founderQuote: string;
+  founderQuote?: string;
   photoAlt: string;
   replyNote: string;
-}
-
-export interface HonestyColumn {
-  title: string;
-  tagline: string;
-  points: string[];
 }
 
 export interface HonestyContent {
   eyebrow: string;
   heading: string;
-  intro: string;
-  does: HonestyColumn;
-  never: HonestyColumn;
-  cta: string;
+  items: { title: string; body: string }[];
 }
 
 export interface FaqContent {
@@ -152,6 +159,7 @@ export interface OrderFormContent {
     customerType: string;
     service: string;
     photosLink: string;
+    photosLinkHelp: string;
     message: string;
     rights: string;
     marketing: string;
@@ -176,23 +184,42 @@ export interface FinalCtaContent {
   form: OrderFormContent;
 }
 
+/**
+ * One piece of a service page section. Text may hold inline links written
+ * as [label](href); see components/ui/rich-text.tsx.
+ */
+export type ServiceBlock =
+  | { type: "p"; text: string }
+  | { type: "list"; items: string[] }
+  | { type: "table"; caption: string; head: string[]; rows: string[][] }
+  | { type: "case"; heading: string; text: string }
+  | { type: "note"; text: string }
+  | { type: "cta" };
+
 export interface ServicePageContent {
   eyebrow: string;
   heading: string;
-  forWho: string;
-  whatItIs: string;
-  includesHeading: string;
-  includes: string[];
-  /** One short line shown large under the intro. */
-  highlight?: string;
-  facts?: { value: string; label: string; source?: string }[];
+  intro: string;
+  /** Before/after pair shown under the intro, when the page has one. */
+  comparison?: {
+    beforeLabel: string;
+    afterLabel: string;
+    beforeAlt: string;
+    afterAlt: string;
+    caption: string;
+    hint: string;
+  };
+  sections: { heading: string; blocks: ServiceBlock[] }[];
+  /** Internal links to related pages, shown after the sections. */
+  links: { text: string; label: string; href: string }[];
   priceHeading: string;
   price?: string;
   priceNote?: string;
   tiers?: { name: string; price: string; detail: string }[];
-  note?: string;
   cta: string;
 }
+
+export type SeoKey = "home" | ServiceKey | "order";
 
 export interface SimplePageContent {
   eyebrow: string;
@@ -232,6 +259,7 @@ export interface FooterContent {
 
 export interface SiteContent {
   meta: { title: string; description: string };
+  seo: Record<SeoKey, { title: string; description: string }>;
   nav: NavContent;
   hero: HeroContent;
   problem: ProblemContent;

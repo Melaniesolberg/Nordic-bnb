@@ -1,4 +1,5 @@
 import { getContent } from "./index";
+import { plainText } from "@/components/ui/rich-text";
 import { SITE_URL, CONTACT } from "@/lib/utils";
 import { htmlLang, pageHref, type Locale } from "@/i18n/config";
 
@@ -17,8 +18,14 @@ export function homeJsonLd(locale: Locale) {
         "@type": "Organization",
         "@id": `${SITE_URL}/#organization`,
         name: "Eiendomly",
+        legalName: content.footer.legalName,
         url: SITE_URL,
         email: CONTACT.email,
+        identifier: {
+          "@type": "PropertyValue",
+          propertyID: "Organisasjonsnummer",
+          value: CONTACT.orgNumber.replace(/\s/g, ""),
+        },
         founder: { "@id": `${SITE_URL}/#founder` },
       },
       {
@@ -59,7 +66,7 @@ export function homeJsonLd(locale: Locale) {
         mainEntity: content.faq.items.map((item) => ({
           "@type": "Question",
           name: item.q,
-          acceptedAnswer: { "@type": "Answer", text: item.a },
+          acceptedAnswer: { "@type": "Answer", text: plainText(item.a) },
         })),
       },
     ],

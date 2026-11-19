@@ -120,7 +120,7 @@ export default function Hero({
             <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[78%] bg-gradient-to-t from-charcoal/90 via-charcoal/50 to-transparent" />
           </div>
 
-          <div className="relative z-10 w-full px-5 pb-16 sm:px-8 sm:pb-20 lg:px-12 lg:pb-24">
+          <div className="relative z-10 w-full px-5 pb-10 sm:px-8 sm:pb-20 lg:px-12 lg:pb-24">
             <div className="mx-auto max-w-[1600px]">
               <div className="min-h-[15rem] max-w-4xl sm:min-h-[17rem]" style={textShadow}>
                 <AnimatePresence mode="wait">
@@ -137,7 +137,7 @@ export default function Hero({
                         {beat.eyebrow}
                       </p>
                       <h2 className="font-serif-display text-display font-normal text-ivory">{beat.heading}</h2>
-                      <p className="mt-5 max-w-xl text-base leading-relaxed text-ivory/90 sm:mt-7 sm:text-lg">
+                      <p className="mt-4 max-w-2xl text-[0.9rem] leading-relaxed text-ivory/90 sm:mt-7 sm:text-lg">
                         {beat.body}
                       </p>
                     </motion.div>
@@ -147,7 +147,7 @@ export default function Hero({
                         <span className="h-px w-8 bg-current opacity-70" aria-hidden />
                         {hero.eyebrow}
                       </motion.p>
-                      <h1 className="font-serif-display text-display font-normal text-ivory">
+                      <h1 className="font-serif-display text-display font-normal text-ivory hero-headline">
                         {hero.headlineLines.map((line, i) => (
                           <span key={i} className="block overflow-hidden">
                             <motion.span
@@ -157,12 +157,13 @@ export default function Hero({
                             >
                               {line}
                             </motion.span>
+                            {i < hero.headlineLines.length - 1 && " "}
                           </span>
                         ))}
                       </h1>
                       <motion.p
                         variants={item}
-                        className="mt-5 max-w-xl text-base leading-relaxed text-ivory/90 sm:mt-7 sm:text-lg"
+                        className="mt-4 max-w-2xl text-[0.9rem] leading-relaxed text-ivory/90 sm:mt-7 sm:text-lg"
                       >
                         {hero.subline}
                       </motion.p>

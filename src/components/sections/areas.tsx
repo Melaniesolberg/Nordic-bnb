@@ -36,9 +36,9 @@ export default function Areas({
           <h2 className="font-serif-display text-display-md mt-6 max-w-2xl text-ivory">
             {areas.heading}
           </h2>
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/60 sm:text-lg">
-            {areas.intro}
-          </p>
+          {areas.intro && (
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-ivory/60 sm:text-lg">{areas.intro}</p>
+          )}
         </Reveal>
 
         <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-8">
@@ -65,23 +65,20 @@ export default function Areas({
                 key={a.name}
                 onMouseEnter={() => setActive(i)}
                 onClick={() => setActive(i)}
-                className={`flex items-center justify-between py-6 text-left transition-colors ${
+                className={`flex flex-col gap-2 py-6 text-left transition-colors sm:flex-row sm:items-center sm:justify-between sm:gap-6 ${
                   active === i ? "text-ivory" : "text-ivory/45"
                 }`}
               >
                 <span className="font-serif-display text-2xl sm:text-3xl">{a.name}</span>
                 <span
-                  className={`hidden max-w-xs text-right text-sm leading-relaxed sm:block ${
-                    active === i ? "text-ivory/70" : "text-ivory/0"
+                  className={`text-sm leading-relaxed sm:max-w-xs sm:text-right ${
+                    active === i ? "text-ivory/70" : "text-ivory/50 sm:text-ivory/0"
                   }`}
                 >
-                  {active === i ? a.description : ""}
+                  {a.description}
                 </span>
               </button>
             ))}
-            <p className="sm:hidden pt-6 text-sm leading-relaxed text-ivory/65">
-              {areas.items[active].description}
-            </p>
           </div>
         </div>
       </div>

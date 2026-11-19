@@ -34,7 +34,7 @@ export default function Nav({
   }, []);
 
   const dark = scrolled || open || !overHero;
-  const orderHref = pageHref(locale, "order");
+  const orderHref = `${pageHref(locale, "order")}?service=photoBoost`;
 
   return (
     <header
@@ -47,13 +47,13 @@ export default function Nav({
           <Logo tone={dark ? "dark" : "light"} />
         </Link>
 
-        <nav className="hidden items-center gap-9 lg:flex">
+        <nav className="hidden items-center gap-7 xl:flex">
           {nav.links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className={`eyebrow transition-colors hover:text-coral ${
-                dark ? "text-charcoal/70" : "text-ivory/75"
+              className={`whitespace-nowrap text-[0.85rem] font-medium tracking-wide transition-colors hover:text-coral ${
+                dark ? "text-charcoal/75" : "text-ivory/80"
               }`}
             >
               {link.label}
@@ -61,12 +61,12 @@ export default function Nav({
           ))}
         </nav>
 
-        <div className="hidden items-center gap-4 lg:flex">
+        <div className="hidden items-center gap-4 xl:flex">
           <LanguageSwitcher locale={locale} dark={dark} label={nav.selectLanguage} pageKey={pageKey} />
           <Magnetic>
             <Link
               href={orderHref}
-              className={`rounded-full px-5 py-2.5 text-[0.8rem] font-medium tracking-wide transition-colors hover:bg-coral hover:text-ivory ${
+              className={`whitespace-nowrap rounded-full px-5 py-2.5 text-[0.8rem] font-medium tracking-wide transition-colors hover:bg-coral hover:text-ivory ${
                 dark ? "bg-charcoal text-ivory" : "bg-ivory text-charcoal"
               }`}
             >
@@ -76,7 +76,7 @@ export default function Nav({
         </div>
 
         <button
-          className="z-10 flex flex-col gap-1.5 lg:hidden"
+          className="z-10 flex flex-col gap-1.5 xl:hidden"
           aria-label={nav.toggleMenu}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
@@ -101,7 +101,7 @@ export default function Nav({
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="overflow-hidden bg-ivory lg:hidden"
+            className="overflow-hidden bg-ivory xl:hidden"
           >
             <div className="flex flex-col gap-6 px-6 pb-10 pt-4">
               {nav.links.map((link) => (
