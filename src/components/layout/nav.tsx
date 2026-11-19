@@ -34,7 +34,7 @@ export default function Nav({
   }, []);
 
   const dark = scrolled || open || !overHero;
-  const orderHref = `${pageHref(locale, "order")}?service=photoBoost`;
+  const orderHref = pageHref(locale, "order");
 
   return (
     <header
@@ -47,13 +47,13 @@ export default function Nav({
           <Logo tone={dark ? "dark" : "light"} />
         </Link>
 
-        <nav className="hidden items-center gap-7 xl:flex">
+        <nav className="hidden items-center gap-9 xl:flex">
           {nav.links.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className={`whitespace-nowrap text-[0.85rem] font-medium tracking-wide transition-colors hover:text-coral ${
-                dark ? "text-charcoal/75" : "text-ivory/80"
+              className={`eyebrow transition-colors hover:text-coral ${
+                dark ? "text-charcoal/70" : "text-ivory/75"
               }`}
             >
               {link.label}
@@ -66,7 +66,7 @@ export default function Nav({
           <Magnetic>
             <Link
               href={orderHref}
-              className={`whitespace-nowrap rounded-full px-5 py-2.5 text-[0.8rem] font-medium tracking-wide transition-colors hover:bg-coral hover:text-ivory ${
+              className={`rounded-full px-5 py-2.5 text-[0.8rem] font-medium tracking-wide transition-colors hover:bg-coral hover:text-ivory ${
                 dark ? "bg-charcoal text-ivory" : "bg-ivory text-charcoal"
               }`}
             >
@@ -121,7 +121,7 @@ export default function Nav({
                     href={pageHref(l, pageKey)}
                     onClick={() => setOpen(false)}
                     className={`eyebrow flex items-center gap-1.5 rounded-full border border-charcoal/15 px-3 py-1.5 ${
-                      l === locale ? "border-coral text-coral" : "text-charcoal/60"
+                      l === locale ? "border-coral text-coral" : "text-charcoal/65"
                     }`}
                   >
                     <span aria-hidden>{localeFlags[l]}</span>

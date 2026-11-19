@@ -33,13 +33,13 @@ function ServiceCard({
       )}
       <div className="relative flex h-full flex-col">
         <h3 className="font-serif-display text-2xl sm:text-3xl">{item.title}</h3>
-        <p className={`mt-4 text-sm leading-relaxed ${dark ? "text-ivory/65" : "text-charcoal/60"}`}>
+        <p className={`mt-4 text-sm leading-relaxed ${dark ? "text-ivory/65" : "text-charcoal/65"}`}>
           {item.description}
         </p>
 
         <div className="mt-8">
           <span className="font-serif-display text-5xl text-coral">{item.price}</span>
-          <p className={`mt-2 text-sm ${dark ? "text-ivory/50" : "text-charcoal/50"}`}>{item.priceNote}</p>
+          <p className={`mt-2 text-sm ${dark ? "text-ivory/50" : "text-charcoal/65"}`}>{item.priceNote}</p>
         </div>
 
         <ul className="mt-8 space-y-3.5">
@@ -54,7 +54,7 @@ function ServiceCard({
         </ul>
 
         {item.note && (
-          <p className={`mt-6 text-xs leading-relaxed ${dark ? "text-ivory/45" : "text-charcoal/45"}`}>{item.note}</p>
+          <p className={`mt-6 text-xs leading-relaxed ${dark ? "text-ivory/55" : "text-charcoal/65"}`}>{item.note}</p>
         )}
 
         <div className="mt-auto pt-10">
@@ -111,7 +111,7 @@ export default function Services({
         <Reveal delay={0.15}>
           <div className="mt-12 max-w-2xl border-t border-charcoal/10 pt-8">
             <h3 className="font-serif-display text-xl text-charcoal">{services.termsHeading}</h3>
-            <p className="mt-3 text-sm leading-relaxed text-charcoal/60 sm:text-base">{services.termsNote}</p>
+            <p className="mt-3 text-sm leading-relaxed text-charcoal/65 sm:text-base">{services.termsNote}</p>
           </div>
         </Reveal>
       </div>

@@ -71,7 +71,7 @@ export function LegalPage({ locale, page }: { locale: Locale; page: "privacy" | 
           <Reveal>
             <Eyebrow>{legal.eyebrow}</Eyebrow>
             <h1 className="font-serif-display text-display-md mt-6 text-charcoal">{legal.heading}</h1>
-            <p className="mt-4 text-sm text-charcoal/45">{legal.updated}</p>
+            <p className="mt-4 text-sm text-charcoal/65">{legal.updated}</p>
             <p className="mt-6 text-base leading-relaxed text-charcoal/65 sm:text-lg">{legal.intro}</p>
           </Reveal>
           <div className="mt-14 space-y-10 border-t border-charcoal/10 pt-10">

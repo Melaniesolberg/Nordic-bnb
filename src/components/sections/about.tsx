@@ -43,7 +43,7 @@ export default function About({
                   </div>
                 )}
                 <p className="mt-5 font-serif-display text-2xl text-charcoal">{about.founderName}</p>
-                <p className="mt-1 eyebrow text-charcoal/45">{about.founderRole}</p>
+                <p className="mt-1 eyebrow text-charcoal/65">{about.founderRole}</p>
                 {about.founderQuote && (
                   <p className="mt-6 max-w-sm font-serif-display text-xl italic leading-snug text-charcoal/80">
                     “{about.founderQuote}”
@@ -62,7 +62,7 @@ export default function About({
               </Reveal>
             ))}
             <Reveal delay={0.15}>
-              <p className="mt-2 text-sm text-charcoal/50">{about.replyNote}</p>
+              <p className="mt-2 text-sm text-charcoal/65">{about.replyNote}</p>
             </Reveal>
           </div>
         </div>

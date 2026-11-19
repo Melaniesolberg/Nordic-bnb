@@ -4,33 +4,33 @@ export const no: SiteContent = {
   meta: {
     title: "Boligbilder, digital styling og salgsløft | Eiendomly",
     description:
-      "Få bedre bilder av boliger og hytter til FINN, Airbnb og Booking.com, og bilder av hotellrom til hotellets egen nettside. Se tjenester og priser hos Eiendomly.",
+      "Bedre bilder av boliger, hytter og hoteller til FINN, Airbnb, Booking.com og egen nettside. Bildeløft fra 1 890 kr, levert innen 24 timer.",
   },
   seo: {
     home: {
       title: "Boligbilder, digital styling og salgsløft | Eiendomly",
       description:
-        "Få bedre bilder av boliger og hytter til FINN, Airbnb og Booking.com, og bilder av hotellrom til hotellets egen nettside. Se tjenester og priser hos Eiendomly.",
+        "Bedre bilder av boliger, hytter og hoteller til FINN, Airbnb, Booking.com og egen nettside. Bildeløft fra 1 890 kr, levert innen 24 timer.",
     },
     photoBoost: {
       title: "Bildeløft for FINN og Airbnb – 1 890 kr | Eiendomly",
       description:
-        "Få opptil 40 boligbilder forbedret for 1 890 kr. Forsidebilde og tre forslag til annonsetittel inkludert. Levering innen 24 timer.",
+        "Opptil 40 boligbilder forbedret for 1 890 kr, levert innen 24 timer. Tre forslag til annonsetittel inkludert. Mobilbilder holder.",
     },
     virtualStaging: {
       title: "Digital boligstyling – 1 190 kr per rom | Eiendomly",
       description:
-        "Vis hvordan et tomt rom kan møbleres. Velg stil og få en merket illustrasjon med originalbildet ved siden av. For salg og langtidsutleie.",
+        "Vis hva et tomt rom kan bli. Du velger stil, vi møblerer rommet digitalt. Merket illustrasjon med originalbildet ved siden av.",
     },
     saleBoost: {
       title: "Salgsløftet – oppussingsplan før boligsalg | Eiendomly",
       description:
-        "Se hva enkle oppgraderinger kan gjøre før salg. Få før/etter-illustrasjoner, kostnadsanslag og prioritert tiltaksplan fra 4 900 kr.",
+        "Se hva enkle tiltak kan gjøre før salg. Før/etter-illustrasjoner og en plan med kostnadsanslag, fra 4 900 kr.",
     },
     order: {
       title: "Bestill bildeløft eller digital styling | Eiendomly",
       description:
-        "Bestill Bildeløft, digital boligstyling, Salgsløftet eller en fast avtale. Send lenke til bildene eller annonsen og få svar på e-post.",
+        "Bestill Bildeløft, digital styling, Salgsløftet eller en fast avtale. Send en lenke til bildene og få svar innen 24 timer på hverdager.",
     },
   },
   nav: {
@@ -39,8 +39,8 @@ export const no: SiteContent = {
       { label: "Tjenester", href: "/#services" },
       { label: "Faste avtaler", href: "/#avtaler" },
       { label: "Hvem vi hjelper", href: "/#areas" },
-      { label: "Om Eiendomly", href: "/#about" },
-      { label: "Spørsmål og svar", href: "/#faq" },
+      { label: "Om meg", href: "/#about" },
+      { label: "FAQ", href: "/#faq" },
     ],
     cta: "Bestill bildeløft",
     toggleMenu: "Åpne meny",
@@ -50,88 +50,77 @@ export const no: SiteContent = {
     eyebrow: "Bildeløft · Digital styling · Salgsløftet",
     headlineLines: ["Bedre boligbilder", "for salg og utleie"],
     subline:
-      "Vi forbedrer bildene du allerede har av boligen eller hytta, slik at de er klare for FINN, Airbnb og Booking.com. For hoteller gjør vi bilder av rom, fellesområder og uteområder klare for hotellets egen nettside. Skal du selge bolig, kan vi også møblere tomme rom digitalt og vise hvordan enkle oppgraderinger kan se ut.",
+      "Send oss bildene du har. Vi gjør dem klare for FINN, Airbnb, Booking.com eller hotellets egen nettside – innen 24 timer, fra 1 890 kr.",
     ctaPrimary: "Bestill bildeløft",
     ctaSecondary: "Se tjenester og priser",
     beats: [
       {
         eyebrow: "Bildeløft",
-        heading: "Lysere og tydeligere bilder.",
-        body: "Vi justerer lys, farger og skarphet, retter opp linjer og rydder bort løse småting der det passer.",
+        heading: "Lyse, skarpe og rette bilder.",
+        body: "Vi justerer lys, farger og linjer og rydder bort løse småting. Mobilbilder holder.",
       },
       {
-        eyebrow: "Klar for annonsen",
-        heading: "Bilder du kan publisere med en gang.",
-        body: "Du får bildene tilbake på en lenke. Bildeløft leveres innen 24 timer, og vi sjekker hvert bilde før levering.",
+        eyebrow: "Klar til bruk",
+        heading: "Ferdig på 24 timer.",
+        body: "Du får alle bildene tilbake på en lenke, sjekket før levering.",
       },
     ],
     locationTag: "Norge",
   },
   problem: {
     eyebrow: "Førsteinntrykket",
-    heading: "Gode bilder gir et tydelig førsteinntrykk",
+    heading: "Bildene teller mest i annonsen",
     seconds: 2.7,
     unit: "sek",
     stat: {
       value: "58 %",
-      text: "I FINNs eiendomsundersøkelse fra 2025 valgte 58 % boligbildene som ett av de tre viktigste elementene i en boligannonse. Bilder kom øverst på listen.",
+      text: "av de spurte valgte bildene som en av de tre viktigste delene av en boligannonse. Ingenting kom høyere.",
       source: "FINN, Eiendomsundersøkelsen 2025",
       href: "https://www.finn.no/bedriftskunde/aktuelt/finn-eiendom/eiendomsundersokelsen-2025",
     },
     timeStat: {
       value: "2,7 sek",
-      text: "I Rightmoves britiske undersøkelse fra 2012 brukte potensielle kjøpere i snitt 2,7 sekunder på annonseforhåndsvisningen før de valgte å se videre eller gå til neste bolig.",
+      text: "brukte boligkjøpere i snitt på en annonse i søkelisten før de klikket seg inn eller gikk videre.",
       source: "Rightmove, Storbritannia, 2012",
     },
     hotel: {
-      heading: "Hva ser hotellgjestene etter før de bestiller?",
+      heading: "Hotellgjester ser også på bildene",
       value: "36 %",
-      text: "I en undersøkelse fra Expedia Group svarte 36 % av de reisende at de bruker beskrivelser og bilder på hotellets egen nettside for å vurdere om stemningen passer dem.",
+      text: "av de reisende bruker bilder og beskrivelser på hotellets egen nettside for å finne ut om stedet passer dem.",
       source: "Hotels.com, Unpack ’24",
       href: "https://partner.expediagroup.com/en-us/resources/blog/unpack-2024-hotel-trends",
     },
   },
   photoBoost: {
     eyebrow: "Bildeløft",
-    heading: "Se hva et bildeløft gjør",
-    body: "Mørke mobilbilder eller skjeve linjer? Vi bruker AI-verktøy til å justere lys, farger og skarphet, rette opp linjer og rydde bort løse småting der det passer. Vi sjekker hvert bilde før levering.",
-    hint: "Dra for å sammenligne bildene.",
+    heading: "Se forskjellen",
+    body: "Samme bilde, før og etter. Vi justerer lys, farger og skarphet, retter opp linjer og rydder bort løse småting. Hvert bilde sjekkes før du får det.",
+    hint: "Dra for å sammenligne.",
     beforeLabel: "Originalbilde",
     afterLabel: "Etter bildeløft",
     beforeAlt: "Originalbilde av en stue, før bildeløft",
     afterAlt: "Samme stue etter bildeløft, med justert lys, farger og skarphet",
-    caption: "Originalbilde og samme bilde etter bildeløft: lys, farger og skarphet justert, linjer rettet og løse småting ryddet bort.",
+    caption: "Lys, farger og linjer justert. Løse småting ryddet bort.",
   },
   showcase2: {
     eyebrow: "Digital styling",
-    heading: "Digital styling viser hvordan rommet kan brukes",
-    body: "Et tomt rom kan være vanskelig å innrede i hodet. Vi møblerer rommet på bildet, så kjøperen eller leietakeren kan se hvordan det kan brukes. Du får originalbildet ved siden av illustrasjonen. Digital styling koster 1 190 kr per rom.",
-    hint: "Dra for å sammenligne bildene.",
+    heading: "Vis hva et tomt rom kan bli",
+    body: "Tomme rom er vanskelige å se for seg. Vi møblerer dem digitalt, så kjøpere og leietakere ser hvordan rommet kan brukes. 1 190 kr per rom, med originalbildet ved siden av.",
+    hint: "Dra for å sammenligne.",
     beforeLabel: "Originalbilde",
     afterLabel: "Digital styling – illustrasjon",
     beforeAlt: "Originalbilde av en tom stue med store vinduer",
     afterAlt: "Samme stue møblert digitalt med sofa, bord og planter – digital styling, illustrasjon",
-    caption: "Originalbilde av et tomt rom og samme rom møblert digitalt. Vegger, gulv og vinduer er som på originalen.",
-    link: "Se pris og eksempler på digital styling",
+    caption: "Vegger, gulv og vinduer er som på originalen.",
+    link: "Se pris og eksempler",
   },
   howItWorks: {
     eyebrow: "Tre steg",
     heading: "Slik fungerer det",
     steps: [
-      {
-        title: "Send oss bildene",
-        description: "Del en bildelenke eller lenken til annonsen. Mobilbilder fungerer også.",
-      },
-      {
-        title: "Vi gjør jobben",
-        description:
-          "Vi bruker AI-verktøy og sjekker resultatet før levering. Ved digital styling velger du uttrykket du vil ha.",
-      },
-      {
-        title: "Få bildene på en lenke",
-        description:
-          "Du får bildene tilbake digitalt. Du kan publisere dem i annonsen eller på din egen nettside.",
-      },
+      { title: "Send bildene", description: "Del en lenke til bildene eller annonsen. Mobilbilder holder." },
+      { title: "Vi gjør jobben", description: "Vi forbedrer bildene og sjekker hvert enkelt før levering." },
+      { title: "Bruk dem", description: "Du får bildene på en lenke, klare til å publiseres." },
     ],
     channels: ["FINN", "Airbnb", "Booking.com"],
   },
@@ -148,63 +137,65 @@ export const no: SiteContent = {
   },
   services: {
     eyebrow: "Tjenester",
-    heading: "Velg tjenesten som passer eiendommen din",
+    heading: "Tre tjenester, faste priser",
     items: [
       {
         key: "photoBoost",
         title: "Bildeløft",
         price: "1 890 kr",
         priceNote: "opptil 40 bilder",
-        description: "Passer når du vil ha lysere og tydeligere bilder av boligen slik den er i dag.",
+        description: "For deg som vil ha lyse, tydelige bilder av boligen slik den er i dag.",
         features: [
-          "Opptil 40 bilder",
-          "Valgt og bearbeidet forsidebilde",
+          "Opptil 40 bilder forbedret",
+          "Vi velger det beste bildet til forsiden",
           "Tre forslag til annonsetittel",
-          "Levering innen 24 timer",
+          "Levert innen 24 timer",
         ],
-        linkLabel: "Se hva Bildeløft inkluderer",
+        note: "Eksempel: Leier du ut for 1 200 kr natten, er Bildeløft betalt etter to netter.",
+        linkLabel: "Les mer om Bildeløft",
       },
       {
         key: "virtualStaging",
         title: "Digital styling",
         price: "1 190 kr",
         priceNote: "per rom",
-        description:
-          "Passer når du vil vise hvordan et tomt rom kan møbleres, eller hvordan rommet ser ut med andre møbler.",
+        description: "For tomme rom, eller rom der møblene ikke følger med.",
         features: [
           "Du velger stil",
-          "Tydelig merket bilde med originalen ved siden av",
-          "Til salg og langtidsutleie",
+          "Merket «Digital styling – illustrasjon. Møbler følger ikke med.»",
+          "Originalbildet ved siden av",
+          "For salg og langtidsutleie",
         ],
-        linkLabel: "Se hvordan digital styling fungerer",
+        note: "Eksempel: Stue og to soverom koster 3 570 kr. Fysisk styling av en treroms starter på 16 900 kr hos stylistene vi har sjekket.",
+        linkLabel: "Les mer om digital styling",
       },
       {
         key: "saleBoost",
         title: "Salgsløftet",
         price: "Fra 4 900 kr",
-        priceNote: "Stor pakke koster 9 900 kr",
-        description:
-          "Passer når du vil vise hva maling, nye kjøkkenfronter eller andre mindre tiltak kan gjøre før salg.",
+        priceNote: "Stor: 9 900 kr",
+        description: "For deg som skal selge og vil vite hvilke enkle tiltak som er verdt å gjøre.",
         features: [
-          "Før/etter-illustrasjoner",
-          "PDF med tiltak, kostnadsanslag og anbefalt rekkefølge",
+          "Før/etter-illustrasjoner, merket «Illustrasjon – ikke utført»",
+          "PDF med tiltak, kostnadsanslag og rekkefølge",
+          "Hva du kan gjøre selv, og hva som krever fagfolk",
         ],
-        linkLabel: "Sammenlign pakkene i Salgsløftet",
+        note: "Eksempel: På en bolig til 3 000 000 kr er Salgsløftet Mini 0,16 % av prisen.",
+        linkLabel: "Les mer om Salgsløftet",
       },
     ],
     termsHeading: "Pris og betaling",
-    termsNote:
-      "Oppgitte priser inkluderer mva. Meglere faktureres ekskl. mva. Enkeltbestillinger faktureres etter levering.",
+    termsNote: "Prisene er inkludert mva. Meglere faktureres ekskl. mva. Du får faktura etter levering.",
   },
   plans: {
     eyebrow: "Faste avtaler",
-    heading: "Faste avtaler for meglere og utleieforvaltere",
-    intro: "Få bilder til flere eiendommer hver måned og samle jobbene på én faktura.",
+    heading: "Faste avtaler for meglere og forvaltere",
+    intro: "Har du flere boliger i måneden? Da får du lavere pris per jobb og én samlet faktura.",
     items: [
       {
         key: "brokerPlan",
         title: "Megleravtale",
-        audience: "For eiendomsmeglere og meglerkontor",
+        audience: "For meglere og meglerkontor",
         price: "9 900 kr",
         pricePeriod: "per måned",
         value: "18 690 kr",
@@ -213,10 +204,10 @@ export const no: SiteContent = {
         features: [
           "Bildeløft for opptil 8 boliger",
           "Opptil 40 bilder per bolig",
-          "Digital styling av 3 rom per måned",
+          "Digital styling av 3 rom",
           "Ekstra Bildeløft: 1 490 kr",
         ],
-        cta: "Start gratis måned med Megleravtalen",
+        cta: "Bestill Megleravtalen",
       },
       {
         key: "managerPlan",
@@ -232,58 +223,40 @@ export const no: SiteContent = {
           "Digital styling bestilles separat",
           "Ekstra Bildeløft: 1 490 kr",
         ],
-        cta: "Start gratis måned med Forvalteravtalen",
+        cta: "Bestill Forvalteravtalen",
       },
     ],
-    valueLabel: "Ved full bruk, kjøpt enkeltvis:",
+    valueLabel: "Kjøpt enkeltvis:",
     terms: [
-      "Første måned er gratis.",
-      "Deretter har avtalen tre måneders binding og én måneds oppsigelse.",
-      "Faktura sendes i starten av måneden.",
+      "3 måneders binding, deretter 1 måneds oppsigelse",
+      "Faktura i starten av måneden",
+      "Ubrukte jobber utløper ved månedsslutt",
     ],
-    note: "Ubrukte jobber utløper ved månedsslutt. Salgsløftet bestilles separat.",
+    note: "Salgsløftet bestilles separat.",
   },
   audiences: {
-    eyebrow: "Målgrupper",
-    heading: "Hvem vi hjelper",
+    eyebrow: "Hvem vi hjelper",
+    heading: "For boliger, hytter og hoteller",
     items: [
-      {
-        name: "Airbnb-verter",
-        description: "Få lysere, tydeligere bilder som viser stedet slik gjestene møter det.",
-      },
-      {
-        name: "Private utleiere",
-        description: "Bruk bildene du har til å vise rom, lys og planløsning i leieannonsen.",
-      },
+      { name: "Airbnb-verter", description: "Lyse, ærlige bilder som viser stedet slik gjestene møter det." },
+      { name: "Private utleiere", description: "Vis rommene, lyset og planløsningen tydelig i leieannonsen." },
       {
         name: "Boligselgere",
-        description:
-          "Forbedre bildene, vis hvordan et tomt rom kan innredes, eller få en plan for enkle tiltak før salg.",
+        description: "Bedre bilder, møblerte tomme rom eller en plan for enkle tiltak før salg.",
       },
-      {
-        name: "Eiendomsmeglere",
-        description:
-          "Bestill bildeløft, digital styling eller illustrasjoner av oppgraderingsmuligheter for én bolig eller flere.",
-      },
-      {
-        name: "Hoteller",
-        description:
-          "Vis rom og fellesområder på hotellets egen nettside, slik at gjestene ser hva de kan forvente før de bestiller.",
-      },
-      {
-        name: "Hytteeiere",
-        description:
-          "Vis hytta slik kjøpere eller leietakere vil oppleve den, fra stua og soveplassene til uteområdet.",
-      },
+      { name: "Eiendomsmeglere", description: "Bildeløft, digital styling og Salgsløftet – for én bolig eller mange." },
+      { name: "Hoteller", description: "Vis rom og fellesområder på egen nettside slik gjestene vil oppleve dem." },
+      { name: "Hytteeiere", description: "Vis hytta fra sin beste side, fra stua til uteområdet." },
     ],
   },
   about: {
-    eyebrow: "Om Eiendomly",
-    heading: "Melanie Solberg, grunnlegger av Eiendomly",
+    eyebrow: "Om meg",
+    heading: "Hei, jeg er Melanie",
     paragraphs: [
-      "Eiendomsinteressen min begynte da jeg leste Rich Dad Poor Dad av Robert T. Kiyosaki. Jeg ble særlig interessert i BRRRR-metoden, som går ut på å kjøpe en bolig, pusse den opp, leie den ut, refinansiere og gjenta prosessen. Nå bruker vi metoden i vårt eget eiendomsprosjekt på privaten.",
-      "Gjennom andre prosjekter har jeg brukt hundrevis av timer på FINN, Airbnb og Booking.com. Etter hvert la jeg merke til hvor ofte det første bildet avgjorde om jeg åpnet en annonse. Det var derfor jeg startet Eiendomly. Jeg vil hjelpe andre med å vise det som gjør boligen verdt en nærmere titt.",
-      "Jeg er utdannet innen salg, ledelse og digital markedsføring og driver også SynligAI. Hos Eiendomly bruker jeg AI-verktøy til å forbedre bildene og går gjennom hvert bilde selv før du får det tilbake.",
+      "Jeg er utdannet innen digital markedsføring og har jobbet med det i et par år. Jeg er nysgjerrig på hvordan AI-verktøy kan gjøre ting bedre, og det er det Eiendomly er bygget på.",
+      "Gjennom jobber og prosjekter har jeg sett mange boliger, hytter og hoteller som er mye finere i virkeligheten enn på bildene. Det er synd. Ofte skal det lite til før folk ser hvorfor hytta eller hotellet er verdt en nærmere titt, eller at boligen er et kupp med noen små grep. Leiligheten ingen hadde ventet noe av, kan bli noens nye hjem.",
+      "Jeg er glad i gode kjøp, der det du legger inn gir mye tilbake. Sånn skal Eiendomly være for deg.",
+      "Jeg driver Eiendomly selv, så du har kontakt med meg hele veien, fra bestilling til ferdige bilder. Og bildene er alltid ærlige: Jeg endrer aldri vegger, vinduer, gulv eller utsikt, og jeg skjuler aldri skader. Det du ser, er det du får.",
     ],
     founderName: "Melanie Solberg",
     founderRole: "Grunnlegger",
@@ -291,82 +264,78 @@ export const no: SiteContent = {
     replyNote: "Jeg svarer på e-post innen 24 timer på hverdager.",
   },
   honesty: {
-    eyebrow: "Bildeendringer",
-    heading: "Hva endrer vi på boligbildene?",
+    eyebrow: "Ærlige bilder",
+    heading: "Hva vi endrer – og hva vi lar være",
     items: [
       {
         title: "Bildeløft",
-        body: "Bildeløft justerer lys, farger, skarphet og skjeve linjer. Vi kan fjerne løse småting der det passer. Utsikt, skader og faste deler av boligen vises som de er.",
+        body: "Lys, farger, skarphet og skjeve linjer. Løse småting kan ryddes bort. Utsikt, skader og faste deler av boligen står som de er.",
       },
       {
         title: "Digital styling",
-        body: "Digital styling viser en mulig møblering. Vegger, vinduer, kjøkken og gulv beholdes som på originalen. Du får originalbildet sammen med den merkede illustrasjonen.",
+        body: "Viser en mulig møblering. Vegger, vinduer, kjøkken og gulv er som på originalen, og du får originalbildet ved siden av.",
       },
       {
         title: "Salgsløftet",
-        body: "Salgsløftet viser hvordan foreslåtte oppgraderinger kan se ut. Bildene merkes «Illustrasjon – ikke utført».",
+        body: "Viser hvordan foreslåtte oppgraderinger kan se ut. Bildene merkes «Illustrasjon – ikke utført».",
       },
       {
         title: "Airbnb",
-        body: "For Airbnb bruker vi naturlige bildejusteringer. Bildene viser møblene og fasilitetene gjesten faktisk får.",
+        body: "Bare naturlige justeringer. Gjestene skal få det de ser på bildene.",
       },
     ],
   },
   faq: {
-    eyebrow: "Spørsmål og svar",
+    eyebrow: "FAQ",
     heading: "Ofte stilte spørsmål",
     items: [
       {
-        q: "Hva koster det å få forbedret boligbilder?",
-        a: "Bildeløft koster 1 890 kr for opptil 40 bilder. Et valgt og bearbeidet forsidebilde og tre forslag til annonsetittel er inkludert.",
+        q: "Hva koster det?",
+        a: "Bildeløft koster 1 890 kr for opptil 40 bilder. Digital styling koster 1 190 kr per rom. Salgsløftet koster 4 900 kr (Mini) eller 9 900 kr (Stor). Alle priser er inkludert mva.",
       },
       {
-        q: "Må jeg ta nye bilder?",
-        a: "Du kan sende bildene du allerede har, også mobilbilder. Send en bildelenke eller lenken til annonsen.",
+        q: "Lønner det seg?",
+        a: "Det kommer an på boligen, men prisen er lav sammenlignet med det som står på spill. Eksempel: Leier du ut for 1 200 kr natten, er Bildeløft betalt etter to netter. Selger du en bolig til 4 000 000 kr, er Bildeløft under 0,05 % av prisen.",
+      },
+      { q: "Må jeg ta nye bilder?", a: "Nei. Send bildene du har, også mobilbilder." },
+      {
+        q: "Hvor raskt får jeg bildene?",
+        a: "Bildeløft leveres innen 24 timer. For digital styling og Salgsløftet bekrefter vi leveringstid når vi har sett bildene.",
       },
       {
-        q: "Hvor raskt får jeg bildene tilbake?",
-        a: "Bildeløft leveres innen 24 timer. For digital styling og Salgsløftet bekrefter vi leveringstiden når vi har sett bildene.",
-      },
-      {
-        q: "Hva er digital boligstyling, og hva koster det?",
-        a: "Digital boligstyling er møblering av et rom på et boligbilde. Hos Eiendomly koster det 1 190 kr per rom. Du velger stilen og får en merket illustrasjon sammen med originalen.",
+        q: "Hva er digital boligstyling?",
+        a: "Vi møblerer et rom digitalt på et boligbilde, i stilen du velger. Bildet merkes «Digital styling – illustrasjon. Møbler følger ikke med.», og du får originalen ved siden av.",
       },
       {
         q: "Kan jeg bruke bildene på Airbnb?",
-        a: "Ja, Bildeløft passer for Airbnb. Vi justerer bildet naturlig, uten ekstra møbler eller tekst. Digital styling tilbys til boligsalg og langtidsutleie.",
+        a: "Ja, Bildeløft passer for Airbnb. Vi gjør bare naturlige justeringer, uten ekstra møbler eller tekst. Digital styling er for salg og langtidsutleie.",
       },
       {
-        q: "Hvordan merkes redigerte bilder?",
-        a: "Digitalt møblerte bilder merkes «Digital styling – illustrasjon. Møbler følger ikke med.» Bilder fra Salgsløftet merkes «Illustrasjon – ikke utført». Sjekk publiseringsreglene der du skal bruke bildene.",
-      },
-      {
-        q: "Hva slags bruksrett får jeg?",
-        a: "Du bekrefter at du har rett til å sende inn bildene til bearbeiding. Du får full bruksrett til resultatet.",
+        q: "Hvem eier bildene?",
+        a: "Du bekrefter at du har rett til å sende oss bildene. Du får full bruksrett til resultatet.",
       },
       {
         q: "Hva får jeg med en fast avtale?",
-        a: "Megleravtalen koster 9 900 kr per måned og inkluderer Bildeløft for opptil åtte boliger og digital styling av tre rom. Forvalteravtalen koster 4 900 kr per måned og inkluderer Bildeløft for opptil fire enheter. Første måned er gratis.",
+        a: "Megleravtalen (9 900 kr per måned) gir Bildeløft for opptil 8 boliger og digital styling av 3 rom. Forvalteravtalen (4 900 kr per måned) gir Bildeløft for opptil 4 enheter.",
       },
       {
-        q: "Kan Salgsløftet øke boligverdien?",
-        a: "Salgsløftet viser mulige forbedringer og gir deg et anslag på hva tiltakene koster. En eventuell verdiøkning vurderes av megler eller takstmann.",
+        q: "Øker Salgsløftet verdien på boligen?",
+        a: "Det kan vi ikke love. Du ser mulige forbedringer og hva de koster. En eventuell verdiøkning vurderer megler eller takstmann.",
       },
       {
-        q: "Hva hvis jeg vil ha endringer etter levering?",
-        a: "Gi beskjed innen sju dager etter levering. Du får én gratis justeringsrunde. Hvis du fortsatt er misfornøyd etter justeringen, får du 50 % av beløpet tilbake.",
+        q: "Hva om jeg ikke er fornøyd?",
+        a: "Si fra innen sju dager etter levering. Du får én gratis justeringsrunde. Er du fortsatt ikke fornøyd, får du 50 % av beløpet tilbake.",
       },
       {
         q: "Når betaler jeg?",
-        a: "Ved enkeltbestilling får du faktura på e-post etter levering. Faste avtaler faktureres i starten av måneden.",
+        a: "Du får faktura på e-post etter levering. Faste avtaler faktureres i starten av måneden.",
       },
     ],
   },
   finalCta: {
     eyebrow: "Bestilling",
     heading: "Send oss bildene dine",
-    subline:
-      "Velg tjeneste og legg ved en lenke til bildene eller annonsen. Du får svar på e-post innen 24 timer på hverdager.",
+    subline: "Velg tjeneste og legg ved en lenke. Du får svar innen 24 timer på hverdager.",
     ctaPrimary: "Send bestilling",
     form: {
       fields: {
@@ -375,11 +344,9 @@ export const no: SiteContent = {
         customerType: "Hvem bestiller?",
         service: "Velg tjeneste",
         photosLink: "Lenke til bildene eller annonsen",
-        photosLinkHelp:
-          "Bruk for eksempel Google Drive, Dropbox eller WeTransfer. Sjekk at vi kan åpne lenken.",
+        photosLinkHelp: "For eksempel Google Drive, Dropbox eller WeTransfer. Sjekk at lenken kan åpnes.",
         message: "Kommentar (valgfritt)",
-        rights:
-          "Jeg bekrefter at jeg har rett til å bruke bildene og til å sende dem til Eiendomly for bearbeiding.",
+        rights: "Jeg bekrefter at jeg har rett til å bruke bildene og til å sende dem til Eiendomly for bearbeiding.",
         marketing:
           "Jeg får 10 % rabatt og samtykker til at Eiendomly bruker før/etter-bildene i egen markedsføring, uten adresse eller personlige detaljer.",
         withdrawal:
@@ -387,15 +354,7 @@ export const no: SiteContent = {
       },
       privateCustomerTypes: ["Privat utleier", "Airbnb-vert", "Boligselger", "Hytteeier"],
       selectPlaceholder: "Velg …",
-      customerTypes: [
-        "Privat utleier",
-        "Airbnb-vert",
-        "Boligselger",
-        "Megler",
-        "Utleieforvalter",
-        "Hytteeier",
-        "Hotell",
-      ],
+      customerTypes: ["Privat utleier", "Airbnb-vert", "Boligselger", "Megler", "Utleieforvalter", "Hytteeier", "Hotell"],
       serviceOptions: [
         { key: "photoBoost", label: "Bildeløft" },
         { key: "virtualStaging", label: "Digital styling" },
@@ -415,55 +374,61 @@ export const no: SiteContent = {
       eyebrow: "Bildeløft",
       heading: "Bildeløft for FINN, Airbnb og Booking.com",
       intro:
-        "Vi forbedrer bilder av boliger og hytter til annonser, og bilder av hotellrom og fellesområder til hotellets egen nettside. For boligannonser får du opptil 40 bilder forbedret for 1 890 kr. Du sender bildene du har, og vi leverer de ferdige bildene innen 24 timer sammen med et bearbeidet forsidebilde og tre forslag til annonsetittel.",
+        "Opptil 40 bilder forbedret for 1 890 kr, levert innen 24 timer. Du sender bildene du har, også mobilbilder.",
       comparison: {
         beforeLabel: "Originalbilde",
         afterLabel: "Etter bildeløft",
         beforeAlt: "Originalbilde av en stue, før bildeløft",
         afterAlt: "Samme stue etter bildeløft, med justert lys, farger og skarphet",
-        caption: "Originalbilde og samme bilde etter bildeløft: lys, farger og skarphet justert, linjer rettet og løse småting ryddet bort.",
-        hint: "Dra for å sammenligne bildene.",
+        caption: "Lys, farger og linjer justert. Løse småting ryddet bort.",
+        hint: "Dra for å sammenligne.",
       },
       sections: [
         {
-          heading: "Bruk bildene du allerede har",
-          blocks: [
-            {
-              type: "p",
-              text: "Bildeløft passer til korttidsutleie, langtidsutleie og boligsalg. Send oss mobilbilder, andre bilder du har rett til å bruke eller en lenke til annonsen. Vi justerer lys, farger og skarphet, retter opp skjeve linjer og kan rydde bort løse småting der det passer. Vi velger også bildet som egner seg best til forsiden av annonsen.",
-            },
-          ],
-        },
-        {
-          heading: "Dette får du for 1 890 kr",
+          heading: "Dette får du",
           blocks: [
             {
               type: "list",
               items: [
-                "Opptil 40 bearbeidede bilder.",
-                "Et valgt og bearbeidet forsidebilde.",
+                "Opptil 40 bilder med bedre lys, farger og skarphet.",
+                "Rette linjer og løse småting ryddet bort.",
+                "Vi velger det beste bildet til forsiden.",
                 "Tre forslag til annonsetittel.",
-                "Levering på lenke innen 24 timer.",
+                "Alle bildene på en lenke innen 24 timer.",
               ],
             },
             { type: "cta" },
           ],
         },
         {
-          heading: "Hva endrer dere i bilder til Airbnb?",
+          heading: "Hva det betyr i kroner",
           blocks: [
+            { type: "p", text: "Bildeløft koster det samme, uansett hva du leier ut eller selger. Tre eksempler:" },
             {
-              type: "p",
-              text: "Vi holder oss til naturlige justeringer av bildet. Møbler, utsikt og fasiliteter skal stemme med det gjestene møter. Vi legger heller ikke tekst på bildene.",
+              type: "list",
+              items: [
+                "Korttidsutleie: Leier du ut for 1 200 kr natten, er Bildeløft betalt etter to netter.",
+                "Langtidsutleie: Med 15 000 kr i månedsleie koster én tom måned nesten åtte ganger så mye som Bildeløft.",
+                "Salg: For en bolig til 4 000 000 kr er Bildeløft under 0,05 % av prisen.",
+              ],
             },
           ],
         },
         {
-          heading: "Hva koster en måned uten leietaker?",
+          heading: "Bilder til Airbnb",
           blocks: [
             {
               type: "p",
-              text: "For en bolig med 15 000 kr i månedsleie betyr én ekstra måned uten leietaker 15 000 kr i uteblitt brutto leieinntekt. Når du oppdaterer leieannonsen, er forsidebildet et konkret sted å begynne.",
+              text: "Bare naturlige justeringer. Møbler, utsikt og fasiliteter skal stemme med det gjestene møter, og vi legger aldri tekst på bildene.",
+            },
+          ],
+        },
+        {
+          heading: "Bilder til hotellets nettside",
+          blocks: [
+            {
+              type: "p",
+              text: "Vi gjør også bilder av rom, fellesområder og uteområder klare for hotellets egen nettside.",
             },
           ],
         },
@@ -474,49 +439,42 @@ export const no: SiteContent = {
       ],
       priceHeading: "Pris",
       price: "1 890 kr",
-      priceNote: "Opptil 40 bilder. Levering innen 24 timer.",
+      priceNote: "Opptil 40 bilder. Levert innen 24 timer.",
       cta: "Bestill bildeløft",
     },
     virtualStaging: {
       eyebrow: "Digital styling",
       heading: "Digital boligstyling for salg og langtidsutleie",
-      intro:
-        "Vis hvordan et tomt rom kan møbleres for 1 190 kr per rom. Du velger stil fra moderne til hjemmekoselig. Vi møblerer rommet på bildet og leverer illustrasjonen sammen med originalen.",
+      intro: "Vis hva et tomt rom kan bli, for 1 190 kr per rom. Du velger stil, vi møblerer rommet på bildet.",
       comparison: {
         beforeLabel: "Originalbilde",
         afterLabel: "Digital styling – illustrasjon",
         beforeAlt: "Originalbilde av en tom stue med store vinduer",
         afterAlt: "Samme stue møblert digitalt med sofa, bord og planter – digital styling, illustrasjon",
-        caption: "Originalbilde av et tomt rom og samme rom møblert digitalt. Vegger, gulv og vinduer er som på originalen.",
-        hint: "Dra for å sammenligne bildene.",
+        caption: "Vegger, gulv og vinduer er som på originalen.",
+        hint: "Dra for å sammenligne.",
       },
       sections: [
         {
-          heading: "Hva er digital boligstyling?",
+          heading: "Hvorfor møblere digitalt?",
           blocks: [
             {
               type: "p",
-              text: "Digital boligstyling viser en mulig innredning på et eksisterende boligbilde. Vi kan møblere tomme rom eller vise en annen møblering der dagens møbler ikke følger med. Vegger, gulv, vinduer og fast kjøkkeninnredning vises som på originalbildet.",
+              text: "Et tomt rom er vanskelig å se for seg. Når det er møblert, ser kjøperen eller leietakeren hvordan rommet kan brukes. Vegger, gulv, vinduer og kjøkken er som på originalen.",
             },
           ],
         },
         {
-          heading: "Hvor mye kan du spare med digital boligstyling?",
+          heading: "Hva du sparer",
           blocks: [
             {
               type: "p",
-              text: "I en tom treromsleilighet kan vi møblere stuen og begge soverommene digitalt for 3 570 kr. To norske stylister oppgir startpriser på 16 900 kr og 23 500 kr for fysisk fullstyling av en treroms. Med disse prisene blir stylingkostnaden 13 330–19 930 kr lavere når du velger digital møblering til annonsen.",
+              text: "Eksempel: Stue og to soverom i en treroms koster 3 570 kr digitalt. Hos to norske stylister starter fysisk fullstyling av en treroms på 16 900 og 23 500 kr.",
             },
             {
               type: "table",
               caption: "Digital møblering hos Eiendomly sammenlignet med oppgitte startpriser for fysisk fullstyling",
-              head: [
-                "Leilighet",
-                "Eiendomly, 1 190 kr per rom",
-                "Fullstyling hos Bolig Interiør",
-                "Fullstyling hos Main Boligstyling",
-                "Forskjell fra oppgitte startpriser",
-              ],
+              head: ["Leilighet", "Eiendomly", "Bolig Interiør", "Main Boligstyling", "Du sparer"],
               rows: [
                 ["2-roms", "2 380 kr", "Fra 12 900 kr", "Fra 17 500 kr", "10 520–15 120 kr"],
                 ["3-roms", "3 570 kr", "Fra 16 900 kr", "Fra 23 500 kr", "13 330–19 930 kr"],
@@ -524,24 +482,20 @@ export const no: SiteContent = {
               ],
             },
             {
-              type: "p",
-              text: "Regnestykkene gjelder digital møblering av stuen og alle soverommene. Du velger selv hvilke rom du vil vise i annonsen. Med fysisk fullstyling blir hele boligen møblert til fotografering og visning. Leverandørene inkluderer transport og møbelleie i prisen. Alle priser er inkludert mva.",
-            },
-            {
               type: "note",
-              text: "Prislister sjekket 19. november 2026. [Bolig Interiør](https://www.bolig-interior.no/priser) · [Main Boligstyling](https://www.mainboligstyling.no/priser-boligstyling/)",
+              text: "Eiendomly-prisen gjelder stuen og alle soverommene. Fysisk styling inkluderer transport og møbelleie. Alle priser inkl. mva. Prislister sjekket 19. november 2026: [Bolig Interiør](https://www.bolig-interior.no/priser) · [Main Boligstyling](https://www.mainboligstyling.no/priser-boligstyling/)",
             },
           ],
         },
         {
-          heading: "Dette får du for 1 190 kr per rom",
+          heading: "Dette får du",
           blocks: [
             {
               type: "list",
               items: [
-                "Et rom møblert digitalt i stilen du velger.",
-                "En ferdig illustrasjon merket «Digital styling – illustrasjon. Møbler følger ikke med.»",
-                "Originalbildet ved siden av, slik at kjøperen ser både dagens rom og innredningsforslaget.",
+                "Rommet møblert i stilen du velger.",
+                "Bildet merket «Digital styling – illustrasjon. Møbler følger ikke med.»",
+                "Originalbildet ved siden av.",
               ],
             },
             { type: "p", text: "Vi bekrefter leveringstid når vi har sett bildene." },
@@ -549,11 +503,11 @@ export const no: SiteContent = {
           ],
         },
         {
-          heading: "Kan digital styling brukes på Airbnb?",
+          heading: "Skal du leie ut på Airbnb?",
           blocks: [
             {
               type: "p",
-              text: "Vi tilbyr digital styling til salg og langtidsutleie. For Airbnb bruker vi [Bildeløft](/bildeloft) med naturlige justeringer av bilder som viser innredningen gjesten faktisk får.",
+              text: "Digital styling er for salg og langtidsutleie. Til Airbnb anbefaler vi [Bildeløft](/bildeloft), med naturlige justeringer av rommene slik gjestene får dem.",
             },
           ],
         },
@@ -568,64 +522,59 @@ export const no: SiteContent = {
       eyebrow: "Salgsløftet",
       heading: "Salgsløftet – illustrasjoner og oppussingsplan før boligsalg",
       intro:
-        "Se hvordan maling, nye kjøkkenfronter eller behandling av gulv kan endre inntrykket av boligen. Eiendomly lager før/etter-illustrasjoner og en PDF med tiltak, kostnadsanslag og anbefalt rekkefølge. Fra 4 900 kr.",
+        "Se hva maling, nye kjøkkenfronter eller nytt gulv kan gjøre før salg. Du får før/etter-illustrasjoner og en plan med kostnader. Fra 4 900 kr.",
       sections: [
         {
-          heading: "Hvem passer Salgsløftet for?",
+          heading: "Hvem passer det for?",
           blocks: [
             {
               type: "p",
-              text: "Salgsløftet passer for meglere og deg som selger selv. Det er særlig aktuelt for eldre boliger, tomme boliger og boliger som har ligget ute en stund. Bruk planen til å velge hvilke tiltak du vil gjøre før salg, eller bruk merkede illustrasjoner til å vise mulighetene i boligen.",
+              text: "Meglere og deg som selger selv. Særlig eldre boliger, tomme boliger og boliger som har ligget ute en stund.",
             },
           ],
         },
         {
-          heading: "Hva gjorde andre før de solgte? To norske boligsalg",
+          heading: "Hva det betyr i kroner",
           blocks: [
             {
-              type: "case",
-              heading: "Lørenskog · Styling for 200 kr før visning",
-              text: "Før visningen av en treromsleilighet byttet selgerne ut mørke gardiner med lyse de allerede hadde. De flyttet møbler, lånte lamper og kjøpte blomster. Med et stylingbudsjett på 200 kr gjorde de leiligheten klar for fotografering og visning. Takst og prisantydning var 2,60 millioner kr. Etter én visning og en budrunde ble boligen solgt for 2,85 millioner kr, 250 000 kr over takst. [Les reportasjen i Bergens Tidende (2015)](https://www.bt.no/husoghjem/bolig/i/Vbbpw3/stylingbudsjett-200-kroner-sjekk-hvordan-vi-fikset-leiligheten-foer-visning)",
+              type: "p",
+              text: "Eksempel: På en bolig til 3 000 000 kr er Salgsløftet Mini 0,16 % av prisen. Planen viser hvilke tiltak som er verdt å gjøre før salg, og hva de koster.",
             },
             {
               type: "case",
-              heading: "Bergen · Nye gulv og malte vegger før salg",
-              text: "En leilighet på 78 m² i Elvenesvegen ble først vurdert av megleren til 1,50 millioner kr. Eieren beholdt kjøkkeninnredningen, skiftet gulv i flere rom, malte vegger og oppgraderte belysningen. Ifølge megleren kostet oppgraderingen i underkant av 100 000 kr, med egeninnsats fra eieren. Leiligheten ble solgt for 1,95 millioner kr pluss fellesgjeld, 450 000 kr over den tidligere verdivurderingen. Borettslaget hadde også nylig oppgradert fasaden og fellesområdene. Kilde: ProAktivs annonsørinnhold hos Bergens Tidende.",
+              heading: "Fra et norsk boligsalg: styling for 200 kr",
+              text: "Selgerne hengte opp lyse gardiner de hadde fra før, flyttet møbler, lånte lamper og kjøpte blomster. Leiligheten var taksert til 2,6 millioner kr og ble solgt for 2,85 millioner kr etter én visning. [Les saken i Bergens Tidende (2015)](https://www.bt.no/husoghjem/bolig/i/Vbbpw3/stylingbudsjett-200-kroner-sjekk-hvordan-vi-fikset-leiligheten-foer-visning)",
             },
             {
               type: "note",
-              text: "Tallene gjelder disse to salgene. Hvor mye hvert enkelt tiltak bidro til budene, er ukjent.",
+              text: "Tallene gjelder dette salget. Hvor mye stylingen betydde for budene, vet ingen.",
             },
           ],
         },
         {
-          heading: "Velg Mini eller Stor",
+          heading: "Mini eller Stor",
           blocks: [
             {
               type: "table",
               caption: "Sammenligning av Salgsløftet Mini og Stor",
               head: ["", "Mini", "Stor"],
               rows: [
-                ["Pris for Salgsløftet", "4 900 kr", "9 900 kr"],
-                ["Budsjett for foreslåtte tiltak", "Under 20 000 kr", "20 000–100 000 kr"],
+                ["Pris", "4 900 kr", "9 900 kr"],
+                ["Budsjett for tiltakene", "Under 20 000 kr", "20 000–100 000 kr"],
                 ["Før/etter-sammenligninger", "5", "10"],
                 ["Plan", "Tiltak, kostnadsanslag og rekkefølge", "Prioritert liste med tiltak, kostnadsanslag og rekkefølge"],
               ],
             },
             {
               type: "p",
-              text: "Begge pakkene viser hva du kan gjøre selv, og hva du bør bruke fagfolk til. Bildene merkes «Illustrasjon – ikke utført». Kostnadsanslagene gjelder de foreslåtte tiltakene. Eventuell verdiøkning vurderes av megler eller takstmann. Vi bekrefter leveringstid når vi har sett bildene.",
+              text: "Begge viser hva du kan gjøre selv, og hva som krever fagfolk. Bildene merkes «Illustrasjon – ikke utført». En eventuell verdiøkning vurderer megler eller takstmann.",
             },
             { type: "cta" },
           ],
         },
       ],
       links: [
-        {
-          text: "Vil du vise hvordan et tomt rom kan møbleres?",
-          label: "Se digital boligstyling",
-          href: "/digital-styling",
-        },
+        { text: "Vil du heller møblere et tomt rom?", label: "Se digital boligstyling", href: "/digital-styling" },
       ],
       priceHeading: "Pris",
       tiers: [
@@ -638,13 +587,12 @@ export const no: SiteContent = {
   orderPage: {
     eyebrow: "Bestilling",
     heading: "Bestill bildeløft, digital styling eller Salgsløftet",
-    intro:
-      "Velg tjenesten du trenger og del en lenke til bildene eller annonsen. Vi svarer på e-post innen 24 timer på hverdager.",
+    intro: "Velg tjeneste og legg ved en lenke til bildene. Du får svar innen 24 timer på hverdager.",
   },
   thanks: {
     eyebrow: "Mottatt",
     heading: "Takk!",
-    intro: "Du får svar på e-post innen 24 timer.",
+    intro: "Du får svar på e-post innen 24 timer på hverdager.",
     back: "Tilbake til forsiden",
   },
   notFound: {
@@ -715,7 +663,7 @@ export const no: SiteContent = {
         },
         {
           heading: "Faste avtaler",
-          body: "Megleravtale og forvalteravtale har første måned gratis, deretter 3 måneders binding og 1 måneds oppsigelse. Avtalen faktureres i starten av hver måned. Jobber som ikke brukes i løpet av måneden, overføres ikke. Ekstra Bildeløft utover avtalen koster 1 490 kr.",
+          body: "Megleravtale og forvalteravtale har 3 måneders binding, deretter 1 måneds oppsigelse. Avtalen faktureres i starten av hver måned. Jobber som ikke brukes i løpet av måneden, overføres ikke. Ekstra Bildeløft utover avtalen koster 1 490 kr.",
         },
         {
           heading: "Betaling",
@@ -761,7 +709,7 @@ export const no: SiteContent = {
     changeConsent: "Endre samtykke",
   },
   footer: {
-    tagline: "Bildeløft, digital boligstyling og enkle tiltak før salg.",
+    tagline: "Bedre boligbilder for salg og utleie.",
     linksHeading: "Nettsted",
     legalHeading: "Juridisk",
     contactHeading: "Kontakt",

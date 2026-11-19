@@ -66,7 +66,7 @@ export default function Areas({
                 onMouseEnter={() => setActive(i)}
                 onClick={() => setActive(i)}
                 className={`flex flex-col gap-2 py-6 text-left transition-colors sm:flex-row sm:items-center sm:justify-between sm:gap-6 ${
-                  active === i ? "text-ivory" : "text-ivory/45"
+                  active === i ? "text-ivory" : "text-ivory/55"
                 }`}
               >
                 <span className="font-serif-display text-2xl sm:text-3xl">{a.name}</span>

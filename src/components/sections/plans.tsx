@@ -42,16 +42,16 @@ function PlanCard({
         </span>
       )}
 
-      <p className={`text-xs font-medium uppercase tracking-[0.16em] ${featured ? "text-charcoal/50" : "text-ivory/50"}`}>
+      <p className={`text-xs font-medium uppercase tracking-[0.16em] ${featured ? "text-charcoal/65" : "text-ivory/50"}`}>
         {plan.audience}
       </p>
       <h3 className="font-serif-display mt-3 text-3xl sm:text-4xl">{plan.title}</h3>
 
       <div className="mt-8 flex flex-wrap items-end gap-x-3 gap-y-1">
         <span className="font-serif-display text-5xl text-coral sm:text-6xl">{plan.price}</span>
-        <span className={`pb-2 text-sm ${featured ? "text-charcoal/55" : "text-ivory/55"}`}>{plan.pricePeriod}</span>
+        <span className={`pb-2 text-sm ${featured ? "text-charcoal/65" : "text-ivory/55"}`}>{plan.pricePeriod}</span>
       </div>
-      <p className={`mt-3 text-sm ${featured ? "text-charcoal/55" : "text-ivory/55"}`}>
+      <p className={`mt-3 text-sm ${featured ? "text-charcoal/65" : "text-ivory/55"}`}>
         {valueLabel} <s>{plan.value}</s>
       </p>
       <span
@@ -127,7 +127,7 @@ export default function Plans({ locale, plans }: { locale: Locale; plans: PlansC
               </li>
             ))}
           </ul>
-          <p className="mt-6 max-w-2xl text-xs leading-relaxed text-ivory/45">{plans.note}</p>
+          <p className="mt-6 max-w-2xl text-xs leading-relaxed text-ivory/55">{plans.note}</p>
         </Reveal>
       </div>
     </section>

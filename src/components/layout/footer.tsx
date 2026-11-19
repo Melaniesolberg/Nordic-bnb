@@ -35,7 +35,7 @@ export default function Footer({
           </div>
 
           <div>
-            <p className="eyebrow text-ivory/45">{footer.linksHeading}</p>
+            <p className="eyebrow text-ivory/55">{footer.linksHeading}</p>
             <ul className="mt-5 space-y-3">
               {nav.links.map((l) => (
                 <li key={l.href}>
@@ -48,7 +48,7 @@ export default function Footer({
           </div>
 
           <div>
-            <p className="eyebrow text-ivory/45">{footer.legalHeading}</p>
+            <p className="eyebrow text-ivory/55">{footer.legalHeading}</p>
             <ul className="mt-5 space-y-3">
               <li>
                 <Link href={pageHref(locale, "privacy")} className={linkClass}>
@@ -74,7 +74,7 @@ export default function Footer({
           </div>
 
           <div>
-            <p className="eyebrow text-ivory/45">{footer.contactHeading}</p>
+            <p className="eyebrow text-ivory/55">{footer.contactHeading}</p>
             <ul className="mt-5 space-y-3 text-[0.95rem]">
               <li>
                 <a href={`mailto:${CONTACT.email}`} className={linkClass}>
@@ -86,7 +86,7 @@ export default function Footer({
           </div>
 
           <div>
-            <p className="eyebrow text-ivory/45">{footer.languageHeading}</p>
+            <p className="eyebrow text-ivory/55">{footer.languageHeading}</p>
             <ul className="mt-5 space-y-3 text-[0.95rem]">
               {locales.map((l) => (
                 <li key={l}>
@@ -102,7 +102,7 @@ export default function Footer({
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col gap-4 border-t border-ivory/10 pt-8 text-xs text-ivory/40 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-16 flex flex-col gap-4 border-t border-ivory/10 pt-8 text-xs text-ivory/55 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {new Date().getFullYear()} {footer.rights}
           </p>

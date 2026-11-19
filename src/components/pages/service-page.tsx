@@ -44,7 +44,7 @@ function Block({ block, orderHref, cta }: { block: ServiceBlock; orderHref: stri
       );
     case "note":
       return (
-        <p className="mt-5 max-w-2xl text-sm leading-relaxed text-charcoal/55">
+        <p className="mt-5 max-w-2xl text-sm leading-relaxed text-charcoal/65">
           <RichText text={block.text} linkClassName="text-coral-deep" />
         </p>
       );
@@ -150,7 +150,7 @@ export default function ServicePage({ locale, service }: { locale: Locale; servi
                     sizes="(min-width: 1024px) 55vw, 100vw"
                   />
                   <figcaption className="mt-4 text-sm leading-relaxed text-charcoal/70">
-                    {page.comparison.caption} <span className="text-charcoal/45">{page.comparison.hint}</span>
+                    {page.comparison.caption} <span className="text-charcoal/65">{page.comparison.hint}</span>
                   </figcaption>
                 </figure>
               </Reveal>
@@ -189,7 +189,7 @@ export default function ServicePage({ locale, service }: { locale: Locale; servi
             <div className="lg:sticky lg:top-28">
               <Reveal delay={0.12}>
                 <div className="rounded-sm bg-charcoal p-8 text-ivory sm:p-10">
-                  <p className="eyebrow text-ivory/45">{page.priceHeading}</p>
+                  <p className="eyebrow text-ivory/55">{page.priceHeading}</p>
                   {page.price && (
                     <>
                       <p className="mt-4 font-serif-display text-5xl text-coral">{page.price}</p>

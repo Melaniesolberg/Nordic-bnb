@@ -34,6 +34,21 @@
   --foreground: var(--color-charcoal);
 }
 
+:root {
+  color-scheme: only light;
+}
+
+/* Saved logins and addresses: keep autofilled fields readable on the dark order form. */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: var(--color-ivory);
+  caret-color: var(--color-ivory);
+  -webkit-box-shadow: 0 0 0 1000px var(--color-charcoal-soft) inset;
+  box-shadow: 0 0 0 1000px var(--color-charcoal-soft) inset;
+}
+
 @theme inline {
   --color-ivory: var(--color-ivory);
   --color-ivory-soft: var(--color-ivory-soft);

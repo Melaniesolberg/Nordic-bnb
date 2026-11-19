@@ -13,8 +13,8 @@ import type { FinalCtaContent } from "@/content/types";
 const FORM_NAME = "bestilling";
 
 const inputClasses =
-  "w-full border-b border-ivory/25 bg-transparent py-3 text-ivory placeholder:text-ivory/35 focus:border-coral focus:outline-none transition-colors";
-const labelClasses = "eyebrow mb-2 block text-ivory/45";
+  "w-full border-b border-ivory/25 bg-transparent py-3 text-ivory placeholder:text-ivory/50 focus:border-coral focus:outline-none transition-colors";
+const labelClasses = "eyebrow mb-2 block text-ivory/55";
 
 /**
  * Pre-selects the service from a `?service=` link (from a service page) and

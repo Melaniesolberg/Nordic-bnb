@@ -224,7 +224,7 @@ export default function System({
                       />
                       <span
                         className={`hidden text-[11px] leading-snug transition-colors duration-500 sm:block ${
-                          i === active ? "text-ivory/85" : "text-ivory/35"
+                          i === active ? "text-ivory/85" : "text-ivory/55"
                         }`}
                       >
                         {p.title}

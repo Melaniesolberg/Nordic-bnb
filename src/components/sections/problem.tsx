@@ -40,7 +40,7 @@ function Countdown({ seconds, unit, locale }: { seconds: number; unit: string; l
 
   return (
     <div ref={ref} className="flex items-center gap-6 sm:gap-8">
-      <div className="relative h-32 w-32 shrink-0 sm:h-40 sm:w-40">
+      <div className="relative h-24 w-24 shrink-0 min-[380px]:h-32 min-[380px]:w-32 sm:h-40 sm:w-40">
         <svg viewBox="0 0 120 120" className="h-full w-full -rotate-90" aria-hidden>
           <circle cx="60" cy="60" r={RING_RADIUS} stroke="rgba(246,241,232,0.15)" strokeWidth="5" fill="none" />
           <circle
@@ -75,7 +75,7 @@ function Countdown({ seconds, unit, locale }: { seconds: number; unit: string; l
       <p
         className={`font-serif-display tabular-nums leading-none transition-colors duration-300 ${
           done ? "text-coral" : "text-ivory"
-        } text-[5.5rem] sm:text-[8rem]`}
+        } text-[4.25rem] min-[380px]:text-[5.5rem] sm:text-[8rem]`}
         aria-label={`${fmt.format(seconds)} ${unit}`}
       >
         {fmt.format(remaining)}
@@ -86,7 +86,7 @@ function Countdown({ seconds, unit, locale }: { seconds: number; unit: string; l
 }
 
 function Source({ stat, tone = "light" }: { stat: SourcedStat; tone?: "light" | "dark" }) {
-  const cls = `mt-3 text-xs uppercase tracking-[0.18em] ${tone === "light" ? "text-ivory/50" : "text-charcoal/45"}`;
+  const cls = `mt-3 text-xs uppercase tracking-[0.18em] ${tone === "light" ? "text-ivory/50" : "text-charcoal/65"}`;
   return stat.href ? (
     <a href={stat.href} target="_blank" rel="noopener noreferrer" className={`${cls} inline-block underline underline-offset-4 hover:text-coral-soft`}>
       {stat.source}

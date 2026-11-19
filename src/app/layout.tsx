@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { fraunces, inter } from "@/lib/fonts";
 import { SITE_URL } from "@/lib/utils";
 import { getContent } from "@/content";
@@ -7,6 +7,14 @@ import SmoothScrollProvider from "@/components/providers/smooth-scroll-provider"
 import "./globals.css";
 
 const no = getContent("no");
+
+// The site has its own fixed light and dark sections. "only light" keeps
+// browsers (iOS Safari in dark mode, Chrome/Samsung auto-dark) from
+// recolouring text, form fields and backgrounds.
+export const viewport: Viewport = {
+  colorScheme: "only light",
+  themeColor: "#f6f1e8",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

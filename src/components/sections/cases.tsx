@@ -31,7 +31,7 @@ export default function Cases({ content }: { content: CasesContent }) {
                   beforeLabel={content.beforeLabel}
                   afterLabel={content.improvedLabel}
                 />
-                <p className="mt-4 text-sm leading-relaxed text-charcoal/60">{caption}</p>
+                <p className="mt-4 text-sm leading-relaxed text-charcoal/65">{caption}</p>
               </Reveal>
             );
           })}

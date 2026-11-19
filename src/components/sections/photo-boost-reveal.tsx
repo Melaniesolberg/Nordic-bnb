@@ -59,7 +59,7 @@ export default function PhotoBoostReveal({
                 {content.caption}
               </p>
             )}
-            <p className={`mt-3 flex items-center justify-center gap-2 text-sm ${dark ? "text-ivory/55" : "text-charcoal/55"}`}>
+            <p className={`mt-3 flex items-center justify-center gap-2 text-sm ${dark ? "text-ivory/55" : "text-charcoal/65"}`}>
               <svg width="16" height="10" viewBox="0 0 14 10" fill="none" aria-hidden>
                 <path d="M5 1L1 5l4 4M9 1l4 4-4 4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
