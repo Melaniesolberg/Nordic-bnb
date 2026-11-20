@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/ui/reveal";
@@ -12,17 +15,22 @@ function ServiceCard({
   href,
   ctaLabel,
   imageSrc,
+  onActivate,
 }: {
   item: ServiceItem;
   dark?: boolean;
+  onActivate: () => void;
   href: string;
   ctaLabel: string;
   imageSrc?: string;
 }) {
   return (
     <div
-      className={`relative flex h-full flex-col overflow-hidden rounded-sm p-8 sm:p-10 ${
-        dark ? "bg-charcoal text-ivory" : "border border-charcoal/12 bg-ivory-soft text-charcoal"
+      onMouseEnter={onActivate}
+      onClick={onActivate}
+      onFocus={onActivate}
+      className={`relative flex h-full cursor-pointer flex-col overflow-hidden rounded-sm border p-8 transition-colors duration-500 sm:p-10 ${
+        dark ? "border-charcoal bg-charcoal text-ivory" : "border-charcoal/12 bg-ivory-soft text-charcoal"
       }`}
     >
       {dark && imageSrc && (
@@ -83,6 +91,8 @@ export default function Services({
   services: ServicesContent;
   imageSrc?: string;
 }) {
+  // The card under the pointer, or the one last tapped, is shown dark.
+  const [active, setActive] = useState(0);
   return (
     <section id="services" className="relative scroll-mt-20 bg-ivory py-24 sm:py-32 lg:py-40">
       <div className="mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
@@ -99,10 +109,11 @@ export default function Services({
             <Reveal key={item.key} delay={0.05 * (i + 1)}>
               <ServiceCard
                 item={item}
-                dark={i === 0}
+                dark={active === i}
+                onActivate={() => setActive(i)}
                 href={pageHref(locale, item.key)}
                 ctaLabel={item.linkLabel}
-                imageSrc={i === 0 ? imageSrc : undefined}
+                imageSrc={imageSrc}
               />
             </Reveal>
           ))}

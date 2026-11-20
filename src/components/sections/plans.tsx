@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Link from "next/link";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
@@ -18,18 +21,24 @@ function PlanCard({
   href,
   ctaLabel,
   valueLabel,
+  featured,
+  onActivate,
 }: {
   plan: PlanItem;
+  featured: boolean;
+  onActivate: () => void;
   href: string;
   ctaLabel: string;
   valueLabel: string;
 }) {
-  const featured = Boolean(plan.featured);
   return (
     <div
-      className={`relative flex h-full flex-col rounded-sm p-8 sm:p-10 ${
+      onMouseEnter={onActivate}
+      onClick={onActivate}
+      onFocus={onActivate}
+      className={`relative flex h-full cursor-pointer flex-col rounded-sm p-8 transition-colors duration-500 sm:p-10 ${
         featured
-          ? "bg-ivory text-charcoal ring-2 ring-coral shadow-[0_30px_80px_-30px_rgba(245,66,63,0.45)]"
+          ? "border border-transparent bg-ivory text-charcoal ring-2 ring-coral shadow-[0_30px_80px_-30px_rgba(245,66,63,0.45)]"
           : "border border-ivory/15 bg-charcoal-soft text-ivory"
       }`}
     >
@@ -88,6 +97,8 @@ function PlanCard({
 }
 
 export default function Plans({ locale, plans }: { locale: Locale; plans: PlansContent }) {
+  // The plan under the pointer, or the one last tapped, is highlighted.
+  const [active, setActive] = useState(() => Math.max(0, plans.items.findIndex((p) => p.featured)));
   return (
     <section id="avtaler" className="relative scroll-mt-20 overflow-hidden bg-charcoal py-24 text-ivory sm:py-32 lg:py-40">
       <div className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-coral/10 blur-3xl" aria-hidden />
@@ -113,6 +124,8 @@ export default function Plans({ locale, plans }: { locale: Locale; plans: PlansC
                 href={`${pageHref(locale, "order")}?service=${plan.key}`}
                 ctaLabel={plan.cta}
                 valueLabel={plans.valueLabel}
+                featured={active === i}
+                onActivate={() => setActive(i)}
               />
             </Reveal>
           ))}
