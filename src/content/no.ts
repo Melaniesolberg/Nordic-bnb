@@ -69,26 +69,13 @@ export const no: SiteContent = {
   },
   problem: {
     eyebrow: "Førsteinntrykket",
-    heading: "Bildene teller mest i annonsen",
+    heading: "Annonsen får noen få sekunder",
     seconds: 2.7,
     unit: "sek",
-    stat: {
-      value: "58 %",
-      text: "av de spurte valgte bildene som en av de tre viktigste delene av en boligannonse. Ingenting kom høyere.",
-      source: "FINN, Eiendomsundersøkelsen 2025",
-      href: "https://www.finn.no/bedriftskunde/aktuelt/finn-eiendom/eiendomsundersokelsen-2025",
-    },
     timeStat: {
       value: "2,7 sek",
-      text: "brukte boligkjøpere i snitt på en annonse i søkelisten før de klikket seg inn eller gikk videre.",
+      text: "Boligkjøpere brukte i snitt 2,7 sekunder på en annonse i søkelisten før de klikket seg inn eller gikk videre.",
       source: "Rightmove, Storbritannia, 2012",
-    },
-    hotel: {
-      heading: "Hotellgjester ser også på bildene",
-      value: "36 %",
-      text: "av de reisende bruker bilder og beskrivelser på hotellets egen nettside for å finne ut om stedet passer dem.",
-      source: "Hotels.com, Unpack ’24",
-      href: "https://partner.expediagroup.com/en-us/resources/blog/unpack-2024-hotel-trends",
     },
   },
   photoBoost: {
@@ -297,6 +284,10 @@ export const no: SiteContent = {
         q: "Lønner det seg?",
         a: "Det kommer an på boligen, men prisen er lav sammenlignet med det som står på spill. Eksempel: Leier du ut for 1 200 kr natten, er Bildeløft betalt etter to netter. Selger du en bolig til 4 000 000 kr, er Bildeløft under 0,05 % av prisen.",
       },
+      {
+        q: "Hvor viktige er bildene i en annonse?",
+        a: "I FINNs eiendomsundersøkelse 2025 valgte 58 % av de spurte bildene som en av de tre viktigste delene av en boligannonse. Ingenting kom høyere. [Se undersøkelsen](https://www.finn.no/bedriftskunde/aktuelt/finn-eiendom/eiendomsundersokelsen-2025)",
+      },
       { q: "Må jeg ta nye bilder?", a: "Nei. Send bildene du har, også mobilbilder." },
       {
         q: "Hvor raskt får jeg bildene?",
@@ -428,7 +419,7 @@ export const no: SiteContent = {
           blocks: [
             {
               type: "p",
-              text: "Vi gjør også bilder av rom, fellesområder og uteområder klare for hotellets egen nettside.",
+              text: "Vi gjør også bilder av rom, fellesområder og uteområder klare for hotellets egen nettside. I en undersøkelse fra Expedia Group svarte 36 % av de reisende at de bruker bilder og beskrivelser på hotellets egen nettside for å finne ut om stedet passer dem. [Hotels.com, Unpack ’24](https://partner.expediagroup.com/en-us/resources/blog/unpack-2024-hotel-trends)",
             },
           ],
         },

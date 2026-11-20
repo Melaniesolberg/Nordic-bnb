@@ -112,34 +112,17 @@ export default function Problem({
         <div className="absolute inset-0 bg-charcoal/80" />
       </div>
       <div className="relative mx-auto max-w-[1600px] px-5 sm:px-8 lg:px-12">
-        <Reveal>
-          <Eyebrow tone="light">{problem.eyebrow}</Eyebrow>
-          <h2 className="font-serif-display text-display-md mt-6 max-w-3xl text-ivory">{problem.heading}</h2>
-        </Reveal>
-
-        <div className="mt-14 grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-12">
-          <Reveal delay={0.05}>
-            <p className="font-serif-display text-[5.5rem] leading-none text-coral sm:text-[8rem]">{problem.stat.value}</p>
-            <p className="mt-8 max-w-xl text-base leading-relaxed text-ivory/85 sm:text-lg">{problem.stat.text}</p>
-            <Source stat={problem.stat} />
+        <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:items-center lg:gap-12">
+          <Reveal>
+            <Eyebrow tone="light">{problem.eyebrow}</Eyebrow>
+            <h2 className="font-serif-display text-display-md mt-6 max-w-3xl text-ivory">{problem.heading}</h2>
           </Reveal>
-          <Reveal delay={0.1}>
+          <Reveal delay={0.08}>
             <Countdown seconds={problem.seconds} unit={problem.unit} locale={locale} />
             <p className="mt-8 max-w-xl text-base leading-relaxed text-ivory/85 sm:text-lg">{problem.timeStat.text}</p>
             <Source stat={problem.timeStat} />
           </Reveal>
         </div>
-
-        <Reveal delay={0.1}>
-          <div className="mt-16 flex max-w-3xl flex-col gap-4 border-t border-ivory/15 pt-10 sm:flex-row sm:items-start sm:gap-8">
-            <p className="font-serif-display text-6xl text-coral sm:text-7xl">{problem.hotel.value}</p>
-            <div>
-              <h3 className="font-serif-display text-2xl text-ivory sm:text-3xl">{problem.hotel.heading}</h3>
-              <p className="mt-3 text-base leading-relaxed text-ivory/85 sm:text-lg">{problem.hotel.text}</p>
-              <Source stat={problem.hotel} />
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

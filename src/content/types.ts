@@ -34,8 +34,6 @@ export interface ProblemContent {
   unit: string;
   /** The listing-preview study the countdown illustrates. */
   timeStat: SourcedStat;
-  stat: SourcedStat;
-  hotel: SourcedStat & { heading: string };
 }
 
 export interface PhotoBoostRevealContent {

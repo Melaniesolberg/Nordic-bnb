@@ -69,26 +69,13 @@ export const en: SiteContent = {
   },
   problem: {
     eyebrow: "First impressions",
-    heading: "Photos matter most in a listing",
+    heading: "A listing gets a few seconds",
     seconds: 2.7,
     unit: "sec",
-    stat: {
-      value: "58%",
-      text: "of respondents chose the photos as one of the three most important parts of a property listing. Nothing ranked higher.",
-      source: "FINN, Property Survey 2025",
-      href: "https://www.finn.no/bedriftskunde/aktuelt/finn-eiendom/eiendomsundersokelsen-2025",
-    },
     timeStat: {
       value: "2.7 sec",
-      text: "is how long buyers spent on average on a listing in the search results before clicking or moving on.",
+      text: "Buyers spent an average of 2.7 seconds on a listing in the search results before clicking or moving on.",
       source: "Rightmove, United Kingdom, 2012",
-    },
-    hotel: {
-      heading: "Hotel guests look at the photos too",
-      value: "36%",
-      text: "of travellers use photos and descriptions on the hotel's own website to decide whether the place suits them.",
-      source: "Hotels.com, Unpack ’24",
-      href: "https://partner.expediagroup.com/en-us/resources/blog/unpack-2024-hotel-trends",
     },
   },
   photoBoost: {
@@ -287,6 +274,10 @@ export const en: SiteContent = {
         q: "Is it worth it?",
         a: "It depends on the property, but the price is low compared with what is at stake. Example: If you let for NOK 1,200 a night, Photo Boost has paid for itself after two nights. If you sell a NOK 4,000,000 home, Photo Boost is less than 0.05% of the price.",
       },
+      {
+        q: "How important are the photos in a listing?",
+        a: "In FINN's 2025 property survey, 58% of respondents chose the photos as one of the three most important parts of a property listing. Nothing ranked higher. [See the survey (Norwegian)](https://www.finn.no/bedriftskunde/aktuelt/finn-eiendom/eiendomsundersokelsen-2025)",
+      },
       { q: "Do I need new photos?", a: "No. Send the photos you have, including phone photos." },
       {
         q: "How quickly do I get the photos?",
@@ -415,7 +406,10 @@ export const en: SiteContent = {
         {
           heading: "Photos for a hotel website",
           blocks: [
-            { type: "p", text: "We also get photos of rooms, shared spaces and outdoor areas ready for the hotel's own website." },
+            {
+              type: "p",
+              text: "We also get photos of rooms, shared spaces and outdoor areas ready for the hotel's own website. In a survey by Expedia Group, 36% of travellers said they use photos and descriptions on the hotel's own website to decide whether the place suits them. [Hotels.com, Unpack ’24](https://partner.expediagroup.com/en-us/resources/blog/unpack-2024-hotel-trends)",
+            },
           ],
         },
       ],

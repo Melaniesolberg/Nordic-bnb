@@ -1,4 +1,5 @@
 import Reveal from "@/components/ui/reveal";
+import RichText from "@/components/ui/rich-text";
 import Eyebrow from "@/components/ui/eyebrow";
 import type { FaqContent } from "@/content/types";
 
@@ -24,7 +25,7 @@ export default function Faq({ faq }: { faq: FaqContent }) {
                     +
                   </span>
                 </summary>
-                <p className="mt-4 max-w-2xl text-base leading-relaxed text-charcoal/65">{item.a}</p>
+                <p className="mt-4 max-w-2xl text-base leading-relaxed text-charcoal/65"><RichText text={item.a} linkClassName="text-coral-deep" /></p>
               </details>
             </Reveal>
           ))}
