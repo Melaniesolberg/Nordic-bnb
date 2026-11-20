@@ -62,7 +62,7 @@ function writeConsent(consent: Consent) {
 const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID;
 // Google Tag Manager containers (Google tag + Google Analytics are set up inside
 // them). Public by nature; override with a comma-separated NEXT_PUBLIC_GTM_IDS.
-const GTM_IDS = (process.env.NEXT_PUBLIC_GTM_IDS ?? "GTM-KKN4BF9K,GTM-M7GG6XJN")
+const GTM_IDS = (process.env.NEXT_PUBLIC_GTM_IDS ?? "GTM-KKN4BF9K,GTM-M7GG6XJN,GTM-MM4HHW8R")
   .split(",")
   .map((id) => id.trim())
   .filter(Boolean);
