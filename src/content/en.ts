@@ -50,7 +50,7 @@ export const en: SiteContent = {
     eyebrow: "Photo Boost · Virtual Staging · Sale Boost",
     headlineLines: ["Better property photos", "for sales and rentals"],
     subline:
-      "Send us the photos you have. We get them ready for FINN, Airbnb, Booking.com or the hotel's own website – within 24 hours, from NOK 1,890.",
+      "Send us the photos you have. We get them ready for FINN, Airbnb, Booking.com or the hotel's own website – within 24 hours, from NOK 1,890. Not sure? Try one photo for free first.",
     ctaPrimary: "Order Photo Boost",
     ctaSecondary: "Get a free sample photo",
     beats: [
@@ -137,6 +137,7 @@ export const en: SiteContent = {
           "We pick the best photo for the cover",
           "Three listing title suggestions",
           "Delivered within 24 hours",
+          "Try one photo for free first",
         ],
         note: "Example: If you let for NOK 1,200 a night, Photo Boost has paid for itself after two nights.",
         linkLabel: "More about Photo Boost",
@@ -321,7 +322,7 @@ export const en: SiteContent = {
   finalCta: {
     eyebrow: "Order",
     heading: "Send us your photos",
-    subline: "Choose a service and add a link. You'll get a reply within 24 hours on weekdays.",
+    subline: "Choose a service and add a link, or start with a free sample photo. You'll get a reply within 24 hours on weekdays.",
     ctaPrimary: "Send order",
     form: {
       fields: {

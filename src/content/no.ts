@@ -50,7 +50,7 @@ export const no: SiteContent = {
     eyebrow: "Bildeløft · Digital styling · Salgsløftet",
     headlineLines: ["Bedre boligbilder", "for salg og utleie"],
     subline:
-      "Send oss bildene du har. Vi gjør dem klare for FINN, Airbnb, Booking.com eller hotellets egen nettside – innen 24 timer, fra 1 890 kr.",
+      "Send oss bildene du har. Vi gjør dem klare for FINN, Airbnb, Booking.com eller hotellets egen nettside – innen 24 timer, fra 1 890 kr. Usikker? Test gratis med ett bilde først.",
     ctaPrimary: "Bestill bildeløft",
     ctaSecondary: "Få et gratis prøvebilde",
     beats: [
@@ -137,6 +137,7 @@ export const no: SiteContent = {
           "Vi velger det beste bildet til forsiden",
           "Tre forslag til annonsetittel",
           "Levert innen 24 timer",
+          "Test gratis med ett bilde først",
         ],
         note: "Eksempel: Leier du ut for 1 200 kr natten, er Bildeløft betalt etter to netter.",
         linkLabel: "Les mer om Bildeløft",
@@ -331,7 +332,7 @@ export const no: SiteContent = {
   finalCta: {
     eyebrow: "Bestilling",
     heading: "Send oss bildene dine",
-    subline: "Velg tjeneste og legg ved en lenke. Du får svar innen 24 timer på hverdager.",
+    subline: "Velg tjeneste og legg ved en lenke, eller start med et gratis prøvebilde. Du får svar innen 24 timer på hverdager.",
     ctaPrimary: "Send bestilling",
     form: {
       fields: {
