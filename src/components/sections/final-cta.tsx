@@ -2,7 +2,7 @@
 
 import { Suspense, useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Reveal from "@/components/ui/reveal";
 import Eyebrow from "@/components/ui/eyebrow";
 import Magnetic from "@/components/ui/magnetic-button";
@@ -54,7 +54,6 @@ export default function FinalCta({
   /** The order page renders this section as its main heading. */
   headingAs?: "h1" | "h2";
 }) {
-  const router = useRouter();
   const [status, setStatus] = useState<"idle" | "submitting" | "error">("idle");
   // Private customers ordering a one-off service must accept that work starts
   // right away and the right of withdrawal ends on delivery (angrerettloven § 22 a).
@@ -83,7 +82,9 @@ export default function FinalCta({
         body: body.toString(),
       });
       if (!res.ok) throw new Error(`form_submit_${res.status}`);
-      router.push(pageHref(locale, "thanks"));
+      // Full page load (not client-side navigation) so the Google and Meta
+      // tags register the thank-you page as a conversion.
+      window.location.assign(pageHref(locale, "thanks"));
     } catch {
       setStatus("error");
     }
