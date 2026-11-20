@@ -14,7 +14,7 @@ Vi bruker AI-verktøy og sjekker hvert bilde før levering. Svar på e-post inne
 Tjenester og priser (oppgitte priser inkluderer mva., meglere faktureres ekskl. mva.):
 - Bildeløft – opptil 40 bilder forbedret, vi velger det beste bildet til forsiden, tre forslag til annonsetittel, levering innen 24 timer: 1 890 kr. https://eiendomly.no/bildeloft
 - Digital styling – et rom møblert digitalt i stilen du velger, merket «Digital styling – illustrasjon. Møbler følger ikke med.», med originalbildet ved siden av: 1 190 kr per rom. Til salg og langtidsutleie. https://eiendomly.no/digital-styling
-- Salgsløftet – før/etter-illustrasjoner merket «Illustrasjon – ikke utført» og en PDF med tiltak, kostnadsanslag og anbefalt rekkefølge: Mini 4 900 kr, Stor 9 900 kr. https://eiendomly.no/salgsloftet
+- Salgsløftet – før/etter-illustrasjoner merket «Illustrasjon – ikke utført» og handleliste med produkter, priser og kostnadsanslag: 1 990 kr per rom, maks 9 900 kr for hele boligen. https://eiendomly.no/salgsloftet
 - Megleravtale – Bildeløft for opptil 8 boliger og digital styling av 3 rom per måned: 9 900 kr per måned. Tre måneders binding, deretter én måneds oppsigelse.
 - Forvalteravtale – Bildeløft for opptil 4 enheter per måned: 4 900 kr per måned. Tre måneders binding, deretter én måneds oppsigelse.
 
@@ -31,7 +31,7 @@ could look like. For Airbnb hosts, private landlords, home sellers, estate agent
 Services and prices (prices include VAT; estate agents are invoiced excluding VAT):
 - Photo Boost – up to 40 photos improved, we pick the best photo for the cover, three listing title suggestions, delivered within 24 hours: NOK 1,890. https://eiendomly.no/en/photo-boost
 - Virtual Staging – one room furnished digitally in the style you choose, labelled as an illustration, with the original photo alongside: NOK 1,190 per room. For sales and long-term rentals. https://eiendomly.no/en/virtual-staging
-- Sale Boost – before/after illustrations labelled "Illustration – not carried out" and a PDF with actions, cost estimates and a recommended order: Mini NOK 4,900, Large NOK 9,900. https://eiendomly.no/en/sale-boost
+- Sale Boost – before/after illustrations labelled "Illustration – not carried out" and a shopping list with products, prices and cost estimates: NOK 1,990 per room, max NOK 9,900 for the whole home. https://eiendomly.no/en/sale-boost
 - Agent Plan – Photo Boost for up to 8 properties and Virtual Staging of 3 rooms per month: NOK 9,900 per month. 3-month minimum term, then 1 month's notice.
 - Manager Plan – Photo Boost for up to 4 units per month: NOK 4,900 per month. 3-month minimum term, then 1 month's notice.
 

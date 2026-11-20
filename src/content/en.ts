@@ -25,7 +25,7 @@ export const en: SiteContent = {
     saleBoost: {
       title: "Sale Boost – renovation plan before selling | Eiendomly",
       description:
-        "See what simple improvements could do before a sale. Before/after illustrations and a plan with cost estimates, from NOK 4,900.",
+        "See what simple improvements could do before a sale. Before/after illustration and a shopping list with prices, NOK 1,990 per room.",
     },
     order: {
       title: "Order Photo Boost or Virtual Staging | Eiendomly",
@@ -159,15 +159,16 @@ export const en: SiteContent = {
       {
         key: "saleBoost",
         title: "Sale Boost",
-        price: "From NOK 4,900",
-        priceNote: "Large: NOK 9,900",
-        description: "For sellers who want to know which simple improvements are worth making.",
+        price: "NOK 1,990",
+        priceNote: "per room, max NOK 9,900 for the whole home",
+        description: "For sellers who want to show what simple improvements could do in the rooms that hold the home back.",
         features: [
-          "Before/after illustrations, labelled “Illustration – not carried out”",
-          "PDF with actions, cost estimates and order",
+          "You choose the rooms, for example kitchen and bathroom",
+          "Before/after illustration, labelled “Illustration – not carried out”",
+          "Shopping list with products, prices and links",
           "What you can do yourself, and what needs a professional",
         ],
-        note: "Example: On a NOK 3,000,000 home, Sale Boost Mini is 0.16% of the price.",
+        note: "Example: A kitchen and a bathroom cost NOK 3,980. On a NOK 3,000,000 home, that is 0.13% of the price.",
         linkLabel: "More about Sale Boost",
       },
     ],
@@ -268,7 +269,7 @@ export const en: SiteContent = {
     items: [
       {
         q: "How much does it cost?",
-        a: "Photo Boost costs NOK 1,890 for up to 40 photos. Virtual Staging costs NOK 1,190 per room. Sale Boost costs NOK 4,900 (Mini) or NOK 9,900 (Large). All prices include VAT.",
+        a: "Photo Boost costs NOK 1,890 for up to 40 photos. Virtual Staging costs NOK 1,190 per room. Sale Boost costs NOK 1,990 per room, max NOK 9,900 for the whole home. All prices include VAT.",
       },
       {
         q: "Is it worth it?",
@@ -502,7 +503,7 @@ export const en: SiteContent = {
       eyebrow: "Sale Boost",
       heading: "Sale Boost – illustrations and a renovation plan before selling",
       intro:
-        "See what paint, new kitchen fronts or a new floor could do before a sale. You get before/after illustrations and a plan with costs. From NOK 4,900.",
+        "See what paint, new kitchen fronts or a new floor could do before a sale. You choose the rooms and get a before/after illustration and a shopping list with prices. NOK 1,990 per room.",
       sections: [
         {
           heading: "Who is it for?",
@@ -518,7 +519,7 @@ export const en: SiteContent = {
           blocks: [
             {
               type: "p",
-              text: "Example: On a NOK 3,000,000 home, Sale Boost Mini is 0.16% of the price. The plan shows which improvements are worth making before a sale, and what they cost.",
+              text: "Example: A kitchen and one bathroom cost NOK 3,980. On a NOK 3,000,000 home, that is 0.13% of the price. The shopping list shows which improvements are worth making before a sale, and what they cost.",
             },
             {
               type: "case",
@@ -532,22 +533,24 @@ export const en: SiteContent = {
           ],
         },
         {
-          heading: "Mini or Large",
+          heading: "Price and what you get",
           blocks: [
             {
-              type: "table",
-              caption: "Comparison of Sale Boost Mini and Large",
-              head: ["", "Mini", "Large"],
-              rows: [
-                ["Price", "NOK 4,900", "NOK 9,900"],
-                ["Budget for the improvements", "Under NOK 20,000", "NOK 20,000–100,000"],
-                ["Before/after comparisons", "5", "10"],
-                ["Plan", "Actions, cost estimates and order", "Prioritised list of actions, cost estimates and order"],
+              type: "p",
+              text: "NOK 1,990 per room. You choose the rooms, for example kitchen, bathroom and living room. The whole home costs at most NOK 9,900, however many rooms it has.",
+            },
+            {
+              type: "list",
+              items: [
+                "A before/after illustration, labelled “Illustration – not carried out”.",
+                "A shopping list with products, prices and links.",
+                "A cost estimate, and what you can do yourself and what needs a professional.",
+                "Improvements within the budget you choose, for example at most NOK 25,000 for a bathroom.",
               ],
             },
             {
               type: "p",
-              text: "Both show what you can do yourself and what needs a professional. The images are labelled “Illustration – not carried out”. Any increase in value is assessed by an estate agent or valuer.",
+              text: "Any increase in value is assessed by an estate agent or valuer. We confirm the delivery time once we have seen the photos.",
             },
             { type: "cta" },
           ],
@@ -557,10 +560,8 @@ export const en: SiteContent = {
         { text: "Would you rather furnish an empty room?", label: "See Virtual Staging", href: "/en/virtual-staging" },
       ],
       priceHeading: "Price",
-      tiers: [
-        { name: "Mini", price: "NOK 4,900", detail: "5 before/after comparisons. Improvements under NOK 20,000." },
-        { name: "Large", price: "NOK 9,900", detail: "10 before/after comparisons. Improvements of NOK 20,000–100,000." },
-      ],
+      price: "NOK 1,990",
+      priceNote: "Per room. Max NOK 9,900 for the whole home.",
       cta: "Order Sale Boost",
     },
   },

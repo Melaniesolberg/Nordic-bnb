@@ -25,7 +25,7 @@ export const no: SiteContent = {
     saleBoost: {
       title: "Salgsløftet – oppussingsplan før boligsalg | Eiendomly",
       description:
-        "Se hva enkle tiltak kan gjøre før salg. Før/etter-illustrasjoner og en plan med kostnadsanslag, fra 4 900 kr.",
+        "Se hva enkle tiltak kan gjøre før salg. Før/etter-illustrasjon og handleliste med priser, 1 990 kr per rom.",
     },
     order: {
       title: "Bestill bildeløft eller digital styling | Eiendomly",
@@ -159,15 +159,16 @@ export const no: SiteContent = {
       {
         key: "saleBoost",
         title: "Salgsløftet",
-        price: "Fra 4 900 kr",
-        priceNote: "Stor: 9 900 kr",
-        description: "For deg som skal selge og vil vite hvilke enkle tiltak som er verdt å gjøre.",
+        price: "1 990 kr",
+        priceNote: "per rom, maks 9 900 kr for hele boligen",
+        description: "For deg som skal selge og vil vise hva enkle tiltak kan gjøre i rommene som trekker ned.",
         features: [
-          "Før/etter-illustrasjoner, merket «Illustrasjon – ikke utført»",
-          "PDF med tiltak, kostnadsanslag og rekkefølge",
+          "Du velger rommene, for eksempel kjøkken og bad",
+          "Før/etter-illustrasjon, merket «Illustrasjon – ikke utført»",
+          "Handleliste med produkter, priser og lenker",
           "Hva du kan gjøre selv, og hva som krever fagfolk",
         ],
-        note: "Eksempel: På en bolig til 3 000 000 kr er Salgsløftet Mini 0,16 % av prisen.",
+        note: "Eksempel: Kjøkken og bad koster 3 980 kr. På en bolig til 3 000 000 kr er det 0,13 % av prisen.",
         linkLabel: "Les mer om Salgsløftet",
       },
     ],
@@ -278,7 +279,7 @@ export const no: SiteContent = {
     items: [
       {
         q: "Hva koster det?",
-        a: "Bildeløft koster 1 890 kr for opptil 40 bilder. Digital styling koster 1 190 kr per rom. Salgsløftet koster 4 900 kr (Mini) eller 9 900 kr (Stor). Alle priser er inkludert mva.",
+        a: "Bildeløft koster 1 890 kr for opptil 40 bilder. Digital styling koster 1 190 kr per rom. Salgsløftet koster 1 990 kr per rom, maks 9 900 kr for hele boligen. Alle priser er inkludert mva.",
       },
       {
         q: "Lønner det seg?",
@@ -513,7 +514,7 @@ export const no: SiteContent = {
       eyebrow: "Salgsløftet",
       heading: "Salgsløftet – illustrasjoner og oppussingsplan før boligsalg",
       intro:
-        "Se hva maling, nye kjøkkenfronter eller nytt gulv kan gjøre før salg. Du får før/etter-illustrasjoner og en plan med kostnader. Fra 4 900 kr.",
+        "Se hva maling, nye kjøkkenfronter eller nytt gulv kan gjøre før salg. Du velger rommene og får før/etter-illustrasjon og handleliste med priser. 1 990 kr per rom.",
       sections: [
         {
           heading: "Hvem passer det for?",
@@ -529,7 +530,7 @@ export const no: SiteContent = {
           blocks: [
             {
               type: "p",
-              text: "Eksempel: På en bolig til 3 000 000 kr er Salgsløftet Mini 0,16 % av prisen. Planen viser hvilke tiltak som er verdt å gjøre før salg, og hva de koster.",
+              text: "Eksempel: Kjøkken og ett bad koster 3 980 kr. På en bolig til 3 000 000 kr er det 0,13 % av prisen. Handlelisten viser hvilke tiltak som er verdt å gjøre før salg, og hva de koster.",
             },
             {
               type: "case",
@@ -543,22 +544,24 @@ export const no: SiteContent = {
           ],
         },
         {
-          heading: "Mini eller Stor",
+          heading: "Pris og innhold",
           blocks: [
             {
-              type: "table",
-              caption: "Sammenligning av Salgsløftet Mini og Stor",
-              head: ["", "Mini", "Stor"],
-              rows: [
-                ["Pris", "4 900 kr", "9 900 kr"],
-                ["Budsjett for tiltakene", "Under 20 000 kr", "20 000–100 000 kr"],
-                ["Før/etter-sammenligninger", "5", "10"],
-                ["Plan", "Tiltak, kostnadsanslag og rekkefølge", "Prioritert liste med tiltak, kostnadsanslag og rekkefølge"],
+              type: "p",
+              text: "1 990 kr per rom. Du velger rommene selv, for eksempel kjøkken, bad og stue. Hele boligen koster maks 9 900 kr, uansett hvor mange rom.",
+            },
+            {
+              type: "list",
+              items: [
+                "En før/etter-illustrasjon, merket «Illustrasjon – ikke utført».",
+                "Handleliste med produkter, priser og lenker.",
+                "Kostnadsanslag, og hva du kan gjøre selv og hva som krever fagfolk.",
+                "Tiltak innenfor budsjettet du velger, for eksempel maks 25 000 kr for et bad.",
               ],
             },
             {
               type: "p",
-              text: "Begge viser hva du kan gjøre selv, og hva som krever fagfolk. Bildene merkes «Illustrasjon – ikke utført». En eventuell verdiøkning vurderer megler eller takstmann.",
+              text: "En eventuell verdiøkning vurderer megler eller takstmann. Vi bekrefter leveringstid når vi har sett bildene.",
             },
             { type: "cta" },
           ],
@@ -568,10 +571,8 @@ export const no: SiteContent = {
         { text: "Vil du heller møblere et tomt rom?", label: "Se digital boligstyling", href: "/digital-styling" },
       ],
       priceHeading: "Pris",
-      tiers: [
-        { name: "Mini", price: "4 900 kr", detail: "5 før/etter-sammenligninger. Tiltak under 20 000 kr." },
-        { name: "Stor", price: "9 900 kr", detail: "10 før/etter-sammenligninger. Tiltak for 20 000–100 000 kr." },
-      ],
+      price: "1 990 kr",
+      priceNote: "Per rom. Maks 9 900 kr for hele boligen.",
       cta: "Bestill Salgsløftet",
     },
   },
