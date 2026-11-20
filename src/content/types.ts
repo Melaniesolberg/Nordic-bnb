@@ -167,10 +167,12 @@ export interface OrderFormContent {
   privateCustomerTypes: string[];
   selectPlaceholder: string;
   customerTypes: string[];
-  serviceOptions: { key: ServiceKey | PlanKey | "unsure"; label: string }[];
+  serviceOptions: { key: ServiceKey | PlanKey | "unsure" | "freeSample"; label: string }[];
   submit: string;
   errorMessage: string;
   privacyNote: string;
+  /** Risk-reversal line shown next to order buttons. */
+  trustNote: string;
   privacyLink: string;
 }
 
@@ -214,6 +216,8 @@ export interface ServicePageContent {
   price?: string;
   priceNote?: string;
   tiers?: { name: string; price: string; detail: string }[];
+  /** Optional free-sample nudge under the order button. */
+  sample?: { text: string; label: string };
   cta: string;
 }
 

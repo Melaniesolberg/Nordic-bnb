@@ -67,6 +67,9 @@ const GTM_IDS = (process.env.NEXT_PUBLIC_GTM_IDS ?? "GTM-KKN4BF9K,GTM-M7GG6XJN,G
   .map((id) => id.trim())
   .filter(Boolean);
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+// Google Ads tag (gtag.js). Loaded only with marketing consent; measures
+// orders and free sample requests on the thank-you page.
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID ?? "AW-18581465439";
 
 const outlineButton =
   "rounded-full border border-charcoal/20 px-5 py-2.5 text-sm font-medium text-charcoal/80 transition-colors hover:border-coral hover:text-coral";
@@ -129,6 +132,23 @@ export default function ConsentBanner({ copy }: { copy: ConsentContent }) {
           </Script>
         </>
       )}
+      {GOOGLE_ADS_ID && consent?.marketing && (
+        <>
+          <Script src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} strategy="afterInteractive" />
+          <Script id="google-ads-init" strategy="afterInteractive">
+            {`window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                analytics_storage: '${consent.analytics ? "granted" : "denied"}',
+                ad_storage: 'granted',
+                ad_user_data: 'granted',
+                ad_personalization: 'granted'
+              });
+              gtag('js', new Date());
+              gtag('config', '${GOOGLE_ADS_ID}');`}
+          </Script>
+        </>
+      )}
       {META_PIXEL_ID && consent?.marketing && (
         <Script id="meta-pixel" strategy="afterInteractive">
           {`!function(f,b,e,v,n,t,s)
@@ -140,7 +160,8 @@ export default function ConsentBanner({ copy }: { copy: ConsentContent }) {
             s.parentNode.insertBefore(t,s)}(window, document,'script',
             'https://connect.facebook.net/en_US/fbevents.js');
             fbq('init', '${META_PIXEL_ID}');
-            fbq('track', 'PageView');`}
+            fbq('track', 'PageView');
+            if (/^\/(takk|en\/thanks)\/?$/.test(location.pathname)) fbq('track', 'Lead');`}
         </Script>
       )}
 

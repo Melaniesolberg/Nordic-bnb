@@ -211,6 +211,18 @@ export default function ServicePage({ locale, service }: { locale: Locale; servi
                   <div className="mt-8">
                     <OrderButton href={orderHref} label={page.cta} />
                   </div>
+                  <p className="mt-5 text-sm font-medium leading-relaxed text-ivory/85">{content.finalCta.form.trustNote}</p>
+                  {page.sample && (
+                    <p className="mt-3 text-sm leading-relaxed text-ivory/70">
+                      {page.sample.text}{" "}
+                      <Link
+                        href={`${pageHref(locale, "order")}?service=freeSample`}
+                        className="font-medium text-coral-soft underline underline-offset-4 hover:text-ivory"
+                      >
+                        {page.sample.label}
+                      </Link>
+                    </p>
+                  )}
                 </div>
               </Reveal>
             </div>

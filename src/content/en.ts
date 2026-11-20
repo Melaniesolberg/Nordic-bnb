@@ -52,7 +52,7 @@ export const en: SiteContent = {
     subline:
       "Send us the photos you have. We get them ready for FINN, Airbnb, Booking.com or the hotel's own website – within 24 hours, from NOK 1,890.",
     ctaPrimary: "Order Photo Boost",
-    ctaSecondary: "See services and prices",
+    ctaSecondary: "Get a free sample photo",
     beats: [
       {
         eyebrow: "Photo Boost",
@@ -279,6 +279,10 @@ export const en: SiteContent = {
         q: "How important are the photos in a listing?",
         a: "In FINN's 2025 property survey, 58% of respondents chose the photos as one of the three most important parts of a property listing. Nothing ranked higher. [See the survey (Norwegian)](https://www.finn.no/bedriftskunde/aktuelt/finn-eiendom/eiendomsundersokelsen-2025)",
       },
+      {
+        q: "Can I try it for free first?",
+        a: "Yes. Choose “Free sample photo” in the form and send one photo. You get it improved within 24 hours on weekdays, with no obligation. One photo per customer.",
+      },
       { q: "Do I need new photos?", a: "No. Send the photos you have, including phone photos." },
       {
         q: "How quickly do I get the photos?",
@@ -338,6 +342,7 @@ export const en: SiteContent = {
       selectPlaceholder: "Choose …",
       customerTypes: ["Private landlord", "Airbnb host", "Home seller", "Estate agent", "Rental manager", "Cabin owner", "Hotel"],
       serviceOptions: [
+        { key: "freeSample", label: "Free sample photo (1 photo)" },
         { key: "photoBoost", label: "Photo Boost" },
         { key: "virtualStaging", label: "Virtual Staging" },
         { key: "saleBoost", label: "Sale Boost" },
@@ -348,6 +353,7 @@ export const en: SiteContent = {
       submit: "Send order",
       errorMessage: "Something went wrong. Please try again, or email us at",
       privacyNote: "We use your details to reply to you, deliver the service and send the invoice.",
+      trustNote: "You pay only after delivery. One free round of adjustments. Still not happy after that? You get 50% back.",
       privacyLink: "Read about privacy",
     },
   },
@@ -421,6 +427,7 @@ export const en: SiteContent = {
       priceHeading: "Price",
       price: "NOK 1,890",
       priceNote: "Up to 40 photos. Delivered within 24 hours.",
+      sample: { text: "Not sure? Send one photo first.", label: "Get a free sample photo" },
       cta: "Order Photo Boost",
     },
     virtualStaging: {

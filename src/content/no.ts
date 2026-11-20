@@ -52,7 +52,7 @@ export const no: SiteContent = {
     subline:
       "Send oss bildene du har. Vi gjør dem klare for FINN, Airbnb, Booking.com eller hotellets egen nettside – innen 24 timer, fra 1 890 kr.",
     ctaPrimary: "Bestill bildeløft",
-    ctaSecondary: "Se tjenester og priser",
+    ctaSecondary: "Få et gratis prøvebilde",
     beats: [
       {
         eyebrow: "Bildeløft",
@@ -289,6 +289,10 @@ export const no: SiteContent = {
         q: "Hvor viktige er bildene i en annonse?",
         a: "I FINNs eiendomsundersøkelse 2025 valgte 58 % av de spurte bildene som en av de tre viktigste delene av en boligannonse. Ingenting kom høyere. [Se undersøkelsen](https://www.finn.no/bedriftskunde/aktuelt/finn-eiendom/eiendomsundersokelsen-2025)",
       },
+      {
+        q: "Kan jeg teste gratis først?",
+        a: "Ja. Velg «Gratis prøvebilde» i skjemaet og send ett bilde. Du får det forbedret innen 24 timer på hverdager, helt uten forpliktelser. Ett bilde per kunde.",
+      },
       { q: "Må jeg ta nye bilder?", a: "Nei. Send bildene du har, også mobilbilder." },
       {
         q: "Hvor raskt får jeg bildene?",
@@ -348,6 +352,7 @@ export const no: SiteContent = {
       selectPlaceholder: "Velg …",
       customerTypes: ["Privat utleier", "Airbnb-vert", "Boligselger", "Megler", "Utleieforvalter", "Hytteeier", "Hotell"],
       serviceOptions: [
+        { key: "freeSample", label: "Gratis prøvebilde (1 bilde)" },
         { key: "photoBoost", label: "Bildeløft" },
         { key: "virtualStaging", label: "Digital styling" },
         { key: "saleBoost", label: "Salgsløftet" },
@@ -358,6 +363,7 @@ export const no: SiteContent = {
       submit: "Send bestilling",
       errorMessage: "Noe gikk galt. Prøv igjen, eller send oss en e-post på",
       privacyNote: "Vi bruker opplysningene til å svare deg, levere tjenesten og sende faktura.",
+      trustNote: "Du betaler først etter levering. Én gratis justering. Ikke fornøyd etter justeringen? Da får du 50 % tilbake.",
       privacyLink: "Les om personvern",
     },
   },
@@ -432,6 +438,7 @@ export const no: SiteContent = {
       priceHeading: "Pris",
       price: "1 890 kr",
       priceNote: "Opptil 40 bilder. Levert innen 24 timer.",
+      sample: { text: "Usikker? Send ett bilde først.", label: "Få et gratis prøvebilde" },
       cta: "Bestill bildeløft",
     },
     virtualStaging: {

@@ -64,7 +64,8 @@ export default function FinalCta({
     const serviceKey = serviceSelect?.selectedOptions[0]?.dataset.key ?? "";
     const isPrivate = finalCta.form.privateCustomerTypes.includes(type);
     const isPlan = serviceKey === "brokerPlan" || serviceKey === "managerPlan";
-    setAskWithdrawal(isPrivate && !isPlan);
+    // A free sample is not a purchase, so there is no right of withdrawal to waive.
+    setAskWithdrawal(isPrivate && !isPlan && serviceKey !== "freeSample");
   }
   const f = finalCta.form.fields;
   const Heading = headingAs;
@@ -73,7 +74,11 @@ export default function FinalCta({
   // static file, so this posts to the blueprint in public/__forms.html.
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const body = new URLSearchParams(new FormData(e.currentTarget) as unknown as Record<string, string>);
+    const form = e.currentTarget;
+    const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>);
+    const serviceKey = (form.elements.namedItem("service") as HTMLSelectElement | null)?.selectedOptions[0]?.dataset.key;
+    // Separate thank-you URLs let Google Ads count free samples and orders as two conversions.
+    const type = serviceKey === "freeSample" ? "sample" : "order";
     setStatus("submitting");
     try {
       const res = await fetch("/__forms.html", {
@@ -84,7 +89,8 @@ export default function FinalCta({
       if (!res.ok) throw new Error(`form_submit_${res.status}`);
       // Full page load (not client-side navigation) so the Google and Meta
       // tags register the thank-you page as a conversion.
-      window.location.assign(pageHref(locale, "thanks"));
+      // eslint-disable-next-line @next/next/no-location-assign-relative-destination -- a full load is intended here
+      window.location.assign(`${pageHref(locale, "thanks")}?type=${type}`);
     } catch {
       setStatus("error");
     }
@@ -221,7 +227,8 @@ export default function FinalCta({
                         {status === "submitting" ? "…" : finalCta.form.submit}
                       </button>
                     </Magnetic>
-                    <p className="mt-5 flex items-start gap-2 text-xs leading-relaxed text-ivory/55">
+                    <p className="mt-5 text-sm font-medium leading-relaxed text-ivory/85">{finalCta.form.trustNote}</p>
+                    <p className="mt-3 flex items-start gap-2 text-xs leading-relaxed text-ivory/55">
                       <svg viewBox="0 0 24 24" fill="none" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-coral-soft" aria-hidden>
                         <path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6l-7-3Z" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
                       </svg>

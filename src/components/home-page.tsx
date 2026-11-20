@@ -16,7 +16,7 @@ import { getContent } from "@/content";
 import { media } from "@/content/media";
 import { SITE_CONFIG } from "@/content/config";
 import { homeJsonLd } from "@/content/json-ld";
-import { localeHref, pageHref, type Locale } from "@/i18n/config";
+import { pageHref, type Locale } from "@/i18n/config";
 
 export default function HomePage({ locale }: { locale: Locale }) {
   const content = getContent(locale);
@@ -28,7 +28,7 @@ export default function HomePage({ locale }: { locale: Locale }) {
       <Hero
         hero={content.hero}
         formHref={photoBoostOrderHref}
-        secondaryHref={localeHref(locale, "/#services")}
+        secondaryHref={`${pageHref(locale, "order")}?service=freeSample`}
         imageSrc={media.heroPoster}
         videoSrc={media.heroVideo}
         mobileVideoSrc={media.heroVideoMobile}
