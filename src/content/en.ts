@@ -671,7 +671,7 @@ export const en: SiteContent = {
         },
         {
           heading: "Analytics and marketing",
-          body: "Analytics and marketing tools (such as Google Analytics via Google Tag Manager, and Meta Pixel) are only loaded if you've accepted this in the consent banner.",
+          body: "Google Analytics (via Google Tag Manager) and Meta Pixel are only loaded if you've accepted this in the consent banner. The Google Ads tag uses Google's Consent Mode: without consent, no cookies are stored and Google only receives anonymous signals, such as that an order was sent. Advertising cookies are only used once you accept marketing.",
         },
         {
           heading: "Change consent",

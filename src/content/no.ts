@@ -689,7 +689,7 @@ export const no: SiteContent = {
         },
         {
           heading: "Analyse og markedsføring",
-          body: "Analyse- og markedsføringsverktøy (som Google Analytics via Google Tag Manager og Meta Pixel) lastes kun hvis du har godtatt dette i samtykkebanneret.",
+          body: "Google Analytics (via Google Tag Manager) og Meta Pixel lastes kun hvis du har godtatt dette i samtykkebanneret. Google Ads-taggen bruker Googles samtykkemodus: Uten samtykke lagres ingen informasjonskapsler, og Google får bare anonyme signaler, for eksempel at en bestilling er sendt. Informasjonskapsler for annonser brukes først når du godtar markedsføring.",
         },
         {
           heading: "Endre samtykke",

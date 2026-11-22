@@ -67,9 +67,21 @@ const GTM_IDS = (process.env.NEXT_PUBLIC_GTM_IDS ?? "GTM-KKN4BF9K,GTM-M7GG6XJN,G
   .map((id) => id.trim())
   .filter(Boolean);
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
-// Google Ads tag (gtag.js). Loaded only with marketing consent; measures
-// orders and free sample requests on the thank-you page.
+// Google Ads tag (gtag.js). Loaded on every page with Google Consent Mode v2:
+// until the visitor accepts marketing, ad storage is denied, so no cookies are
+// set and Google only gets cookieless pings. That lets Google Ads find the tag
+// and count orders and free sample requests on the thank-you page.
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID ?? "AW-18581465439";
+
+function consentState(c: Consent) {
+  const ads = c.marketing ? "granted" : "denied";
+  return {
+    ad_storage: ads,
+    ad_user_data: ads,
+    ad_personalization: ads,
+    analytics_storage: c.analytics ? "granted" : "denied",
+  };
+}
 
 const outlineButton =
   "rounded-full border border-charcoal/20 px-5 py-2.5 text-sm font-medium text-charcoal/80 transition-colors hover:border-coral hover:text-coral";
@@ -82,6 +94,21 @@ export default function ConsentBanner({ copy }: { copy: ConsentContent }) {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [draft, setDraft] = useState<Consent>(consent ?? { analytics: false, marketing: false });
   const visible = consent === null || forcedOpen;
+
+  useEffect(() => {
+    if (!consent) return;
+    const w = window as unknown as { dataLayer?: unknown[] };
+    w.dataLayer = w.dataLayer || [];
+    // gtag.js only accepts the arguments object (not an array), so mirror the
+    // standard snippet exactly.
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const gtag = function (..._args: unknown[]) {
+      // eslint-disable-next-line prefer-rest-params
+      w.dataLayer!.push(arguments);
+    };
+    gtag("consent", "update", consentState(consent));
+    gtag("set", "ads_data_redaction", !consent.marketing);
+  }, [consent]);
 
   useEffect(() => {
     function onTriggerClick(e: MouseEvent) {
@@ -103,17 +130,30 @@ export default function ConsentBanner({ copy }: { copy: ConsentContent }) {
 
   return (
     <>
+      {/* Consent Mode defaults. Read straight from storage so the defaults are
+          right even if this runs before React has hydrated. Must come first. */}
+      <Script id="google-consent-default" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          var c = {};
+          try { c = JSON.parse(localStorage.getItem('${STORAGE_KEY}')) || {}; } catch (e) {}
+          var ads = c.marketing ? 'granted' : 'denied';
+          gtag('consent', 'default', {
+            ad_storage: ads,
+            ad_user_data: ads,
+            ad_personalization: ads,
+            analytics_storage: c.analytics ? 'granted' : 'denied'
+          });
+          gtag('set', 'ads_data_redaction', !c.marketing);
+          gtag('js', new Date());
+          ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ""}`}
+      </Script>
+      {GOOGLE_ADS_ID && (
+        <Script src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} strategy="afterInteractive" />
+      )}
       {GTM_IDS.length > 0 && consent?.analytics && (
         <Script id="gtm-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('consent', 'default', {
-              analytics_storage: 'granted',
-              ad_storage: '${consent.marketing ? "granted" : "denied"}',
-              ad_user_data: '${consent.marketing ? "granted" : "denied"}',
-              ad_personalization: '${consent.marketing ? "granted" : "denied"}'
-            });
-            gtag('js', new Date());
             ${JSON.stringify(GTM_IDS)}.forEach(function(i){
               var w=window,d=document;w.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
               var f=d.getElementsByTagName('script')[0],j=d.createElement('script');
@@ -129,23 +169,6 @@ export default function ConsentBanner({ copy }: { copy: ConsentContent }) {
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', '${GA4_ID}');`}
-          </Script>
-        </>
-      )}
-      {GOOGLE_ADS_ID && consent?.marketing && (
-        <>
-          <Script src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`} strategy="afterInteractive" />
-          <Script id="google-ads-init" strategy="afterInteractive">
-            {`window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('consent', 'default', {
-                analytics_storage: '${consent.analytics ? "granted" : "denied"}',
-                ad_storage: 'granted',
-                ad_user_data: 'granted',
-                ad_personalization: 'granted'
-              });
-              gtag('js', new Date());
-              gtag('config', '${GOOGLE_ADS_ID}');`}
           </Script>
         </>
       )}
