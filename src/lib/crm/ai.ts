@@ -1,4 +1,3 @@
-import "server-only";
 import Anthropic from "@anthropic-ai/sdk";
 import { z } from "zod";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
@@ -18,6 +17,13 @@ const AnalysisSchema = z.object({
   recommended_service: z.enum(["photo_boost", "sale_boost", "virtual_staging", "broker_plan", "manager_plan"]),
   score: z.number().int().min(0).max(100).describe("Buying potential 0-100."),
   score_reason: z.string().describe("One or two sentences in Norwegian explaining the score."),
+  recurring_potential: z
+    .number()
+    .int()
+    .min(0)
+    .max(100)
+    .describe("0-100: how likely this company becomes a repeat customer (many listings, units or rooms that change often)."),
+  recurring_reason: z.string().describe("One sentence in Norwegian on why it would or wouldn't order repeatedly."),
   outreach_subject: z.string().describe("E-mail subject in Norwegian, max 70 characters, no clickbait."),
   outreach_body: z
     .string()
@@ -51,6 +57,8 @@ Tjenester og faste priser:
 
 Oppgave: Vurder ett selskap ut fra opplysningene du får. Bruk bare det som står i opplysningene. Ikke finn på fakta om selskapet, kunder, tall eller resultater. Hvis nettsideteksten mangler, si at vurderingen er usikker og hold scoren moderat.
 
+Gjentakende potensial (0-100): Hvor sannsynlig det er at selskapet bestiller igjen og igjen. Høyt for meglerkontorer med mange oppdrag, forvaltere og utleiere med mange enheter, og hoteller med mange rom. Lavt for selskaper med én eiendom eller enkeltprosjekter. Bruk bare det som står i opplysningene.
+
 Score (0-100): Hvor sannsynlig det er at selskapet kjøper i løpet av de neste månedene. Høyt (70+) bare når selskapet tydelig publiserer bolig-, utleie- eller rombilder jevnlig. Lavt (under 30) når det er et holdingselskap, ikke driver aktivt, eller ikke har behov.
 
 E-posten: Skriv på norsk bokmål, kort og personlig, til bedriftens felles innboks. Nevn én konkret ting fra opplysningene (ikke noe du har gjettet). Tilby et gratis prøvebilde. Ingen påstander om økt salg eller inntekt i prosent eller kroner. Ingen hilsen med navn på mottaker. Ingen signatur og ingen avmeldingslinje – de legges til automatisk.`;
@@ -62,7 +70,28 @@ function getClient(): Anthropic {
   return client;
 }
 
-export async function analyzeLead(input: AnalysisInput): Promise<{ analysis: LeadAnalysis; model: string }> {
+/** Bumped when the prompt changes, so results can be compared per version. */
+export const PROMPT_VERSION = "v2-recurring";
+/** Output cap per analysis; also used for the worst-case budget check. */
+export const ANALYSIS_MAX_TOKENS = 6000;
+
+export interface AnalysisUsage {
+  model: string;
+  input_tokens: number;
+  output_tokens: number;
+  cache_read_tokens: number;
+  cache_write_tokens: number;
+}
+
+export type AnalysisResult =
+  | { ok: true; analysis: LeadAnalysis; usage: AnalysisUsage }
+  | { ok: false; error: string; usage: AnalysisUsage | null };
+
+/**
+ * Never throws for model-side problems: a refused or cut-off answer still
+ * costs money, so the usage is always returned for the budget ledger.
+ */
+export async function analyzeLead(input: AnalysisInput): Promise<AnalysisResult> {
   const facts = [
     `Selskap: ${input.name}`,
     `Segment: ${SEGMENTS[input.segment]}`,
@@ -77,7 +106,7 @@ export async function analyzeLead(input: AnalysisInput): Promise<{ analysis: Lea
 
   const response = await getClient().beta.messages.parse({
     model: crmEnv.anthropicModel,
-    max_tokens: 16000,
+    max_tokens: ANALYSIS_MAX_TOKENS,
     betas: ["server-side-fallback-2026-07-01"],
     fallbacks: "default",
     output_config: { effort: crmEnv.anthropicEffort, format: betaZodOutputFormat(AnalysisSchema) },
@@ -92,9 +121,16 @@ export async function analyzeLead(input: AnalysisInput): Promise<{ analysis: Lea
     ],
   });
 
-  if (response.stop_reason === "refusal") throw new Error("AI-analysen ble avvist for dette selskapet.");
-  if (response.stop_reason === "max_tokens") throw new Error("AI-analysen ble avbrutt (for lang).");
+  const usage: AnalysisUsage = {
+    model: response.model,
+    input_tokens: response.usage.input_tokens ?? 0,
+    output_tokens: response.usage.output_tokens ?? 0,
+    cache_read_tokens: response.usage.cache_read_input_tokens ?? 0,
+    cache_write_tokens: response.usage.cache_creation_input_tokens ?? 0,
+  };
+  if (response.stop_reason === "refusal") return { ok: false, error: "AI-analysen ble avvist for dette selskapet.", usage };
+  if (response.stop_reason === "max_tokens") return { ok: false, error: "AI-analysen ble avbrutt (for lang).", usage };
   const parsed = response.parsed_output;
-  if (!parsed) throw new Error("AI-analysen ga ikke gyldig svar.");
-  return { analysis: parsed, model: response.model };
+  if (!parsed) return { ok: false, error: "AI-analysen ga ikke gyldig svar.", usage };
+  return { ok: true, analysis: parsed, usage };
 }

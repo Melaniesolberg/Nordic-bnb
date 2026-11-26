@@ -106,7 +106,7 @@ Viser potensielle kunder, kvalifiserte leads, kontaktede, interesserte, konverte
 ## 5. Oppsett (ca. 20 minutter)
 
 1. **Opprett Supabase-prosjekt** på supabase.com, i EU-region, for eksempel Frankfurt eller Stockholm.
-2. **Kjør migrasjonen**: Gå til SQL Editor, lim inn innholdet i `supabase/migrations/20261126000000_crm_core.sql` og trykk Run.
+2. **Kjør migrasjonene**: Gå til SQL Editor, lim inn innholdet i `supabase/migrations/20261126000000_crm_core.sql` og trykk Run. Gjør det samme med `20261127000000_crm_autopilot.sql` (autopilot, se [AUTOPILOT.md](AUTOPILOT.md)).
 3. **Slå av åpen registrering**: Under Authentication → Sign In / Providers slår du av «Allow new users to sign up».
 4. **Lag brukeren din**: Under Authentication → Users → Add user, med e-post og et sterkt passord.
 5. **Gi deg selv tilgang** i SQL Editor:
@@ -175,12 +175,14 @@ Dette er ikke juridisk rådgivning. Ta en kort sjekk med en rådgiver før utsen
 
 - **Tidsgrense hos Netlify**: Én AI-analyse tar typisk 5–20 sekunder. Netlify Free stopper funksjoner etter 10 sekunder (26 på betalt plan). Analysene kjøres derfor ett selskap om gangen med `CRM_AI_EFFORT=low`. Feiler det ofte, oppgrader Netlify-planen, eller kjør analysene via n8n.
 - **Avmeldingslenke** krever `UNSUBSCRIBE_SECRET` og `SUPABASE_SERVICE_ROLE_KEY`. Uten dem står det «svar nei takk» i stedet.
-- **Svar fra e-post** registreres manuelt eller via n8n. Systemet leser ikke innboksen selv.
+- **Svar fra e-post** leses nå automatisk fra innboksen (IMAP) av bakgrunnsjobben. Se [AUTOPILOT.md](AUTOPILOT.md).
+- AI-analyse og research kjøres i bakgrunnen (Netlify Background Function, 15 minutter), så tidsgrensen gjelder bare for knappene i panelet.
 
 ## 10. Tester
 
 ```bash
-npm run test:crm   # regler for sending, duplikater, signering, CSV, Brønnøysund
+npm run test:crm   # regler for sending, duplikater, signering, CSV, Brønnøysund, budsjett, oppfølging, svar
+npm run crm:worker # én kjøring av bakgrunnsjobben lokalt (bruker .env.local)
 npm run build
 ```
 
@@ -189,6 +191,6 @@ npm run build
 | Fase | Innhold |
 |---|---|
 | 1 (ferdig) | Database, RLS, innlogging, kundebase, research, AI-analyse, godkjenning, manuell sending, dashboard, CSV, n8n-webhook |
-| 2 | Test med ekte data. Slå på sending. n8n-flyt for svar-innboks |
-| 3 | Oppfølgingssekvens (trinn 2) som fortsatt krever manuell godkjenning. Påminnelser |
+| 2 (ferdig, av som standard) | Autopilot: research i bakgrunnen, AI-kostnadstak, prioritering, mobil godkjenningskø, oppfølging, innboks-lesing, ukerapport. Se [AUTOPILOT.md](AUTOPILOT.md) |
+| 3 | Gjennomfør testlisten i AUTOPILOT.md punkt 9. Slå på sending gradvis |
 | 4 | Flere datakilder (egne lister, partnere), A/B-test av emnelinjer, rapport per kampanje |

@@ -15,7 +15,9 @@ export default async function ProspectsPage({ searchParams }: PageProps<"/admin/
   const segment = sp(params, "segment") ?? "";
   const status = sp(params, "status") ?? "";
   const minScore = Number(sp(params, "min") ?? "");
-  const sort = sp(params, "sort") === "score" ? "score" : "created";
+  const sortParam = sp(params, "sort");
+  const sort = sortParam === "score" || sortParam === "priority" ? sortParam : "created";
+  const review = sp(params, "review") === "1";
   const page = Math.max(0, Number(sp(params, "page") ?? 0) || 0);
 
   const supabase = await createSupabaseServerClient();
@@ -29,18 +31,24 @@ export default async function ProspectsPage({ searchParams }: PageProps<"/admin/
   if (segment in SEGMENTS) query = query.eq("segment", segment);
   if (status in STATUSES) query = query.eq("status", status);
   if (Number.isFinite(minScore) && minScore > 0) query = query.gte("score", minScore);
-  query = sort === "score" ? query.order("score", { ascending: false, nullsFirst: false }) : query.order("created_at", { ascending: false });
+  if (review) query = query.eq("needs_review", true);
+  query =
+    sort === "score"
+      ? query.order("score", { ascending: false, nullsFirst: false })
+      : sort === "priority"
+        ? query.order("priority", { ascending: false, nullsFirst: false })
+        : query.order("created_at", { ascending: false });
   const { data, count } = await query.range(page * PAGE_SIZE, page * PAGE_SIZE + PAGE_SIZE - 1);
   const rows = (data ?? []) as CompanyRow[];
   const total = count ?? 0;
   const qs = (patch: Record<string, string | number>) =>
-    "?" + new URLSearchParams({ ...(q && { q }), ...(segment && { segment }), ...(status && { status }), ...(minScore > 0 && { min: String(minScore) }), sort, page: String(page), ...Object.fromEntries(Object.entries(patch).map(([k, v]) => [k, String(v)])) }).toString();
+    "?" + new URLSearchParams({ ...(q && { q }), ...(segment && { segment }), ...(status && { status }), ...(minScore > 0 && { min: String(minScore) }), ...(review && { review: "1" }), sort, page: String(page), ...Object.fromEntries(Object.entries(patch).map(([k, v]) => [k, String(v)])) }).toString();
 
   return (
     <>
       <PageHeader
         title="Kunder og potensielle kunder"
-        description={`${total} treff. Velg selskaper for AI-analyse, eller åpne et selskap for detaljer.`}
+        description={review ? `${total} selskaper har svart og venter på deg.` : `${total} treff. Velg selskaper for AI-analyse, eller åpne et selskap for detaljer.`}
         actions={
           <>
             <Link href="/admin/prospects/new" className={btnSecondary}>Legg til manuelt</Link>
@@ -70,6 +78,7 @@ export default async function ProspectsPage({ searchParams }: PageProps<"/admin/
           <select name="sort" defaultValue={sort} className={input} aria-label="Sortering">
             <option value="created">Nyeste</option>
             <option value="score">Høyest score</option>
+            <option value="priority">Høyest prioritet</option>
           </select>
           <button type="submit" className={btnSecondary}>Filtrer</button>
         </div>

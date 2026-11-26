@@ -1,4 +1,3 @@
-import "server-only";
 import { createHmac, timingSafeEqual } from "node:crypto";
 
 export function hmacHex(secret: string, payload: string): string {

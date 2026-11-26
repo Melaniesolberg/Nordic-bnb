@@ -1,4 +1,3 @@
-import "server-only";
 import { SEGMENT_NACE, type Segment } from "@/lib/crm/constants";
 import { isGenericEmail, normalizeDomain, normalizeEmail, normalizeName, normalizeWebsite } from "@/lib/crm/normalize";
 

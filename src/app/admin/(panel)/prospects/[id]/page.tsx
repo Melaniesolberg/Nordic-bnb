@@ -51,7 +51,7 @@ export default async function ProspectPage({ params, searchParams }: PageProps<"
     : { data: [] as { value: string }[] };
   const suppressedSet = new Set((suppressed ?? []).map((s) => s.value));
   const cfg = configStatus();
-  const analysis = company.analysis as { website_checked?: { url?: string; ok?: boolean; robots_blocked?: boolean; error?: string | null } | null; email_source?: string | null; model?: string } | null;
+  const analysis = company.analysis as { website_checked?: { url?: string; ok?: boolean; robots_blocked?: boolean; error?: string | null } | null; email_source?: string | null; model?: string; recurring_reason?: string; error?: string } | null;
   const returnTo = `/admin/prospects/${id}`;
 
   return (
@@ -99,6 +99,13 @@ export default async function ProspectPage({ params, searchParams }: PageProps<"
                   </ul>
                 )}
                 {company.score_reason && <p className="text-charcoal/75"><span className="font-medium">Score {company.score}:</span> {company.score_reason}</p>}
+                {company.recurring_potential !== null && (
+                  <p className="text-charcoal/75">
+                    <span className="font-medium">Gjentakende potensial {company.recurring_potential}:</span>{" "}
+                    {typeof analysis?.recurring_reason === "string" ? analysis.recurring_reason : ""}
+                    {company.priority !== null && <span className="text-charcoal/55"> · prioritet {company.priority}</span>}
+                  </p>
+                )}
                 <p className="text-xs text-charcoal/55">
                   Analysert {dateTime(company.analyzed_at)}
                   {analysis?.model ? ` · ${analysis.model}` : ""}
@@ -193,7 +200,8 @@ export default async function ProspectPage({ params, searchParams }: PageProps<"
               </select>
               <input type="datetime-local" name="follow_up_at" className={input} aria-label="Følg opp" />
               <button type="submit" className={btnSecondary}>Registrer</button>
-              <textarea name="summary" rows={2} placeholder="Hva skjedde?" className={`${input} sm:col-span-4`} aria-label="Beskrivelse" />
+              <textarea name="summary" rows={2} placeholder="Hva skjedde?" className={`${input} sm:col-span-3`} aria-label="Beskrivelse" />
+              <input name="minutes" type="number" min={0} max={600} placeholder="Minutter brukt" className={input} aria-label="Minutter brukt" />
             </form>
             <ul className="divide-y divide-charcoal/5 text-sm">
               {(activities as ActivityRow[] | null)?.map((a) => (
@@ -253,6 +261,10 @@ export default async function ProspectPage({ params, searchParams }: PageProps<"
               <div className="grid grid-cols-2 gap-2">
                 <input name="probability" type="number" min={0} max={100} placeholder="Sannsynlighet %" className={input} aria-label="Sannsynlighet" />
                 <input name="expected_close" type="date" className={input} aria-label="Forventet dato" />
+              </div>
+              <div className="grid grid-cols-2 gap-2">
+                <input name="delivery_minutes" type="number" min={0} placeholder="Leveringstid min (valgfritt)" className={input} aria-label="Leveringstid i minutter" />
+                <input name="direct_cost_nok" inputMode="decimal" placeholder="Direkte kostnad kr (valgfritt)" className={input} aria-label="Direkte kostnad" />
               </div>
               <button type="submit" className={btnSecondary}>Registrer avtale / salg</button>
             </form>

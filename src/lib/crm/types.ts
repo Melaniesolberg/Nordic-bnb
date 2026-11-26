@@ -36,6 +36,11 @@ export interface CompanyRow {
   opt_out_reason: string | null;
   tags: string[];
   notes: string | null;
+  recurring_potential: number | null;
+  priority: number | null;
+  last_contacted_at: string | null;
+  replied_at: string | null;
+  needs_review: boolean;
   created_at: string;
   updated_at: string;
 }
@@ -51,8 +56,30 @@ export interface MessageRow {
   approved_at: string | null;
   sent_at: string | null;
   error: string | null;
+  sequence_step: number | null;
+  provider_message_id: string | null;
+  parent_message_id: string | null;
+  prompt_version: string | null;
+  send_requested_at: string | null;
+  auto_approved: boolean;
+  replied_at: string | null;
+  bounced_at: string | null;
   created_at: string;
-  companies?: Pick<CompanyRow, "id" | "name" | "segment" | "score" | "contact_basis" | "do_not_contact" | "status"> | null;
+  companies?: Pick<
+    CompanyRow,
+    | "id"
+    | "name"
+    | "segment"
+    | "score"
+    | "contact_basis"
+    | "contact_basis_note"
+    | "do_not_contact"
+    | "status"
+    | "priority"
+    | "recurring_potential"
+    | "general_email"
+    | "website"
+  > | null;
 }
 
 export interface ActivityRow {
@@ -63,6 +90,7 @@ export interface ActivityRow {
   details: Record<string, unknown> | null;
   follow_up_at: string | null;
   occurred_at: string;
+  minutes: number | null;
 }
 
 export interface DealRow {
@@ -76,6 +104,10 @@ export interface DealRow {
   expected_close: string | null;
   closed_at: string | null;
   note: string | null;
+  source_message_id: string | null;
+  segment: string | null;
+  delivery_minutes: number | null;
+  direct_cost_nok: number | null;
   created_at: string;
 }
 

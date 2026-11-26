@@ -123,3 +123,92 @@ test("HTML to text drops scripts and keeps content", () => {
   assert.equal(title, "Hei");
   assert.ok(text.includes("Vi leier ut leiligheter") && !text.includes("evil"));
 });
+
+// --- Autopilot -------------------------------------------------------------
+import { budgetDecision, computePriority, costUsd, osloDayStart, osloMonthStart, osloWeekStart, priceFor, worstCaseUsd } from "@/lib/crm/budget";
+import { bouncedRecipient, classifyInbound, followUpDraft, followUpDue, inSendWindow, stripQuoted } from "@/lib/crm/worker/rules";
+import { approvalBlockers } from "@/lib/crm/outreach";
+
+const caps = { ai_daily_budget_nok: 30, ai_monthly_budget_nok: 500, usd_nok_rate: 11 };
+
+test("AI cost: known and unknown models, cache priced lower", () => {
+  assert.equal(priceFor("claude-opus-5-5").input, 4);
+  assert.equal(priceFor("claude-opus-5-5-20261101").output, 20);
+  assert.equal(priceFor("some-new-model").output, 50);
+  const plain = costUsd({ model: "claude-opus-5-5", input_tokens: 1_000_000, output_tokens: 0, cache_read_tokens: 0, cache_write_tokens: 0 });
+  const cached = costUsd({ model: "claude-opus-5-5", input_tokens: 0, output_tokens: 0, cache_read_tokens: 1_000_000, cache_write_tokens: 0 });
+  assert.equal(plain, 4);
+  assert.ok(cached < plain / 5);
+  // A worst-case analysis stays well under 2 kr.
+  assert.ok(worstCaseUsd("claude-opus-5-5", 14_000, 6000) * 11 < 2);
+});
+
+test("AI budget: daily and monthly caps stop the next call", () => {
+  assert.equal(budgetDecision({ spentTodayNok: 10, spentMonthNok: 100, nextCallNok: 1.5, settings: caps }).ok, true);
+  const day = budgetDecision({ spentTodayNok: 29, spentMonthNok: 100, nextCallNok: 1.5, settings: caps });
+  assert.equal(day.ok, false);
+  assert.ok(!day.ok && day.reason.includes("Dagens"));
+  const month = budgetDecision({ spentTodayNok: 0, spentMonthNok: 499, nextCallNok: 1.5, settings: caps });
+  assert.ok(!month.ok && month.reason.includes("Månedens"));
+  assert.equal(budgetDecision({ spentTodayNok: 0, spentMonthNok: 0, nextCallNok: 0.1, settings: { ...caps, ai_daily_budget_nok: 0 } }).ok, false);
+});
+
+test("Oslo calendar boundaries (winter and summer time)", () => {
+  // 26 Nov 2026 10:00 UTC = 11:00 Oslo (UTC+1)
+  assert.equal(osloDayStart(new Date("2026-11-26T10:00:00Z")).toISOString(), "2026-11-25T23:00:00.000Z");
+  assert.equal(osloMonthStart(new Date("2026-11-26T10:00:00Z")).toISOString(), "2026-10-31T23:00:00.000Z");
+  // 15 Jul 2026 = UTC+2
+  assert.equal(osloDayStart(new Date("2026-07-15T12:00:00Z")).toISOString(), "2026-07-14T22:00:00.000Z");
+  // 23:30 UTC on Sunday 29 Nov is already Monday 30 Nov in Oslo
+  assert.equal(osloWeekStart(new Date("2026-11-29T23:30:00Z")), "2026-11-30");
+  assert.equal(osloWeekStart(new Date("2026-11-26T10:00:00Z")), "2026-11-23");
+});
+
+test("priority favours recurring potential and contactable companies", () => {
+  const agent = computePriority({ score: 70, recurring: 90, segment: "real_estate_agent", hasGenericEmail: true });
+  const oneOff = computePriority({ score: 70, recurring: 10, segment: "real_estate_agent", hasGenericEmail: true });
+  const noEmail = computePriority({ score: 70, recurring: 90, segment: "real_estate_agent", hasGenericEmail: false });
+  const stylist = computePriority({ score: 70, recurring: 90, segment: "stylist", hasGenericEmail: true });
+  assert.ok(agent > oneOff && agent > noEmail && agent > stylist);
+  assert.ok(agent <= 100 && oneOff >= 0);
+});
+
+test("send window: weekdays inside hours, Oslo time", () => {
+  const w = { send_window_start: 8, send_window_end: 16 };
+  assert.equal(inSendWindow(w, new Date("2026-11-26T09:00:00Z")), true); // Thu 10:00
+  assert.equal(inSendWindow(w, new Date("2026-11-26T06:30:00Z")), false); // Thu 07:30
+  assert.equal(inSendWindow(w, new Date("2026-11-26T15:00:00Z")), false); // Thu 16:00
+  assert.equal(inSendWindow(w, new Date("2026-11-28T10:00:00Z")), false); // Saturday
+});
+
+test("follow-up: due after N days, threaded subject, no new claims", () => {
+  assert.equal(followUpDue("2026-11-20T10:00:00Z", 5, new Date("2026-11-26T10:00:00Z")), true);
+  assert.equal(followUpDue("2026-11-23T10:00:00Z", 5, new Date("2026-11-26T10:00:00Z")), false);
+  const d = followUpDraft({ subject: "Bildeløft for annonsene deres", step: 2, service: "photo_boost" });
+  assert.equal(d.subject, "Re: Bildeløft for annonsene deres");
+  assert.ok(d.body.includes("gratis prøvebilde"));
+  assert.ok(!/%|økt salg|garanti/i.test(d.body));
+  assert.equal(followUpDraft({ subject: "Re: x", step: 3, service: null }).subject, "Re: x");
+});
+
+test("inbound mail: replies, opt-outs, bounces and auto-replies", () => {
+  const quoted = "Hei! Ja, send gjerne et prøvebilde.\n\ntor. 26. nov. 2026 kl. 10:00 skrev Eiendomly <post@eiendomly.no>:\n> Vil du ikke få flere e-poster fra oss? Svar «nei takk»";
+  assert.equal(stripQuoted(quoted), "Hei! Ja, send gjerne et prøvebilde.");
+  // Our own footer in the quote must not count as «nei takk».
+  assert.equal(classifyInbound({ from: "post@megler.no", subject: "Re: Bildeløft", headers: {}, text: quoted }), "reply");
+  assert.equal(classifyInbound({ from: "post@megler.no", subject: "Re: Bildeløft", headers: {}, text: "Nei takk, ikke aktuelt for oss." }), "unsubscribe");
+  assert.equal(classifyInbound({ from: "post@megler.no", subject: "Re: x", headers: {}, text: "Vennligst meld oss av listen" }), "unsubscribe");
+  assert.equal(classifyInbound({ from: "post@megler.no", subject: "Automatisk svar: Re: x", headers: {}, text: "Jeg er på ferie" }), "auto_reply");
+  assert.equal(classifyInbound({ from: "post@megler.no", subject: "Re: x", headers: { "auto-submitted": "auto-replied" }, text: "Takk" }), "auto_reply");
+  assert.equal(classifyInbound({ from: "MAILER-DAEMON@mx.example.no", subject: "Undelivered Mail Returned to Sender", headers: {}, text: "" }), "bounce");
+  assert.equal(bouncedRecipient("Final-Recipient: rfc822; Post@Firma.no\nAction: failed"), "post@firma.no");
+});
+
+test("approval checks each message's own contact basis", () => {
+  const ok = { messageStatus: "draft", toEmail: "post@firma.no", companyDoNotContact: false, companyStatus: "qualified", contactBasis: "b2b_generic_address" as const, suppressed: false };
+  assert.deepEqual(approvalBlockers(ok), []);
+  assert.ok(approvalBlockers({ ...ok, contactBasis: "none" }).length);
+  assert.ok(approvalBlockers({ ...ok, toEmail: "kari@firma.no" }).length);
+  assert.ok(approvalBlockers({ ...ok, suppressed: true }).length);
+  assert.ok(approvalBlockers({ ...ok, messageStatus: "approved" }).length);
+});

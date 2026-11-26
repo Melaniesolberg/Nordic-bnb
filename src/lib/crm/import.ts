@@ -1,4 +1,3 @@
-import "server-only";
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { SEGMENTS, type Segment } from "@/lib/crm/constants";
 import {

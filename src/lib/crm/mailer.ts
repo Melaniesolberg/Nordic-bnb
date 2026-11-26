@@ -1,4 +1,3 @@
-import "server-only";
 import nodemailer from "nodemailer";
 import { crmEnv, isSmtpConfigured } from "@/lib/crm/config";
 
@@ -8,6 +7,8 @@ export async function sendMail(opts: {
   subject: string;
   text: string;
   unsubscribeUrl: string | null;
+  /** Message-ID of the earlier mail, so a follow-up lands in the same thread. */
+  inReplyTo?: string | null;
 }): Promise<{ messageId: string }> {
   if (!isSmtpConfigured()) throw new Error("SMTP er ikke satt opp.");
   const transport = nodemailer.createTransport({
@@ -27,6 +28,8 @@ export async function sendMail(opts: {
     to: opts.to,
     subject: opts.subject,
     text: opts.text,
+    inReplyTo: opts.inReplyTo || undefined,
+    references: opts.inReplyTo || undefined,
     headers,
   });
   return { messageId: info.messageId };

@@ -3,6 +3,7 @@ import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { isoDaysFromNow } from "@/lib/crm/time";
 import { CHANNELS, SEGMENTS, SERVICES, STATUSES } from "@/lib/crm/constants";
 import type { ActivityRow, CompanyRow, DashboardStats } from "@/lib/crm/types";
+import { TodayPanel } from "@/components/admin/today";
 import { Card, PageHeader, ScoreBadge, Stat, StatusBadge, btnPrimary, btnSecondary, dateTime, nok } from "@/components/admin/ui";
 
 export const metadata = { title: "Oversikt" };
@@ -37,6 +38,7 @@ export default async function DashboardPage() {
       .select("id, name, segment, score, status, recommended_service, city")
       .eq("do_not_contact", false)
       .in("status", ["qualified", "researched", "interested"])
+      .order("priority", { ascending: false, nullsFirst: false })
       .order("score", { ascending: false, nullsFirst: false })
       .limit(8),
     supabase
@@ -54,7 +56,7 @@ export default async function DashboardPage() {
     <>
       <PageHeader
         title="Oversikt"
-        description="Potensielle kunder, pipeline og salg. Ingenting sendes automatisk."
+        description="Potensielle kunder, pipeline og salg. Ingenting sendes uten at du har godkjent det."
         actions={
           <>
             <Link href="/admin/research" className={btnPrimary}>Finn nye kunder</Link>
@@ -64,6 +66,8 @@ export default async function DashboardPage() {
           </>
         }
       />
+
+      <TodayPanel supabase={supabase} />
 
       <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
         <Stat label="Potensielle kunder" value={s.prospects ?? 0} href="/admin/prospects" />

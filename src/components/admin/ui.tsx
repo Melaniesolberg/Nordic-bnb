@@ -100,6 +100,10 @@ const FLASH: Record<string, string> = {
   toolarge: "Filen er for stor (maks 2 MB).",
   suppression: "Skriv en gyldig e-postadresse eller et domene.",
   message_invalid: "Emne og tekst må fylles ut.",
+  blocked_approve: "Kan ikke godkjenne:",
+  sending_off: "Utsending er slått av (OUTREACH_SENDING_ENABLED).",
+  worker: "Bakgrunnsjobben kunne ikke startes nå (CRM_WORKER_SECRET mangler eller Netlify svarte ikke).",
+  migration: "Databasen mangler autopilot-tabellene. Kjør migreringen 20261127000000_crm_autopilot.sql.",
 };
 
 export function Flash({ ok, error, detail }: { ok?: string; error?: string; detail?: string }) {
@@ -114,6 +118,14 @@ export function Flash({ ok, error, detail }: { ok?: string; error?: string; deta
   } else if (ok?.startsWith("csv:")) {
     const [, n, d, i] = ok.split(":");
     text = `CSV-import: ${n} nye, ${d} duplikater, ${i} ugyldige rader.`;
+  } else if (ok?.startsWith("bulk:")) {
+    const [, n, f] = ok.split(":");
+    text = `Godkjente ${n} meldinger${Number(f) ? `. ${f} ble ikke godkjent:` : "."} Ingenting er sendt ennå.`;
+  } else if (ok?.startsWith("queued:")) {
+    const [, n] = ok.split(":");
+    text = `${n} meldinger er lagt i sendekø. Bakgrunnsjobben sender dem én og én de neste minuttene.`;
+  } else if (ok === "worker") {
+    text = "Bakgrunnsjobben er startet. Se «Siste kjøringer» om et par minutter.";
   } else {
     text = FLASH[(ok ?? error)!] ?? (ok ? "Ferdig." : "Noe gikk galt.");
   }

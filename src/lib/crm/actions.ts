@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { createSupabaseServerClient } from "@/lib/supabase/server";
 import { requireWriter } from "@/lib/crm/auth";
-import { crmEnv, isOutreachSendingEnabled, isSmtpConfigured, isSupabaseConfigured } from "@/lib/crm/config";
+import { isOutreachSendingEnabled, isSupabaseConfigured, triggerWorker } from "@/lib/crm/config";
 import {
   ACTIVITY_TYPES,
   CHANNELS,
@@ -20,11 +20,10 @@ import { mapEnhet } from "@/lib/crm/brreg";
 import { analyzeCompany } from "@/lib/crm/research";
 import { parseCsv } from "@/lib/crm/csv";
 import { normalizeDomain, normalizeEmail, isGenericEmail, normalizeWebsite } from "@/lib/crm/normalize";
-import { sendBlockers, suppressionKeys, withFooter } from "@/lib/crm/outreach";
-import { sendMail } from "@/lib/crm/mailer";
-import { unsubscribeToken } from "@/lib/crm/signing";
+import { approveMessages, deliverMessage } from "@/lib/crm/send";
+import { loadSettings } from "@/lib/crm/settings";
 import { emitEvent } from "@/lib/crm/n8n";
-import type { CompanyRow, MessageRow } from "@/lib/crm/types";
+import type { CompanyRow } from "@/lib/crm/types";
 
 const str = (fd: FormData, k: string) => {
   const v = fd.get(k);
@@ -34,8 +33,10 @@ const oneOf = <T extends string>(value: string, allowed: Record<T, unknown>, fal
   value in allowed ? (value as T) : fallback;
 
 function back(path: string, params: Record<string, string>): never {
-  const q = new URLSearchParams(params).toString();
-  redirect(q ? `${path}?${q}` : path);
+  // Only redirect inside the admin panel, keeping any query already on `path`.
+  const url = new URL(path.startsWith("/admin") ? path : "/admin", "http://local");
+  for (const [k, v] of Object.entries(params)) url.searchParams.set(k, v);
+  redirect(`${url.pathname}${url.search}`);
 }
 
 // ---------------------------------------------------------------------------
@@ -158,8 +159,11 @@ export async function addActivity(formData: FormData) {
     summary: str(formData, "summary") || ACTIVITY_TYPES[type],
     details: outcome ? { outcome } : null,
     follow_up_at: followUp ? new Date(followUp).toISOString() : null,
+    minutes: str(formData, "minutes") ? Math.min(600, Math.max(0, Math.round(Number(str(formData, "minutes"))) || 0)) : null,
     created_by: session.userId,
   });
+  // A registered answer has been dealt with.
+  await supabase.from("companies").update({ needs_review: false }).eq("id", id).eq("needs_review", true);
 
   if (outcome === "interested") {
     await supabase.from("companies").update({ status: "interested" }).eq("id", id).not("status", "eq", "customer");
@@ -195,6 +199,22 @@ export async function addDeal(formData: FormData) {
   if (!Number.isFinite(amount) || amount < 0) back(`/admin/prospects/${id}`, { error: "amount" });
   const probability = status === "won" ? 100 : status === "lost" ? 0 : Math.min(100, Math.max(0, Number(str(formData, "probability") || 50)));
 
+  // Attribution: the last e-mail we sent the company before this deal, and
+  // the customer type at the time. Used to see which messages sell.
+  const [{ data: lastSent }, { data: co }, settings] = await Promise.all([
+    supabase
+      .from("outreach_messages")
+      .select("id")
+      .eq("company_id", id)
+      .eq("status", "sent")
+      .order("sent_at", { ascending: false })
+      .limit(1),
+    supabase.from("companies").select("segment").eq("id", id).maybeSingle(),
+    loadSettings(supabase),
+  ]);
+  const minutesIn = str(formData, "delivery_minutes");
+  const costIn = str(formData, "direct_cost_nok");
+
   await supabase.from("deals").insert({
     company_id: id,
     service,
@@ -202,6 +222,10 @@ export async function addDeal(formData: FormData) {
     amount_nok: amount,
     status,
     probability,
+    source_message_id: lastSent?.[0]?.id ?? null,
+    segment: co?.segment ?? null,
+    delivery_minutes: minutesIn ? Math.max(0, Math.round(Number(minutesIn)) || 0) : (settings?.delivery_minutes[service] ?? null),
+    direct_cost_nok: costIn ? Math.max(0, Number(costIn.replace(",", ".")) || 0) : (settings?.direct_cost_nok[service] ?? null),
     expected_close: str(formData, "expected_close") || null,
     closed_at: status === "won" || status === "lost" ? new Date().toISOString() : null,
     note: str(formData, "note") || null,
@@ -360,26 +384,118 @@ export async function saveMessage(formData: FormData) {
 export async function approveMessage(formData: FormData) {
   const session = await requireWriter();
   const supabase = await createSupabaseServerClient();
-  const id = str(formData, "id");
-  const { data: m } = await supabase
-    .from("outreach_messages")
-    .select("id, company_id, to_email, status, companies(do_not_contact, contact_basis)")
-    .eq("id", id)
-    .single();
-  const company = m?.companies as unknown as { do_not_contact: boolean; contact_basis: ContactBasis } | null;
   const returnTo = str(formData, "return_to") || "/admin/outreach";
-  if (!m || m.status !== "draft") back(returnTo, { error: "state" });
-  if (!normalizeEmail(m.to_email)) back(returnTo, { error: "noemail" });
-  if (company?.do_not_contact) back(returnTo, { error: "dnc" });
-  if (!company || company.contact_basis === "none") back(returnTo, { error: "basis" });
-  await supabase
-    .from("outreach_messages")
-    .update({ status: "approved", approved_by: session.userId, approved_at: new Date().toISOString() })
-    .eq("id", id)
-    .eq("status", "draft");
-  await emitEvent("message.approved", { message_id: id, company_id: m.company_id });
+  const [r] = await approveMessages(supabase, [str(formData, "id")], session.userId);
   revalidatePath("/admin", "layout");
+  if (!r?.ok) back(returnTo, { error: "blocked_approve", detail: r?.reason ?? "" });
   back(returnTo, { ok: "approved" });
+}
+
+/**
+ * Bulk approval from the queue. Only the boxes a person ticked are sent in,
+ * and every message is checked on its own (address, contact basis, stop
+ * list). Approval never sends anything by itself.
+ */
+export async function approveMany(formData: FormData) {
+  const session = await requireWriter();
+  const supabase = await createSupabaseServerClient();
+  const returnTo = str(formData, "return_to") || "/admin/outreach";
+  const ids = [...new Set(formData.getAll("ids").map(String))].filter((id) => /^[0-9a-f-]{36}$/i.test(id)).slice(0, 100);
+  if (!ids.length) back(returnTo, { error: "none" });
+  const results = await approveMessages(supabase, ids, session.userId);
+  const ok = results.filter((r) => r.ok).length;
+  const failed = results.filter((r): r is { id: string; ok: false; reason: string } => !r.ok);
+  revalidatePath("/admin", "layout");
+  back(returnTo, {
+    ok: `bulk:${ok}:${failed.length}`,
+    ...(failed.length ? { detail: failed.slice(0, 3).map((f) => f.reason).join(" · ") } : {}),
+  });
+}
+
+/** Marks approved messages for sending and wakes the background worker. */
+export async function requestSend(formData: FormData) {
+  await requireWriter();
+  const supabase = await createSupabaseServerClient();
+  const returnTo = str(formData, "return_to") || "/admin/outreach?tab=approved";
+  if (!isOutreachSendingEnabled()) back(returnTo, { error: "sending_off" });
+  const ids = [...new Set(formData.getAll("ids").map(String))].filter((id) => /^[0-9a-f-]{36}$/i.test(id)).slice(0, 50);
+  const q = supabase.from("outreach_messages").update({ send_requested_at: new Date().toISOString() }).eq("status", "approved");
+  const { data } = await (ids.length ? q.in("id", ids) : q.is("send_requested_at", null)).select("id");
+  const started = await triggerWorker("send", "send");
+  revalidatePath("/admin", "layout");
+  back(returnTo, started ? { ok: `queued:${data?.length ?? 0}` } : { error: "worker", detail: `${data?.length ?? 0} meldinger står i kø og sendes ved neste planlagte kjøring.` });
+}
+
+/** Runs the background worker now (inbox, follow-ups, research). */
+export async function runWorkerNow() {
+  await requireWriter();
+  const started = await triggerWorker("all", "manual");
+  back("/admin/settings", started ? { ok: "worker" } : { error: "worker" });
+}
+
+const num = (fd: FormData, k: string, min: number, max: number, fallback: number) => {
+  const n = Number(str(fd, k).replace(",", "."));
+  return Number.isFinite(n) ? Math.min(max, Math.max(min, n)) : fallback;
+};
+
+export async function saveSettings(formData: FormData) {
+  const session = await requireWriter();
+  if (session.role !== "owner" && session.role !== "admin") back("/admin/settings", { error: "access" });
+  const supabase = await createSupabaseServerClient();
+  const current = await loadSettings(supabase);
+  if (!current) back("/admin/settings", { error: "migration" });
+  const on = (k: string) => formData.get(k) === "on";
+  const segments = formData.getAll("discovery_segments").map(String).filter((s) => s in SEGMENTS && s !== "other");
+  const municipalities = formData.getAll("discovery_municipalities").map(String).filter((m) => /^[0-9]{4}$/.test(m));
+  const reportEmail = normalizeEmail(str(formData, "report_email"));
+  const start = num(formData, "send_window_start", 0, 23, 8);
+  const end = num(formData, "send_window_end", 1, 24, 16);
+
+  const { error } = await supabase
+    .from("crm_settings")
+    .update({
+      autopilot_enabled: on("autopilot_enabled"),
+      daily_target: Math.round(num(formData, "daily_target", 0, 50, current.daily_target)),
+      discovery_segments: segments,
+      discovery_municipalities: municipalities,
+      require_website: on("require_website"),
+      ai_daily_budget_nok: num(formData, "ai_daily_budget_nok", 0, 1000, current.ai_daily_budget_nok),
+      ai_monthly_budget_nok: num(formData, "ai_monthly_budget_nok", 0, 20000, current.ai_monthly_budget_nok),
+      usd_nok_rate: num(formData, "usd_nok_rate", 5, 30, current.usd_nok_rate),
+      followup_enabled: on("followup_enabled"),
+      followup_after_days: Math.round(num(formData, "followup_after_days", 2, 30, current.followup_after_days)),
+      followup_max_steps: Math.round(num(formData, "followup_max_steps", 0, 2, current.followup_max_steps)),
+      followup_auto_approve: on("followup_auto_approve"),
+      auto_send_enabled: on("auto_send_enabled"),
+      daily_send_cap: Math.round(num(formData, "daily_send_cap", 0, 50, current.daily_send_cap)),
+      send_window_start: Math.round(Math.min(start, end - 1)),
+      send_window_end: Math.round(end),
+      report_email: reportEmail,
+      updated_at: new Date().toISOString(),
+    })
+    .eq("id", 1);
+  revalidatePath("/admin", "layout");
+  back("/admin/settings", error ? { error: "save", detail: error.message } : { ok: "saved" });
+}
+
+export async function saveChannelCost(formData: FormData) {
+  await requireWriter();
+  const supabase = await createSupabaseServerClient();
+  const week = str(formData, "week_start");
+  const channel = oneOf(str(formData, "channel"), CHANNELS, "other");
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(week)) back("/admin/reports", { error: "invalid" });
+  const { error } = await supabase.from("channel_costs").upsert(
+    {
+      week_start: week,
+      channel,
+      amount_nok: num(formData, "amount_nok", 0, 1_000_000, 0),
+      hours: num(formData, "hours", 0, 200, 0),
+      note: str(formData, "note") || null,
+    },
+    { onConflict: "week_start,channel" },
+  );
+  revalidatePath("/admin/reports");
+  back("/admin/reports", error ? { error: "save", week, detail: error.message } : { ok: "saved", week });
 }
 
 export async function cancelMessage(formData: FormData) {
@@ -394,69 +510,10 @@ export async function cancelMessage(formData: FormData) {
 export async function sendMessage(formData: FormData) {
   const session = await requireWriter();
   const supabase = await createSupabaseServerClient();
-  const id = str(formData, "id");
   const returnTo = str(formData, "return_to") || "/admin/outreach";
-
-  const { data: m } = await supabase
-    .from("outreach_messages")
-    .select("*, companies(id, name, status, do_not_contact, contact_basis)")
-    .eq("id", id)
-    .single<MessageRow & { companies: Pick<CompanyRow, "id" | "name" | "status" | "do_not_contact" | "contact_basis"> }>();
-  if (!m?.companies) back(returnTo, { error: "notfound" });
-
-  const keys = suppressionKeys(m.to_email);
-  const { count: suppressedCount } = keys.length
-    ? await supabase.from("suppression_list").select("id", { count: "exact", head: true }).in("value", keys)
-    : { count: 0 };
-
-  const blockers = sendBlockers({
-    messageStatus: m.status,
-    toEmail: m.to_email,
-    companyDoNotContact: m.companies.do_not_contact,
-    companyStatus: m.companies.status,
-    contactBasis: m.companies.contact_basis,
-    suppressed: Boolean(suppressedCount),
-    sendingEnabled: isOutreachSendingEnabled(),
-    smtpConfigured: isSmtpConfigured(),
-  });
-  if (blockers.length) back(returnTo, { error: "blocked", detail: blockers[0] });
-
-  const to = normalizeEmail(m.to_email)!;
-  const unsubscribeUrl = crmEnv.unsubscribeSecret
-    ? `${crmEnv.siteUrl}/api/crm/unsubscribe?t=${encodeURIComponent(unsubscribeToken(crmEnv.unsubscribeSecret, to))}`
-    : null;
-
-  // Claim the message first so a double click can't send it twice.
-  const { data: claimed } = await supabase
-    .from("outreach_messages")
-    .update({ status: "sent", sent_at: new Date().toISOString() })
-    .eq("id", id)
-    .eq("status", "approved")
-    .select("id");
-  if (!claimed?.length) back(returnTo, { error: "state" });
-
-  try {
-    const { messageId } = await sendMail({ to, subject: m.subject, text: withFooter(m.body, unsubscribeUrl), unsubscribeUrl });
-    await supabase.from("outreach_messages").update({ provider_message_id: messageId }).eq("id", id);
-    await supabase.from("activities").insert({
-      company_id: m.company_id,
-      type: "email_sent",
-      summary: `E-post sendt: ${m.subject}`,
-      details: { to, message_id: id },
-      follow_up_at: new Date(Date.now() + 4 * 24 * 3600 * 1000).toISOString(),
-      created_by: session.userId,
-    });
-    if (["new", "researched", "qualified"].includes(m.companies.status))
-      await supabase.from("companies").update({ status: "contacted", acquisition_channel: "outreach" }).eq("id", m.company_id);
-    await emitEvent("message.sent", { message_id: id, company_id: m.company_id });
-  } catch (err) {
-    await supabase
-      .from("outreach_messages")
-      .update({ status: "failed", sent_at: null, error: err instanceof Error ? err.message.slice(0, 300) : "Ukjent feil" })
-      .eq("id", id);
-    back(returnTo, { error: "send" });
-  }
+  const r = await deliverMessage(supabase, str(formData, "id"), { userId: session.userId, via: "admin" });
   revalidatePath("/admin", "layout");
+  if (!r.ok) back(returnTo, r.code === "blocked" ? { error: "blocked", detail: r.reason } : { error: r.code });
   back(returnTo, { ok: "sent" });
 }
 

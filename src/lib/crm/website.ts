@@ -1,4 +1,3 @@
-import "server-only";
 import { lookup } from "node:dns/promises";
 import { isIP } from "node:net";
 import { extractEmails, normalizeDomain } from "@/lib/crm/normalize";

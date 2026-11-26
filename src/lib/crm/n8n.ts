@@ -1,4 +1,3 @@
-import "server-only";
 import { crmEnv } from "@/lib/crm/config";
 import { hmacHex } from "@/lib/crm/signing";
 
